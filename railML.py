@@ -1,17 +1,16 @@
 import sys
 sys.path.append('.')
-from RailML.Enumerates import *
 from RailML.Base import *
-from RailML.Topology import *
-from RailML.NetEntity import *
-from RailML.PositioningSystem import *
+#from RailML.Topology import *
+#from RailML.NetEntity import *
+#from RailML.PositioningSystem import *
 
 
 x = Network()
 
-x.add_levelNetwork("1","2","3","4")
-x.add_networkResource("2","3","4","5")
-x.add_levelNetwork("3","4","5","6")
+x.add_networkResource("ID1","cosa_1","01/01/2020","01/01/2030")
+x.add_networkResource("ID2","cosa_2","02/01/2020","02/01/2030")
+x.add_networkResource("ID2","cosa_2","03/01/2020","03/01/2030")
 
 print(x)
 
