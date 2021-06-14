@@ -1,19 +1,104 @@
-
 class BaseObject():
-    def __init__(self) -> None:
-        self.__id = "UUID"
-        self.__name = "String"
-        self.__validTo = "Date"
-        self.__validFrom = "Date"
+    """ 
+    !Defines four properties shared by most of objects in RailTopoModel
+    *Parameters
+    ----------
+    id: Unique identifier -> UUID
+    name: Natural designation of the object -> String
+    validTo: Point in time when the object is no longer available for functional usage 
+        (if empty, then the object is valid since the validFrom date)
+    validFrom: Point in time when the object is available for usage for train operations 
+        (if empty, then the object is valid till the validTo date)
+    
+    *Methods
+    -------
+    var(self): get var
+    var(self,value): set var to value
+    """     
+    def __init__(self, id="123", name="xyz", validTo="01/01/2030", validFrom="01/01/2000") -> None:       
+        self.id =  id
+        self.name = name
+        self.validTo = validTo
+        self.validFrom = validFrom   
 
     def __str__(self):
-        return f'{self.__id}|{self.__name}|{self.__validTo}|{self.__validFrom}'
-
-class NetworkResource(BaseObject):
-    pass
-
+        return f'{self.id}|{self.name}|{self.validTo}|{self.validFrom}'        
+        
 class Network(BaseObject):
-    pass
-
+    """ 
+    !Defines the network being considered. It includes all resources that compose it (all Levels included), 
+    !inter alia the topological, structural and positional properties exhibited by any railway network
+    
+    *Derivates
+    ---------
+    Father: BaseObject
+    Described in:
+        1...* LevelNetwork
+        0...* NetworkResource   
+    *Remove
+    ------    
+    Whenever a Network instance is removed, all related LevelNetwork and NetworkResource are removed.   
+    *Method
+    ------
+    add_levelNetwork(self,id,name,validTo,validFrom):
+        Create a LevelNetwork
+        Add it to list in Network
+    add_networkResource(self,id,name,validTo,validFrom):
+        Create a NetworkResource
+        Add it to list in Network
+    """ 
+    def __del__(self) -> None:  
+        print('Removing all LevelNetwork and NetworkResource')
+        self.levelNetwork.clear()
+        self.networkResource.clear()
+    
+    def __str__(self):
+        print(f'Network:{self.id}|{self.name}|{self.validTo}|{self.validFrom}')
+        if (hasattr(self,'levelNetwork')):
+            for i in self.levelNetwork:
+                print(f'LevelNetwork:{i}')
+        if (hasattr(self,'networkResource')):        
+            for i in self.networkResource:
+                print(f'NetworkResource:{i}')
+        return ''        
+    
+    def add_levelNetwork(self,id,name,validTo,validFrom):  
+        if (not hasattr(self,'levelNetwork')):
+            self.levelNetwork = []
+        
+        levelNetwork = LevelNetwork(id,name,validTo,validFrom)
+        self.levelNetwork.append(levelNetwork)
+        
+    def add_networkResource(self,id,name,validTo,validFrom):
+        if (not hasattr(self,'networkResource')):
+            self.networkResource = []
+        
+        networkResource = NetworkResource(id,name,validTo,validFrom)
+        self.networkResource.append(networkResource)
+    
 class LevelNetwork(BaseObject):
-    pass
+    """ 
+    !Defines a consistent "view" of a Network at a certain level of granularity. 
+    !An instance of this class therefore includes all resources that are required
+    !to define the corresponding level (e.g. micro/track, or macro/line).
+    
+    *Derivates
+    ---------
+    Father: BaseObject
+    Belongs to:
+        1 Network 
+    """
+    def __del__(self) -> None:  
+        print('Removing LevelNetwork')
+    
+class NetworkResource(BaseObject):
+    """ 
+    !Define every object of the network, qualified as a resource.
+    *Derivates
+    ---------
+    Father: BaseObject
+    Belongs to:
+        1 Network
+    """
+    def __del__(self) -> None:  
+        print('Removing NetworkResource')
