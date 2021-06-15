@@ -40,10 +40,12 @@ class Network(BaseObject):
     ------
     add_levelNetwork(self,id,name,validTo,validFrom):
         Create a LevelNetwork
-        Add it to list in Network
+        Add NetworkResource to list in LevelNetwork
+        Add it to list in Network (if it is not repeated)
     add_networkResource(self,id,name,validTo,validFrom):
         Create a NetworkResource
         Add it to list in Network
+        Add it to list in LevelNetwork
     """
     def __del__(self):  
         # Removing levelNetwork and networkResource Objects
@@ -86,9 +88,16 @@ class Network(BaseObject):
         if (not hasattr(levelNetwork,'networkResource')):
             # Create the new attribute networkResource
             levelNetwork.networkResource = []
-            
-        # Append the networkResource object to the levelNetwork object list attribute
-        levelNetwork.networkResource.append(networkResource)
+        
+        networkResourceRepeated = False
+        # Check if the networkResource is a new one
+        for i in levelNetwork.networkResource:
+            if( networkResource.id == i.networkResource.id ):
+                networkResourceRepeated = True
+        
+        if (not networkResourceRepeated):       
+            # Append the networkResource object to the levelNetwork object list attribute
+            levelNetwork.networkResource.append(networkResource)
         
         # Check if the levelNetwork is a new one
         for i in self.levelNetwork:
