@@ -21,7 +21,7 @@ class BaseObject():
         self.validFrom = validFrom   
 
     def __str__(self):
-        return f'{self.id}|{self.name}|{self.validTo}|{self.validFrom}'        
+        return f'[Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'         
         
 class Network(BaseObject):
     """ 
@@ -52,13 +52,14 @@ class Network(BaseObject):
         self.networkResource.clear()
     
     def __str__(self):
-        print(f'Network:{self.id}|{self.name}|{self.validTo}|{self.validFrom}')
+        print(f'Network:\n\tId:{self.id}\n\tName:{self.name}\n\tValidTo:{self.validTo}\n\tValidFrom:{self.validFrom}')
+        
         if (hasattr(self,'levelNetwork')):
             for i in self.levelNetwork:
-                print(f'LevelNetwork:{i}')
+                print(f'\tLevelNetwork:{i}')
         if (hasattr(self,'networkResource')):        
             for i in self.networkResource:
-                print(f'NetworkResource:{i}')
+                print(f'\t\tNetworkResource:{i}')
         return ''        
 
     def add_networkResource(self,id,name,validTo,validFrom):
@@ -71,27 +72,30 @@ class Network(BaseObject):
         # Append the object to the list
         self.networkResource.append(networkResource)
         # Associate the networkResource to the levelNetwork 
-        self.add_levelNetwork(id,name,validTo,validFrom,self.networkResource)
+        self.add_levelNetwork(id,name,validTo,validFrom,networkResource)
     
-    def add_levelNetwork(self,id,name,validTo,validFrom,networkResource): 
-        
-        #TODO: Deberia tener UN LevelNetwork, lo que es multiple son los ResourceNetwork!!!
-        
+    def add_levelNetwork(self,id,name,validTo,validFrom,networkResource):        
         # If not levelNetwork in Network 
         if (not hasattr(self,'levelNetwork')):
             # Create the new attribute levelNetwork
-            self.levelNetwork = []
+            self.levelNetwork = []   
         # Create the object LevelNetwork with the parameters
-        levelNetwork = LevelNetwork(id,name,validTo,validFrom)
-        
+        levelNetwork = LevelNetwork("ID5","Level1","Mañana","Hoy")  
+            
         # If not networkResource in levelNetwork
         if (not hasattr(levelNetwork,'networkResource')):
             # Create the new attribute networkResource
             levelNetwork.networkResource = []
-        # Associate the networkResource object to the levelNetwork object
-        levelNetwork.networkResource = networkResource
+            
+        # Append the networkResource object to the levelNetwork object list attribute
+        levelNetwork.networkResource.append(networkResource)
         
-        # Append the object to the list
+        # Check if the levelNetwork is a new one
+        for i in self.levelNetwork:
+            if( levelNetwork.id == i.id):
+                return
+        
+        # If it is a new levelNetwork, append it to the list
         self.levelNetwork.append(levelNetwork)
         
 class LevelNetwork(BaseObject):
