@@ -1,10 +1,10 @@
 from RailML.Base import NetworkResource
 from RailML.Enumerates import Navigability, Usage
 
-class NetElement(NetworkResource):
+class NetElement(NetworkResource):  # Nodes
     pass
 
-class Relation(NetworkResource):
+class Relation(NetworkResource):    # Edges
    pass
     
 class PositionedRelation(Relation):
@@ -16,7 +16,7 @@ class PositionedRelation(Relation):
     def __str__(self):
         return f'{self.__navigability}|{self.__positionOnA}|{self.__positionOnB}'
 
-class CompositionNetElt(NetElement):
+class CompositionNetElt(NetElement):    # Assembly of nodes into bigger nodes
     pass
 
 class ElementPartCollection():

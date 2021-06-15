@@ -58,7 +58,7 @@ class Network(BaseObject):
         
         if (hasattr(self,'levelNetwork')):
             for i in self.levelNetwork:
-                print(f'\tLevelNetwork:{i}')
+                print(f'\tLevelNetwork:descriptionLevel:{i.descriptionLevel}{i}')
         if (hasattr(self,'networkResource')):        
             for i in self.networkResource:
                 print(f'\t\tNetworkResource:{i}')
@@ -74,7 +74,7 @@ class Network(BaseObject):
         # Append the object to the list
         self.networkResource.append(networkResource)
         # Associate the networkResource to the levelNetwork 
-        self.add_levelNetwork(id,name,validTo,validFrom,networkResource)
+        self.add_levelNetwork(id,name,validTo,validFrom,networkResource)  
     
     def add_levelNetwork(self,id,name,validTo,validFrom,networkResource):        
         # If not levelNetwork in Network 
@@ -83,7 +83,9 @@ class Network(BaseObject):
             self.levelNetwork = []   
         # Create the object LevelNetwork with the parameters
         levelNetwork = LevelNetwork("ID5","Level1","Mañana","Hoy")  
-            
+        # Create attirube descriptionLevel
+        levelNetwork.descriptionLevel = "Micro"
+        
         # If not networkResource in levelNetwork
         if (not hasattr(levelNetwork,'networkResource')):
             # Create the new attribute networkResource
@@ -106,7 +108,7 @@ class Network(BaseObject):
         
         # If it is a new levelNetwork, append it to the list
         self.levelNetwork.append(levelNetwork)
-        
+
 class LevelNetwork(BaseObject):
     """ 
     !Defines a consistent "view" of a Network at a certain level of granularity. 
