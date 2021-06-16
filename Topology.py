@@ -9,8 +9,6 @@ class NetElement(NetworkResource):  # The base class to define nodes in Graph th
     *Has: 
         1...* Relation
     """
-    def __del__(self):  
-        print(f'Removing {self.__class__.__name__}')
 class CompositionNetElement(NetElement):    # Assembly of nodes into bigger nodes
     """ 
     !Defines a topological element that aggregates some other topological element from another level 
@@ -25,7 +23,7 @@ class CompositionNetElement(NetElement):    # Assembly of nodes into bigger node
 
 class Relation(NetworkResource):    # The base class to define edges in Graph theory
     """ 
-    !Define the connexity relation between two NetElements in the connexity graph of the network.
+    !Defines the connexity relation between two NetElements in the connexity graph of the network.
     *Derivates from: 
         NetworkResource
     *Belongs to: 
@@ -39,7 +37,7 @@ class Relation(NetworkResource):    # The base class to define edges in Graph th
     """
 class PositionedRelation(Relation):
     """ 
-    !Define an oriented relation between exactly two PositioningNetElements.
+    !Defines an oriented relation between exactly two PositioningNetElements.
     *Derivates from: 
         Relation
     *Parameters
@@ -69,7 +67,7 @@ class PositionedRelation(Relation):
     #    return f'{self.__navigability}|{self.__positionOnA}|{self.__positionOnB}'
 class ElementPartCollection(NetworkResource):
     """ 
-    !Define every object of the network, qualified as a resource.
+    !Defines every object of the network, qualified as a resource.
     *Derivates from: 
         NetworkResource
     *Belongs to: 
@@ -78,7 +76,7 @@ class ElementPartCollection(NetworkResource):
 
 class PositioningNetElement(CompositionNetElement):
     """ 
-    !Define a NetElement requiring al least one PositioningSystem, with orientation (carried by IntrinsicCoordinate).
+    !Defines a NetElement requiring al least one PositioningSystem, with orientation (carried by IntrinsicCoordinate).
     *Derivates from: 
         CompositionNetElement
     *Composition: 

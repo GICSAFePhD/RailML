@@ -126,7 +126,7 @@ class LevelNetwork(BaseObject):
         
 class NetworkResource(BaseObject):
     """ 
-    !Define every object of the network, qualified as a resource.
+    !Defines every object of the network, qualified as a resource.
     *Derivates from: 
         BaseObject
     *Belongs to: 
