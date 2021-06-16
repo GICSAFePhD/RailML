@@ -21,21 +21,22 @@ class BaseObject():
         self.validFrom = validFrom   
 
     def __str__(self):
-        return f'[Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'         
-        
+        return f'[Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'   
+    
+    def __del__(self):  
+        print(f'Removing {self.__class__.__name__}')
+
 class Network(BaseObject):
     """ 
     !Defines the network being considered. It includes all resources that compose it (all Levels included), 
     !inter alia the topological, structural and positional properties exhibited by any railway network
-    *Derivates
-    ---------
-    Father: BaseObject
-    Described in:
+    *Derivates from: 
+        BaseObject
+    *Composition:
         1...* LevelNetwork
         0...* NetworkResource   
-    *Remove
-    ------    
-    Whenever a Network instance is removed, all related LevelNetwork and NetworkResource are removed.   
+    *Remove: 
+        Whenever a Network instance is removed, all related LevelNetwork and NetworkResource are removed.   
     *Method
     ------
     add_levelNetwork(self,id,name,validTo,validFrom):
@@ -115,23 +116,20 @@ class LevelNetwork(BaseObject):
     !An instance of this class therefore includes all resources that are required
     !to define the corresponding level (e.g. micro/track, or macro/line).
     
-    *Derivates
-    ---------
-    Father: BaseObject
-    Belongs to:
+    *Derivates from: 
+        BaseObject
+    *Belongs to: 
         1 Network 
+    *Has: 
+        * NetworkResources
     """
-    def __del__(self):  
-        print('Removing LevelNetwork')
-    
+        
 class NetworkResource(BaseObject):
     """ 
     !Define every object of the network, qualified as a resource.
-    *Derivates
-    ---------
-    Father: BaseObject
-    Belongs to:
+    *Derivates from: 
+        BaseObject
+    *Belongs to: 
         1 Network
     """
-    def __del__(self):  
-        print('Removing NetworkResource')
+    
