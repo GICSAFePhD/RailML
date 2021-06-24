@@ -84,29 +84,10 @@ class Network(BaseObject):
             self.levelNetwork = []   
         # Create the object LevelNetwork with the parameters
         levelNetwork = LevelNetwork("ID5","Level1","Mañana","Hoy")  
-        # Create attirube descriptionLevel
-        levelNetwork.descriptionLevel = "Micro"
-        
-        # If not networkResource in levelNetwork
-        if (not hasattr(levelNetwork,'networkResource')):
-            # Create the new attribute networkResource
-            levelNetwork.networkResource = []
-        
-        networkResourceRepeated = False
-        # Check if the networkResource is a new one
-        for i in levelNetwork.networkResource:
-            if( networkResource.id == i.networkResource.id ):
-                networkResourceRepeated = True
-        
-        if (not networkResourceRepeated):       
-            # Append the networkResource object to the levelNetwork object list attribute
-            levelNetwork.networkResource.append(networkResource)
-        
-        # Check if the levelNetwork is a new one
+        # Check if the levelNetwork created is a new one
         for i in self.levelNetwork:
             if( levelNetwork.id == i.id):
-                return
-        
+                return  
         # If it is a new levelNetwork, append it to the list
         self.levelNetwork.append(levelNetwork)
 
@@ -123,6 +104,25 @@ class LevelNetwork(BaseObject):
     *Has: 
         * NetworkResources
     """
+    def __init__(self,id,name,validTo,validFrom):
+        BaseObject.__init__(self,id,name,validTo,validFrom)
+        # Create attirube descriptionLevel
+        self.descriptionLevel = "Micro"
+        
+        # If not networkResource in levelNetwork
+        if (not hasattr(self,'networkResource')):
+            # Create the new attribute networkResource
+            self.networkResource = []    
+
+        networkResourceRepeated = False
+        # Check if the networkResource is a new one
+        for i in self.networkResource:
+            if( self.networkResource.id == i.networkResource.id ):
+                networkResourceRepeated = True
+        
+        if (not networkResourceRepeated):       
+            # Append the networkResource object to the levelNetwork object list attribute
+            self.networkResource.append(self.networkResource)
         
 class NetworkResource(BaseObject):
     """ 
