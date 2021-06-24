@@ -35,6 +35,7 @@ class Relation(NetworkResource):    # The base class to define edges in Graph th
         1 SpotLocation (netElement)
         1...* LinearLocation (netElement)
     """
+
 class PositionedRelation(Relation):
     """ 
     !Defines an oriented relation between exactly two PositioningNetElements.
@@ -65,6 +66,7 @@ class PositionedRelation(Relation):
 
     #def __str__(self):
     #    return f'{self.__navigability}|{self.__positionOnA}|{self.__positionOnB}'
+
 class ElementPartCollection(NetworkResource):
     """ 
     !Defines every object of the network, qualified as a resource.
