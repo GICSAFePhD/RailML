@@ -8,7 +8,33 @@ class NetElement(NetworkResource):  # The base class to define nodes in Graph th
         NetworkResource    
     *Has: 
         1...* Relation
-    """
+    """   
+    
+    def __init__(self):
+        NetworkResource.__init__(self)
+        self.relation = []
+    
+    def __str__(self):
+        print ( super().__str__() )
+        
+        if (hasattr(self,'relation')):        
+            for i in self.relation:
+                print(f'\t#{i.ref}')
+                
+        return ''  
+    
+    def add_relation(self):
+        # If not relation in NetElement
+        if (not hasattr(self,'relation')):
+            # Create the new attribute relation
+            self.relation = []
+        # Create the object Relation with the parameters
+        relation = Relation()
+        # Append the object to the list
+        self.relation.append(relation)
+        # Associate the networkResource to the levelNetwork 
+        #self.add_levelNetwork(id,name,validTo,validFrom,networkResource)
+        
 class CompositionNetElement(NetElement):    # Assembly of nodes into bigger nodes
     """ 
     !Defines a topological element that aggregates some other topological element from another level 
@@ -20,6 +46,13 @@ class CompositionNetElement(NetElement):    # Assembly of nodes into bigger node
     *Remove: 
         Whenever an instance CompositionNetElement is removed, all related ElementPartCollection are removed.      
     """
+    def __init__(self):
+        print('Si no existe -> atributo ElementPartCollection')
+        print('Crear ElementPartCollection')
+        print('Append ElementPartCollection')
+
+    def __del__(self):
+        print('Clear ElementPartCollection')
 
 class Relation(NetworkResource):    # The base class to define edges in Graph theory
     """ 
@@ -35,6 +68,10 @@ class Relation(NetworkResource):    # The base class to define edges in Graph th
         1 SpotLocation (netElement)
         1...* LinearLocation (netElement)
     """
+    def __init__(self):
+        NetworkResource().__init__(self)
+        # Create attirube descriptionLevel
+        self.ref = "nr_1"
 
 class PositionedRelation(Relation):
     """ 
@@ -75,7 +112,13 @@ class ElementPartCollection(NetworkResource):
     *Belongs to: 
         1 CompositionNetElement
     """
+    def __init__(self):
+        NetworkResource.__init__(self)
+        print(f'Creating {self.__class__.__name__}')
 
+    #def __del__(self):
+    #    print(f'Removing {self.__class__.__name__}')
+        
 class PositioningNetElement(CompositionNetElement):
     """ 
     !Defines a NetElement requiring al least one PositioningSystem, with orientation (carried by IntrinsicCoordinate).
@@ -86,15 +129,18 @@ class PositioningNetElement(CompositionNetElement):
     *Remove: 
         Whenever an instance PositioningNetElement is removed, all related AssociatedPositioningSystem are removed. 
     """
+    def __init__(self):
+        print(f'Creating {self.__class__.__name__}')
 
+    def __del__(self):
+        print(f'Removing {self.__class__.__name__}')
+        
 class LinearElement(PositioningNetElement):
     """ 
     !Defines PositiongNetElement instances that are one-dimensional.
     *Derivates from: 
         PositioningNetElement 
     """
-    def __del__(self):  
-        print('Removing LinearElement')
 
 class NonLinearElement(PositioningNetElement):
     """ 
@@ -102,8 +148,6 @@ class NonLinearElement(PositioningNetElement):
     *Derivates from: 
         PositioningNetElement 
     """
-    def __del__(self):  
-        print('Removing LinearElement')
 
 class AssociatedNetElement():
     """ 
@@ -168,8 +212,12 @@ class OrderedCollection(ElementPartCollection):
     *Has: 
         1...* NetElement (elementPart (ordered))
     """
-    #def __init__(self) -> None:
-    #    self.__sequence = "Int"
+    def __init__(self) -> None:
+        ElementPartCollection.__init__(self)
+        self.sequence = "Int"
+        #print ( self )
+        print (f'{self.sequence}')
+    
 
 class UnorderedCollection(ElementPartCollection):
     """ 

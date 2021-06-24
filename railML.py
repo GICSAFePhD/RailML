@@ -13,4 +13,15 @@ network.add_networkResource("ID3","cosa_3","03/01/2020","03/01/2030")
 
 print(network)
 
-#topology = Topology()
+NetElement = NetElement()
+
+NetElement.add_relation()
+NetElement.add_relation()
+NetElement.add_relation()
+
+print(NetElement)
+
+compositionNetElement = CompositionNetElement()
+linearElement = LinearElement()
+elementPartCollection = ElementPartCollection()
+orderedCollection = OrderedCollection()

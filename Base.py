@@ -21,10 +21,10 @@ class BaseObject():
         self.validFrom = validFrom   
 
     def __str__(self):
-        return f'[Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'   
+        return f'{self.__class__.__name__}> [Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'   
     
-    def __del__(self):  
-        print(f'Removing {self.__class__.__name__}')
+    #def __del__(self):  
+    #    print(f'Removing {self.__class__.__name__}')
 
 class Network(BaseObject):
     """ 
@@ -55,14 +55,14 @@ class Network(BaseObject):
         self.networkResource.clear()
     
     def __str__(self):
-        print(f'Network:\n\tId:{self.id}\n\tName:{self.name}\n\tValidTo:{self.validTo}\n\tValidFrom:{self.validFrom}')
+        print ( super().__str__() )
         
         if (hasattr(self,'levelNetwork')):
             for i in self.levelNetwork:
-                print(f'\tLevelNetwork:descriptionLevel:{i.descriptionLevel}{i}')
+                print(f'\t{i} + descriptionLevel:{i.descriptionLevel}')
         if (hasattr(self,'networkResource')):        
             for i in self.networkResource:
-                print(f'\t\tNetworkResource:{i}')
+                print(f'\t\t{i}')
         return ''        
 
     def add_networkResource(self,id,name,validTo,validFrom):
@@ -132,4 +132,5 @@ class NetworkResource(BaseObject):
     *Belongs to: 
         1 Network
     """
-    
+    def __init__(self, id="123", name="xyz", validTo="01/01/2050", validFrom="01/01/1990"):
+        BaseObject.__init__(self, id="123", name="xyz", validTo="01/01/2050", validFrom="01/01/1990")
