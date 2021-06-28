@@ -1,3 +1,5 @@
+import uuid, datetime
+
 class BaseObject():
     """ 
     !Defines four properties shared by most of objects in RailTopoModel
@@ -13,15 +15,41 @@ class BaseObject():
     -------
     var(self): get var
     var(self,value): set var to value
-    """     
-    def __init__(self, id="123", name="xyz", validTo="01/01/2050", validFrom="01/01/1990") -> None:       
-        self.id =  id
-        self.name = name
-        self.validTo = validTo
-        self.validFrom = validFrom   
-
-    def __str__(self):
-        return f'{self.__class__.__name__}> [Id:{self.id}|Name:{self.name}|ValidTo:{self.validTo}|ValidFrom:{self.validFrom}]'   
+    """
+    def __init__(self, id=uuid.uuid4(), name="xyz", validTo=datetime.date.today(), validFrom=datetime.date.today()):       
+        self.___id  = id
+        self.___name  = name
+        self.___validFrom  = validTo
+        self.___validTo  = validFrom
+        
+    @property
+    def Id(self):
+        return self.___id
+    @property
+    def Name(self):
+        return self.___name
+    @property
+    def ValidFrom(self):
+        return self.___validFrom
+    @property
+    def ValidTo(self):
+        return self.___validTo
+    
+    @Id.setter
+    def Id(self, aId : uuid):
+        self.___id = aId
+    @Name.setter    
+    def Name(self, aName : str):
+        self.___name = aName
+    @ValidFrom.setter       
+    def ValidFrom(self, aValidFrom : datetime):
+        self.___validFrom = aValidFrom 
+    @ValidTo.setter     
+    def ValidTo(self, aValidTo : datetime):
+        self.___validTo = aValidTo    
+    
+    def __str__(self):  
+        return f'{self.__class__.__name__}> [Id:{self.Id}|Name:{self.Name}|ValidTo:{self.ValidTo}|ValidFrom:{self.ValidFrom}]'  
     
     #def __del__(self):  
     #    print(f'Removing {self.__class__.__name__}')
@@ -48,48 +76,31 @@ class Network(BaseObject):
         Add it to list in Network
         Add it to list in LevelNetwork
     """
+    def __init__(self):
+        BaseObject.__init__(self)
+        """# @AssociationMultiplicity 1..*
+        # @AssociationKind Composition"""
+        self._levels = []
+        """# @AssociationMultiplicity 0..*
+        # @AssociationKind Composition"""
+        self._networkResources = []
+		
     def __del__(self):  
         # Removing levelNetwork and networkResource Objects
         print('Removing all LevelNetwork and NetworkResource')
-        self.levelNetwork.clear()
-        self.networkResource.clear()
+        #self.levelNetwork.clear()
+        #self.networkResource.clear()
     
     def __str__(self):
         print ( super().__str__() )
-        
-        if (hasattr(self,'levelNetwork')):
-            for i in self.levelNetwork:
-                print(f'\t{i} + descriptionLevel:{i.descriptionLevel}')
+    
+        if (hasattr(self,'_levels')):
+            for i in self._levels:
+                print(f'\t{i} + descriptionLevel:{i._levels}')
         if (hasattr(self,'networkResource')):        
             for i in self.networkResource:
                 print(f'\t\t{i}')
         return ''        
-
-    def add_networkResource(self,id,name,validTo,validFrom):
-        # If not networkResource in Network
-        if (not hasattr(self,'networkResource')):
-            # Create the new attribute networkResource
-            self.networkResource = []
-        # Create the object NetworkResource with the parameters
-        networkResource = NetworkResource(id,name,validTo,validFrom)
-        # Append the object to the list
-        self.networkResource.append(networkResource)
-        # Associate the networkResource to the levelNetwork 
-        self.add_levelNetwork(id,name,validTo,validFrom,networkResource)  
-    
-    def add_levelNetwork(self,id,name,validTo,validFrom,networkResource):        
-        # If not levelNetwork in Network 
-        if (not hasattr(self,'levelNetwork')):
-            # Create the new attribute levelNetwork
-            self.levelNetwork = []   
-        # Create the object LevelNetwork with the parameters
-        levelNetwork = LevelNetwork("ID5","Level1","Mañana","Hoy")  
-        # Check if the levelNetwork created is a new one
-        for i in self.levelNetwork:
-            if( levelNetwork.id == i.id):
-                return  
-        # If it is a new levelNetwork, append it to the list
-        self.levelNetwork.append(levelNetwork)
 
 class LevelNetwork(BaseObject):
     """ 
@@ -104,26 +115,16 @@ class LevelNetwork(BaseObject):
     *Has: 
         * NetworkResources
     """
-    def __init__(self,id,name,validTo,validFrom):
-        BaseObject.__init__(self,id,name,validTo,validFrom)
+    def __init__(self):
+        BaseObject.__init__(self)
+        
+        self._levels : Network = None
+        """# @AssociationMultiplicity 1"""
+        self._networkResources = []
+        """# @AssociationMultiplicity *"""
         # Create attirube descriptionLevel
         self.descriptionLevel = "Micro"
-        
-        # If not networkResource in levelNetwork
-        if (not hasattr(self,'networkResource')):
-            # Create the new attribute networkResource
-            self.networkResource = []    
 
-        networkResourceRepeated = False
-        # Check if the networkResource is a new one
-        for i in self.networkResource:
-            if( self.networkResource.id == i.networkResource.id ):
-                networkResourceRepeated = True
-        
-        if (not networkResourceRepeated):       
-            # Append the networkResource object to the levelNetwork object list attribute
-            self.networkResource.append(self.networkResource)
-        
 class NetworkResource(BaseObject):
     """ 
     !Defines every object of the network, qualified as a resource.
