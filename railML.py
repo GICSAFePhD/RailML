@@ -6,30 +6,38 @@ from RailML.Base import *
 #from RailML.PositioningSystem import *
 
 
-x = BaseObject(name = "abc")
-print(x)
+# x = Network()
 
-y = Network()
-print(y)
+#y1 = NetworkResource()
+#y2 = NetworkResource()
+#y1.associateNetwork(x)
+#y2.associateNetwork(x)
 
+#z = LevelNetwork(level = "Micro")
+#z.associateNetwork(x)
+#z.associateNetworkResources(y1)
+#z.associateNetworkResources(y2)
 
-#network = Network()
+#print(x)
+#print(y1)
+#print(y2)
+#print(z)
 
-#network.add_networkResource("ID1","cosa_1","01/01/2020","01/01/2030")
-#network.add_networkResource("ID2","cosa_2","02/01/2020","02/01/2030")
-#network.add_networkResource("ID3","cosa_3","03/01/2020","03/01/2030")
+N = 5
 
-#print(network)
+network = Network()
+# Create the level network
+level = LevelNetwork()
+# Associate the level to a network
+level.associateNetwork(network)
 
-# NetElement = NetElement()
+# Iniciate resources
+resources = []
 
-# NetElement.add_relation()
-# NetElement.add_relation()
-# NetElement.add_relation()
-
-# print(NetElement)
-
-# compositionNetElement = CompositionNetElement()
-# linearElement = LinearElement()
-# elementPartCollection = ElementPartCollection()
-# orderedCollection = OrderedCollection()
+for i in range(N):
+    # Create resources
+    resources.append(NetworkResource())
+    # Associate resources to a network
+    resources[i].associateNetwork(network)
+    # Associate resources yo a level
+    level.associateNetworkResources(resources[i])

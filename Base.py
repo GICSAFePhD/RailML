@@ -16,11 +16,11 @@ class BaseObject():
     var(self): get var
     var(self,value): set var to value
     """
-    def __init__(self, id=uuid.uuid4(), name="xyz", validTo=datetime.date.today(), validFrom=datetime.date.today()):       
-        self.___id  = id
+    def __init__(self, id = uuid.uuid4(), name="xyz", validTo=datetime.date.today(), validFrom=datetime.date.today()):       
+        self.___id  = uuid.uuid4()
         self.___name  = name
-        self.___validFrom  = validTo
-        self.___validTo  = validFrom
+        self.___validFrom  = datetime.date.today()
+        self.___validTo  = datetime.date.today()
         
     @property
     def Id(self):
@@ -42,14 +42,14 @@ class BaseObject():
     def Name(self, aName : str):
         self.___name = aName
     @ValidFrom.setter       
-    def ValidFrom(self, aValidFrom : datetime):
+    def ValidFrom(self, aValidFrom : datetime): 
         self.___validFrom = aValidFrom 
     @ValidTo.setter     
     def ValidTo(self, aValidTo : datetime):
         self.___validTo = aValidTo    
     
     def __str__(self):  
-        return f'{self.__class__.__name__}> [Id:{self.Id}|Name:{self.Name}|ValidTo:{self.ValidTo}|ValidFrom:{self.ValidFrom}]'  
+        return f'{self.__class__.__name__}> [Id:{self.Id}|Name:{self.Name}|ValidTo:{self.ValidTo}|ValidFrom:{self.ValidFrom}]'
     
     #def __del__(self):  
     #    print(f'Removing {self.__class__.__name__}')
@@ -84,23 +84,12 @@ class Network(BaseObject):
         """# @AssociationMultiplicity 0..*
         # @AssociationKind Composition"""
         self._networkResources = []
-		
-    def __del__(self):  
-        # Removing levelNetwork and networkResource Objects
-        print('Removing all LevelNetwork and NetworkResource')
-        #self.levelNetwork.clear()
-        #self.networkResource.clear()
-    
-    def __str__(self):
-        print ( super().__str__() )
-    
-        if (hasattr(self,'_levels')):
-            for i in self._levels:
-                print(f'\t{i} + descriptionLevel:{i._levels}')
-        if (hasattr(self,'networkResource')):        
-            for i in self.networkResource:
-                print(f'\t\t{i}')
-        return ''        
+	
+    def associateLevelNetwork(self,levelNetwork):
+        self._levels.append(levelNetwork)
+        
+    def associateNetworkResources(self,networkResources):
+        self._networkResources.append(networkResources)
 
 class LevelNetwork(BaseObject):
     """ 
@@ -115,16 +104,35 @@ class LevelNetwork(BaseObject):
     *Has: 
         * NetworkResources
     """
-    def __init__(self):
-        BaseObject.__init__(self)
+    def __init__(self,level = "Micro"):
+        super().__init__()
         
-        self._levels : Network = None
+        self._levels : Network = []
         """# @AssociationMultiplicity 1"""
         self._networkResources = []
         """# @AssociationMultiplicity *"""
         # Create attirube descriptionLevel
-        self.descriptionLevel = "Micro"
+        self._descriptionLevel = level
 
+    def associateNetwork(self,network):
+        self._levels.append(network)
+        network.associateNetworkResources(self)
+    
+    def associateNetworkResources(self,networkResource):
+        self._networkResources.append(networkResource)
+    
+    def __str__(self):
+        print(super().__str__())
+        if (hasattr(self,'_descriptionLevel')):
+                print(f'\tdescriptionLevel:{self._descriptionLevel}')  
+        if ( hasattr(self,'_levels') and self._levels != [] ):
+            for i in self._levels:
+                print(f'\t\t{i}')
+        if ( hasattr(self,'_networkResources') and self._networkResources != [] ):        
+            for i in self._networkResources:
+                print(f'\t\t{i}')
+        return ''
+    
 class NetworkResource(BaseObject):
     """ 
     !Defines every object of the network, qualified as a resource.
@@ -133,5 +141,19 @@ class NetworkResource(BaseObject):
     *Belongs to: 
         1 Network
     """
-    def __init__(self, id="123", name="xyz", validTo="01/01/2050", validFrom="01/01/1990"):
-        BaseObject.__init__(self, id="123", name="xyz", validTo="01/01/2050", validFrom="01/01/1990")
+    
+    def __init__(self):
+        super().__init__()
+        self._networkResources : Network = []
+        """# @AssociationMultiplicity 1"""    
+        
+    def associateNetwork(self,network):
+        self._networkResources.append(network)
+        network.associateLevelNetwork(self)
+        
+    def __str__(self):
+        print(super().__str__())
+        if ( hasattr(self,'_networkResources') and self._networkResources != [] ):        
+            for i in self._networkResources:
+                print(f'\t\t{i}')
+        return ''
