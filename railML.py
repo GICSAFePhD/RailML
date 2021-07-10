@@ -1,43 +1,54 @@
-import sys
-sys.path.append('.')
-from RailML.Base import *
-#from RailML.Topology import *
-#from RailML.NetEntity import *
-#from RailML.PositioningSystem import *
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+from Common import Metadata
+from Common import Common
+from Infrastructure import Infrastructure
+from Interlocking import Interlocking
+import aRailML
+from typing import List
 
+class railML(object):
+	"""This is the root element of any railML file."""
+	def setMetadata(self, aMetadata : Metadata):
+		self._metadata = aMetadata
 
-# x = Network()
+	def getMetadata(self) -> Metadata:
+		return self._metadata
 
-#y1 = NetworkResource()
-#y2 = NetworkResource()
-#y1.associateNetwork(x)
-#y2.associateNetwork(x)
+	def setCommon(self, aCommon : Common):
+		self._common = aCommon
 
-#z = LevelNetwork(level = "Micro")
-#z.associateNetwork(x)
-#z.associateNetworkResources(y1)
-#z.associateNetworkResources(y2)
+	def getCommon(self) -> Common:
+		return self._common
 
-#print(x)
-#print(y1)
-#print(y2)
-#print(z)
+	def setInfrastructure(self, aInfrastructure : Infrastructure):
+		self._infrastructure = aInfrastructure
 
-N = 5
+	def getInfrastructure(self) -> Infrastructure:
+		return self._infrastructure
 
-network = Network()
-# Create the level network
-level = LevelNetwork()
-# Associate the level to a network
-level.associateNetwork(network)
+	def setInterlocking(self, aInterlocking : Interlocking):
+		self._interlocking = aInterlocking
 
-# Iniciate resources
-resources = []
+	def getInterlocking(self) -> Interlocking:
+		return self._interlocking
 
-for i in range(N):
-    # Create resources
-    resources.append(NetworkResource())
-    # Associate resources to a network
-    resources[i].associateNetwork(network)
-    # Associate resources yo a level
-    level.associateNetworkResources(resources[i])
+	def __init__(self):
+		self._metadata : Metadata = None
+		# @AssociationType Common.Metadata
+		# @AssociationMultiplicity 0..1
+		self._common : Common = None
+		# @AssociationType Common.Common
+		# @AssociationMultiplicity 0..1
+		# """root element for railML3 common model"""
+		self._infrastructure : Infrastructure = None
+		# @AssociationType Infrastructure.Infrastructure
+		# @AssociationMultiplicity 0..1
+		# """root element for railML3 infrastructure model"""
+		self._interlocking : Interlocking = None
+		# @AssociationType Interlocking.Interlocking
+		# @AssociationMultiplicity 0..1
+		# """root element for railML3 interlocking model"""
+		self.___rail3_aRailML : aRailML = None
+		"""# @AssociationKind Aggregation"""
+
