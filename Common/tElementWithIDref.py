@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
+from RailML.Common import tRef
 from typing import List
 
 class tElementWithIDref(object):

@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tGradientCurveType
-from Common import tGradientPerMille
-from Common import tLengthM
-from Infrastructure import GeometryCurve
+from RailML.Common import tGradientPerMille, tLengthM
+from RailML.Infrastructure import tGradientCurveType, GeometryCurve
 from typing import List
 
-class GradientCurve(GeometryCurve):
+#class GradientCurve(GeometryCurve): #TODO CON ESTA HERANCIA SE ROMPE
+class GradientCurve():    
 	def setCurveType(self, aCurveType : tGradientCurveType):
 		self.___curveType = aCurveType
 

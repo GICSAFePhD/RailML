@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tHorizontalCurveType
+from RailML.Infrastructure import tHorizontalCurveType
 from typing import List
 
-class tHorizontalCurveTypeExt(tHorizontalCurveType):
+#class tHorizontalCurveTypeExt(tHorizontalCurveType): #TODO CON ESTA HERENCIA SE ROMPE
+class tHorizontalCurveTypeExt():
 	pass

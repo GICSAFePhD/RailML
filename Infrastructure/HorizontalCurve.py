@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tHorizontalCurveTypeExt
-from Common import tAngleDeg
-from Common import tLengthM
-from Infrastructure import GeometryCurve
+from RailML.Common import tAngleDeg, tLengthM
+from RailML.Infrastructure import tHorizontalCurveTypeExt, GeometryCurve
 from typing import List
 
-class HorizontalCurve(GeometryCurve):
+#class HorizontalCurve(GeometryCurve): #TODO CON ESTA HERENCIA SE ROMPE
+class HorizontalCurve():    
 	def setCurveType(self, aCurveType : tHorizontalCurveTypeExt):
 		self.___curveType = aCurveType
 

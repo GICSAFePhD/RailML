@@ -1,20 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import LineTypeCoordinate
-from Infrastructure import PointTypeCoordinate
+from RailML.Infrastructure import LineTypeCoordinate,PointTypeCoordinate
 from typing import List
 
 class GmlLocations(object):
-	def setLineString(self, *aLineString : LineTypeCoordinate*):
+	def setLineString(self, aLineString : LineTypeCoordinate):
 		self._lineString = aLineString
 
-	def getLineString(self) -> LineTypeCoordinate*:
+	def getLineString(self) -> LineTypeCoordinate:
 		return self._lineString
 
-	def setPoint(self, *aPoint : PointTypeCoordinate*):
+	def setPoint(self, aPoint : PointTypeCoordinate):
 		self._point = aPoint
 
-	def getPoint(self) -> PointTypeCoordinate*:
+	def getPoint(self) -> PointTypeCoordinate:
 		return self._point
 
 	def __init__(self):

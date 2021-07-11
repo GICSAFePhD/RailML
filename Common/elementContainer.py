@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from dc.elements.1.1 import elementsGroup
+from RailML.Common import elementsGroup
 from typing import List
 
 class elementContainer(object):

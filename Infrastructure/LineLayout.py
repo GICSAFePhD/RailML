@@ -1,10 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tGradientPerMille
-from Infrastructure import tNumberOfTracks
-from Common import tLengthM
-from Common import any
-from Common import anyAttribute
+from RailML.Common import tGradientPerMille, tLengthM, any, anyAttribute
+from RailML.Infrastructure import tNumberOfTracks
 from typing import List
 
 class LineLayout(object):

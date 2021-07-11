@@ -1,8 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import HorizontalCurves
-from Infrastructure import GradientCurves
-from Infrastructure import GeometryPoints
+from RailML.Infrastructure import HorizontalCurves, GradientCurves, GeometryPoints
 from typing import List
 
 class Geometry(object):

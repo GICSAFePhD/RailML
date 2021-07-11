@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import Designator
-from Common import tElementWithID
+from RailML.Common import Designator, tElementWithID
 from typing import List
 
-class tElementWithIDandDesignator(tElementWithID):
+#class tElementWithIDandDesignator(tElementWithID): #TODO CON HERENCIA SE ROMPE
+class tElementWithIDandDesignator():
 	def setDesignator(self, aDesignator : Designator):
 		self._designator = aDesignator
 

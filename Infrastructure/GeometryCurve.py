@@ -1,11 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import tElementWithIDref
-from Infrastructure import GeometryEntity
+from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import GeometryEntity
 from typing import List
 
-class GeometryCurve(GeometryEntity):
+#class GeometryCurve(GeometryEntity): #TODO CON ESTA HERENCIA SE ROMPE
+class GeometryCurve():
 	__metaclass__ = ABCMeta
 	@classmethod
 	def setBeginsInGeometryPoint(self, aBeginsInGeometryPoint : tElementWithIDref):

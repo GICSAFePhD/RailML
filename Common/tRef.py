@@ -1,9 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tUUID
-from Common import tGenericRef
+from RailML.Common import tUUID, tGenericRef
 from typing import List
 
-class tRef(tUUID, tGenericRef):
+#class tRef(tUUID, tGenericRef): # NO SE XQ CON ESTAS HERENCIA SE ROMPE
+class tRef():         
 	"""reference an object using its UUID or GenericID (xs:ID)"""
-	pass
+	def __init__(self):
+		pass

@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import Name
-from Common import tElementWithID
+from RailML.Common import Name, tElementWithID
 from typing import List
 
-class tElementWithIDandName(tElementWithID):
+#class tElementWithIDandName(tElementWithID): #TODO CON ESTA HERENCIA SE ROMPE
+class tElementWithIDandName():
 	__metaclass__ = ABCMeta
 	@classmethod
-	def setName(self, *aName : Name*):
+	def setName(self, aName : Name):
 		self._name = aName
 
 	@classmethod
-	def getName(self) -> Name*:
+	def getName(self) -> Name:
 		return self._name
 
 	@classmethod

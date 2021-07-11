@@ -1,12 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Common import tGradientPerMille
-from Common import tAngleDeg
-from Infrastructure import GeometryEntity
+from RailML.Common import tLengthM, tGradientPerMille, tAngleDeg
+from RailML.Infrastructure import GeometryEntity
 from typing import List
 
-class GeometryPoint(GeometryEntity):
+#class GeometryPoint(GeometryEntity): #TODO CON ESTA HERENCIA SE ROMPE
+class GeometryPoint():
 	def setRadius(self, aRadius : tLengthM):
 		self.___radius = aRadius
 

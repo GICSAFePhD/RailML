@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import anyAttribute
-from Common import any
+from RailML.Common import anyAttribute, any
 from typing import List
 
 class SignalX(object):

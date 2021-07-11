@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import tID
+from RailML.Common import tID
 from typing import List
 
 class tElementWithID(object):

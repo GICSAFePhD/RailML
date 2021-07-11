@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import anyAttribute
-from Common import tElementWithIDandName
+from RailML.Common import anyAttribute, tElementWithIDandName
 from typing import List
 
-class VisualizationBaseElement(tElementWithIDandName):
+#class VisualizationBaseElement(tElementWithIDandName): #TODO CON ESTA HERENCIA SE ROMPE
+class VisualizationBaseElement():
 	__metaclass__ = ABCMeta
 	@classmethod
 	def __init__(self):

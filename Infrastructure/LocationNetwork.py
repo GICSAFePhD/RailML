@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
+from RailML.Common import tRef
 from typing import List
 
 class LocationNetwork(object):
@@ -11,6 +11,7 @@ class LocationNetwork(object):
 		return self.___networkRef
 
 	def __init__(self):
+		pass
 		self.___networkRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a railway topology <network> element"""

@@ -15,10 +15,12 @@ class Name(object):
 	def getDescription(self) -> str:
 		return self.___description
 
-	def setLanguage(self, aLanguage : language):
+	#def setLanguage(self, aLanguage : language):
+	def setLanguage(self, aLanguage : str):
 		self.___language = aLanguage
 
-	def getLanguage(self) -> language:
+	#def getLanguage(self) -> language:
+	def getLanguage(self) -> str: 
 		return self.___language
 
 	def __init__(self):
@@ -26,6 +28,7 @@ class Name(object):
 		"""should be interpreted in its elements' context (e.g. signal/name, vehicle/name)"""
 		self.___description : str = None
 		"""should be interpreted in its elements' context, substantiates the name"""
-		self.___language : language = None
+		#self.___language : language = None
+		self.___language : str = None
 		"""natural language identification according to http://www.w3.org/TR/xml/#sec-lang-tag; should always be given"""
 

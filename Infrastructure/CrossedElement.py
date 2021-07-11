@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tCrossedElementTypeExt
-from Common import tRef
-from Common import tElementWithIDandName
+from RailML.Infrastructure import tCrossedElementTypeExt
+from RailML.Common import tRef, tElementWithIDandName
 from typing import List
 
 class CrossedElement(tElementWithIDandName):

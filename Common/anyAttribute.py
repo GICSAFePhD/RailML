@@ -1,9 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import EntityIS
-from Infrastructure import VisualizationBaseElement
-from Interlocking import EntityIL
-from Interlocking import EntityILref
+from RailML.Infrastructure import EntityIS, VisualizationBaseElement
+from RailML.Interlocking import EntityIL, EntityILref
 from typing import List
 
 class anyAttribute(object):
