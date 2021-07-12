@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common import Metadata, Common
+from RailML.Common import Metadata
+#from RailML.Common import Common
 #from RailML.Infrastructure import Infrastructure
 #from RailML.Interlocking import Interlocking
 #import aRailML
@@ -14,11 +15,19 @@ class railML():
 	def getMetadata(self) -> Metadata:
 		return self._metadata
 
-	def setCommon(self, aCommon : Common):
-		self._common = aCommon
+	@property
+	def Metadata(self):
+		return self.___metadata
 
-	def getCommon(self) -> Common:
-		return self._common
+	@Metadata.setter
+	def Metadata(self, aMetadata : str):
+		self.___metadata = aMetadata
+  
+	#def setCommon(self, aCommon : Common):
+	#	self._common = aCommon
+
+	#def getCommon(self) -> Common:
+	#	return self._common
 
 	# def setInfrastructure(self, aInfrastructure : Infrastructure):
 	# 	self._infrastructure = aInfrastructure
@@ -33,10 +42,10 @@ class railML():
 	# 	return self._interlocking
 
 	def __init__(self):
-		self._metadata : Metadata = None
+		self.___metadata : Metadata = None
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		self._common : Common = None
+		#self._common : Common = None
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
