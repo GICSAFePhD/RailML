@@ -1,20 +1,16 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common import Metadata
+import sys
+sys.path.append('.')
+from RailML.Common.Metadata import Metadata
 #from RailML.Common import Common
 #from RailML.Infrastructure import Infrastructure
 #from RailML.Interlocking import Interlocking
 #import aRailML
-from typing import List
+#from typing import List
 
 class railML():
 	"""This is the root element of any railML file."""
-	def setMetadata(self, aMetadata : Metadata):
-		self._metadata = aMetadata
-
-	def getMetadata(self) -> Metadata:
-		return self._metadata
-
 	@property
 	def Metadata(self):
 		return self.___metadata
@@ -22,7 +18,7 @@ class railML():
 	@Metadata.setter
 	def Metadata(self, aMetadata : str):
 		self.___metadata = aMetadata
-  
+
 	#def setCommon(self, aCommon : Common):
 	#	self._common = aCommon
 
@@ -59,3 +55,8 @@ class railML():
 		# """root element for railML3 interlocking model"""
 		#self.___rail3_aRailML : aRailML = None
 		"""# @AssociationKind Aggregation"""
+
+
+RML = railML()
+metadata = Metadata()
+RML.Metadata = metadata
