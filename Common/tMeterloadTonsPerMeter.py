@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tMeterload
+from RailML.Common.tMeterload import tMeterload
 from typing import List
 
 class tMeterloadTonsPerMeter(tMeterload):

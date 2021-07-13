@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tEtcsTrainCategoryNumber
-from Common import tTrainType
-from Common import tCantDeficiency
+from RailML.Common.tEtcsTrainCategoryNumber import tEtcsTrainCategoryNumber
+from RailML.Common.tTrainType import tTrainType
+from RailML.Common.tCantDeficiency import tCantDeficiency
 from typing import List
 
 class SpeedProfileTrainType(object):

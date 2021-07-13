@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedProfileInfluence
-from Common import SpeedProfile
+from RailML.Common.tSpeedProfileInfluence import tSpeedProfileInfluence
+from RailML.Common.SpeedProfile import SpeedProfile
 from typing import List
 
 class aSpeedProfile(object):

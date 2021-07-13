@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import SpeedProfileTilting
-from Common import SpeedProfileLoad
-from Common import SpeedProfileBraking
-from Common import SpeedProfileTrainType
-from Common import aSpeedProfile
-from Common import tElementWithIDandName
+from RailML.Common.SpeedProfileTilting import SpeedProfileTilting
+from RailML.Common.SpeedProfileLoad import SpeedProfileLoad
+from RailML.Common.SpeedProfileBraking import SpeedProfileBraking
+from RailML.Common.SpeedProfileTrainType import SpeedProfileTrainType
+#from RailML.Common.aSpeedProfile import aSpeedProfile
+from RailML.Common.tElementWithIDandName import tElementWithIDandName
 from typing import List
 
 class SpeedProfile(tElementWithIDandName):
@@ -46,5 +46,5 @@ class SpeedProfile(tElementWithIDandName):
 		self._trainType : SpeedProfileTrainType = None
 		# @AssociationType Common.SpeedProfileTrainType
 		# @AssociationMultiplicity 0..1
-		self._unnamed_aSpeedProfile_ : aSpeedProfile = None
+		#self._unnamed_aSpeedProfile_ : aSpeedProfile = None	#TODO CIRCULAR INCLUDE!
 

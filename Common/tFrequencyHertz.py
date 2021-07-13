@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tFrequency
+from RailML.Common.tFrequency import tFrequency
 from typing import List
 
 class tFrequencyHertz(tFrequency):

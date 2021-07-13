@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from schemas.3.1 import tLrsMethod
-from Infrastructure.RTM import RTM_LinearAnchorPoint
-from Infrastructure.RTM import RTM_PositioningSystem
+from RailML.Infrastructure.tLrsMethod import tLrsMethod
+from RailML.Infrastructure.RTM_LinearAnchorPoint import RTM_LinearAnchorPoint
+from RailML.Infrastructure.RTM_PositioningSystem import RTM_PositioningSystem
 from typing import List
 
 class RTM_LinearPositioningSystem(RTM_PositioningSystem):

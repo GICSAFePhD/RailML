@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tBrakeTypeExt
-from Common import tAirBrakeApplicationDirection
-from Common import tBrakePercentage
+from RailML.Common.tBrakeTypeExt import tBrakeTypeExt
+from RailML.Common.tAirBrakeApplicationDirection import tAirBrakeApplicationDirection
+from RailML.Common.tBrakePercentage import tBrakePercentage
 from typing import List
 
 class SpeedProfileBraking(object):

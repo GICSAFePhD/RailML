@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tWeightTons
-from Common import tMeterloadTonsPerMeter
+from RailML.Common.tWeightTons import tWeightTons
+from RailML.Common.tMeterloadTonsPerMeter import tMeterloadTonsPerMeter
 from typing import List
 
 class SpeedProfileLoad(object):

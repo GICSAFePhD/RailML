@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure.RTM import RTM_PositioningSystem
+from RailML.Infrastructure.RTM_PositioningSystem import RTM_PositioningSystem
 from typing import List
 
 class RTM_GeometricPositioningSystem(RTM_PositioningSystem):

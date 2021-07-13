@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tVoltage
+from RailML.Common.tVoltage import tVoltage
 from typing import List
 
 class tVoltageVolt(tVoltage):

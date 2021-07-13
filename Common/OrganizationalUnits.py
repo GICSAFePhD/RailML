@@ -1,63 +1,63 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import InfrastructureManager
-from Common import VehicleManufacturer
-from Common import VehicleOperator
-from Common import Customer
-from Common import RailwayUndertaking
-from Common import OperationalUndertaking
-from Common import Concessionaire
-from Common import Contractor
+from RailML.Common.InfrastructureManager import InfrastructureManager
+from RailML.Common.VehicleManufacturer import VehicleManufacturer
+from RailML.Common.VehicleOperator import VehicleOperator
+from RailML.Common.Customer import Customer
+from RailML.Common.RailwayUndertaking import RailwayUndertaking
+from RailML.Common.OperationalUndertaking import OperationalUndertaking
+from RailML.Common.Concessionaire import Concessionaire
+from RailML.Common.Contractor import Contractor
 from typing import List
 
 class OrganizationalUnits(object):
 	"""This is the top level element for various company definitions regarding the railway services referred to in this file"""
-	def setInfrastructureManager(self, *aInfrastructureManager : InfrastructureManager*):
+	def setInfrastructureManager(self, *aInfrastructureManager : InfrastructureManager):
 		self._infrastructureManager = aInfrastructureManager
 
-	def getInfrastructureManager(self) -> InfrastructureManager*:
+	def getInfrastructureManager(self) -> InfrastructureManager:
 		return self._infrastructureManager
 
-	def setVehicleManufacturer(self, *aVehicleManufacturer : VehicleManufacturer*):
+	def setVehicleManufacturer(self, *aVehicleManufacturer : VehicleManufacturer):
 		self._vehicleManufacturer = aVehicleManufacturer
 
-	def getVehicleManufacturer(self) -> VehicleManufacturer*:
+	def getVehicleManufacturer(self) -> VehicleManufacturer:
 		return self._vehicleManufacturer
 
-	def setVehicleOperator(self, *aVehicleOperator : VehicleOperator*):
+	def setVehicleOperator(self, *aVehicleOperator : VehicleOperator):
 		self._vehicleOperator = aVehicleOperator
 
-	def getVehicleOperator(self) -> VehicleOperator*:
+	def getVehicleOperator(self) -> VehicleOperator:
 		return self._vehicleOperator
 
-	def setCustomer(self, *aCustomer : Customer*):
+	def setCustomer(self, *aCustomer : Customer):
 		self._customer = aCustomer
 
-	def getCustomer(self) -> Customer*:
+	def getCustomer(self) -> Customer:
 		return self._customer
 
-	def setRailwayUndertaking(self, *aRailwayUndertaking : RailwayUndertaking*):
+	def setRailwayUndertaking(self, *aRailwayUndertaking : RailwayUndertaking):
 		self._railwayUndertaking = aRailwayUndertaking
 
-	def getRailwayUndertaking(self) -> RailwayUndertaking*:
+	def getRailwayUndertaking(self) -> RailwayUndertaking:
 		return self._railwayUndertaking
 
-	def setOperationalUndertaking(self, *aOperationalUndertaking : OperationalUndertaking*):
+	def setOperationalUndertaking(self, *aOperationalUndertaking : OperationalUndertaking):
 		self._operationalUndertaking = aOperationalUndertaking
 
-	def getOperationalUndertaking(self) -> OperationalUndertaking*:
+	def getOperationalUndertaking(self) -> OperationalUndertaking:
 		return self._operationalUndertaking
 
-	def setConcessionaire(self, *aConcessionaire : Concessionaire*):
+	def setConcessionaire(self, *aConcessionaire : Concessionaire):
 		self._concessionaire = aConcessionaire
 
-	def getConcessionaire(self) -> Concessionaire*:
+	def getConcessionaire(self) -> Concessionaire:
 		return self._concessionaire
 
-	def setContractor(self, *aContractor : Contractor*):
+	def setContractor(self, *aContractor : Contractor):
 		self._contractor = aContractor
 
-	def getContractor(self) -> Contractor*:
+	def getContractor(self) -> Contractor:
 		return self._contractor
 
 	def __init__(self):

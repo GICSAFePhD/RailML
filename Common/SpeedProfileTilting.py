@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tTiltingActuationType
-from Common import tAngleDegQuadrant
+from RailML.Common.tTiltingActuationType import tTiltingActuationType
+from RailML.Common.tAngleDegQuadrant import tAngleDegQuadrant
 from typing import List
 
 class SpeedProfileTilting(object):

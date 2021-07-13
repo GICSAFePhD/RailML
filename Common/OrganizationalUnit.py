@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import tElementWithIDandName
+from RailML.Common.tElementWithIDandName import tElementWithIDandName
 from typing import List
 
 class OrganizationalUnit(tElementWithIDandName):

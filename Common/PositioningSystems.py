@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import GeometricPositioningSystems
-from Common import LinearPositioningSystems
-from Common import ScreenPositioningSystems
+from RailML.Common.GeometricPositioningSystems import GeometricPositioningSystems
+from RailML.Common.LinearPositioningSystems import LinearPositioningSystems
+from RailML.Common.ScreenPositioningSystems import ScreenPositioningSystems
 from typing import List
 
 class PositioningSystems(object):

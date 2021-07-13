@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tVoltageVolt
-from Common import tFrequencyHertz
-from Common import tElementWithID
+from RailML.Common.tVoltageVolt import tVoltageVolt
+from RailML.Common.tFrequencyHertz import tFrequencyHertz
+from RailML.Common.tElementWithID import tElementWithID
 from typing import List
 
 class ElectrificationSystem(tElementWithID):

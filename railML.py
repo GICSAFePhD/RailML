@@ -3,7 +3,7 @@
 import sys
 sys.path.append('.')
 from RailML.Common.Metadata import Metadata
-#from RailML.Common import Common
+from RailML.Common.Common import Common
 #from RailML.Infrastructure import Infrastructure
 #from RailML.Interlocking import Interlocking
 #import aRailML
@@ -14,10 +14,16 @@ class railML():
 	@property
 	def Metadata(self):
 		return self.___metadata
+	@property
+	def Common(self):
+		return self.___common
 
 	@Metadata.setter
-	def Metadata(self, aMetadata : str):
+	def Metadata(self, aMetadata : Metadata):
 		self.___metadata = aMetadata
+	@Common.setter
+	def Common(self, aCommon : Common):
+		self.___common = aCommon
 
 	#def setCommon(self, aCommon : Common):
 	#	self._common = aCommon
@@ -41,7 +47,7 @@ class railML():
 		self.___metadata : Metadata = None
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		#self._common : Common = None
+		self.___common : Common = None
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
@@ -59,4 +65,7 @@ class railML():
 
 RML = railML()
 metadata = Metadata()
+common = Common()
+
 RML.Metadata = metadata
+RML.Common = common

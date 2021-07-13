@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tWeight
+from RailML.Common.tWeight import tWeight
 from typing import List
 
 class tWeightTons(tWeight):
