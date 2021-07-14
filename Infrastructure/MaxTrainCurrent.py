@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tCurrentAmpere
-from Infrastructure import tOperationalTrainType
+from RailML.Common.tCurrentAmpere import tCurrentAmpere
+from RailML.Infrastructure.tOperationalTrainType import tOperationalTrainType
 from typing import List
 
 class MaxTrainCurrent(object):

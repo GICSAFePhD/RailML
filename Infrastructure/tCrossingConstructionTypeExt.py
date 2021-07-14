@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tCrossingConstructionType
+from RailML.Infrastructure.tCrossingConstructionType import tCrossingConstructionType
 from typing import List
 
 class tCrossingConstructionTypeExt(tCrossingConstructionType):

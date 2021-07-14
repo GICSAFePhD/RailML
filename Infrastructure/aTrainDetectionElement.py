@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tTrainDetectionElementType
-from Infrastructure import tDetectedObject
-from Infrastructure import tDetectorMedium
-from Infrastructure import tDetectorLayout
-from Infrastructure import TrainDetectionElement
+from RailML.Infrastructure.tTrainDetectionElementType import tTrainDetectionElementType
+from RailML.Infrastructure.tDetectedObject import tDetectedObject
+from RailML.Infrastructure.tDetectorMedium import tDetectorMedium
+from RailML.Infrastructure.tDetectorLayout import tDetectorLayout
+#from RailML.Infrastructure.TrainDetectionElement import TrainDetectionElement	#TODO CIRCULAR!
 from typing import List
 
 class aTrainDetectionElement(object):
@@ -45,5 +45,5 @@ class aTrainDetectionElement(object):
 		self.___layout : tDetectorLayout = None
 		# @AssociationType Infrastructure.tDetectorLayout
 		# """constructional layout of the train detection element"""
-		self._unnamed_TrainDetectionElement_ : TrainDetectionElement = None
+		#self._unnamed_TrainDetectionElement_ : TrainDetectionElement = None	#TODO CIRCULAR!
 

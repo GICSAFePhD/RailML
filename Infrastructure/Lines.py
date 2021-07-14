@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import Line
+from RailML.Infrastructure.Line import Line
 from typing import List
 
 class Lines(object):
-	def setLine(self, *aLine : Line*):
+	def setLine(self, *aLine : Line):
 		self._line = aLine
 
-	def getLine(self) -> Line*:
+	def getLine(self) -> Line:
 		return self._line
 
 	def __init__(self):

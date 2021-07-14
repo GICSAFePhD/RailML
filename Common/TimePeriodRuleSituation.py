@@ -1,15 +1,16 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import PeriodRule
-from Common import PublicHolidayPeriodRule
-from Common import ElemBasedPeriodRule
+from RailML.Common.PeriodRule import PeriodRule
+from RailML.Common.PublicHolidayPeriodRule import PublicHolidayPeriodRule
+from RailML.Common.ElemBasedPeriodRule import ElemBasedPeriodRule
+import datetime
 from typing import List
 
 class TimePeriodRuleSituation(object):
-	def setFromDate(self, aFromDate : date):
+	def setFromDate(self, aFromDate : datetime):	#TODO DEFINED AS date
 		self.___fromDate = aFromDate
 
-	def getFromDate(self) -> date:
+	def getFromDate(self) -> datetime:	#TODO DEFINED AS date
 		return self.___fromDate
 
 	def setPeriodRule(self, aPeriodRule : PeriodRule):
@@ -31,7 +32,7 @@ class TimePeriodRuleSituation(object):
 		return self._elementBasedPeriodRule
 
 	def __init__(self):
-		self.___fromDate : date = None
+		self.___fromDate : datetime = None	#TODO DEFINED AS date
 		self._periodRule : PeriodRule = None
 		# @AssociationType Common.PeriodRule
 		# @AssociationMultiplicity 0..1

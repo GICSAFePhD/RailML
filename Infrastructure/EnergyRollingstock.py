@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tForceN
-from Infrastructure import tRSFireCategoryType
+from RailML.Common.tForceN import tForceN
+from RailML.Infrastructure.tRSFireCategoryType import tRSFireCategoryType
 from typing import List
 
 class EnergyRollingstock(object):
-	def setRequiresPowerLimitation(self, aRequiresPowerLimitation : long):
+	def setRequiresPowerLimitation(self, aRequiresPowerLimitation : int): #TODO DEFINED AS LONG
 		self.___requiresPowerLimitation = aRequiresPowerLimitation
 
-	def getRequiresPowerLimitation(self) -> long:
+	def getRequiresPowerLimitation(self) -> int:	 #TODO DEFINED AS LONG
 		return self.___requiresPowerLimitation
 
 	def setPermittedStaticContactForce(self, aPermittedStaticContactForce : tForceN):
@@ -23,10 +23,10 @@ class EnergyRollingstock(object):
 	def getPermittedMaxContactForce(self) -> tForceN:
 		return self.___permittedMaxContactForce
 
-	def setRequiresAutomaticDroppingDevice(self, aRequiresAutomaticDroppingDevice : long):
+	def setRequiresAutomaticDroppingDevice(self, aRequiresAutomaticDroppingDevice : int): #TODO DEFINED AS LONG
 		self.___requiresAutomaticDroppingDevice = aRequiresAutomaticDroppingDevice
 
-	def getRequiresAutomaticDroppingDevice(self) -> long:
+	def getRequiresAutomaticDroppingDevice(self) -> int:	#TODO DEFINED AS LONG
 		return self.___requiresAutomaticDroppingDevice
 
 	def setRequiredFireCategory(self, aRequiredFireCategory : tRSFireCategoryType):

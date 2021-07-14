@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import CalendarTimePeriod
-from Common import CalendarTimePeriodWithBitmask
-from Common import GenericTimePeriod
+from RailML.Common.CalendarTimePeriod import CalendarTimePeriod
+from RailML.Common.CalendarTimePeriodWithBitmask import CalendarTimePeriodWithBitmask
+from RailML.Common.GenericTimePeriod import GenericTimePeriod
 from typing import List
 
 class Period(object):

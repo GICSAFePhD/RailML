@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tSwitchPosition
-from Interlocking import EntityILref
-from Interlocking import SwitchPositionRestriction
-from Interlocking import MovableElement
+from RailML.Interlocking.tSwitchPosition import tSwitchPosition
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.SwitchPositionRestriction import SwitchPositionRestriction
+from RailML.Interlocking.MovableElement import MovableElement
 from typing import List
 
 class SwitchIL(MovableElement):
@@ -26,10 +26,10 @@ class SwitchIL(MovableElement):
 	def getBranchLeft(self) -> EntityILref:
 		return self._branchLeft
 
-	def setBranchRight(self, *aBranchRight : EntityILref*):
+	def setBranchRight(self, *aBranchRight : EntityILref):
 		self._branchRight = aBranchRight
 
-	def getBranchRight(self) -> EntityILref*:
+	def getBranchRight(self) -> EntityILref:
 		return self._branchRight
 
 	def setHasPositionRestriction(self, aHasPositionRestriction : SwitchPositionRestriction):

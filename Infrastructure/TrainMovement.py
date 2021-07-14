@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tTrainMovementTypeExt
+from RailML.Infrastructure.tTrainMovementTypeExt import tTrainMovementTypeExt
 from typing import List
 
 class TrainMovement(object):

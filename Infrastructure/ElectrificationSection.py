@@ -1,16 +1,16 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tContactLineType
-from Common import tRef
-from Common import tElementWithIDref
-from Infrastructure import EnergyCatenary
-from Infrastructure import EnergyPantograph
-from Infrastructure import EnergyRollingstock
-from Infrastructure import ContactWire
-from Infrastructure import PantographSpacing
-from Infrastructure import PhaseSeparationSection
-from Infrastructure import SystemSeparationSection
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.tContactLineType import tContactLineType
+from RailML.Common.tRef import tRef
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.EnergyCatenary import EnergyCatenary
+from RailML.Infrastructure.EnergyPantograph import EnergyPantograph
+from RailML.Infrastructure.EnergyRollingstock import EnergyRollingstock
+from RailML.Infrastructure.ContactWire import ContactWire
+from RailML.Infrastructure.PantographSpacing import PantographSpacing
+from RailML.Infrastructure.PhaseSeparationSection import PhaseSeparationSection
+from RailML.Infrastructure.SystemSeparationSection import SystemSeparationSection
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class ElectrificationSection(FunctionalInfrastructureEntity):
@@ -20,10 +20,10 @@ class ElectrificationSection(FunctionalInfrastructureEntity):
 	def getContactLineType(self) -> tContactLineType:
 		return self.___contactLineType
 
-	def setIsInsulatedSection(self, aIsInsulatedSection : long):
+	def setIsInsulatedSection(self, aIsInsulatedSection : int): #TODO DEFINED AS LONG
 		self.___isInsulatedSection = aIsInsulatedSection
 
-	def getIsInsulatedSection(self) -> long:
+	def getIsInsulatedSection(self) -> int: #TODO DEFINED AS LONG
 		return self.___isInsulatedSection
 
 	def setBelongsToParent(self, aBelongsToParent : tRef):
@@ -62,29 +62,29 @@ class ElectrificationSection(FunctionalInfrastructureEntity):
 	def getHasContactWire(self) -> ContactWire:
 		return self._hasContactWire
 
-	def setPantographSpacing(self, *aPantographSpacing : PantographSpacing*):
+	def setPantographSpacing(self, *aPantographSpacing : PantographSpacing):
 		self._pantographSpacing = aPantographSpacing
 
-	def getPantographSpacing(self) -> PantographSpacing*:
+	def getPantographSpacing(self) -> PantographSpacing:
 		return self._pantographSpacing
 
-	def setPhaseSeparationSection(self, *aPhaseSeparationSection : PhaseSeparationSection*):
+	def setPhaseSeparationSection(self, *aPhaseSeparationSection : PhaseSeparationSection):
 		self._phaseSeparationSection = aPhaseSeparationSection
 
-	def getPhaseSeparationSection(self) -> PhaseSeparationSection*:
+	def getPhaseSeparationSection(self) -> PhaseSeparationSection:
 		return self._phaseSeparationSection
 
-	def setSystemSeparationSection(self, *aSystemSeparationSection : SystemSeparationSection*):
+	def setSystemSeparationSection(self, *aSystemSeparationSection : SystemSeparationSection):
 		self._systemSeparationSection = aSystemSeparationSection
 
-	def getSystemSeparationSection(self) -> SystemSeparationSection*:
+	def getSystemSeparationSection(self) -> SystemSeparationSection:
 		return self._systemSeparationSection
 
 	def __init__(self):
 		self.___contactLineType : tContactLineType = None
 		# @AssociationType Infrastructure.tContactLineType
 		# """type of the installed contact line (most common: overhead)"""
-		self.___isInsulatedSection : long = None
+		self.___isInsulatedSection : int = None #TODO DEFINED AS LONG
 		"""set true if the described electrification section is an insulated section"""
 		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef

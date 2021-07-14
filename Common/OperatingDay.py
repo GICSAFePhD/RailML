@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tBitmaskWeek
-from Common import PeriodRuleElement
+from RailML.Common.tBitmaskWeek import tBitmaskWeek
+from RailML.Common.PeriodRuleElement import PeriodRuleElement
 from typing import List
 
 class OperatingDay(PeriodRuleElement):

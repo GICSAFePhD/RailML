@@ -1,28 +1,28 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import SignalAnnouncement
-from Infrastructure import SignalCatenary
-from Infrastructure import SignalDanger
-from Infrastructure import SignalEtcs
-from Infrastructure import SignalInformation
-from Infrastructure import SignalLevelCrossing
-from Infrastructure import SignalMilepost
-from Infrastructure import SignalSpeed
-from Infrastructure import SignalStopPost
-from Infrastructure import SignalTrainMovement
-from Infrastructure import SignalRadio
-from Infrastructure import SignalVehicleEquipment
-from Common import tElementWithIDref
-from Infrastructure import SignalConstruction
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.SignalAnnouncement import SignalAnnouncement
+from RailML.Infrastructure.SignalCatenary import SignalCatenary
+from RailML.Infrastructure.SignalDanger import SignalDanger
+from RailML.Infrastructure.SignalEtcs import SignalEtcs
+from RailML.Infrastructure.SignalInformation import SignalInformation
+from RailML.Infrastructure.SignalLevelCrossing import SignalLevelCrossing
+from RailML.Infrastructure.SignalMilepost import SignalMilepost
+from RailML.Infrastructure.SignalSpeed import SignalSpeed
+from RailML.Infrastructure.SignalStopPost import SignalStopPost
+from RailML.Infrastructure.SignalTrainMovement import SignalTrainMovement
+from RailML.Infrastructure.SignalRadio import SignalRadio
+from RailML.Infrastructure.SignalVehicleEquipment import SignalVehicleEquipment
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.SignalConstruction import SignalConstruction
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class SignalIS(FunctionalInfrastructureEntity):
-	def setIsSwitchable(self, aIsSwitchable : long):
+	def setIsSwitchable(self, aIsSwitchable : int):	#TODO DEFINES AS LONG
 		self.___isSwitchable = aIsSwitchable
 
-	def getIsSwitchable(self) -> long:
+	def getIsSwitchable(self) -> int:	#TODO DEFINES AS LONG
 		return self.___isSwitchable
 
 	def setBelongsToParent(self, aBelongsToParent : tRef):
@@ -109,10 +109,10 @@ class SignalIS(FunctionalInfrastructureEntity):
 	def getIsVehicleEquipmentSignal(self) -> SignalVehicleEquipment:
 		return self._isVehicleEquipmentSignal
 
-	def setConnectedWithBaliseGroup(self, *aConnectedWithBaliseGroup : tElementWithIDref*):
+	def setConnectedWithBaliseGroup(self, *aConnectedWithBaliseGroup : tElementWithIDref):
 		self._connectedWithBaliseGroup = aConnectedWithBaliseGroup
 
-	def getConnectedWithBaliseGroup(self) -> tElementWithIDref*:
+	def getConnectedWithBaliseGroup(self) -> tElementWithIDref:
 		return self._connectedWithBaliseGroup
 
 	def setSignalConstruction(self, aSignalConstruction : SignalConstruction):
@@ -122,7 +122,7 @@ class SignalIS(FunctionalInfrastructureEntity):
 		return self._signalConstruction
 
 	def __init__(self):
-		self.___isSwitchable : long = None
+		self.___isSwitchable : int = None	#TODO DEFINED AS LONG
 		"""set TRUE if the signal is able to show several signal aspects, set FALSE if the signal is a static panel that always shows the same signal aspect"""
 		self.___belongsToParent : tRef = None
 		"""reference to the (one and only) parent signal this signal belongs to"""

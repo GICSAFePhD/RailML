@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import InfrastructureState
+from RailML.Infrastructure.InfrastructureState import InfrastructureState
 from typing import List
 
 class InfrastructureStates(object):
-	def setInfrastructureState(self, *aInfrastructureState : InfrastructureState*):
+	def setInfrastructureState(self, *aInfrastructureState : InfrastructureState):
 		self._infrastructureState = aInfrastructureState
 
-	def getInfrastructureState(self) -> InfrastructureState*:
+	def getInfrastructureState(self) -> InfrastructureState:
 		return self._infrastructureState
 
 	def __init__(self):

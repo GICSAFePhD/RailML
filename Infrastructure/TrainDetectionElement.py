@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Common import tElementWithIDref
-from Infrastructure import aTrainDetectionElement
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.aTrainDetectionElement import aTrainDetectionElement
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class TrainDetectionElement(FunctionalInfrastructureEntity):
@@ -13,10 +13,10 @@ class TrainDetectionElement(FunctionalInfrastructureEntity):
 	def getBasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
 
-	def setLimitsTrainDetectionElement(self, *aLimitsTrainDetectionElement : tElementWithIDref*):
+	def setLimitsTrainDetectionElement(self, *aLimitsTrainDetectionElement : tElementWithIDref):
 		self._limitsTrainDetectionElement = aLimitsTrainDetectionElement
 
-	def getLimitsTrainDetectionElement(self) -> tElementWithIDref*:
+	def getLimitsTrainDetectionElement(self) -> tElementWithIDref:
 		return self._limitsTrainDetectionElement
 
 	def __init__(self):

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tOpOperationalTypeExt
-from Infrastructure import tOpTrafficTypeExt
+from RailML.Infrastructure.tOpOperationalTypeExt import tOpOperationalTypeExt
+from RailML.Infrastructure.tOpTrafficTypeExt import tOpTrafficTypeExt
 from typing import List
 
 class OpOperation(object):

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from schemas.3.1 import tDescriptionLevel
-from Common import tElementWithIDref
-from Infrastructure.RTM import RTM_BaseObject
+from RailML.Infrastructure.tDescriptionLevel import tDescriptionLevel
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.RTM_BaseObject import RTM_BaseObject
 from typing import List
 
 class RTM_LevelNetwork(RTM_BaseObject):

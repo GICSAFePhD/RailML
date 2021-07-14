@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import ElementProjectionSymbol
-from Infrastructure import VisualizationBaseElement
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.ElementProjectionSymbol import ElementProjectionSymbol
+from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElement
 from typing import List
 
 class ElementProjection(VisualizationBaseElement):

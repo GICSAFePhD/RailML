@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Common import tLengthM
-from Common import tElementWithIDref
-from Infrastructure import Length
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Common.tLengthM import tLengthM
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.Length import Length
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class Platform(FunctionalInfrastructureEntity):
@@ -26,22 +26,22 @@ class Platform(FunctionalInfrastructureEntity):
 	def getHeight(self) -> tLengthM:
 		return self.___height
 
-	def setOwnsPlatformEdge(self, *aOwnsPlatformEdge : tElementWithIDref*):
+	def setOwnsPlatformEdge(self, *aOwnsPlatformEdge : tElementWithIDref):
 		self._ownsPlatformEdge = aOwnsPlatformEdge
 
-	def getOwnsPlatformEdge(self) -> tElementWithIDref*:
+	def getOwnsPlatformEdge(self) -> tElementWithIDref:
 		return self._ownsPlatformEdge
 
-	def setWidth(self, *aWidth : Length*):
+	def setWidth(self, *aWidth : Length):
 		self._width = aWidth
 
-	def getWidth(self) -> Length*:
+	def getWidth(self) -> Length:
 		return self._width
 
-	def setLength(self, *aLength : Length*):
+	def setLength(self, *aLength : Length):
 		self._length = aLength
 
-	def getLength(self) -> Length*:
+	def getLength(self) -> Length:
 		return self._length
 
 	def __init__(self):

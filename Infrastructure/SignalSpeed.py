@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tSignalSpeedType
-from Infrastructure import tTrainRelation
-from Common import tElementWithIDref
-from Infrastructure import SignalX
+from RailML.Infrastructure.tSignalSpeedType import tSignalSpeedType
+from RailML.Infrastructure.tTrainRelation import tTrainRelation
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.SignalX import SignalX
 from typing import List
 
 class SignalSpeed(SignalX):
@@ -19,16 +19,16 @@ class SignalSpeed(SignalX):
 	def getTrainRelation(self) -> tTrainRelation:
 		return self.___trainRelation
 
-	def setRefersToBeginOfSpeedSection(self, *aRefersToBeginOfSpeedSection : tElementWithIDref*):
+	def setRefersToBeginOfSpeedSection(self, *aRefersToBeginOfSpeedSection : tElementWithIDref):
 		self._refersToBeginOfSpeedSection = aRefersToBeginOfSpeedSection
 
-	def getRefersToBeginOfSpeedSection(self) -> tElementWithIDref*:
+	def getRefersToBeginOfSpeedSection(self) -> tElementWithIDref:
 		return self._refersToBeginOfSpeedSection
 
-	def setRefersToEndOfSpeedSection(self, *aRefersToEndOfSpeedSection : tElementWithIDref*):
+	def setRefersToEndOfSpeedSection(self, *aRefersToEndOfSpeedSection : tElementWithIDref):
 		self._refersToEndOfSpeedSection = aRefersToEndOfSpeedSection
 
-	def getRefersToEndOfSpeedSection(self) -> tElementWithIDref*:
+	def getRefersToEndOfSpeedSection(self) -> tElementWithIDref:
 		return self._refersToEndOfSpeedSection
 
 	def __init__(self):

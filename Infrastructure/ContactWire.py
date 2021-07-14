@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
+from RailML.Common.tLengthM import tLengthM
 from typing import List
 
 class ContactWire(object):

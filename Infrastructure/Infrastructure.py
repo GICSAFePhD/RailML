@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import Topology
-from Infrastructure import Geometry
-from Infrastructure import FunctionalInfrastructure
-from Infrastructure import PhysicalFacilities
-from Infrastructure import InfrastructureVisualizations
-from Infrastructure import InfrastructureStates
-from Common import tElementWithID
+from RailML.Infrastructure.Topology import Topology
+from RailML.Infrastructure.Geometry import Geometry
+from RailML.Infrastructure.FunctionalInfrastructure import FunctionalInfrastructure
+from RailML.Infrastructure.PhysicalFacilities import PhysicalFacilities
+from RailML.Infrastructure.InfrastructureVisualizations import InfrastructureVisualizations
+from RailML.Infrastructure.InfrastructureStates import InfrastructureStates
+from RailML.Common.tElementWithID import tElementWithID
 from typing import List
 
 class Infrastructure(tElementWithID):

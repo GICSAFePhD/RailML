@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tContactStripMaterial
+from RailML.Infrastructure.tContactStripMaterial import tContactStripMaterial
 from typing import List
 
 class tContactStripMaterialList(tContactStripMaterial):

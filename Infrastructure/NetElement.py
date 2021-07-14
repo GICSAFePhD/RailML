@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Infrastructure.RTM import RTM_PositioningNetElement
+from RailML.Common.tLengthM import tLengthM
+from RailML.Infrastructure.RTM_PositioningNetElement import RTM_PositioningNetElement
 from typing import List
 
 class NetElement(RTM_PositioningNetElement):

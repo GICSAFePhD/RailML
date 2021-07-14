@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import TrainProtectionElement
+from RailML.Infrastructure.TrainProtectionElement import TrainProtectionElement
 from typing import List
 
 class TrainProtectionElements(object):
-	def setTrainProtectionElement(self, *aTrainProtectionElement : TrainProtectionElement*):
+	def setTrainProtectionElement(self, *aTrainProtectionElement : TrainProtectionElement):
 		self._trainProtectionElement = aTrainProtectionElement
 
-	def getTrainProtectionElement(self) -> TrainProtectionElement*:
+	def getTrainProtectionElement(self) -> TrainProtectionElement:
 		return self._trainProtectionElement
 
 	def __init__(self):

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tSide
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.tSide import tSide
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class DerailerIS(FunctionalInfrastructureEntity):

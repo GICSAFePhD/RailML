@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import OverCrossing
+from RailML.Infrastructure.OverCrossing import OverCrossing
 from typing import List
 
 class OverCrossings(object):
-	def setOverCrossing(self, *aOverCrossing : OverCrossing*):
+	def setOverCrossing(self, *aOverCrossing : OverCrossing):
 		self._overCrossing = aOverCrossing
 
-	def getOverCrossing(self) -> OverCrossing*:
+	def getOverCrossing(self) -> OverCrossing:
 		return self._overCrossing
 
 	def __init__(self):

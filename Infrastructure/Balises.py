@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import Balise
+from RailML.Infrastructure.Balise import Balise
 from typing import List
 
 class Balises(object):
-	def setBalise(self, *aBalise : Balise*):
+	def setBalise(self, aBalise : Balise):
 		self._balise = aBalise
 
-	def getBalise(self) -> Balise*:
+	def getBalise(self) -> Balise:
 		return self._balise
 
 	def __init__(self):

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import aServiceSection
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.aServiceSection import aServiceSection
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class ServiceSection(FunctionalInfrastructureEntity):

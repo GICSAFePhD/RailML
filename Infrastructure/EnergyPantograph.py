@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tTSIPantoHeadTypeList
-from Infrastructure import tPantoHeadTypeList
-from Infrastructure import tContactStripMaterialList
+from RailML.Infrastructure.tTSIPantoHeadTypeList import tTSIPantoHeadTypeList
+from RailML.Infrastructure.tPantoHeadTypeList import tPantoHeadTypeList
+from RailML.Infrastructure.tContactStripMaterialList import tContactStripMaterialList
 from typing import List
 
 class EnergyPantograph(object):
-	def setRequiresTSIcompliance(self, aRequiresTSIcompliance : long):
+	def setRequiresTSIcompliance(self, aRequiresTSIcompliance : int): #TODO DEFINED AS LONG
 		self.___requiresTSIcompliance = aRequiresTSIcompliance
 
-	def getRequiresTSIcompliance(self) -> long:
+	def getRequiresTSIcompliance(self) -> int:	 #TODO DEFINED AS LONG
 		return self.___requiresTSIcompliance
 
 	def setCompliantTSITypes(self, aCompliantTSITypes : tTSIPantoHeadTypeList):
@@ -31,7 +31,7 @@ class EnergyPantograph(object):
 		return self.___contactStripMaterials
 
 	def __init__(self):
-		self.___requiresTSIcompliance : long = None
+		self.___requiresTSIcompliance : int = None #TODO DEFINED AS LONG
 		"""flag, whether a TSI complaint pantograph head is required"""
 		self.___compliantTSITypes : tTSIPantoHeadTypeList = None
 		# @AssociationType Infrastructure.tTSIPantoHeadTypeList

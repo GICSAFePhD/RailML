@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tTrainProtectionMedium
-from Infrastructure import tTrainProtectionMonitoring
-from Infrastructure import TrainProtectionElement
+from RailML.Infrastructure.tTrainProtectionMedium import tTrainProtectionMedium
+from RailML.Infrastructure.tTrainProtectionMonitoring import tTrainProtectionMonitoring
+#from RailML.Infrastructure.TrainProtectionElement import TrainProtectionElement #TODO CIRCULAR!
 from typing import List
 
 class aTrainProtection(object):
@@ -34,5 +34,5 @@ class aTrainProtection(object):
 		self.___monitoring : tTrainProtectionMonitoring = None
 		# @AssociationType Infrastructure.tTrainProtectionMonitoring
 		# """the way how the train protection field element is communicating with the monitoring central interlocking unit"""
-		self._unnamed_TrainProtectionElement_ : TrainProtectionElement = None
+		#self._unnamed_TrainProtectionElement_ : TrainProtectionElement = None	#TODO CIRCULAR!
 

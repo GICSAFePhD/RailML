@@ -1,27 +1,27 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Common import Designator
-from Common import External
-from Infrastructure import EntityIS
+from RailML.Common.Designator import Designator
+from RailML.Common.External import External
+from RailML.Infrastructure.EntityIS import EntityIS
 from typing import List
 
 class FunctionalInfrastructureEntity(EntityIS):
 	__metaclass__ = ABCMeta
 	@classmethod
-	def setDesignator(self, *aDesignator : Designator*):
+	def setDesignator(self, *aDesignator : Designator):
 		self._designator = aDesignator
 
 	@classmethod
-	def getDesignator(self) -> Designator*:
+	def getDesignator(self) -> Designator:
 		return self._designator
 
 	@classmethod
-	def setExternal(self, *aExternal : External*):
+	def setExternal(self, *aExternal : External):
 		self._external = aExternal
 
 	@classmethod
-	def getExternal(self) -> External*:
+	def getExternal(self) -> External:
 		return self._external
 
 	@classmethod

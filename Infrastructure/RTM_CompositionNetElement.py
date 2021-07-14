@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure.RTM import RTM_UnorderedCollection
-from Infrastructure.RTM import RTM_OrderedCollection
-from Infrastructure.RTM import RTM_NetElement
+from RailML.Infrastructure.RTM_UnorderedCollection import RTM_UnorderedCollection
+from RailML.Infrastructure.RTM_OrderedCollection import RTM_OrderedCollection
+from RailML.Infrastructure.RTM_NetElement import RTM_NetElement
 from typing import List
 
 class RTM_CompositionNetElement(RTM_NetElement):

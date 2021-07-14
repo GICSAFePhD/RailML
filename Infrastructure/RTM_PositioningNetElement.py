@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure.RTM import RTM_AssociatedPositioningSystem
-from Infrastructure.RTM import RTM_CompositionNetElement
+from RailML.Infrastructure.RTM_AssociatedPositioningSystem import RTM_AssociatedPositioningSystem
+from RailML.Infrastructure.RTM_CompositionNetElement import RTM_CompositionNetElement
 from typing import List
 
 class RTM_PositioningNetElement(RTM_CompositionNetElement):

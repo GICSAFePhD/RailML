@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tElementWithIDref
-from Infrastructure import SignalX
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.SignalX import SignalX
 from typing import List
 
 class SignalMilepost(SignalX):

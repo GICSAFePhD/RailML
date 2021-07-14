@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedKmPerHour
-from Common import tRef
-from Common import tLengthM
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Common.tRef import tRef
+from RailML.Common.tLengthM import tLengthM
 from typing import List
 
 class SwitchCrossingBranch(object):

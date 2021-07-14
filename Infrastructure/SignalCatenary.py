@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tSignalCatenaryType
-from Common import tElementWithIDref
-from Infrastructure import SignalX
+from RailML.Infrastructure.tSignalCatenaryType import tSignalCatenaryType
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.SignalX import SignalX
 from typing import List
 
 class SignalCatenary(SignalX):

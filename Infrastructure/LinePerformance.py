@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedKmPerHour
-from Common import tLengthM
-from Common import tElementWithIDref
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Common.tLengthM import tLengthM
+from RailML.Common.tElementWithIDref import tElementWithIDref
 from typing import List
 
 class LinePerformance(object):
@@ -24,16 +24,16 @@ class LinePerformance(object):
 	def getUsablePlatformLength(self) -> tLengthM:
 		return self.___usablePlatformLength
 
-	def setAllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref*):
+	def setAllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
 		self._allowedLoadingGauge = aAllowedLoadingGauge
 
-	def getAllowedLoadingGauge(self) -> tElementWithIDref*:
+	def getAllowedLoadingGauge(self) -> tElementWithIDref:
 		return self._allowedLoadingGauge
 
-	def setAllowedWeight(self, *aAllowedWeight : tElementWithIDref*):
+	def setAllowedWeight(self, *aAllowedWeight : tElementWithIDref):
 		self._allowedWeight = aAllowedWeight
 
-	def getAllowedWeight(self) -> tElementWithIDref*:
+	def getAllowedWeight(self) -> tElementWithIDref:
 		return self._allowedWeight
 
 	def __init__(self):

@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Common import tElementWithIDref
-from Infrastructure import OpEquipment
-from Infrastructure import OpOperations
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.OpEquipment import OpEquipment
+from RailML.Infrastructure.OpOperations import OpOperations
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class OperationalPoint(FunctionalInfrastructureEntity):
@@ -27,22 +27,22 @@ class OperationalPoint(FunctionalInfrastructureEntity):
 	def getTimezone(self) -> str:
 		return self.___timezone
 
-	def setInfrastructureManagerRef(self, *aInfrastructureManagerRef : tElementWithIDref*):
+	def setInfrastructureManagerRef(self, *aInfrastructureManagerRef : tElementWithIDref):
 		self._infrastructureManagerRef = aInfrastructureManagerRef
 
-	def getInfrastructureManagerRef(self) -> tElementWithIDref*:
+	def getInfrastructureManagerRef(self) -> tElementWithIDref:
 		return self._infrastructureManagerRef
 
-	def setConnectedToLine(self, *aConnectedToLine : tElementWithIDref*):
+	def setConnectedToLine(self, *aConnectedToLine : tElementWithIDref):
 		self._connectedToLine = aConnectedToLine
 
-	def getConnectedToLine(self) -> tElementWithIDref*:
+	def getConnectedToLine(self) -> tElementWithIDref:
 		return self._connectedToLine
 
-	def setLimitedByBorder(self, *aLimitedByBorder : tElementWithIDref*):
+	def setLimitedByBorder(self, *aLimitedByBorder : tElementWithIDref):
 		self._limitedByBorder = aLimitedByBorder
 
-	def getLimitedByBorder(self) -> tElementWithIDref*:
+	def getLimitedByBorder(self) -> tElementWithIDref:
 		return self._limitedByBorder
 
 	def setOpEquipment(self, aOpEquipment : OpEquipment):
@@ -65,7 +65,7 @@ class OperationalPoint(FunctionalInfrastructureEntity):
 		# @AssociationType Common.tRef
 		# """references a generic operational point"""
 		self.___timezone : str = None
-		"""the timezone of the operational point as defined in the tz database, e.g. "Europe/Berlin""""
+		"""the timezone of the operational point as defined in the tz database, e.g. "Europe/Berlin"""
 		self._infrastructureManagerRef : tElementWithIDref = None
 		self._connectedToLine : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*

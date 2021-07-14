@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tElementProjectionSymbolOrientationExt
-from Infrastructure import ProjectionCoordinate
-from Infrastructure import VisualizationBaseElement
+from RailML.Infrastructure.tElementProjectionSymbolOrientationExt import tElementProjectionSymbolOrientationExt
+from RailML.Infrastructure.ProjectionCoordinate import ProjectionCoordinate
+from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElement
 from typing import List
 
 class ElementProjectionSymbol(VisualizationBaseElement):

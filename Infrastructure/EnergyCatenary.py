@@ -1,23 +1,23 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import MaxTrainCurrent
+from RailML.Infrastructure.MaxTrainCurrent import MaxTrainCurrent
 from typing import List
 
 class EnergyCatenary(object):
-	def setAllowsRegenerativeBraking(self, aAllowsRegenerativeBraking : long):
+	def setAllowsRegenerativeBraking(self, aAllowsRegenerativeBraking : int): #TODO DEFINED AS LONG
 		self.___allowsRegenerativeBraking = aAllowsRegenerativeBraking
 
-	def getAllowsRegenerativeBraking(self) -> long:
+	def getAllowsRegenerativeBraking(self) -> int: #TODO DEFINED AS LONG
 		return self.___allowsRegenerativeBraking
 
-	def setMaxTrainCurrent(self, *aMaxTrainCurrent : MaxTrainCurrent*):
+	def setMaxTrainCurrent(self, *aMaxTrainCurrent : MaxTrainCurrent):
 		self._maxTrainCurrent = aMaxTrainCurrent
 
-	def getMaxTrainCurrent(self) -> MaxTrainCurrent*:
+	def getMaxTrainCurrent(self) -> MaxTrainCurrent:
 		return self._maxTrainCurrent
 
 	def __init__(self):
-		self.___allowsRegenerativeBraking : long = None
+		self.___allowsRegenerativeBraking : int = None #TODO DEFINED AS LONG
 		"""flag, whether the use of regenerative braking is allowed"""
 		self._maxTrainCurrent : MaxTrainCurrent = None
 		# @AssociationType Infrastructure.MaxTrainCurrent*

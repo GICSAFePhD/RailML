@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tLengthM import tLengthM
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class TrackGauge(FunctionalInfrastructureEntity):

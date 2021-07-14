@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tBufferStopType
-from Infrastructure import TrackNode
+from RailML.Infrastructure.tBufferStopType import tBufferStopType
+from RailML.Infrastructure.TrackNode import TrackNode
 from typing import List
 
 class BufferStop(TrackNode):

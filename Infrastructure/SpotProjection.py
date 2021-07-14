@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import ProjectionCoordinate
-from Infrastructure import ElementProjection
+from RailML.Infrastructure.ProjectionCoordinate import ProjectionCoordinate
+from RailML.Infrastructure.ElementProjection import ElementProjection
 from typing import List
 
 class SpotProjection(ElementProjection):

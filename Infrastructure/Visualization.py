@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import SpotProjection
-from Infrastructure import LinearProjection
-from Infrastructure import AreaProjection
-from Infrastructure import VisualizationBaseElement
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.SpotProjection import SpotProjection
+from RailML.Infrastructure.LinearProjection import LinearProjection
+from RailML.Infrastructure.AreaProjection import AreaProjection
+from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElement
 from typing import List
 
 class Visualization(VisualizationBaseElement):
@@ -14,22 +14,22 @@ class Visualization(VisualizationBaseElement):
 	def getPositioningSystemRef(self) -> tRef:
 		return self.___positioningSystemRef
 
-	def setSpotElementProjection(self, *aSpotElementProjection : SpotProjection*):
+	def setSpotElementProjection(self, *aSpotElementProjection : SpotProjection):
 		self._spotElementProjection = aSpotElementProjection
 
-	def getSpotElementProjection(self) -> SpotProjection*:
+	def getSpotElementProjection(self) -> SpotProjection:
 		return self._spotElementProjection
 
-	def setLinearElementProjection(self, *aLinearElementProjection : LinearProjection*):
+	def setLinearElementProjection(self, *aLinearElementProjection : LinearProjection):
 		self._linearElementProjection = aLinearElementProjection
 
-	def getLinearElementProjection(self) -> LinearProjection*:
+	def getLinearElementProjection(self) -> LinearProjection:
 		return self._linearElementProjection
 
-	def setAreaElementProjection(self, *aAreaElementProjection : AreaProjection*):
+	def setAreaElementProjection(self, *aAreaElementProjection : AreaProjection):
 		self._areaElementProjection = aAreaElementProjection
 
-	def getAreaElementProjection(self) -> AreaProjection*:
+	def getAreaElementProjection(self) -> AreaProjection:
 		return self._areaElementProjection
 
 	def __init__(self):

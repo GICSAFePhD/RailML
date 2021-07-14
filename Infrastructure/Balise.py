@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tBaliseType
-from Common import tRef
-from Infrastructure import tBaliseGroupTypeExt
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.tBaliseType import tBaliseType
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.tBaliseGroupTypeExt import tBaliseGroupTypeExt
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class Balise(FunctionalInfrastructureEntity):
@@ -25,10 +25,10 @@ class Balise(FunctionalInfrastructureEntity):
 	def getBasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
 
-	def setIsBaliseGroup(self, aIsBaliseGroup : long):
+	def setIsBaliseGroup(self, aIsBaliseGroup : int):	#TODO DEFINED AS LONG
 		self.___isBaliseGroup = aIsBaliseGroup
 
-	def getIsBaliseGroup(self) -> long:
+	def getIsBaliseGroup(self) -> int:	#TODO DEFINED AS LONG
 		return self.___isBaliseGroup
 
 	def setBaliseGroupType(self, aBaliseGroupType : tBaliseGroupTypeExt):
@@ -47,7 +47,7 @@ class Balise(FunctionalInfrastructureEntity):
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic balise (group)"""
-		self.___isBaliseGroup : long = None
+		self.___isBaliseGroup : int = None		#TODO DEFINED AS LONG
 		"""indicate whether the <balise> represents a balise group"""
 		self.___baliseGroupType : tBaliseGroupTypeExt = None
 		# @AssociationType Infrastructure.tBaliseGroupTypeExt

@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tBallastType
-from Infrastructure import tSleepersType
-from Infrastructure import tJointsType
-from Infrastructure import TrackBed
+from RailML.Infrastructure.tBallastType import tBallastType
+from RailML.Infrastructure.tSleepersType import tSleepersType
+from RailML.Infrastructure.tJointsType import tJointsType
+#from RailML.Infrastructure.TrackBed import TrackBed	#TODO CIRCULAR!
 from typing import List
 
 class aTrackbed(object):
@@ -43,5 +43,5 @@ class aTrackbed(object):
 		self.___jointsType : tJointsType = None
 		# @AssociationType Infrastructure.tJointsType
 		# """type of rail joints"""
-		self._unnamed_TrackBed_ : TrackBed = None
+		#self._unnamed_TrackBed_ : TrackBed = None	#TODO CIRCULAR!
 

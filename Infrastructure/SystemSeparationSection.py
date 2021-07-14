@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
+from RailML.Common.tLengthM import tLengthM
 from typing import List
 
 class SystemSeparationSection(object):
@@ -10,32 +10,32 @@ class SystemSeparationSection(object):
 	def getLengthSystemSeparation(self) -> tLengthM:
 		return self.___lengthSystemSeparation
 
-	def setSwitchOffBreaker(self, aSwitchOffBreaker : long):
+	def setSwitchOffBreaker(self, aSwitchOffBreaker : int): #TODO DEFINED AS LONG
 		self.___switchOffBreaker = aSwitchOffBreaker
 
-	def getSwitchOffBreaker(self) -> long:
+	def getSwitchOffBreaker(self) -> int:	#TODO DEFINED AS LONG
 		return self.___switchOffBreaker
 
-	def setLowerPantograph(self, aLowerPantograph : long):
+	def setLowerPantograph(self, aLowerPantograph : int):	#TODO DEFINED AS LONG
 		self.___lowerPantograph = aLowerPantograph
 
-	def getLowerPantograph(self) -> long:
+	def getLowerPantograph(self) -> int:	#TODO DEFINED AS LONG
 		return self.___lowerPantograph
 
-	def setIsSupplySystemChange(self, aIsSupplySystemChange : long):
+	def setIsSupplySystemChange(self, aIsSupplySystemChange : int):	#TODO DEFINED AS LONG
 		self.___isSupplySystemChange = aIsSupplySystemChange
 
-	def getIsSupplySystemChange(self) -> long:
+	def getIsSupplySystemChange(self) -> int:	#TODO DEFINED AS LONG
 		return self.___isSupplySystemChange
 
 	def __init__(self):
 		self.___lengthSystemSeparation : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """length of the system separation section in contact line, in [m]"""
-		self.___switchOffBreaker : long = None
+		self.___switchOffBreaker : int = None	#TODO DEFINED AS LONG
 		"""flag, whether the main circuit breaker has to be switched off when passing the system separation"""
-		self.___lowerPantograph : long = None
+		self.___lowerPantograph : int = None	#TODO DEFINED AS LONG
 		"""flag, whether the pantographs have to be lowered when passing the system separation"""
-		self.___isSupplySystemChange : long = None
+		self.___isSupplySystemChange : int = None	#TODO DEFINED AS LONG
 		"""flag, whether the supply system changes at the separation"""
 

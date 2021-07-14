@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import ProjectionCoordinate
-from Infrastructure import ElementProjection
+from RailML.Infrastructure.ProjectionCoordinate import ProjectionCoordinate
+from RailML.Infrastructure.ElementProjection import ElementProjection
 from typing import List
 
 class AreaProjection(ElementProjection):
-	def setCoordinate(self, *aCoordinate : ProjectionCoordinate*):
+	def setCoordinate(self, *aCoordinate : ProjectionCoordinate):
 		self._coordinate = aCoordinate
 
-	def getCoordinate(self) -> ProjectionCoordinate*:
+	def getCoordinate(self) -> ProjectionCoordinate:
 		return self._coordinate
 
 	def __init__(self):

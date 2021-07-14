@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tLevelCrossingProtectionBarrierExt
-from Infrastructure import tLevelCrossingProtectionLightsExt
-from Infrastructure import tLevelCrossingProtectionAcousticExt
+from RailML.Infrastructure.tLevelCrossingProtectionBarrierExt import tLevelCrossingProtectionBarrierExt
+from RailML.Infrastructure.tLevelCrossingProtectionLightsExt import tLevelCrossingProtectionLightsExt
+from RailML.Infrastructure.tLevelCrossingProtectionAcousticExt import tLevelCrossingProtectionAcousticExt
 from typing import List
 
 class LevelCrossingProtection(object):
@@ -24,10 +24,10 @@ class LevelCrossingProtection(object):
 	def getAcoustic(self) -> tLevelCrossingProtectionAcousticExt:
 		return self.___acoustic
 
-	def setHasActiveProtection(self, aHasActiveProtection : long):
+	def setHasActiveProtection(self, aHasActiveProtection : int):	#TODO DEFINED AS LONG
 		self.___hasActiveProtection = aHasActiveProtection
 
-	def getHasActiveProtection(self) -> long:
+	def getHasActiveProtection(self) -> int:	 #TODO DEFINED AS LONG
 		return self.___hasActiveProtection
 
 	def __init__(self):
@@ -43,5 +43,5 @@ class LevelCrossingProtection(object):
 		# @AssociationType Infrastructure.tLevelCrossingProtectionAcousticExt
 		# """technical level crossing protection: acoustic warning system;
 		# missing attribute means that the information is not known"""
-		self.___hasActiveProtection : long = None
+		self.___hasActiveProtection : int = None	 #TODO DEFINED AS LONG
 

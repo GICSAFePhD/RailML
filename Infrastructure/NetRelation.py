@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure.RTM import RTM_Relation
+from RailML.Infrastructure.RTM_Relation import RTM_Relation
 from typing import List
 
 class NetRelation(RTM_Relation):

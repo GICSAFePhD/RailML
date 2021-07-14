@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tLineTrafficCodeExt
+from RailML.Infrastructure.tLineTrafficCodeExt import tLineTrafficCodeExt
 from typing import List
 
 class LineTrafficCode(object):

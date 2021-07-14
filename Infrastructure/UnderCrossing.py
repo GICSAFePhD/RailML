@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tCrossingConstructionTypeExt
-from Common import tRef
-from Common import tElementWithIDref
-from Infrastructure import Length
-from Infrastructure import aVerbalConstraint
-from Infrastructure import XCrossing
+from RailML.Infrastructure.tCrossingConstructionTypeExt import tCrossingConstructionTypeExt
+from RailML.Common.tRef import tRef
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.Length import Length
+#from RailML.Infrastructure.aVerbalConstraint import aVerbalConstraint #TODO CIRCULAR!
+from RailML.Infrastructure.XCrossing import XCrossing
 from typing import List
 
 class UnderCrossing(XCrossing):
@@ -22,16 +22,16 @@ class UnderCrossing(XCrossing):
 	def getBelongsToParent(self) -> tRef:
 		return self.___belongsToParent
 
-	def setAllowedWeightLimit(self, *aAllowedWeightLimit : tElementWithIDref*):
+	def setAllowedWeightLimit(self, *aAllowedWeightLimit : tElementWithIDref):
 		self._allowedWeightLimit = aAllowedWeightLimit
 
-	def getAllowedWeightLimit(self) -> tElementWithIDref*:
+	def getAllowedWeightLimit(self) -> tElementWithIDref:
 		return self._allowedWeightLimit
 
-	def setLength(self, *aLength : Length*):
+	def setLength(self, *aLength : Length):
 		self._length = aLength
 
-	def getLength(self) -> Length*:
+	def getLength(self) -> Length:
 		return self._length
 
 	def __init__(self):
@@ -49,5 +49,5 @@ class UnderCrossing(XCrossing):
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the under crossing relative to the railway in metres"""
-		self._unnamed_aVerbalConstraint_ : aVerbalConstraint = None
+		#self._unnamed_aVerbalConstraint_ : aVerbalConstraint = None	#TODO CIRCULAR!
 

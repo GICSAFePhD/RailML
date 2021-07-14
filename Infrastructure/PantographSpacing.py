@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Common import tSpeedKmPerHour
+from RailML.Common.tLengthM import tLengthM
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
 from typing import List
 
 class PantographSpacing(object):
-	def setNumberPantographsRaised(self, aNumberPantographsRaised : integer):
+	def setNumberPantographsRaised(self, aNumberPantographsRaised : int): #TODO DEFINED AS INTEGER
 		self.___numberPantographsRaised = aNumberPantographsRaised
 
-	def getNumberPantographsRaised(self) -> integer:
+	def getNumberPantographsRaised(self) -> int:	#TODO DEFINED AS INTEGER
 		return self.___numberPantographsRaised
 
 	def setSpacingPantographsRaised(self, aSpacingPantographsRaised : tLengthM):
@@ -24,7 +24,7 @@ class PantographSpacing(object):
 		return self.___speed4PantographSpacing
 
 	def __init__(self):
-		self.___numberPantographsRaised : integer = None
+		self.___numberPantographsRaised : int = None	#TODO DEFINED AS INTEGER
 		"""number of pantographs raised simultaneously on moving train"""
 		self.___spacingPantographsRaised : tLengthM = None
 		# @AssociationType Common.tLengthM

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import NetElements
-from Infrastructure import NetRelations
-from Infrastructure import Networks
+from RailML.Infrastructure.NetElements import NetElements
+from RailML.Infrastructure.NetRelations import NetRelations
+from RailML.Infrastructure.Networks import Networks
 from typing import List
 
 class Topology(object):

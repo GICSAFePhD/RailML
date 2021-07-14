@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tElementWithIDandName
+from RailML.Common.tElementWithIDandName import tElementWithIDandName
 from typing import List
 
 class StatesBaseElement(tElementWithIDandName):

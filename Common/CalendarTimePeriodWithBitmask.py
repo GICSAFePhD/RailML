@@ -1,15 +1,16 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tBitmaskAny
-from Common import PeriodRule
-from Common import TimePeriod
+from RailML.Common.tBitmaskAny import tBitmaskAny
+from RailML.Common.PeriodRule import PeriodRule
+from RailML.Common.TimePeriod import TimePeriod
+import datetime
 from typing import List
 
 class CalendarTimePeriodWithBitmask(TimePeriod):
-	def setFromDate(self, aFromDate : date):
+	def setFromDate(self, aFromDate : datetime):	#TODO DEFINED AS date
 		self.___fromDate = aFromDate
 
-	def getFromDate(self) -> date:
+	def getFromDate(self) -> datetime:	#TODO DEFINED AS date
 		return self.___fromDate
 
 	def setBitmask(self, aBitmask : tBitmaskAny):
@@ -18,14 +19,14 @@ class CalendarTimePeriodWithBitmask(TimePeriod):
 	def getBitmask(self) -> tBitmaskAny:
 		return self.___bitmask
 
-	def setPeriodRule(self, *aPeriodRule : PeriodRule*):
+	def setPeriodRule(self, *aPeriodRule : PeriodRule):
 		self._periodRule = aPeriodRule
 
-	def getPeriodRule(self) -> PeriodRule*:
+	def getPeriodRule(self) -> PeriodRule:
 		return self._periodRule
 
 	def __init__(self):
-		self.___fromDate : date = None
+		self.___fromDate : datetime = None	#TODO DEFINED AS date
 		self.___bitmask : tBitmaskAny = None
 		# @AssociationType Common.tBitmaskAny
 		self._periodRule : PeriodRule = None

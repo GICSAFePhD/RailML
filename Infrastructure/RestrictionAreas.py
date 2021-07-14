@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import RestrictionArea
+from RailML.Infrastructure.RestrictionArea import RestrictionArea
 from typing import List
 
 class RestrictionAreas(object):
-	def setRestrictionArea(self, *aRestrictionArea : RestrictionArea*):
+	def setRestrictionArea(self, *aRestrictionArea : RestrictionArea):
 		self._restrictionArea = aRestrictionArea
 
-	def getRestrictionArea(self) -> RestrictionArea*:
+	def getRestrictionArea(self) -> RestrictionArea:
 		return self._restrictionArea
 
 	def __init__(self):

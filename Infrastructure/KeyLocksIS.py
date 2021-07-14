@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import KeyLockIS
+from RailML.Infrastructure.KeyLockIS import KeyLockIS
 from typing import List
 
 class KeyLocksIS(object):
-	def setKeyLockIS(self, *aKeyLockIS : KeyLockIS*):
+	def setKeyLockIS(self, *aKeyLockIS : KeyLockIS):
 		self._keyLockIS = aKeyLockIS
 
-	def getKeyLockIS(self) -> KeyLockIS*:
+	def getKeyLockIS(self) -> KeyLockIS:
 		return self._keyLockIS
 
 	def __init__(self):

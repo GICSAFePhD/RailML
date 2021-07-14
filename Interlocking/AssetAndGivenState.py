@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Interlocking import tMustOrShould
-from Interlocking import tProving
-from Interlocking import Overlap
-from Interlocking import EntityIL
+from RailML.Interlocking.tMustOrShould import tMustOrShould
+from RailML.Interlocking.tProving import tProving
+from RailML.Interlocking.Overlap import Overlap
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class AssetAndGivenState(EntityIL):
@@ -28,11 +28,11 @@ class AssetAndGivenState(EntityIL):
 		return self.___proving
 
 	@classmethod
-	def setIsNegated(self, aIsNegated : long):
+	def setIsNegated(self, aIsNegated : int):	#TODO DEFINED AS long
 		self.___isNegated = aIsNegated
 
 	@classmethod
-	def getIsNegated(self) -> long:
+	def getIsNegated(self) -> int:	#TODO DEFINED AS long
 		return self.___isNegated
 
 	@classmethod
@@ -43,7 +43,7 @@ class AssetAndGivenState(EntityIL):
 		self.___proving : tProving = None
 		# @AssociationType Interlocking.tProving
 		# """The way the state is proven."""
-		self.___isNegated : long = None
+		self.___isNegated : int = None	#TODO DEFINED AS long
 		"""The exclusion of a particular state, i.e. everything else that this one."""
 		self._unnamed_Overlap_ : Overlap = None
 

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import TimePeriod
+from RailML.Common.TimePeriod import TimePeriod
+import time
 from typing import List
 
 class ClockTimePeriod(TimePeriod):

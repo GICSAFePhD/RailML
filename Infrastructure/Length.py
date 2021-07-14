@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Infrastructure import tLengthTypeExt
-from Infrastructure import tExtendedDirection
+from RailML.Common.tLengthM import tLengthM
+from RailML.Infrastructure.tLengthTypeExt import tLengthTypeExt
+from RailML.Infrastructure.tExtendedDirection import tExtendedDirection
 from typing import List
 
 class Length(object):

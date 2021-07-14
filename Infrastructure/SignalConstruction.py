@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Infrastructure import tWiderTrackPosition
-from Infrastructure import tSignalConstructionType
+from RailML.Common.tLengthM import tLengthM
+from RailML.Infrastructure.tWiderTrackPosition import tWiderTrackPosition
+from RailML.Infrastructure.tSignalConstructionType import tSignalConstructionType
 from typing import List
 
 class SignalConstruction(object):

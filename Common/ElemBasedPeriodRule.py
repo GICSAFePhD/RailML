@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import OperatingDay
-from Common import GenericOperatingPeriodDescription
-from Common import ShiftablePeriodRule
+from RailML.Common.OperatingDay import OperatingDay
+from RailML.Common.GenericOperatingPeriodDescription import GenericOperatingPeriodDescription
+from RailML.Common.ShiftablePeriodRule import ShiftablePeriodRule
 from typing import List
 
 class ElemBasedPeriodRule(ShiftablePeriodRule):

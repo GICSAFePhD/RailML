@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedKmPerHour
-from Common import tLengthM
-from Interlocking import EntityILref
-from Interlocking import SwitchAndGivenPosition
-from Interlocking import LevelCrossingAndGivenState
-from Interlocking import OverlapRelease
-from Interlocking import RouteExit
-from Interlocking import EntityIL
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Common.tLengthM import tLengthM
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition
+from RailML.Interlocking.LevelCrossingAndGivenState import LevelCrossingAndGivenState
+from RailML.Interlocking.OverlapRelease import OverlapRelease
+from RailML.Interlocking.RouteExit import RouteExit
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class Overlap(EntityIL):
@@ -27,10 +27,10 @@ class Overlap(EntityIL):
 	def getOverlapSpeed(self) -> tSpeedKmPerHour:
 		return self.___overlapSpeed
 
-	def setOverlapValidityTime(self, aOverlapValidityTime : duration):
+	def setOverlapValidityTime(self, aOverlapValidityTime : int):	#TODO DEFINED AS duration
 		self.___overlapValidityTime = aOverlapValidityTime
 
-	def getOverlapValidityTime(self) -> duration:
+	def getOverlapValidityTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___overlapValidityTime
 
 	def setLength(self, aLength : tLengthM):
@@ -45,34 +45,34 @@ class Overlap(EntityIL):
 	def getActiveForApproachRoute(self) -> EntityILref:
 		return self._activeForApproachRoute
 
-	def setRelatedToTrackAsset(self, *aRelatedToTrackAsset : EntityILref*):
+	def setRelatedToTrackAsset(self, *aRelatedToTrackAsset : EntityILref):
 		self._relatedToTrackAsset = aRelatedToTrackAsset
 
-	def getRelatedToTrackAsset(self) -> EntityILref*:
+	def getRelatedToTrackAsset(self) -> EntityILref:
 		return self._relatedToTrackAsset
 
-	def setRequiresSwitchInPosition(self, *aRequiresSwitchInPosition : SwitchAndGivenPosition*):
+	def setRequiresSwitchInPosition(self, *aRequiresSwitchInPosition : SwitchAndGivenPosition):
 		self._requiresSwitchInPosition = aRequiresSwitchInPosition
 
-	def getRequiresSwitchInPosition(self) -> SwitchAndGivenPosition*:
+	def getRequiresSwitchInPosition(self) -> SwitchAndGivenPosition:
 		return self._requiresSwitchInPosition
 
-	def setRequiresLevelCrossingInState(self, *aRequiresLevelCrossingInState : LevelCrossingAndGivenState*):
+	def setRequiresLevelCrossingInState(self, *aRequiresLevelCrossingInState : LevelCrossingAndGivenState):
 		self._requiresLevelCrossingInState = aRequiresLevelCrossingInState
 
-	def getRequiresLevelCrossingInState(self) -> LevelCrossingAndGivenState*:
+	def getRequiresLevelCrossingInState(self) -> LevelCrossingAndGivenState:
 		return self._requiresLevelCrossingInState
 
-	def setHasTvdSection(self, *aHasTvdSection : EntityILref*):
+	def setHasTvdSection(self, *aHasTvdSection : EntityILref):
 		self._hasTvdSection = aHasTvdSection
 
-	def getHasTvdSection(self) -> EntityILref*:
+	def getHasTvdSection(self) -> EntityILref:
 		return self._hasTvdSection
 
-	def setIsLimitedBy(self, *aIsLimitedBy : EntityILref*):
+	def setIsLimitedBy(self, *aIsLimitedBy : EntityILref):
 		self._isLimitedBy = aIsLimitedBy
 
-	def getIsLimitedBy(self) -> EntityILref*:
+	def getIsLimitedBy(self) -> EntityILref:
 		return self._isLimitedBy
 
 	def setOverlapRelease(self, aOverlapRelease : OverlapRelease):
@@ -88,7 +88,7 @@ class Overlap(EntityIL):
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum speed in the overlap in km/h for other trains than the one using the related route."""
-		self.___overlapValidityTime : duration = None
+		self.___overlapValidityTime : int = None	#TODO DEFINED AS duration
 		"""The overlap validity time is the time that the train assumes the overlap to be locked. This is the ETCS validity time T_OL."""
 		self.___length : tLengthM = None
 		# @AssociationType Common.tLengthM

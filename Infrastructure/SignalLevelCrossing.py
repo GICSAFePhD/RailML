@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tSignalLevelCrossingType
-from Common import tElementWithIDref
-from Infrastructure import SignalX
+from RailML.Infrastructure.tSignalLevelCrossingType import tSignalLevelCrossingType
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.SignalX import SignalX
 from typing import List
 
 class SignalLevelCrossing(SignalX):
@@ -12,10 +12,10 @@ class SignalLevelCrossing(SignalX):
 	def getType(self) -> tSignalLevelCrossingType:
 		return self.___type
 
-	def setRefersToLevelCrossing(self, *aRefersToLevelCrossing : tElementWithIDref*):
+	def setRefersToLevelCrossing(self, *aRefersToLevelCrossing : tElementWithIDref):
 		self._refersToLevelCrossing = aRefersToLevelCrossing
 
-	def getRefersToLevelCrossing(self) -> tElementWithIDref*:
+	def getRefersToLevelCrossing(self) -> tElementWithIDref:
 		return self._refersToLevelCrossing
 
 	def __init__(self):

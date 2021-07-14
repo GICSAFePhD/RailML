@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import tLineCategoryExt
-from Infrastructure import tLineType
-from Common import tElementWithIDref
-from Infrastructure import Length
-from Infrastructure import LineTrafficCode
-from Infrastructure import LineCombinedTransportCode
-from Infrastructure import LineLayout
-from Infrastructure import LinePerformance
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.tLineCategoryExt import tLineCategoryExt
+from RailML.Infrastructure.tLineType import tLineType
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.Length import Length
+from RailML.Infrastructure.LineTrafficCode import LineTrafficCode
+from RailML.Infrastructure.LineCombinedTransportCode import LineCombinedTransportCode
+from RailML.Infrastructure.LineLayout import LineLayout
+from RailML.Infrastructure.LinePerformance import LinePerformance
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class Line(FunctionalInfrastructureEntity):
@@ -56,22 +56,22 @@ class Line(FunctionalInfrastructureEntity):
 	def getEndsInOP(self) -> tElementWithIDref:
 		return self._endsInOP
 
-	def setLength(self, *aLength : Length*):
+	def setLength(self, *aLength : Length):
 		self._length = aLength
 
-	def getLength(self) -> Length*:
+	def getLength(self) -> Length:
 		return self._length
 
-	def setLineTrafficCode(self, *aLineTrafficCode : LineTrafficCode*):
+	def setLineTrafficCode(self, *aLineTrafficCode : LineTrafficCode):
 		self._lineTrafficCode = aLineTrafficCode
 
-	def getLineTrafficCode(self) -> LineTrafficCode*:
+	def getLineTrafficCode(self) -> LineTrafficCode:
 		return self._lineTrafficCode
 
-	def setLineCombinedTransportCode(self, *aLineCombinedTransportCode : LineCombinedTransportCode*):
+	def setLineCombinedTransportCode(self, *aLineCombinedTransportCode : LineCombinedTransportCode):
 		self._lineCombinedTransportCode = aLineCombinedTransportCode
 
-	def getLineCombinedTransportCode(self) -> LineCombinedTransportCode*:
+	def getLineCombinedTransportCode(self) -> LineCombinedTransportCode:
 		return self._lineCombinedTransportCode
 
 	def setLineLayout(self, aLineLayout : LineLayout):

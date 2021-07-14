@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure.RTM import RTM_IntrinsicCoordinate
-from Infrastructure.RTM import RTM_Validity
-from Infrastructure.RTM import RTM_BaseObject
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.RTM_IntrinsicCoordinate import RTM_IntrinsicCoordinate
+from RailML.Infrastructure.RTM_Validity import RTM_Validity
+from RailML.Infrastructure.RTM_BaseObject import RTM_BaseObject
 from typing import List
 
 class RTM_AssociatedPositioningSystem(RTM_BaseObject):

@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import Network
+from RailML.Infrastructure.Network import Network
 from typing import List
 
 class Networks(object):
-	def setNetwork(self, *aNetwork : Network*):
+	def setNetwork(self, aNetwork : Network):
 		self._network = aNetwork
 
-	def getNetwork(self) -> Network*:
+	def getNetwork(self) -> Network:
 		return self._network
 
 	def __init__(self):

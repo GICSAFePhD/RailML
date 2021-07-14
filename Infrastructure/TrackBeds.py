@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import TrackBed
+from RailML.Infrastructure.TrackBed import TrackBed
 from typing import List
 
 class TrackBeds(object):
-	def setTrackBed(self, *aTrackBed : TrackBed*):
+	def setTrackBed(self, *aTrackBed : TrackBed):
 		self._trackBed = aTrackBed
 
-	def getTrackBed(self) -> TrackBed*:
+	def getTrackBed(self) -> TrackBed:
 		return self._trackBed
 
 	def __init__(self):

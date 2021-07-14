@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tTrackType
-from Common import tRef
-from Infrastructure import tExtendedDirection
-from Common import tElementWithIDref
-from Infrastructure import Length
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.tTrackType import tTrackType
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.tExtendedDirection import tExtendedDirection
+from RailML.Common.tElementWithIDref import tElementWithIDref
+from RailML.Infrastructure.Length import Length
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class Track(FunctionalInfrastructureEntity):
@@ -40,10 +40,10 @@ class Track(FunctionalInfrastructureEntity):
 	def getTrackEnd(self) -> tElementWithIDref:
 		return self._trackEnd
 
-	def setLength(self, *aLength : Length*):
+	def setLength(self, *aLength : Length):
 		self._length = aLength
 
-	def getLength(self) -> Length*:
+	def getLength(self) -> Length:
 		return self._length
 
 	def __init__(self):

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import aTrackbed
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.aTrackbed import aTrackbed
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class TrackBed(FunctionalInfrastructureEntity):

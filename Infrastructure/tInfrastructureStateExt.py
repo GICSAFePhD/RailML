@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tInfrastructureState
+from RailML.Infrastructure.tInfrastructureState import tInfrastructureState
 from typing import List
 
 class tInfrastructureStateExt(tInfrastructureState):

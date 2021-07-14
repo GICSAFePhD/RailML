@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tInfrastructureStateExt
-from Infrastructure import ElementState
-from Common import Period
-from Infrastructure import StatesBaseElement
+from RailML.Infrastructure.tInfrastructureStateExt import tInfrastructureStateExt
+from RailML.Infrastructure.ElementState import ElementState
+from RailML.Common.Period import Period
+from RailML.Infrastructure.StatesBaseElement import StatesBaseElement
 from typing import List
 
 class InfrastructureState(StatesBaseElement):
@@ -13,16 +13,16 @@ class InfrastructureState(StatesBaseElement):
 	def getValue(self) -> tInfrastructureStateExt:
 		return self.___value
 
-	def setElementState(self, *aElementState : ElementState*):
+	def setElementState(self, *aElementState : ElementState):
 		self._elementState = aElementState
 
-	def getElementState(self) -> ElementState*:
+	def getElementState(self) -> ElementState:
 		return self._elementState
 
-	def setValidityTime(self, *aValidityTime : Period*):
+	def setValidityTime(self, *aValidityTime : Period):
 		self._validityTime = aValidityTime
 
-	def getValidityTime(self) -> Period*:
+	def getValidityTime(self) -> Period:
 		return self._validityTime
 
 	def __init__(self):

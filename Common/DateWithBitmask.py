@@ -1,13 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tBitmaskAny
+from RailML.Common.tBitmaskAny import tBitmaskAny
+import datetime
 from typing import List
 
 class DateWithBitmask(object):
-	def setDate(self, aDate : date):
+	def setDate(self, aDate : datetime):	#TODO DEFINED AS date
 		self.___date = aDate
 
-	def getDate(self) -> date:
+	def getDate(self) -> datetime:	#TODO DEFINED AS date
 		return self.___date
 
 	def setBitmask(self, aBitmask : tBitmaskAny):
@@ -17,7 +18,7 @@ class DateWithBitmask(object):
 		return self.___bitmask
 
 	def __init__(self):
-		self.___date : date = None
+		self.___date : datetime = None	#TODO DEFINED AS date
 		self.___bitmask : tBitmaskAny = None
 		# @AssociationType Common.tBitmaskAny
 

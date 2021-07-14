@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tRef
-from Infrastructure import tSwitchType
-from Infrastructure import tCourse
-from Infrastructure import SwitchCrossingBranch
-from Infrastructure import TrackNode
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.tSwitchType import tSwitchType
+from RailML.Infrastructure.tCourse import tCourse
+from RailML.Infrastructure.SwitchCrossingBranch import SwitchCrossingBranch
+from RailML.Infrastructure.TrackNode import TrackNode
 from typing import List
 
 class SwitchIS(TrackNode):
@@ -44,16 +44,16 @@ class SwitchIS(TrackNode):
 	def getLeftBranch(self) -> SwitchCrossingBranch:
 		return self._leftBranch
 
-	def setRightBranch(self, *aRightBranch : SwitchCrossingBranch*):
+	def setRightBranch(self, *aRightBranch : SwitchCrossingBranch):
 		self._rightBranch = aRightBranch
 
-	def getRightBranch(self) -> SwitchCrossingBranch*:
+	def getRightBranch(self) -> SwitchCrossingBranch:
 		return self._rightBranch
 
-	def setStraightBranch(self, *aStraightBranch : SwitchCrossingBranch*):
+	def setStraightBranch(self, *aStraightBranch : SwitchCrossingBranch):
 		self._straightBranch = aStraightBranch
 
-	def getStraightBranch(self) -> SwitchCrossingBranch*:
+	def getStraightBranch(self) -> SwitchCrossingBranch:
 		return self._straightBranch
 
 	def setTurningBranch(self, aTurningBranch : SwitchCrossingBranch):

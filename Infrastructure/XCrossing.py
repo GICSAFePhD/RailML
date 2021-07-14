@@ -1,18 +1,18 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Infrastructure import CrossedElement
-from Infrastructure import FunctionalInfrastructureEntity
+from RailML.Infrastructure.CrossedElement import CrossedElement
+from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
 from typing import List
 
 class XCrossing(FunctionalInfrastructureEntity):
 	__metaclass__ = ABCMeta
 	@classmethod
-	def setCrossesElement(self, *aCrossesElement : CrossedElement*):
+	def setCrossesElement(self, *aCrossesElement : CrossedElement):
 		self._crossesElement = aCrossesElement
 
 	@classmethod
-	def getCrossesElement(self) -> CrossedElement*:
+	def getCrossesElement(self) -> CrossedElement:
 		return self._crossesElement
 
 	@classmethod

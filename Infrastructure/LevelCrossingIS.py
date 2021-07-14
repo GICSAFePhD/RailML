@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import tLevelCrossingObstacleDetection
-from Infrastructure import tLevelCrossingActivation
-from Infrastructure import tLevelCrossingSupervision
-from Common import tRef
-from Infrastructure import LevelCrossingProtection
-from Infrastructure import XCrossing
+from RailML.Infrastructure.tLevelCrossingObstacleDetection import tLevelCrossingObstacleDetection
+from RailML.Infrastructure.tLevelCrossingActivation import tLevelCrossingActivation
+from RailML.Infrastructure.tLevelCrossingSupervision import tLevelCrossingSupervision
+from RailML.Common.tRef import tRef
+from RailML.Infrastructure.LevelCrossingProtection import LevelCrossingProtection
+from RailML.Infrastructure.XCrossing import XCrossing
 from typing import List
 
 class LevelCrossingIS(XCrossing):
@@ -15,10 +15,10 @@ class LevelCrossingIS(XCrossing):
 	def getObstacleDetection(self) -> tLevelCrossingObstacleDetection:
 		return self.___obstacleDetection
 
-	def setOpensOnDemand(self, aOpensOnDemand : long):
+	def setOpensOnDemand(self, aOpensOnDemand : int):	#TODO DEFINED AS LONG
 		self.___opensOnDemand = aOpensOnDemand
 
-	def getOpensOnDemand(self) -> long:
+	def getOpensOnDemand(self) -> int:	#TODO DEFINED AS LONG
 		return self.___opensOnDemand
 
 	def setActivation(self, aActivation : tLevelCrossingActivation):
@@ -56,7 +56,7 @@ class LevelCrossingIS(XCrossing):
 		# @AssociationType Infrastructure.tLevelCrossingObstacleDetection
 		# """obstacle detection: automatic (technical system, e.g. radar) or manual (e.g. by operator);
 		# missing attribute means that the information is not known"""
-		self.___opensOnDemand : long = None
+		self.___opensOnDemand : int = None	 #TODO DEFINED AS LONG
 		"""set TRUE if the level crossing is closed for road users by default and gates are only opened on demand;
 		missing attribute means that the information is not known"""
 		self.___activation : tLevelCrossingActivation = None

@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Infrastructure import LoadingGauge
+from RailML.Infrastructure.LoadingGauge import LoadingGauge
 from typing import List
 
 class LoadingGauges(object):
 	"""umbrella element for all loadingGauge elements"""
-	def setLoadingGauge(self, *aLoadingGauge : LoadingGauge*):
+	def setLoadingGauge(self, *aLoadingGauge : LoadingGauge):
 		self._loadingGauge = aLoadingGauge
 
-	def getLoadingGauge(self) -> LoadingGauge*:
+	def getLoadingGauge(self) -> LoadingGauge:
 		return self._loadingGauge
 
 	def __init__(self):

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeed
+from RailML.Common.tSpeed import tSpeed
 from typing import List
 
 class tSpeedKmPerHour(tSpeed):
