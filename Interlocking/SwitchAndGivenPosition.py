@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import SwitchAndPosition
-from Interlocking import AssetAndGivenState
+from RailML.Interlocking.SwitchAndPosition import SwitchAndPosition
+from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
 from typing import List
 
 class SwitchAndGivenPosition(AssetAndGivenState):

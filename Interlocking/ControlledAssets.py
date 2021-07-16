@@ -1,21 +1,21 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import ControlledSignalBox
-from Interlocking import SystemAssetConnectedToIL
+from RailML.Interlocking.ControlledSignalBox import ControlledSignalBox
+from RailML.Interlocking.SystemAssetConnectedToIL import SystemAssetConnectedToIL
 from typing import List
 
 class ControlledAssets(object):
 	"""container for all references to signalboxes/interlockings and system assets controlled by this controller"""
-	def setControlledInterlocking(self, *aControlledInterlocking : ControlledSignalBox*):
+	def setControlledInterlocking(self, *aControlledInterlocking : ControlledSignalBox):
 		self._controlledInterlocking = aControlledInterlocking
 
-	def getControlledInterlocking(self) -> ControlledSignalBox*:
+	def getControlledInterlocking(self) -> ControlledSignalBox:
 		return self._controlledInterlocking
 
-	def setControlledSystemAsset(self, *aControlledSystemAsset : SystemAssetConnectedToIL*):
+	def setControlledSystemAsset(self, *aControlledSystemAsset : SystemAssetConnectedToIL):
 		self._controlledSystemAsset = aControlledSystemAsset
 
-	def getControlledSystemAsset(self) -> SystemAssetConnectedToIL*:
+	def getControlledSystemAsset(self) -> SystemAssetConnectedToIL:
 		return self._controlledSystemAsset
 
 	def __init__(self):

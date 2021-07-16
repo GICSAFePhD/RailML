@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tLengthM
-from Common import tSpeedKmPerHour
-from Interlocking import EntityILref
-from Interlocking import RouteExit
-from Interlocking import EntityIL
+from RailML.Common.tLengthM import tLengthM
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.RouteExit import RouteExit
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class DangerPoint(EntityIL):

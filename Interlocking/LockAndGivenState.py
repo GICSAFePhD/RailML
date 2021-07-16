@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import LockAndState
-from Interlocking import AssetAndGivenState
+from RailML.Interlocking.LockAndState import LockAndState
+from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
 from typing import List
 
 class LockAndGivenState(AssetAndGivenState):

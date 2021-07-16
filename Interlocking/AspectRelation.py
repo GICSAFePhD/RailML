@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedKmPerHour
-from Interlocking import SignalAndAspect
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Interlocking.SignalAndAspect import SignalAndAspect
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class AspectRelation(EntityIL):
@@ -20,10 +20,10 @@ class AspectRelation(EntityIL):
 	def getExpectingSpeed(self) -> tSpeedKmPerHour:
 		return self.___expectingSpeed
 
-	def setEndSectionTime(self, aEndSectionTime : duration):
+	def setEndSectionTime(self, aEndSectionTime : int):	#TODO DEFINED AS duration
 		self.___endSectionTime = aEndSectionTime
 
-	def getEndSectionTime(self) -> duration:
+	def getEndSectionTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___endSectionTime
 
 	def setMasterAspect(self, aMasterAspect : SignalAndAspect):
@@ -32,10 +32,10 @@ class AspectRelation(EntityIL):
 	def getMasterAspect(self) -> SignalAndAspect:
 		return self._masterAspect
 
-	def setSlaveAspect(self, *aSlaveAspect : SignalAndAspect*):
+	def setSlaveAspect(self, *aSlaveAspect : SignalAndAspect):
 		self._slaveAspect = aSlaveAspect
 
-	def getSlaveAspect(self) -> SignalAndAspect*:
+	def getSlaveAspect(self) -> SignalAndAspect:
 		return self._slaveAspect
 
 	def setDistantAspect(self, aDistantAspect : SignalAndAspect):
@@ -44,10 +44,10 @@ class AspectRelation(EntityIL):
 	def getDistantAspect(self) -> SignalAndAspect:
 		return self._distantAspect
 
-	def setSignalsSpeedProfile(self, *aSignalsSpeedProfile : EntityILref*):
+	def setSignalsSpeedProfile(self, *aSignalsSpeedProfile : EntityILref):
 		self._signalsSpeedProfile = aSignalsSpeedProfile
 
-	def getSignalsSpeedProfile(self) -> EntityILref*:
+	def getSignalsSpeedProfile(self) -> EntityILref:
 		return self._signalsSpeedProfile
 
 	def setAppliesToRoute(self, aAppliesToRoute : EntityILref):
@@ -63,7 +63,7 @@ class AspectRelation(EntityIL):
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum signalled speed in km/h at master signal (aka target speed)."""
-		self.___endSectionTime : duration = None
+		self.___endSectionTime : int = None	#TODO DEFINED AS duration
 		"""The end-section of a route is the section between the closed route exit signal and the previous slave signal. Commonly, the interlocking revokes (part of) the route when this time period is passed."""
 		self._masterAspect : SignalAndAspect = None
 		"""The combination of the master signal (at route exit) and the aspect it is showing."""

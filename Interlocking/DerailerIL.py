@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tDerailingPosition
-from Interlocking import MovableElement
+from RailML.Interlocking.tDerailingPosition import tDerailingPosition
+from RailML.Interlocking.MovableElement import MovableElement
 from typing import List
 
 class DerailerIL(MovableElement):

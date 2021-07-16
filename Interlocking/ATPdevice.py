@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Interlocking import EntityILref
-from Interlocking import TrackAsset
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.TrackAsset import TrackAsset
 from typing import List
 
 class ATPdevice(TrackAsset):
@@ -18,19 +18,19 @@ class ATPdevice(TrackAsset):
 		return self._atpType
 
 	@classmethod
-	def setDevice(self, *aDevice : EntityILref*):
+	def setDevice(self, *aDevice : EntityILref):
 		self._device = aDevice
 
 	@classmethod
-	def getDevice(self) -> EntityILref*:
+	def getDevice(self) -> EntityILref:
 		return self._device
 
 	@classmethod
-	def setExitSignal(self, *aExitSignal : EntityILref*):
+	def setExitSignal(self, *aExitSignal : EntityILref):
 		self._exitSignal = aExitSignal
 
 	@classmethod
-	def getExitSignal(self) -> EntityILref*:
+	def getExitSignal(self) -> EntityILref:
 		return self._exitSignal
 
 	@classmethod

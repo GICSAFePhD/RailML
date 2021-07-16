@@ -1,83 +1,83 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import SystemAssetConnectedToIL
-from Interlocking import TrackAssetConnectedToIL
-from Interlocking import EntityILref
-from Interlocking import InterlockingInterface
-from Interlocking import SignalPlan
-from Interlocking import ElementGroup
-from Interlocking import Configuration
-from Interlocking import EntityIL
+from RailML.Interlocking.SystemAssetConnectedToIL import SystemAssetConnectedToIL
+from RailML.Interlocking.TrackAssetConnectedToIL import TrackAssetConnectedToIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.InterlockingInterface import InterlockingInterface
+from RailML.Interlocking.SignalPlan import SignalPlan
+from RailML.Interlocking.ElementGroup import ElementGroup
+from RailML.Interlocking.Configuration import Configuration
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class SignalBox(EntityIL):
 	"""The SignalBox (single interlocking) is a vital and fail-safe system. It accepts commands from operation control systems and reads the status of field elements. The interlocking controls a set of track assets and system assets to safely guide and control train movement. This logic reflects the railway rules and regulations.
 	IL logic may be implemented in terms of mechanically interlocking bars, relay circuitry or computer programs. 
 	This is the master class that must be instantiated for a specific interlocking system that controls a specific yard."""
-	def setControlsSystemAsset(self, *aControlsSystemAsset : SystemAssetConnectedToIL*):
+	def setControlsSystemAsset(self, *aControlsSystemAsset : SystemAssetConnectedToIL):
 		self._controlsSystemAsset = aControlsSystemAsset
 
-	def getControlsSystemAsset(self) -> SystemAssetConnectedToIL*:
+	def getControlsSystemAsset(self) -> SystemAssetConnectedToIL:
 		return self._controlsSystemAsset
 
-	def setControlsTrackAsset(self, *aControlsTrackAsset : TrackAssetConnectedToIL*):
+	def setControlsTrackAsset(self, *aControlsTrackAsset : TrackAssetConnectedToIL):
 		self._controlsTrackAsset = aControlsTrackAsset
 
-	def getControlsTrackAsset(self) -> TrackAssetConnectedToIL*:
+	def getControlsTrackAsset(self) -> TrackAssetConnectedToIL:
 		return self._controlsTrackAsset
 
-	def setControlsRoute(self, *aControlsRoute : EntityILref*):
+	def setControlsRoute(self, *aControlsRoute : EntityILref):
 		self._controlsRoute = aControlsRoute
 
-	def getControlsRoute(self) -> EntityILref*:
+	def getControlsRoute(self) -> EntityILref:
 		return self._controlsRoute
 
-	def setControlsCombinedRoute(self, *aControlsCombinedRoute : EntityILref*):
+	def setControlsCombinedRoute(self, *aControlsCombinedRoute : EntityILref):
 		self._controlsCombinedRoute = aControlsCombinedRoute
 
-	def getControlsCombinedRoute(self) -> EntityILref*:
+	def getControlsCombinedRoute(self) -> EntityILref:
 		return self._controlsCombinedRoute
 
-	def setControlsInterface(self, *aControlsInterface : InterlockingInterface*):
+	def setControlsInterface(self, *aControlsInterface : InterlockingInterface):
 		self._controlsInterface = aControlsInterface
 
-	def getControlsInterface(self) -> InterlockingInterface*:
+	def getControlsInterface(self) -> InterlockingInterface:
 		return self._controlsInterface
 
-	def setControlledBy(self, *aControlledBy : EntityILref*):
+	def setControlledBy(self, *aControlledBy : EntityILref):
 		self._controlledBy = aControlledBy
 
-	def getControlledBy(self) -> EntityILref*:
+	def getControlledBy(self) -> EntityILref:
 		return self._controlledBy
 
-	def setImplementsSignalplan(self, *aImplementsSignalplan : SignalPlan*):
+	def setImplementsSignalplan(self, *aImplementsSignalplan : SignalPlan):
 		self._implementsSignalplan = aImplementsSignalplan
 
-	def getImplementsSignalplan(self) -> SignalPlan*:
+	def getImplementsSignalplan(self) -> SignalPlan:
 		return self._implementsSignalplan
 
-	def setImplementsElementGroup(self, *aImplementsElementGroup : ElementGroup*):
+	def setImplementsElementGroup(self, *aImplementsElementGroup : ElementGroup):
 		self._implementsElementGroup = aImplementsElementGroup
 
-	def getImplementsElementGroup(self) -> ElementGroup*:
+	def getImplementsElementGroup(self) -> ElementGroup:
 		return self._implementsElementGroup
 
-	def setHasPermissionZone(self, *aHasPermissionZone : EntityILref*):
+	def setHasPermissionZone(self, *aHasPermissionZone : EntityILref):
 		self._hasPermissionZone = aHasPermissionZone
 
-	def getHasPermissionZone(self) -> EntityILref*:
+	def getHasPermissionZone(self) -> EntityILref:
 		return self._hasPermissionZone
 
-	def setHasConflictingRoutes(self, *aHasConflictingRoutes : EntityILref*):
+	def setHasConflictingRoutes(self, *aHasConflictingRoutes : EntityILref):
 		self._hasConflictingRoutes = aHasConflictingRoutes
 
-	def getHasConflictingRoutes(self) -> EntityILref*:
+	def getHasConflictingRoutes(self) -> EntityILref:
 		return self._hasConflictingRoutes
 
-	def setHasConfiguration(self, *aHasConfiguration : Configuration*):
+	def setHasConfiguration(self, *aHasConfiguration : Configuration):
 		self._hasConfiguration = aHasConfiguration
 
-	def getHasConfiguration(self) -> Configuration*:
+	def getHasConfiguration(self) -> Configuration:
 		return self._hasConfiguration
 
 	def __init__(self):
@@ -88,7 +88,7 @@ class SignalBox(EntityIL):
 		self._controlsTrackAsset : TrackAssetConnectedToIL = None
 		# @AssociationType Interlocking.TrackAssetConnectedToIL*
 		# @AssociationMultiplicity 0..*
-		# """The interlocking carries a list of (references to) track assets that this interlocking controls. The controlled object has an attribute indicating the Level of Control which is most often ‘full control’. Track assets that aren't controlled by the interlocking, e.g. field controlled level crossing or open track elements can be tagged with levelOfControl='none'."""
+		# """The interlocking carries a list of (references to) track assets that this interlocking controls. The controlled object has an attribute indicating the Level of Control which is most often ï¿½full controlï¿½. Track assets that aren't controlled by the interlocking, e.g. field controlled level crossing or open track elements can be tagged with levelOfControl='none'."""
 		self._controlsRoute : EntityILref = None
 		"""The reference to the routes the interlocking controls"""
 		self._controlsCombinedRoute : EntityILref = None

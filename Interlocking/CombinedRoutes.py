@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import CombinedRoute
+from RailML.Interlocking.CombinedRoute import CombinedRoute
 from typing import List
 
 class CombinedRoutes(object):
 	"""container element for all CombinedRoute elements"""
-	def setCombinedRoute(self, *aCombinedRoute : CombinedRoute*):
+	def setCombinedRoute(self, *aCombinedRoute : CombinedRoute):
 		self._combinedRoute = aCombinedRoute
 
-	def getCombinedRoute(self) -> CombinedRoute*:
+	def getCombinedRoute(self) -> CombinedRoute:
 		return self._combinedRoute
 
 	def __init__(self):

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tProtectingSideList
-from Interlocking import DerailerAndGivenPosition
-from Interlocking import EntityIL
+from RailML.Interlocking.tProtectingSideList import tProtectingSideList
+from RailML.Interlocking.DerailerAndGivenPosition import DerailerAndGivenPosition
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class DerailerInPosition(EntityIL):

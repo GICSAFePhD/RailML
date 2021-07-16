@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import PowerSupplyIL
+from RailML.Interlocking.PowerSupplyIL import PowerSupplyIL
 from typing import List
 
 class PowerSuppliesIL(object):
 	"""container element for all PowerSupplyIL elements"""
-	def setPowerSupplyIL(self, *aPowerSupplyIL : PowerSupplyIL*):
+	def setPowerSupplyIL(self, *aPowerSupplyIL : PowerSupplyIL):
 		self._powerSupplyIL = aPowerSupplyIL
 
-	def getPowerSupplyIL(self) -> PowerSupplyIL*:
+	def getPowerSupplyIL(self) -> PowerSupplyIL:
 		return self._powerSupplyIL
 
 	def __init__(self):

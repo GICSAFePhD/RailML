@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import RouteReleaseGroupRear
+from RailML.Interlocking.RouteReleaseGroupRear import RouteReleaseGroupRear
 from typing import List
 
 class RouteReleaseGroupsRear(object):
-	def setRouteReleaseGroupRear(self, *aRouteReleaseGroupRear : RouteReleaseGroupRear*):
+	def setRouteReleaseGroupRear(self, *aRouteReleaseGroupRear : RouteReleaseGroupRear):
 		self._routeReleaseGroupRear = aRouteReleaseGroupRear
 
-	def getRouteReleaseGroupRear(self) -> RouteReleaseGroupRear*:
+	def getRouteReleaseGroupRear(self) -> RouteReleaseGroupRear:
 		return self._routeReleaseGroupRear
 
 	def __init__(self):

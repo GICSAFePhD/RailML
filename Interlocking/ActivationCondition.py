@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tAndOr
-from Interlocking import SwitchRelatedDelay
-from Interlocking import AspectRelatedLevelCrossingDelay
-from Interlocking import SignalDelayTime
-from Interlocking import ApproachStartingDetector
-from Interlocking import EntityIL
+from RailML.Interlocking.tAndOr import tAndOr
+from RailML.Interlocking.SwitchRelatedDelay import SwitchRelatedDelay
+from RailML.Interlocking.AspectRelatedLevelCrossingDelay import AspectRelatedLevelCrossingDelay
+from RailML.Interlocking.SignalDelayTime import SignalDelayTime
+from RailML.Interlocking.ApproachStartingDetector import ApproachStartingDetector
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class ActivationCondition(EntityIL):
@@ -22,22 +22,22 @@ class ActivationCondition(EntityIL):
 	def getDelayBySwitchPosition(self) -> SwitchRelatedDelay:
 		return self._delayBySwitchPosition
 
-	def setAspectRelatedDelay(self, *aAspectRelatedDelay : AspectRelatedLevelCrossingDelay*):
+	def setAspectRelatedDelay(self, *aAspectRelatedDelay : AspectRelatedLevelCrossingDelay):
 		self._aspectRelatedDelay = aAspectRelatedDelay
 
-	def getAspectRelatedDelay(self) -> AspectRelatedLevelCrossingDelay*:
+	def getAspectRelatedDelay(self) -> AspectRelatedLevelCrossingDelay:
 		return self._aspectRelatedDelay
 
-	def setSignalDelayTime(self, *aSignalDelayTime : SignalDelayTime*):
+	def setSignalDelayTime(self, *aSignalDelayTime : SignalDelayTime):
 		self._signalDelayTime = aSignalDelayTime
 
-	def getSignalDelayTime(self) -> SignalDelayTime*:
+	def getSignalDelayTime(self) -> SignalDelayTime:
 		return self._signalDelayTime
 
-	def setActivatedBy(self, *aActivatedBy : ApproachStartingDetector*):
+	def setActivatedBy(self, *aActivatedBy : ApproachStartingDetector):
 		self._activatedBy = aActivatedBy
 
-	def getActivatedBy(self) -> ApproachStartingDetector*:
+	def getActivatedBy(self) -> ApproachStartingDetector:
 		return self._activatedBy
 
 	def __init__(self):

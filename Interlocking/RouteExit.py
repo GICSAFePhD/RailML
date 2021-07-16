@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class RouteExit(EntityIL):
@@ -12,10 +12,10 @@ class RouteExit(EntityIL):
 	def getRefersTo(self) -> EntityILref:
 		return self._refersTo
 
-	def setHasDangerPoint(self, *aHasDangerPoint : EntityILref*):
+	def setHasDangerPoint(self, *aHasDangerPoint : EntityILref):
 		self._hasDangerPoint = aHasDangerPoint
 
-	def getHasDangerPoint(self) -> EntityILref*:
+	def getHasDangerPoint(self) -> EntityILref:
 		return self._hasDangerPoint
 
 	def setHasOverlap(self, aHasOverlap : EntityILref):

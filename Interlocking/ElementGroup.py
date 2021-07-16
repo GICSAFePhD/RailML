@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class ElementGroup(EntityIL):
 	"""For operational purpose of the interlocking some elements are grouped together. This allows e.g. commanding them with only one command."""
-	def setGroupType(self, *aGroupType : EntityILref*):
+	def setGroupType(self, *aGroupType : EntityILref):
 		self._groupType = aGroupType
 
-	def getGroupType(self) -> EntityILref*:
+	def getGroupType(self) -> EntityILref:
 		return self._groupType
 
 	def setRefersToMember(self, aRefersToMember : EntityILref):

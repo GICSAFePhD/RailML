@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import DerailerAndPosition
-from Interlocking import AssetAndGivenState
+from RailML.Interlocking.DerailerAndPosition import DerailerAndPosition
+from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
 from typing import List
 
 class DerailerAndGivenPosition(AssetAndGivenState):

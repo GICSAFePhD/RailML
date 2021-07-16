@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tExtentOfControl
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.tExtentOfControl import tExtentOfControl
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class TrackAssetConnectedToIL(EntityIL):

@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import DerailerIL
+from RailML.Interlocking.DerailerIL import DerailerIL
 from typing import List
 
 class DerailersIL(object):
-	def setDerailerIL(self, *aDerailerIL : DerailerIL*):
+	def setDerailerIL(self, *aDerailerIL : DerailerIL):
 		self._derailerIL = aDerailerIL
 
-	def getDerailerIL(self) -> DerailerIL*:
+	def getDerailerIL(self) -> DerailerIL:
 		return self._derailerIL
 
 	def __init__(self):

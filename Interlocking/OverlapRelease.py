@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import OverlapReleaseTimer
-from Interlocking import EntityIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.OverlapReleaseTimer import OverlapReleaseTimer
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class OverlapRelease(EntityIL):
@@ -13,10 +13,10 @@ class OverlapRelease(EntityIL):
 	def getReleaseTriggerSection(self) -> EntityILref:
 		return self._releaseTriggerSection
 
-	def setOverlapReleaseTimer(self, *aOverlapReleaseTimer : OverlapReleaseTimer*):
+	def setOverlapReleaseTimer(self, *aOverlapReleaseTimer : OverlapReleaseTimer):
 		self._overlapReleaseTimer = aOverlapReleaseTimer
 
-	def getOverlapReleaseTimer(self) -> OverlapReleaseTimer*:
+	def getOverlapReleaseTimer(self) -> OverlapReleaseTimer:
 		return self._overlapReleaseTimer
 
 	def __init__(self):

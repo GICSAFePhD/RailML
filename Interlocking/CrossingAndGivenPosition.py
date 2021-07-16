@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import CrossingAndPosition
-from Interlocking import AssetAndGivenState
+from RailML.Interlocking.CrossingAndPosition import CrossingAndPosition
+from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
 from typing import List
 
 class CrossingAndGivenPosition(AssetAndGivenState):

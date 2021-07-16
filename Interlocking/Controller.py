@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import ControlledAssets
-from Interlocking import Itineraries
-from Interlocking import EntityIL
+from RailML.Interlocking.ControlledAssets import ControlledAssets
+from RailML.Interlocking.Itineraries import Itineraries
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class Controller(EntityIL):

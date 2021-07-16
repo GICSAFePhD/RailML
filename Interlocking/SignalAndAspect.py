@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import AssetAndState
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.AssetAndState import AssetAndState
 from typing import List
 
 class SignalAndAspect(AssetAndState):
 	"""A tuple (signal, aspect). Refers to a signal and an aspect. Used for expressing concepts like signal 1105 shows yellow flashing."""
-	def setRefersToSignal(self, *aRefersToSignal : EntityILref*):
+	def setRefersToSignal(self, *aRefersToSignal : EntityILref):
 		self._refersToSignal = aRefersToSignal
 
-	def getRefersToSignal(self) -> EntityILref*:
+	def getRefersToSignal(self) -> EntityILref:
 		return self._refersToSignal
 
 	def setShowsAspect(self, aShowsAspect : EntityILref):

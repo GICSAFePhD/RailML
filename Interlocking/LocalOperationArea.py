@@ -1,70 +1,70 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import SwitchInPosition
-from Interlocking import DerailerInPosition
-from Interlocking import CrossingInPosition
-from Interlocking import DetectorInState
-from Interlocking import SignalWithAspect
-from Interlocking import KeyLockInState
-from Interlocking import LevelCrossingInState
-from Interlocking import RestrictedArea
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.SwitchInPosition import SwitchInPosition
+from RailML.Interlocking.DerailerInPosition import DerailerInPosition
+from RailML.Interlocking.CrossingInPosition import CrossingInPosition
+from RailML.Interlocking.DetectorInState import DetectorInState
+from RailML.Interlocking.SignalWithAspect import SignalWithAspect
+from RailML.Interlocking.KeyLockInState import KeyLockInState
+from RailML.Interlocking.LevelCrossingInState import LevelCrossingInState
+from RailML.Interlocking.RestrictedArea import RestrictedArea
 from typing import List
 
 class LocalOperationArea(RestrictedArea):
 	"""Area used for local shunting movements without routes. Movable elements within the area might be operated from onsite panels. These areas are predefined for parts of a station."""
-	def setDeactivationKey(self, *aDeactivationKey : EntityILref*):
+	def setDeactivationKey(self, *aDeactivationKey : EntityILref):
 		self._deactivationKey = aDeactivationKey
 
-	def getDeactivationKey(self) -> EntityILref*:
+	def getDeactivationKey(self) -> EntityILref:
 		return self._deactivationKey
 
-	def setSwitchInPosition(self, *aSwitchInPosition : SwitchInPosition*):
+	def setSwitchInPosition(self, *aSwitchInPosition : SwitchInPosition):
 		self._switchInPosition = aSwitchInPosition
 
-	def getSwitchInPosition(self) -> SwitchInPosition*:
+	def getSwitchInPosition(self) -> SwitchInPosition:
 		return self._switchInPosition
 
-	def setDerailerInPosition(self, *aDerailerInPosition : DerailerInPosition*):
+	def setDerailerInPosition(self, *aDerailerInPosition : DerailerInPosition):
 		self._derailerInPosition = aDerailerInPosition
 
-	def getDerailerInPosition(self) -> DerailerInPosition*:
+	def getDerailerInPosition(self) -> DerailerInPosition:
 		return self._derailerInPosition
 
-	def setCrossingInPosition(self, *aCrossingInPosition : CrossingInPosition*):
+	def setCrossingInPosition(self, *aCrossingInPosition : CrossingInPosition):
 		self._crossingInPosition = aCrossingInPosition
 
-	def getCrossingInPosition(self) -> CrossingInPosition*:
+	def getCrossingInPosition(self) -> CrossingInPosition:
 		return self._crossingInPosition
 
-	def setDetectorInState(self, *aDetectorInState : DetectorInState*):
+	def setDetectorInState(self, *aDetectorInState : DetectorInState):
 		self._detectorInState = aDetectorInState
 
-	def getDetectorInState(self) -> DetectorInState*:
+	def getDetectorInState(self) -> DetectorInState:
 		return self._detectorInState
 
-	def setSignalWithAspect(self, *aSignalWithAspect : SignalWithAspect*):
+	def setSignalWithAspect(self, *aSignalWithAspect : SignalWithAspect):
 		self._signalWithAspect = aSignalWithAspect
 
-	def getSignalWithAspect(self) -> SignalWithAspect*:
+	def getSignalWithAspect(self) -> SignalWithAspect:
 		return self._signalWithAspect
 
-	def setKeyLockInState(self, *aKeyLockInState : KeyLockInState*):
+	def setKeyLockInState(self, *aKeyLockInState : KeyLockInState):
 		self._keyLockInState = aKeyLockInState
 
-	def getKeyLockInState(self) -> KeyLockInState*:
+	def getKeyLockInState(self) -> KeyLockInState:
 		return self._keyLockInState
 
-	def setLevelCrossingInState(self, *aLevelCrossingInState : LevelCrossingInState*):
+	def setLevelCrossingInState(self, *aLevelCrossingInState : LevelCrossingInState):
 		self._levelCrossingInState = aLevelCrossingInState
 
-	def getLevelCrossingInState(self) -> LevelCrossingInState*:
+	def getLevelCrossingInState(self) -> LevelCrossingInState:
 		return self._levelCrossingInState
 
-	def setReleasedForLocalOperation(self, *aReleasedForLocalOperation : EntityILref*):
+	def setReleasedForLocalOperation(self, *aReleasedForLocalOperation : EntityILref):
 		self._releasedForLocalOperation = aReleasedForLocalOperation
 
-	def getReleasedForLocalOperation(self) -> EntityILref*:
+	def getReleasedForLocalOperation(self) -> EntityILref:
 		return self._releasedForLocalOperation
 
 	def __init__(self):

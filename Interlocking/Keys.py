@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import Key
+from RailML.Interlocking.Key import Key
 from typing import List
 
 class Keys(object):
 	"""container element for all Key elements"""
-	def setKey(self, *aKey : Key*):
+	def setKey(self, *aKey : Key):
 		self._key = aKey
 
-	def getKey(self) -> Key*:
+	def getKey(self) -> Key:
 		return self._key
 
 	def __init__(self):

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tProtectingSideList
-from Interlocking import LockAndGivenState
-from Interlocking import EntityIL
+from RailML.Interlocking.tProtectingSideList import tProtectingSideList
+from RailML.Interlocking.LockAndGivenState import LockAndGivenState
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class KeyLockInState(EntityIL):

@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import WorkZone
+from RailML.Interlocking.WorkZone import WorkZone
 from typing import List
 
 class WorkZones(object):
-	def setWorkZone(self, *aWorkZone : WorkZone*):
+	def setWorkZone(self, *aWorkZone : WorkZone):
 		self._workZone = aWorkZone
 
-	def getWorkZone(self) -> WorkZone*:
+	def getWorkZone(self) -> WorkZone:
 		return self._workZone
 
 	def __init__(self):

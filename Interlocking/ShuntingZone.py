@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import RestrictedArea
+from RailML.Interlocking.RestrictedArea import RestrictedArea
 from typing import List
 
 class ShuntingZone(RestrictedArea):

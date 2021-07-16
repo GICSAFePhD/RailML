@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import DangerPoint
+from RailML.Interlocking.DangerPoint import DangerPoint
 from typing import List
 
 class DangerPoints(object):
 	"""container element for all DangerPoint elements"""
-	def setDangerPoint(self, *aDangerPoint : DangerPoint*):
+	def setDangerPoint(self, *aDangerPoint : DangerPoint):
 		self._dangerPoint = aDangerPoint
 
-	def getDangerPoint(self) -> DangerPoint*:
+	def getDangerPoint(self) -> DangerPoint:
 		return self._dangerPoint
 
 	def __init__(self):

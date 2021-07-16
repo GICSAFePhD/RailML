@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import LocalOperationArea
+from RailML.Interlocking.LocalOperationArea import LocalOperationArea
 from typing import List
 
 class LocalOperationAreas(object):
-	def setLocalOperationArea(self, *aLocalOperationArea : LocalOperationArea*):
+	def setLocalOperationArea(self, *aLocalOperationArea : LocalOperationArea):
 		self._localOperationArea = aLocalOperationArea
 
-	def getLocalOperationArea(self) -> LocalOperationArea*:
+	def getLocalOperationArea(self) -> LocalOperationArea:
 		return self._localOperationArea
 
 	def __init__(self):

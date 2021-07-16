@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import SignalAndAspect
-from Interlocking import AssetAndGivenState
+from RailML.Interlocking.SignalAndAspect import SignalAndAspect
+from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
 from typing import List
 
 class SignalAndGivenAspect(AssetAndGivenState):

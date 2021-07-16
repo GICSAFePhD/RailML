@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import PartialRoute
+from RailML.Interlocking.PartialRoute import PartialRoute
 from typing import List
 
 class RouteReleaseGroupRear(PartialRoute):

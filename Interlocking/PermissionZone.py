@@ -1,21 +1,21 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import TrackAsset
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.TrackAsset import TrackAsset
 from typing import List
 
 class PermissionZone(TrackAsset):
 	"""A restricted area inside a station which can be controlled from a different controller as the rest of the station"""
-	def setCanBeControlledBy(self, *aCanBeControlledBy : EntityILref*):
+	def setCanBeControlledBy(self, *aCanBeControlledBy : EntityILref):
 		self._canBeControlledBy = aCanBeControlledBy
 
-	def getCanBeControlledBy(self) -> EntityILref*:
+	def getCanBeControlledBy(self) -> EntityILref:
 		return self._canBeControlledBy
 
-	def setControlledElement(self, *aControlledElement : EntityILref*):
+	def setControlledElement(self, *aControlledElement : EntityILref):
 		self._controlledElement = aControlledElement
 
-	def getControlledElement(self) -> EntityILref*:
+	def getControlledElement(self) -> EntityILref:
 		return self._controlledElement
 
 	def __init__(self):

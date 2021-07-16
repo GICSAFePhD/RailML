@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tCrossingPosition
-from Interlocking import EntityILref
-from Interlocking import MovableElement
+from RailML.Interlocking.tCrossingPosition import tCrossingPosition
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.MovableElement import MovableElement
 from typing import List
 
 class MovableCrossing(MovableElement):
 	"""Crossings are a special item for interlockings as a position is required for them even if there is no really movable item trackside.
-	Some crossings, especially high speed ones, have a movable frog to close the gap at the crossing (UK: movable nose crossing, DE: Herzstück mit beweglicher Spitze, NL: kruising met beweegbaar puntstuk). Unlike a switch, such a movable frog will not send the train left or right but it does guide the train. Thus the position is essential for avoiding derailment. Do not confound this class with ordinary double or single slip switches. The latter are regarded as two back-to-back switches."""
+	Some crossings, especially high speed ones, have a movable frog to close the gap at the crossing (UK: movable nose crossing, DE: Herzstï¿½ck mit beweglicher Spitze, NL: kruising met beweegbaar puntstuk). Unlike a switch, such a movable frog will not send the train left or right but it does guide the train. Thus the position is essential for avoiding derailment. Do not confound this class with ordinary double or single slip switches. The latter are regarded as two back-to-back switches."""
 	def setPreferredPosition(self, aPreferredPosition : tCrossingPosition):
 		self.___preferredPosition = aPreferredPosition
 
@@ -32,10 +32,10 @@ class MovableCrossing(MovableElement):
 	def getBranchDownLeft(self) -> EntityILref:
 		return self._branchDownLeft
 
-	def setBranchDownRight(self, *aBranchDownRight : EntityILref*):
+	def setBranchDownRight(self, *aBranchDownRight : EntityILref):
 		self._branchDownRight = aBranchDownRight
 
-	def getBranchDownRight(self) -> EntityILref*:
+	def getBranchDownRight(self) -> EntityILref:
 		return self._branchDownRight
 
 	def setHasFoulingTrainDetectors(self, aHasFoulingTrainDetectors : EntityILref):

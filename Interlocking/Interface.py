@@ -1,35 +1,35 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import InputOutput
-from Interlocking import InitStatus
-from Interlocking import LevelCrossingIL
-from Interlocking import EntityIL
+from RailML.Interlocking.InputOutput import InputOutput
+from RailML.Interlocking.InitStatus import InitStatus
+from RailML.Interlocking.LevelCrossingIL import LevelCrossingIL
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class Interface(EntityIL):
 	"""Description of a physical interface with definition of the information to be exchanged in which direction."""
-	def setInvalidTolerationTime(self, aInvalidTolerationTime : duration):
+	def setInvalidTolerationTime(self, aInvalidTolerationTime : int):	#TODO DEFINED AS duration
 		self.___invalidTolerationTime = aInvalidTolerationTime
 
-	def getInvalidTolerationTime(self) -> duration:
+	def getInvalidTolerationTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___invalidTolerationTime
 
-	def setSwitchoverTolerationTime(self, aSwitchoverTolerationTime : duration):
+	def setSwitchoverTolerationTime(self, aSwitchoverTolerationTime : int):	#TODO DEFINED AS duration
 		self.___switchoverTolerationTime = aSwitchoverTolerationTime
 
-	def getSwitchoverTolerationTime(self) -> duration:
+	def getSwitchoverTolerationTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___switchoverTolerationTime
 
-	def setCommand(self, *aCommand : InputOutput*):
+	def setCommand(self, *aCommand : InputOutput):
 		self._command = aCommand
 
-	def getCommand(self) -> InputOutput*:
+	def getCommand(self) -> InputOutput:
 		return self._command
 
-	def setMessage(self, *aMessage : InputOutput*):
+	def setMessage(self, *aMessage : InputOutput):
 		self._message = aMessage
 
-	def getMessage(self) -> InputOutput*:
+	def getMessage(self) -> InputOutput:
 		return self._message
 
 	def setInitStatus(self, aInitStatus : InitStatus):
@@ -39,9 +39,9 @@ class Interface(EntityIL):
 		return self._initStatus
 
 	def __init__(self):
-		self.___invalidTolerationTime : duration = None
+		self.___invalidTolerationTime : int = None	#TODO DEFINED AS duration
 		"""The time period for which an invalid status of the received messages is tolerated."""
-		self.___switchoverTolerationTime : duration = None
+		self.___switchoverTolerationTime : int = None	#TODO DEFINED AS duration
 		"""The time period for which the received messages are not considered stable due to switching process."""
 		self._command : InputOutput = None
 		"""The list of the output information, i.e. commanded to the interfaced unit."""

@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tProtectingSideList
-from Interlocking import SwitchAndGivenPosition
-from Interlocking import EntityIL
+from RailML.Interlocking.tProtectingSideList import tProtectingSideList
+from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class SwitchInPosition(EntityIL):

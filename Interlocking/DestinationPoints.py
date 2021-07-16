@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import RouteExit
+from RailML.Interlocking.RouteExit import RouteExit
 from typing import List
 
 class DestinationPoints(object):
 	"""container element for all DestinationPoint elements
 	The definition of destination points which are mainly route exits. This allows definition independent of routes."""
-	def setDestinationPoint(self, *aDestinationPoint : RouteExit*):
+	def setDestinationPoint(self, *aDestinationPoint : RouteExit):
 		self._destinationPoint = aDestinationPoint
 
-	def getDestinationPoint(self) -> RouteExit*:
+	def getDestinationPoint(self) -> RouteExit:
 		return self._destinationPoint
 
 	def __init__(self):

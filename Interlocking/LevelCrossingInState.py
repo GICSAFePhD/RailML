@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import LevelCrossingAndGivenState
-from Interlocking import EntityIL
+from RailML.Interlocking.LevelCrossingAndGivenState import LevelCrossingAndGivenState
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class LevelCrossingInState(EntityIL):

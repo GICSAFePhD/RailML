@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import LevelCrossingIL
+from RailML.Interlocking.LevelCrossingIL import LevelCrossingIL
 from typing import List
 
 class LevelCrossingsIL(object):
 	"""container element for all LevelCrossingIL elements"""
-	def setLevelCrossingIL(self, *aLevelCrossingIL : LevelCrossingIL*):
+	def setLevelCrossingIL(self, *aLevelCrossingIL : LevelCrossingIL):
 		self._levelCrossingIL = aLevelCrossingIL
 
-	def getLevelCrossingIL(self) -> LevelCrossingIL*:
+	def getLevelCrossingIL(self) -> LevelCrossingIL:
 		return self._levelCrossingIL
 
 	def __init__(self):

@@ -3,7 +3,7 @@
 from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
 from RailML.Common.tLengthM import tLengthM
 from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition
+#from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition	#TODO CIRCULAR!
 from RailML.Interlocking.LevelCrossingAndGivenState import LevelCrossingAndGivenState
 from RailML.Interlocking.OverlapRelease import OverlapRelease
 from RailML.Interlocking.RouteExit import RouteExit
@@ -51,11 +51,11 @@ class Overlap(EntityIL):
 	def getRelatedToTrackAsset(self) -> EntityILref:
 		return self._relatedToTrackAsset
 
-	def setRequiresSwitchInPosition(self, *aRequiresSwitchInPosition : SwitchAndGivenPosition):
-		self._requiresSwitchInPosition = aRequiresSwitchInPosition
+	#def setRequiresSwitchInPosition(self, *aRequiresSwitchInPosition : SwitchAndGivenPosition): #TODO CIRCULAR!
+	#	self._requiresSwitchInPosition = aRequiresSwitchInPosition
 
-	def getRequiresSwitchInPosition(self) -> SwitchAndGivenPosition:
-		return self._requiresSwitchInPosition
+	#def getRequiresSwitchInPosition(self) -> SwitchAndGivenPosition:	#TODO CIRCULAR!
+	#	return self._requiresSwitchInPosition
 
 	def setRequiresLevelCrossingInState(self, *aRequiresLevelCrossingInState : LevelCrossingAndGivenState):
 		self._requiresLevelCrossingInState = aRequiresLevelCrossingInState
@@ -99,7 +99,7 @@ class Overlap(EntityIL):
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """Alternatively to a specific route a reference to a track asset the danger point is related to can be given. This can be a destination signal of a route or any other suitable object."""
-		self._requiresSwitchInPosition : SwitchAndGivenPosition = None
+		#self._requiresSwitchInPosition : SwitchAndGivenPosition = None	#TODO CIRCULAR!
 		# @AssociationType Interlocking.SwitchAndGivenPosition*
 		# @AssociationMultiplicity 0..*
 		# """The reference to any switch in the overlap required to be in a particular position and its position."""

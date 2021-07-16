@@ -1,64 +1,64 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import SwitchAndGivenPosition
-from Interlocking import DerailerAndGivenPosition
-from Interlocking import CrossingAndGivenPosition
-from Interlocking import DetectorAndGivenState
-from Interlocking import SignalAndGivenAspect
-from Interlocking import SectionAndGivenVacancy
-from Interlocking import LockAndGivenState
-from Interlocking import LevelCrossingAndGivenState
-from Interlocking import EntityIL
+from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition
+from RailML.Interlocking.DerailerAndGivenPosition import DerailerAndGivenPosition
+from RailML.Interlocking.CrossingAndGivenPosition import CrossingAndGivenPosition
+from RailML.Interlocking.DetectorAndGivenState import DetectorAndGivenState
+from RailML.Interlocking.SignalAndGivenAspect import SignalAndGivenAspect
+from RailML.Interlocking.SectionAndGivenVacancy import SectionAndGivenVacancy
+from RailML.Interlocking.LockAndGivenState import LockAndGivenState
+from RailML.Interlocking.LevelCrossingAndGivenState import LevelCrossingAndGivenState
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class RouteRelation(EntityIL):
 	"""A route relation states the conditions that must be fulfilled for a given signal to be open. Note that these relations may well be captured in a control table. Therefore, the use is optional."""
-	def setRequiredSwitchPosition(self, *aRequiredSwitchPosition : SwitchAndGivenPosition*):
+	def setRequiredSwitchPosition(self, *aRequiredSwitchPosition : SwitchAndGivenPosition):
 		self._requiredSwitchPosition = aRequiredSwitchPosition
 
-	def getRequiredSwitchPosition(self) -> SwitchAndGivenPosition*:
+	def getRequiredSwitchPosition(self) -> SwitchAndGivenPosition:
 		return self._requiredSwitchPosition
 
-	def setRequiredDerailerPosition(self, *aRequiredDerailerPosition : DerailerAndGivenPosition*):
+	def setRequiredDerailerPosition(self, *aRequiredDerailerPosition : DerailerAndGivenPosition):
 		self._requiredDerailerPosition = aRequiredDerailerPosition
 
-	def getRequiredDerailerPosition(self) -> DerailerAndGivenPosition*:
+	def getRequiredDerailerPosition(self) -> DerailerAndGivenPosition:
 		return self._requiredDerailerPosition
 
-	def setRequiredCrossingPosition(self, *aRequiredCrossingPosition : CrossingAndGivenPosition*):
+	def setRequiredCrossingPosition(self, *aRequiredCrossingPosition : CrossingAndGivenPosition):
 		self._requiredCrossingPosition = aRequiredCrossingPosition
 
-	def getRequiredCrossingPosition(self) -> CrossingAndGivenPosition*:
+	def getRequiredCrossingPosition(self) -> CrossingAndGivenPosition:
 		return self._requiredCrossingPosition
 
-	def setRequiredDetectorState(self, *aRequiredDetectorState : DetectorAndGivenState*):
+	def setRequiredDetectorState(self, *aRequiredDetectorState : DetectorAndGivenState):
 		self._requiredDetectorState = aRequiredDetectorState
 
-	def getRequiredDetectorState(self) -> DetectorAndGivenState*:
+	def getRequiredDetectorState(self) -> DetectorAndGivenState:
 		return self._requiredDetectorState
 
-	def setRequiredSignalAspect(self, *aRequiredSignalAspect : SignalAndGivenAspect*):
+	def setRequiredSignalAspect(self, *aRequiredSignalAspect : SignalAndGivenAspect):
 		self._requiredSignalAspect = aRequiredSignalAspect
 
-	def getRequiredSignalAspect(self) -> SignalAndGivenAspect*:
+	def getRequiredSignalAspect(self) -> SignalAndGivenAspect:
 		return self._requiredSignalAspect
 
-	def setRequiredSectionState(self, *aRequiredSectionState : SectionAndGivenVacancy*):
+	def setRequiredSectionState(self, *aRequiredSectionState : SectionAndGivenVacancy):
 		self._requiredSectionState = aRequiredSectionState
 
-	def getRequiredSectionState(self) -> SectionAndGivenVacancy*:
+	def getRequiredSectionState(self) -> SectionAndGivenVacancy:
 		return self._requiredSectionState
 
-	def setRequiredKeyLockState(self, *aRequiredKeyLockState : LockAndGivenState*):
+	def setRequiredKeyLockState(self, *aRequiredKeyLockState : LockAndGivenState):
 		self._requiredKeyLockState = aRequiredKeyLockState
 
-	def getRequiredKeyLockState(self) -> LockAndGivenState*:
+	def getRequiredKeyLockState(self) -> LockAndGivenState:
 		return self._requiredKeyLockState
 
-	def setRequiredLevelCrossingState(self, *aRequiredLevelCrossingState : LevelCrossingAndGivenState*):
+	def setRequiredLevelCrossingState(self, *aRequiredLevelCrossingState : LevelCrossingAndGivenState):
 		self._requiredLevelCrossingState = aRequiredLevelCrossingState
 
-	def getRequiredLevelCrossingState(self) -> LevelCrossingAndGivenState*:
+	def getRequiredLevelCrossingState(self) -> LevelCrossingAndGivenState:
 		return self._requiredLevelCrossingState
 
 	def __init__(self):

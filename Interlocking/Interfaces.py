@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import Interface
+from RailML.Interlocking.Interface import Interface
 from typing import List
 
 class Interfaces(object):
 	"""container element for all Interface elements"""
-	def setInterface(self, *aInterface : Interface*):
+	def setInterface(self, *aInterface : Interface):
 		self._interface = aInterface
 
-	def getInterface(self) -> Interface*:
+	def getInterface(self) -> Interface:
 		return self._interface
 
 	def __init__(self):

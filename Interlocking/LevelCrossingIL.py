@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tLevelCrossingState
-from Common import tSpeedKmPerHour
-from Interlocking import EntityILref
-from Interlocking import LevelCrossingDeactivator
-from Interlocking import ActivationCondition
-from Interlocking import TrackAsset
+from RailML.Interlocking.tLevelCrossingState import tLevelCrossingState
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.LevelCrossingDeactivator import LevelCrossingDeactivator
+from RailML.Interlocking.ActivationCondition import ActivationCondition
+from RailML.Interlocking.TrackAsset import TrackAsset
 from typing import List
 
 class LevelCrossingIL(TrackAsset):
@@ -22,34 +22,34 @@ class LevelCrossingIL(TrackAsset):
 	def getUnprotectedSpeed(self) -> tSpeedKmPerHour:
 		return self.___unprotectedSpeed
 
-	def setTypicalTimeToClose(self, aTypicalTimeToClose : duration):
+	def setTypicalTimeToClose(self, aTypicalTimeToClose : int):	#TODO DEFINED AS duration
 		self.___typicalTimeToClose = aTypicalTimeToClose
 
-	def getTypicalTimeToClose(self) -> duration:
+	def getTypicalTimeToClose(self) -> int:	#TODO DEFINED AS duration
 		return self.___typicalTimeToClose
 
-	def setConstantWarningTime(self, aConstantWarningTime : duration):
+	def setConstantWarningTime(self, aConstantWarningTime : int):	#TODO DEFINED AS duration
 		self.___constantWarningTime = aConstantWarningTime
 
-	def getConstantWarningTime(self) -> duration:
+	def getConstantWarningTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___constantWarningTime
 
-	def setMinimumOpenTime(self, aMinimumOpenTime : duration):
+	def setMinimumOpenTime(self, aMinimumOpenTime : int):	#TODO DEFINED AS duration
 		self.___minimumOpenTime = aMinimumOpenTime
 
-	def getMinimumOpenTime(self) -> duration:
+	def getMinimumOpenTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___minimumOpenTime
 
-	def setMaximumClosedTime(self, aMaximumClosedTime : duration):
+	def setMaximumClosedTime(self, aMaximumClosedTime : int):	#TODO DEFINED AS duration
 		self.___maximumClosedTime = aMaximumClosedTime
 
-	def getMaximumClosedTime(self) -> duration:
+	def getMaximumClosedTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___maximumClosedTime
 
-	def setRequiresStopBeforeUnprotectedLevelCrossing(self, aRequiresStopBeforeUnprotectedLevelCrossing : long):
+	def setRequiresStopBeforeUnprotectedLevelCrossing(self, aRequiresStopBeforeUnprotectedLevelCrossing : int): #TODO DEFINED AS LONG
 		self.___requiresStopBeforeUnprotectedLevelCrossing = aRequiresStopBeforeUnprotectedLevelCrossing
 
-	def getRequiresStopBeforeUnprotectedLevelCrossing(self) -> long:
+	def getRequiresStopBeforeUnprotectedLevelCrossing(self) -> int: #TODO DEFINED AS LONG
 		return self.___requiresStopBeforeUnprotectedLevelCrossing
 
 	def setHasInterface(self, aHasInterface : EntityILref):
@@ -64,22 +64,22 @@ class LevelCrossingIL(TrackAsset):
 	def getIsLevelCrossingType(self) -> EntityILref:
 		return self._isLevelCrossingType
 
-	def setRefersTo(self, *aRefersTo : EntityILref*):
+	def setRefersTo(self, *aRefersTo : EntityILref):
 		self._refersTo = aRefersTo
 
-	def getRefersTo(self) -> EntityILref*:
+	def getRefersTo(self) -> EntityILref:
 		return self._refersTo
 
-	def setDeactivatedBy(self, *aDeactivatedBy : LevelCrossingDeactivator*):
+	def setDeactivatedBy(self, *aDeactivatedBy : LevelCrossingDeactivator):
 		self._deactivatedBy = aDeactivatedBy
 
-	def getDeactivatedBy(self) -> LevelCrossingDeactivator*:
+	def getDeactivatedBy(self) -> LevelCrossingDeactivator:
 		return self._deactivatedBy
 
-	def setActivationCondition(self, *aActivationCondition : ActivationCondition*):
+	def setActivationCondition(self, *aActivationCondition : ActivationCondition):
 		self._activationCondition = aActivationCondition
 
-	def getActivationCondition(self) -> ActivationCondition*:
+	def getActivationCondition(self) -> ActivationCondition:
 		return self._activationCondition
 
 	def setHasTvdSection(self, aHasTvdSection : EntityILref):
@@ -95,15 +95,15 @@ class LevelCrossingIL(TrackAsset):
 		self.___unprotectedSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Speed in km/h at which the level crossing can be passed when it is not protected (V_LX)"""
-		self.___typicalTimeToClose : duration = None
+		self.___typicalTimeToClose : int = None	#TODO DEFINED AS duration
 		"""Average time between the time a train detector notes an approaching train and the moment the level crossing is closed to road traffic, i.e. the moment that the interlocking can lock a route across the level crossing. This equates to the time it takes to close the barrier (if present). Should be set to 0 if no barrier is configured. Useful for simulation."""
-		self.___constantWarningTime : duration = None
+		self.___constantWarningTime : int = None	#TODO DEFINED AS duration
 		"""A level crossing must cause as little as possible hindering to train as well as road traffic. Therefore, the level crossing must close as late as safely possible. The optimal delay, known as constant warning time, between activation and closing is possible when the train speed and position are known."""
-		self.___minimumOpenTime : duration = None
+		self.___minimumOpenTime : int = None	#TODO DEFINED AS duration
 		"""This is the time the level crossing has to be open before it is allowed to close again. This is to ensure a certain capacity for the crossing road traffic."""
-		self.___maximumClosedTime : duration = None
+		self.___maximumClosedTime : int = None	#TODO DEFINED AS duration
 		"""This is the time span after a message to the operator is triggered because a level crossing being closed for too long time can be considered as unsafe. In such cases the road drivers and pedestrians might try to cross the railway line illegally."""
-		self.___requiresStopBeforeUnprotectedLevelCrossing : long = None
+		self.___requiresStopBeforeUnprotectedLevelCrossing : int = None	#TODO DEFINED AS LONG
 		"""Flag to define whether any train needs to stop in front of the level crossing in case it is unprotected. Only afterwards it can proceed according the value in speedRestriction."""
 		self._hasInterface : EntityILref = None
 		"""Reference to physical description of level crossing interface with list of commands to the field and notifications from the field"""

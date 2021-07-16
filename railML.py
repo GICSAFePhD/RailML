@@ -5,7 +5,7 @@ sys.path.append('.')
 from RailML.Common.Metadata import Metadata
 from RailML.Common.Common import Common
 from RailML.Infrastructure.Infrastructure import Infrastructure
-#from RailML.Interlocking.Interlocking import Interlocking
+from RailML.Interlocking.Interlocking import Interlocking
 from RailML.aRailML import aRailML
 #from typing import List
 
@@ -74,11 +74,11 @@ RML = railML()
 metadata = Metadata()
 common = Common()
 infrastructure = Infrastructure()
-#interlocking = Interlocking()
+interlocking = Interlocking()
 arailml = aRailML() 
 
 RML.Metadata = metadata
 RML.Common = common
 RML.Infrastructure = infrastructure
-#RML.Interlocking = interlocking
+RML.Interlocking = interlocking
 RML.aRailML = arailml

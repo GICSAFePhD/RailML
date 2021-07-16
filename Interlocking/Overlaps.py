@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import Overlap
+from RailML.Interlocking.Overlap import Overlap
 from typing import List
 
 class Overlaps(object):
 	"""container element for all Overlap elements"""
-	def setOverlap(self, *aOverlap : Overlap*):
+	def setOverlap(self, *aOverlap : Overlap):
 		self._overlap = aOverlap
 
-	def getOverlap(self) -> Overlap*:
+	def getOverlap(self) -> Overlap:
 		return self._overlap
 
 	def __init__(self):

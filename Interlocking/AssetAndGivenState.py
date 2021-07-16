@@ -3,7 +3,7 @@
 from abc import ABCMeta, abstractmethod
 from RailML.Interlocking.tMustOrShould import tMustOrShould
 from RailML.Interlocking.tProving import tProving
-from RailML.Interlocking.Overlap import Overlap
+#from RailML.Interlocking.Overlap import Overlap	#TODO CIRCULAR!
 from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
@@ -45,5 +45,5 @@ class AssetAndGivenState(EntityIL):
 		# """The way the state is proven."""
 		self.___isNegated : int = None	#TODO DEFINED AS long
 		"""The exclusion of a particular state, i.e. everything else that this one."""
-		self._unnamed_Overlap_ : Overlap = None
+		#self._unnamed_Overlap_ : Overlap = None	#TODO CIRCULAR!
 

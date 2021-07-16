@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import KeyLockIL
+from RailML.Interlocking.KeyLockIL import KeyLockIL
 from typing import List
 
 class KeyLocksIL(object):
 	"""container element for all KeyLockIL elements"""
-	def setKeyLockIL(self, *aKeyLockIL : KeyLockIL*):
+	def setKeyLockIL(self, *aKeyLockIL : KeyLockIL):
 		self._keyLockIL = aKeyLockIL
 
-	def getKeyLockIL(self) -> KeyLockIL*:
+	def getKeyLockIL(self) -> KeyLockIL:
 		return self._keyLockIL
 
 	def __init__(self):

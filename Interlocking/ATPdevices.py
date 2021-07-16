@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import ATPdevice
+from RailML.Interlocking.ATPdevice import ATPdevice
 from typing import List
 
 class ATPdevices(object):
 	"""container element for all ATPdevice elements (not with railML3.1)"""
-	def setAtpDevice(self, *aAtpDevice : ATPdevice*):
+	def setAtpDevice(self, *aAtpDevice : ATPdevice):
 		self._atpDevice = aAtpDevice
 
-	def getAtpDevice(self) -> ATPdevice*:
+	def getAtpDevice(self) -> ATPdevice:
 		return self._atpDevice
 
 	def __init__(self):

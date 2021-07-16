@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class RouteEntry(EntityIL):
 	"""The route entry is normally a (virtual) signal."""
-	def setRefersTo(self, *aRefersTo : EntityILref*):
+	def setRefersTo(self, *aRefersTo : EntityILref):
 		self._refersTo = aRefersTo
 
-	def getRefersTo(self) -> EntityILref*:
+	def getRefersTo(self) -> EntityILref:
 		return self._refersTo
 
 	def setNonReplacement(self, aNonReplacement : EntityILref):

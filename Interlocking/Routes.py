@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import Route
+from RailML.Interlocking.Route import Route
 from typing import List
 
 class Routes(object):
 	"""container element for all Route elements"""
-	def setRoute(self, *aRoute : Route*):
+	def setRoute(self, *aRoute : Route):
 		self._route = aRoute
 
-	def getRoute(self) -> Route*:
+	def getRoute(self) -> Route:
 		return self._route
 
 	def __init__(self):

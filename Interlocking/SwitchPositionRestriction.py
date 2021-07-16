@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tSwitchPosition
-from Interlocking import SwitchAndPosition
-from Interlocking import DerailerAndPosition
-from Interlocking import EntityIL
+from RailML.Interlocking.tSwitchPosition import tSwitchPosition
+from RailML.Interlocking.SwitchAndPosition import SwitchAndPosition
+from RailML.Interlocking.DerailerAndPosition import DerailerAndPosition
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class SwitchPositionRestriction(EntityIL):

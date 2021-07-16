@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import MovableCrossing
+from RailML.Interlocking.MovableCrossing import MovableCrossing
 from typing import List
 
 class MovableCrossings(object):
-	def setMovableCrossing(self, *aMovableCrossing : MovableCrossing*):
+	def setMovableCrossing(self, *aMovableCrossing : MovableCrossing):
 		self._movableCrossing = aMovableCrossing
 
-	def getMovableCrossing(self) -> MovableCrossing*:
+	def getMovableCrossing(self) -> MovableCrossing:
 		return self._movableCrossing
 
 	def __init__(self):

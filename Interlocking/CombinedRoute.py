@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class CombinedRoute(EntityIL):
@@ -13,10 +13,10 @@ class CombinedRoute(EntityIL):
 	def getComboEntry(self) -> EntityILref:
 		return self._comboEntry
 
-	def setComboExit(self, *aComboExit : EntityILref*):
+	def setComboExit(self, *aComboExit : EntityILref):
 		self._comboExit = aComboExit
 
-	def getComboExit(self) -> EntityILref*:
+	def getComboExit(self) -> EntityILref:
 		return self._comboExit
 
 	def setContainsRoute(self, aContainsRoute : EntityILref):

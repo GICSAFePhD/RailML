@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tLevelCrossingState
-from Interlocking import EntityILref
-from Interlocking import AssetAndState
+from RailML.Interlocking.tLevelCrossingState import tLevelCrossingState
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.AssetAndState import AssetAndState
 from typing import List
 
 class LevelCrossingAndState(AssetAndState):

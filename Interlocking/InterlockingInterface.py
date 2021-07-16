@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tIxlInterfaceLocationTypeList
-from Interlocking import EntityILref
-from Interlocking import EntityIL
+from RailML.Interlocking.tIxlInterfaceLocationTypeList import tIxlInterfaceLocationTypeList
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class InterlockingInterface(EntityIL):
@@ -14,10 +14,10 @@ class InterlockingInterface(EntityIL):
 	def getInterfaceLocation(self) -> tIxlInterfaceLocationTypeList:
 		return self.___interfaceLocation
 
-	def setIsOnCommandSide(self, aIsOnCommandSide : long):
+	def setIsOnCommandSide(self, aIsOnCommandSide : int):	#TODO DEFINED AS LONG
 		self.___isOnCommandSide = aIsOnCommandSide
 
-	def getIsOnCommandSide(self) -> long:
+	def getIsOnCommandSide(self) -> int:	#TODO DEFINED AS LONG
 		return self.___isOnCommandSide
 
 	def setLastOwnTvdSection(self, aLastOwnTvdSection : EntityILref):
@@ -26,16 +26,16 @@ class InterlockingInterface(EntityIL):
 	def getLastOwnTvdSection(self) -> EntityILref:
 		return self._lastOwnTvdSection
 
-	def setFirstRemoteTvdSection(self, *aFirstRemoteTvdSection : EntityILref*):
+	def setFirstRemoteTvdSection(self, *aFirstRemoteTvdSection : EntityILref):
 		self._firstRemoteTvdSection = aFirstRemoteTvdSection
 
-	def getFirstRemoteTvdSection(self) -> EntityILref*:
+	def getFirstRemoteTvdSection(self) -> EntityILref:
 		return self._firstRemoteTvdSection
 
-	def setIncomingRoute(self, *aIncomingRoute : EntityILref*):
+	def setIncomingRoute(self, *aIncomingRoute : EntityILref):
 		self._incomingRoute = aIncomingRoute
 
-	def getIncomingRoute(self) -> EntityILref*:
+	def getIncomingRoute(self) -> EntityILref:
 		return self._incomingRoute
 
 	def setOutgoingRoute(self, aOutgoingRoute : EntityILref):
@@ -54,7 +54,7 @@ class InterlockingInterface(EntityIL):
 		self.___interfaceLocation : tIxlInterfaceLocationTypeList = None
 		# @AssociationType Interlocking.tIxlInterfaceLocationTypeList
 		# """The topology view of interface location determining the extent of information to be exchanged."""
-		self.___isOnCommandSide : long = None
+		self.___isOnCommandSide : int = None	#TODO DEFINED AS LONG
 		"""True means the related interlocking uses the described commands for output towards the partner. With false it is inverted for the related interlocking."""
 		self._lastOwnTvdSection : EntityILref = None
 		"""The reference to the last TVD section just before the interface."""

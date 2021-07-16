@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import PermissionZone
+from RailML.Interlocking.PermissionZone import PermissionZone
 from typing import List
 
 class PermissionZones(object):
-	def setPermissionZone(self, *aPermissionZone : PermissionZone*):
+	def setPermissionZone(self, *aPermissionZone : PermissionZone):
 		self._permissionZone = aPermissionZone
 
-	def getPermissionZone(self) -> PermissionZone*:
+	def getPermissionZone(self) -> PermissionZone:
 		return self._permissionZone
 
 	def __init__(self):

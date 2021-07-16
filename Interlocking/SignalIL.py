@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Common import tSpeedKmPerHour
-from Interlocking import tSignalFunctionListExt
-from Common import tLengthM
-from Interlocking import EntityILref
-from Interlocking import TrackAsset
+from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Interlocking.tSignalFunctionListExt import tSignalFunctionListExt
+from RailML.Common.tLengthM import tLengthM
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.TrackAsset import TrackAsset
 from typing import List
 
 class SignalIL(TrackAsset):
@@ -33,10 +33,10 @@ class SignalIL(TrackAsset):
 	def getPassingSpeed(self) -> tSpeedKmPerHour:
 		return self.___passingSpeed
 
-	def setReleaseDelay(self, aReleaseDelay : duration):
+	def setReleaseDelay(self, aReleaseDelay : int):	#TODO DEFINED AS duration
 		self.___releaseDelay = aReleaseDelay
 
-	def getReleaseDelay(self) -> duration:
+	def getReleaseDelay(self) -> int:	#TODO DEFINED AS duration
 		return self.___releaseDelay
 
 	def setFunction(self, aFunction : tSignalFunctionListExt):
@@ -45,16 +45,16 @@ class SignalIL(TrackAsset):
 	def getFunction(self) -> tSignalFunctionListExt:
 		return self.___function
 
-	def setIsVirtual(self, aIsVirtual : long):
+	def setIsVirtual(self, aIsVirtual : int):	#TODO DEFINED AS LONG
 		self.___isVirtual = aIsVirtual
 
-	def getIsVirtual(self) -> long:
+	def getIsVirtual(self) -> int:	#TODO DEFINED AS LONG
 		return self.___isVirtual
 
-	def setCallOnAspectTime(self, aCallOnAspectTime : duration):
+	def setCallOnAspectTime(self, aCallOnAspectTime : int):	#TODO DEFINED AS duration
 		self.___callOnAspectTime = aCallOnAspectTime
 
-	def getCallOnAspectTime(self) -> duration:
+	def getCallOnAspectTime(self) -> int:	#TODO DEFINED AS duration
 		return self.___callOnAspectTime
 
 	def setSightDistance(self, aSightDistance : tLengthM):
@@ -88,14 +88,14 @@ class SignalIL(TrackAsset):
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum speed in km/h beyond the signal. This is suitable for defining the line speed profile."""
-		self.___releaseDelay : duration = None
+		self.___releaseDelay : int = None	#TODO DEFINED AS duration
 		"""Time to elapse between receiving the revocation command and before route release."""
 		self.___function : tSignalFunctionListExt = None
 		# @AssociationType Interlocking.tSignalFunctionListExt
 		# """Function of the signal for usage by the interlocking. This is in addition to signalType in infrastructure."""
-		self.___isVirtual : long = None
+		self.___isVirtual : int = None	#TODO DEFINED AS LONG
 		"""Often, users label signals virtual. A virtual signal can be a dummy-signal that is a software object in the interlocking but has no physical trackside presence. Such virtual signals can be useful for modelling speed steps; there need not be a physical signal but the interlocking enforces a different speed at the position of the virtual signal. The other way round, stand-alone boards that are not wired to the interlocking can be labelled virtual. Such stand-alone signals are of interest to simulations because when they affect driver behaviour thus influence train runs."""
-		self.___callOnAspectTime : duration = None
+		self.___callOnAspectTime : int = None	#TODO DEFINED AS duration
 		"""time for duration to show call-on aspect on this signal"""
 		self.___sightDistance : tLengthM = None
 		# @AssociationType Common.tLengthM

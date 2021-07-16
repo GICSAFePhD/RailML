@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tRouteConflictTypesExt
-from Common import tRef
-from Interlocking import EntityIL
+from RailML.Interlocking.tRouteConflictTypesExt import tRouteConflictTypesExt
+from RailML.Common.tRef import tRef
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class ConflictReason(EntityIL):

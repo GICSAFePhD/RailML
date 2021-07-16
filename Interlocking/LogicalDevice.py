@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from Interlocking import EntityILref
-from Interlocking import TrackAsset
+from RailML.Interlocking.EntityILref import EntityILref
+from RailML.Interlocking.TrackAsset import TrackAsset
 from typing import List
 
 class LogicalDevice(TrackAsset):
@@ -33,11 +33,11 @@ class LogicalDevice(TrackAsset):
 		return self._hasInterface
 
 	@classmethod
-	def setRefersTo(self, *aRefersTo : EntityILref*):
+	def setRefersTo(self, *aRefersTo : EntityILref):
 		self._refersTo = aRefersTo
 
 	@classmethod
-	def getRefersTo(self) -> EntityILref*:
+	def getRefersTo(self) -> EntityILref:
 		return self._refersTo
 
 	@classmethod
