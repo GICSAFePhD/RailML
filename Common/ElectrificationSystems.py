@@ -4,14 +4,20 @@ from RailML.Common.ElectrificationSystem import ElectrificationSystem
 from typing import List
 
 class ElectrificationSystems(object):
-	def setElectrificationSystem(self, aElectrificationSystem : ElectrificationSystem):
-		self._electrificationSystem = aElectrificationSystem
+	@property
+	def ElectrificationSystem(self) -> ElectrificationSystem:
+		return self.___electrificationSystem
 
-	def getElectrificationSystem(self) -> ElectrificationSystem:
-		return self._electrificationSystem
-
+	@ElectrificationSystem.setter
+	def ElectrificationSystem(self, aElectrificationSystem : ElectrificationSystem):
+		self.___electrificationSystem = aElectrificationSystem
+  
+	def createElectrificationSystem(self):
+		self.ElectrificationSystem = ElectrificationSystem()
+    
 	def __init__(self):
-		self._electrificationSystem : ElectrificationSystem = None
+		self.___electrificationSystem : ElectrificationSystem = None
 		# @AssociationType Common.ElectrificationSystem*
 		# @AssociationMultiplicity 1..*
-
+  
+		self.createElectrificationSystem()

@@ -76,6 +76,11 @@ RML = railML()
 metadata = Metadata()
 common = Common()
 
+common.createElectrificationSystems()
+common.createOrganizationalUnits()
+common.createSpeedProfiles()
+common.createPositioningSystems()
+
 infrastructure = Infrastructure()
 interlocking = Interlocking()
 arailml = aRailML() 

@@ -33,27 +33,34 @@ class Common(tElementWithID):
 	def OrganizationalUnits(self, aOrganizationalUnits : OrganizationalUnits):
 		self.___organizationalUnits = aOrganizationalUnits
 	@SpeedProfiles.setter
-	def setSpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
+	def SpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
 		self.___speedProfiles = aSpeedProfiles
 	@PositioningSystems.setter
 	def PositioningSystems(self, aPositioningSystems : PositioningSystems):
 		self.___positioning = aPositioningSystems
 
+	def createElectrificationSystems(self):
+		self.ElectrificationSystems = ElectrificationSystems()
+	def createOrganizationalUnits(self):
+		self.OrganizationalUnits = OrganizationalUnits()
+	def createSpeedProfiles(self):
+		self.SpeedProfiles = SpeedProfiles() 
+	def createPositioningSystems(self):
+		self.PositioningSystems = PositioningSystems()
+
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems()
+		self.___electrificationSystems : ElectrificationSystems = None
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits()
+		self.___organizationalUnits : OrganizationalUnits = None
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = SpeedProfiles()
+		self.___speedProfiles : SpeedProfiles = None
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = PositioningSystems()
+		self.___positioning : PositioningSystems = None
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1
-
-x = Common()
