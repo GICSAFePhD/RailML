@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tIxlTechnologyTypeListExt
-from Interlocking import EntityIL
+from RailML.Interlocking.tIxlTechnologyTypeListExt import tIxlTechnologyTypeListExt
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class Configuration(EntityIL):

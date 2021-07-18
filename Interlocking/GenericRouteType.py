@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tGenericRouteTypeExt
-from Interlocking import EntityIL
+from RailML.Interlocking.tGenericRouteTypeExt import tGenericRouteTypeExt
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class GenericRouteType(EntityIL):

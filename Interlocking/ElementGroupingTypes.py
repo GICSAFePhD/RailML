@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tGroupingTypesExt
-from Interlocking import EntityIL
+from RailML.Interlocking.tGroupingTypesExt import tGroupingTypesExt
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class ElementGroupingTypes(EntityIL):

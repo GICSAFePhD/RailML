@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+import sys
+sys.path.append('.')
+from RailML.Common import Common
 from RailML.Common.ElectrificationSystems import ElectrificationSystems
 from RailML.Common.OrganizationalUnits import OrganizationalUnits
 from RailML.Common.SpeedProfiles import SpeedProfiles
@@ -9,44 +12,48 @@ from typing import List
 
 class Common(tElementWithID):
 	"""This is the top level element for the common model."""
-	def setElectrificationSystems(self, aElectrificationSystems : ElectrificationSystems):
-		self.___electrificationSystems = aElectrificationSystems
 
-	def getElectrificationSystems(self) -> ElectrificationSystems:
+	@property
+	def ElectrificationSystems(self) -> ElectrificationSystems:
 		return self.___electrificationSystems
-
-	def setOrganizationalUnits(self, aOrganizationalUnits : OrganizationalUnits):
-		self.___organizationalUnits = aOrganizationalUnits
-
-	def getOrganizationalUnits(self) -> OrganizationalUnits:
+	@property
+	def OrganizationalUnits(self) -> OrganizationalUnits:
 		return self.___organizationalUnits
-
-	def setSpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
-		self.___speedProfiles = aSpeedProfiles
-
-	def getSpeedProfiles(self) -> SpeedProfiles:
+	@property
+	def SpeedProfiles(self) -> SpeedProfiles:
 		return self.___speedProfiles
-
-	def setPositioning(self, aPositioning : PositioningSystems):
-		self.___positioning = aPositioning
-
-	def getPositioning(self) -> PositioningSystems:
+	@property
+	def PositioningSystems(self) -> PositioningSystems:
 		return self.___positioning
 
+	@ElectrificationSystems.setter
+	def ElectrificationSystems(self, aElectrificationSystems : ElectrificationSystems):
+		self.___electrificationSystems = aElectrificationSystems
+	@OrganizationalUnits.setter
+	def OrganizationalUnits(self, aOrganizationalUnits : OrganizationalUnits):
+		self.___organizationalUnits = aOrganizationalUnits
+	@SpeedProfiles.setter
+	def setSpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
+		self.___speedProfiles = aSpeedProfiles
+	@PositioningSystems.setter
+	def PositioningSystems(self, aPositioningSystems : PositioningSystems):
+		self.___positioning = aPositioningSystems
+
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = None
+		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems()
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = None
+		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits()
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = None
+		self.___speedProfiles : SpeedProfiles = SpeedProfiles()
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = None
+		self.___positioning : PositioningSystems = PositioningSystems()
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1
 
+x = Common()

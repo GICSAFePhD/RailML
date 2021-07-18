@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tBitPatternAny
+from RailML.Interlocking.tBitPatternAny import tBitPatternAny
 from typing import List
 
 class InitStatus(object):

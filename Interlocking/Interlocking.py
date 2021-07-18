@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import AssetsForIL
-from Interlocking import Controllers
-from Interlocking import SignalBoxes
-from Interlocking import GenericIMs
+from RailML.Interlocking.AssetsForIL import AssetsForIL
+from RailML.Interlocking.Controllers import Controllers
+from RailML.Interlocking.SignalBoxes import SignalBoxes
+from RailML.Interlocking.GenericIMs import GenericIMs
 from typing import List
 
 class Interlocking(object):

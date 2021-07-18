@@ -1,14 +1,14 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import GenericIM
+from RailML.Interlocking.GenericIM import GenericIM
 from typing import List
 
 class GenericIMs(object):
 	"""container element for all specificIM elements"""
-	def setSpecificIM(self, *aSpecificIM : GenericIM*):
+	def setSpecificIM(self, *aSpecificIM : GenericIM):
 		self._specificIM = aSpecificIM
 
-	def getSpecificIM(self) -> GenericIM*:
+	def getSpecificIM(self) -> GenericIM:
 		return self._specificIM
 
 	def __init__(self):

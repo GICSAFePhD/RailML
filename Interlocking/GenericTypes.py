@@ -1,50 +1,50 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import GenericAspect
-from Interlocking import GenericResetStrategy
-from Interlocking import GenericRouteType
-from Interlocking import LevelCrossingTypeList
-from Interlocking import ElementGroupingTypes
-from Interlocking import DetectorTypes
-from Common import anyAttribute
+from RailML.Interlocking.GenericAspect import GenericAspect
+from RailML.Interlocking.GenericResetStrategy import GenericResetStrategy
+from RailML.Interlocking.GenericRouteType import GenericRouteType
+from RailML.Interlocking.LevelCrossingTypeList import LevelCrossingTypeList
+from RailML.Interlocking.ElementGroupingTypes import ElementGroupingTypes
+from RailML.Interlocking.DetectorTypes import DetectorTypes
+from RailML.Common.anyAttribute import anyAttribute
 from typing import List
 
 class GenericTypes(object):
 	"""The list of all possible types being specific for this IM."""
-	def setHasAspect(self, *aHasAspect : GenericAspect*):
+	def setHasAspect(self, *aHasAspect : GenericAspect):
 		self._hasAspect = aHasAspect
 
-	def getHasAspect(self) -> GenericAspect*:
+	def getHasAspect(self) -> GenericAspect:
 		return self._hasAspect
 
-	def setHasTVDresetStrategy(self, *aHasTVDresetStrategy : GenericResetStrategy*):
+	def setHasTVDresetStrategy(self, *aHasTVDresetStrategy : GenericResetStrategy):
 		self._hasTVDresetStrategy = aHasTVDresetStrategy
 
-	def getHasTVDresetStrategy(self) -> GenericResetStrategy*:
+	def getHasTVDresetStrategy(self) -> GenericResetStrategy:
 		return self._hasTVDresetStrategy
 
-	def setHasRouteType(self, *aHasRouteType : GenericRouteType*):
+	def setHasRouteType(self, *aHasRouteType : GenericRouteType):
 		self._hasRouteType = aHasRouteType
 
-	def getHasRouteType(self) -> GenericRouteType*:
+	def getHasRouteType(self) -> GenericRouteType:
 		return self._hasRouteType
 
-	def setHasLevelCrossingType(self, *aHasLevelCrossingType : LevelCrossingTypeList*):
+	def setHasLevelCrossingType(self, *aHasLevelCrossingType : LevelCrossingTypeList):
 		self._hasLevelCrossingType = aHasLevelCrossingType
 
-	def getHasLevelCrossingType(self) -> LevelCrossingTypeList*:
+	def getHasLevelCrossingType(self) -> LevelCrossingTypeList:
 		return self._hasLevelCrossingType
 
-	def setHasElementGroupType(self, *aHasElementGroupType : ElementGroupingTypes*):
+	def setHasElementGroupType(self, *aHasElementGroupType : ElementGroupingTypes):
 		self._hasElementGroupType = aHasElementGroupType
 
-	def getHasElementGroupType(self) -> ElementGroupingTypes*:
+	def getHasElementGroupType(self) -> ElementGroupingTypes:
 		return self._hasElementGroupType
 
-	def setHasDetectorTypes(self, *aHasDetectorTypes : DetectorTypes*):
+	def setHasDetectorTypes(self, *aHasDetectorTypes : DetectorTypes):
 		self._hasDetectorTypes = aHasDetectorTypes
 
-	def getHasDetectorTypes(self) -> DetectorTypes*:
+	def getHasDetectorTypes(self) -> DetectorTypes:
 		return self._hasDetectorTypes
 
 	def __init__(self):

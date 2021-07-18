@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+
+
 import sys
 sys.path.append('.')
 from RailML.Common.Metadata import Metadata
@@ -73,6 +75,7 @@ class railML():
 RML = railML()
 metadata = Metadata()
 common = Common()
+
 infrastructure = Infrastructure()
 interlocking = Interlocking()
 arailml = aRailML() 

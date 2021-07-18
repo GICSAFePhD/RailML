@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tGenericAspectList
-from Interlocking import EntityIL
+from RailML.Interlocking.tGenericAspectList import tGenericAspectList
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class GenericAspect(EntityIL):

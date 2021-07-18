@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tGroupingTypes
+from RailML.Interlocking.tGroupingTypes import tGroupingTypes
 from typing import List
 
 class tGroupingTypesExt(tGroupingTypes):

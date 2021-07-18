@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tGenericRouteTypeList
+from RailML.Interlocking.tGenericRouteTypeList import tGenericRouteTypeList
 from typing import List
 
 class tGenericRouteTypeExt(tGenericRouteTypeList):

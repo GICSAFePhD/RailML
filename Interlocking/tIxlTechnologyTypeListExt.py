@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tIxlTechnologyTypeList
+from RailML.Interlocking.tIxlTechnologyTypeList import tIxlTechnologyTypeList
 from typing import List
 
 class tIxlTechnologyTypeListExt(tIxlTechnologyTypeList):

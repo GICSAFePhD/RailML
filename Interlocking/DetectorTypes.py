@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from Interlocking import tDetectorTypeListExt
-from Interlocking import EntityIL
+from RailML.Interlocking.tDetectorTypeListExt import tDetectorTypeListExt
+from RailML.Interlocking.EntityIL import EntityIL
 from typing import List
 
 class DetectorTypes(EntityIL):
