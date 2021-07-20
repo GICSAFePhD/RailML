@@ -4,14 +4,16 @@ from RailML.Common.SpeedProfile import SpeedProfile
 from typing import List
 
 class SpeedProfiles(object):
-	def setSpeedProfile(self, aSpeedProfile : SpeedProfile):
-		self._speedProfile = aSpeedProfile
+	@property
+	def SpeedProfile(self) -> SpeedProfile:
+		return self.___speedProfile
 
-	def getSpeedProfile(self) -> SpeedProfile:
-		return self._speedProfile
+	@SpeedProfile.setter
+	def SpeedProfile(self, aSpeedProfile : SpeedProfile):
+		self.___speedProfile = aSpeedProfile
 
 	def __init__(self):
-		self._speedProfile : SpeedProfile = None
+		self.___speedProfile : SpeedProfile = SpeedProfile()
 		# @AssociationType Common.SpeedProfile*
 		# @AssociationMultiplicity 1..*
 

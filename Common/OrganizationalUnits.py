@@ -12,77 +12,81 @@ from typing import List
 
 class OrganizationalUnits(object):
 	"""This is the top level element for various company definitions regarding the railway services referred to in this file"""
-	def setInfrastructureManager(self, *aInfrastructureManager : InfrastructureManager):
-		self._infrastructureManager = aInfrastructureManager
+	
+	@property
+	def InfrastructureManager(self) -> InfrastructureManager:
+		return self.___infrastructureManager
+	@property
+	def VehicleManufacturer(self) -> VehicleManufacturer:
+		return self.___vehicleManufacturer
+	@property
+	def VehicleOperator(self) -> VehicleOperator:
+		return self.___vehicleOperator
+	@property
+	def Customer(self) -> Customer:
+		return self.___customer
+	@property
+	def RailwayUndertaking(self) -> RailwayUndertaking:
+		return self.___railwayUndertaking
+	@property
+	def OperationalUndertaking(self) -> OperationalUndertaking:
+		return self.___operationalUndertaking
+	@property
+	def Concessionaire(self) -> Concessionaire:
+		return self.___concessionaire
+	@property
+	def Contractor(self) -> Contractor:
+		return self.___contractor
 
-	def getInfrastructureManager(self) -> InfrastructureManager:
-		return self._infrastructureManager
-
-	def setVehicleManufacturer(self, *aVehicleManufacturer : VehicleManufacturer):
-		self._vehicleManufacturer = aVehicleManufacturer
-
-	def getVehicleManufacturer(self) -> VehicleManufacturer:
-		return self._vehicleManufacturer
-
-	def setVehicleOperator(self, *aVehicleOperator : VehicleOperator):
-		self._vehicleOperator = aVehicleOperator
-
-	def getVehicleOperator(self) -> VehicleOperator:
-		return self._vehicleOperator
-
-	def setCustomer(self, *aCustomer : Customer):
-		self._customer = aCustomer
-
-	def getCustomer(self) -> Customer:
-		return self._customer
-
-	def setRailwayUndertaking(self, *aRailwayUndertaking : RailwayUndertaking):
-		self._railwayUndertaking = aRailwayUndertaking
-
-	def getRailwayUndertaking(self) -> RailwayUndertaking:
-		return self._railwayUndertaking
-
-	def setOperationalUndertaking(self, *aOperationalUndertaking : OperationalUndertaking):
-		self._operationalUndertaking = aOperationalUndertaking
-
-	def getOperationalUndertaking(self) -> OperationalUndertaking:
-		return self._operationalUndertaking
-
-	def setConcessionaire(self, *aConcessionaire : Concessionaire):
-		self._concessionaire = aConcessionaire
-
-	def getConcessionaire(self) -> Concessionaire:
-		return self._concessionaire
-
-	def setContractor(self, *aContractor : Contractor):
-		self._contractor = aContractor
-
-	def getContractor(self) -> Contractor:
-		return self._contractor
+	@InfrastructureManager.setter
+	def InfrastructureManager(self, aInfrastructureManager : InfrastructureManager):
+		self.___infrastructureManager = aInfrastructureManager
+	@VehicleManufacturer.setter
+	def VehicleManufacturer(self, aVehicleManufacturer : VehicleManufacturer):
+		self.___vehicleManufacturer = aVehicleManufacturer
+	@VehicleOperator.setter
+	def VehicleOperator(self, aVehicleOperator : VehicleOperator):
+		self.___vehicleOperator = aVehicleOperator
+	@Customer.setter
+	def Customer(self, aCustomer : Customer):
+		self.___customer = aCustomer
+	@RailwayUndertaking.setter
+	def RailwayUndertaking(self, aRailwayUndertaking : RailwayUndertaking):
+		self.___railwayUndertaking = aRailwayUndertaking
+	@OperationalUndertaking.setter
+	def OperationalUndertaking(self, aOperationalUndertaking : OperationalUndertaking):
+		self.___operationalUndertaking = aOperationalUndertaking
+	@Concessionaire.setter
+	def Concessionaire(self, aConcessionaire : Concessionaire):
+		self.___concessionaire = aConcessionaire
+	@Contractor.setter
+	def Contractor(self, aContractor : Contractor):
+		self.___contractor = aContractor
+  
 
 	def __init__(self):
-		self._infrastructureManager : InfrastructureManager = None
+		self.___infrastructureManager : InfrastructureManager = InfrastructureManager()
 		# @AssociationType Common.InfrastructureManager*
 		# @AssociationMultiplicity 0..*
-		self._vehicleManufacturer : VehicleManufacturer = None
+		self.___vehicleManufacturer : VehicleManufacturer = VehicleManufacturer()
 		# @AssociationType Common.VehicleManufacturer*
 		# @AssociationMultiplicity 0..*
-		self._vehicleOperator : VehicleOperator = None
+		self.___vehicleOperator : VehicleOperator = VehicleOperator()
 		# @AssociationType Common.VehicleOperator*
 		# @AssociationMultiplicity 0..*
-		self._customer : Customer = None
+		self.___customer : Customer = Customer()
 		# @AssociationType Common.Customer*
 		# @AssociationMultiplicity 0..*
-		self._railwayUndertaking : RailwayUndertaking = None
+		self.___railwayUndertaking : RailwayUndertaking = RailwayUndertaking()
 		# @AssociationType Common.RailwayUndertaking*
 		# @AssociationMultiplicity 0..*
-		self._operationalUndertaking : OperationalUndertaking = None
+		self.___operationalUndertaking : OperationalUndertaking = OperationalUndertaking()
 		# @AssociationType Common.OperationalUndertaking*
 		# @AssociationMultiplicity 0..*
-		self._concessionaire : Concessionaire = None
+		self.___concessionaire : Concessionaire = Concessionaire()
 		# @AssociationType Common.Concessionaire*
 		# @AssociationMultiplicity 0..*
-		self._contractor : Contractor = None
+		self.___contractor : Contractor = Contractor()
 		# @AssociationType Common.Contractor*
 		# @AssociationMultiplicity 0..*
 

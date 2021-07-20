@@ -53,40 +53,38 @@ class railML():
 	# 	return self._interlocking
 
 	def __init__(self):
-		self.___metadata : Metadata = None
+		self.___metadata : Metadata = Metadata()
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		self.___common : Common = None
+		self.___common : Common = Common()
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		self.___infrastructure : Infrastructure = None
+		self.___infrastructure : Infrastructure = Infrastructure()
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""
-		self.___interlocking : Interlocking = None
+		self.___interlocking : Interlocking = Interlocking()
 		# @AssociationType Interlocking.Interlocking
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 interlocking model"""
-		self.___rail3_aRailML : aRailML = None
+		self.___rail3_aRailML : aRailML = aRailML()
 		"""# @AssociationKind Aggregation"""
 
 
 RML = railML()
-metadata = Metadata()
-common = Common()
 
-common.createElectrificationSystems()
-common.createOrganizationalUnits()
-common.createSpeedProfiles()
-common.createPositioningSystems()
+#RML.Common.createElectrificationSystems()
+#RML.Common.createOrganizationalUnits()
+#RML.Common.createSpeedProfiles()
+#RML.Common.createPositioningSystems()
 
-infrastructure = Infrastructure()
-interlocking = Interlocking()
-arailml = aRailML() 
+#infrastructure = Infrastructure()
+#interlocking = Interlocking()
+#arailml = aRailML() 
 
-RML.Metadata = metadata
-RML.Common = common
-RML.Infrastructure = infrastructure
-RML.Interlocking = interlocking
-RML.aRailML = arailml
+#RML.Metadata = metadata
+#RML.Common = common
+#RML.Infrastructure = infrastructure
+#RML.Interlocking = interlocking
+#RML.aRailML = arailml

@@ -49,18 +49,18 @@ class Common(tElementWithID):
 		self.PositioningSystems = PositioningSystems()
 
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = None
+		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems()
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = None
+		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits()
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = None
+		self.___speedProfiles : SpeedProfiles = SpeedProfiles()
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = None
+		self.___positioning : PositioningSystems = PositioningSystems()
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1
