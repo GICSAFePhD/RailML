@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from RailML.Infrastructure import SignalX, Geometry, PhysicalFacilities, EntityIS, VisualizationBaseElement, LineLayout
+from RailML.Infrastructure import SignalX
+#, Geometry, PhysicalFacilities, EntityIS, VisualizationBaseElement, LineLayout
 from RailML.Interlocking import EntityIL
 from typing import List
 

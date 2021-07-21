@@ -1,55 +1,57 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tBaliseType import tBaliseType
-from RailML.Common.tRef import tRef
-from RailML.Infrastructure.tBaliseGroupTypeExt import tBaliseGroupTypeExt
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
-from typing import List
+from RailML.Common import tRef
+from RailML.Infrastructure import tBaliseType, tBaliseGroupTypeExt,FunctionalInfrastructureEntity
 
-class Balise(FunctionalInfrastructureEntity):
-	def setType(self, aType : tBaliseType):
-		self.___type = aType
+from typing import List, NewType
 
-	def getType(self) -> tBaliseType:
+Long = NewType("Long", int)
+
+class Balise(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def Type(self) -> tBaliseType:
 		return self.___type
-
-	def setBelongsToParent(self, aBelongsToParent : tRef):
-		self.___belongsToParent = aBelongsToParent
-
-	def getBelongsToParent(self) -> tRef:
+	@property
+	def BelongsToParent(self) -> tRef:
 		return self.___belongsToParent
-
-	def setBasedOnTemplate(self, aBasedOnTemplate : tRef):
-		self.___basedOnTemplate = aBasedOnTemplate
-
-	def getBasedOnTemplate(self) -> tRef:
+	@property
+	def BasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
-
-	def setIsBaliseGroup(self, aIsBaliseGroup : int):	#TODO DEFINED AS LONG
-		self.___isBaliseGroup = aIsBaliseGroup
-
-	def getIsBaliseGroup(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def IsBaliseGroup(self) -> Long:
 		return self.___isBaliseGroup
-
-	def setBaliseGroupType(self, aBaliseGroupType : tBaliseGroupTypeExt):
-		self.___baliseGroupType = aBaliseGroupType
-
-	def getBaliseGroupType(self) -> tBaliseGroupTypeExt:
+	@property
+	def BaliseGroupType(self) -> tBaliseGroupTypeExt:
 		return self.___baliseGroupType
 
+	@Type.setter
+	def Type(self, atBaliseType : tBaliseType):
+		self.___type = atBaliseType
+	@BelongsToParent.setter
+	def BelongsToParent(self, atRef : tRef):
+		self.___belongsToParent = atRef
+	@BasedOnTemplate.setter
+	def BasedOnTemplate(self, atRef : tRef):
+		self.___basedOnTemplate = atRef
+	@IsBaliseGroup.setter
+	def IsBaliseGroup(self, aLong : Long):
+		self.___isBaliseGroup = aLong
+	@BaliseGroupType.setter
+	def BaliseGroupType(self, atBaliseGroupTypeExt : tBaliseGroupTypeExt):
+		self.___baliseGroupType = atBaliseGroupTypeExt
+
 	def __init__(self):
-		self.___type : tBaliseType = None
+		self.___type : tBaliseType = tBaliseType.tBaliseType()
 		# @AssociationType Infrastructure.tBaliseType
 		# """type of balise: fixed or transparent"""
-		self.___belongsToParent : tRef = None
+		self.___belongsToParent : tRef = tRef.tRef()
 		"""reference to the (one and only) parent balise (group)"""
-		self.___basedOnTemplate : tRef = None
+		self.___basedOnTemplate : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic balise (group)"""
-		self.___isBaliseGroup : int = None		#TODO DEFINED AS LONG
+		self.___isBaliseGroup : Long = 0
 		"""indicate whether the <balise> represents a balise group"""
-		self.___baliseGroupType : tBaliseGroupTypeExt = None
+		self.___baliseGroupType : tBaliseGroupTypeExt = tBaliseGroupTypeExt.tBaliseGroupTypeExt()
 		# @AssociationType Infrastructure.tBaliseGroupTypeExt
 		# """type of balise group: fixed, transparent or infill"""
-

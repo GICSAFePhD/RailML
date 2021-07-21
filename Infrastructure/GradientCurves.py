@@ -3,15 +3,21 @@
 from RailML.Infrastructure import GradientCurve
 from typing import List
 
-class GradientCurves(object):
-	def setGradientCurve(self, aGradientCurve : GradientCurve):
-		self._gradientCurve = aGradientCurve
+#from typing import List, NewType
 
-	def getGradientCurve(self) -> GradientCurve:
-		return self._gradientCurve
+#Long = NewType("Long", int)
+
+class GradientCurves(object):
+	@property
+	def GradientCurve(self) -> GradientCurve:
+		return self.___gradientCurve
+	
+	@GradientCurve.setter
+	def GradientCurve(self, aGradientCurve : GradientCurve):
+		self.___gradientCurve = aGradientCurve
 
 	def __init__(self):
-		self._gradientCurve : GradientCurve = None
+		self.___gradientCurve : GradientCurve = GradientCurve.GradientCurve()
 		# @AssociationType Infrastructure.GradientCurve*
 		# @AssociationMultiplicity 1..*
 

@@ -4,14 +4,16 @@ from RailML.Infrastructure.NetRelation import NetRelation
 from typing import List
 
 class NetRelations(object):
-	def setNetRelation(self, aNetRelation : NetRelation):
-		self._netRelation = aNetRelation
-
-	def getNetRelation(self) -> NetRelation:
-		return self._netRelation
+	@property
+	def NetRelation(self) -> NetRelation:
+		return self.___netRelation
+	
+	@NetRelation.setter
+	def NetRelation(self, aNetRelation : NetRelation):
+		self.___netRelation = aNetRelation
 
 	def __init__(self):
-		self._netRelation : NetRelation = None
+		self.___netRelation : NetRelation = NetRelation()
 		# @AssociationType Infrastructure.NetRelation*
-		# @AssociationMultiplicity 1..*
+		# @AssociationMultiplicity 1..*	#TODO 1..*
 

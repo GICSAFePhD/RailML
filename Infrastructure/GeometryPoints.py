@@ -4,14 +4,16 @@ from RailML.Infrastructure import GeometryPoint
 from typing import List
 
 class GeometryPoints(object):
-	def setGeometryPoint(self, aGeometryPoint : GeometryPoint):
-		self._geometryPoint = aGeometryPoint
-
-	def getGeometryPoint(self) -> GeometryPoint:
-		return self._geometryPoint
+	@property
+	def GeometryPoint(self) -> GeometryPoint:
+		return self.___geometryPoint
+	
+	@GeometryPoint.setter
+	def GeometryPoint(self, aGeometryPoint : GeometryPoint):
+		self.___geometryPoint = aGeometryPoint
 
 	def __init__(self):
-		self._geometryPoint : GeometryPoint = None
+		self.___geometryPoint : GeometryPoint = GeometryPoint.GeometryPoint()
 		# @AssociationType Infrastructure.GeometryPoint*
 		# @AssociationMultiplicity 1..*
 

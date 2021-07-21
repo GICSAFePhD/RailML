@@ -4,14 +4,16 @@ from RailML.Infrastructure.NetElement import NetElement
 from typing import List
 
 class NetElements(object):
-	def setNetElement(self, aNetElement : NetElement):
-		self._netElement = aNetElement
-
-	def getNetElement(self) -> NetElement:
-		return self._netElement
+	@property
+	def NetElement(self) -> NetElement:
+		return self.___netElement
+	
+	@NetElement.setter
+	def Topology(self, aNetElement : NetElement):
+		self.___netElement = aNetElement
 
 	def __init__(self):
-		self._netElement : NetElement = None
+		self.___netElement : NetElement = NetElement()
 		# @AssociationType Infrastructure.NetElement*
-		# @AssociationMultiplicity 1..*
+		# @AssociationMultiplicity 1..*	#TODO 1...*
 

@@ -45,13 +45,6 @@ class railML():
 	def aRailML(self, aaRailML : aRailML):
 		self.___rail3_aRailML = aaRailML
 
-
-	# def setInterlocking(self, aInterlocking : Interlocking):
-	# 	self._interlocking = aInterlocking
-
-	# def getInterlocking(self) -> Interlocking:
-	# 	return self._interlocking
-
 	def __init__(self):
 		self.___metadata : Metadata = Metadata()
 		# @AssociationType Common.Metadata
@@ -74,10 +67,8 @@ class railML():
 
 RML = railML()
 
-#RML.Common.createElectrificationSystems()
-#RML.Common.createOrganizationalUnits()
-#RML.Common.createSpeedProfiles()
-#RML.Common.createPositioningSystems()
+RML.aRailML.Version = "Test"
+
 
 #infrastructure = Infrastructure()
 #interlocking = Interlocking()

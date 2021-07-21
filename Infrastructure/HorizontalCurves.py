@@ -4,14 +4,16 @@ from RailML.Infrastructure import HorizontalCurve
 from typing import List
 
 class HorizontalCurves(object):
-	def setHorizontalCurve(self, aHorizontalCurve : HorizontalCurve):
-		self._horizontalCurve = aHorizontalCurve
-
-	def getHorizontalCurve(self) -> HorizontalCurve:
-		return self._horizontalCurve
+	@property
+	def HorizontalCurve(self) -> HorizontalCurve:
+		return self.___horizontalCurve
+	
+	@HorizontalCurve.setter
+	def HorizontalCurve(self, aHorizontalCurve : HorizontalCurve):
+		self.___horizontalCurve = aHorizontalCurve
 
 	def __init__(self):
-		self._horizontalCurve : HorizontalCurve = None
+		self.___horizontalCurve : HorizontalCurve = HorizontalCurve.HorizontalCurve()
 		# @AssociationType Infrastructure.HorizontalCurve*
 		# @AssociationMultiplicity 1..*
 

@@ -1,41 +1,48 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import HorizontalCurves, GradientCurves, GeometryPoints
+
+#TODO THIS IS HOW TO SOLVE THE CIRCULAR IMPORT!
+from RailML.Infrastructure import HorizontalCurves
+from RailML.Infrastructure import GradientCurves
+from RailML.Infrastructure import GeometryPoints
+
 from typing import List
 
 class Geometry(object):
 	"""This is the top level element for railML3 geometry model."""
-	def setHorizontalCurves(self, aHorizontalCurves : HorizontalCurves):
-		self._horizontalCurves = aHorizontalCurves
 
-	def getHorizontalCurves(self) -> HorizontalCurves:
-		return self._horizontalCurves
+	@property
+	def HorizontalCurves(self) -> HorizontalCurves:
+		return self.___horizontalCurves
+	@property
+	def GradientCurves(self) -> GradientCurves:
+		return self.___gradientCurves
+	@property
+	def GeometryPoints(self) -> GeometryPoints:
+		return self.___geometryPoints
 
-	def setGradientCurves(self, aGradientCurves : GradientCurves):
-		self._gradientCurves = aGradientCurves
-
-	def getGradientCurves(self) -> GradientCurves:
-		return self._gradientCurves
-
-	def setGeometryPoints(self, aGeometryPoints : GeometryPoints):
-		self._geometryPoints = aGeometryPoints
-
-	def getGeometryPoints(self) -> GeometryPoints:
-		return self._geometryPoints
-
+	@HorizontalCurves.setter
+	def HorizontalCurves(self, aHorizontalCurves : HorizontalCurves):
+		self.___horizontalCurves = aHorizontalCurves
+	@GradientCurves.setter
+	def GradientCurves(self, aGradientCurves : GradientCurves):
+		self.___gradientCurves = aGradientCurves
+	@GeometryPoints.setter
+	def GeometryPoints(self, aGeometryPoints : GeometryPoints):
+		self.___geometryPoints = aGeometryPoints
+  
 	def __init__(self):
-		self._horizontalCurves : HorizontalCurves = None
+		self.___horizontalCurves : HorizontalCurves = HorizontalCurves.HorizontalCurves()
 		# @AssociationType Infrastructure.HorizontalCurves
 		# @AssociationMultiplicity 0..1
 		# """container element for all horizontalCurve elements"""
-		self._gradientCurves : GradientCurves = None
+		self.___gradientCurves : GradientCurves = GradientCurves.GradientCurves()
 		# @AssociationType Infrastructure.GradientCurves
 		# @AssociationMultiplicity 0..1
 		# """container element for all gradientCurve elements"""
-		self._geometryPoints : GeometryPoints = None
+		self.___geometryPoints : GeometryPoints = GeometryPoints.GeometryPoints()
 		# @AssociationType Infrastructure.GeometryPoints
 		# @AssociationMultiplicity 0..1
 		# """container element for all geometryPoint elements"""
-		self._unnamed_any_ = []
+		self.___unnamed_any_ = []	#TODO What is this?!
 		"""# @AssociationMultiplicity 0..*"""
-

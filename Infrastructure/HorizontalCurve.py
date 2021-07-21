@@ -4,56 +4,57 @@ from RailML.Common import tAngleDeg, tLengthM
 from RailML.Infrastructure import tHorizontalCurveTypeExt, GeometryCurve
 from typing import List
 
-#class HorizontalCurve(GeometryCurve): #TODO CON ESTA HERENCIA SE ROMPE
-class HorizontalCurve():    
-	def setCurveType(self, aCurveType : tHorizontalCurveTypeExt):
-		self.___curveType = aCurveType
-
-	def getCurveType(self) -> tHorizontalCurveTypeExt:
+class HorizontalCurve(GeometryCurve.GeometryCurve):  
+	@property
+	def CurveType(self) -> tHorizontalCurveTypeExt:
 		return self.___curveType
-
-	def setAzimuth(self, aAzimuth : tAngleDeg):
-		self.___azimuth = aAzimuth
-
-	def getAzimuth(self) -> tAngleDeg:
+	@property
+	def Azimuth(self) -> tAngleDeg:
 		return self.___azimuth
-
-	def setDeltaAzimuth(self, aDeltaAzimuth : tAngleDeg):
-		self.___deltaAzimuth = aDeltaAzimuth
-
-	def getDeltaAzimuth(self) -> tAngleDeg:
+	@property
+	def DeltaAzimuth(self) -> tAngleDeg:
 		return self.___deltaAzimuth
-
-	def setRadius(self, aRadius : tLengthM):
-		self.___radius = aRadius
-
-	def getRadius(self) -> tLengthM:
+	@property
+	def Radius(self) -> tLengthM:
 		return self.___radius
-
-	def setLength(self, aLength : tLengthM):
-		self.___length = aLength
-
-	def getLength(self) -> tLengthM:
+	@property
+	def Length(self) -> tLengthM:
 		return self.___length
 
+	@CurveType.setter
+	def CurveType(self, atHorizontalCurveTypeExt : tHorizontalCurveTypeExt):
+		self.___curveType = atHorizontalCurveTypeExt
+	@Azimuth.setter
+	def Azimuth(self, atAngleDeg : tAngleDeg):
+		self.___azimuth = atAngleDeg
+	@DeltaAzimuth.setter
+	def DeltaAzimuth(self, atAngleDeg : tAngleDeg):
+		self.___deltaAzimuth = atAngleDeg
+	@Radius.setter
+	def Radius(self, atLengthM : tLengthM):
+		self.___radius = atLengthM
+	@Length.setter
+	def Length(self, atLengthM : tLengthM):
+		self.___length = atLengthM
+  
 	def __init__(self):
-		self.___curveType : tHorizontalCurveTypeExt = None
+		self.___curveType : tHorizontalCurveTypeExt = tHorizontalCurveTypeExt.tHorizontalCurveTypeExt()
 		# @AssociationType Infrastructure.tHorizontalCurveTypeExt
 		# """type of the horizontal curve, e.g. arc or clothoide or straight"""
-		self.___azimuth : tAngleDeg = None
+		self.___azimuth : tAngleDeg = tAngleDeg.tAngleDeg()
 		"""constant azimuth (direction angle) of the horizontal curve in degrees;
 		Direction "north" has an azimuth of 0 degrees, "east" 90, "south" 180 and "west" 270 degrees."""
-		self.___deltaAzimuth : tAngleDeg = None
+		self.___deltaAzimuth : tAngleDeg = tAngleDeg.tAngleDeg()
 		# @AssociationType Common.tAngleDeg
 		# @AssociationType Common.tAngleDeg
 		# """change of azimuth of the horizontal curve in degrees;
 		# use this attribute if the azimuth of the horizontal curve is not constant, but changing;
 		# delta azimuth shall be calculated as difference of azimuth value at the end and the azimuth value at the beginning of the horizontal curve."""
-		self.___radius : tLengthM = None
+		self.___radius : tLengthM = tLengthM.tLengthM()
 		"""radius of the horizontal curve in meters;
 		use value "0" (zero) to describe straight curves with infinite radius;
 		use negative values to describe a horizontal curve going to the left (as seen from begin of curve) and use positive values to describe a horizontal curve going to the right (as seen from begin of curve)"""
-		self.___length : tLengthM = None
+		self.___length : tLengthM = tLengthM.tLengthM()
 		# @AssociationType Common.tLengthM
 		# @AssociationType Common.tLengthM
 		# """length of the horizontal curve in metres;
