@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.StoppingPlace import StoppingPlace
+from RailML.Infrastructure import StoppingPlace
 from typing import List
 
 class StoppingPlaces(object):
-	def setStoppingPlace(self, *aStoppingPlace : StoppingPlace):
-		self._stoppingPlace = aStoppingPlace
-
-	def getStoppingPlace(self) -> StoppingPlace:
-		return self._stoppingPlace
+	@property
+	def StoppingPlace(self) -> StoppingPlace:
+		return self.___stoppingPlace
+	
+	@StoppingPlace.setter
+	def StoppingPlace(self, *aStoppingPlace : StoppingPlace):
+		self.___stoppingPlace = aStoppingPlace
 
 	def __init__(self):
-		self._stoppingPlace : StoppingPlace = None
+		self.___stoppingPlace : StoppingPlace = StoppingPlace.StoppingPlace()
 		# @AssociationType Infrastructure.StoppingPlace*
 		# @AssociationMultiplicity 1..*
 

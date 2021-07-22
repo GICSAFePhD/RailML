@@ -2,15 +2,10 @@
 # -*- coding: UTF-8 -*-
 import sys
 sys.path.append('.')
-from RailML.Common import Common
-from RailML.Common.ElectrificationSystems import ElectrificationSystems
-from RailML.Common.OrganizationalUnits import OrganizationalUnits
-from RailML.Common.SpeedProfiles import SpeedProfiles
-from RailML.Common.PositioningSystems import PositioningSystems
-from RailML.Common.tElementWithID import tElementWithID
+from RailML.Common import Common, ElectrificationSystems, OrganizationalUnits, SpeedProfiles, PositioningSystems, tElementWithID
 from typing import List
 
-class Common(tElementWithID):
+class Common(tElementWithID.tElementWithID):
 	"""This is the top level element for the common model."""
 
 	@property
@@ -49,18 +44,18 @@ class Common(tElementWithID):
 		self.PositioningSystems = PositioningSystems()
 
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems()
+		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems.ElectrificationSystems()
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits()
+		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits.OrganizationalUnits()
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = SpeedProfiles()
+		self.___speedProfiles : SpeedProfiles = SpeedProfiles.SpeedProfiles()
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = PositioningSystems()
+		self.___positioning : PositioningSystems = PositioningSystems.PositioningSystems()
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1

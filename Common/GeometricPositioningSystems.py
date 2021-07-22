@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.RTM_GeometricPositioningSystem import RTM_GeometricPositioningSystem
+from RailML.Infrastructure import RTM_GeometricPositioningSystem
 from typing import List
 
 class GeometricPositioningSystems(object):
-	def setGeometricPositioningSystem(self, aGeometricPositioningSystem : RTM_GeometricPositioningSystem):
-		self._geometricPositioningSystem = aGeometricPositioningSystem
-
-	def getGeometricPositioningSystem(self) -> RTM_GeometricPositioningSystem:
-		return self._geometricPositioningSystem
+	@property
+	def RTM_GeometricPositioningSystem(self) -> RTM_GeometricPositioningSystem:
+		return self.___geometricPositioningSystem
+	
+	@RTM_GeometricPositioningSystem.setter
+	def RTM_GeometricPositioningSystem(self, aRTM_GeometricPositioningSystem : RTM_GeometricPositioningSystem):
+		self.___geometricPositioningSystem = aRTM_GeometricPositioningSystem
 
 	def __init__(self):
-		self._geometricPositioningSystem : RTM_GeometricPositioningSystem = None
+		self.___geometricPositioningSystem : RTM_GeometricPositioningSystem = RTM_GeometricPositioningSystem.RTM_GeometricPositioningSystem()
 		# @AssociationType Infrastructure.RTM.RTM_GeometricPositioningSystem*
 		# @AssociationMultiplicity 1..*
 

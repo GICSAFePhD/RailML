@@ -1,31 +1,33 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.RTM_PositioningSystem import RTM_PositioningSystem
-from typing import List
+from RailML.Infrastructure import RTM_PositioningSystem
+from typing import List, NewType
 
-#TODO EVERY INT SHOULD BE A POSITIVEINTEGER
+PositiveInteger = NewType("PositiveInteger", int)	#TODO EVERY INT SHOULD BE A POSITIVEINTEGER
 
-class ScreenPositioningSystem(RTM_PositioningSystem):
-	def setPxX(self, aPxX : int):
-		self.___pxX = aPxX
-
-	def getPxX(self) -> int:
+class ScreenPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
+	@property
+	def pxX(self) -> PositiveInteger:
 		return self.___pxX
-
-	def setPxY(self, aPxY : int):
-		self.___pxY = aPxY
-
-	def getPxY(self) -> int:
+	@property
+	def pxY(self) -> PositiveInteger:
 		return self.___pxY
-
-	def setPxZ(self, aPxZ : int):
-		self.___pxZ = aPxZ
-
-	def getPxZ(self) -> int:
+	@property
+	def pxZ(self) -> PositiveInteger:
 		return self.___pxZ
 
+	@pxX.setter
+	def pxX(self, apxX : PositiveInteger):
+		self.___pxX = apxX
+	@pxY.setter
+	def pxY(self, apxY : PositiveInteger):
+		self.___pxY = apxY
+	@pxZ.setter
+	def pxZ(self, apxZ : PositiveInteger):
+		self.___pxZ = apxZ
+
 	def __init__(self):
-		self.___pxX : int = None
-		self.___pxY : int = None
-		self.___pxZ : int = None
+		self.___pxX : PositiveInteger = None
+		self.___pxY : PositiveInteger = None
+		self.___pxZ : PositiveInteger = None
 

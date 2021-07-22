@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.ServiceSection import ServiceSection
+from RailML.Infrastructure import ServiceSection
 from typing import List
 
 class ServiceSections(object):
-	def setServiceSection(self, *aServiceSection : ServiceSection):
-		self._serviceSection = aServiceSection
-
-	def getServiceSection(self) -> ServiceSection:
-		return self._serviceSection
+	@property
+	def ServiceSection(self) -> ServiceSection:
+		return self.___serviceSection
+	
+	@ServiceSection.setter
+	def ServiceSection(self, *aServiceSection : ServiceSection):
+		self.___serviceSection = ServiceSection
 
 	def __init__(self):
-		self._serviceSection : ServiceSection = None
+		self.___serviceSection : ServiceSection = ServiceSection.ServiceSection()
 		# @AssociationType Infrastructure.ServiceSection*
 		# @AssociationMultiplicity 1..*
 

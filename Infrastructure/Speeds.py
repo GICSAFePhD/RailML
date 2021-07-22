@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.SpeedSection import SpeedSection
+from RailML.Infrastructure import SpeedSection
 from typing import List
 
 class Speeds(object):
-	def setSpeedSection(self, *aSpeedSection : SpeedSection):
-		self._speedSection = aSpeedSection
-
-	def getSpeedSection(self) -> SpeedSection:
-		return self._speedSection
+	@property
+	def SpeedSection(self) -> SpeedSection:
+		return self.___speedSection
+	
+	@SpeedSection.setter
+	def SpeedSection(self, *aSpeedSection : SpeedSection):
+		self.___speedSection = aSpeedSection
 
 	def __init__(self):
-		self._speedSection : SpeedSection = None
+		self.___speedSection : SpeedSection = SpeedSection.SpeedSection()
 		# @AssociationType Infrastructure.SpeedSection*
 		# @AssociationMultiplicity 1..*
 

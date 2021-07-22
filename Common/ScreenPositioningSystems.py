@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.ScreenPositioningSystem import ScreenPositioningSystem
+from RailML.Common import ScreenPositioningSystem
 from typing import List
 
 class ScreenPositioningSystems(object):
-	def setScreenPositioningSystem(self, aScreenPositioningSystem : ScreenPositioningSystem):
-		self._screenPositioningSystem = aScreenPositioningSystem
-
-	def getScreenPositioningSystem(self) -> ScreenPositioningSystem:
-		return self._screenPositioningSystem
+	@property
+	def ScreenPositioningSystem(self) -> ScreenPositioningSystem:
+		return self.___screenPositioningSystem
+	
+	@ScreenPositioningSystem.setter
+	def ScreenPositioningSystem(self, aScreenPositioningSystem : ScreenPositioningSystem):
+		self.___screenPositioningSystem = aScreenPositioningSystem
 
 	def __init__(self):
-		self._screenPositioningSystem : ScreenPositioningSystem = None
+		self.___screenPositioningSystem : ScreenPositioningSystem = ScreenPositioningSystem.ScreenPositioningSystem()
 		# @AssociationType Common.ScreenPositioningSystem*
 		# @AssociationMultiplicity 1..*
 

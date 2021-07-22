@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.UnderCrossing import UnderCrossing
+from RailML.Infrastructure import UnderCrossing
 from typing import List
 
 class UnderCrossings(object):
-	def setUnderCrossing(self, *aUnderCrossing : UnderCrossing):
-		self._underCrossing = aUnderCrossing
-
-	def getUnderCrossing(self) -> UnderCrossing:
-		return self._underCrossing
+	@property
+	def UnderCrossing(self) -> UnderCrossing:
+		return self.___gradientCurve
+	
+	@UnderCrossing.setter
+	def UnderCrossing(self, *aUnderCrossing : UnderCrossing):
+		self.___gradientCurve = aUnderCrossing
 
 	def __init__(self):
-		self._underCrossing : UnderCrossing = None
+		self.___underCrossing : UnderCrossing = UnderCrossing.UnderCrossing()
 		# @AssociationType Infrastructure.UnderCrossing*
 		# @AssociationMultiplicity 1..*
 

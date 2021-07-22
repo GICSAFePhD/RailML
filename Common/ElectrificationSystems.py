@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.ElectrificationSystem import ElectrificationSystem
+from RailML.Common import ElectrificationSystem
 from typing import List
 
 class ElectrificationSystems(object):
@@ -16,6 +16,6 @@ class ElectrificationSystems(object):
 		self.ElectrificationSystem = ElectrificationSystem()
     
 	def __init__(self):
-		self.___electrificationSystem : ElectrificationSystem = ElectrificationSystem()
+		self.___electrificationSystem : ElectrificationSystem = ElectrificationSystem.ElectrificationSystem()
 		# @AssociationType Common.ElectrificationSystem*
 		# @AssociationMultiplicity 1..*

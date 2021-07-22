@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.Track import Track
+from RailML.Infrastructure import Track
 from typing import List
 
 class Tracks(object):
-	def setTrack(self, *aTrack : Track):
-		self._track = aTrack
-
-	def getTrack(self) -> Track:
-		return self._track
+	@property
+	def Track(self) -> Track:
+		return self.___track
+	
+	@Track.setter
+	def Track(self, *aTrack : Track):
+		self.___track = aTrack
 
 	def __init__(self):
-		self._track : Track = None
+		self.___track : Track = Track.Track()
 		# @AssociationType Infrastructure.Track*
 		# @AssociationMultiplicity 1..*
 

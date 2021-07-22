@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.BufferStop import BufferStop
+from RailML.Infrastructure import BufferStop
 from typing import List
 
 class BufferStops(object):
-	def setBufferStop(self, *aBufferStop : BufferStop):
-		self._bufferStop = aBufferStop
-
-	def getBufferStop(self) -> BufferStop:
-		return self._bufferStop
+	@property
+	def BufferStop(self) -> BufferStop:
+		return self.___bufferStop
+	
+	@BufferStop.setter
+	def BufferStop(self, aBufferStop : BufferStop):
+		self.___bufferStop = aBufferStop	
 
 	def __init__(self):
-		self._bufferStop : BufferStop = None
+		self.___bufferStop : BufferStop = BufferStop.BufferStop()
 		# @AssociationType Infrastructure.BufferStop*
 		# @AssociationMultiplicity 1..*
 

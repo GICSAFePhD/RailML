@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.elementContainer import elementContainer
+from RailML.Common import elementContainer
 from typing import List
 
-class Metadata(elementContainer):
+class Metadata(elementContainer.elementContainer):
 	"""This is the top level element for file metadata information."""
 
 	def __init__(self):	

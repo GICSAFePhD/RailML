@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.Line import Line
+from RailML.Infrastructure import Line
 from typing import List
 
 class Lines(object):
-	def setLine(self, *aLine : Line):
-		self._line = aLine
-
-	def getLine(self) -> Line:
-		return self._line
+	@property
+	def Line(self) -> Line:
+		return self.___line
+	
+	@Line.setter
+	def Line(self, aLine : Line):
+		self.___line = aLine
 
 	def __init__(self):
-		self._line : Line = None
+		self.___line : Line = Line.Line()
 		# @AssociationType Infrastructure.Line*
 		# @AssociationMultiplicity 1..*
 

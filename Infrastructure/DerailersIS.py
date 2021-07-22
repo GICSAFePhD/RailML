@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.DerailerIS import DerailerIS
+from RailML.Infrastructure import DerailerIS
 from typing import List
 
 class DerailersIS(object):
-	def setDerailerIS(self, *aDerailerIS : DerailerIS):
-		self._derailerIS = aDerailerIS
-
-	def getDerailerIS(self) -> DerailerIS:
-		return self._derailerIS
+	@property
+	def DerailerIS(self) -> DerailerIS:
+		return self.___derailerIS
+	
+	@DerailerIS.setter
+	def DerailerIS(self, aDerailerIS : DerailerIS):
+		self.___derailerIS = aDerailerIS
 
 	def __init__(self):
-		self._derailerIS : DerailerIS = None
+		self.___derailerIS : DerailerIS = DerailerIS.DerailerIS()
 		# @AssociationType Infrastructure.DerailerIS*
 		# @AssociationMultiplicity 1..*
 

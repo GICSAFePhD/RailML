@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.OrganizationalUnit import OrganizationalUnit
+from RailML.Common import OrganizationalUnit
 from typing import List
 
-class OperationalUndertaking(OrganizationalUnit):
+class OperationalUndertaking(OrganizationalUnit.OrganizationalUnit):
 	pass

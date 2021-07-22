@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.RTM_LinearPositioningSystem import RTM_LinearPositioningSystem
+from RailML.Infrastructure import RTM_LinearPositioningSystem
 from typing import List
 
 class LinearPositioningSystems(object):
-	def setLinearPositioningSystem(self, aLinearPositioningSystem : RTM_LinearPositioningSystem):
-		self._linearPositioningSystem = aLinearPositioningSystem
-
-	def getLinearPositioningSystem(self) -> RTM_LinearPositioningSystem:
-		return self._linearPositioningSystem
+	@property
+	def RTM_LinearPositioningSystem(self) -> RTM_LinearPositioningSystem:
+		return self.___linearPositioningSystem
+	
+	@RTM_LinearPositioningSystem.setter
+	def RTM_LinearPositioningSystem(self, aRTM_LinearPositioningSystem : RTM_LinearPositioningSystem):
+		self.___linearPositioningSystem = aRTM_LinearPositioningSystem
 
 	def __init__(self):
-		self._linearPositioningSystem : RTM_LinearPositioningSystem = None
+		self.___linearPositioningSystem : RTM_LinearPositioningSystem = RTM_LinearPositioningSystem.RTM_LinearPositioningSystem()
 		# @AssociationType Infrastructure.RTM.RTM_LinearPositioningSystem*
 		# @AssociationMultiplicity 1..*
 

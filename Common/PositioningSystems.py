@@ -1,8 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.GeometricPositioningSystems import GeometricPositioningSystems
-from RailML.Common.LinearPositioningSystems import LinearPositioningSystems
-from RailML.Common.ScreenPositioningSystems import ScreenPositioningSystems
+from RailML.Common import GeometricPositioningSystems, LinearPositioningSystems, ScreenPositioningSystems
 from typing import List
 
 class PositioningSystems(object):
@@ -28,15 +26,15 @@ class PositioningSystems(object):
 		self.___screenPositioningSystems = aScreenPositioningSystems
 
 	def __init__(self):
-		self.___geometricPositioningSystems : GeometricPositioningSystems = GeometricPositioningSystems()
+		self.___geometricPositioningSystems : GeometricPositioningSystems = GeometricPositioningSystems.GeometricPositioningSystems()
 		# @AssociationType Common.GeometricPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all geometric positioning systems"""
-		self.___linearPositioningSystems : LinearPositioningSystems = LinearPositioningSystems()
+		self.___linearPositioningSystems : LinearPositioningSystems = LinearPositioningSystems.LinearPositioningSystems()
 		# @AssociationType Common.LinearPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all linear positioning systems"""
-		self.___screenPositioningSystems : ScreenPositioningSystems = ScreenPositioningSystems()
+		self.___screenPositioningSystems : ScreenPositioningSystems = ScreenPositioningSystems.ScreenPositioningSystems()
 		# @AssociationType Common.ScreenPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all screen coordinate systems"""

@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.WeightLimit import WeightLimit
+from RailML.Infrastructure import WeightLimit
 from typing import List
 
 class WeightLimits(object):
 	"""umbrella element for all weightLimit elements"""
-	def setWeightLimit(self, *aWeightLimit : WeightLimit):
-		self._weightLimit = aWeightLimit
-
-	def getWeightLimit(self) -> WeightLimit:
-		return self._weightLimit
+	@property
+	def WeightLimit(self) -> WeightLimit:
+		return self.___weightLimit
+	
+	@WeightLimit.setter
+	def WeightLimit(self, *aWeightLimit : WeightLimit):
+		self.___weightLimit = aWeightLimit
 
 	def __init__(self):
-		self._weightLimit : WeightLimit = None
+		self.___weightLimit : WeightLimit = WeightLimit.WeightLimit()
 		# @AssociationType Infrastructure.WeightLimit*
 		# @AssociationMultiplicity 1..*
 

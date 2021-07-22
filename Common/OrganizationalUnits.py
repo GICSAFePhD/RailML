@@ -1,13 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.InfrastructureManager import InfrastructureManager
-from RailML.Common.VehicleManufacturer import VehicleManufacturer
-from RailML.Common.VehicleOperator import VehicleOperator
-from RailML.Common.Customer import Customer
-from RailML.Common.RailwayUndertaking import RailwayUndertaking
-from RailML.Common.OperationalUndertaking import OperationalUndertaking
-from RailML.Common.Concessionaire import Concessionaire
-from RailML.Common.Contractor import Contractor
+from RailML.Common import InfrastructureManager, VehicleManufacturer, VehicleOperator, Customer
+from RailML.Common import RailwayUndertaking, OperationalUndertaking, Concessionaire, Contractor
 from typing import List
 
 class OrganizationalUnits(object):
@@ -62,31 +56,30 @@ class OrganizationalUnits(object):
 	@Contractor.setter
 	def Contractor(self, aContractor : Contractor):
 		self.___contractor = aContractor
-  
 
 	def __init__(self):
-		self.___infrastructureManager : InfrastructureManager = InfrastructureManager()
+		self.___infrastructureManager : InfrastructureManager = InfrastructureManager.InfrastructureManager()
 		# @AssociationType Common.InfrastructureManager*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleManufacturer : VehicleManufacturer = VehicleManufacturer()
+		self.___vehicleManufacturer : VehicleManufacturer = VehicleManufacturer.VehicleManufacturer()
 		# @AssociationType Common.VehicleManufacturer*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleOperator : VehicleOperator = VehicleOperator()
+		self.___vehicleOperator : VehicleOperator = VehicleOperator.VehicleOperator()
 		# @AssociationType Common.VehicleOperator*
 		# @AssociationMultiplicity 0..*
-		self.___customer : Customer = Customer()
+		self.___customer : Customer = Customer.Customer()
 		# @AssociationType Common.Customer*
 		# @AssociationMultiplicity 0..*
-		self.___railwayUndertaking : RailwayUndertaking = RailwayUndertaking()
+		self.___railwayUndertaking : RailwayUndertaking = RailwayUndertaking.RailwayUndertaking()
 		# @AssociationType Common.RailwayUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___operationalUndertaking : OperationalUndertaking = OperationalUndertaking()
+		self.___operationalUndertaking : OperationalUndertaking = OperationalUndertaking.OperationalUndertaking()
 		# @AssociationType Common.OperationalUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___concessionaire : Concessionaire = Concessionaire()
+		self.___concessionaire : Concessionaire = Concessionaire.Concessionaire()
 		# @AssociationType Common.Concessionaire*
 		# @AssociationMultiplicity 0..*
-		self.___contractor : Contractor = Contractor()
+		self.___contractor : Contractor = Contractor.Contractor()
 		# @AssociationType Common.Contractor*
 		# @AssociationMultiplicity 0..*
 

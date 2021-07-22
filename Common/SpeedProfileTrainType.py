@@ -1,34 +1,34 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tEtcsTrainCategoryNumber import tEtcsTrainCategoryNumber
-from RailML.Common.tTrainType import tTrainType
-from RailML.Common.tCantDeficiency import tCantDeficiency
+from RailML.Common import tEtcsTrainCategoryNumber, tTrainType, tCantDeficiency
 from typing import List
 
 class SpeedProfileTrainType(object):
-	def setEtcsTrainCategoryNumber(self, aEtcsTrainCategoryNumber : tEtcsTrainCategoryNumber):
-		self.___etcsTrainCategoryNumber = aEtcsTrainCategoryNumber
-
-	def getEtcsTrainCategoryNumber(self) -> tEtcsTrainCategoryNumber:
+	@property
+	def tEtcsTrainCategoryNumber(self) -> tEtcsTrainCategoryNumber:
 		return self.___etcsTrainCategoryNumber
-
-	def setType(self, aType : tTrainType):
-		self.___type = aType
-
-	def getType(self) -> tTrainType:
+	@property
+	def tTrainType(self) -> tTrainType:
 		return self.___type
-
-	def setCantDeficiency(self, aCantDeficiency : tCantDeficiency):
-		self.___cantDeficiency = aCantDeficiency
-
-	def getCantDeficiency(self) -> tCantDeficiency:
+	@property
+	def tCantDeficiency(self) -> tCantDeficiency:
 		return self.___cantDeficiency
 
+	@tEtcsTrainCategoryNumber.setter
+	def tEtcsTrainCategoryNumber(self, atEtcsTrainCategoryNumber : tEtcsTrainCategoryNumber):
+		self.___etcsTrainCategoryNumber = atEtcsTrainCategoryNumber
+	@tTrainType.setter
+	def tTrainType(self, atTrainType : tTrainType):
+		self.___type = atTrainType
+	@tCantDeficiency.setter
+	def tCantDeficiency(self, atCantDeficiency : tCantDeficiency):
+		self.___cantDeficiency = atCantDeficiency
+
 	def __init__(self):
-		self.___etcsTrainCategoryNumber : tEtcsTrainCategoryNumber = None
+		self.___etcsTrainCategoryNumber : tEtcsTrainCategoryNumber = tEtcsTrainCategoryNumber.tEtcsTrainCategoryNumber()
 		# @AssociationType Common.tEtcsTrainCategoryNumber
-		self.___type : tTrainType = None
+		self.___type : tTrainType = tTrainType.tTrainType()
 		# @AssociationType Common.tTrainType
-		self.___cantDeficiency : tCantDeficiency = None
+		self.___cantDeficiency : tCantDeficiency = tCantDeficiency.tCantDeficiency()
 		# @AssociationType Common.tCantDeficiency
 

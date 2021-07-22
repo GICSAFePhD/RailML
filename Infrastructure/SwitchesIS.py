@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.SwitchIS import SwitchIS
+from RailML.Infrastructure import SwitchIS
 from typing import List
 
 class SwitchesIS(object):
-	def setSwitchIS(self, *aSwitchIS : SwitchIS):
-		self._switchIS = aSwitchIS
-
-	def getSwitchIS(self) -> SwitchIS:
-		return self._switchIS
+	@property
+	def SwitchIS(self) -> SwitchIS:
+		return self.___switchIS
+	
+	@SwitchIS.setter
+	def SwitchIS(self, *aSwitchIS : SwitchIS):
+		self.___switchIS = aSwitchIS
 
 	def __init__(self):
-		self._switchIS : SwitchIS = None
+		self.___switchIS : SwitchIS = SwitchIS.SwitchIS()
 		# @AssociationType Infrastructure.SwitchIS*
 		# @AssociationMultiplicity 1..*
 

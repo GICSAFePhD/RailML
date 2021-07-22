@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.SpeedProfile import SpeedProfile
+from RailML.Common import SpeedProfile
 from typing import List
 
 class SpeedProfiles(object):
@@ -13,7 +13,7 @@ class SpeedProfiles(object):
 		self.___speedProfile = aSpeedProfile
 
 	def __init__(self):
-		self.___speedProfile : SpeedProfile = SpeedProfile()
+		self.___speedProfile : SpeedProfile = SpeedProfile.SpeedProfile()
 		# @AssociationType Common.SpeedProfile*
 		# @AssociationMultiplicity 1..*
 

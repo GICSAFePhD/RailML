@@ -4,11 +4,11 @@
 
 import sys
 sys.path.append('.')
-from RailML.Common.Metadata import Metadata
-from RailML.Common.Common import Common
-from RailML.Infrastructure.Infrastructure import Infrastructure
-from RailML.Interlocking.Interlocking import Interlocking
-from RailML.aRailML import aRailML
+from RailML.Common import Metadata
+from RailML.Common import Common
+from RailML.Infrastructure import Infrastructure
+from RailML.Interlocking import Interlocking
+from RailML import aRailML
 #from typing import List
 
 class railML():
@@ -46,22 +46,22 @@ class railML():
 		self.___rail3_aRailML = aaRailML
 
 	def __init__(self):
-		self.___metadata : Metadata = Metadata()
+		self.___metadata : Metadata = Metadata.Metadata()
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		self.___common : Common = Common()
+		self.___common : Common = Common.Common()
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		self.___infrastructure : Infrastructure = Infrastructure()
+		#self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""
-		self.___interlocking : Interlocking = Interlocking()
+		#self.___interlocking : Interlocking = Interlocking.Interlocking()
 		# @AssociationType Interlocking.Interlocking
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 interlocking model"""
-		self.___rail3_aRailML : aRailML = aRailML()
+		self.___rail3_aRailML : aRailML = aRailML.aRailML()
 		"""# @AssociationKind Aggregation"""
 
 

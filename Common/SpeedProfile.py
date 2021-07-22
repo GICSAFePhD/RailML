@@ -1,50 +1,47 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.SpeedProfileTilting import SpeedProfileTilting
-from RailML.Common.SpeedProfileLoad import SpeedProfileLoad
-from RailML.Common.SpeedProfileBraking import SpeedProfileBraking
-from RailML.Common.SpeedProfileTrainType import SpeedProfileTrainType
-#from RailML.Common.aSpeedProfile import aSpeedProfile
-from RailML.Common.tElementWithIDandName import tElementWithIDandName
+from RailML.Common import SpeedProfileTilting, SpeedProfileLoad, SpeedProfileBraking, SpeedProfileTrainType, tElementWithIDandName#, aSpeedProfile
 from typing import List
 
-class SpeedProfile(tElementWithIDandName):
-	def setTilting(self, aTilting : SpeedProfileTilting):
-		self._tilting = aTilting
+class SpeedProfile(tElementWithIDandName.tElementWithIDandName):
+	@property
+	def SpeedProfileTilting(self) -> SpeedProfileTilting:
+		return self.___tilting
+	@property
+	def SpeedProfileLoad(self) -> SpeedProfileLoad:
+		return self.___load
+	@property
+	def SpeedProfileBraking(self) -> SpeedProfileBraking:
+		return self.___braking
+	@property
+	def SpeedProfileTrainType(self) -> SpeedProfileTrainType:
+		return self.___trainType
 
-	def getTilting(self) -> SpeedProfileTilting:
-		return self._tilting
-
-	def setLoad(self, aLoad : SpeedProfileLoad):
-		self._load = aLoad
-
-	def getLoad(self) -> SpeedProfileLoad:
-		return self._load
-
-	def setBraking(self, aBraking : SpeedProfileBraking):
-		self._braking = aBraking
-
-	def getBraking(self) -> SpeedProfileBraking:
-		return self._braking
-
-	def setTrainType(self, aTrainType : SpeedProfileTrainType):
-		self._trainType = aTrainType
-
-	def getTrainType(self) -> SpeedProfileTrainType:
-		return self._trainType
+	@SpeedProfileTilting.setter
+	def SpeedProfileTilting(self, aSpeedProfileTilting : SpeedProfileTilting):
+		self.___tilting = aSpeedProfileTilting
+	@SpeedProfileLoad.setter
+	def SpeedProfileLoad(self, aSpeedProfileLoad : SpeedProfileLoad):
+		self.___load = aSpeedProfileLoad
+	@SpeedProfileBraking.setter
+	def SpeedProfileBraking(self, aSpeedProfileBraking : SpeedProfileBraking):
+		self.___braking = aSpeedProfileBraking
+	@SpeedProfileTrainType.setter
+	def SpeedProfileTrainType(self, aSpeedProfileTrainType : SpeedProfileTrainType):
+		self.___trainType = aSpeedProfileTrainType
 
 	def __init__(self):
-		self._tilting : SpeedProfileTilting = None
+		self.___tilting : SpeedProfileTilting = SpeedProfileTilting.SpeedProfileTilting()
 		# @AssociationType Common.SpeedProfileTilting
 		# @AssociationMultiplicity 0..1
-		self._load : SpeedProfileLoad = None
+		self.___load : SpeedProfileLoad = SpeedProfileLoad.SpeedProfileLoad()
 		# @AssociationType Common.SpeedProfileLoad
 		# @AssociationMultiplicity 0..1
-		self._braking : SpeedProfileBraking = None
+		self.___braking : SpeedProfileBraking = SpeedProfileBraking.SpeedProfileBraking()
 		# @AssociationType Common.SpeedProfileBraking
 		# @AssociationMultiplicity 0..1
-		self._trainType : SpeedProfileTrainType = None
+		self.___trainType : SpeedProfileTrainType = SpeedProfileTrainType.SpeedProfileTrainType()
 		# @AssociationType Common.SpeedProfileTrainType
 		# @AssociationMultiplicity 0..1
-		#self._unnamed_aSpeedProfile_ : aSpeedProfile = None	#TODO CIRCULAR INCLUDE!
+		#self._unnamed_aSpeedProfile_ : aSpeedProfile = aSpeedProfile.aSpeedProfile()	#TODO CIRCULAR INCLUDE!
 

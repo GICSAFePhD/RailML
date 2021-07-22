@@ -1,25 +1,26 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tWeightTons import tWeightTons
-from RailML.Common.tMeterloadTonsPerMeter import tMeterloadTonsPerMeter
+from RailML.Common import tWeightTons, tMeterloadTonsPerMeter
 from typing import List
 
 class SpeedProfileLoad(object):
-	def setMaxAxleLoad(self, aMaxAxleLoad : tWeightTons):
-		self.___maxAxleLoad = aMaxAxleLoad
-
-	def getMaxAxleLoad(self) -> tWeightTons:
+	@property
+	def tWeightTons(self) -> tWeightTons:
 		return self.___maxAxleLoad
-
-	def setMaxMeterLoad(self, aMaxMeterLoad : tMeterloadTonsPerMeter):
-		self.___maxMeterLoad = aMaxMeterLoad
-
-	def getMaxMeterLoad(self) -> tMeterloadTonsPerMeter:
+	@property
+	def tMeterloadTonsPerMeter(self) -> tMeterloadTonsPerMeter:
 		return self.___maxMeterLoad
 
+	@tWeightTons.setter
+	def tWeightTons(self, atWeightTons : tWeightTons):
+		self.___maxAxleLoad = atWeightTons
+	@tMeterloadTonsPerMeter.setter
+	def tMeterloadTonsPerMeter(self, atMeterloadTonsPerMeter : tMeterloadTonsPerMeter):
+		self.___maxMeterLoad = tMeterloadTonsPerMeter
+
 	def __init__(self):
-		self.___maxAxleLoad : tWeightTons = None
+		self.___maxAxleLoad : tWeightTons = tWeightTons.tWeightTons()
 		# @AssociationType Common.tWeightTons
-		self.___maxMeterLoad : tMeterloadTonsPerMeter = None
+		self.___maxMeterLoad : tMeterloadTonsPerMeter = tMeterloadTonsPerMeter.tMeterloadTonsPerMeter()
 		# @AssociationType Common.tMeterloadTonsPerMeter
 

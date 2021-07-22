@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.Platform import Platform
+from RailML.Infrastructure import Platform
 from typing import List
 
 class Platforms(object):
-	def setPlatform(self, *aPlatform : Platform):
-		self._platform = aPlatform
-
-	def getPlatform(self) -> Platform:
-		return self._platform
+	@property
+	def Platform(self) -> Platform:
+		return self.___platform
+	
+	@Platform.setter
+	def Platform(self, aPlatform : Platform):
+		self.___platform = aPlatform
 
 	def __init__(self):
-		self._platform : Platform = None
+		self.___platform : Platform = Platform.Platform()
 		# @AssociationType Infrastructure.Platform*
 		# @AssociationMultiplicity 1..*
 

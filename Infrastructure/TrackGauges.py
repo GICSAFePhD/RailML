@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.TrackGauge import TrackGauge
+from RailML.Infrastructure import TrackGauge
 from typing import List
 
 class TrackGauges(object):
 	"""umbrella element for all trackGauge elements"""
-	def setTrackGauge(self, *aTrackGauge : TrackGauge):
-		self._trackGauge = aTrackGauge
-
-	def getTrackGauge(self) -> TrackGauge:
-		return self._trackGauge
+	@property
+	def TrackGauge(self) -> TrackGauge:
+		return self.___trackGauge
+	
+	@TrackGauge.setter
+	def TrackGauge(self, *aTrackGauge : TrackGauge):
+		self.___trackGauge = aTrackGauge
 
 	def __init__(self):
-		self._trackGauge : TrackGauge = None
+		self.___trackGauge : TrackGauge = TrackGauge.TrackGauge()
 		# @AssociationType Infrastructure.TrackGauge*
 		# @AssociationMultiplicity 1..*
 
