@@ -27,7 +27,7 @@ class Topology(object):
 	@Networks.setter
 	def Networks(self, aNetworks : Networks):
 		self.___networks = aNetworks
-  
+
 	def __init__(self):
 		self.___netElements : NetElements = NetElements()
 		# @AssociationType Infrastructure.NetElements

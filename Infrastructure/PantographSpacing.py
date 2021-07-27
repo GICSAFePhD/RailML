@@ -1,35 +1,36 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tLengthM import tLengthM
-from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
+from RailML.Common import tLengthM, tSpeedKmPerHour
 from typing import List
 
 class PantographSpacing(object):
-	def setNumberPantographsRaised(self, aNumberPantographsRaised : int): #TODO DEFINED AS INTEGER
-		self.___numberPantographsRaised = aNumberPantographsRaised
-
-	def getNumberPantographsRaised(self) -> int:	#TODO DEFINED AS INTEGER
+	@property
+	def NumberPantographsRaised(self) -> int:
 		return self.___numberPantographsRaised
-
-	def setSpacingPantographsRaised(self, aSpacingPantographsRaised : tLengthM):
-		self.___spacingPantographsRaised = aSpacingPantographsRaised
-
-	def getSpacingPantographsRaised(self) -> tLengthM:
+	@property
+	def SpacingPantographsRaised(self) -> tLengthM:
 		return self.___spacingPantographsRaised
-
-	def setSpeed4PantographSpacing(self, aSpeed4PantographSpacing : tSpeedKmPerHour):
-		self.___speed4PantographSpacing = aSpeed4PantographSpacing
-
-	def getSpeed4PantographSpacing(self) -> tSpeedKmPerHour:
+	@property
+	def Speed4PantographSpacing(self) -> tSpeedKmPerHour:
 		return self.___speed4PantographSpacing
 
+	@NumberPantographsRaised.setter
+	def GradieNumberPantographsRaisedntCurve(self, aNumberPantographsRaised : int):
+		self.___numberPantographsRaised = aNumberPantographsRaised
+	@SpacingPantographsRaised.setter
+	def SpacingPantographsRaised(self, aSpacingPantographsRaised : tLengthM):
+		self.___spacingPantographsRaised = aSpacingPantographsRaised
+	@Speed4PantographSpacing.setter
+	def Speed4PantographSpacing(self, aSpeed4PantographSpacing : tSpeedKmPerHour):
+		self.___speed4PantographSpacing = aSpeed4PantographSpacing
+
 	def __init__(self):
-		self.___numberPantographsRaised : int = None	#TODO DEFINED AS INTEGER
+		self.___numberPantographsRaised : int = 0
 		"""number of pantographs raised simultaneously on moving train"""
-		self.___spacingPantographsRaised : tLengthM = None
+		self.___spacingPantographsRaised : tLengthM = tLengthM.tLengthM()
 		# @AssociationType Common.tLengthM
 		# """minimum spacing between raised pantographs of a train, in [m]"""
-		self.___speed4PantographSpacing : tSpeedKmPerHour = None
+		self.___speed4PantographSpacing : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
 		# @AssociationType Common.tSpeedKmPerHour
 		# """related maximum speed for the given pantograph spacing limit, in [km/h]"""
 

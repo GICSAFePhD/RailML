@@ -1,33 +1,36 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tLengthM import tLengthM
-from typing import List
+from RailML.Common import tLengthM
+from typing import List, NewType
+Long = NewType("Long", int)
 
 class PhaseSeparationSection(object):
-	def setLengthPhaseSeparation(self, aLengthPhaseSeparation : tLengthM):
-		self.___lengthPhaseSeparation = aLengthPhaseSeparation
-
-	def getLengthPhaseSeparation(self) -> tLengthM:
+	@property
+	def LengthPhaseSeparation(self) -> tLengthM:
 		return self.___lengthPhaseSeparation
-
-	def setSwitchOffBreaker(self, aSwitchOffBreaker : int):	#TODO DEFINED AS LONG
-		self.___switchOffBreaker = aSwitchOffBreaker
-
-	def getSwitchOffBreaker(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def SwitchOffBreaker(self) -> Long:
 		return self.___switchOffBreaker
-
-	def setLowerPantograph(self, aLowerPantograph : int): #TODO DEFINED AS LONG
-		self.___lowerPantograph = aLowerPantograph
-
-	def getLowerPantograph(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def LowerPantograph(self) -> Long:
 		return self.___lowerPantograph
 
+	@LengthPhaseSeparation.setter
+	def LengthPhaseSeparation(self, aLengthPhaseSeparation : tLengthM):
+		self.___lengthPhaseSeparation = aLengthPhaseSeparation
+	@SwitchOffBreaker.setter
+	def SwitchOffBreaker(self, aSwitchOffBreaker : Long):
+		self.___switchOffBreaker = aSwitchOffBreaker
+	@LowerPantograph.setter
+	def LowerPantograph(self, aLowerPantograph : Long):
+		self.___lowerPantograph = aLowerPantograph
+
 	def __init__(self):
-		self.___lengthPhaseSeparation : tLengthM = None
+		self.___lengthPhaseSeparation : tLengthM = tLengthM.tLengthM()
 		# @AssociationType Common.tLengthM
 		# """length of the phase separation section in contact line, in [m]"""
-		self.___switchOffBreaker : int = None	#TODO DEFINED AS LONG
+		self.___switchOffBreaker : Long = 0
 		"""flag, whether the main circuit breaker has to be switched off when passing the phase separation"""
-		self.___lowerPantograph : int = None	#TODO DEFINED AS LONG
+		self.___lowerPantograph : Long = 0	
 		"""flag, whether the pantographs have to be lowered when passing the phase separation"""
 

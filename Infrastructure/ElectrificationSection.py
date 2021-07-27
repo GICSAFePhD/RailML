@@ -84,35 +84,35 @@ class ElectrificationSection(FunctionalInfrastructureEntity.FunctionalInfrastruc
 		self.___belongsToParent : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# """reference to the (one and only) parent electrification section"""
-		self.___electrificationSystemRef : tElementWithIDref = None
+		self.___electrificationSystemRef : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to the electrification system"""
-		self.___energyCatenary : EnergyCatenary = None
+		self.___energyCatenary : EnergyCatenary = EnergyCatenary.EnergyCatenary()
 		# @AssociationType Infrastructure.EnergyCatenary
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the catenary energy parameters"""
-		self.___energyPantograph : EnergyPantograph = None
+		self.___energyPantograph : EnergyPantograph = EnergyPantograph.EnergyPantograph()
 		# @AssociationType Infrastructure.EnergyPantograph
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the pantograph energy parameters"""
-		self.___energyRollingstock : EnergyRollingstock = None
+		self.___energyRollingstock : EnergyRollingstock = EnergyRollingstock.EnergyRollingstock()
 		# @AssociationType Infrastructure.EnergyRollingstock
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the rollingstock energy parameters"""
-		self.___hasContactWire : ContactWire = None
+		self.___hasContactWire : ContactWire = ContactWire.ContactWire()
 		# @AssociationType Infrastructure.ContactWire
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the construction details of the contact wire"""
-		self.___pantographSpacing : PantographSpacing = None
+		self.___pantographSpacing : PantographSpacing = PantographSpacing.PantographSpacing()
 		# @AssociationType Infrastructure.PantographSpacing*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the pantograph spacing parameters"""
-		self.___phaseSeparationSection : PhaseSeparationSection = None
+		self.___phaseSeparationSection : PhaseSeparationSection = PhaseSeparationSection.PhaseSeparationSection()
 		# @AssociationType Infrastructure.PhaseSeparationSection*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the phase separation parameters"""
-		self.___systemSeparationSection : SystemSeparationSection = None
+		self.___systemSeparationSection : SystemSeparationSection = SystemSeparationSection.SystemSeparationSection()
 		# @AssociationType Infrastructure.SystemSeparationSection*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the electrification system separation parameters"""

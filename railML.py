@@ -46,14 +46,14 @@ class railML():
 		self.___rail3_aRailML = aaRailML
 
 	def __init__(self):
-		self.___metadata : Metadata = Metadata.Metadata()
+		#self.___metadata : Metadata = Metadata.Metadata()
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		self.___common : Common = Common.Common()
+		#self.___common : Common = Common.Common()
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		#self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
+		self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""

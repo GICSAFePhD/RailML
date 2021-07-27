@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tForce import tForce
+from RailML.Common import tForce
 from typing import List
 
-class tForceN(tForce):
+class tForceN(tForce.tForce):
 	pass

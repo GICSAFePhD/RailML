@@ -1,18 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tBufferStopType import tBufferStopType
-from RailML.Infrastructure.TrackNode import TrackNode
+from RailML.Infrastructure import tBufferStopType, TrackNode
 from typing import List
 
-class BufferStop(TrackNode):
-	def setType(self, aType : tBufferStopType):
-		self.___type = aType
-
-	def getType(self) -> tBufferStopType:
+class BufferStop(TrackNode.TrackNode):
+	@property
+	def tBufferStopType(self) -> tBufferStopType:
 		return self.___type
+	
+	@tBufferStopType.setter
+	def tBufferStopType(self, atBufferStopType : tBufferStopType):
+		self.___type = atBufferStopType
 
 	def __init__(self):
-		self.___type : tBufferStopType = None
+		self.___type : tBufferStopType = tBufferStopType.tBufferStopType()
 		# @AssociationType Infrastructure.tBufferStopType
 		# """type of the buffer stop"""
 

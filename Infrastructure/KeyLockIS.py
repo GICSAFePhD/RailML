@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
+from RailML.Infrastructure import FunctionalInfrastructureEntity
 from typing import List
 
-class KeyLockIS(FunctionalInfrastructureEntity):
+class KeyLockIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	pass
