@@ -1,37 +1,38 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tLengthM import tLengthM
-from RailML.Infrastructure.tLengthTypeExt import tLengthTypeExt
-from RailML.Infrastructure.tExtendedDirection import tExtendedDirection
+from RailML.Common import tLengthM
+from RailML.Infrastructure import tLengthTypeExt, tExtendedDirection
 from typing import List
 
 class Length(object):
-	def setValue(self, aValue : tLengthM):
-		self.___value = aValue
-
-	def getValue(self) -> tLengthM:
+	@property
+	def tLengthM(self) -> tLengthM:
 		return self.___value
-
-	def setType(self, aType : tLengthTypeExt):
-		self.___type = aType
-
-	def getType(self) -> tLengthTypeExt:
+	@property
+	def tLengthTypeExt(self) -> tLengthTypeExt:
 		return self.___type
-
-	def setValidForDirection(self, aValidForDirection : tExtendedDirection):
-		self.___validForDirection = aValidForDirection
-
-	def getValidForDirection(self) -> tExtendedDirection:
+	@property
+	def tExtendedDirection(self) -> tExtendedDirection:
 		return self.___validForDirection
 
+	@tLengthM.setter
+	def tLengthM(self, atLengthM : tLengthM):
+		self.___value = atLengthM
+	@tLengthTypeExt.setter
+	def tLengthTypeExt(self, atLengthTypeExt : tLengthTypeExt):
+		self.___type = atLengthTypeExt
+	@tExtendedDirection.setter
+	def tExtendedDirection(self, atExtendedDirection : tExtendedDirection):
+		self.___validForDirection = atExtendedDirection
+
 	def __init__(self):
-		self.___value : tLengthM = None
+		self.___value : tLengthM = tLengthM.tLengthM()
 		# @AssociationType Common.tLengthM
 		# """the distance value given in meters"""
-		self.___type : tLengthTypeExt = None
+		self.___type : tLengthTypeExt = tLengthTypeExt.tLengthTypeExt()
 		# @AssociationType Infrastructure.tLengthTypeExt
 		# """type of length (operational, physical, administrative...)"""
-		self.___validForDirection : tExtendedDirection = None
+		self.___validForDirection : tExtendedDirection = tExtendedDirection.tExtendedDirection()
 		# @AssociationType Infrastructure.tExtendedDirection
 		# """indicate the direction for which the length information applies"""
 
