@@ -1,47 +1,52 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tBallastType import tBallastType
-from RailML.Infrastructure.tSleepersType import tSleepersType
-from RailML.Infrastructure.tJointsType import tJointsType
-#from RailML.Infrastructure.TrackBed import TrackBed	#TODO CIRCULAR!
+from RailML.Infrastructure import tBallastType, tSleepersType, tJointsType, TrackBed #TODO CIRCULAR!
 from typing import List
 
 class aTrackbed(object):
-	def setBallastType(self, aBallastType : tBallastType):
-		self.___ballastType = aBallastType
-
-	def getBallastType(self) -> tBallastType:
+	@property
+	def tBallastType(self) -> tBallastType:
 		return self.___ballastType
-
-	def setRailType(self, aRailType : str):
-		self.___railType = aRailType
-
-	def getRailType(self) -> str:
+	@property
+	def RailType(self) -> str:
 		return self.___railType
-
-	def setSleepersType(self, aSleepersType : tSleepersType):
-		self.___sleepersType = aSleepersType
-
-	def getSleepersType(self) -> tSleepersType:
+	@property
+	def tSleepersType(self) -> tSleepersType:
 		return self.___sleepersType
-
-	def setJointsType(self, aJointsType : tJointsType):
-		self.___jointsType = aJointsType
-
-	def getJointsType(self) -> tJointsType:
+	@property
+	def tJointsType(self) -> tJointsType:
 		return self.___jointsType
+	@property
+	def TrackBed(self) -> TrackBed:
+		return self.___unnamed_TrackBed
+
+	@tBallastType.setter
+	def tBallastType(self, atBallastType : tBallastType):
+		self.___ballastType = atBallastType
+	@RailType.setter
+	def RailType(self, aRailType : str):
+		self.___railType = aRailType
+	@tSleepersType.setter
+	def tSleepersType(self, atSleepersType : tSleepersType):
+		self.___sleepersType = atSleepersType
+	@tJointsType.setter
+	def tJointsType(self, atJointsType : tJointsType):
+		self.___jointsType = atJointsType
+	@TrackBed.setter
+	def TrackBed(self, aTrackBed : TrackBed):
+		self.___unnamed_TrackBed = aTrackBed
 
 	def __init__(self):
-		self.___ballastType : tBallastType = None
+		self.___ballastType : tBallastType = tBallastType.tBallastType()
 		# @AssociationType Infrastructure.tBallastType
 		# """type of ballast"""
-		self.___railType : str = None
+		self.___railType : str = ""
 		"""type of installed rails"""
-		self.___sleepersType : tSleepersType = None
+		self.___sleepersType : tSleepersType = tSleepersType.tSleepersType()
 		# @AssociationType Infrastructure.tSleepersType
 		# """type of sleepers"""
-		self.___jointsType : tJointsType = None
+		self.___jointsType : tJointsType = tJointsType.tJointsType()
 		# @AssociationType Infrastructure.tJointsType
 		# """type of rail joints"""
-		#self._unnamed_TrackBed_ : TrackBed = None	#TODO CIRCULAR!
+		self.___unnamed_TrackBed : TrackBed = None	#TODO CIRCULAR!
 

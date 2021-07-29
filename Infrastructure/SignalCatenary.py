@@ -1,27 +1,28 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tSignalCatenaryType import tSignalCatenaryType
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.SignalX import SignalX
+from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import tSignalCatenaryType, SignalX
 from typing import List
 
-class SignalCatenary(SignalX):
-	def setType(self, aType : tSignalCatenaryType):
-		self.___type = aType
-
-	def getType(self) -> tSignalCatenaryType:
+class SignalCatenary(SignalX.SignalX):
+	@property
+	def Type(self) -> tSignalCatenaryType:
 		return self.___type
-
-	def setRefersToElectrificationSection(self, aRefersToElectrificationSection : tElementWithIDref):
-		self._refersToElectrificationSection = aRefersToElectrificationSection
-
-	def getRefersToElectrificationSection(self) -> tElementWithIDref:
-		return self._refersToElectrificationSection
+	@property
+	def RefersToElectrificationSection(self) -> tElementWithIDref:
+		return self.___refersToElectrificationSection
+	
+	@Type.setter
+	def Type(self, aType : tSignalCatenaryType):
+		self.___type = aType
+	@RefersToElectrificationSection.setter
+	def RefersToElectrificationSection(self, aRefersToElectrificationSection : tElementWithIDref):
+		self.___refersToElectrificationSection = aRefersToElectrificationSection
 
 	def __init__(self):
-		self.___type : tSignalCatenaryType = None
+		self.___type : tSignalCatenaryType = tSignalCatenaryType.tSignalCatenaryType()
 		# @AssociationType Infrastructure.tSignalCatenaryType
-		self._refersToElectrificationSection : tElementWithIDref = None
+		self.___refersToElectrificationSection : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to an electrification section"""

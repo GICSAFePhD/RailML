@@ -1,182 +1,173 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tRef import tRef
-from RailML.Infrastructure.SignalAnnouncement import SignalAnnouncement
-from RailML.Infrastructure.SignalCatenary import SignalCatenary
-from RailML.Infrastructure.SignalDanger import SignalDanger
-from RailML.Infrastructure.SignalEtcs import SignalEtcs
-from RailML.Infrastructure.SignalInformation import SignalInformation
-from RailML.Infrastructure.SignalLevelCrossing import SignalLevelCrossing
-from RailML.Infrastructure.SignalMilepost import SignalMilepost
-from RailML.Infrastructure.SignalSpeed import SignalSpeed
-from RailML.Infrastructure.SignalStopPost import SignalStopPost
-from RailML.Infrastructure.SignalTrainMovement import SignalTrainMovement
-from RailML.Infrastructure.SignalRadio import SignalRadio
-from RailML.Infrastructure.SignalVehicleEquipment import SignalVehicleEquipment
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.SignalConstruction import SignalConstruction
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
-from typing import List
+from RailML.Common import tRef, tElementWithIDref
+from RailML.Infrastructure import SignalAnnouncement, SignalCatenary, SignalDanger, SignalEtcs, SignalInformation
+from RailML.Infrastructure import SignalLevelCrossing, SignalMilepost, SignalSpeed, SignalStopPost, SignalTrainMovement
+from RailML.Infrastructure import SignalRadio, SignalVehicleEquipment, SignalConstruction, FunctionalInfrastructureEntity
+from typing import List, NewType
+Long = NewType("Long", int)
 
-class SignalIS(FunctionalInfrastructureEntity):
-	def setIsSwitchable(self, aIsSwitchable : int):	#TODO DEFINES AS LONG
-		self.___isSwitchable = aIsSwitchable
-
-	def getIsSwitchable(self) -> int:	#TODO DEFINES AS LONG
+class SignalIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def IsSwitchable(self) -> Long:
 		return self.___isSwitchable
-
-	def setBelongsToParent(self, aBelongsToParent : tRef):
-		self.___belongsToParent = aBelongsToParent
-
-	def getBelongsToParent(self) -> tRef:
+	@property
+	def BelongsToParent(self) -> tRef:
 		return self.___belongsToParent
-
-	def setBasedOnTemplate(self, aBasedOnTemplate : tRef):
-		self.___basedOnTemplate = aBasedOnTemplate
-
-	def getBasedOnTemplate(self) -> tRef:
+	@property
+	def BasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
+	@property
+	def SignalAnnouncement(self) -> SignalAnnouncement:
+		return self.___isAnnouncementSignal
+	@property
+	def SignalCatenary(self) -> SignalCatenary:
+		return self.___isCatenarySignal
+	@property
+	def SignalDanger(self) -> SignalDanger:
+		return self.___isDangerSignal
+	@property
+	def SignalEtcs(self) -> SignalEtcs:
+		return self.___isEtcsSignal
+	@property
+	def SignalInformation(self) -> SignalInformation:
+		return self.___isInformationSignal
+	@property
+	def SignalLevelCrossing(self) -> SignalLevelCrossing:
+		return self.___isLevelCrossingSignal
+	@property
+	def SignalMilepost(self) -> SignalMilepost:
+		return self.___isMilepost
+	@property
+	def SignalSpeed(self) -> SignalSpeed:
+		return self.___isSpeedSignal
+	@property
+	def SignalStopPost(self) -> SignalStopPost:
+		return self.___isStopPost
+	@property
+	def SignalTrainMovement(self) -> SignalTrainMovement:
+		return self.___isTrainMovementSignal
+	@property
+	def SignalRadio(self) -> SignalRadio:
+		return self.___isTrainRadioSignal
+	@property
+	def SignalVehicleEquipment(self) -> SignalVehicleEquipment:
+		return self.___isVehicleEquipmentSignal
+	@property
+	def tElementWithIDref(self) -> tElementWithIDref:
+		return self.___connectedWithBaliseGroup
+	@property
+	def SignalConstruction(self) -> SignalConstruction:
+		return self.___signalConstruction
 
-	def setIsAnnouncementSignal(self, aIsAnnouncementSignal : SignalAnnouncement):
-		self._isAnnouncementSignal = aIsAnnouncementSignal
-
-	def getIsAnnouncementSignal(self) -> SignalAnnouncement:
-		return self._isAnnouncementSignal
-
-	def setIsCatenarySignal(self, aIsCatenarySignal : SignalCatenary):
-		self._isCatenarySignal = aIsCatenarySignal
-
-	def getIsCatenarySignal(self) -> SignalCatenary:
-		return self._isCatenarySignal
-
-	def setIsDangerSignal(self, aIsDangerSignal : SignalDanger):
-		self._isDangerSignal = aIsDangerSignal
-
-	def getIsDangerSignal(self) -> SignalDanger:
-		return self._isDangerSignal
-
-	def setIsEtcsSignal(self, aIsEtcsSignal : SignalEtcs):
-		self._isEtcsSignal = aIsEtcsSignal
-
-	def getIsEtcsSignal(self) -> SignalEtcs:
-		return self._isEtcsSignal
-
-	def setIsInformationSignal(self, aIsInformationSignal : SignalInformation):
-		self._isInformationSignal = aIsInformationSignal
-
-	def getIsInformationSignal(self) -> SignalInformation:
-		return self._isInformationSignal
-
-	def setIsLevelCrossingSignal(self, aIsLevelCrossingSignal : SignalLevelCrossing):
-		self._isLevelCrossingSignal = aIsLevelCrossingSignal
-
-	def getIsLevelCrossingSignal(self) -> SignalLevelCrossing:
-		return self._isLevelCrossingSignal
-
-	def setIsMilepost(self, aIsMilepost : SignalMilepost):
-		self._isMilepost = aIsMilepost
-
-	def getIsMilepost(self) -> SignalMilepost:
-		return self._isMilepost
-
-	def setIsSpeedSignal(self, aIsSpeedSignal : SignalSpeed):
-		self._isSpeedSignal = aIsSpeedSignal
-
-	def getIsSpeedSignal(self) -> SignalSpeed:
-		return self._isSpeedSignal
-
-	def setIsStopPost(self, aIsStopPost : SignalStopPost):
-		self._isStopPost = aIsStopPost
-
-	def getIsStopPost(self) -> SignalStopPost:
-		return self._isStopPost
-
-	def setIsTrainMovementSignal(self, aIsTrainMovementSignal : SignalTrainMovement):
-		self._isTrainMovementSignal = aIsTrainMovementSignal
-
-	def getIsTrainMovementSignal(self) -> SignalTrainMovement:
-		return self._isTrainMovementSignal
-
-	def setIsTrainRadioSignal(self, aIsTrainRadioSignal : SignalRadio):
-		self._isTrainRadioSignal = aIsTrainRadioSignal
-
-	def getIsTrainRadioSignal(self) -> SignalRadio:
-		return self._isTrainRadioSignal
-
-	def setIsVehicleEquipmentSignal(self, aIsVehicleEquipmentSignal : SignalVehicleEquipment):
-		self._isVehicleEquipmentSignal = aIsVehicleEquipmentSignal
-
-	def getIsVehicleEquipmentSignal(self) -> SignalVehicleEquipment:
-		return self._isVehicleEquipmentSignal
-
-	def setConnectedWithBaliseGroup(self, *aConnectedWithBaliseGroup : tElementWithIDref):
-		self._connectedWithBaliseGroup = aConnectedWithBaliseGroup
-
-	def getConnectedWithBaliseGroup(self) -> tElementWithIDref:
-		return self._connectedWithBaliseGroup
-
-	def setSignalConstruction(self, aSignalConstruction : SignalConstruction):
-		self._signalConstruction = aSignalConstruction
-
-	def getSignalConstruction(self) -> SignalConstruction:
-		return self._signalConstruction
-
+	@IsSwitchable.setter
+	def IsSwitchable(self, aIsSwitchable : Long):
+		self.___isSwitchable = aIsSwitchable
+	@BelongsToParent.setter
+	def BelongsToParent(self, aBelongsToParent : tRef):
+		self.___belongsToParent = aBelongsToParent
+	@BasedOnTemplate.setter
+	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
+		self.___basedOnTemplate = aBasedOnTemplate
+	@SignalAnnouncement.setter
+	def SignalAnnouncement(self, aSignalAnnouncement : SignalAnnouncement):
+		self.___isAnnouncementSignal = aSignalAnnouncement
+	@SignalCatenary.setter
+	def SignalCatenary(self, aSignalCatenary : SignalCatenary):
+		self.___isCatenarySignal = aSignalCatenary
+	@SignalDanger.setter
+	def SignalDanger(self, aSignalDanger : SignalDanger):
+		self.___isDangerSignal = aSignalDanger
+	@SignalEtcs.setter
+	def SignalEtcs(self, aSignalEtcs : SignalEtcs):
+		self.___isEtcsSignal = aSignalEtcs
+	@SignalInformation.setter
+	def SignalInformation(self, aSignalInformation : SignalInformation):
+		self.___isInformationSignal = aSignalInformation
+	@SignalLevelCrossing.setter
+	def SignalLevelCrossing(self, aSignalLevelCrossing : SignalLevelCrossing):
+		self.___isLevelCrossingSignal = aSignalLevelCrossing
+	@SignalMilepost.setter
+	def SignalMilepost(self, aSignalMilepost : SignalMilepost):
+		self.___isMilepost = aSignalMilepost
+	@SignalSpeed.setter
+	def SignalSpeed(self, aSignalSpeed : SignalSpeed):
+		self.___isSpeedSignal = aSignalSpeed
+	@SignalStopPost.setter
+	def SignalStopPost(self, aSignalStopPost : SignalStopPost):
+		self.___isStopPost = aSignalStopPost
+	@SignalTrainMovement.setter
+	def SignalTrainMovement(self, aSignalTrainMovement : SignalTrainMovement):
+		self.___isTrainMovementSignal = aSignalTrainMovement
+	@SignalRadio.setter
+	def SignalRadio(self, aSignalRadio : SignalRadio):
+		self.___isTrainRadioSignal = aSignalRadio
+	@SignalVehicleEquipment.setter
+	def SignalVehicleEquipment(self, aSignalVehicleEquipment : SignalVehicleEquipment):
+		self.___isVehicleEquipmentSignal = aSignalVehicleEquipment
+	@tElementWithIDref.setter
+	def tElementWithIDref(self, atElementWithIDref : tElementWithIDref):
+		self.___connectedWithBaliseGroup = atElementWithIDref
+	@SignalConstruction.setter
+	def SignalConstruction(self, aSignalConstruction : SignalConstruction):
+		self.___signalConstruction = aSignalConstruction
+	
 	def __init__(self):
-		self.___isSwitchable : int = None	#TODO DEFINED AS LONG
+		self.___isSwitchable : Long = 0
 		"""set TRUE if the signal is able to show several signal aspects, set FALSE if the signal is a static panel that always shows the same signal aspect"""
-		self.___belongsToParent : tRef = None
+		self.___belongsToParent : tRef = tRef.tRef()
 		"""reference to the (one and only) parent signal this signal belongs to"""
-		self.___basedOnTemplate : tRef = None
+		self.___basedOnTemplate : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic signal"""
-		self._isAnnouncementSignal : SignalAnnouncement = None
+		self.___isAnnouncementSignal : SignalAnnouncement = SignalAnnouncement.SignalAnnouncement()
 		# @AssociationType Infrastructure.SignalAnnouncement
 		# @AssociationMultiplicity 0..1
-		self._isCatenarySignal : SignalCatenary = None
+		self.___isCatenarySignal : SignalCatenary = SignalCatenary.SignalCatenary()
 		# @AssociationType Infrastructure.SignalCatenary
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the catenary signal/sign in more detail"""
-		self._isDangerSignal : SignalDanger = None
+		self.___isDangerSignal : SignalDanger = SignalDanger.SignalDanger()
 		# @AssociationType Infrastructure.SignalDanger
 		# @AssociationMultiplicity 0..1
-		self._isEtcsSignal : SignalEtcs = None
+		self.___isEtcsSignal : SignalEtcs = SignalEtcs.SignalEtcs()
 		# @AssociationType Infrastructure.SignalEtcs
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the ETCS signal in more detail"""
-		self._isInformationSignal : SignalInformation = None
+		self.___isInformationSignal : SignalInformation = SignalInformation.SignalInformation()
 		# @AssociationType Infrastructure.SignalInformation
 		# @AssociationMultiplicity 0..1
-		self._isLevelCrossingSignal : SignalLevelCrossing = None
+		self.___isLevelCrossingSignal : SignalLevelCrossing = SignalLevelCrossing.SignalLevelCrossing()
 		# @AssociationType Infrastructure.SignalLevelCrossing
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the level crossing signal in more detail"""
-		self._isMilepost : SignalMilepost = None
+		self.___isMilepost : SignalMilepost = SignalMilepost.SignalMilepost()
 		# @AssociationType Infrastructure.SignalMilepost
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the milepost marker in more detail"""
-		self._isSpeedSignal : SignalSpeed = None
+		self.___isSpeedSignal : SignalSpeed = SignalSpeed.SignalSpeed()
 		# @AssociationType Infrastructure.SignalSpeed
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the speed signal in more detail"""
-		self._isStopPost : SignalStopPost = None
+		self.___isStopPost : SignalStopPost = SignalStopPost.SignalStopPost()
 		# @AssociationType Infrastructure.SignalStopPost
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the stop post in more detail"""
-		self._isTrainMovementSignal : SignalTrainMovement = None
+		self.___isTrainMovementSignal : SignalTrainMovement = SignalTrainMovement.SignalTrainMovement()
 		# @AssociationType Infrastructure.SignalTrainMovement
 		# @AssociationMultiplicity 0..1
-		self._isTrainRadioSignal : SignalRadio = None
+		self.___isTrainRadioSignal : SignalRadio = SignalRadio.SignalRadio()
 		# @AssociationType Infrastructure.SignalRadio
 		# @AssociationMultiplicity 0..1
-		self._isVehicleEquipmentSignal : SignalVehicleEquipment = None
+		self.___isVehicleEquipmentSignal : SignalVehicleEquipment = SignalVehicleEquipment.SignalVehicleEquipment()
 		# @AssociationType Infrastructure.SignalVehicleEquipment
 		# @AssociationMultiplicity 0..1
-		self._connectedWithBaliseGroup : tElementWithIDref = None
+		self.___connectedWithBaliseGroup : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a balise (group) that is connected with this signal"""
-		self._signalConstruction : SignalConstruction = None
+		self.___signalConstruction : SignalConstruction = SignalConstruction.SignalConstruction()
 		# @AssociationType Infrastructure.SignalConstruction
 		# @AssociationMultiplicity 0..1
 		# """child element for construction details of the (physical) signal"""

@@ -1,94 +1,93 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tRef import tRef
-from RailML.Infrastructure.tSwitchType import tSwitchType
-from RailML.Infrastructure.tCourse import tCourse
-from RailML.Infrastructure.SwitchCrossingBranch import SwitchCrossingBranch
-from RailML.Infrastructure.TrackNode import TrackNode
+from RailML.Common import tRef
+from RailML.Infrastructure import tSwitchType, tCourse, SwitchCrossingBranch, TrackNode
 from typing import List
 
-class SwitchIS(TrackNode):
-	def setBelongsToParent(self, aBelongsToParent : tRef):
-		self.___belongsToParent = aBelongsToParent
-
-	def getBelongsToParent(self) -> tRef:
+class SwitchIS(TrackNode.TrackNode):
+	@property
+	def BelongsToParent(self) -> tRef:
 		return self.___belongsToParent
-
-	def setType(self, aType : tSwitchType):
-		self.___type = aType
-
-	def getType(self) -> tSwitchType:
+	@property
+	def Type(self) -> tSwitchType:
 		return self.___type
-
-	def setContinueCourse(self, aContinueCourse : tCourse):
-		self.___continueCourse = aContinueCourse
-
-	def getContinueCourse(self) -> tCourse:
+	@property
+	def ContinueCourse(self) -> tCourse:
 		return self.___continueCourse
-
-	def setBranchCourse(self, aBranchCourse : tCourse):
-		self.___branchCourse = aBranchCourse
-
-	def getBranchCourse(self) -> tCourse:
+	@property
+	def BranchCourse(self) -> tCourse:
 		return self.___branchCourse
-
-	def setBasedOnTemplate(self, aBasedOnTemplate : tRef):
-		self.___basedOnTemplate = aBasedOnTemplate
-
-	def getBasedOnTemplate(self) -> tRef:
+	@property
+	def BasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
+	@property
+	def LeftBranch(self) -> SwitchCrossingBranch:
+		return self.___leftBranch
+	@property
+	def RightBranch(self) -> SwitchCrossingBranch:
+		return self.___rightBranch
+	@property
+	def StraightBranch(self) -> SwitchCrossingBranch:
+		return self.___straightBranch
+	@property
+	def TurningBranch(self) -> SwitchCrossingBranch:
+		return self.___turningBranch
 
-	def setLeftBranch(self, aLeftBranch : SwitchCrossingBranch):
-		self._leftBranch = aLeftBranch
-
-	def getLeftBranch(self) -> SwitchCrossingBranch:
-		return self._leftBranch
-
-	def setRightBranch(self, *aRightBranch : SwitchCrossingBranch):
-		self._rightBranch = aRightBranch
-
-	def getRightBranch(self) -> SwitchCrossingBranch:
-		return self._rightBranch
-
-	def setStraightBranch(self, *aStraightBranch : SwitchCrossingBranch):
-		self._straightBranch = aStraightBranch
-
-	def getStraightBranch(self) -> SwitchCrossingBranch:
-		return self._straightBranch
-
-	def setTurningBranch(self, aTurningBranch : SwitchCrossingBranch):
-		self._turningBranch = aTurningBranch
-
-	def getTurningBranch(self) -> SwitchCrossingBranch:
-		return self._turningBranch
+	@BelongsToParent.setter
+	def BelongsToParent(self, aBelongsToParent : tRef):
+		self.___belongsToParent = aBelongsToParent
+	@Type.setter
+	def Type(self, aType : tSwitchType):
+		self.___type = aType
+	@ContinueCourse.setter
+	def ContinueCourse(self, aContinueCourse : tCourse):
+		self.___continueCourse = aContinueCourse
+	@BranchCourse.setter
+	def BranchCourse(self, aBranchCourse : tCourse):
+		self.___branchCourse = aBranchCourse
+	@BasedOnTemplate.setter
+	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
+		self.___basedOnTemplate = aBasedOnTemplate
+	@LeftBranch.setter
+	def LeftBranch(self, *aLeftBranch : SwitchCrossingBranch):
+		self.___leftBranch = aLeftBranch
+	@RightBranch.setter
+	def RightBranch(self, *aRightBranch : SwitchCrossingBranch):
+		self.___rightBranch = aRightBranch
+	@StraightBranch.setter
+	def StraightBranch(self, *aStraightBranch : SwitchCrossingBranch):
+		self.___straightBranch = aStraightBranch
+	@TurningBranch.setter
+	def TurningBranch(self, *aTurningBranch : SwitchCrossingBranch):
+		self.___turningBranch = aTurningBranch
 
 	def __init__(self):
-		self.___belongsToParent : tRef = None
+		self.___belongsToParent : tRef = tRef.tRef()
 		"""reference to the one an only parent switch of this switch (to be used at switch crossings)"""
-		self.___type : tSwitchType = None
+		self.___type : tSwitchType = tSwitchType.tSwitchType()
 		# @AssociationType Infrastructure.tSwitchType
 		# """type of the switch"""
-		self.___continueCourse : tCourse = None
+		self.___continueCourse : tCourse = tCourse.tCourse()
 		"""defines the switch main track route (as seen from begin of switch, application direction)"""
-		self.___branchCourse : tCourse = None
+		self.___branchCourse : tCourse = tCourse.tCourse()
 		# @AssociationType Infrastructure.tCourse
 		# @AssociationType Infrastructure.tCourse
 		# """defines the switch branching track route (as seen from begin of switch, application direction)"""
-		self.___basedOnTemplate : tRef = None
+		self.___basedOnTemplate : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic switch"""
-		self._leftBranch : SwitchCrossingBranch = None
+		self.___leftBranch : SwitchCrossingBranch = SwitchCrossingBranch.SwitchCrossingBranch()
 		"""left branch of the switch as seen from switch begin (application direction)"""
-		self._rightBranch : SwitchCrossingBranch = None
+		self.___rightBranch : SwitchCrossingBranch = SwitchCrossingBranch.SwitchCrossingBranch()
 		# @AssociationType Infrastructure.SwitchCrossingBranch*
 		# @AssociationMultiplicity 0..2
 		# """right branch of the switch as seen from switch begin (application direction)"""
-		self._straightBranch : SwitchCrossingBranch = None
+		self.___straightBranch : SwitchCrossingBranch = SwitchCrossingBranch.SwitchCrossingBranch()
 		# @AssociationType Infrastructure.SwitchCrossingBranch*
 		# @AssociationMultiplicity 0..2
 		# """only for switch crossings: straight branch"""
-		self._turningBranch : SwitchCrossingBranch = None
+		self.___turningBranch : SwitchCrossingBranch = SwitchCrossingBranch.SwitchCrossingBranch()
 		# @AssociationType Infrastructure.SwitchCrossingBranch
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Infrastructure.SwitchCrossingBranch

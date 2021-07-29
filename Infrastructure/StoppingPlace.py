@@ -1,21 +1,27 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.TrainMovement import TrainMovement
-#from RailML.Infrastructure.aStoppingPlace import aStoppingPlace	#TODO CIRCULAR!
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
+from RailML.Infrastructure import TrainMovement, FunctionalInfrastructureEntity, aStoppingPlace
 from typing import List
 
-class StoppingPlace(FunctionalInfrastructureEntity):
-	def setValidForTrainMovement(self, *aValidForTrainMovement : TrainMovement):
-		self._validForTrainMovement = aValidForTrainMovement
+class StoppingPlace(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def ValidForTrainMovement(self) -> TrainMovement:
+		return self.___validForTrainMovement
+	@property
+	def aStoppingPlace(self) -> aStoppingPlace:
+		return self.___unnamed_aStoppingPlace_
 
-	def getValidForTrainMovement(self) -> TrainMovement:
-		return self._validForTrainMovement
+	@ValidForTrainMovement.setter
+	def ValidForTrainMovement(self, aValidForTrainMovement : TrainMovement):
+		self.___validForTrainMovement = aValidForTrainMovement
+	@aStoppingPlace.setter
+	def aStoppingPlace(self, aaStoppingPlace : aStoppingPlace):
+		self.___unnamed_aStoppingPlace_ = aaStoppingPlace
 
 	def __init__(self):
-		self._validForTrainMovement : TrainMovement = None
+		self.___validForTrainMovement : TrainMovement = TrainMovement.TrainMovement()
 		# @AssociationType Infrastructure.TrainMovement*
 		# @AssociationMultiplicity 0..*
 		# """specify the train movement types for which the stopping place is valid (freight trains, passenger trains, ...)"""
-		#self._unnamed_aStoppingPlace_ : aStoppingPlace = None	#TODO CIRCULAR!
+		#self.___unnamed_aStoppingPlace_ : aStoppingPlace = aStoppingPlace.aStoppingPlace()	#TODO CIRCULAR!
 

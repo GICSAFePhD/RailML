@@ -1,16 +1,18 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.SignalX import SignalX
+from RailML.Infrastructure import SignalX
 from typing import List
 
-class SignalEtcs(SignalX):
-	def setSrsVersion(self, aSrsVersion : str):
-		self.___srsVersion = aSrsVersion
-
-	def getSrsVersion(self) -> str:
+class SignalEtcs(SignalX.SignalX):
+	@property
+	def Version(self) -> str:
 		return self.___srsVersion
+	
+	@Version.setter
+	def Version(self, aVersion : str):
+		self.___srsVersion = aVersion
 
 	def __init__(self):
-		self.___srsVersion : str = None
+		self.___srsVersion : str = ""
 		"""Version of ETCS language (SRS edition) installed"""
 

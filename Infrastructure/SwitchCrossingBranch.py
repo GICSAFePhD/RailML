@@ -1,52 +1,53 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tSpeedKmPerHour import tSpeedKmPerHour
-from RailML.Common.tRef import tRef
-from RailML.Common.tLengthM import tLengthM
+from RailML.Common import tRef, tSpeedKmPerHour, tLengthM
+
 from typing import List
 
 class SwitchCrossingBranch(object):
-	def setBranchingSpeed(self, aBranchingSpeed : tSpeedKmPerHour):
-		self.___branchingSpeed = aBranchingSpeed
-
-	def getBranchingSpeed(self) -> tSpeedKmPerHour:
+	@property
+	def BranchingSpeed(self) -> tSpeedKmPerHour:
 		return self.___branchingSpeed
-
-	def setJoiningSpeed(self, aJoiningSpeed : tSpeedKmPerHour):
-		self.___joiningSpeed = aJoiningSpeed
-
-	def getJoiningSpeed(self) -> tSpeedKmPerHour:
+	@property
+	def JoiningSpeed(self) -> tSpeedKmPerHour:
 		return self.___joiningSpeed
-
-	def setNetRelationRef(self, aNetRelationRef : tRef):
-		self.___netRelationRef = aNetRelationRef
-
-	def getNetRelationRef(self) -> tRef:
+	@property
+	def NetRelationRef(self) -> tRef:
 		return self.___netRelationRef
-
-	def setRadius(self, aRadius : tLengthM):
-		self.___radius = aRadius
-
-	def getRadius(self) -> tLengthM:
+	@property
+	def Radius(self) -> tLengthM:
 		return self.___radius
-
-	def setLength(self, aLength : tLengthM):
-		self.___length = aLength
-
-	def getLength(self) -> tLengthM:
+	@property
+	def Length(self) -> tLengthM:
 		return self.___length
 
+	@BranchingSpeed.setter
+	def BranchingSpeed(self, aBranchingSpeed : tSpeedKmPerHour):
+		self.___branchingSpeed = aBranchingSpeed
+	@JoiningSpeed.setter
+	def JoiningSpeed(self, aJoiningSpeed : tSpeedKmPerHour):
+		self.___joiningSpeed = aJoiningSpeed
+	@NetRelationRef.setter
+	def NetRelationRef(self, aNetRelationRef : tRef):
+		self.___netRelationRef = aNetRelationRef
+	@Radius.setter
+	def Radius(self, aRadius : tLengthM):
+		self.___radius = aRadius
+	@Length.setter
+	def Length(self, aLength : tLengthM):
+		self.___length = aLength
+
 	def __init__(self):
-		self.___branchingSpeed : tSpeedKmPerHour = None
-		self.___joiningSpeed : tSpeedKmPerHour = None
+		self.___branchingSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___joiningSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
-		self.___netRelationRef : tRef = None
+		self.___netRelationRef : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# """reference to the netRelation that defines the navigability at this switch branch"""
-		self.___radius : tLengthM = None
+		self.___radius : tLengthM = tLengthM.tLengthM()
 		"""radius of the switch branch in metres"""
-		self.___length : tLengthM = None
+		self.___length : tLengthM = tLengthM.tLengthM()
 		# @AssociationType Common.tLengthM
 		# @AssociationType Common.tLengthM
 		# """length of the switch branch in metres"""

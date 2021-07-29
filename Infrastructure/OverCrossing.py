@@ -1,53 +1,58 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tCrossingConstructionTypeExt import tCrossingConstructionTypeExt
-from RailML.Common.tRef import tRef
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.Length import Length
-#from RailML.Infrastructure.aVerbalConstraint import aVerbalConstraint #TODO CIRCULAR!
-from RailML.Infrastructure.XCrossing import XCrossing
+from RailML.Common import tRef, tElementWithIDref
+from RailML.Infrastructure import tCrossingConstructionTypeExt, Length, XCrossing, aVerbalConstraint
+
 from typing import List
 
-class OverCrossing(XCrossing):
-	"""An over crossing describes a crossing, where something crosses over the railway line. From constructional point of view an over crossing can be a bridge or a tunnel."""
-	def setConstructionType(self, aConstructionType : tCrossingConstructionTypeExt):
-		self.___constructionType = aConstructionType
-
-	def getConstructionType(self) -> tCrossingConstructionTypeExt:
+class OverCrossing(XCrossing.XCrossing):
+	"""An over crossing describes a crossing, where something crosses over the railway line. From constructional point of view an over crossing can be a bridge or a tunnel."""	
+	@property
+	def ConstructionType(self) -> tCrossingConstructionTypeExt:
 		return self.___constructionType
+	@property
+	def BelongsToParent(self) -> tRef:
+		return self.___belongsToParent	
+	@property
+	def AllowedLoadingGauge(self) -> tElementWithIDref:
+		return self.___allowedLoadingGauge
+	@property
+	def Length(self) -> Length:
+		return self.___length
+	@property
+	def GradientCurve(self) -> aVerbalConstraint:
+		return self.___unnamed_aVerbalConstraint_
 
-	def setBelongsToParent(self, aBelongsToParent : tRef):
+	@ConstructionType.setter
+	def ConstructionType(self, aConstructionType : tCrossingConstructionTypeExt):
+		self.___constructionType = aConstructionType
+	@BelongsToParent.setter
+	def BelongsToParent(self, aBelongsToParent : tRef):
 		self.___belongsToParent = aBelongsToParent
-
-	def getBelongsToParent(self) -> tRef:
-		return self.___belongsToParent
-
-	def setAllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
-		self._allowedLoadingGauge = aAllowedLoadingGauge
-
-	def getAllowedLoadingGauge(self) -> tElementWithIDref:
-		return self._allowedLoadingGauge
-
-	def setLength(self, *aLength : Length):
-		self._length = aLength
-
-	def getLength(self) -> Length:
-		return self._length
+	@AllowedLoadingGauge.setter
+	def AllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
+		self.___allowedLoadingGauge = aAllowedLoadingGauge
+	@Length.setter
+	def Length(self, *aLength : Length):
+		self.___length = aLength
+	@GradientCurve.setter
+	def VerbalConstraint(self, aaVerbalConstraint : aVerbalConstraint):
+		self.___unnamed_aVerbalConstraint_ = aaVerbalConstraint
 
 	def __init__(self):
-		self.___constructionType : tCrossingConstructionTypeExt = None
+		self.___constructionType : tCrossingConstructionTypeExt = tCrossingConstructionTypeExt.tCrossingConstructionTypeExt()
 		# @AssociationType Infrastructure.tCrossingConstructionTypeExt
 		# """construction type of over crossing: bridge or tunnel"""
-		self.___belongsToParent : tRef = None
+		self.___belongsToParent : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# """reference to a parent over crossing"""
-		self._allowedLoadingGauge : tElementWithIDref = None
+		self.___allowedLoadingGauge : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to train clearance gauge classes that are allowed to pass through the over crossing"""
-		self._length : Length = None
+		self.___length : Length = Length.Length()
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the over crossing relative to the railway in metres"""
-		#self._unnamed_aVerbalConstraint_ : aVerbalConstraint = None #TODO CIRCULAR!
+		self.___unnamed_aVerbalConstraint_ : aVerbalConstraint = aVerbalConstraint.aVerbalConstraint()
 

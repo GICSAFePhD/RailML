@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.SignalX import SignalX
+from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import SignalX
 from typing import List
 
-class SignalRadio(SignalX):
-	def setRefersToTrainRadioSection(self, *aRefersToTrainRadioSection : tElementWithIDref):
-		self._refersToTrainRadioSection = aRefersToTrainRadioSection
-
-	def getRefersToTrainRadioSection(self) -> tElementWithIDref:
-		return self._refersToTrainRadioSection
+class SignalRadio(SignalX.SignalX):
+	@property
+	def RefersToTrainRadioSection(self) -> tElementWithIDref:
+		return self.___refersToTrainRadioSection
+	
+	@RefersToTrainRadioSection.setter
+	def RefersToTrainRadioSection(self, aRefersToTrainRadioSection : tElementWithIDref):
+		self.___refersToTrainRadioSection = aRefersToTrainRadioSection
 
 	def __init__(self):
-		self._refersToTrainRadioSection : tElementWithIDref = None
+		self.___refersToTrainRadioSection : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 

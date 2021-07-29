@@ -1,63 +1,79 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from typing import List
+from RailML.Common import tElementWithIDref
+from typing import List, NewType
+
+PositiveInteger = NewType("PositiveInteger", int)
 
 class OpEquipment(object):
-	def setNumberOfStationTracks(self, aNumberOfStationTracks : int): #TODO DEFINED AS POSITIVEINTEGER
-		self.___numberOfStationTracks = aNumberOfStationTracks
-
-	def getNumberOfStationTracks(self) -> int:	#TODO DEFINED AS POSITIVEINTEGER
-		return self.___numberOfStationTracks
-
+	
 	def setOwnsPlatform(self, *aOwnsPlatform : tElementWithIDref):
 		self._ownsPlatform = aOwnsPlatform
-
-	def getOwnsPlatform(self) -> tElementWithIDref:
-		return self._ownsPlatform
-
 	def setOwnsTrack(self, *aOwnsTrack : tElementWithIDref):
 		self._ownsTrack = aOwnsTrack
-
-	def getOwnsTrack(self) -> tElementWithIDref:
-		return self._ownsTrack
-
 	def setOwnsSignal(self, *aOwnsSignal : tElementWithIDref):
 		self._ownsSignal = aOwnsSignal
-
-	def getOwnsSignal(self) -> tElementWithIDref:
-		return self._ownsSignal
-
 	def setOwnsStoppingPlace(self, *aOwnsStoppingPlace : tElementWithIDref):
 		self._ownsStoppingPlace = aOwnsStoppingPlace
-
-	def getOwnsStoppingPlace(self) -> tElementWithIDref:
-		return self._ownsStoppingPlace
-
 	def setOwnsServiceSection(self, *aOwnsServiceSection : tElementWithIDref):
 		self._ownsServiceSection = aOwnsServiceSection
 
-	def getOwnsServiceSection(self) -> tElementWithIDref:
-		return self._ownsServiceSection
+	@property
+	def NumberOfStationTracks(self) -> PositiveInteger:
+		return self.___numberOfStationTracks
+	@property
+	def OwnsPlatform(self) -> tElementWithIDref:
+		return self.___ownsPlatform
+	@property
+	def OwnsTrack(self) -> tElementWithIDref:
+		return self.___ownsTrack
+	@property
+	def OwnsSignal(self) -> tElementWithIDref:
+		return self.___ownsSignal
+	@property
+	def OwnsStoppingPlace(self) -> tElementWithIDref:
+		return self.___ownsStoppingPlace
+	@property
+	def OwnsServiceSection(self) -> tElementWithIDref:
+		return self.___ownsServiceSection
+
+	@NumberOfStationTracks.setter
+	def NumberOfStationTracks(self, aNumberOfStationTracks : PositiveInteger):
+		self.___numberOfStationTracks = aNumberOfStationTracks
+	@OwnsPlatform.setter
+	def OwnsPlatform(self, aOwnsPlatform : tElementWithIDref):
+		self.___ownsPlatform = aOwnsPlatform
+	@OwnsTrack.setter
+	def OwnsTrack(self, aOwnsTrack : tElementWithIDref):
+		self.___ownsTrack = aOwnsTrack
+	@OwnsSignal.setter
+	def OwnsSignal(self, aOwnsSignal : tElementWithIDref):
+		self.___ownsSignal = aOwnsSignal
+	@OwnsStoppingPlace.setter
+	def OwnsStoppingPlace(self, aOwnsStoppingPlace : tElementWithIDref):
+		self.___ownsStoppingPlace = aOwnsStoppingPlace
+	@OwnsServiceSection.setter
+	def OwnsServiceSection(self, aOwnsServiceSection : tElementWithIDref):
+		self.___ownsServiceSection = aOwnsServiceSection
 
 	def __init__(self):
-		self.___numberOfStationTracks : int = None	#TODO DEFINED AS POSITIVEINTEGER
+		self.___numberOfStationTracks : PositiveInteger = 0
 		"""number of tracks that are available for operation within the operational point"""
-		self._ownsPlatform : tElementWithIDref = None
+		self.___ownsPlatform : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		"""reference to a platform element that belongs to the operational point"""
-		self._ownsTrack : tElementWithIDref = None
+		self.___ownsTrack : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a track element that belongs to the operational point"""
-		self._ownsSignal : tElementWithIDref = None
+		self.___ownsSignal : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a signal element that belongs to the operational point"""
-		self._ownsStoppingPlace : tElementWithIDref = None
+		self.___ownsStoppingPlace : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a stopping place element that belongs to the operational point"""
-		self._ownsServiceSection : tElementWithIDref = None
+		self.___ownsServiceSection : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Common.tElementWithIDref*

@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.SignalX import SignalX
+from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import SignalX
 from typing import List
 
-class SignalStopPost(SignalX):
-	def setRefersToStoppingPlace(self, aRefersToStoppingPlace : tElementWithIDref):
-		self._refersToStoppingPlace = aRefersToStoppingPlace
-
-	def getRefersToStoppingPlace(self) -> tElementWithIDref:
-		return self._refersToStoppingPlace
+class SignalStopPost(SignalX.SignalX):
+	@property
+	def RefersToStoppingPlace(self) -> tElementWithIDref:
+		return self.___refersToStoppingPlace
+	
+	@RefersToStoppingPlace.setter
+	def RefersToStoppingPlace(self, aRefersToStoppingPlace : tElementWithIDref):
+		self.___refersToStoppingPlace = aRefersToStoppingPlace
 
 	def __init__(self):
-		self._refersToStoppingPlace : tElementWithIDref = None
+		self.___refersToStoppingPlace : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to the stoppingPlace"""

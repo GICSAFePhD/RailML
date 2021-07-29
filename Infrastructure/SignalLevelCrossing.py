@@ -1,28 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tSignalLevelCrossingType import tSignalLevelCrossingType
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.SignalX import SignalX
+from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import tSignalLevelCrossingType, SignalX
 from typing import List
 
-class SignalLevelCrossing(SignalX):
-	def setType(self, aType : tSignalLevelCrossingType):
-		self.___type = aType
-
-	def getType(self) -> tSignalLevelCrossingType:
+class SignalLevelCrossing(SignalX.SignalX):
+	@property
+	def tSignalLevelCrossingType(self) -> tSignalLevelCrossingType:
 		return self.___type
-
-	def setRefersToLevelCrossing(self, *aRefersToLevelCrossing : tElementWithIDref):
-		self._refersToLevelCrossing = aRefersToLevelCrossing
-
-	def getRefersToLevelCrossing(self) -> tElementWithIDref:
-		return self._refersToLevelCrossing
+	@property
+	def tElementWithIDref(self) -> tElementWithIDref:
+		return self.___refersToLevelCrossing
+	
+	@tSignalLevelCrossingType.setter
+	def tSignalLevelCrossingType(self, atSignalLevelCrossingType : tSignalLevelCrossingType):
+		self.___type = atSignalLevelCrossingType
+	@tElementWithIDref.setter
+	def tElementWithIDref(self, *atElementWithIDref : tElementWithIDref):
+		self.___refersToLevelCrossing = tElementWithIDref
 
 	def __init__(self):
-		self.___type : tSignalLevelCrossingType = None
+		self.___type : tSignalLevelCrossingType = tSignalLevelCrossingType.tSignalLevelCrossingType()
 		# @AssociationType Infrastructure.tSignalLevelCrossingType
 		# """type of the level crossing signal"""
-		self._refersToLevelCrossing : tElementWithIDref = None
+		self.___refersToLevelCrossing : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 1..*
 		# """reference to the level crossing element that is protected by the signal"""

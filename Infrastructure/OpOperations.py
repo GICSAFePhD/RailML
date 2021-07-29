@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.OpOperation import OpOperation
+from RailML.Infrastructure import OpOperation
 from typing import List
 
 class OpOperations(object):
-	def setOpOperation(self, *aOpOperation : OpOperation):
-		self._opOperation = aOpOperation
-
-	def getOpOperation(self) -> OpOperation:
-		return self._opOperation
+	@property
+	def OpOperation(self) -> OpOperation:
+		return self.___opOperation
+	
+	@OpOperation.setter
+	def OpOperation(self, *aOpOperation : OpOperation):
+		self.___opOperation = aOpOperation
 
 	def __init__(self):
-		self._opOperation : OpOperation = None
+		self.___opOperation : OpOperation = OpOperation.OpOperation()
 		# @AssociationType Infrastructure.OpOperation*
 		# @AssociationMultiplicity 1..*
 		# """railway operation"""
