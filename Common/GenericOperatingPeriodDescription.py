@@ -1,32 +1,34 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.DateWithBitmask import DateWithBitmask
-from RailML.Common.PeriodRuleElement import PeriodRuleElement
-from typing import List
+from RailML.Common import DateWithBitmask, PeriodRuleElement
+from typing import List, NewType
+Long = NewType("Long", int)
 
-class GenericOperatingPeriodDescription(PeriodRuleElement):
-	def setName(self, aName : str):
-		self.___name = aName
-
-	def getName(self) -> str:
+class GenericOperatingPeriodDescription(PeriodRuleElement.PeriodRuleElement):
+	@property
+	def Name(self) -> str:
 		return self.___name
-
-	def setIsPublicHoliday(self, aIsPublicHoliday : int):	#TODO DEFINED AS LONG
-		self.___isPublicHoliday = aIsPublicHoliday
-
-	def getIsPublicHoliday(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def IsPublicHoliday(self) -> Long:
 		return self.___isPublicHoliday
+	@property
+	def DateSet(self) -> DateWithBitmask:
+		return self.___dateSet
 
-	def setDateSet(self, *aDateSet : DateWithBitmask):	#TODO DEFINED AS LONG
-		self._dateSet = aDateSet
-
-	def getDateSet(self) -> DateWithBitmask:
-		return self._dateSet
+	@Name.setter
+	def Name(self, aName : str):
+		self.___name = aName
+	@IsPublicHoliday.setter
+	def IsPublicHoliday(self, aIsPublicHoliday : Long):
+		self.___isPublicHoliday = aIsPublicHoliday
+	@DateSet.setter
+	def DateSet(self, *aDateSet : DateWithBitmask):
+		self.___dateSet = aDateSet
 
 	def __init__(self):
-		self.___name : str = None
-		self.___isPublicHoliday : int = None	#TODO DEFINED AS LONG
-		self._dateSet : DateWithBitmask = None
+		self.___name : str = ""
+		self.___isPublicHoliday : Long = 0
+		self.___dateSet : DateWithBitmask = DateWithBitmask.DateWithBitmask()
 		# @AssociationType Common.DateWithBitmask*
 		# @AssociationMultiplicity 1..*
 

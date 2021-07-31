@@ -1,28 +1,28 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.OperatingDay import OperatingDay
-from RailML.Common.GenericOperatingPeriodDescription import GenericOperatingPeriodDescription
-from RailML.Common.ShiftablePeriodRule import ShiftablePeriodRule
+from RailML.Common import OperatingDay, GenericOperatingPeriodDescription, ShiftablePeriodRule
 from typing import List
 
-class ElemBasedPeriodRule(ShiftablePeriodRule):
-	def setOperatingDay(self, aOperatingDay : OperatingDay):
-		self._operatingDay = aOperatingDay
+class ElemBasedPeriodRule(ShiftablePeriodRule.ShiftablePeriodRule):
+	@property
+	def OperatingDay(self) -> OperatingDay:
+		return self.___operatingDay
+	@property
+	def GenericOperatingPeriodDescription(self) -> GenericOperatingPeriodDescription:
+		return self.___genericOperatingPeriod
 
-	def getOperatingDay(self) -> OperatingDay:
-		return self._operatingDay
-
-	def setGenericOperatingPeriod(self, aGenericOperatingPeriod : GenericOperatingPeriodDescription):
-		self._genericOperatingPeriod = aGenericOperatingPeriod
-
-	def getGenericOperatingPeriod(self) -> GenericOperatingPeriodDescription:
-		return self._genericOperatingPeriod
+	@OperatingDay.setter
+	def OperatingDay(self, aOperatingDay : OperatingDay):
+		self.___operatingDay = aOperatingDay
+	@GenericOperatingPeriodDescription.setter
+	def GenericOperatingPeriodDescription(self, aGenericOperatingPeriodDescription : GenericOperatingPeriodDescription):
+		self.___genericOperatingPeriod = aGenericOperatingPeriodDescription
 
 	def __init__(self):
-		self._operatingDay : OperatingDay = None
+		self.___operatingDay : OperatingDay = OperatingDay.OperatingDay()
 		# @AssociationType Common.OperatingDay
 		# @AssociationMultiplicity 0..1
-		self._genericOperatingPeriod : GenericOperatingPeriodDescription = None
+		self.___genericOperatingPeriod : GenericOperatingPeriodDescription = GenericOperatingPeriodDescription.GenericOperatingPeriodDescription()
 		# @AssociationType Common.GenericOperatingPeriodDescription
 		# @AssociationMultiplicity 0..1
 

@@ -1,18 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.ClockTimePeriod import ClockTimePeriod
-from RailML.Common.TimePeriodRule import TimePeriodRule
+from RailML.Common import ClockTimePeriod, TimePeriodRule
 from typing import List
 
-class PeriodRule(TimePeriodRule):
-	def setPeriod(self, *aPeriod : ClockTimePeriod):
-		self._period = aPeriod
-
-	def getPeriod(self) -> ClockTimePeriod:
-		return self._period
+class PeriodRule(TimePeriodRule.TimePeriodRule):
+	@property
+	def Period(self) -> ClockTimePeriod:
+		return self.___period
+	
+	@Period.setter
+	def Period(self, *aPeriod : ClockTimePeriod):
+		self.___period = aPeriod
 
 	def __init__(self):
-		self._period : ClockTimePeriod = None
+		self.___period : ClockTimePeriod = ClockTimePeriod.ClockTimePeriod()
 		# @AssociationType Common.ClockTimePeriod*
 		# @AssociationMultiplicity 1..*
 

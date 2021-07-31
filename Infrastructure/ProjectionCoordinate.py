@@ -1,28 +1,31 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from typing import List
+from typing import List, NewType
+Decimal = NewType("Decimal", int)
 
 class ProjectionCoordinate(object):
-	def setX(self, aX : int):	#TODO DEFINED AS DECIMAL
-		self.___x = aX
-
-	def getX(self) -> int:	#TODO DEFINED AS DECIMAL
+	@property
+	def X(self) -> Decimal:
 		return self.___x
-
-	def setY(self, aY : int):	#TODO DEFINED AS DECIMAL
-		self.___y = aY
-
-	def getY(self) -> int:	#TODO DEFINED AS DECIMAL
+	@property
+	def Y(self) -> Decimal:
 		return self.___y
-
-	def setZ(self, aZ : int):	#TODO DEFINED AS DECIMAL
-		self.___z = aZ
-
-	def getZ(self) -> int:	#TODO DEFINED AS DECIMAL
+	@property
+	def Z(self) -> Decimal:
 		return self.___z
 
+	@X.setter
+	def X(self, aX : Decimal):
+		self.___x = aX
+	@Y.setter
+	def Y(self, aY : Decimal):
+		self.___y = aY
+	@Z.setter
+	def Z(self, aZ : Decimal):
+		self.___z = aZ
+
 	def __init__(self):
-		self.___x : int = None	#TODO DEFINED AS DECIMAL
-		self.___y : int = None	#TODO DEFINED AS DECIMAL
-		self.___z : int = None	#TODO DEFINED AS DECIMAL
+		self.___x : Decimal = 0
+		self.___y : Decimal = 0
+		self.___z : Decimal = 0
 

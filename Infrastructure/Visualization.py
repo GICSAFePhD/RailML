@@ -1,50 +1,49 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tRef import tRef
-from RailML.Infrastructure.SpotProjection import SpotProjection
-from RailML.Infrastructure.LinearProjection import LinearProjection
-from RailML.Infrastructure.AreaProjection import AreaProjection
-from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElement
+from RailML.Common import tRef
+from RailML.Infrastructure import SpotProjection, LinearProjection, AreaProjection, VisualizationBaseElement
 from typing import List
 
-class Visualization(VisualizationBaseElement):
-	def setPositioningSystemRef(self, aPositioningSystemRef : tRef):
-		self.___positioningSystemRef = aPositioningSystemRef
-
-	def getPositioningSystemRef(self) -> tRef:
+class Visualization(VisualizationBaseElement.VisualizationBaseElement):
+	@property
+	def PositioningSystemRef(self) -> tRef:
 		return self.___positioningSystemRef
+	@property
+	def SpotElementProjection(self) -> SpotProjection:
+		return self.___spotElementProjection
+	@property
+	def LinearElementProjection(self) -> LinearProjection:
+		return self.___linearElementProjection
+	@property
+	def AreaElementProjection(self) -> AreaProjection:
+		return self.___areaElementProjection
 
-	def setSpotElementProjection(self, *aSpotElementProjection : SpotProjection):
-		self._spotElementProjection = aSpotElementProjection
-
-	def getSpotElementProjection(self) -> SpotProjection:
-		return self._spotElementProjection
-
-	def setLinearElementProjection(self, *aLinearElementProjection : LinearProjection):
-		self._linearElementProjection = aLinearElementProjection
-
-	def getLinearElementProjection(self) -> LinearProjection:
-		return self._linearElementProjection
-
-	def setAreaElementProjection(self, *aAreaElementProjection : AreaProjection):
-		self._areaElementProjection = aAreaElementProjection
-
-	def getAreaElementProjection(self) -> AreaProjection:
-		return self._areaElementProjection
+	@PositioningSystemRef.setter
+	def PositioningSystemRef(self, aPositioningSystemRef : tRef):
+		self.___positioningSystemRef = aPositioningSystemRef
+	@SpotElementProjection.setter
+	def SpotElementProjection(self, *aSpotElementProjection : SpotProjection):
+		self.___spotElementProjection = aSpotElementProjection
+	@LinearElementProjection.setter
+	def LinearElementProjection(self, *aLinearElementProjection : LinearProjection):
+		self.___linearElementProjection = aLinearElementProjection
+	@AreaElementProjection.setter
+	def AreaElementProjection(self, *aAreaElementProjection : AreaProjection):
+		self.___areaElementProjection = aAreaElementProjection
 
 	def __init__(self):
-		self.___positioningSystemRef : tRef = None
+		self.___positioningSystemRef : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# """reference to a positioning system"""
-		self._spotElementProjection : SpotProjection = None
+		self.___spotElementProjection : SpotProjection = SpotProjection.SpotProjection()
 		# @AssociationType Infrastructure.SpotProjection*
 		# @AssociationMultiplicity 0..*
 		# """element projection as spot location (1 coordinate)"""
-		self._linearElementProjection : LinearProjection = None
+		self.___linearElementProjection : LinearProjection = LinearProjection.LinearProjection()
 		# @AssociationType Infrastructure.LinearProjection*
 		# @AssociationMultiplicity 0..*
 		# """element projection as linear location (min 2 coordinates)"""
-		self._areaElementProjection : AreaProjection = None
+		self.___areaElementProjection : AreaProjection = AreaProjection.AreaProjection()
 		# @AssociationType Infrastructure.AreaProjection*
 		# @AssociationMultiplicity 0..*
 		# """element projection as area location (min 3 coordinates)"""

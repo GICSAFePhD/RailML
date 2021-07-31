@@ -1,45 +1,45 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.PeriodRule import PeriodRule
-from RailML.Common.PublicHolidayPeriodRule import PublicHolidayPeriodRule
-from RailML.Common.ElemBasedPeriodRule import ElemBasedPeriodRule
+from RailML.Common import PeriodRule, PublicHolidayPeriodRule, ElemBasedPeriodRule
 import datetime
 from typing import List
 
 class TimePeriodRuleSituation(object):
-	def setFromDate(self, aFromDate : datetime):	#TODO DEFINED AS date
-		self.___fromDate = aFromDate
-
-	def getFromDate(self) -> datetime:	#TODO DEFINED AS date
+	@property
+	def FromDate(self) -> datetime:
 		return self.___fromDate
+	@property
+	def PeriodRule(self) -> PeriodRule:
+		return self.___periodRule
+	@property
+	def PublicHolidayPeriodRule(self) -> PublicHolidayPeriodRule:
+		return self.___publicHolidayPeriodRule
+	@property
+	def ElementBasedPeriodRule(self) -> ElemBasedPeriodRule:
+		return self.___elementBasedPeriodRule
 
-	def setPeriodRule(self, aPeriodRule : PeriodRule):
-		self._periodRule = aPeriodRule
-
-	def getPeriodRule(self) -> PeriodRule:
-		return self._periodRule
-
-	def setPublicHolidayPeriodRule(self, aPublicHolidayPeriodRule : PublicHolidayPeriodRule):
-		self._publicHolidayPeriodRule = aPublicHolidayPeriodRule
-
-	def getPublicHolidayPeriodRule(self) -> PublicHolidayPeriodRule:
-		return self._publicHolidayPeriodRule
-
-	def setElementBasedPeriodRule(self, aElementBasedPeriodRule : ElemBasedPeriodRule):
-		self._elementBasedPeriodRule = aElementBasedPeriodRule
-
-	def getElementBasedPeriodRule(self) -> ElemBasedPeriodRule:
-		return self._elementBasedPeriodRule
+	@FromDate.setter
+	def FromDate(self, aFromDate : datetime):
+		self.___fromDate = aFromDate
+	@PeriodRule.setter
+	def PeriodRule(self, aPeriodRule : PeriodRule):
+		self.___periodRule = aPeriodRule
+	@PublicHolidayPeriodRule.setter
+	def PublicHolidayPeriodRule(self, aPublicHolidayPeriodRule : PublicHolidayPeriodRule):
+		self.___publicHolidayPeriodRule = aPublicHolidayPeriodRule
+	@ElementBasedPeriodRule.setter
+	def ElementBasedPeriodRule(self, aElementBasedPeriodRule : ElemBasedPeriodRule):
+		self.___elementBasedPeriodRule = aElementBasedPeriodRule
 
 	def __init__(self):
-		self.___fromDate : datetime = None	#TODO DEFINED AS date
-		self._periodRule : PeriodRule = None
+		self.___fromDate : datetime = 0	#TODO DEFINED AS date
+		self.___periodRule : PeriodRule = PeriodRule.PeriodRule()
 		# @AssociationType Common.PeriodRule
 		# @AssociationMultiplicity 0..1
-		self._publicHolidayPeriodRule : PublicHolidayPeriodRule = None
+		self.___publicHolidayPeriodRule : PublicHolidayPeriodRule = PublicHolidayPeriodRule.PublicHolidayPeriodRule()
 		# @AssociationType Common.PublicHolidayPeriodRule
 		# @AssociationMultiplicity 0..1
-		self._elementBasedPeriodRule : ElemBasedPeriodRule = None
+		self.___elementBasedPeriodRule : ElemBasedPeriodRule = ElemBasedPeriodRule.ElemBasedPeriodRule()
 		# @AssociationType Common.ElemBasedPeriodRule
 		# @AssociationMultiplicity 0..1
 

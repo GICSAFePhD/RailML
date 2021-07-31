@@ -47,15 +47,15 @@ class Infrastructure(tElementWithID.tElementWithID):
 		self.___infrastructureStates = aInfrastructureStates
 
 	def __init__(self):
-		#self.___topology : Topology = Topology.Topology()
+		self.___topology : Topology = Topology.Topology()
 		# @AssociationType Infrastructure.Topology
 		# @AssociationMultiplicity 0..1
 		# """container element for topology model"""
-		#self.___geometry : Geometry = Geometry.Geometry()
+		self.___geometry : Geometry = Geometry.Geometry()
 		# @AssociationType Infrastructure.Geometry
 		# @AssociationMultiplicity 0..1
 		# """container element for geometry model"""
-		#self.___functionalInfrastructure : FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
+		self.___functionalInfrastructure : FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
 		# @AssociationType Infrastructure.FunctionalInfrastructure
 		# @AssociationMultiplicity 0..1
 		# """container element for all railway network's functional infrastructure elements"""

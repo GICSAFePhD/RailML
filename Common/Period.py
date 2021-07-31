@@ -1,37 +1,37 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.CalendarTimePeriod import CalendarTimePeriod
-from RailML.Common.CalendarTimePeriodWithBitmask import CalendarTimePeriodWithBitmask
-from RailML.Common.GenericTimePeriod import GenericTimePeriod
+from RailML.Common import CalendarTimePeriod, CalendarTimePeriodWithBitmask, GenericTimePeriod
 from typing import List
 
 class Period(object):
-	def setPeriod(self, aPeriod : CalendarTimePeriod):
-		self._period = aPeriod
+	@property
+	def CalendarTimePeriod(self) -> CalendarTimePeriod:
+		return self.___period
+	@property
+	def CalendarTimePeriodWithBitmask(self) -> CalendarTimePeriodWithBitmask:
+		return self.___periodBitmask
+	@property
+	def GenericTimePeriod(self) -> GenericTimePeriod:
+		return self.___periodGeneric
 
-	def getPeriod(self) -> CalendarTimePeriod:
-		return self._period
-
-	def setPeriodBitmask(self, aPeriodBitmask : CalendarTimePeriodWithBitmask):
-		self._periodBitmask = aPeriodBitmask
-
-	def getPeriodBitmask(self) -> CalendarTimePeriodWithBitmask:
-		return self._periodBitmask
-
-	def setPeriodGeneric(self, aPeriodGeneric : GenericTimePeriod):
-		self._periodGeneric = aPeriodGeneric
-
-	def getPeriodGeneric(self) -> GenericTimePeriod:
-		return self._periodGeneric
+	@CalendarTimePeriod.setter
+	def CalendarTimePeriod(self, aCalendarTimePeriod : CalendarTimePeriod):
+		self.___period = aCalendarTimePeriod
+	@CalendarTimePeriodWithBitmask.setter
+	def CalendarTimePeriodWithBitmask(self, aCalendarTimePeriodWithBitmask : CalendarTimePeriodWithBitmask):
+		self.___periodBitmask = aCalendarTimePeriodWithBitmask
+	@GenericTimePeriod.setter
+	def GenericTimePeriod(self, aGenericTimePeriod : GenericTimePeriod):
+		self.___periodGeneric = aGenericTimePeriod
 
 	def __init__(self):
-		self._period : CalendarTimePeriod = None
+		self.___period : CalendarTimePeriod = CalendarTimePeriod.CalendarTimePeriod()
 		# @AssociationType Common.CalendarTimePeriod
 		# @AssociationMultiplicity 0..1
-		self._periodBitmask : CalendarTimePeriodWithBitmask = None
+		self.___periodBitmask : CalendarTimePeriodWithBitmask = CalendarTimePeriodWithBitmask.CalendarTimePeriodWithBitmask()
 		# @AssociationType Common.CalendarTimePeriodWithBitmask
 		# @AssociationMultiplicity 0..1
-		self._periodGeneric : GenericTimePeriod = None
+		self.___periodGeneric : GenericTimePeriod = GenericTimePeriod.GenericTimePeriod()
 		# @AssociationType Common.GenericTimePeriod
 		# @AssociationMultiplicity 0..1
 
