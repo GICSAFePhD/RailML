@@ -6,11 +6,6 @@ from typing import List
 
 class UnderCrossing(XCrossing.XCrossing):
 	"""An under crossing describes a crossing, where something crosses under the railway line. The most common constructional type of an under crossing is a bridge."""
-	def setAllowedWeightLimit(self, *aAllowedWeightLimit : tElementWithIDref):
-		self._allowedWeightLimit = aAllowedWeightLimit
-	def setLength(self, *aLength : Length):
-		self._length = aLength
-
 	@property
 	def ConstructionType(self) -> tCrossingConstructionTypeExt:
 		return self.___constructionType
@@ -19,13 +14,13 @@ class UnderCrossing(XCrossing.XCrossing):
 		return self.___belongsToParent	
 	@property
 	def AllowedLoadingGauge(self) -> tElementWithIDref:
-		return self.___allowedLoadingGauge
+		return self.___allowedWeightLimit
 	@property
 	def Length(self) -> Length:
 		return self.___length
 	@property
-	def GradientCurve(self) -> aVerbalConstraint:
-		return self.___unnamed_aVerbalConstraint_
+	def VerbalConstraint(self) -> aVerbalConstraint:
+		return self.___unnamed_aVerbalConstraint
 
 	@ConstructionType.setter
 	def ConstructionType(self, aConstructionType : tCrossingConstructionTypeExt):
@@ -35,13 +30,13 @@ class UnderCrossing(XCrossing.XCrossing):
 		self.___belongsToParent = aBelongsToParent
 	@AllowedLoadingGauge.setter
 	def AllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
-		self.___allowedLoadingGauge = aAllowedLoadingGauge
+		self.___allowedWeightLimit = aAllowedLoadingGauge
 	@Length.setter
 	def Length(self, *aLength : Length):
 		self.___length = aLength
-	@GradientCurve.setter
+	@VerbalConstraint.setter
 	def VerbalConstraint(self, aaVerbalConstraint : aVerbalConstraint):
-		self.___unnamed_aVerbalConstraint_ = aaVerbalConstraint
+		self.___unnamed_aVerbalConstraint = aaVerbalConstraint
 
 	def __init__(self):
 		self.___constructionType : tCrossingConstructionTypeExt = tCrossingConstructionTypeExt.tCrossingConstructionTypeExt()
@@ -58,5 +53,5 @@ class UnderCrossing(XCrossing.XCrossing):
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the under crossing relative to the railway in metres"""
-		self.___unnamed_aVerbalConstraint_ : aVerbalConstraint = aVerbalConstraint.aVerbalConstraint()
+		self.___unnamed_aVerbalConstraint : aVerbalConstraint = aVerbalConstraint.aVerbalConstraint()
 

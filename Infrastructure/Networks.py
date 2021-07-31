@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.Network import Network
+from RailML.Infrastructure import Network
 from typing import List
 
 class Networks(object):
@@ -13,7 +13,7 @@ class Networks(object):
 		self.___network = aNetwork
 
 	def __init__(self):
-		self.___network : Network = Network()
+		self.___network : Network = Network.Network()
 		# @AssociationType Infrastructure.Network*
 		# @AssociationMultiplicity 1..*	#TODO 1...*
 

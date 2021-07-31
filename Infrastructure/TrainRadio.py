@@ -1,68 +1,70 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tTrainRadioSystemExt import tTrainRadioSystemExt
-from RailML.Infrastructure.tTrainRadioNetworkSelectionExt import tTrainRadioNetworkSelectionExt
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
-from typing import List
+from RailML.Infrastructure import tTrainRadioSystemExt, tTrainRadioNetworkSelectionExt, FunctionalInfrastructureEntity
+from typing import List, NewType
 
-class TrainRadio(FunctionalInfrastructureEntity):
-	def setSupportsBroadcastCalls(self, aSupportsBroadcastCalls : int):	#TODO DEFINED AS LONG
-		self.___supportsBroadcastCalls = aSupportsBroadcastCalls
+Long = NewType("Long", int)
 
-	def getSupportsBroadcastCalls(self) -> int:	#TODO DEFINED AS LONG
+class TrainRadio(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def SupportsBroadcastCalls(self) -> Long:
 		return self.___supportsBroadcastCalls
-
-	def setSupportsDirectMode(self, aSupportsDirectMode : int):	#TODO DEFINED AS LONG
-		self.___supportsDirectMode = aSupportsDirectMode
-
-	def getSupportsDirectMode(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def SupportsDirectMode(self) -> Long:
 		return self.___supportsDirectMode
-
-	def setSupportsPublicEmergency(self, aSupportsPublicEmergency : int):	#TODO DEFINED AS LONG
-		self.___supportsPublicEmergency = aSupportsPublicEmergency
-
-	def getSupportsPublicEmergency(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def SupportsPublicEmergency(self) -> Long:
 		return self.___supportsPublicEmergency
-
-	def setSupportsPublicNetworkRoaming(self, aSupportsPublicNetworkRoaming : int):	#TODO DEFINED AS LONG
-		self.___supportsPublicNetworkRoaming = aSupportsPublicNetworkRoaming
-
-	def getSupportsPublicNetworkRoaming(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def SupportsPublicNetworkRoaming(self) -> Long:
 		return self.___supportsPublicNetworkRoaming
-
-	def setRadioSystem(self, aRadioSystem : tTrainRadioSystemExt):
-		self.___radioSystem = aRadioSystem
-
-	def getRadioSystem(self) -> tTrainRadioSystemExt:
+	@property
+	def RadioSystem(self) -> tTrainRadioSystemExt:
 		return self.___radioSystem
-
-	def setSupportsTextMessageService(self, aSupportsTextMessageService : int):		#TODO DEFINED AS LONG
-		self.___supportsTextMessageService = aSupportsTextMessageService
-
-	def getSupportsTextMessageService(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def SupportsTextMessageService(self) -> Long:
 		return self.___supportsTextMessageService
-
-	def setNetworkSelection(self, aNetworkSelection : tTrainRadioNetworkSelectionExt):
-		self.___networkSelection = aNetworkSelection
-
-	def getNetworkSelection(self) -> tTrainRadioNetworkSelectionExt:
+	@property
+	def NetworkSelection(self) -> tTrainRadioNetworkSelectionExt:
 		return self.___networkSelection
 
+	@SupportsBroadcastCalls.setter
+	def SupportsBroadcastCalls(self, aSupportsBroadcastCalls : Long):
+		self.___supportsBroadcastCalls = aSupportsBroadcastCalls
+	@SupportsDirectMode.setter
+	def SupportsDirectMode(self, aSupportsDirectMode : Long):
+		self.___supportsDirectMode = aSupportsDirectMode
+	@SupportsPublicEmergency.setter
+	def SupportsPublicEmergency(self, aSupportsPublicEmergency : Long):
+		self.___supportsPublicEmergency = aSupportsPublicEmergency
+	@SupportsPublicNetworkRoaming.setter
+	def SupportsPublicNetworkRoaming(self, aSupportsPublicNetworkRoaming : Long):
+		self.___supportsPublicNetworkRoaming = aSupportsPublicNetworkRoaming
+	@RadioSystem.setter
+	def RadioSystem(self, aRadioSystem : tTrainRadioSystemExt):
+		self.___radioSystem = aRadioSystem
+	@SupportsTextMessageService.setter
+	def SupportsTextMessageService(self, aSupportsTextMessageService : Long):
+		self.___supportsTextMessageService = aSupportsTextMessageService
+	@NetworkSelection.setter
+	def NetworkSelection(self, aNetworkSelection : tTrainRadioNetworkSelectionExt):
+		self.___networkSelection = aNetworkSelection
+
 	def __init__(self):
-		self.___supportsBroadcastCalls : int = None	#TODO DEFINED AS LONG
+		self.___supportsBroadcastCalls : Long = 0
 		"""defines whether broadcast call functionality is available"""
-		self.___supportsDirectMode : int = None	#TODO DEFINED AS LONG
+		self.___supportsDirectMode : Long = 0
 		"""defines whether direct mode train radio is available"""
-		self.___supportsPublicEmergency : int = None	#TODO DEFINED AS LONG
+		self.___supportsPublicEmergency : Long = 0
 		"""defines whether public emergency calls are available"""
-		self.___supportsPublicNetworkRoaming : int = None	#TODO DEFINED AS LONG
+		self.___supportsPublicNetworkRoaming : Long = 0
 		"""defines whether roaming via public networks is available"""
-		self.___radioSystem : tTrainRadioSystemExt = None
+		self.___radioSystem : tTrainRadioSystemExt = tTrainRadioSystemExt.tTrainRadioSystemExt()
 		# @AssociationType Infrastructure.tTrainRadioSystemExt
 		# """the train radio system, e.g. 'GSM-R'"""
-		self.___supportsTextMessageService : int = None	#TODO DEFINED AS LONG
+		self.___supportsTextMessageService : Long = 0
 		"""defines whether text message service (SMS) is available"""
-		self.___networkSelection : tTrainRadioNetworkSelectionExt = None
+		self.___networkSelection : tTrainRadioNetworkSelectionExt = tTrainRadioNetworkSelectionExt.tTrainRadioNetworkSelectionExt()
 		# @AssociationType Infrastructure.tTrainRadioNetworkSelectionExt
 		# """defines the procedure of train radio network selection"""
 

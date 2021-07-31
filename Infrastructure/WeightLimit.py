@@ -1,26 +1,27 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tWeightTons import tWeightTons
-from RailML.Common.tMeterloadTonsPerMeter import tMeterloadTonsPerMeter
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
+from RailML.Common import tWeightTons, tMeterloadTonsPerMeter
+from RailML.Infrastructure import FunctionalInfrastructureEntity
 from typing import List
 
-class WeightLimit(FunctionalInfrastructureEntity):
-	def setAxleLoad(self, aAxleLoad : tWeightTons):
-		self.___axleLoad = aAxleLoad
-
-	def getAxleLoad(self) -> tWeightTons:
+class WeightLimit(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def AxleLoad(self) -> tWeightTons:
 		return self.___axleLoad
-
-	def setMeterLoad(self, aMeterLoad : tMeterloadTonsPerMeter):
+	@property
+	def MeterLoad(self) -> tMeterloadTonsPerMeter:
+		return self.___meterLoad
+	
+	@AxleLoad.setter
+	def AxleLoad(self, aAxleLoad : tWeightTons):
+		self.___axleLoad = aAxleLoad
+	@MeterLoad.setter
+	def MeterLoad(self, aMeterLoad : tMeterloadTonsPerMeter):
 		self.___meterLoad = aMeterLoad
 
-	def getMeterLoad(self) -> tMeterloadTonsPerMeter:
-		return self.___meterLoad
-
 	def __init__(self):
-		self.___axleLoad : tWeightTons = None
+		self.___axleLoad : tWeightTons = tWeightTons.tWeightTons()
 		# @AssociationType Common.tWeightTons
-		self.___meterLoad : tMeterloadTonsPerMeter = None
+		self.___meterLoad : tMeterloadTonsPerMeter = tMeterloadTonsPerMeter.tMeterloadTonsPerMeter()
 		# @AssociationType Common.tMeterloadTonsPerMeter
 

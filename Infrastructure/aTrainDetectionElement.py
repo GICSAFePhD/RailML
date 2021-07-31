@@ -1,49 +1,53 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tTrainDetectionElementType import tTrainDetectionElementType
-from RailML.Infrastructure.tDetectedObject import tDetectedObject
-from RailML.Infrastructure.tDetectorMedium import tDetectorMedium
-from RailML.Infrastructure.tDetectorLayout import tDetectorLayout
-#from RailML.Infrastructure.TrainDetectionElement import TrainDetectionElement	#TODO CIRCULAR!
+from RailML.Infrastructure import tTrainDetectionElementType, tDetectedObject, tDetectorMedium, tDetectorLayout, TrainDetectionElement	#TODO CIRCULAR!
 from typing import List
 
 class aTrainDetectionElement(object):
-	def setType(self, aType : tTrainDetectionElementType):
-		self.___type = aType
-
-	def getType(self) -> tTrainDetectionElementType:
+	@property
+	def tTrainDetectionElementType(self) -> tTrainDetectionElementType:
 		return self.___type
-
-	def setDetectedObject(self, aDetectedObject : tDetectedObject):
-		self.___detectedObject = aDetectedObject
-
-	def getDetectedObject(self) -> tDetectedObject:
+	@property
+	def tDetectedObject(self) -> tDetectedObject:
 		return self.___detectedObject
-
-	def setDetectorMedium(self, aDetectorMedium : tDetectorMedium):
-		self.___detectorMedium = aDetectorMedium
-
-	def getDetectorMedium(self) -> tDetectorMedium:
+	@property
+	def tDetectorMedium(self) -> tDetectorMedium:
 		return self.___detectorMedium
-
-	def setLayout(self, aLayout : tDetectorLayout):
-		self.___layout = aLayout
-
-	def getLayout(self) -> tDetectorLayout:
+	@property
+	def tDetectorLayout(self) -> tDetectorLayout:
 		return self.___layout
+	@property
+	def Unnamed_TrainDetectionElement(self) -> TrainDetectionElement:
+		return self.___unnamed_TrainDetectionElement
+
+	@tTrainDetectionElementType.setter
+	def tTrainDetectionElementType(self, atTrainDetectionElementType : tTrainDetectionElementType):
+		self.___type = atTrainDetectionElementType
+	@tDetectedObject.setter
+	def tDetectedObject(self, atDetectedObject : tDetectedObject):
+		self.___detectedObject = atDetectedObject
+	@tDetectorMedium.setter
+	def tDetectorMedium(self, atDetectorMedium : tDetectorMedium):
+		self.___detectorMedium = atDetectorMedium
+	@tDetectorLayout.setter
+	def tDetectorLayout(self, atDetectorLayout : tDetectorLayout):
+		self.___layout = atDetectorLayout
+	@Unnamed_TrainDetectionElement.setter
+	def Unnamed_TrainDetectionElement(self, aUnnamed_TrainDetectionElement : TrainDetectionElement):
+		self.___unnamed_TrainDetectionElement = aUnnamed_TrainDetectionElement
 
 	def __init__(self):
-		self.___type : tTrainDetectionElementType = None
+		self.___type : tTrainDetectionElementType = tTrainDetectionElementType.tTrainDetectionElementType()
 		# @AssociationType Infrastructure.tTrainDetectionElementType
 		# """type of train detector"""
-		self.___detectedObject : tDetectedObject = None
+		self.___detectedObject : tDetectedObject = tDetectedObject.tDetectedObject()
 		# @AssociationType Infrastructure.tDetectedObject
 		# """object (usually component of the railway vehicle) that is detected by the train detector"""
-		self.___detectorMedium : tDetectorMedium = None
+		self.___detectorMedium : tDetectorMedium = tDetectorMedium.tDetectorMedium()
 		# @AssociationType Infrastructure.tDetectorMedium
 		# """medium (physical principle) that is used for detection by the train detection element"""
-		self.___layout : tDetectorLayout = None
+		self.___layout : tDetectorLayout = tDetectorLayout.tDetectorLayout()
 		# @AssociationType Infrastructure.tDetectorLayout
 		# """constructional layout of the train detection element"""
-		#self._unnamed_TrainDetectionElement_ : TrainDetectionElement = None	#TODO CIRCULAR!
+		#self.___unnamed_TrainDetectionElement : TrainDetectionElement = None	#TODO CIRCULAR!
 

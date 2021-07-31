@@ -1,31 +1,37 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Common.tRef import tRef
-from RailML.Common.tElementWithIDref import tElementWithIDref
-from RailML.Infrastructure.aTrainDetectionElement import aTrainDetectionElement
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
+from RailML.Common import tRef,  tElementWithIDref
+from RailML.Infrastructure import aTrainDetectionElement, FunctionalInfrastructureEntity
 from typing import List
 
-class TrainDetectionElement(FunctionalInfrastructureEntity):
-	def setBasedOnTemplate(self, aBasedOnTemplate : tRef):
-		self.___basedOnTemplate = aBasedOnTemplate
-
-	def getBasedOnTemplate(self) -> tRef:
+class TrainDetectionElement(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def BasedOnTemplate(self) -> tRef:
 		return self.___basedOnTemplate
-
-	def setLimitsTrainDetectionElement(self, *aLimitsTrainDetectionElement : tElementWithIDref):
-		self._limitsTrainDetectionElement = aLimitsTrainDetectionElement
-
-	def getLimitsTrainDetectionElement(self) -> tElementWithIDref:
-		return self._limitsTrainDetectionElement
+	@property
+	def LimitsTrainDetectionElement(self) -> tElementWithIDref:
+		return self.___limitsTrainDetectionElement
+	@property
+	def Unnamed_aTrainDetectionElement(self) -> aTrainDetectionElement:
+		return self.___unnamed_aTrainDetectionElement
+	
+	@BasedOnTemplate.setter
+	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
+		self.___basedOnTemplate = aBasedOnTemplate
+	@LimitsTrainDetectionElement.setter
+	def LimitsTrainDetectionElement(self, *aLimitsTrainDetectionElement : tElementWithIDref):
+		self.___limitsTrainDetectionElement = aLimitsTrainDetectionElement
+	@Unnamed_aTrainDetectionElement.setter
+	def Unnamed_aTrainDetectionElement(self, aUnnamed_aTrainDetectionElement : aTrainDetectionElement):
+		self.___unnamed_aTrainDetectionElement = aUnnamed_aTrainDetectionElement
 
 	def __init__(self):
-		self.___basedOnTemplate : tRef = None
+		self.___basedOnTemplate : tRef = tRef.tRef()
 		# @AssociationType Common.tRef
 		# """reference to a template train detection element/system"""
-		self._limitsTrainDetectionElement : tElementWithIDref = None
+		self.___limitsTrainDetectionElement : tElementWithIDref = tElementWithIDref.tElementWithIDref()
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..2
 		# """If the current <trainDetectionElement> is an insulated rail joint or an axle counter and thus a border between two <trainDetectionElement> objects, these two <trainDetectionElement> objects can be referenced."""
-		self._unnamed_aTrainDetectionElement_ : aTrainDetectionElement = None
+		self.___unnamed_aTrainDetectionElement : aTrainDetectionElement = aTrainDetectionElement.aTrainDetectionElement()
 

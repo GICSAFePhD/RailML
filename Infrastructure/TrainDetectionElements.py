@@ -1,9 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.TrainDetectionElement import TrainDetectionElement
+from RailML.Infrastructure import TrainDetectionElement
 from typing import List
 
 class TrainDetectionElements(object):
+	@property
 	@property
 	def TrainDetectionElement(self) -> TrainDetectionElement:
 		return self.___trainDetectionElement
@@ -13,7 +14,7 @@ class TrainDetectionElements(object):
 		self.___trainDetectionElement = aTrainDetectionElement
 
 	def __init__(self):
-		self.___trainDetectionElement : TrainDetectionElement = None
+		self.___trainDetectionElement : TrainDetectionElement = TrainDetectionElement.TrainDetectionElement()
 		# @AssociationType Infrastructure.TrainDetectionElement*
 		# @AssociationMultiplicity 0..*
 

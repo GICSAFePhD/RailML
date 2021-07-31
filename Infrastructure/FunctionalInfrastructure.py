@@ -258,7 +258,7 @@ class FunctionalInfrastructure(object):
 		# @AssociationType Infrastructure.TrackBeds
 		# @AssociationMultiplicity 0..1
 		# """container element for all trackBed elements"""
-		self.___trackGauges : TrackGauges = TrackGauges.TrackGauges() 	#TODO ACA
+		self.___trackGauges : TrackGauges = TrackGauges.TrackGauges() 	
 		# @AssociationType Infrastructure.TrackGauges
 		# @AssociationMultiplicity 0..1
 		# """container element for all trackGauge elements"""
@@ -266,11 +266,11 @@ class FunctionalInfrastructure(object):
 		# @AssociationType Infrastructure.TrainDetectionElements
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainDetectionElement elements"""
-		self.___trainProtectionElements : TrainProtectionElements = TrainProtectionElements.TrainProtectionElements()
+		self.___trainProtectionElements : TrainProtectionElements = TrainProtectionElements.TrainProtectionElements()	
 		# @AssociationType Infrastructure.TrainProtectionElements
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainProtectionElement elements"""
-		self.___trainRadios : TrainRadios = TrainRadios.TrainRadios()
+		self.___trainRadios : TrainRadios = TrainRadios.TrainRadios()	
 		# @AssociationType Infrastructure.TrainRadios
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainRadio elements"""

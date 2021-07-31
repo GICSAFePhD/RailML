@@ -45,24 +45,24 @@ class Infrastructure(tElementWithID.tElementWithID):
 	@InfrastructureStates.setter
 	def InfrastructureStates(self, aInfrastructureStates : InfrastructureStates):
 		self.___infrastructureStates = aInfrastructureStates
-  
+
 	def __init__(self):
-		self.___topology : Topology = Topology.Topology()
+		#self.___topology : Topology = Topology.Topology()
 		# @AssociationType Infrastructure.Topology
 		# @AssociationMultiplicity 0..1
 		# """container element for topology model"""
-		self.___geometry : Geometry = Geometry.Geometry()
+		#self.___geometry : Geometry = Geometry.Geometry()
 		# @AssociationType Infrastructure.Geometry
 		# @AssociationMultiplicity 0..1
 		# """container element for geometry model"""
-		self.___functionalInfrastructure : FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
+		#self.___functionalInfrastructure : FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
 		# @AssociationType Infrastructure.FunctionalInfrastructure
 		# @AssociationMultiplicity 0..1
 		# """container element for all railway network's functional infrastructure elements"""
 		self.___physicalFacilities : PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
 		# @AssociationType Infrastructure.PhysicalFacilities
 		# @AssociationMultiplicity 0..1
-		# """container element for all physical railway infrastructure facilities"""
+		# """container element for all physical railway infrastructure facilities"""	#TODO ACA
 		self.___infrastructureVisualizations : InfrastructureVisualizations = InfrastructureVisualizations.InfrastructureVisualizations()
 		# @AssociationType Infrastructure.InfrastructureVisualizations
 		# @AssociationMultiplicity 0..1

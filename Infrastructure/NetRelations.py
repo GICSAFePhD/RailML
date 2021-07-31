@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.NetRelation import NetRelation
+from RailML.Infrastructure import NetRelation
 from typing import List
 
 class NetRelations(object):
@@ -13,7 +13,7 @@ class NetRelations(object):
 		self.___netRelation = aNetRelation
 
 	def __init__(self):
-		self.___netRelation : NetRelation = NetRelation()
+		self.___netRelation : NetRelation = NetRelation.NetRelation()
 		# @AssociationType Infrastructure.NetRelation*
 		# @AssociationMultiplicity 1..*	#TODO 1..*
 
