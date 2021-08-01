@@ -1,284 +1,268 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.TvdSections import TvdSections
-from RailML.Interlocking.SwitchesIL import SwitchesIL
-from RailML.Interlocking.DerailersIL import DerailersIL
-from RailML.Interlocking.MovableCrossings import MovableCrossings
-from RailML.Interlocking.LevelCrossingsIL import LevelCrossingsIL
-from RailML.Interlocking.Keys import Keys
-from RailML.Interlocking.KeyLocksIL import KeyLocksIL
-from RailML.Interlocking.GenericDetectors import GenericDetectors
-from RailML.Interlocking.SignalsIL import SignalsIL
-from RailML.Interlocking.ATPdevices import ATPdevices
-from RailML.Interlocking.Interfaces import Interfaces
-from RailML.Interlocking.WorkZones import WorkZones
-from RailML.Interlocking.LocalOperationAreas import LocalOperationAreas
-from RailML.Interlocking.ShuntingZones import ShuntingZones
-from RailML.Interlocking.PermissionZones import PermissionZones
-from RailML.Interlocking.RouteReleaseGroupsAhead import RouteReleaseGroupsAhead
-from RailML.Interlocking.RouteReleaseGroupsRear import RouteReleaseGroupsRear
-from RailML.Interlocking.Routes import Routes
-from RailML.Interlocking.ConflictingRoutes import ConflictingRoutes
-from RailML.Interlocking.RouteRelations import RouteRelations
-from RailML.Interlocking.CombinedRoutes import CombinedRoutes
-from RailML.Interlocking.Overlaps import Overlaps
-from RailML.Interlocking.DangerPoints import DangerPoints
-from RailML.Interlocking.DestinationPoints import DestinationPoints
-from RailML.Interlocking.PowerSuppliesIL import PowerSuppliesIL
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import TvdSections, SwitchesIL, DerailersIL, MovableCrossings
+from RailML.Interlocking import LevelCrossingsIL, Keys, KeyLocksIL, GenericDetectors
+from RailML.Interlocking import SignalsIL, ATPdevices, Interfaces, WorkZones
+from RailML.Interlocking import LocalOperationAreas, ShuntingZones, PermissionZones
+from RailML.Interlocking import RouteReleaseGroupsAhead, RouteReleaseGroupsRear
+from RailML.Interlocking import Routes, ConflictingRoutes, RouteRelations
+from RailML.Interlocking import CombinedRoutes, Overlaps, DangerPoints
+from RailML.Interlocking import DestinationPoints,PowerSuppliesIL, EntityIL
 from typing import List
 
-class AssetsForIL(EntityIL):
+class AssetsForIL(EntityIL.EntityIL):
 	"""Container for assets used for operation of interlockings and controllers. They represent a more functional/logical view onto the railway network but depending on the hardware as defined in infrastructure domain.
 	Assets in the container are owned by the railway network rather than by individual interlocking systems."""
-	def setTvdSections(self, aTvdSections : TvdSections):
-		self._tvdSections = aTvdSections
+	@property
+	def TvdSections(self) -> TvdSections:
+		return self.___tvdSections
+	@property
+	def SwitchesIL(self) -> SwitchesIL:	#TODO ACA
+		return self.___switchesIL
+	@property
+	def DerailersIL(self) -> DerailersIL:
+		return self.___derailersIL
+	@property
+	def MovableCrossings(self) -> MovableCrossings:
+		return self.___movableCrossings
+	@property
+	def LevelCrossingsIL(self) -> LevelCrossingsIL:
+		return self.___levelCrossingsIL
+	@property
+	def Keys(self) -> Keys:
+		return self.___keys
+	@property
+	def KeyLocksIL(self) -> KeyLocksIL:
+		return self.___keyLocksIL
+	@property
+	def GenericDetectors(self) -> GenericDetectors:
+		return self.___genericDetectors
+	@property
+	def SignalsIL(self) -> SignalsIL:
+		return self.___signalsIL
+	@property
+	def ATPdevices(self) -> ATPdevices:
+		return self.___atpDevices
+	@property
+	def Interfaces(self) -> Interfaces:
+		return self.___interfaces
+	@property
+	def WorkZones(self) -> WorkZones:
+		return self.___workZones
+	@property
+	def LocalOperationAreas(self) -> LocalOperationAreas:
+		return self.___localOperationAreas
+	@property
+	def ShuntingZones(self) -> ShuntingZones:
+		return self.___shuntingZones
+	@property
+	def PermissionZones(self) -> PermissionZones:
+		return self.___permissionZones
+	@property
+	def RouteReleaseGroupsAhead(self) -> RouteReleaseGroupsAhead:
+		return self.___routeReleaseGroupsAhead
+	@property
+	def RouteReleaseGroupsRear(self) -> RouteReleaseGroupsRear:
+		return self.___routeReleaseGroupsRear
+	@property
+	def Routes(self) -> Routes:
+		return self.___routes
+	@property
+	def ConflictingRoutes(self) -> ConflictingRoutes:
+		return self.___conflictingRoutes
+	@property
+	def RouteRelations(self) -> RouteRelations:
+		return self.___routeRelations
+	@property
+	def CombinedRoutes(self) -> CombinedRoutes:
+		return self.___combinedRoutes
+	@property
+	def Overlaps(self) -> Overlaps:
+		return self.___overlaps
+	@property
+	def DangerPoints(self) -> DangerPoints:
+		return self.___dangerPoints
+	@property
+	def DestinationPoints(self) -> DestinationPoints:
+		return self.___destinationPoints
+	@property
+	def PowerSuppliesIL(self) -> PowerSuppliesIL:
+		return self.___powerSuppliesIL
 
-	def getTvdSections(self) -> TvdSections:
-		return self._tvdSections
-
-	def setSwitchesIL(self, aSwitchesIL : SwitchesIL):
-		self._switchesIL = aSwitchesIL
-
-	def getSwitchesIL(self) -> SwitchesIL:
-		return self._switchesIL
-
-	def setDerailersIL(self, aDerailersIL : DerailersIL):
-		self._derailersIL = aDerailersIL
-
-	def getDerailersIL(self) -> DerailersIL:
-		return self._derailersIL
-
-	def setMovableCrossings(self, aMovableCrossings : MovableCrossings):
-		self._movableCrossings = aMovableCrossings
-
-	def getMovableCrossings(self) -> MovableCrossings:
-		return self._movableCrossings
-
-	def setLevelCrossingsIL(self, aLevelCrossingsIL : LevelCrossingsIL):
-		self._levelCrossingsIL = aLevelCrossingsIL
-
-	def getLevelCrossingsIL(self) -> LevelCrossingsIL:
-		return self._levelCrossingsIL
-
-	def setKeys(self, aKeys : Keys):
-		self._keys = aKeys
-
-	def getKeys(self) -> Keys:
-		return self._keys
-
-	def setKeyLocksIL(self, aKeyLocksIL : KeyLocksIL):
-		self._keyLocksIL = aKeyLocksIL
-
-	def getKeyLocksIL(self) -> KeyLocksIL:
-		return self._keyLocksIL
-
-	def setGenericDetectors(self, aGenericDetectors : GenericDetectors):
-		self._genericDetectors = aGenericDetectors
-
-	def getGenericDetectors(self) -> GenericDetectors:
-		return self._genericDetectors
-
-	def setSignalsIL(self, aSignalsIL : SignalsIL):
-		self._signalsIL = aSignalsIL
-
-	def getSignalsIL(self) -> SignalsIL:
-		return self._signalsIL
-
-	def setAtpDevices(self, aAtpDevices : ATPdevices):
-		self._atpDevices = aAtpDevices
-
-	def getAtpDevices(self) -> ATPdevices:
-		return self._atpDevices
-
-	def setInterfaces(self, aInterfaces : Interfaces):
-		self._interfaces = aInterfaces
-
-	def getInterfaces(self) -> Interfaces:
-		return self._interfaces
-
-	def setWorkZones(self, aWorkZones : WorkZones):
-		self._workZones = aWorkZones
-
-	def getWorkZones(self) -> WorkZones:
-		return self._workZones
-
-	def setLocalOperationAreas(self, aLocalOperationAreas : LocalOperationAreas):
-		self._localOperationAreas = aLocalOperationAreas
-
-	def getLocalOperationAreas(self) -> LocalOperationAreas:
-		return self._localOperationAreas
-
-	def setShuntingZones(self, aShuntingZones : ShuntingZones):
-		self._shuntingZones = aShuntingZones
-
-	def getShuntingZones(self) -> ShuntingZones:
-		return self._shuntingZones
-
-	def setPermissionZones(self, aPermissionZones : PermissionZones):
-		self._permissionZones = aPermissionZones
-
-	def getPermissionZones(self) -> PermissionZones:
-		return self._permissionZones
-
-	def setRouteReleaseGroupsAhead(self, aRouteReleaseGroupsAhead : RouteReleaseGroupsAhead):
-		self._routeReleaseGroupsAhead = aRouteReleaseGroupsAhead
-
-	def getRouteReleaseGroupsAhead(self) -> RouteReleaseGroupsAhead:
-		return self._routeReleaseGroupsAhead
-
-	def setRouteReleaseGroupsRear(self, aRouteReleaseGroupsRear : RouteReleaseGroupsRear):
-		self._routeReleaseGroupsRear = aRouteReleaseGroupsRear
-
-	def getRouteReleaseGroupsRear(self) -> RouteReleaseGroupsRear:
-		return self._routeReleaseGroupsRear
-
-	def setRoutes(self, aRoutes : Routes):
-		self._routes = aRoutes
-
-	def getRoutes(self) -> Routes:
-		return self._routes
-
-	def setConflictingRoutes(self, aConflictingRoutes : ConflictingRoutes):
-		self._conflictingRoutes = aConflictingRoutes
-
-	def getConflictingRoutes(self) -> ConflictingRoutes:
-		return self._conflictingRoutes
-
-	def setRouteRelations(self, aRouteRelations : RouteRelations):
-		self._routeRelations = aRouteRelations
-
-	def getRouteRelations(self) -> RouteRelations:
-		return self._routeRelations
-
-	def setCombinedRoutes(self, aCombinedRoutes : CombinedRoutes):
-		self._combinedRoutes = aCombinedRoutes
-
-	def getCombinedRoutes(self) -> CombinedRoutes:
-		return self._combinedRoutes
-
-	def setOverlaps(self, aOverlaps : Overlaps):
-		self._overlaps = aOverlaps
-
-	def getOverlaps(self) -> Overlaps:
-		return self._overlaps
-
-	def setDangerPoints(self, aDangerPoints : DangerPoints):
-		self._dangerPoints = aDangerPoints
-
-	def getDangerPoints(self) -> DangerPoints:
-		return self._dangerPoints
-
-	def setDestinationPoints(self, aDestinationPoints : DestinationPoints):
-		self._destinationPoints = aDestinationPoints
-
-	def getDestinationPoints(self) -> DestinationPoints:
-		return self._destinationPoints
-
-	def setPowerSuppliesIL(self, aPowerSuppliesIL : PowerSuppliesIL):
-		self._powerSuppliesIL = aPowerSuppliesIL
-
-	def getPowerSuppliesIL(self) -> PowerSuppliesIL:
-		return self._powerSuppliesIL
+	@TvdSections.setter
+	def TvdSections(self, aTvdSections : TvdSections):
+		self.___tvdSections = aTvdSections
+	@SwitchesIL.setter
+	def SwitchesIL(self, aSwitchesIL : SwitchesIL):
+		self.___switchesIL = aSwitchesIL
+	@DerailersIL.setter
+	def DerailersIL(self, aDerailersIL : DerailersIL):
+		self.___derailersIL = aDerailersIL
+	@MovableCrossings.setter
+	def MovableCrossings(self, aMovableCrossings : MovableCrossings):
+		self.___movableCrossings = aMovableCrossings
+	@LevelCrossingsIL.setter
+	def LevelCrossingsIL(self, aLevelCrossingsIL : LevelCrossingsIL):
+		self.___levelCrossingsIL = aLevelCrossingsIL
+	@Keys.setter
+	def Keys(self, aKeys : Keys):
+		self.___keys = aKeys
+	@KeyLocksIL.setter
+	def KeyLocksIL(self, aKeyLocksIL : KeyLocksIL):
+		self.___keyLocksIL = aKeyLocksIL
+	@GenericDetectors.setter
+	def GenericDetectors(self, aGenericDetectors : GenericDetectors):
+		self.___genericDetectors = aGenericDetectors
+	@SignalsIL.setter
+	def SignalsIL(self, aSignalsIL : SignalsIL):
+		self.___signalsIL = aSignalsIL
+	@ATPdevices.setter
+	def ATPdevices(self, aATPdevices : ATPdevices):
+		self.___atpDevices = aATPdevices
+	@Interfaces.setter
+	def Interfaces(self, aInterfaces : Interfaces):
+		self.___interfaces = aInterfaces
+	@WorkZones.setter
+	def WorkZones(self, aWorkZones : WorkZones):
+		self.___workZones = aWorkZones
+	@LocalOperationAreas.setter
+	def LocalOperationAreas(self, aLocalOperationAreas : LocalOperationAreas):
+		self.___localOperationAreas = aLocalOperationAreas
+	@ShuntingZones.setter
+	def ShuntingZones(self, aShuntingZones : ShuntingZones):
+		self.___shuntingZones = aShuntingZones
+	@PermissionZones.setter
+	def PermissionZones(self, aPermissionZones : PermissionZones):
+		self.___permissionZones = aPermissionZones
+	@RouteReleaseGroupsAhead.setter
+	def RouteReleaseGroupsAhead(self, aRouteReleaseGroupsAhead : RouteReleaseGroupsAhead):
+		self.___routeReleaseGroupsAhead = aRouteReleaseGroupsAhead
+	@RouteReleaseGroupsRear.setter
+	def RouteReleaseGroupsRear(self, aRouteReleaseGroupsRear : RouteReleaseGroupsRear):
+		self.___routeReleaseGroupsRear = aRouteReleaseGroupsRear
+	@Routes.setter
+	def Routes(self, aRoutes : Routes):
+		self.___routes = aRoutes
+	@ConflictingRoutes.setter
+	def ConflictingRoutes(self, aConflictingRoutes : ConflictingRoutes):
+		self.___conflictingRoutes = aConflictingRoutes
+	@RouteRelations.setter
+	def RouteRelations(self, aRouteRelations : RouteRelations):
+		self.___routeRelations = aRouteRelations
+	@CombinedRoutes.setter
+	def CombinedRoutes(self, aCombinedRoutes : CombinedRoutes):
+		self.___combinedRoutes = aCombinedRoutes
+	@Overlaps.setter
+	def Overlaps(self, aOverlaps : Overlaps):
+		self.___overlaps = aOverlaps
+	@DangerPoints.setter
+	def DangerPoints(self, aDangerPoints : DangerPoints):
+		self.___dangerPoints = aDangerPoints
+	@DestinationPoints.setter
+	def DestinationPoints(self, aDestinationPoints : DestinationPoints):
+		self.___destinationPoints = aDestinationPoints
+	@PowerSuppliesIL.setter
+	def PowerSuppliesIL(self, aPowerSuppliesIL : PowerSuppliesIL):
+		self.___powerSuppliesIL = aPowerSuppliesIL
 
 	def __init__(self):
-		self._tvdSections : TvdSections = None
+		self.___tvdSections : TvdSections = TvdSections.TvdSections()
 		# @AssociationType Interlocking.TvdSections
 		# @AssociationMultiplicity 0..1
 		# """contains all tvdSection elements"""
-		self._switchesIL : SwitchesIL = None
+		self.___switchesIL : SwitchesIL = SwitchesIL.SwitchesIL()
 		# @AssociationType Interlocking.SwitchesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type SwitchIL"""
-		self._derailersIL : DerailersIL = None
+		self.___derailersIL : DerailersIL = DerailersIL.DerailersIL()
 		# @AssociationType Interlocking.DerailersIL
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type DerailerIL"""
-		self._movableCrossings : MovableCrossings = None
+		self.___movableCrossings : MovableCrossings = MovableCrossings.MovableCrossings()
 		# @AssociationType Interlocking.MovableCrossings
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type MovableCrossing"""
-		self._levelCrossingsIL : LevelCrossingsIL = None
+		self.___levelCrossingsIL : LevelCrossingsIL = LevelCrossingsIL.LevelCrossingsIL()
 		# @AssociationType Interlocking.LevelCrossingsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all levelCrossingIL elements"""
-		self._keys : Keys = None
+		self.___keys : Keys = Keys.Keys()
 		# @AssociationType Interlocking.Keys
 		# @AssociationMultiplicity 0..1
 		# """contains all key elements"""
-		self._keyLocksIL : KeyLocksIL = None
+		self.___keyLocksIL : KeyLocksIL = KeyLocksIL.KeyLocksIL()
 		# @AssociationType Interlocking.KeyLocksIL
 		# @AssociationMultiplicity 0..1
 		# """contains all keyLockIL elements"""
-		self._genericDetectors : GenericDetectors = None
+		self.___genericDetectors : GenericDetectors = GenericDetectors.GenericDetectors()
 		# @AssociationType Interlocking.GenericDetectors
 		# @AssociationMultiplicity 0..1
 		# """contains all genericDetector elements"""
-		self._signalsIL : SignalsIL = None
+		self.___signalsIL : SignalsIL = SignalsIL.SignalsIL()
 		# @AssociationType Interlocking.SignalsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all signalIL elements"""
-		self._atpDevices : ATPdevices = None
+		self.___atpDevices : ATPdevices = ATPdevices.ATPdevices()
 		# @AssociationType Interlocking.ATPdevices
 		# @AssociationMultiplicity 0..1
 		# """contains all atpDevice elements (not with railML3.1)"""
-		self._interfaces : Interfaces = None
+		self.___interfaces : Interfaces = Interfaces.Interfaces()
 		# @AssociationType Interlocking.Interfaces
 		# @AssociationMultiplicity 0..1
 		# """contains all interface elements"""
-		self._workZones : WorkZones = None
+		self.___workZones : WorkZones = WorkZones.WorkZones()
 		# @AssociationType Interlocking.WorkZones
 		# @AssociationMultiplicity 0..1
 		# """contains all workZone elements"""
-		self._localOperationAreas : LocalOperationAreas = None
+		self.___localOperationAreas : LocalOperationAreas = LocalOperationAreas.LocalOperationAreas()
 		# @AssociationType Interlocking.LocalOperationAreas
 		# @AssociationMultiplicity 0..1
 		# """contains all localOperationArea elements"""
-		self._shuntingZones : ShuntingZones = None
+		self.___shuntingZones : ShuntingZones = ShuntingZones.ShuntingZones()
 		# @AssociationType Interlocking.ShuntingZones
 		# @AssociationMultiplicity 0..1
 		# """contains all shuntingZone elements"""
-		self._permissionZones : PermissionZones = None
+		self.___permissionZones : PermissionZones = PermissionZones.PermissionZones()
 		# @AssociationType Interlocking.PermissionZones
 		# @AssociationMultiplicity 0..1
 		# """contains all permissionZone elements"""
-		self._routeReleaseGroupsAhead : RouteReleaseGroupsAhead = None
+		self.___routeReleaseGroupsAhead : RouteReleaseGroupsAhead = RouteReleaseGroupsAhead.RouteReleaseGroupsAhead()
 		# @AssociationType Interlocking.RouteReleaseGroupsAhead
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupAhead elements"""
-		self._routeReleaseGroupsRear : RouteReleaseGroupsRear = None
+		self.___routeReleaseGroupsRear : RouteReleaseGroupsRear = RouteReleaseGroupsRear.RouteReleaseGroupsRear()
 		# @AssociationType Interlocking.RouteReleaseGroupsRear
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupRear elements"""
-		self._routes : Routes = None
+		self.___routes : Routes = Routes.Routes()
 		# @AssociationType Interlocking.Routes
 		# @AssociationMultiplicity 0..1
 		# """contains all route elements"""
-		self._conflictingRoutes : ConflictingRoutes = None
+		self.___conflictingRoutes : ConflictingRoutes = ConflictingRoutes.ConflictingRoutes()
 		# @AssociationType Interlocking.ConflictingRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all conflictingRoute elements"""
-		self._routeRelations : RouteRelations = None
+		self.___routeRelations : RouteRelations = RouteRelations.RouteRelations()
 		# @AssociationType Interlocking.RouteRelations
 		# @AssociationMultiplicity 0..1
 		# """contains all routeRelation elements"""
-		self._combinedRoutes : CombinedRoutes = None
+		self.___combinedRoutes : CombinedRoutes = CombinedRoutes.CombinedRoutes()
 		# @AssociationType Interlocking.CombinedRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all combinedRoute elements"""
-		self._overlaps : Overlaps = None
+		self.___overlaps : Overlaps = Overlaps.Overlaps()
 		# @AssociationType Interlocking.Overlaps
 		# @AssociationMultiplicity 0..1
 		# """contains all overlap elements"""
-		self._dangerPoints : DangerPoints = None
+		self.___dangerPoints : DangerPoints = DangerPoints.DangerPoints()
 		# @AssociationType Interlocking.DangerPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all dangerPoints elements"""
-		self._destinationPoints : DestinationPoints = None
+		self.___destinationPoints : DestinationPoints = DestinationPoints.DestinationPoints()
 		# @AssociationType Interlocking.DestinationPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all destinationPoint elements"""
-		self._powerSuppliesIL : PowerSuppliesIL = None
+		self.___powerSuppliesIL : PowerSuppliesIL = PowerSuppliesIL.PowerSuppliesIL()
 		# @AssociationType Interlocking.PowerSuppliesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all powerSupplyIL elements"""
