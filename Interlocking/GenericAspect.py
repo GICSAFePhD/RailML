@@ -1,19 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tGenericAspectList import tGenericAspectList
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tGenericAspectList, EntityIL
 from typing import List
 
-class GenericAspect(EntityIL):
+class GenericAspect(EntityIL.EntityIL):
 	"""A signal aspect according to the IM regulations. Each aspect is given a unique identifier, a name, e.g. Vr-6 and description e.g. warning signal - expect stop (Vorsignal Halt erwarten). This element allows a generic classification of each aspect. The aspect can include speed information."""
-	def setGenericAspect(self, aGenericAspect : tGenericAspectList):
-		self.___genericAspect = aGenericAspect
-
-	def getGenericAspect(self) -> tGenericAspectList:
+	@property
+	def tGenericAspectList(self) -> tGenericAspectList:
 		return self.___genericAspect
+	
+	@tGenericAspectList.setter
+	def tGenericAspectList(self, atGenericAspectList : tGenericAspectList):
+		self.___genericAspect = atGenericAspectList
 
 	def __init__(self):
-		self.___genericAspect : tGenericAspectList = None
+		self.___genericAspect : tGenericAspectList = tGenericAspectList.tGenericAspectList()
 		# @AssociationType Interlocking.tGenericAspectList
 		# """The classification of the aspect."""
 

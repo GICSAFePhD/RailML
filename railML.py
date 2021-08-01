@@ -61,7 +61,7 @@ class railML():
 		# @AssociationType Interlocking.Interlocking
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 interlocking model"""
-		#self.___rail3_aRailML : aRailML = aRailML.aRailML()
+		self.___rail3_aRailML : aRailML = aRailML.aRailML()
 		"""# @AssociationKind Aggregation"""
 
 

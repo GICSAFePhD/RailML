@@ -62,7 +62,7 @@ class Infrastructure(tElementWithID.tElementWithID):
 		self.___physicalFacilities : PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
 		# @AssociationType Infrastructure.PhysicalFacilities
 		# @AssociationMultiplicity 0..1
-		# """container element for all physical railway infrastructure facilities"""	#TODO ACA
+		# """container element for all physical railway infrastructure facilities"""
 		self.___infrastructureVisualizations : InfrastructureVisualizations = InfrastructureVisualizations.InfrastructureVisualizations()
 		# @AssociationType Infrastructure.InfrastructureVisualizations
 		# @AssociationMultiplicity 0..1

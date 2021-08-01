@@ -1,51 +1,50 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.AssetsForIL import AssetsForIL
-from RailML.Interlocking.Controllers import Controllers
-from RailML.Interlocking.SignalBoxes import SignalBoxes
-from RailML.Interlocking.GenericIMs import GenericIMs
+from RailML.Interlocking import AssetsForIL, Controllers, SignalBoxes, GenericIMs
 from typing import List
 
 class Interlocking(object):
 	"""This is the top level element for the interlocking model. It is the home of several elements (classes) containing the particular aspects of the information."""
-	def setAssetsForIL(self, aAssetsForIL : AssetsForIL):
-		self._assetsForIL = aAssetsForIL
+	@property
+	def AssetsForIL(self) -> AssetsForIL:
+		return self.___assetsForIL
+	@property
+	def Controllers(self) -> Controllers:
+		return self.___controllers
+	@property
+	def SignalBoxes(self) -> SignalBoxes:
+		return self.___signalBoxes
+	@property
+	def GenericIMs(self) -> GenericIMs:
+		return self.___specificIMs
 
-	def getAssetsForIL(self) -> AssetsForIL:
-		return self._assetsForIL
-
-	def setControllers(self, aControllers : Controllers):
-		self._controllers = aControllers
-
-	def getControllers(self) -> Controllers:
-		return self._controllers
-
-	def setSignalBoxes(self, aSignalBoxes : SignalBoxes):
-		self._signalBoxes = aSignalBoxes
-
-	def getSignalBoxes(self) -> SignalBoxes:
-		return self._signalBoxes
-
-	def setSpecificIMs(self, aSpecificIMs : GenericIMs):
-		self._specificIMs = aSpecificIMs
-
-	def getSpecificIMs(self) -> GenericIMs:
-		return self._specificIMs
+	@AssetsForIL.setter
+	def AssetsForIL(self, aAssetsForIL : AssetsForIL):
+		self.___assetsForIL = aAssetsForIL
+	@Controllers.setter
+	def Controllers(self, aControllers : Controllers):
+		self.___controllers = aControllers
+	@SignalBoxes.setter
+	def SignalBoxes(self, aSignalBoxes : SignalBoxes):
+		self.___signalBoxes = aSignalBoxes
+	@GenericIMs.setter
+	def GenericIMs(self, aGenericIMs : GenericIMs):
+		self.___specificIMs = aGenericIMs
 
 	def __init__(self):
-		self._assetsForIL : AssetsForIL = None
+		self.___assetsForIL : AssetsForIL = AssetsForIL.AssetsForIL()	#TODO INSANE!
 		# @AssociationType Interlocking.AssetsForIL
 		# @AssociationMultiplicity 0..1
 		# """container for all asset elements needed for interlocking purpose"""
-		self._controllers : Controllers = None
+		self.___controllers : Controllers = Controllers.Controllers()	#TODO HARD!
 		# @AssociationType Interlocking.Controllers
 		# @AssociationMultiplicity 0..1
 		# """container for all Controller elements"""
-		self._signalBoxes : SignalBoxes = None
+		self.___signalBoxes : SignalBoxes = SignalBoxes.SignalBoxes()	#TODO HARD!
 		# @AssociationType Interlocking.SignalBoxes
 		# @AssociationMultiplicity 0..1
 		# """container for all SignalBox elements"""
-		self._specificIMs : GenericIMs = None
+		#self.___specificIMs : GenericIMs = GenericIMs.GenericIMs()	#TODO DONE!
 		# @AssociationType Interlocking.GenericIMs
 		# @AssociationMultiplicity 0..1
 		# """container for all SpecificIM elements"""

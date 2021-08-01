@@ -1,77 +1,81 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.GenericAspect import GenericAspect
-from RailML.Interlocking.GenericResetStrategy import GenericResetStrategy
-from RailML.Interlocking.GenericRouteType import GenericRouteType
-from RailML.Interlocking.LevelCrossingTypeList import LevelCrossingTypeList
-from RailML.Interlocking.ElementGroupingTypes import ElementGroupingTypes
-from RailML.Interlocking.DetectorTypes import DetectorTypes
-from RailML.Common.anyAttribute import anyAttribute
+from RailML.Common import anyAttribute
+from RailML.Interlocking import GenericAspect, GenericResetStrategy, GenericRouteType, LevelCrossingTypeList, ElementGroupingTypes, DetectorTypes
+
 from typing import List
 
 class GenericTypes(object):
 	"""The list of all possible types being specific for this IM."""
-	def setHasAspect(self, *aHasAspect : GenericAspect):
-		self._hasAspect = aHasAspect
+	@property
+	def GenericAspect(self) -> GenericAspect:
+		return self.___hasAspect
+	@property
+	def GenericResetStrategy(self) -> GenericResetStrategy:
+		return self.___hasTVDresetStrategy
+	@property
+	def GenericRouteType(self) -> GenericRouteType:
+		return self.___hasRouteType
+	@property
+	def LevelCrossingTypeList(self) -> LevelCrossingTypeList:
+		return self.___hasLevelCrossingType
+	@property
+	def ElementGroupingTypes(self) -> ElementGroupingTypes:
+		return self.___hasElementGroupType
+	@property
+	def DetectorTypes(self) -> DetectorTypes:
+		return self.___hasDetectorTypes
+	@property
+	def anyAttribute(self) -> anyAttribute:
+		return self.___rail3_anyAttribute
 
-	def getHasAspect(self) -> GenericAspect:
-		return self._hasAspect
-
-	def setHasTVDresetStrategy(self, *aHasTVDresetStrategy : GenericResetStrategy):
-		self._hasTVDresetStrategy = aHasTVDresetStrategy
-
-	def getHasTVDresetStrategy(self) -> GenericResetStrategy:
-		return self._hasTVDresetStrategy
-
-	def setHasRouteType(self, *aHasRouteType : GenericRouteType):
-		self._hasRouteType = aHasRouteType
-
-	def getHasRouteType(self) -> GenericRouteType:
-		return self._hasRouteType
-
-	def setHasLevelCrossingType(self, *aHasLevelCrossingType : LevelCrossingTypeList):
-		self._hasLevelCrossingType = aHasLevelCrossingType
-
-	def getHasLevelCrossingType(self) -> LevelCrossingTypeList:
-		return self._hasLevelCrossingType
-
-	def setHasElementGroupType(self, *aHasElementGroupType : ElementGroupingTypes):
-		self._hasElementGroupType = aHasElementGroupType
-
-	def getHasElementGroupType(self) -> ElementGroupingTypes:
-		return self._hasElementGroupType
-
-	def setHasDetectorTypes(self, *aHasDetectorTypes : DetectorTypes):
-		self._hasDetectorTypes = aHasDetectorTypes
-
-	def getHasDetectorTypes(self) -> DetectorTypes:
-		return self._hasDetectorTypes
+	@GenericAspect.setter
+	def GenericAspect(self, *aGenericAspect : GenericAspect):
+		self.___hasAspect = aGenericAspect
+	@GenericResetStrategy.setter
+	def GenericResetStrategy(self, *aGenericResetStrategy : GenericResetStrategy):
+		self.___hasTVDresetStrategy = aGenericResetStrategy
+	@GenericRouteType.setter
+	def GenericRouteType(self, *aGenericRouteType : GenericRouteType):
+		self.___hasRouteType = aGenericRouteType
+	@LevelCrossingTypeList.setter
+	def LevelCrossingTypeList(self, *aLevelCrossingTypeList : LevelCrossingTypeList):
+		self.___hasLevelCrossingType = aLevelCrossingTypeList
+	@ElementGroupingTypes.setter
+	def ElementGroupingTypes(self, *aElementGroupingTypes : ElementGroupingTypes):
+		self.___hasElementGroupType = aElementGroupingTypes
+	@DetectorTypes.setter
+	def DetectorTypes(self, *aDetectorTypes : DetectorTypes):
+		self.___hasDetectorTypes = aDetectorTypes
+	@anyAttribute.setter
+	def anyAttribute(self, aanyAttribute : anyAttribute):
+		self.___rail3_anyAttribute = aanyAttribute
 
 	def __init__(self):
-		self._hasAspect : GenericAspect = None
+		self.___hasAspect : GenericAspect = GenericAspect.GenericAspect()
 		# @AssociationType Interlocking.GenericAspect*
 		# @AssociationMultiplicity 2..*
 		# """Classification of signal aspects."""
-		self._hasTVDresetStrategy : GenericResetStrategy = None
+		self.___hasTVDresetStrategy : GenericResetStrategy = GenericResetStrategy.GenericResetStrategy()
 		# @AssociationType Interlocking.GenericResetStrategy*
 		# @AssociationMultiplicity 0..*
 		# """Classification of TVD section reset strategies"""
-		self._hasRouteType : GenericRouteType = None
+		self.___hasRouteType : GenericRouteType = GenericRouteType.GenericRouteType()
 		# @AssociationType Interlocking.GenericRouteType*
 		# @AssociationMultiplicity 1..*
 		# """Classification of route types."""
-		self._hasLevelCrossingType : LevelCrossingTypeList = None
+		self.___hasLevelCrossingType : LevelCrossingTypeList = LevelCrossingTypeList.LevelCrossingTypeList()
 		# @AssociationType Interlocking.LevelCrossingTypeList*
 		# @AssociationMultiplicity 0..*
 		# """Classification of basic level crossing types."""
-		self._hasElementGroupType : ElementGroupingTypes = None
+		self.___hasElementGroupType : ElementGroupingTypes = ElementGroupingTypes.ElementGroupingTypes()
 		# @AssociationType Interlocking.ElementGroupingTypes*
 		# @AssociationMultiplicity 0..*
 		# """Classification of element groups used for operation from the interlock."""
-		self._hasDetectorTypes : DetectorTypes = None
+		self.___hasDetectorTypes : DetectorTypes = DetectorTypes.DetectorTypes()
 		# @AssociationType Interlocking.DetectorTypes*
 		# @AssociationMultiplicity 0..*
 		# """The list of detector type classification."""
-		self.___rail3_anyAttribute : anyAttribute = None
+		self.___rail3_anyAttribute : anyAttribute = anyAttribute.anyAttribute()
 		"""# @AssociationKind Aggregation"""
 

@@ -1,30 +1,31 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.GenericTypes import GenericTypes
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import EntityILref, GenericTypes, EntityIL
 from typing import List
 
-class GenericIM(EntityIL):
+class GenericIM(EntityIL.EntityIL):
 	"""The container for the IM specific type definitions."""
-	def setOwnsSetsOfAssets(self, *aOwnsSetsOfAssets : EntityILref):
-		self._ownsSetsOfAssets = aOwnsSetsOfAssets
+	@property
+	def OwnsSetsOfAssets(self) -> EntityILref:
+		return self.___ownsSetsOfAssets
+	@property
+	def UsesTypes(self) -> GenericTypes:
+		return self.___usesTypes
 
-	def getOwnsSetsOfAssets(self) -> EntityILref:
-		return self._ownsSetsOfAssets
+	@OwnsSetsOfAssets.setter
+	def OwnsSetsOfAssets(self, *aOwnsSetsOfAssets : EntityILref):
+		self.___ownsSetsOfAssets = aOwnsSetsOfAssets
+	@UsesTypes.setter
+	def UsesTypes(self, aUsesTypes : GenericTypes):
+		self.___usesTypes = aUsesTypes
 
-	def setUsesTypes(self, aUsesTypes : GenericTypes):
-		self._usesTypes = aUsesTypes
-
-	def getUsesTypes(self) -> GenericTypes:
-		return self._usesTypes
 
 	def __init__(self):
-		self._ownsSetsOfAssets : EntityILref = None
+		self.___ownsSetsOfAssets : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to the associated lists of assets."""
-		self._usesTypes : GenericTypes = None
+		self.___usesTypes : GenericTypes = GenericTypes.GenericTypes()
 		# @AssociationType Interlocking.GenericTypes
 		# @AssociationMultiplicity 1
 		# """The types defined for this IM."""
