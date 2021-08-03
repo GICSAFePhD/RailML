@@ -17,31 +17,31 @@ class AssetsForIL(EntityIL.EntityIL):
 	def TvdSections(self) -> TvdSections:
 		return self.___tvdSections
 	@property
-	def SwitchesIL(self) -> SwitchesIL:	#TODO ACA
+	def SwitchesIL(self) -> SwitchesIL:	
 		return self.___switchesIL
 	@property
-	def DerailersIL(self) -> DerailersIL:
+	def DerailersIL(self) -> DerailersIL:	
 		return self.___derailersIL
 	@property
 	def MovableCrossings(self) -> MovableCrossings:
 		return self.___movableCrossings
 	@property
-	def LevelCrossingsIL(self) -> LevelCrossingsIL:
+	def LevelCrossingsIL(self) -> LevelCrossingsIL:	
 		return self.___levelCrossingsIL
 	@property
-	def Keys(self) -> Keys:
+	def Keys(self) -> Keys:	
 		return self.___keys
 	@property
 	def KeyLocksIL(self) -> KeyLocksIL:
 		return self.___keyLocksIL
 	@property
-	def GenericDetectors(self) -> GenericDetectors:
+	def GenericDetectors(self) -> GenericDetectors:		
 		return self.___genericDetectors
 	@property
-	def SignalsIL(self) -> SignalsIL:
+	def SignalsIL(self) -> SignalsIL:	
 		return self.___signalsIL
 	@property
-	def ATPdevices(self) -> ATPdevices:
+	def ATPdevices(self) -> ATPdevices:	#TODO ACA
 		return self.___atpDevices
 	@property
 	def Interfaces(self) -> Interfaces:

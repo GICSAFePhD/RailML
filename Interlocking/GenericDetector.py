@@ -1,67 +1,70 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.LogicalDevice import LogicalDevice
-from typing import List
+from RailML.Interlocking import EntityILref, LogicalDevice
+from typing import List, NewType
+Long = NewType("Long", int)
+Duration = NewType("Duration", int)
 
-class GenericDetector(LogicalDevice):
+class GenericDetector(LogicalDevice.LogicalDevice):
 	"""Detectors are devices detecting the exceeding of a particular characteristic and providing an output to the interlocking. Depending on the function it may influence the route signalling."""
-	def setAffectsRouteSignalling(self, aAffectsRouteSignalling : int):	#TODO DEFINED AS LONG
-		self.___affectsRouteSignalling = aAffectsRouteSignalling
-
-	def getAffectsRouteSignalling(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def AffectsRouteSignalling(self) -> Long:
 		return self.___affectsRouteSignalling
-
-	def setAllowsSingleOverride(self, aAllowsSingleOverride : int):	#TODO DEFINED AS LONG
-		self.___allowsSingleOverride = aAllowsSingleOverride
-
-	def getAllowsSingleOverride(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def AllowsSingleOverride(self) -> Long:
 		return self.___allowsSingleOverride
-
-	def setAllowsPermanentOverride(self, aAllowsPermanentOverride : int):	#TODO DEFINED AS LONG
-		self.___allowsPermanentOverride = aAllowsPermanentOverride
-
-	def getAllowsPermanentOverride(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def AllowsPermanentOverride(self) -> Long:
 		return self.___allowsPermanentOverride
-
-	def setHasTriggeredSelfTest(self, aHasTriggeredSelfTest : int):	#TODO DEFINED AS LONG
-		self.___hasTriggeredSelfTest = aHasTriggeredSelfTest
-
-	def getHasTriggeredSelfTest(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def HasTriggeredSelfTest(self) -> Long:
 		return self.___hasTriggeredSelfTest
-
-	def setSelfTestToleranceTime(self, aSelfTestToleranceTime : int):	#TODO DEFINED AS duration
-		self.___selfTestToleranceTime = aSelfTestToleranceTime
-
-	def getSelfTestToleranceTime(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def SelfTestToleranceTime(self) -> Duration:
 		return self.___selfTestToleranceTime
-
-	def setSelfTestInterval(self, aSelfTestInterval : int):	#TODO DEFINED AS duration
-		self.___selfTestInterval = aSelfTestInterval
-
-	def getSelfTestInterval(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def SelfTestInterval(self) -> Duration:
 		return self.___selfTestInterval
+	@property
+	def DetectorType(self) -> EntityILref:
+		return self.___detectorType
 
-	def setDetectorType(self, aDetectorType : EntityILref):
-		self._detectorType = aDetectorType
-
-	def getDetectorType(self) -> EntityILref:
-		return self._detectorType
+	@AffectsRouteSignalling.setter
+	def AffectsRouteSignalling(self, aAffectsRouteSignalling : Long):
+		self.___affectsRouteSignalling = aAffectsRouteSignalling
+	@AllowsSingleOverride.setter
+	def AllowsSingleOverride(self, aAllowsSingleOverride : Long):
+		self.___allowsSingleOverride = aAllowsSingleOverride
+	@AllowsPermanentOverride.setter
+	def AllowsPermanentOverride(self, aAllowsPermanentOverride : Long):
+		self.___allowsPermanentOverride = aAllowsPermanentOverride
+	@HasTriggeredSelfTest.setter
+	def HasTriggeredSelfTest(self, aHasTriggeredSelfTest : Long):
+		self.___hasTriggeredSelfTest = aHasTriggeredSelfTest
+	@SelfTestToleranceTime.setter
+	def SelfTestToleranceTime(self, aSelfTestToleranceTime : Duration):
+		self.___selfTestToleranceTime = aSelfTestToleranceTime
+	@SelfTestInterval.setter
+	def SelfTestInterval(self, aSelfTestInterval : Duration):
+		self.___selfTestInterval = aSelfTestInterval
+	@DetectorType.setter
+	def DetectorType(self, aDetectorType : EntityILref):
+		self.___detectorType = aDetectorType
 
 	def __init__(self):
-		self.___affectsRouteSignalling : int = None	#TODO DEFINED AS LONG
+		self.___affectsRouteSignalling : Long = 0
 		"""indication whether the signalling of a related route is affected by the detector status"""
-		self.___allowsSingleOverride : int = None	#TODO DEFINED AS LONG
+		self.___allowsSingleOverride : Long = 0
 		"""The detector output may be overridden once by special command."""
-		self.___allowsPermanentOverride : int = None	#TODO DEFINED AS LONG
+		self.___allowsPermanentOverride : Long = 0
 		"""The detector output may be permanently overridden by special command."""
-		self.___hasTriggeredSelfTest : int = None	#TODO DEFINED AS LONG
+		self.___hasTriggeredSelfTest : Long = 0
 		"""The detector may have a self-test which is to be triggered from the interlocking."""
-		self.___selfTestToleranceTime : int = None	#TODO DEFINED AS duration
+		self.___selfTestToleranceTime : Duration = 0
 		"""The time period for which the detector output shall be tolerated due to running self-test."""
-		self.___selfTestInterval : int = None	#TODO DEFINED AS duration
+		self.___selfTestInterval : Duration = 0
 		"""The interval at which the self-test is running, i.e. automatically initiated or triggered from interlocking."""
-		self._detectorType : EntityILref = None
+		self.___detectorType : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the particular detector type."""

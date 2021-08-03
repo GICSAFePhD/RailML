@@ -14,5 +14,5 @@ class EntityILref(tElementWithIDref.tElementWithIDref):
 		self.___unnamed_anyAttribute_ = aUnnamed_anyAttribute
 
 	def __init__(self):
-		self.___unnamed_anyAttribute_ : anyAttribute = None
+		self.___unnamed_anyAttribute_ : anyAttribute = None #TODO SOLVE THIS!
 

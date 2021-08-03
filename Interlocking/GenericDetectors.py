@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.GenericDetector import GenericDetector
+from RailML.Interlocking import GenericDetector
 from typing import List
 
 class GenericDetectors(object):
 	"""contains all GenericDetector elements"""
-	def setGenericDetector(self, *aGenericDetector : GenericDetector):
-		self._genericDetector = aGenericDetector
-
-	def getGenericDetector(self) -> GenericDetector:
-		return self._genericDetector
+	@property
+	def GenericDetector(self) -> GenericDetector:
+		return self.___genericDetector
+	
+	@GenericDetector.setter
+	def GenericDetector(self, *aGenericDetector : GenericDetector):
+		self.___genericDetector = aGenericDetector
 
 	def __init__(self):
-		self._genericDetector : GenericDetector = None
+		self.___genericDetector : GenericDetector = GenericDetector.GenericDetector()
 		# @AssociationType Interlocking.GenericDetector*
 		# @AssociationMultiplicity 1..*
 		# """Device for detecting the exceeding of a particular characteristic."""

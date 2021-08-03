@@ -1,28 +1,31 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.EntityIL import EntityIL
-from typing import List
+from RailML.Interlocking import EntityILref, EntityIL
+from typing import List, NewType
 
-class ApproachStartingDetector(EntityIL):
+Duration = NewType("Duration", int)
+
+class ApproachStartingDetector(EntityIL.EntityIL):
 	"""Train detection device, commonly an axle counter, track section, track joint or treadle that activates a level crossing. Also known as Approach Starting. This is the detection point that is the most remote from the level crossing. The approach monitoring zone is situated in between the approach starting detector(s) and the level crossing, i.e. every detector in this zone activates the level crossing. Use the any wildcard to provide a textual description of the approach starting detector is needed."""
-	def setDelay(self, aDelay : int):	#TODO DEFINED AS duration
-		self.___delay = aDelay
-
-	def getDelay(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def Delay(self) -> Duration:
 		return self.___delay
+	@property
+	def RefersTo(self) -> EntityILref:
+		return self.___refersTo
 
-	def setRefersTo(self, aRefersTo : EntityILref):
-		self._refersTo = aRefersTo
-
-	def getRefersTo(self) -> EntityILref:
-		return self._refersTo
+	@Delay.setter
+	def Delay(self, aDelay : Duration):
+		self.___delay = aDelay
+	@RefersTo.setter
+	def RefersTo(self, aRefersTo : EntityILref):
+		self.___refersTo = aRefersTo
 
 	def __init__(self):
-		self.___delay : int = None	#TODO DEFINED AS duration
+		self.___delay : Duration = 0
 		"""The level crossing is activated only after a given delay. This delay doesn't depend on any aspect. If there's a delay that depends on signalled speed, please use the aspectRelatedLevelCrossingDelay.
 		The timer starts running when the first train axle triggers the train detector."""
-		self._refersTo : EntityILref = None
+		self.___refersTo : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the train detection element in infrastructure."""
