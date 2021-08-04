@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.Interface import Interface
+from RailML.Interlocking import Interface
 from typing import List
 
 class Interfaces(object):
 	"""container element for all Interface elements"""
-	def setInterface(self, *aInterface : Interface):
-		self._interface = aInterface
-
-	def getInterface(self) -> Interface:
-		return self._interface
+	@property
+	def Interface(self) -> Interface:
+		return self.___interface
+	
+	@Interface.setter
+	def Interface(self, *aInterface : Interface):
+		self.___interface = aInterface
 
 	def __init__(self):
-		self._interface : Interface = None
+		self.___interface : Interface = Interface.Interface()
 		# @AssociationType Interlocking.Interface*
 		# @AssociationMultiplicity 1..*
 		# """Description of a physical interface with definition of the information to be exchanged in which direction."""

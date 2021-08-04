@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.WorkZone import WorkZone
+from RailML.Interlocking import WorkZone
 from typing import List
 
 class WorkZones(object):
-	def setWorkZone(self, *aWorkZone : WorkZone):
-		self._workZone = aWorkZone
-
-	def getWorkZone(self) -> WorkZone:
-		return self._workZone
+	@property
+	def WorkZone(self) -> WorkZone:
+		return self.___workZone
+	
+	@WorkZone.setter
+	def WorkZone(self, *aWorkZone : WorkZone):
+		self.___workZone = aWorkZone
 
 	def __init__(self):
-		self._workZone : WorkZone = None
+		self.___workZone : WorkZone = WorkZone.WorkZone()
 		# @AssociationType Interlocking.WorkZone*
 		# @AssociationMultiplicity 1..*
 		# """A set of track assets that track workers or the signalman can set apart from the main line."""

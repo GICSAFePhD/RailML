@@ -41,16 +41,16 @@ class AssetsForIL(EntityIL.EntityIL):
 	def SignalsIL(self) -> SignalsIL:	
 		return self.___signalsIL
 	@property
-	def ATPdevices(self) -> ATPdevices:	#TODO ACA
+	def ATPdevices(self) -> ATPdevices:	
 		return self.___atpDevices
 	@property
-	def Interfaces(self) -> Interfaces:
+	def Interfaces(self) -> Interfaces:	
 		return self.___interfaces
 	@property
-	def WorkZones(self) -> WorkZones:
+	def WorkZones(self) -> WorkZones:	
 		return self.___workZones
 	@property
-	def LocalOperationAreas(self) -> LocalOperationAreas:
+	def LocalOperationAreas(self) -> LocalOperationAreas:	#TODO ACA
 		return self.___localOperationAreas
 	@property
 	def ShuntingZones(self) -> ShuntingZones:
