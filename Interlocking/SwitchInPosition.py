@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tProtectingSideList import tProtectingSideList
-from RailML.Interlocking.SwitchAndGivenPosition import SwitchAndGivenPosition
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tProtectingSideList, SwitchAndGivenPosition, EntityIL
 from typing import List
 
-class SwitchInPosition(EntityIL):
+class SwitchInPosition(EntityIL.EntityIL):
 	"""reference to any switch and its position inside or outside the restricted area required for use and/or protection"""
-	def setProtectingSide(self, aProtectingSide : tProtectingSideList):
-		self.___protectingSide = aProtectingSide
-
-	def getProtectingSide(self) -> tProtectingSideList:
+	@property
+	def ProtectingSide(self) -> tProtectingSideList:
 		return self.___protectingSide
+	@property
+	def GivenPosition(self) -> SwitchAndGivenPosition:
+		return self.___givenPosition
 
-	def setGivenPosition(self, aGivenPosition : SwitchAndGivenPosition):
-		self._givenPosition = aGivenPosition
-
-	def getGivenPosition(self) -> SwitchAndGivenPosition:
-		return self._givenPosition
+	@ProtectingSide.setter
+	def ProtectingSide(self, aProtectingSide : tProtectingSideList):
+		self.___protectingSide = aProtectingSide
+	@GivenPosition.setter
+	def GivenPosition(self, aGivenPosition : SwitchAndGivenPosition):
+		self.___givenPosition = aGivenPosition
 
 	def __init__(self):
-		self.___protectingSide : tProtectingSideList = None
+		self.___protectingSide : tProtectingSideList = tProtectingSideList.tProtectingSideList()
 		# @AssociationType Interlocking.tProtectingSideList
 		# """indication whether the required position is for protection of the area from inside or outside"""
-		self._givenPosition : SwitchAndGivenPosition = None
+		self.___givenPosition : SwitchAndGivenPosition = SwitchAndGivenPosition.SwitchAndGivenPosition()
 		# @AssociationType Interlocking.SwitchAndGivenPosition
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the switch and its position plus the level of enforcement"""

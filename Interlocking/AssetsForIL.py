@@ -50,28 +50,28 @@ class AssetsForIL(EntityIL.EntityIL):
 	def WorkZones(self) -> WorkZones:	
 		return self.___workZones
 	@property
-	def LocalOperationAreas(self) -> LocalOperationAreas:	#TODO ACA
+	def LocalOperationAreas(self) -> LocalOperationAreas:	
 		return self.___localOperationAreas
 	@property
-	def ShuntingZones(self) -> ShuntingZones:
+	def ShuntingZones(self) -> ShuntingZones:	
 		return self.___shuntingZones
 	@property
-	def PermissionZones(self) -> PermissionZones:
+	def PermissionZones(self) -> PermissionZones:	
 		return self.___permissionZones
 	@property
-	def RouteReleaseGroupsAhead(self) -> RouteReleaseGroupsAhead:
+	def RouteReleaseGroupsAhead(self) -> RouteReleaseGroupsAhead:	
 		return self.___routeReleaseGroupsAhead
 	@property
-	def RouteReleaseGroupsRear(self) -> RouteReleaseGroupsRear:
+	def RouteReleaseGroupsRear(self) -> RouteReleaseGroupsRear:	
 		return self.___routeReleaseGroupsRear
 	@property
-	def Routes(self) -> Routes:
+	def Routes(self) -> Routes:	
 		return self.___routes
 	@property
-	def ConflictingRoutes(self) -> ConflictingRoutes:
+	def ConflictingRoutes(self) -> ConflictingRoutes:	
 		return self.___conflictingRoutes
 	@property
-	def RouteRelations(self) -> RouteRelations:
+	def RouteRelations(self) -> RouteRelations:	#TODO ACA
 		return self.___routeRelations
 	@property
 	def CombinedRoutes(self) -> CombinedRoutes:

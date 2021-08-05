@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tProtectingSideList import tProtectingSideList
-from RailML.Interlocking.CrossingAndGivenPosition import CrossingAndGivenPosition
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tProtectingSideList, CrossingAndGivenPosition, EntityIL
 from typing import List
 
-class CrossingInPosition(EntityIL):
+class CrossingInPosition(EntityIL.EntityIL):
 	"""reference to any movable crossing and its position inside or outside the restricted area required for use and/or protection"""
-	def setProtectingSide(self, aProtectingSide : tProtectingSideList):
-		self.___protectingSide = aProtectingSide
-
-	def getProtectingSide(self) -> tProtectingSideList:
+	@property
+	def ProtectingSide(self) -> tProtectingSideList:
 		return self.___protectingSide
+	@property
+	def GivenPosition(self) -> CrossingAndGivenPosition:
+		return self.___givenPosition
 
-	def setGivenPosition(self, aGivenPosition : CrossingAndGivenPosition):
-		self._givenPosition = aGivenPosition
-
-	def getGivenPosition(self) -> CrossingAndGivenPosition:
-		return self._givenPosition
+	@ProtectingSide.setter
+	def ProtectingSide(self, aProtectingSide : tProtectingSideList):
+		self.___protectingSide = aProtectingSide
+	@GivenPosition.setter
+	def GivenPosition(self, aGivenPosition : CrossingAndGivenPosition):
+		self.___givenPosition = aGivenPosition
 
 	def __init__(self):
-		self.___protectingSide : tProtectingSideList = None
+		self.___protectingSide : tProtectingSideList = tProtectingSideList.tProtectingSideList()
 		# @AssociationType Interlocking.tProtectingSideList
 		# """indication whether the required position is for protection of the area from inside or outside"""
-		self._givenPosition : CrossingAndGivenPosition = None
+		self.___givenPosition : CrossingAndGivenPosition = CrossingAndGivenPosition.CrossingAndGivenPosition()
 		# @AssociationType Interlocking.CrossingAndGivenPosition
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the movable crossing and its position plus the level of enforcement"""

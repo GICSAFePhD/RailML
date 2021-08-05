@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tProtectingSideList import tProtectingSideList
-from RailML.Interlocking.DerailerAndGivenPosition import DerailerAndGivenPosition
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tProtectingSideList, DerailerAndGivenPosition, EntityIL
 from typing import List
 
-class DerailerInPosition(EntityIL):
+class DerailerInPosition(EntityIL.EntityIL):
 	"""reference to any derailer and its position inside or outside the restricted area required for use and/or protection"""
-	def setProtectingSide(self, aProtectingSide : tProtectingSideList):
-		self.___protectingSide = aProtectingSide
-
-	def getProtectingSide(self) -> tProtectingSideList:
+	@property
+	def ProtectingSide(self) -> tProtectingSideList:
 		return self.___protectingSide
+	@property
+	def GivenPosition(self) -> DerailerAndGivenPosition:
+		return self.___givenPosition
 
-	def setGivenPosition(self, aGivenPosition : DerailerAndGivenPosition):
-		self._givenPosition = aGivenPosition
-
-	def getGivenPosition(self) -> DerailerAndGivenPosition:
-		return self._givenPosition
+	@ProtectingSide.setter
+	def ProtectingSide(self, aProtectingSide : tProtectingSideList):
+		self.___protectingSide = aProtectingSide
+	@GivenPosition.setter
+	def GivenPosition(self, aGivenPosition : DerailerAndGivenPosition):
+		self.___givenPosition = aGivenPosition
 
 	def __init__(self):
-		self.___protectingSide : tProtectingSideList = None
+		self.___protectingSide : tProtectingSideList = tProtectingSideList.tProtectingSideList()
 		# @AssociationType Interlocking.tProtectingSideList
 		# """indication whether the required position is for protection of the area from inside or outside"""
-		self._givenPosition : DerailerAndGivenPosition = None
+		self.___givenPosition : DerailerAndGivenPosition = DerailerAndGivenPosition.DerailerAndGivenPosition()
 		# @AssociationType Interlocking.DerailerAndGivenPosition
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the derailer and its position plus the level of enforcement"""

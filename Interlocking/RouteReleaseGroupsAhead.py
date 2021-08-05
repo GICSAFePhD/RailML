@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.RouteReleaseGroupAhead import RouteReleaseGroupAhead
+from RailML.Interlocking import RouteReleaseGroupAhead
 from typing import List
 
 class RouteReleaseGroupsAhead(object):
-	def setRouteReleaseGroupAhead(self, *aRouteReleaseGroupAhead : RouteReleaseGroupAhead):
-		self._routeReleaseGroupAhead = aRouteReleaseGroupAhead
-
-	def getRouteReleaseGroupAhead(self) -> RouteReleaseGroupAhead:
-		return self._routeReleaseGroupAhead
+	@property
+	def RouteReleaseGroupAhead(self) -> RouteReleaseGroupAhead:
+		return self.___routeReleaseGroupAhead
+	
+	@RouteReleaseGroupAhead.setter
+	def RouteReleaseGroupAhead(self, *aRouteReleaseGroupAhead : RouteReleaseGroupAhead):
+		self.___routeReleaseGroupAhead = aRouteReleaseGroupAhead
 
 	def __init__(self):
-		self._routeReleaseGroupAhead : RouteReleaseGroupAhead = None
+		self.___routeReleaseGroupAhead : RouteReleaseGroupAhead = RouteReleaseGroupAhead.RouteReleaseGroupAhead()
 		# @AssociationType Interlocking.RouteReleaseGroupAhead*
 		# @AssociationMultiplicity 1..*
 		# """One or more TVD sections as part of the route which can be released in a group ahead of the train in standstill."""

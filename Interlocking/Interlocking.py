@@ -44,7 +44,7 @@ class Interlocking(object):
 		# @AssociationType Interlocking.SignalBoxes
 		# @AssociationMultiplicity 0..1
 		# """container for all SignalBox elements"""
-		#self.___specificIMs : GenericIMs = GenericIMs.GenericIMs()	#TODO DONE!
+		#self.___specificIMs : GenericIMs = GenericIMs.GenericIMs()
 		# @AssociationType Interlocking.GenericIMs
 		# @AssociationMultiplicity 0..1
 		# """container for all SpecificIM elements"""

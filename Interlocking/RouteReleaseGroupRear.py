@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.PartialRoute import PartialRoute
+from RailML.Interlocking import PartialRoute
 from typing import List
 
-class RouteReleaseGroupRear(PartialRoute):
+class RouteReleaseGroupRear(PartialRoute.PartialRoute):
 	"""Ordered set of TVD sections in rear of the train.
 	Partial route, i.e. a set of TVD sections in rear of the train that is released as a group if given safety conditions are fulfilled. Partial route release can be delayed to improve safety. Route release groups can be associated with several routes.
 	Release can be retarded by a given delay.

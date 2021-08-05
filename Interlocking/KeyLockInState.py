@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tProtectingSideList import tProtectingSideList
-from RailML.Interlocking.LockAndGivenState import LockAndGivenState
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tProtectingSideList, LockAndGivenState, EntityIL
 from typing import List
 
-class KeyLockInState(EntityIL):
+class KeyLockInState(EntityIL.EntityIL):
 	"""reference to any key lock and its state inside or outside the restricted area required for use and/or protection"""
-	def setProtectingSide(self, aProtectingSide : tProtectingSideList):
-		self.___protectingSide = aProtectingSide
-
-	def getProtectingSide(self) -> tProtectingSideList:
+	@property
+	def ProtectingSide(self) -> tProtectingSideList:
 		return self.___protectingSide
+	@property
+	def GivenState(self) -> LockAndGivenState:
+		return self.___givenState
 
-	def setGivenState(self, aGivenState : LockAndGivenState):
-		self._givenState = aGivenState
-
-	def getGivenState(self) -> LockAndGivenState:
-		return self._givenState
+	@ProtectingSide.setter
+	def ProtectingSide(self, aProtectingSide : tProtectingSideList):
+		self.___protectingSide = aProtectingSide
+	@GivenState.setter
+	def GivenState(self, aGivenState : LockAndGivenState):
+		self.___givenState = aGivenState
 
 	def __init__(self):
-		self.___protectingSide : tProtectingSideList = None
+		self.___protectingSide : tProtectingSideList = tProtectingSideList.tProtectingSideList()
 		# @AssociationType Interlocking.tProtectingSideList
 		# """indication whether the required state is for protection of the area from inside or outside"""
-		self._givenState : LockAndGivenState = None
+		self.___givenState : LockAndGivenState = LockAndGivenState.LockAndGivenState()
 		# @AssociationType Interlocking.LockAndGivenState
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the key lock and its state plus the level of enforcement"""

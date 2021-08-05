@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.PermissionZone import PermissionZone
+from RailML.Interlocking import PermissionZone
 from typing import List
 
 class PermissionZones(object):
-	def setPermissionZone(self, *aPermissionZone : PermissionZone):
-		self._permissionZone = aPermissionZone
-
-	def getPermissionZone(self) -> PermissionZone:
-		return self._permissionZone
+	@property
+	def PermissionZone(self) -> PermissionZone:
+		return self.___permissionZone
+	
+	@PermissionZone.setter
+	def PermissionZone(self, *aPermissionZone : PermissionZone):
+		self.___permissionZone = aPermissionZone
 
 	def __init__(self):
-		self._permissionZone : PermissionZone = None
+		self.___permissionZone : PermissionZone = PermissionZone.PermissionZone()
 		# @AssociationType Interlocking.PermissionZone*
 		# @AssociationMultiplicity 1..*
 		# """A set of track assets inside a station which can have different operating permissions (being controlled from a different controller) as the rest of the station"""

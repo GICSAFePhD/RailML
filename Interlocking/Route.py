@@ -1,144 +1,143 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.RouteActivationSection import RouteActivationSection
-from RailML.Interlocking.SwitchAndPosition import SwitchAndPosition
-from RailML.Interlocking.RouteEntry import RouteEntry
-from RailML.Interlocking.RouteExit import RouteExit
-from RailML.Interlocking.TrackAsset import TrackAsset
-from typing import List
+from RailML.Interlocking import EntityILref, RouteActivationSection, SwitchAndPosition, RouteEntry, RouteExit, TrackAsset
+from typing import List, NewType
+
+Long = NewType("Long", int)
+Duration = NewType("Duration", int)
 
 class Route(TrackAsset):
 	"""We define a route as an entry- and exit plus the positions of intermediate switches. If there are no switches in the route, no switch positions can be defined. If one or more switches are encountered en route, either facing or trailing, the positions of these switches must be given. There can be multiple routes from entry to exit depending on the positions of the intermediate switches. The user is free to create different routes with the same entry,exit and same switch positions that differ only by the classifier. This allows one to distinguish for example a traction-route from no-traction-route"""
-	def setLocksAutomatically(self, aLocksAutomatically : int):	#TODO DEFINED AS LONG
-		self.___locksAutomatically = aLocksAutomatically
-
-	def getLocksAutomatically(self) -> int:	#TODO DEFINED AS LONG
+	@property
+	def LocksAutomatically(self) -> Long:
 		return self.___locksAutomatically
-
-	def setProcessingDelay(self, aProcessingDelay : int):	#TODO DEFINED AS duration
-		self.___processingDelay = aProcessingDelay
-
-	def getProcessingDelay(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def ProcessingDelay(self) -> Duration:
 		return self.___processingDelay
-
-	def setProceedAspectDelay(self, aProceedAspectDelay : int):	#TODO DEFINED AS duration
-		self.___proceedAspectDelay = aProceedAspectDelay
-
-	def getProceedAspectDelay(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def ProceedAspectDelay(self) -> Duration:
 		return self.___proceedAspectDelay
-
-	def setSignalClosureDelay(self, aSignalClosureDelay : int):	#TODO DEFINED AS duration
-		self.___signalClosureDelay = aSignalClosureDelay
-
-	def getSignalClosureDelay(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def SignalClosureDelay(self) -> Duration:
 		return self.___signalClosureDelay
-
-	def setApproachReleaseDelay(self, aApproachReleaseDelay : int):	#TODO DEFINED AS duration
-		self.___approachReleaseDelay = aApproachReleaseDelay
-
-	def getApproachReleaseDelay(self) -> int:	#TODO DEFINED AS duration
+	@property
+	def ApproachReleaseDelay(self) -> Duration:
 		return self.___approachReleaseDelay
+	@property
+	def HandlesRouteType(self) -> EntityILref:
+		return self.___handlesRouteType
+	@property
+	def RouteActivationSection(self) -> RouteActivationSection:
+		return self.___routeActivationSection
+	@property
+	def FacingSwitchInPosition(self) -> SwitchAndPosition:
+		return self.___facingSwitchInPosition
+	@property
+	def HasTvdSection(self) -> EntityILref:
+		return self.___hasTvdSection
+	@property
+	def RouteEntry(self) -> RouteEntry:
+		return self.___routeEntry
+	@property
+	def HasReleaseGroup(self) -> EntityILref:
+		return self.___hasReleaseGroup
+	@property
+	def SwitchPositionInDepartureTrack(self) -> SwitchAndPosition:
+		return self.___switchPositionInDepartureTrack
+	@property
+	def RouteExit(self) -> RouteExit:
+		return self.___routeExit
+	@property
+	def AdditionalRelation(self) -> EntityILref:
+		return self.___additionalRelation
 
-	def setHandlesRouteType(self, *aHandlesRouteType : EntityILref):
-		self._handlesRouteType = aHandlesRouteType
-
-	def getHandlesRouteType(self) -> EntityILref:
-		return self._handlesRouteType
-
-	def setRouteActivationSection(self, *aRouteActivationSection : RouteActivationSection):
-		self._routeActivationSection = aRouteActivationSection
-
-	def getRouteActivationSection(self) -> RouteActivationSection:
-		return self._routeActivationSection
-
-	def setFacingSwitchInPosition(self, *aFacingSwitchInPosition : SwitchAndPosition):
-		self._facingSwitchInPosition = aFacingSwitchInPosition
-
-	def getFacingSwitchInPosition(self) -> SwitchAndPosition:
-		return self._facingSwitchInPosition
-
-	def setHasTvdSection(self, *aHasTvdSection : EntityILref):
-		self._hasTvdSection = aHasTvdSection
-
-	def getHasTvdSection(self) -> EntityILref:
-		return self._hasTvdSection
-
-	def setRouteEntry(self, aRouteEntry : RouteEntry):
-		self._routeEntry = aRouteEntry
-
-	def getRouteEntry(self) -> RouteEntry:
-		return self._routeEntry
-
-	def setHasReleaseGroup(self, *aHasReleaseGroup : EntityILref):
-		self._hasReleaseGroup = aHasReleaseGroup
-
-	def getHasReleaseGroup(self) -> EntityILref:
-		return self._hasReleaseGroup
-
-	def setSwitchPositionInDepartureTrack(self, *aSwitchPositionInDepartureTrack : SwitchAndPosition):
-		self._switchPositionInDepartureTrack = aSwitchPositionInDepartureTrack
-
-	def getSwitchPositionInDepartureTrack(self) -> SwitchAndPosition:
-		return self._switchPositionInDepartureTrack
-
-	def setRouteExit(self, aRouteExit : RouteExit):
-		self._routeExit = aRouteExit
-
-	def getRouteExit(self) -> RouteExit:
-		return self._routeExit
-
-	def setAdditionalRelation(self, *aAdditionalRelation : EntityILref):
-		self._additionalRelation = aAdditionalRelation
-
-	def getAdditionalRelation(self) -> EntityILref:
-		return self._additionalRelation
+	@LocksAutomatically.setter
+	def LocksAutomatically(self, aLocksAutomatically : Long):
+		self.___locksAutomatically = aLocksAutomatically
+	@ProcessingDelay.setter
+	def ProcessingDelay(self, aProcessingDelay : Duration):
+		self.___processingDelay = aProcessingDelay
+	@ProceedAspectDelay.setter
+	def ProceedAspectDelay(self, aProceedAspectDelay : Duration):
+		self.___proceedAspectDelay = aProceedAspectDelay
+	@SignalClosureDelay.setter
+	def SignalClosureDelay(self, aSignalClosureDelay : Duration):
+		self.___signalClosureDelay = aSignalClosureDelay
+	@ApproachReleaseDelay.setter
+	def ApproachReleaseDelay(self, aApproachReleaseDelay : Duration):
+		self.___approachReleaseDelay = aApproachReleaseDelay
+	@HandlesRouteType.setter
+	def HandlesRouteType(self, *aHandlesRouteType : EntityILref):
+		self.___handlesRouteType = aHandlesRouteType
+	@RouteActivationSection.setter
+	def RouteActivationSection(self, *aRouteActivationSection : RouteActivationSection):
+		self.___routeActivationSection = aRouteActivationSection
+	@FacingSwitchInPosition.setter
+	def FacingSwitchInPosition(self, *aFacingSwitchInPosition : SwitchAndPosition):
+		self.___facingSwitchInPosition = aFacingSwitchInPosition
+	@HasTvdSection.setter
+	def HasTvdSection(self, *aHasTvdSection : EntityILref):
+		self.___hasTvdSection = aHasTvdSection
+	@RouteEntry.setter
+	def RouteEntry(self, aRouteEntry : RouteEntry):
+		self.___routeEntry = aRouteEntry
+	@HasReleaseGroup.setter
+	def HasReleaseGroup(self, *aHasReleaseGroup : EntityILref):
+		self.___hasReleaseGroup = aHasReleaseGroup
+	@SwitchPositionInDepartureTrack.setter
+	def SwitchPositionInDepartureTrack(self, *aSwitchPositionInDepartureTrack : SwitchAndPosition):
+		self.___switchPositionInDepartureTrack = aSwitchPositionInDepartureTrack
+	@RouteExit.setter
+	def RouteExit(self, aRouteExit : RouteExit):
+		self.___routeExit = aRouteExit
+	@AdditionalRelation.setter
+	def AdditionalRelation(self, *aAdditionalRelation : EntityILref):
+		self.___additionalRelation = aAdditionalRelation
 
 	def __init__(self):
-		self.___locksAutomatically : int = None	#TODO DEFINED AS LONG
+		self.___locksAutomatically : Long = 0
 		"""If true, the interlocking locks this route automatically and immediately after it was cleared. The operator has to intervene if he wishes to call another route. Automatikfahrstrasse in German, trace automatique in French. Note that this functionality is often part of the control system in which case this attribute should be omitted."""
-		self.___processingDelay : int = None	#TODO DEFINED AS duration
+		self.___processingDelay : Duration = 0
 		"""The delay in seconds between the moment the interlocking receives the route call and the moment the route the interlocking reports back that the route is locked, i.e. the processing time for setting that route."""
-		self.___proceedAspectDelay : int = None	#TODO DEFINED AS duration
+		self.___proceedAspectDelay : Duration = 0
 		"""The delay for the signal before it will change from closed to any proceed aspect."""
-		self.___signalClosureDelay : int = None	#TODO DEFINED AS duration
+		self.___signalClosureDelay : Duration = 0
 		"""The delay for the signal after the conditions for proceed aspect are removed and the physical closure of the signal."""
-		self.___approachReleaseDelay : int = None	#TODO DEFINED AS duration
+		self.___approachReleaseDelay : Duration = 0
 		"""The delay between the request from signalman to release an already approached (definitely locked) route and the real release of associated elements of the route."""
-		self._handlesRouteType : EntityILref = None
+		self.___handlesRouteType : EntityILref = EntityILref.EntityILref()
 		"""The reference to the IM specific route type. This implies particular characteristics of the route dependent on the IM operational rules."""
-		self._routeActivationSection : RouteActivationSection = None
+		self.___routeActivationSection : RouteActivationSection = RouteActivationSection.RouteActivationSection()
 		# @AssociationType Interlocking.RouteActivationSection*
 		# @AssociationMultiplicity 0..*
 		# """Description of the route activation, i.e. automatic setting or locking when the route entry is approached."""
-		self._facingSwitchInPosition : SwitchAndPosition = None
+		self.___facingSwitchInPosition : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
 		"""The tuple for each facing switch in the running path to unambiguously define the route containing the reference to the switch and its position."""
-		self._hasTvdSection : EntityILref = None
+		self.___hasTvdSection : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to TVD section(s) within the running path of the route."""
-		self._routeEntry : RouteEntry = None
+		self.___routeEntry : RouteEntry = RouteEntry.RouteEntry()
 		# @AssociationType Interlocking.RouteEntry
 		# @AssociationMultiplicity 1
 		# """Description of the start point of the route. This is normally a signal."""
-		self._hasReleaseGroup : EntityILref = None
+		self.___hasReleaseGroup : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The references to any partial routes which are to be released together within a group."""
-		self._switchPositionInDepartureTrack : SwitchAndPosition = None
+		self.___switchPositionInDepartureTrack : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
 		# @AssociationType Interlocking.SwitchAndPosition*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.SwitchAndPosition*
 		# @AssociationMultiplicity 0..*
 		# """The tuple for any switch in the track in rear of the start signal required for this route containing the reference to the switch and its position."""
-		self._routeExit : RouteExit = None
+		self.___routeExit : RouteExit = RouteExit.RouteExit()
 		# @AssociationType Interlocking.RouteExit
 		# @AssociationMultiplicity 1
 		# """Description of the route destination point. In most cases the route destination is a signal or a buffer stop."""
-		self._additionalRelation : EntityILref = None
+		self.___additionalRelation : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """reference to any additional relation needed for signalling of this route"""
-

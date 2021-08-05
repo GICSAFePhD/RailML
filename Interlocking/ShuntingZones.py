@@ -1,17 +1,19 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.ShuntingZone import ShuntingZone
+from RailML.Interlocking import ShuntingZone
 from typing import List
 
 class ShuntingZones(object):
-	def setShuntingZone(self, *aShuntingZone : ShuntingZone):
-		self._shuntingZone = aShuntingZone
-
-	def getShuntingZone(self) -> ShuntingZone:
-		return self._shuntingZone
+	@property
+	def ShuntingZone(self) -> ShuntingZone:
+		return self.___shuntingZone
+	
+	@ShuntingZone.setter
+	def ShuntingZone(self, *aShuntingZone : ShuntingZone):
+		self.___shuntingZone = aShuntingZone
 
 	def __init__(self):
-		self._shuntingZone : ShuntingZone = None
+		self.___shuntingZone : ShuntingZone = ShuntingZone.ShuntingZone()
 		# @AssociationType Interlocking.ShuntingZone*
 		# @AssociationMultiplicity 1..*
 		# """Simple zone defined for shunting movements."""

@@ -1,19 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.DerailerAndPosition import DerailerAndPosition
-from RailML.Interlocking.AssetAndGivenState import AssetAndGivenState
+from RailML.Interlocking import DerailerAndPosition, AssetAndGivenState
 from typing import List
 
-class DerailerAndGivenPosition(AssetAndGivenState):
+class DerailerAndGivenPosition(AssetAndGivenState.AssetAndGivenState):
 	"""the tuple of references to the derailer and its position plus the level of enforcement"""
-	def setRelatedDerailerAndPosition(self, aRelatedDerailerAndPosition : DerailerAndPosition):
-		self._relatedDerailerAndPosition = aRelatedDerailerAndPosition
-
-	def getRelatedDerailerAndPosition(self) -> DerailerAndPosition:
-		return self._relatedDerailerAndPosition
+	@property
+	def RelatedDerailerAndPosition(self) -> DerailerAndPosition:
+		return self.___relatedDerailerAndPosition
+	
+	@RelatedDerailerAndPosition.setter
+	def RelatedDerailerAndPosition(self, aRelatedDerailerAndPosition : DerailerAndPosition):
+		self.___relatedDerailerAndPosition = aRelatedDerailerAndPosition
 
 	def __init__(self):
-		self._relatedDerailerAndPosition : DerailerAndPosition = None
+		self.___relatedDerailerAndPosition : DerailerAndPosition = DerailerAndPosition.DerailerAndPosition()
 		# @AssociationType Interlocking.DerailerAndPosition
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the derailer and its position"""

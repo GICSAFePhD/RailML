@@ -1,27 +1,28 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.AssetAndState import AssetAndState
+from RailML.Interlocking import EntityILref, AssetAndState
 from typing import List
 
-class SignalAndAspect(AssetAndState):
+class SignalAndAspect(AssetAndState.AssetAndState):
 	"""A tuple (signal, aspect). Refers to a signal and an aspect. Used for expressing concepts like signal 1105 shows yellow flashing."""
-	def setRefersToSignal(self, *aRefersToSignal : EntityILref):
-		self._refersToSignal = aRefersToSignal
+	@property
+	def RefersToSignal(self) -> EntityILref:
+		return self.___refersToSignal
+	@property
+	def ShowsAspect(self) -> EntityILref:
+		return self.___showsAspect
 
-	def getRefersToSignal(self) -> EntityILref:
-		return self._refersToSignal
-
-	def setShowsAspect(self, aShowsAspect : EntityILref):
-		self._showsAspect = aShowsAspect
-
-	def getShowsAspect(self) -> EntityILref:
-		return self._showsAspect
+	@RefersToSignal.setter
+	def RefersToSignal(self, *aRefersToSignal : EntityILref):
+		self.___refersToSignal = aRefersToSignal
+	@ShowsAspect.setter
+	def ShowsAspect(self, aShowsAspect : EntityILref):
+		self.___showsAspect = aShowsAspect
 
 	def __init__(self):
-		self._refersToSignal : EntityILref = None
+		self.___refersToSignal : EntityILref = EntityILref.EntityILref()
 		"""The reference to the signal."""
-		self._showsAspect : EntityILref = None
+		self.___showsAspect : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref

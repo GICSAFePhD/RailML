@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tDetectorStates import tDetectorStates
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.AssetAndState import AssetAndState
+from RailML.Interlocking import tDetectorStates, EntityILref, AssetAndState
 from typing import List
 
-class DetectorAndState(AssetAndState):
+class DetectorAndState(AssetAndState.AssetAndState):
 	"""The tuple of reference to a detector and its state."""
-	def setInState(self, aInState : tDetectorStates):
-		self.___inState = aInState
-
-	def getInState(self) -> tDetectorStates:
+	@property
+	def InState(self) -> tDetectorStates:
 		return self.___inState
+	@property
+	def RefersToDetector(self) -> EntityILref:
+		return self.___refersToDetector
 
-	def setRefersToDetector(self, aRefersToDetector : EntityILref):
-		self._refersToDetector = aRefersToDetector
-
-	def getRefersToDetector(self) -> EntityILref:
-		return self._refersToDetector
+	@InState.setter
+	def InState(self, aInState : tDetectorStates):
+		self.___inState = aInState
+	@RefersToDetector.setter
+	def RefersToDetector(self, aRefersToDetector : EntityILref):
+		self.___refersToDetector = aRefersToDetector
 
 	def __init__(self):
-		self.___inState : tDetectorStates = None
+		self.___inState : tDetectorStates = tDetectorStates.tDetectorStates()
 		# @AssociationType Interlocking.tDetectorStates
 		# """The state of the particular detector."""
-		self._refersToDetector : EntityILref = None
+		self.___refersToDetector : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the particular detector."""

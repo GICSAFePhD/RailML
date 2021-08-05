@@ -1,41 +1,41 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.ConflictReason import ConflictReason
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import EntityILref, ConflictReason, EntityIL
 from typing import List
 
-class ConflictingRoute(EntityIL):
+class ConflictingRoute(EntityIL.EntityIL):
 	"""Iness definition:
 	The route conflict table identifies the routes that may never be simultaneously allocated, due to utilisation of common track elements."""
-	def setRefersToRoute(self, *aRefersToRoute : EntityILref):
-		self._refersToRoute = aRefersToRoute
+	@property
+	def RefersToRoute(self) -> EntityILref:
+		return self.___refersToRoute
+	@property
+	def ConflictsWithRoute(self) -> EntityILref:
+		return self.___conflictsWithRoute
+	@property
+	def ReasonForConflict(self) -> ConflictReason:
+		return self.___reasonForConflict
 
-	def getRefersToRoute(self) -> EntityILref:
-		return self._refersToRoute
-
-	def setConflictsWithRoute(self, aConflictsWithRoute : EntityILref):
-		self._conflictsWithRoute = aConflictsWithRoute
-
-	def getConflictsWithRoute(self) -> EntityILref:
-		return self._conflictsWithRoute
-
-	def setReasonForConflict(self, *aReasonForConflict : ConflictReason):
-		self._reasonForConflict = aReasonForConflict
-
-	def getReasonForConflict(self) -> ConflictReason:
-		return self._reasonForConflict
+	@RefersToRoute.setter
+	def RefersToRoute(self, *aRefersToRoute : EntityILref):
+		self.___refersToRoute = aRefersToRoute
+	@ConflictsWithRoute.setter
+	def ConflictsWithRoute(self, aConflictsWithRoute : EntityILref):
+		self.___conflictsWithRoute = aConflictsWithRoute
+	@ReasonForConflict.setter
+	def ReasonForConflict(self, *aReasonForConflict : ConflictReason):
+		self.___reasonForConflict = aReasonForConflict
 
 	def __init__(self):
-		self._refersToRoute : EntityILref = None
+		self.___refersToRoute : EntityILref = EntityILref.EntityILref()
 		"""The reference to the affected route."""
-		self._conflictsWithRoute : EntityILref = None
+		self.___conflictsWithRoute : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the route causing the conflict."""
-		self._reasonForConflict : ConflictReason = None
+		self.___reasonForConflict : ConflictReason = ConflictReason.ConflictReason()
 		# @AssociationType Interlocking.ConflictReason*
 		# @AssociationMultiplicity 0..*
 		# """Description of the reason for the conflict."""
