@@ -6,7 +6,7 @@ from typing import List, NewType
 Long = NewType("Long", int)
 Duration = NewType("Duration", int)
 
-class Route(TrackAsset):
+class Route(TrackAsset.TrackAsset):
 	"""We define a route as an entry- and exit plus the positions of intermediate switches. If there are no switches in the route, no switch positions can be defined. If one or more switches are encountered en route, either facing or trailing, the positions of these switches must be given. There can be multiple routes from entry to exit depending on the positions of the intermediate switches. The user is free to create different routes with the same entry,exit and same switch positions that differ only by the classifier. This allows one to distinguish for example a traction-route from no-traction-route"""
 	@property
 	def LocksAutomatically(self) -> Long:

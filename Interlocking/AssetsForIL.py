@@ -71,13 +71,13 @@ class AssetsForIL(EntityIL.EntityIL):
 	def ConflictingRoutes(self) -> ConflictingRoutes:	
 		return self.___conflictingRoutes
 	@property
-	def RouteRelations(self) -> RouteRelations:	#TODO ACA
+	def RouteRelations(self) -> RouteRelations:	
 		return self.___routeRelations
 	@property
 	def CombinedRoutes(self) -> CombinedRoutes:
 		return self.___combinedRoutes
 	@property
-	def Overlaps(self) -> Overlaps:
+	def Overlaps(self) -> Overlaps:	#TODO ACA
 		return self.___overlaps
 	@property
 	def DangerPoints(self) -> DangerPoints:

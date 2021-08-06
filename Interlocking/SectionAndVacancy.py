@@ -1,29 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tSectionVacancy import tSectionVacancy
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.AssetAndState import AssetAndState
+from RailML.Interlocking import tSectionVacancy, EntityILref, AssetAndState
 from typing import List
 
-class SectionAndVacancy(AssetAndState):
+class SectionAndVacancy(AssetAndState.AssetAndState):
 	"""Tuple of a track vacancy detection section and its state (occupied, vacant)"""
-	def setInState(self, aInState : tSectionVacancy):
-		self.___inState = aInState
-
-	def getInState(self) -> tSectionVacancy:
+	@property
+	def InState(self) -> tSectionVacancy:
 		return self.___inState
+	@property
+	def RefersToSection(self) -> EntityILref:
+		return self.___refersToSection
 
-	def setRefersToSection(self, aRefersToSection : EntityILref):
-		self._refersToSection = aRefersToSection
-
-	def getRefersToSection(self) -> EntityILref:
-		return self._refersToSection
+	@InState.setter
+	def InState(self, aInState : tSectionVacancy):
+		self.___inState = aInState
+	@RefersToSection.setter
+	def RefersToSection(self, aRefersToSection : EntityILref):
+		self.___refersToSection = aRefersToSection
 
 	def __init__(self):
-		self.___inState : tSectionVacancy = None
+		self.___inState : tSectionVacancy = tSectionVacancy.tSectionVacancy()
 		# @AssociationType Interlocking.tSectionVacancy
 		# """The occupation status of the TVD section."""
-		self._refersToSection : EntityILref = None
+		self.___refersToSection : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the TVD section."""

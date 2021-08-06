@@ -53,7 +53,7 @@ class railML():
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		#self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
+		self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""
@@ -61,13 +61,13 @@ class railML():
 		# @AssociationType Interlocking.Interlocking
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 interlocking model"""
-		self.___rail3_aRailML : aRailML = aRailML.aRailML()
+		#self.___rail3_aRailML : aRailML = aRailML.aRailML()
 		"""# @AssociationKind Aggregation"""
 
 
 RML = railML()
 
-RML.aRailML.Version = "Test"
+#RML.aRailML.Version = "Test"
 
 
 #infrastructure = Infrastructure()
