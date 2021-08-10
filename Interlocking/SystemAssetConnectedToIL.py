@@ -1,30 +1,29 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tExtentOfControl import tExtentOfControl
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import tExtentOfControl, EntityILref, EntityIL
 from typing import List
 
-class SystemAssetConnectedToIL(EntityIL):
+class SystemAssetConnectedToIL(EntityIL.EntityIL):
 	"""List of System Assets that are connected to a specific IL. These system assets are at least known to the interlocking."""
-	def setExtentOfControl(self, aExtentOfControl : tExtentOfControl):
-		self.___extentOfControl = aExtentOfControl
-
-	def getExtentOfControl(self) -> tExtentOfControl:
+	@property
+	def ExtentOfControl(self) -> tExtentOfControl:
 		return self.___extentOfControl
+	@property
+	def ConnectedSystemAsset(self) -> EntityILref:
+		return self.___connectedSystemAsset
 
-	def setConnectedSystemAsset(self, aConnectedSystemAsset : EntityILref):
-		self._connectedSystemAsset = aConnectedSystemAsset
-
-	def getConnectedSystemAsset(self) -> EntityILref:
-		return self._connectedSystemAsset
+	@ExtentOfControl.setter
+	def ExtentOfControl(self, aExtentOfControl : tExtentOfControl):
+		self.___extentOfControl = aExtentOfControl
+	@ConnectedSystemAsset.setter
+	def ConnectedSystemAsset(self, aConnectedSystemAsset : EntityILref):
+		self.___connectedSystemAsset = aConnectedSystemAsset
 
 	def __init__(self):
-		self.___extentOfControl : tExtentOfControl = None
+		self.___extentOfControl : tExtentOfControl = tExtentOfControl.tExtentOfControl()
 		# @AssociationType Interlocking.tExtentOfControl
 		# """The level of control of the asset by the interlocking."""
-		self._connectedSystemAsset : EntityILref = None
+		self.___connectedSystemAsset : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the connected system asset."""
-

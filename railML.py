@@ -53,7 +53,7 @@ class railML():
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
+		#self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""

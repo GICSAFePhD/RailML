@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.SignalBox import SignalBox
+from RailML.Interlocking import SignalBox
 from typing import List
 
 class SignalBoxes(object):
 	"""container element for all signalBox elements"""
-	def setSignalBox(self, *aSignalBox : SignalBox):
-		self._signalBox = aSignalBox
-
-	def getSignalBox(self) -> SignalBox:
-		return self._signalBox
+	@property
+	def SignalBox(self) -> SignalBox:
+		return self.___signalBox
+	
+	@SignalBox.setter
+	def SignalBox(self, *aSignalBox : SignalBox):
+		self.___signalBox = aSignalBox
 
 	def __init__(self):
-		self._signalBox : SignalBox = None
+		self.___signalBox : SignalBox = SignalBox.SignalBox()
 		# @AssociationType Interlocking.SignalBox*
 		# @AssociationMultiplicity 1..*
 		# """Container with the characteristics of an individual interlocking system."""

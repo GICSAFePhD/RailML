@@ -1,18 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.DangerPoint import DangerPoint
+from RailML.Interlocking import DangerPoint
 from typing import List
 
 class DangerPoints(object):
 	"""container element for all DangerPoint elements"""
-	def setDangerPoint(self, *aDangerPoint : DangerPoint):
-		self._dangerPoint = aDangerPoint
-
-	def getDangerPoint(self) -> DangerPoint:
-		return self._dangerPoint
+	@property
+	def DangerPoint(self) -> DangerPoint:
+		return self.___dangerPoint
+	
+	@DangerPoint.setter
+	def DangerPoint(self, *aDangerPoint : DangerPoint):
+		self.___dangerPoint = aDangerPoint
 
 	def __init__(self):
-		self._dangerPoint : DangerPoint = None
+		self.___dangerPoint : DangerPoint = DangerPoint.DangerPoint()
 		# @AssociationType Interlocking.DangerPoint*
 		# @AssociationMultiplicity 1..*
 		# """position beyond the exit signal up to where a train is likely to be safe"""

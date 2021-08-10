@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.tIxlTechnologyTypeList import tIxlTechnologyTypeList
+from RailML.Interlocking import tIxlTechnologyTypeList
 from typing import List
 
-class tIxlTechnologyTypeListExt(tIxlTechnologyTypeList):
+class tIxlTechnologyTypeListExt(tIxlTechnologyTypeList.tIxlTechnologyTypeList):
 	"""The list of possible interlocking technologies with extension point."""
 	pass

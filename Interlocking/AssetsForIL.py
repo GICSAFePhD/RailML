@@ -77,10 +77,10 @@ class AssetsForIL(EntityIL.EntityIL):
 	def CombinedRoutes(self) -> CombinedRoutes:
 		return self.___combinedRoutes
 	@property
-	def Overlaps(self) -> Overlaps:	#TODO ACA
+	def Overlaps(self) -> Overlaps:	
 		return self.___overlaps
 	@property
-	def DangerPoints(self) -> DangerPoints:
+	def DangerPoints(self) -> DangerPoints:	
 		return self.___dangerPoints
 	@property
 	def DestinationPoints(self) -> DestinationPoints:
@@ -266,4 +266,3 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.PowerSuppliesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all powerSupplyIL elements"""
-
