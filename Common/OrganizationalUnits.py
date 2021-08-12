@@ -57,29 +57,32 @@ class OrganizationalUnits(object):
 	def Contractor(self, aContractor : Contractor):
 		self.___contractor = aContractor
 
+	def createInfrastructureManager(self):
+		self.InfrastructureManager = InfrastructureManager.InfrastructureManager()
+    
 	def __init__(self):
-		self.___infrastructureManager : InfrastructureManager = InfrastructureManager.InfrastructureManager()
+		self.___infrastructureManager : InfrastructureManager = None #InfrastructureManager.InfrastructureManager()
 		# @AssociationType Common.InfrastructureManager*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleManufacturer : VehicleManufacturer = VehicleManufacturer.VehicleManufacturer()
+		self.___vehicleManufacturer : VehicleManufacturer = None #VehicleManufacturer.VehicleManufacturer()
 		# @AssociationType Common.VehicleManufacturer*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleOperator : VehicleOperator = VehicleOperator.VehicleOperator()
+		self.___vehicleOperator : VehicleOperator = None #VehicleOperator.VehicleOperator()
 		# @AssociationType Common.VehicleOperator*
 		# @AssociationMultiplicity 0..*
-		self.___customer : Customer = Customer.Customer()
+		self.___customer : Customer = None #Customer.Customer()
 		# @AssociationType Common.Customer*
 		# @AssociationMultiplicity 0..*
-		self.___railwayUndertaking : RailwayUndertaking = RailwayUndertaking.RailwayUndertaking()
+		self.___railwayUndertaking : RailwayUndertaking = None #RailwayUndertaking.RailwayUndertaking()
 		# @AssociationType Common.RailwayUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___operationalUndertaking : OperationalUndertaking = OperationalUndertaking.OperationalUndertaking()
+		self.___operationalUndertaking : OperationalUndertaking = None #OperationalUndertaking.OperationalUndertaking()
 		# @AssociationType Common.OperationalUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___concessionaire : Concessionaire = Concessionaire.Concessionaire()
+		self.___concessionaire : Concessionaire = None #Concessionaire.Concessionaire()
 		# @AssociationType Common.Concessionaire*
 		# @AssociationMultiplicity 0..*
-		self.___contractor : Contractor = Contractor.Contractor()
+		self.___contractor : Contractor = None #Contractor.Contractor()
 		# @AssociationType Common.Contractor*
 		# @AssociationMultiplicity 0..*
 

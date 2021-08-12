@@ -35,27 +35,27 @@ class Common(tElementWithID.tElementWithID):
 		self.___positioning = aPositioningSystems
 
 	def createElectrificationSystems(self):
-		self.ElectrificationSystems = ElectrificationSystems()
+		self.ElectrificationSystems = ElectrificationSystems.ElectrificationSystems()
 	def createOrganizationalUnits(self):
-		self.OrganizationalUnits = OrganizationalUnits()
+		self.OrganizationalUnits = OrganizationalUnits.OrganizationalUnits()
 	def createSpeedProfiles(self):
-		self.SpeedProfiles = SpeedProfiles() 
+		self.SpeedProfiles = SpeedProfiles.SpeedProfiles() 
 	def createPositioningSystems(self):
-		self.PositioningSystems = PositioningSystems()
+		self.PositioningSystems = PositioningSystems.PositioningSystems()
 
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = ElectrificationSystems.ElectrificationSystems()
+		self.___electrificationSystems : ElectrificationSystems = None# ElectrificationSystems.ElectrificationSystems()
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = OrganizationalUnits.OrganizationalUnits()
+		self.___organizationalUnits : OrganizationalUnits = None#OrganizationalUnits.OrganizationalUnits()
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = SpeedProfiles.SpeedProfiles()
+		self.___speedProfiles : SpeedProfiles = None#SpeedProfiles.SpeedProfiles()
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = PositioningSystems.PositioningSystems()
+		self.___positioning : PositioningSystems = None#PositioningSystems.PositioningSystems()
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1

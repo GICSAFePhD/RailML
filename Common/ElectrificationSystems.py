@@ -11,11 +11,11 @@ class ElectrificationSystems(object):
 	@ElectrificationSystem.setter
 	def ElectrificationSystem(self, aElectrificationSystem : ElectrificationSystem):
 		self.___electrificationSystem = aElectrificationSystem
-  
+
 	def createElectrificationSystem(self):
-		self.ElectrificationSystem = ElectrificationSystem()
+		self.ElectrificationSystem = ElectrificationSystem.ElectrificationSystem()
     
 	def __init__(self):
-		self.___electrificationSystem : ElectrificationSystem = ElectrificationSystem.ElectrificationSystem()
+		self.___electrificationSystem : ElectrificationSystem = None #ElectrificationSystem.ElectrificationSystem()
 		# @AssociationType Common.ElectrificationSystem*
 		# @AssociationMultiplicity 1..*

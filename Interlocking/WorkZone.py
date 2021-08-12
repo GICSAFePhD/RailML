@@ -1,107 +1,102 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.SwitchInPosition import SwitchInPosition
-from RailML.Interlocking.DerailerInPosition import DerailerInPosition
-from RailML.Interlocking.CrossingInPosition import CrossingInPosition
-from RailML.Interlocking.DetectorInState import DetectorInState
-from RailML.Interlocking.SignalWithAspect import SignalWithAspect
-from RailML.Interlocking.KeyLockInState import KeyLockInState
-from RailML.Interlocking.LevelCrossingInState import LevelCrossingInState
-from RailML.Interlocking.RestrictedArea import RestrictedArea
+from RailML.Interlocking import EntityILref, SwitchInPosition, DerailerInPosition
+from RailML.Interlocking import CrossingInPosition, DetectorInState, SignalWithAspect
+from RailML.Interlocking import KeyLockInState, LevelCrossingInState, RestrictedArea
 from typing import List
 
-class WorkZone(RestrictedArea):
+class WorkZone(RestrictedArea.RestrictedArea):
 	"""A set of track assets that track workers or the signalman can set apart from the main line. When taken, it is impossible to call regular routes into this work zone."""
-	def setActivationLock(self, *aActivationLock : EntityILref):
-		self._activationLock = aActivationLock
+	@property
+	def ActivationLock(self) -> EntityILref:
+		return self.___activationLock
+	@property
+	def SwitchInPosition(self) -> SwitchInPosition:
+		return self.___switchInPosition
+	@property
+	def DerailerInPosition(self) -> DerailerInPosition:
+		return self.___derailerInPosition
+	@property
+	def CrossingInPosition(self) -> CrossingInPosition:
+		return self.___crossingInPosition
+	@property
+	def DetectorInState(self) -> DetectorInState:
+		return self.___detectorInState
+	@property
+	def SignalWithAspect(self) -> SignalWithAspect:
+		return self.___signalWithAspect
+	@property
+	def KeyLockInState(self) -> KeyLockInState:
+		return self.___keyLockInState
+	@property
+	def LevelCrossingInState(self) -> LevelCrossingInState:
+		return self.___levelCrossingInState
+	@property
+	def ReleasedForLocalOperation(self) -> EntityILref:
+		return self.___releasedForLocalOperation
 
-	def getActivationLock(self) -> EntityILref:
-		return self._activationLock
-
-	def setSwitchInPosition(self, *aSwitchInPosition : SwitchInPosition):
-		self._switchInPosition = aSwitchInPosition
-
-	def getSwitchInPosition(self) -> SwitchInPosition:
-		return self._switchInPosition
-
-	def setDerailerInPosition(self, *aDerailerInPosition : DerailerInPosition):
-		self._derailerInPosition = aDerailerInPosition
-
-	def getDerailerInPosition(self) -> DerailerInPosition:
-		return self._derailerInPosition
-
-	def setCrossingInPosition(self, *aCrossingInPosition : CrossingInPosition):
-		self._crossingInPosition = aCrossingInPosition
-
-	def getCrossingInPosition(self) -> CrossingInPosition:
-		return self._crossingInPosition
-
-	def setDetectorInState(self, *aDetectorInState : DetectorInState):
-		self._detectorInState = aDetectorInState
-
-	def getDetectorInState(self) -> DetectorInState:
-		return self._detectorInState
-
-	def setSignalWithAspect(self, *aSignalWithAspect : SignalWithAspect):
-		self._signalWithAspect = aSignalWithAspect
-
-	def getSignalWithAspect(self) -> SignalWithAspect:
-		return self._signalWithAspect
-
-	def setKeyLockInState(self, *aKeyLockInState : KeyLockInState):
-		self._keyLockInState = aKeyLockInState
-
-	def getKeyLockInState(self) -> KeyLockInState:
-		return self._keyLockInState
-
-	def setLevelCrossingInState(self, *aLevelCrossingInState : LevelCrossingInState):
-		self._levelCrossingInState = aLevelCrossingInState
-
-	def getLevelCrossingInState(self) -> LevelCrossingInState:
-		return self._levelCrossingInState
-
-	def setReleasedForLocalOperation(self, *aReleasedForLocalOperation : EntityILref):
-		self._releasedForLocalOperation = aReleasedForLocalOperation
-
-	def getReleasedForLocalOperation(self) -> EntityILref:
-		return self._releasedForLocalOperation
+	@ActivationLock.setter
+	def ActivationLock(self, *aActivationLock : EntityILref):
+		self.___activationLock = aActivationLock
+	@SwitchInPosition.setter
+	def SwitchInPosition(self, *aSwitchInPosition : SwitchInPosition):
+		self.___switchInPosition = aSwitchInPosition
+	@DerailerInPosition.setter
+	def DerailerInPosition(self, *aDerailerInPosition : DerailerInPosition):
+		self.___derailerInPosition = aDerailerInPosition
+	@CrossingInPosition.setter
+	def CrossingInPosition(self, *aCrossingInPosition : CrossingInPosition):
+		self.___crossingInPosition = aCrossingInPosition
+	@DetectorInState.setter
+	def DetectorInState(self, *aDetectorInState : DetectorInState):
+		self.___detectorInState = aDetectorInState
+	@SignalWithAspect.setter
+	def SignalWithAspect(self, *aSignalWithAspect : SignalWithAspect):
+		self.___signalWithAspect = aSignalWithAspect
+	@KeyLockInState.setter
+	def KeyLockInState(self, *aKeyLockInState : KeyLockInState):
+		self.___keyLockInState = aKeyLockInState
+	@LevelCrossingInState.setter
+	def LevelCrossingInState(self, *aLevelCrossingInState : LevelCrossingInState):
+		self.___levelCrossingInState = aLevelCrossingInState
+	@ReleasedForLocalOperation.setter
+	def GradieReleasedForLocalOperationntCurve(self, *aReleasedForLocalOperation : EntityILref):
+		self.___releasedForLocalOperation = aReleasedForLocalOperation
 
 	def __init__(self):
-		self._activationLock : EntityILref = None
+		self.___activationLock : EntityILref = EntityILref.EntityILref()
 		"""reference to any locking device used for activation of the work zone"""
-		self._switchInPosition : SwitchInPosition = None
+		self.___switchInPosition : SwitchInPosition = SwitchInPosition.SwitchInPosition()
 		# @AssociationType Interlocking.SwitchInPosition*
 		# @AssociationMultiplicity 0..*
 		# """reference to any switch and its position inside or outside the work zone required for use and/or protection"""
-		self._derailerInPosition : DerailerInPosition = None
+		self.___derailerInPosition : DerailerInPosition = DerailerInPosition.DerailerInPosition()
 		# @AssociationType Interlocking.DerailerInPosition*
 		# @AssociationMultiplicity 0..*
 		# """reference to any derailer and its position inside or outside the work zone required for use and/or protection"""
-		self._crossingInPosition : CrossingInPosition = None
+		self.___crossingInPosition : CrossingInPosition = CrossingInPosition.CrossingInPosition()
 		# @AssociationType Interlocking.CrossingInPosition*
 		# @AssociationMultiplicity 0..*
 		# """reference to any movable crossing and its position inside or outside the work zone required for use and/or protection"""
-		self._detectorInState : DetectorInState = None
+		self.___detectorInState : DetectorInState = DetectorInState.DetectorInState()
 		# @AssociationType Interlocking.DetectorInState*
 		# @AssociationMultiplicity 0..*
 		# """reference to any detector and its state inside or outside the work zone required for use"""
-		self._signalWithAspect : SignalWithAspect = None
+		self.___signalWithAspect : SignalWithAspect = SignalWithAspect.SignalWithAspect()
 		# @AssociationType Interlocking.SignalWithAspect*
 		# @AssociationMultiplicity 0..*
 		# """reference to any signal and its aspect inside or outside the work zone required for use and/or protection"""
-		self._keyLockInState : KeyLockInState = None
+		self.___keyLockInState : KeyLockInState = KeyLockInState.KeyLockInState()
 		# @AssociationType Interlocking.KeyLockInState*
 		# @AssociationMultiplicity 0..*
 		# """reference to any key log and its state inside or outside the work zone required for use and/or protection"""
-		self._levelCrossingInState : LevelCrossingInState = None
+		self.___levelCrossingInState : LevelCrossingInState = LevelCrossingInState.LevelCrossingInState()
 		# @AssociationType Interlocking.LevelCrossingInState*
 		# @AssociationMultiplicity 0..*
 		# """reference to any level crossing and its state inside the work zone required for use"""
-		self._releasedForLocalOperation : EntityILref = None
+		self.___releasedForLocalOperation : EntityILref = EntityILref.EntityILref()
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """reference to any element, which is released for local operation, when the work zone is active"""
-

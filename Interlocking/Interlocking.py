@@ -32,19 +32,19 @@ class Interlocking(object):
 		self.___specificIMs = aGenericIMs
 
 	def __init__(self):
-		#self.___assetsForIL : AssetsForIL = AssetsForIL.AssetsForIL()
+		self.___assetsForIL : AssetsForIL = AssetsForIL.AssetsForIL()
 		# @AssociationType Interlocking.AssetsForIL
 		# @AssociationMultiplicity 0..1
 		# """container for all asset elements needed for interlocking purpose"""
-		self.___controllers : Controllers = Controllers.Controllers()	#TODO HARD!
+		self.___controllers : Controllers = Controllers.Controllers()
 		# @AssociationType Interlocking.Controllers
 		# @AssociationMultiplicity 0..1
 		# """container for all Controller elements"""
-		#self.___signalBoxes : SignalBoxes = SignalBoxes.SignalBoxes()
+		self.___signalBoxes : SignalBoxes = SignalBoxes.SignalBoxes()
 		# @AssociationType Interlocking.SignalBoxes
 		# @AssociationMultiplicity 0..1
 		# """container for all SignalBox elements"""
-		#self.___specificIMs : GenericIMs = GenericIMs.GenericIMs()
+		self.___specificIMs : GenericIMs = GenericIMs.GenericIMs()
 		# @AssociationType Interlocking.GenericIMs
 		# @AssociationMultiplicity 0..1
 		# """container for all SpecificIM elements"""
