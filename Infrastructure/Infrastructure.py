@@ -47,27 +47,27 @@ class Infrastructure(tElementWithID.tElementWithID):
 		self.___infrastructureStates = aInfrastructureStates
 
 	def __init__(self):
-		self.___topology : Topology = Topology.Topology()
+		self.___topology : Topology = None#Topology.Topology()
 		# @AssociationType Infrastructure.Topology
 		# @AssociationMultiplicity 0..1
 		# """container element for topology model"""
-		self.___geometry : Geometry = Geometry.Geometry()
+		self.___geometry : Geometry = None#Geometry.Geometry()
 		# @AssociationType Infrastructure.Geometry
 		# @AssociationMultiplicity 0..1
 		# """container element for geometry model"""
-		self.___functionalInfrastructure : FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
+		self.___functionalInfrastructure : FunctionalInfrastructure = None#FunctionalInfrastructure.FunctionalInfrastructure()
 		# @AssociationType Infrastructure.FunctionalInfrastructure
 		# @AssociationMultiplicity 0..1
 		# """container element for all railway network's functional infrastructure elements"""
-		self.___physicalFacilities : PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
+		self.___physicalFacilities : PhysicalFacilities = None#PhysicalFacilities.PhysicalFacilities()
 		# @AssociationType Infrastructure.PhysicalFacilities
 		# @AssociationMultiplicity 0..1
 		# """container element for all physical railway infrastructure facilities"""
-		self.___infrastructureVisualizations : InfrastructureVisualizations = InfrastructureVisualizations.InfrastructureVisualizations()
+		self.___infrastructureVisualizations : InfrastructureVisualizations = None#InfrastructureVisualizations.InfrastructureVisualizations()
 		# @AssociationType Infrastructure.InfrastructureVisualizations
 		# @AssociationMultiplicity 0..1
 		# """container element for infrastructure visualizations model"""
-		self.___infrastructureStates : InfrastructureStates = InfrastructureStates.InfrastructureStates()
+		self.___infrastructureStates : InfrastructureStates = None#InfrastructureStates.InfrastructureStates()
 		# @AssociationType Infrastructure.InfrastructureStates
 		# @AssociationMultiplicity 0..1
 		# """container element for infrastructure states model"""

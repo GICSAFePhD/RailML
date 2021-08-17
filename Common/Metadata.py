@@ -73,15 +73,14 @@ class Metadata(elementContainer.elementContainer):
 	def Publisher(self, aPublisher : str):
 		self.___publisher = aPublisher
 
-	def __str__(self):  
-		print(f'Title:{self.Title}')
-		print(f'Date:{self.Date}')
-		print(f'Creator:{self.Creator}')
-		print(f'Source:{self.Source}')
-		print(f'Identifier:{self.Identifier}')
-		print(f'Subject:{self.Subject}')
-		print(f'Format:{self.Format}')
-		print(f'Description:{self.Description}')
-		print(f'Publisher:{self.Publisher}')
-		return ''
-    
+	# def __str__(self):  
+	# 	print(f'Title:{self.Title}')
+	# 	print(f'Date:{self.Date}')
+	# 	print(f'Creator:{self.Creator}')
+	# 	print(f'Source:{self.Source}')
+	# 	print(f'Identifier:{self.Identifier}')
+	# 	print(f'Subject:{self.Subject}')
+	# 	print(f'Format:{self.Format}')
+	# 	print(f'Description:{self.Description}')
+	# 	print(f'Publisher:{self.Publisher}')
+	# 	return ''

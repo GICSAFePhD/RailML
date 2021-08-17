@@ -23,7 +23,7 @@ class railML():
 		return self.___interlocking
 	@property
 	def aRailML(self):
-		return self.___rail3_aRailML
+		return self.___aRailML
 
 	@Metadata.setter
 	def Metadata(self, aMetadata : Metadata):
@@ -39,38 +39,33 @@ class railML():
 		self.___interlocking = aInterlocking
 	@aRailML.setter
 	def aRailML(self, aaRailML : aRailML):
-		self.___rail3_aRailML = aaRailML
+		self.___aRailML = aaRailML
+
+	
+	def create_metadata(self):
+		self.Metadata = Metadata.Metadata()
+	def create_common(self):
+		self.Common = Common.Common()
+	def create_infrastructure(self):
+		self.Infrastructure = Infrastructure.Infrastructure()
+	def create_interlocking(self):
+		self.Interlocking = Interlocking.Interlocking()
 
 	def __init__(self):
-		self.___metadata : Metadata = Metadata.Metadata()
+		self.___metadata : Metadata = None
 		# @AssociationType Common.Metadata
 		# @AssociationMultiplicity 0..1
-		#self.___common : Common = Common.Common()
+		self.___common : Common = None
 		# @AssociationType Common.Common
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 common model"""
-		#self.___infrastructure : Infrastructure = Infrastructure.Infrastructure()
+		self.___infrastructure : Infrastructure = None
 		# @AssociationType Infrastructure.Infrastructure
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 infrastructure model"""
-		#self.___interlocking : Interlocking = Interlocking.Interlocking()
+		self.___interlocking : Interlocking = None
 		# @AssociationType Interlocking.Interlocking
 		# @AssociationMultiplicity 0..1
 		# """root element for railML3 interlocking model"""
-		self.___rail3_aRailML : aRailML = aRailML.aRailML()
+		self.___aRailML : aRailML = None
 		"""# @AssociationKind Aggregation"""
-
-RML = railML()
-
-RML.aRailML.Version = "Test"
-
-
-#infrastructure = Infrastructure()
-#interlocking = Interlocking()
-#arailml = aRailML() 
-
-#RML.Metadata = metadata
-#RML.Common = common
-#RML.Infrastructure = infrastructure
-#RML.Interlocking = interlocking
-#RML.aRailML = arailml
