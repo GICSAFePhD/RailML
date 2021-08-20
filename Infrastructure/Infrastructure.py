@@ -46,28 +46,41 @@ class Infrastructure(tElementWithID.tElementWithID):
 	def InfrastructureStates(self, aInfrastructureStates : InfrastructureStates):
 		self.___infrastructureStates = aInfrastructureStates
 
+	def createTopology(self):
+			self.Topology = Topology.Topology()
+	def createGeometry(self):
+			self.Geometry = Geometry.Geometry()
+	def createFunctionalInfrastructure(self):
+			self.TopoloFunctionalInfrastructuregy = FunctionalInfrastructure.FunctionalInfrastructure()
+	def createPhysicalFacilities(self):
+			self.PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
+	def createInfrastructureVisualizations(self):
+			self.InfrastructureVisualizations = InfrastructureVisualizations.InfrastructureVisualizations()
+	def createInfrastructureStates(self):
+			self.InfrastructureStates = InfrastructureStates.InfrastructureStates() 
+
 	def __init__(self):
-		self.___topology : Topology = None#Topology.Topology()
+		self.___topology : Topology = None
 		# @AssociationType Infrastructure.Topology
 		# @AssociationMultiplicity 0..1
 		# """container element for topology model"""
-		self.___geometry : Geometry = None#Geometry.Geometry()
+		self.___geometry : Geometry = None
 		# @AssociationType Infrastructure.Geometry
 		# @AssociationMultiplicity 0..1
 		# """container element for geometry model"""
-		self.___functionalInfrastructure : FunctionalInfrastructure = None#FunctionalInfrastructure.FunctionalInfrastructure()
+		self.___functionalInfrastructure : FunctionalInfrastructure = None
 		# @AssociationType Infrastructure.FunctionalInfrastructure
 		# @AssociationMultiplicity 0..1
 		# """container element for all railway network's functional infrastructure elements"""
-		self.___physicalFacilities : PhysicalFacilities = None#PhysicalFacilities.PhysicalFacilities()
+		self.___physicalFacilities : PhysicalFacilities = None
 		# @AssociationType Infrastructure.PhysicalFacilities
 		# @AssociationMultiplicity 0..1
 		# """container element for all physical railway infrastructure facilities"""
-		self.___infrastructureVisualizations : InfrastructureVisualizations = None#InfrastructureVisualizations.InfrastructureVisualizations()
+		self.___infrastructureVisualizations : InfrastructureVisualizations = None
 		# @AssociationType Infrastructure.InfrastructureVisualizations
 		# @AssociationMultiplicity 0..1
 		# """container element for infrastructure visualizations model"""
-		self.___infrastructureStates : InfrastructureStates = None#InfrastructureStates.InfrastructureStates()
+		self.___infrastructureStates : InfrastructureStates = None
 		# @AssociationType Infrastructure.InfrastructureStates
 		# @AssociationMultiplicity 0..1
 		# """container element for infrastructure states model"""

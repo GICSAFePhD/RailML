@@ -61,28 +61,28 @@ class OrganizationalUnits(object):
 		self.InfrastructureManager = InfrastructureManager.InfrastructureManager()
     
 	def __init__(self):
-		self.___infrastructureManager : InfrastructureManager = None #InfrastructureManager.InfrastructureManager()
+		self.___infrastructureManager : InfrastructureManager = None
 		# @AssociationType Common.InfrastructureManager*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleManufacturer : VehicleManufacturer = None #VehicleManufacturer.VehicleManufacturer()
+		self.___vehicleManufacturer : VehicleManufacturer = None
 		# @AssociationType Common.VehicleManufacturer*
 		# @AssociationMultiplicity 0..*
-		self.___vehicleOperator : VehicleOperator = None #VehicleOperator.VehicleOperator()
+		self.___vehicleOperator : VehicleOperator = None
 		# @AssociationType Common.VehicleOperator*
 		# @AssociationMultiplicity 0..*
-		self.___customer : Customer = None #Customer.Customer()
+		self.___customer : Customer = None
 		# @AssociationType Common.Customer*
 		# @AssociationMultiplicity 0..*
-		self.___railwayUndertaking : RailwayUndertaking = None #RailwayUndertaking.RailwayUndertaking()
+		self.___railwayUndertaking : RailwayUndertaking = None
 		# @AssociationType Common.RailwayUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___operationalUndertaking : OperationalUndertaking = None #OperationalUndertaking.OperationalUndertaking()
+		self.___operationalUndertaking : OperationalUndertaking = None
 		# @AssociationType Common.OperationalUndertaking*
 		# @AssociationMultiplicity 0..*
-		self.___concessionaire : Concessionaire = None #Concessionaire.Concessionaire()
+		self.___concessionaire : Concessionaire = None
 		# @AssociationType Common.Concessionaire*
 		# @AssociationMultiplicity 0..*
-		self.___contractor : Contractor = None #Contractor.Contractor()
+		self.___contractor : Contractor = None
 		# @AssociationType Common.Contractor*
 		# @AssociationMultiplicity 0..*
 

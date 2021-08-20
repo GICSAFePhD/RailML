@@ -29,15 +29,15 @@ class Topology(object):
 		self.___networks = aNetworks
 
 	def __init__(self):
-		self.___netElements : NetElements = NetElements()
+		self.___netElements : NetElements = None
 		# @AssociationType Infrastructure.NetElements
 		# @AssociationMultiplicity 1
 		# """container element for all netElement elements"""
-		self.___netRelations : NetRelations = NetRelations()
+		self.___netRelations : NetRelations =None
 		# @AssociationType Infrastructure.NetRelations
 		# @AssociationMultiplicity 0..1	#TODO 0...1
 		# """container element for all netRelation elements"""
-		self.___networks : Networks = Networks()
+		self.___networks : Networks = None
 		# @AssociationType Infrastructure.Networks
 		# @AssociationMultiplicity 1
 		# """container element for all network elements"""

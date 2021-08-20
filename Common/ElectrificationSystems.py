@@ -16,6 +16,6 @@ class ElectrificationSystems(object):
 		self.ElectrificationSystem = ElectrificationSystem.ElectrificationSystem()
     
 	def __init__(self):
-		self.___electrificationSystem : ElectrificationSystem = None #ElectrificationSystem.ElectrificationSystem()
+		self.___electrificationSystem : ElectrificationSystem = None
 		# @AssociationType Common.ElectrificationSystem*
 		# @AssociationMultiplicity 1..*

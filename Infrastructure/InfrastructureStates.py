@@ -13,7 +13,7 @@ class InfrastructureStates(object):
 		self.___infrastructureState = aInfrastructureState
 
 	def __init__(self):
-		self.___infrastructureState : InfrastructureState = InfrastructureState.InfrastructureState()
+		self.___infrastructureState : InfrastructureState = None
 		# @AssociationType Infrastructure.InfrastructureState*
 		# @AssociationMultiplicity 1..*
 		# """state of (a part of) the functional infrastructure regarding its availability and usability"""

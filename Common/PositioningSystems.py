@@ -26,15 +26,15 @@ class PositioningSystems(object):
 		self.___screenPositioningSystems = aScreenPositioningSystems
 
 	def __init__(self):
-		self.___geometricPositioningSystems : GeometricPositioningSystems = GeometricPositioningSystems.GeometricPositioningSystems()
+		self.___geometricPositioningSystems : GeometricPositioningSystems = None
 		# @AssociationType Common.GeometricPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all geometric positioning systems"""
-		self.___linearPositioningSystems : LinearPositioningSystems = LinearPositioningSystems.LinearPositioningSystems()
+		self.___linearPositioningSystems : LinearPositioningSystems = None
 		# @AssociationType Common.LinearPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all linear positioning systems"""
-		self.___screenPositioningSystems : ScreenPositioningSystems = ScreenPositioningSystems.ScreenPositioningSystems()
+		self.___screenPositioningSystems : ScreenPositioningSystems = None
 		# @AssociationType Common.ScreenPositioningSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all screen coordinate systems"""

@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import sys
+from xml.dom.minidom import Identified
 sys.path.append('.')
 from RailML.Common import Common, ElectrificationSystems, OrganizationalUnits, SpeedProfiles, PositioningSystems, tElementWithID
 from typing import List
@@ -8,6 +9,9 @@ from typing import List
 class Common(tElementWithID.tElementWithID):
 	"""This is the top level element for the common model."""
 
+	@property
+	def Id(self) -> str:
+		return self.___id
 	@property
 	def ElectrificationSystems(self) -> ElectrificationSystems:
 		return self.___electrificationSystems
@@ -18,9 +22,12 @@ class Common(tElementWithID.tElementWithID):
 	def SpeedProfiles(self) -> SpeedProfiles:
 		return self.___speedProfiles
 	@property
-	def PositioningSystems(self) -> PositioningSystems:
+	def Positioning(self) -> PositioningSystems:
 		return self.___positioning
 
+	@Id.setter
+	def Id(self, aId : str):
+		self.___id = aId
 	@ElectrificationSystems.setter
 	def ElectrificationSystems(self, aElectrificationSystems : ElectrificationSystems):
 		self.___electrificationSystems = aElectrificationSystems
@@ -30,33 +37,33 @@ class Common(tElementWithID.tElementWithID):
 	@SpeedProfiles.setter
 	def SpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
 		self.___speedProfiles = aSpeedProfiles
-	@PositioningSystems.setter
-	def PositioningSystems(self, aPositioningSystems : PositioningSystems):
+	@Positioning.setter
+	def Positioning(self, aPositioningSystems : PositioningSystems):
 		self.___positioning = aPositioningSystems
 
 	def createElectrificationSystems(self):
 		self.ElectrificationSystems = ElectrificationSystems.ElectrificationSystems()
 	def createOrganizationalUnits(self):
-		print("AAAAAAA")
 		self.OrganizationalUnits = OrganizationalUnits.OrganizationalUnits()
 	def createSpeedProfiles(self):
 		self.SpeedProfiles = SpeedProfiles.SpeedProfiles() 
 	def createPositioningSystems(self):
-		self.PositioningSystems = PositioningSystems.PositioningSystems()
+		self.Positioning = PositioningSystems.PositioningSystems()
 
 	def __init__(self):
-		self.___electrificationSystems : ElectrificationSystems = None# ElectrificationSystems.ElectrificationSystems()
+		self.___id : str = ""
+		self.___electrificationSystems : ElectrificationSystems = None
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrificationSystem elements"""
-		self.___organizationalUnits : OrganizationalUnits = None#OrganizationalUnits.OrganizationalUnits()
+		self.___organizationalUnits : OrganizationalUnits = None
 		# @AssociationType Common.OrganizationalUnits
 		# @AssociationMultiplicity 0..1
 		# """container element for all organizationalUnit elements"""
-		self.___speedProfiles : SpeedProfiles = None#SpeedProfiles.SpeedProfiles()
+		self.___speedProfiles : SpeedProfiles = None
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = None#PositioningSystems.PositioningSystems()
+		self.___positioning : PositioningSystems = None
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1

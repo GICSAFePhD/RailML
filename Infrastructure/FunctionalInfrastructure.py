@@ -174,111 +174,111 @@ class FunctionalInfrastructure(object):
 
 
 	def __init__(self):
-		self.___balises : Balises = Balises.Balises()
+		self.___balises : Balises = None
 		# @AssociationType Infrastructure.Balises
 		# @AssociationMultiplicity 0..1
 		# """container element for all balise (and balise group) elements"""
-		self.___borders : Borders = Borders.Borders()
+		self.___borders : Borders = None
 		# @AssociationType Infrastructure.Borders
 		# @AssociationMultiplicity 0..1
 		# """container element for all border elements"""
-		self.___bufferStops : BufferStops = BufferStops.BufferStops()
+		self.___bufferStops : BufferStops = None
 		# @AssociationType Infrastructure.BufferStops
 		# @AssociationMultiplicity 0..1
 		# """container element for all bufferStop elements"""
-		self.___crossings : Crossings = Crossings.Crossings()
+		self.___crossings : Crossings = None
 		# @AssociationType Infrastructure.Crossings
 		# @AssociationMultiplicity 0..1
 		# """container element for all crossing elements"""
-		self.___derailersIS : DerailersIS = DerailersIS.DerailersIS()
+		self.___derailersIS : DerailersIS = None
 		# @AssociationType Infrastructure.DerailersIS
 		# @AssociationMultiplicity 0..1
 		# """container element for all derailer elements"""
-		self.___electrifications : Electrifications = Electrifications.Electrifications()
+		self.___electrifications : Electrifications = None
 		# @AssociationType Infrastructure.Electrifications
 		# @AssociationMultiplicity 0..1
 		# """container element for all electrification elements incl. electrification system components"""
-		self.___keyLocksIS : KeyLocksIS = KeyLocksIS.KeyLocksIS()
+		self.___keyLocksIS : KeyLocksIS = None
 		# @AssociationType Infrastructure.KeyLocksIS
 		# @AssociationMultiplicity 0..1
 		# """container element for all keyLock elements"""
-		self.___levelCrossingsIS : LevelCrossingsIS = LevelCrossingsIS.LevelCrossingsIS()
+		self.___levelCrossingsIS : LevelCrossingsIS = None
 		# @AssociationType Infrastructure.LevelCrossingsIS
 		# @AssociationMultiplicity 0..1
 		# """container element for all levelCrossing elements"""
-		self.___lines : Lines = Lines.Lines()
+		self.___lines : Lines = None
 		# @AssociationType Infrastructure.Lines
 		# @AssociationMultiplicity 0..1
 		# """container element for all line (section) elements"""
-		self.___loadingGauges : LoadingGauges = LoadingGauges.LoadingGauges()
+		self.___loadingGauges : LoadingGauges = None
 		# @AssociationType Infrastructure.LoadingGauges
 		# @AssociationMultiplicity 0..1
 		# """container element for all loadingGauge elements"""
-		self.___operationalPoints : OperationalPoints = OperationalPoints.OperationalPoints()
+		self.___operationalPoints : OperationalPoints = None
 		# @AssociationType Infrastructure.OperationalPoints
 		# @AssociationMultiplicity 0..1
 		# """container element for all operationalPoint elements"""
-		self.___overCrossings : OverCrossings = OverCrossings.OverCrossings()
+		self.___overCrossings : OverCrossings = None
 		# @AssociationType Infrastructure.OverCrossings
 		# @AssociationMultiplicity 0..1
 		# """container element for all overCrossing elements"""
-		self.___platforms : Platforms = Platforms.Platforms()
+		self.___platforms : Platforms = None
 		# @AssociationType Infrastructure.Platforms
 		# @AssociationMultiplicity 0..1
 		# """container element for all platform (and platform edge) elements"""
-		self.___restrictionAreas : RestrictionAreas = RestrictionAreas.RestrictionAreas()
+		self.___restrictionAreas : RestrictionAreas = None
 		# @AssociationType Infrastructure.RestrictionAreas
 		# @AssociationMultiplicity 0..1
 		# """container element for all restrictionArea elements"""
-		self.___serviceSections : ServiceSections = ServiceSections.ServiceSections()
+		self.___serviceSections : ServiceSections = None
 		# @AssociationType Infrastructure.ServiceSections
 		# @AssociationMultiplicity 0..1
 		# """container element for all serviceSection elements"""
-		self.___signalsIS : SignalsIS = SignalsIS.SignalsIS()
+		self.___signalsIS : SignalsIS = None
 		# @AssociationType Infrastructure.SignalsIS
 		# @AssociationMultiplicity 0..1
 		# """container element for all signal (and panel) elements"""
-		self.___speeds : Speeds = Speeds.Speeds()
+		self.___speeds : Speeds = None
 		# @AssociationType Infrastructure.Speeds
 		# @AssociationMultiplicity 0..1
 		# """container element for all line/track speed related elements"""
-		self.___stoppingPlaces : StoppingPlaces = StoppingPlaces.StoppingPlaces()
+		self.___stoppingPlaces : StoppingPlaces = None
 		# @AssociationType Infrastructure.StoppingPlaces
 		# @AssociationMultiplicity 0..1
 		# """container element for all stoppingPlace elements"""
-		self.___switchesIS : SwitchesIS = SwitchesIS.SwitchesIS()
+		self.___switchesIS : SwitchesIS = None
 		# @AssociationType Infrastructure.SwitchesIS
 		# @AssociationMultiplicity 0..1
 		# """container element for all switch elements"""
-		self.___tracks : Tracks = Tracks.Tracks()
+		self.___tracks : Tracks = None
 		# @AssociationType Infrastructure.Tracks
 		# @AssociationMultiplicity 0..1
 		# """container element for all track elements"""
-		self.___trackBeds : TrackBeds = TrackBeds.TrackBeds()
+		self.___trackBeds : TrackBeds = None
 		# @AssociationType Infrastructure.TrackBeds
 		# @AssociationMultiplicity 0..1
 		# """container element for all trackBed elements"""
-		self.___trackGauges : TrackGauges = TrackGauges.TrackGauges() 	
+		self.___trackGauges : TrackGauges = None	
 		# @AssociationType Infrastructure.TrackGauges
 		# @AssociationMultiplicity 0..1
 		# """container element for all trackGauge elements"""
-		self.___trainDetectionElements : TrainDetectionElements = TrainDetectionElements.TrainDetectionElements()
+		self.___trainDetectionElements : TrainDetectionElements = None
 		# @AssociationType Infrastructure.TrainDetectionElements
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainDetectionElement elements"""
-		self.___trainProtectionElements : TrainProtectionElements = TrainProtectionElements.TrainProtectionElements()	
+		self.___trainProtectionElements : TrainProtectionElements = None
 		# @AssociationType Infrastructure.TrainProtectionElements
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainProtectionElement elements"""
-		self.___trainRadios : TrainRadios = TrainRadios.TrainRadios()	
+		self.___trainRadios : TrainRadios = None
 		# @AssociationType Infrastructure.TrainRadios
 		# @AssociationMultiplicity 0..1
 		# """container element for all trainRadio elements"""
-		self.___underCrossings : UnderCrossings = UnderCrossings.UnderCrossings()
+		self.___underCrossings : UnderCrossings = None
 		# @AssociationType Infrastructure.UnderCrossings
 		# @AssociationMultiplicity 0..1
 		# """container element for all underCrossing elements"""
-		self.___weightLimits : WeightLimits = WeightLimits.WeightLimits()
+		self.___weightLimits : WeightLimits = None
 		# @AssociationType Infrastructure.WeightLimits
 		# @AssociationMultiplicity 0..1
 		# """container element for all weightLimit (axle load, meterload) elements"""
