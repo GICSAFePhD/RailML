@@ -19,11 +19,17 @@ class ElectrificationSystem(tElementWithID.tElementWithID):
 	def tFrequencyHertz(self, atFrequencyHertz : tFrequencyHertz):
 		self.___frequency = atFrequencyHertz
 
+
+	def createtVoltageVolt(self):
+		self.tVoltageVolt = tVoltageVolt.tVoltageVolt()
+	def createtFrequencyHertz(self):
+		self.tFrequencyHertz = tFrequencyHertz.tFrequencyHertz()
+
 	def __init__(self):
-		self.___voltage : tVoltageVolt = tVoltageVolt.tVoltageVolt()
+		self.___voltage : tVoltageVolt = None
 		# @AssociationType Common.tVoltageVolt
 		# """electrification system voltage, in [V]"""
-		self.___frequency : tFrequencyHertz = tFrequencyHertz.tFrequencyHertz()
+		self.___frequency : tFrequencyHertz = None
 		# @AssociationType Common.tFrequencyHertz
 		# """electrification system frequency, in [Hz]; for DC the frequency shall be set to zero"""
 

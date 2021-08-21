@@ -4,4 +4,13 @@ from RailML.Common import OrganizationalUnit
 from typing import List
 
 class InfrastructureManager(OrganizationalUnit.OrganizationalUnit):
-	pass
+	@property
+	def Id(self) -> str:
+		return self.___id
+
+	@Id.setter
+	def Id(self, aId : str):
+		self.___id = aId
+
+	def __init__(self):
+		self.___id : str = ""

@@ -58,7 +58,9 @@ class OrganizationalUnits(object):
 		self.___contractor = aContractor
 
 	def createInfrastructureManager(self):
-		self.InfrastructureManager = InfrastructureManager.InfrastructureManager()
+		if self.InfrastructureManager == None:
+			self.InfrastructureManager = []
+		self.InfrastructureManager.append(InfrastructureManager.InfrastructureManager())
     
 	def __init__(self):
 		self.___infrastructureManager : InfrastructureManager = None

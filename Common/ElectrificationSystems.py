@@ -13,7 +13,9 @@ class ElectrificationSystems(object):
 		self.___electrificationSystem = aElectrificationSystem
 
 	def createElectrificationSystem(self):
-		self.ElectrificationSystem = ElectrificationSystem.ElectrificationSystem()
+		if self.ElectrificationSystem == None:
+			self.ElectrificationSystem = []
+		self.ElectrificationSystem.append(ElectrificationSystem.ElectrificationSystem())
     
 	def __init__(self):
 		self.___electrificationSystem : ElectrificationSystem = None
