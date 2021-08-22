@@ -30,6 +30,15 @@ class SpeedProfile(tElementWithIDandName.tElementWithIDandName):
 	def SpeedProfileTrainType(self, aSpeedProfileTrainType : SpeedProfileTrainType):
 		self.___trainType = aSpeedProfileTrainType
 
+	def create_SpeedProfileTilting(self):
+		self.SpeedProfileTilting = SpeedProfileTilting.SpeedProfileTilting()
+	def create_SpeedProfileLoad(self):
+		self.SpeedProfileLoad = SpeedProfileLoad.SpeedProfileLoad()
+	def create_SpeedProfileBraking(self):
+			self.SpeedProfileBraking = SpeedProfileBraking.SpeedProfileBraking()
+	def create_SpeedProfileTrainType(self):
+			self.SpeedProfileTrainType = SpeedProfileTrainType.SpeedProfileTrainType()
+
 	def __init__(self):
 		self.___tilting : SpeedProfileTilting = SpeedProfileTilting.SpeedProfileTilting()
 		# @AssociationType Common.SpeedProfileTilting

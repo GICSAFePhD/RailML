@@ -12,8 +12,11 @@ class SpeedProfiles(object):
 	def SpeedProfile(self, aSpeedProfile : SpeedProfile):
 		self.___speedProfile = aSpeedProfile
 
+	def create_SpeedProfile(self):
+		self.SpeedProfile.append(SpeedProfile.SpeedProfile())
+
 	def __init__(self):
-		self.___speedProfile : SpeedProfile = None
+		self.___speedProfile : SpeedProfile = [SpeedProfile.SpeedProfile()]
 		# @AssociationType Common.SpeedProfile*
 		# @AssociationMultiplicity 1..*
 

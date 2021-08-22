@@ -13,7 +13,7 @@ class LinearPositioningSystems(object):
 		self.___linearPositioningSystem = aRTM_LinearPositioningSystem
 
 	def __init__(self):
-		self.___linearPositioningSystem : RTM_LinearPositioningSystem = RTM_LinearPositioningSystem.RTM_LinearPositioningSystem()
+		self.___linearPositioningSystem : RTM_LinearPositioningSystem = None#RTM_LinearPositioningSystem.RTM_LinearPositioningSystem()
 		# @AssociationType Infrastructure.RTM.RTM_LinearPositioningSystem*
 		# @AssociationMultiplicity 1..*
 

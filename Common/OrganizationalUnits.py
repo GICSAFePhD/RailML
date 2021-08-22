@@ -57,11 +57,39 @@ class OrganizationalUnits(object):
 	def Contractor(self, aContractor : Contractor):
 		self.___contractor = aContractor
 
-	def createInfrastructureManager(self):
+	def create_InfrastructureManager(self):
 		if self.InfrastructureManager == None:
 			self.InfrastructureManager = []
 		self.InfrastructureManager.append(InfrastructureManager.InfrastructureManager())
-    
+	def create_VehicleManufacturer(self):
+		if self.VehicleManufacturer == None:
+			self.VehicleManufacturer = []
+		self.VehicleManufacturer.append(VehicleManufacturer.VehicleManufacturer())
+	def create_VehicleOperator(self):
+		if self.VehicleOperator == None:
+			self.VehicleOperator = []
+		self.VehicleOperator.append(VehicleOperator.VehicleOperator())
+	def create_Customer(self):
+		if self.Customer == None:
+			self.Customer = []
+		self.Customer.append(Customer.Customer())
+	def create_RailwayUndertaking(self):
+		if self.RailwayUndertaking == None:
+			self.RailwayUndertaking = []
+		self.RailwayUndertaking.append(RailwayUndertaking.RailwayUndertaking())
+	def create_OperationalUndertaking(self):
+		if self.OperationalUndertaking == None:
+			self.OperationalUndertaking = []
+		self.OperationalUndertaking.append(OperationalUndertaking.OperationalUndertaking())
+	def create_Concessionaire(self):
+		if self.Concessionaire == None:
+			self.Concessionaire = []
+		self.Concessionaire.append(Concessionaire.Concessionaire())
+	def create_Contractor(self):
+		if self.Contractor == None:
+			self.Contractor = []
+		self.Contractor.append(Contractor.Contractor())
+
 	def __init__(self):
 		self.___infrastructureManager : InfrastructureManager = None
 		# @AssociationType Common.InfrastructureManager*

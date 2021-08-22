@@ -41,13 +41,13 @@ class Common(tElementWithID.tElementWithID):
 	def Positioning(self, aPositioningSystems : PositioningSystems):
 		self.___positioning = aPositioningSystems
 
-	def createElectrificationSystems(self):
+	def create_ElectrificationSystems(self):
 		self.ElectrificationSystems = ElectrificationSystems.ElectrificationSystems()
-	def createOrganizationalUnits(self):
+	def create_OrganizationalUnits(self):
 		self.OrganizationalUnits = OrganizationalUnits.OrganizationalUnits()
-	def createSpeedProfiles(self):
+	def create_SpeedProfiles(self):
 		self.SpeedProfiles = SpeedProfiles.SpeedProfiles() 
-	def createPositioningSystems(self):
+	def create_PositioningSystems(self):
 		self.Positioning = PositioningSystems.PositioningSystems()
 
 	def __init__(self):

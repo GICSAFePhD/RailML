@@ -12,7 +12,7 @@ class ElectrificationSystems(object):
 	def ElectrificationSystem(self, aElectrificationSystem : ElectrificationSystem):
 		self.___electrificationSystem = aElectrificationSystem
 
-	def createElectrificationSystem(self):
+	def create_ElectrificationSystem(self):
 		if self.ElectrificationSystem == None:
 			self.ElectrificationSystem = []
 		self.ElectrificationSystem.append(ElectrificationSystem.ElectrificationSystem())

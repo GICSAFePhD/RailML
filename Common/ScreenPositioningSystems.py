@@ -13,7 +13,7 @@ class ScreenPositioningSystems(object):
 		self.___screenPositioningSystem = aScreenPositioningSystem
 
 	def __init__(self):
-		self.___screenPositioningSystem : ScreenPositioningSystem = ScreenPositioningSystem.ScreenPositioningSystem()
+		self.___screenPositioningSystem : ScreenPositioningSystem = None#ScreenPositioningSystem.ScreenPositioningSystem()
 		# @AssociationType Common.ScreenPositioningSystem*
 		# @AssociationMultiplicity 1..*
 

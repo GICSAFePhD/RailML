@@ -20,9 +20,9 @@ class ElectrificationSystem(tElementWithID.tElementWithID):
 		self.___frequency = atFrequencyHertz
 
 
-	def createtVoltageVolt(self):
+	def create_tVoltageVolt(self):
 		self.tVoltageVolt = tVoltageVolt.tVoltageVolt()
-	def createtFrequencyHertz(self):
+	def create_tFrequencyHertz(self):
 		self.tFrequencyHertz = tFrequencyHertz.tFrequencyHertz()
 
 	def __init__(self):

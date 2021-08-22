@@ -46,17 +46,17 @@ class Infrastructure(tElementWithID.tElementWithID):
 	def InfrastructureStates(self, aInfrastructureStates : InfrastructureStates):
 		self.___infrastructureStates = aInfrastructureStates
 
-	def createTopology(self):
+	def create_Topology(self):
 			self.Topology = Topology.Topology()
-	def createGeometry(self):
+	def create_Geometry(self):
 			self.Geometry = Geometry.Geometry()
-	def createFunctionalInfrastructure(self):
+	def create_FunctionalInfrastructure(self):
 			self.TopoloFunctionalInfrastructuregy = FunctionalInfrastructure.FunctionalInfrastructure()
-	def createPhysicalFacilities(self):
+	def create_PhysicalFacilities(self):
 			self.PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
-	def createInfrastructureVisualizations(self):
+	def create_InfrastructureVisualizations(self):
 			self.InfrastructureVisualizations = InfrastructureVisualizations.InfrastructureVisualizations()
-	def createInfrastructureStates(self):
+	def create_InfrastructureStates(self):
 			self.InfrastructureStates = InfrastructureStates.InfrastructureStates() 
 
 	def __init__(self):
