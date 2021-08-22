@@ -3,7 +3,7 @@
 from RailML.Infrastructure import tLrsMethod, RTM_LinearAnchorPoint, RTM_PositioningSystem
 from typing import List
 
-class RTM_LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
+class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 	@property
 	def LinearReferencingMethod(self) -> tLrsMethod:
 		return self.___linearReferencingMethod
@@ -37,13 +37,13 @@ class RTM_LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 		self.___anchor = aRTM_LinearAnchorPoint
 
 	def __init__(self):
-		self.___linearReferencingMethod : tLrsMethod = tLrsMethod.tLrsMethod()
+		self.___linearReferencingMethod : tLrsMethod = None#tLrsMethod.tLrsMethod()
 		# @AssociationType schemas.3.1.tLrsMethod
 		self.___startMeasure : complex = 0
 		self.___endMeasure : complex = 0
 		self.___units : str = ""
 		"""use SI units (e.g. metres) whenever possible"""
-		self.___anchor : RTM_LinearAnchorPoint = RTM_LinearAnchorPoint.RTM_LinearAnchorPoint()
+		self.___anchor : RTM_LinearAnchorPoint = None#RTM_LinearAnchorPoint.RTM_LinearAnchorPoint()
 		# @AssociationType Infrastructure.RTM.RTM_LinearAnchorPoint*
 		# @AssociationMultiplicity 0..*
 

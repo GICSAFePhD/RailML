@@ -3,7 +3,7 @@
 from RailML.Infrastructure import RTM_PositioningSystem
 from typing import List
 
-class RTM_GeometricPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
+class GeometricPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 	def __init__(self):
 		self.___crsDefinition : str = ""
 
