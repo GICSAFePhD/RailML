@@ -13,7 +13,7 @@ class Networks(object):
 		self.___network = aNetwork
 
 	def __init__(self):
-		self.___network : Network = Network.Network()
+		self.___network : Network = None#Network.Network()
 		# @AssociationType Infrastructure.Network*
 		# @AssociationMultiplicity 1..*	#TODO 1...*
 

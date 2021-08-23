@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import tLrsMethod, RTM_LinearAnchorPoint, RTM_PositioningSystem, RTM_NamedResource
-from RailML.Common import Name
-from RailML.Infrastructure import Validity
+from RailML.RailTopoModel import RTM_LinearAnchorPoint, RTM_PositioningSystem, RTM_NamedResource
+from RailML.Common import Name 
+from RailML.Infrastructure import Validity, tLrsMethod
 from typing import List
 
 class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_NamedResource.RTM_NamedResource):

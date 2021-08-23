@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import RTM_PositioningSystem
+from RailML.RailTopoModel import RTM_PositioningSystem
 from typing import List, NewType
 
 PositiveInteger = NewType("PositiveInteger", int)	#TODO EVERY INT SHOULD BE A POSITIVEINTEGER

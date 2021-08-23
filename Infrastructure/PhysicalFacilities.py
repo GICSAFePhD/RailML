@@ -13,6 +13,6 @@ class PhysicalFacilities(object):
 		self.___unnamed_any = aUnnamed_any
 
 	def __init__(self):
-		self.___unnamed_any = []
+		self.___unnamed_any = None#[]
 		"""# @AssociationMultiplicity 0..*"""
 

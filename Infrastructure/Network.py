@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import RTM_Network
+from RailML.RailTopoModel import RTM_Network
 from typing import List
 
 class Network(RTM_Network.RTM_Network):

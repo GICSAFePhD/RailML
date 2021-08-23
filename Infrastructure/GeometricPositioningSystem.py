@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import RTM_NamedResource, RTM_PositioningSystem
+from RailML.RailTopoModel import RTM_NamedResource, RTM_PositioningSystem
 from RailML.Common import Name
 from RailML.Infrastructure import Validity
 from typing import List

@@ -30,19 +30,19 @@ class Geometry(object):
 	@GeometryPoints.setter
 	def GeometryPoints(self, aGeometryPoints : GeometryPoints):
 		self.___geometryPoints = aGeometryPoints
-  
+
 	def __init__(self):
-		self.___horizontalCurves : HorizontalCurves = HorizontalCurves.HorizontalCurves()
+		self.___horizontalCurves : HorizontalCurves = None#HorizontalCurves.HorizontalCurves()
 		# @AssociationType Infrastructure.HorizontalCurves
 		# @AssociationMultiplicity 0..1
 		# """container element for all horizontalCurve elements"""
-		self.___gradientCurves : GradientCurves = GradientCurves.GradientCurves()
+		self.___gradientCurves : GradientCurves = None#GradientCurves.GradientCurves()
 		# @AssociationType Infrastructure.GradientCurves
 		# @AssociationMultiplicity 0..1
 		# """container element for all gradientCurve elements"""
-		self.___geometryPoints : GeometryPoints = GeometryPoints.GeometryPoints()
+		self.___geometryPoints : GeometryPoints = None#GeometryPoints.GeometryPoints()
 		# @AssociationType Infrastructure.GeometryPoints
 		# @AssociationMultiplicity 0..1
 		# """container element for all geometryPoint elements"""
-		self.___unnamed_any_ = []	#TODO What is this?!
+		self.___unnamed_any_ = None#[]	#TODO What is this?!
 		"""# @AssociationMultiplicity 0..*"""

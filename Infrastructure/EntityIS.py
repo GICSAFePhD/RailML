@@ -2,7 +2,8 @@
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
 from RailML.Common import anyAttribute
-from RailML.Infrastructure import GmlLocations, LocationNetwork, RTM_LocatedNetEntity
+from RailML.Infrastructure import GmlLocations, LocationNetwork
+from RailML.RailTopoModel import RTM_LocatedNetEntity
 from typing import List
 
 class EntityIS(RTM_LocatedNetEntity.RTM_LocatedNetEntity):

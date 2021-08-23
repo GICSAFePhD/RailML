@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.NetElement import NetElement
+from RailML.Infrastructure import NetElement
 from typing import List
 
 class NetElements(object):
@@ -9,11 +9,16 @@ class NetElements(object):
 		return self.___netElement
 	
 	@NetElement.setter
-	def Topology(self, aNetElement : NetElement):
+	def NetElement(self, aNetElement : NetElement):
 		self.___netElement = aNetElement
 
+	def create_NetElement(self):
+		if self.NetElement == None:
+			self.NetElement = []
+		self.NetElement.append(NetElement.NetElement())
+    
 	def __init__(self):
-		self.___netElement : NetElement = NetElement()
+		self.___netElement : NetElement = None
 		# @AssociationType Infrastructure.NetElement*
 		# @AssociationMultiplicity 1..*	#TODO 1...*
 
