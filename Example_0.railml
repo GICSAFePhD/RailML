@@ -60,6 +60,70 @@
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
+                <netElement id="ne16">
+                    <relation ref="nr_ne14ne16_swi84"/>
+                    <relation ref="nr_ne15ne16_swi84"/>
+                    <relation ref="nr_ne16ne18_swi85"/>
+                    <relation ref="nr_ne16ne17_swi85"/>
+                    <associatedPositioningSystem id="ne16_aps01">
+                        <intrinsicCoordinate id="ne16_aps01_ic01" intrinsicCoord="0">
+                            <geometricCoordinate positioningSystemRef="gps01" x="-450.000" y="-450.000"/>
+                        </intrinsicCoordinate>
+                        <intrinsicCoordinate id="ne16_aps01_ic02" intrinsicCoord="1">
+                            <geometricCoordinate positioningSystemRef="gps01" x="300.000" y="-450.000"/>
+                        </intrinsicCoordinate>
+                    </associatedPositioningSystem>
+                </netElement>
+                <netElement id="ne17">
+                    <relation ref="nr_ne16ne17_swi85"/>
+                    <relation ref="nr_ne17ne18_swi85"/>
+                    <relation ref="nr_ne17ne20_swi87"/>
+                    <relation ref="nr_ne17ne19_swi87"/>
+                    <associatedPositioningSystem id="ne17_aps01">
+                        <intrinsicCoordinate id="ne17_aps01_ic01" intrinsicCoord="0">
+                            <geometricCoordinate positioningSystemRef="gps01" x="300.000" y="-450.000"/>
+                        </intrinsicCoordinate>
+                        <intrinsicCoordinate id="ne17_aps01_ic02" intrinsicCoord="1">
+                            <geometricCoordinate positioningSystemRef="gps01" x="450.000" y="-300.000"/>
+                        </intrinsicCoordinate>
+                    </associatedPositioningSystem>
+                </netElement>
+                <netElement id="ne18">
+                    <relation ref="nr_ne16ne18_swi85"/>
+                    <relation ref="nr_ne17ne18_swi85"/>
+                    <associatedPositioningSystem id="ne18_aps01">
+                        <intrinsicCoordinate id="ne18_aps01_ic01" intrinsicCoord="0">
+                            <geometricCoordinate positioningSystemRef="gps01" x="300.000" y="-450.000"/>
+                        </intrinsicCoordinate>
+                        <intrinsicCoordinate id="ne18_aps01_ic02" intrinsicCoord="1">
+                            <geometricCoordinate positioningSystemRef="gps01" x="1050.000" y="-450.000"/>
+                        </intrinsicCoordinate>
+                    </associatedPositioningSystem>
+                </netElement>
+                <netElement id="ne19">
+                    <relation ref="nr_ne17ne19_swi87"/>
+                    <relation ref="nr_ne19ne20_swi87"/>
+                    <associatedPositioningSystem id="ne19_aps01">
+                        <intrinsicCoordinate id="ne19_aps01_ic01" intrinsicCoord="0">
+                            <geometricCoordinate positioningSystemRef="gps01" x="450.000" y="-300.000"/>
+                        </intrinsicCoordinate>
+                        <intrinsicCoordinate id="ne19_aps01_ic02" intrinsicCoord="1">
+                            <geometricCoordinate positioningSystemRef="gps01" x="150.000" y="-300.000"/>
+                        </intrinsicCoordinate>
+                    </associatedPositioningSystem>
+                </netElement>
+                <netElement id="ne20">
+                    <relation ref="nr_ne17ne20_swi87"/>
+                    <relation ref="nr_ne19ne20_swi87"/>
+                    <associatedPositioningSystem id="ne20_aps01">
+                        <intrinsicCoordinate id="ne20_aps01_ic01" intrinsicCoord="0">
+                            <geometricCoordinate positioningSystemRef="gps01" x="450.000" y="-300.000"/>
+                        </intrinsicCoordinate>
+                        <intrinsicCoordinate id="ne20_aps01_ic02" intrinsicCoord="1">
+                            <geometricCoordinate positioningSystemRef="gps01" x="1050.000" y="-300.000"/>
+                        </intrinsicCoordinate>
+                    </associatedPositioningSystem>
+                </netElement>
             </netElements>
             <netRelations>
                 <netRelation id="nr_ne14ne16_swi84" positionOnA="1" positionOnB="0" navigability="Both">

@@ -83,4 +83,4 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 		self.___name : Name = None
 		# @AssociationMultiplicity 0..*
 		self.___relation : RTM_Relation = None
-		# @AssociationMultiplicity 0..*
+		# @AssociationMultiplicity 0..*	#TODO MORE THAN ONE!!!!!!
