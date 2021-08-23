@@ -3,25 +3,25 @@
 from typing import List
 
 class Name(object):
-	def setName(self, aName : str):
-		self.___name = aName
-
-	def getName(self) -> str:
+	@property
+	def Name(self) -> str:
 		return self.___name
-
-	def setDescription(self, aDescription : str):
-		self.___description = aDescription
-
-	def getDescription(self) -> str:
+	@property
+	def Description(self) -> str:
 		return self.___description
-
-	#def setLanguage(self, aLanguage : language):
-	def setLanguage(self, aLanguage : str):
-		self.___language = aLanguage
-
-	#def getLanguage(self) -> language:
-	def getLanguage(self) -> str: 
+	@property
+	def Language(self) -> str:
 		return self.___language
+
+	@Name.setter
+	def Name(self, aName : str):
+		self.___name = aName
+	@Description.setter
+	def Description(self, aDescription : str):
+		self.___description = aDescription
+	@Language.setter
+	def Language(self, aLanguage : str):
+		self.___language = aLanguage
 
 	def __init__(self):
 		self.___name : str = None

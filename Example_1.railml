@@ -14,8 +14,6 @@
     <common id="co_01">
         <organizationalUnits>
             <infrastructureManager id="im_01"/>
-            <infrastructureManager id="im_02"/>
-            <infrastructureManager id="im_03"/>
         </organizationalUnits>
         <positioning>
             <geometricPositioningSystems>

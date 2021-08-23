@@ -13,10 +13,13 @@ class LinearPositioningSystems(object):
 		self.___linearPositioningSystem = aLinearPositioningSystem
 
 	def create_LinearPositioningSystem(self):
-			self.LinearPositioningSystem.append(LinearPositioningSystem.LinearPositioningSystem())
+		if self.LinearPositioningSystem == None:
+			self.LinearPositioningSystem = []
+		self.LinearPositioningSystem.append(LinearPositioningSystem.LinearPositioningSystem())
 
 	def __init__(self):
-		self.___linearPositioningSystem : LinearPositioningSystem = [LinearPositioningSystem.LinearPositioningSystem()]
+		self.___linearPositioningSystem : LinearPositioningSystem = None # It should be [LinearPositioningSystem.LinearPositioningSystem()] but it is better to behave as it was a 0..*
 		# @AssociationType Infrastructure.RTM.RTM_LinearPositioningSystem*
 		# @AssociationMultiplicity 1..*
+		# Everytime <linearPositioningSystems> appears then a <linearPositioningSystem> exists, the 1..* is achieved even without the CORRECT definition
 

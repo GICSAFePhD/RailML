@@ -1,9 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import tLrsMethod, RTM_LinearAnchorPoint, RTM_PositioningSystem
+from RailML.Infrastructure import tLrsMethod, RTM_LinearAnchorPoint, RTM_PositioningSystem, RTM_NamedResource
+from RailML.Common import Name
+from RailML.Infrastructure import Validity
 from typing import List
 
-class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
+class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_NamedResource.RTM_NamedResource):
 	@property
 	def LinearReferencingMethod(self) -> tLrsMethod:
 		return self.___linearReferencingMethod
@@ -19,6 +21,12 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 	@property
 	def RTM_LinearAnchorPoint(self) -> RTM_LinearAnchorPoint:
 		return self.___anchor
+	@property
+	def Name(self) -> Name:
+		return self.___name
+	@property
+	def IsValid(self) -> Validity:
+		return self.___isValid	
 
 	@LinearReferencingMethod.setter
 	def LinearReferencingMethod(self, aLinearReferencingMethod : tLrsMethod):
@@ -35,6 +43,12 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 	@RTM_LinearAnchorPoint.setter
 	def RTM_LinearAnchorPoint(self, aRTM_LinearAnchorPoint : RTM_LinearAnchorPoint):
 		self.___anchor = aRTM_LinearAnchorPoint
+	@Name.setter
+	def Name(self, aName : Name):
+		self.___name = aName
+	@IsValid.setter
+	def IsValid(self, aIsValid : Validity):
+		self.___isValid = aIsValid
 
 	def __init__(self):
 		self.___linearReferencingMethod : tLrsMethod = None#tLrsMethod.tLrsMethod()
@@ -46,4 +60,6 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 		self.___anchor : RTM_LinearAnchorPoint = None#RTM_LinearAnchorPoint.RTM_LinearAnchorPoint()
 		# @AssociationType Infrastructure.RTM.RTM_LinearAnchorPoint*
 		# @AssociationMultiplicity 0..*
+		self.___name : Name = None
+		self.___isValid : Validity = None
 

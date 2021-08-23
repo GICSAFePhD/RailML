@@ -10,9 +10,6 @@ class Common(tElementWithID.tElementWithID):
 	"""This is the top level element for the common model."""
 
 	@property
-	def Id(self) -> str:
-		return self.___id
-	@property
 	def ElectrificationSystems(self) -> ElectrificationSystems:
 		return self.___electrificationSystems
 	@property
@@ -25,9 +22,6 @@ class Common(tElementWithID.tElementWithID):
 	def Positioning(self) -> PositioningSystems:
 		return self.___positioning
 
-	@Id.setter
-	def Id(self, aId : str):
-		self.___id = aId
 	@ElectrificationSystems.setter
 	def ElectrificationSystems(self, aElectrificationSystems : ElectrificationSystems):
 		self.___electrificationSystems = aElectrificationSystems
@@ -51,7 +45,6 @@ class Common(tElementWithID.tElementWithID):
 		self.Positioning = PositioningSystems.PositioningSystems()
 
 	def __init__(self):
-		self.___id : str = ""
 		self.___electrificationSystems : ElectrificationSystems = None
 		# @AssociationType Common.ElectrificationSystems
 		# @AssociationMultiplicity 0..1
