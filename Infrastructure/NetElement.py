@@ -56,17 +56,29 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def create_tLengthM(self):
 		self.tLengthM = tLengthM.tLengthM()
 	def create_AssociatedPositioningSystem(self):
-		self.AssociatedPositioningSystem = RTM_AssociatedNetElement.RTM_AssociatedNetElement()
+		if self.AssociatedPositioningSystem == None:
+			self.AssociatedPositioningSystem = []
+		self.AssociatedPositioningSystem.append(RTM_AssociatedNetElement.RTM_AssociatedNetElement())
 	def create_ElementCollectionOrdered(self):
-		self.ElementCollectionOrdered = RTM_OrderedCollection.RTM_OrderedCollection()
+		if self.ElementCollectionOrdered == None:
+			self.ElementCollectionOrdered = []
+		self.ElementCollectionOrdered.append(RTM_OrderedCollection.RTM_OrderedCollection())
 	def create_ElementCollectionUnordered(self):
-		self.ElementCollectionUnordered = RTM_UnorderedCollection.RTM_UnorderedCollection()
+		if self.ElementCollectionUnordered == None:
+			self.ElementCollectionUnordered = []
+		self.ElementCollectionUnordered.append(RTM_UnorderedCollection.RTM_UnorderedCollection())
 	def create_IsValid(self):
-		self.IsValid = Validity.Validity()
+		if self.IsValid == None:
+			self.IsValid = []
+		self.IsValid.append(Validity.Validity())
 	def create_Name(self):
-		self.Name = Name.Name()
+		if self.Name == None:
+			self.Name = []
+		self.Name.append(Name.Name())
 	def create_Relation(self):
-		self.Relation = RTM_Relation.RTM_Relation()
+		if self.Relation == None:
+			self.Relation = []
+		self.Relation.append(RTM_Relation.RTM_Relation())
 
 	def __init__(self):
 		self.___length : tLengthM = None
@@ -83,4 +95,4 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 		self.___name : Name = None
 		# @AssociationMultiplicity 0..*
 		self.___relation : RTM_Relation = None
-		# @AssociationMultiplicity 0..*	#TODO MORE THAN ONE!!!!!!
+		# @AssociationMultiplicity 0..*
