@@ -6,13 +6,44 @@ from RailML.Infrastructure import Validity
 from typing import List
 
 class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
+	@property
+	def PositioningSystemRef(self) -> tRef:
+		return self.___positioningSystemRef
+	@property
+	def IntrinsicCoordinate(self) -> RTM_IntrinsicCoordinate:
+		return self.___intrinsicCoordinate
+	@property
+	def IsValid(self) -> Validity:
+		return self.___isValid
+
+	@PositioningSystemRef.setter
+	def PositioningSystemRef(self, aPositioningSystemRef : tRef):
+		self.___positioningSystemRef = aPositioningSystemRef
+	@IntrinsicCoordinate.setter
+	def IntrinsicCoordinate(self, aIntrinsicCoordinate : RTM_IntrinsicCoordinate):
+		self.___intrinsicCoordinate = aIntrinsicCoordinate
+	@IsValid.setter
+	def IsValid(self, aIsValid : Validity):
+		self.___isValid = aIsValid
+
+
+	def create_PositioningSystemRef(self):
+		self.PositioningSystemRef = tRef.tRef()
+	def create_IntrinsicCoordinate(self):
+		if self.IntrinsicCoordinate == None:
+			self.IntrinsicCoordinate = []
+		self.IntrinsicCoordinate.append(RTM_IntrinsicCoordinate.RTM_IntrinsicCoordinate())
+	def create_IsValid(self):
+		if self.IsValid == None:
+			self.IsValid = []
+		self.IsValid.append(Validity.Validity())
+
 	def __init__(self):
 		self.___positioningSystemRef : tRef = None
 		# @AssociationType Common.tRef
-		self._intrinsicCoordinate : RTM_IntrinsicCoordinate = None
+		self.___intrinsicCoordinate : RTM_IntrinsicCoordinate = None
 		# @AssociationType Infrastructure.RTM.RTM_IntrinsicCoordinate*
 		# @AssociationMultiplicity 1..*
-		self._isValid : Validity = None
+		self.___isValid : Validity = None
 		# @AssociationType Infrastructure.RTM.RTM_Validity*
 		# @AssociationMultiplicity 0..*
-

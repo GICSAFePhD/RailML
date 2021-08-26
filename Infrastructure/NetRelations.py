@@ -12,8 +12,13 @@ class NetRelations(object):
 	def NetRelation(self, aNetRelation : NetRelation):
 		self.___netRelation = aNetRelation
 
+	def create_Relation(self):
+		if self.NetRelation == None:
+			self.NetRelation = []
+		self.NetRelation.append(NetRelation.NetRelation())
+
 	def __init__(self):
-		self.___netRelation : NetRelation = None#NetRelation.NetRelation()
+		self.___netRelation : NetRelation = None
 		# @AssociationType Infrastructure.NetRelation*
 		# @AssociationMultiplicity 1..*	#TODO 1..*
 

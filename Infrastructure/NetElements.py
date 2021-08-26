@@ -20,5 +20,5 @@ class NetElements(object):
 	def __init__(self):
 		self.___netElement : NetElement = None
 		# @AssociationType Infrastructure.NetElement*
-		# @AssociationMultiplicity 1..*	#TODO 1...*
+		# @AssociationMultiplicity 1..*
 
