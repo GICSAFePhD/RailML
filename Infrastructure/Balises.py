@@ -13,7 +13,7 @@ class Balises(object):
 		self.___balise = aBalise
 
 	def __init__(self):
-		self.___balise : Balise = Balise.Balise()
+		self.___balise : Balise = None
 		# @AssociationType Infrastructure.Balise*
 		# @AssociationMultiplicity 0..*
 

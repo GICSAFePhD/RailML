@@ -31,6 +31,19 @@ class Geometry(object):
 	def GeometryPoints(self, aGeometryPoints : GeometryPoints):
 		self.___geometryPoints = aGeometryPoints
 
+	def create_HorizontalCurves(self):
+		if self.HorizontalCurves == None:
+			self.HorizontalCurves = []
+		self.HorizontalCurves.append(HorizontalCurves.HorizontalCurves())
+	def create_GradientCurves(self):
+		if self.GradientCurves == None:
+			self.GradientCurves = []
+		self.GradientCurves.append(GradientCurves.GradientCurves())
+	def create_GeometryPoints(self):
+		if self.GeometryPoints == None:
+			self.GeometryPoints = []
+		self.GeometryPoints.append(GeometryPoints.GeometryPoints())
+
 	def __init__(self):
 		self.___horizontalCurves : HorizontalCurves = None#HorizontalCurves.HorizontalCurves()
 		# @AssociationType Infrastructure.HorizontalCurves

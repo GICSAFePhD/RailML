@@ -12,8 +12,13 @@ class Borders(object):
 	def Border(self, aBorder : Border):
 		self.___border = aBorder
 
+	def create_Border(self):
+		if self.Border == None:
+			self.Border = []
+		self.Border.append(Border.Border())
+
 	def __init__(self):
-		self.___border : Border = Border.Border()
+		self.___border : Border = None
 		# @AssociationType Infrastructure.Border*
 		# @AssociationMultiplicity 1..*
 

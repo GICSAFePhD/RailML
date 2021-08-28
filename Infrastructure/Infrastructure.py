@@ -51,7 +51,7 @@ class Infrastructure(tElementWithID.tElementWithID):
 	def create_Geometry(self):
 			self.Geometry = Geometry.Geometry()
 	def create_FunctionalInfrastructure(self):
-			self.TopoloFunctionalInfrastructuregy = FunctionalInfrastructure.FunctionalInfrastructure()
+			self.FunctionalInfrastructure = FunctionalInfrastructure.FunctionalInfrastructure()
 	def create_PhysicalFacilities(self):
 			self.PhysicalFacilities = PhysicalFacilities.PhysicalFacilities()
 	def create_InfrastructureVisualizations(self):

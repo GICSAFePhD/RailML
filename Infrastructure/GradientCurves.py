@@ -16,6 +16,11 @@ class GradientCurves(object):
 	def GradientCurve(self, aGradientCurve : GradientCurve):
 		self.___gradientCurve = aGradientCurve
 
+	def create_GradientCurve(self):
+		if self.GradientCurve == None:
+			self.GradientCurve = []
+		self.GradientCurve.append(GradientCurve.GradientCurve())
+
 	def __init__(self):
 		self.___gradientCurve : GradientCurve = GradientCurve.GradientCurve()
 		# @AssociationType Infrastructure.GradientCurve*

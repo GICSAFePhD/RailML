@@ -19,8 +19,8 @@ class Border(TrackNode.TrackNode):
 	def Type(self) -> tBorderTypeExt:
 		return self.___type
 	@property
-	def MarkedByInfrastructureElement(self) -> tElementWithIDref:
-		return self.___markedByInfrastructureElement
+	def Id(self) -> tElementWithIDref:
+		return self.___id
 
 	@IsOpenEnd.setter
 	def IsOpenEnd(self, aIsOpenEnd : Long):
@@ -31,19 +31,19 @@ class Border(TrackNode.TrackNode):
 	@Type.setter
 	def Type(self, aType : tBorderTypeExt):
 		self.___type = aType
-	@MarkedByInfrastructureElement.setter
-	def MarkedByInfrastructureElement(self, aMarkedByInfrastructureElement : tElementWithIDref):
-		self.___markedByInfrastructureElement = aMarkedByInfrastructureElement
+	@Id.setter
+	def Id(self, aId : tElementWithIDref):
+		self.___id = aId
 
 	def __init__(self):
 		self.___isOpenEnd : Long = 0
 		"""set TRUE if this represents the end of the known network; default value FALSE"""
 		self.___externalRef : str = ""
 		"""reference to an external identifier allowing to connect in this border point (only useful in case of open ends)"""
-		self.___type : tBorderTypeExt = tBorderTypeExt.tBorderTypeExt()
+		self.___type : tBorderTypeExt = None
 		# @AssociationType Infrastructure.tBorderTypeExt
 		# """defines the type of the border, e.g. "infrastructureManager" to indicate a border between two railway areas owned by different railway infrastructure managers"""
-		self.___markedByInfrastructureElement : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___id : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a functional infrastructure element that marks the border"""

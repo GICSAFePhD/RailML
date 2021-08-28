@@ -12,8 +12,13 @@ class HorizontalCurves(object):
 	def HorizontalCurve(self, aHorizontalCurve : HorizontalCurve):
 		self.___horizontalCurve = aHorizontalCurve
 
+	def create_HorizontalCurve(self):
+		if self.HorizontalCurve == None:
+			self.HorizontalCurve = []
+		self.HorizontalCurve.append(HorizontalCurve.HorizontalCurve())
+
 	def __init__(self):
-		self.___horizontalCurve : HorizontalCurve = HorizontalCurve.HorizontalCurve()
+		self.___horizontalCurve : HorizontalCurve = None
 		# @AssociationType Infrastructure.HorizontalCurve*
 		# @AssociationMultiplicity 1..*
 

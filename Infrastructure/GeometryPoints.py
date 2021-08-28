@@ -12,8 +12,13 @@ class GeometryPoints(object):
 	def GeometryPoint(self, aGeometryPoint : GeometryPoint):
 		self.___geometryPoint = aGeometryPoint
 
+	def create_GeometryPoint(self):
+		if self.GeometryPoint == None:
+			self.GeometryPoint = []
+		self.GeometryPoint.append(GeometryPoint.GeometryPoint())
+
 	def __init__(self):
-		self.___geometryPoint : GeometryPoint = GeometryPoint.GeometryPoint()
+		self.___geometryPoint : GeometryPoint = None
 		# @AssociationType Infrastructure.GeometryPoint*
 		# @AssociationMultiplicity 1..*
 

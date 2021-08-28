@@ -90,88 +90,197 @@ class FunctionalInfrastructure(object):
 	def WeightLimits(self) -> WeightLimits:
 		return self.___weightLimits
 
-	Balises.setter
+	@Balises.setter
 	def Balises(self, aBalises : Balises):
 		self.___balises = aBalises
-	Borders.setter
+	@Borders.setter
 	def Borders(self, aBorders : Borders):
 		self.___borders = aBorders
-	BufferStops.setter
+	@BufferStops.setter
 	def BufferStops(self, aBufferStops : BufferStops):
 		self.___bufferStops = aBufferStops
-	Crossings.setter
+	@Crossings.setter
 	def Crossings(self, aCrossings : Crossings):
 		self.___crossings = aCrossings
-	DerailersIS.setter
+	@DerailersIS.setter
 	def DerailersIS(self, aDerailersIS : DerailersIS):
 		self.___derailersIS = aDerailersIS
-	Electrifications.setter
+	@Electrifications.setter
 	def Electrifications(self, aElectrifications : Electrifications):
 		self.___electrifications = aElectrifications
-	KeyLocksIS.setter
+	@KeyLocksIS.setter
 	def KeyLocksIS(self, aKeyLocksIS : KeyLocksIS):
 		self.___keyLocksIS = aKeyLocksIS
-	LevelCrossingsIS.setter
+	@LevelCrossingsIS.setter
 	def LevelCrossingsIS(self, aLevelCrossingsIS : LevelCrossingsIS):
 		self.___levelCrossingsIS = aLevelCrossingsIS
-	Lines.setter
+	@Lines.setter
 	def Lines(self, aLines : Lines):
 		self.___lines = aLines
-	LoadingGauges.setter
+	@LoadingGauges.setter
 	def LoadingGauges(self, aLoadingGauges : LoadingGauges):
 		self.___loadingGauges = aLoadingGauges
-	OperationalPoints.setter
+	@OperationalPoints.setter
 	def OperationalPoints(self, aOperationalPoints : OperationalPoints):
 		self.___operationalPoints = aOperationalPoints
-	OverCrossings.setter
+	@OverCrossings.setter
 	def OverCrossings(self, aOverCrossings : OverCrossings):
 		self.___overCrossings = aOverCrossings
-	Platforms.setter
+	@Platforms.setter
 	def Platforms(self, aPlatforms : Platforms):
 		self.___platforms = aPlatforms
-	RestrictionAreas.setter
+	@RestrictionAreas.setter
 	def RestrictionAreas(self, aRestrictionAreas : RestrictionAreas):
 		self.___restrictionAreas = aRestrictionAreas
-	ServiceSections.setter
+	@ServiceSections.setter
 	def ServiceSections(self, aServiceSections : ServiceSections):
 		self.___serviceSections = aServiceSections
-	SignalsIS.setter
+	@SignalsIS.setter
 	def SignalsIS(self, aSignalsIS : SignalsIS):
 		self.___signalsIS = aSignalsIS
-	Speeds.setter
+	@Speeds.setter
 	def Speeds(self, aSpeeds : Speeds):
 		self.___speeds = aSpeeds
-	StoppingPlaces.setter
+	@StoppingPlaces.setter
 	def StoppingPlaces(self, aStoppingPlaces : StoppingPlaces):
 		self.___stoppingPlaces = aStoppingPlaces
-	SwitchesIS.setter
+	@SwitchesIS.setter
 	def SwitchesIS(self, aSwitchesIS : SwitchesIS):
 		self.___switchesIS = aSwitchesIS
-	Tracks.setter
+	@Tracks.setter
 	def Tracks(self, aTracks : Tracks):
 		self.___tracks = aTracks
-	TrackBeds.setter
+	@TrackBeds.setter
 	def TrackBeds(self, aTrackBeds : TrackBeds):
 		self.___trackBeds = aTrackBeds
-	TrackGauges.setter
+	@TrackGauges.setter
 	def TrackGauges(self, aTrackGauges : TrackGauges):
 		self.___trackGauges = aTrackGauges
-	TrainDetectionElements.setter
+	@TrainDetectionElements.setter
 	def TrainDetectionElements(self, aTrainDetectionElements : TrainDetectionElements):
 		self.___trainDetectionElements = aTrainDetectionElements
-	TrainProtectionElements.setter
+	@TrainProtectionElements.setter
 	def TrainProtectionElements(self, aTrainProtectionElements : TrainProtectionElements):
 		self.___trainProtectionElements = aTrainProtectionElements
-	TrainRadios.setter
+	@TrainRadios.setter
 	def TrainRadios(self, aTrainRadios : TrainRadios):
 		self.___trainRadios = aTrainRadios
-	UnderCrossings.setter
+	@UnderCrossings.setter
 	def UnderCrossings(self, aUnderCrossings : UnderCrossings):
 		self.___underCrossings = aUnderCrossings
-	WeightLimits.setter
+	@WeightLimits.setter
 	def WeightLimits(self, aWeightLimits : WeightLimits):
 		self.___weightLimits = aWeightLimits
 
+	#27 constructors
+	def create_Balises(self):
+		if self.Balises == None:
+			self.Balises = []
+		self.Balises.append(Balises.Balises())
+	def create_Borders(self):
+		if self.Borders == None:
+			self.Borders = []
+		self.Borders.append(Borders.Borders())
+	def create_BufferStops(self):
+		if self.BufferStops == None:
+			self.BufferStops = []
+		self.BufferStops.append(BufferStops.BufferStops())
+	def create_Crossings(self):
+		if self.Crossings == None:
+			self.Crossings = []
+		self.Crossings.append(Crossings.Crossings())
+	def create_DerailersIS(self):
+		if self.DerailersIS == None:
+			self.DerailersIS = []
+		self.DerailersIS.append(DerailersIS.DerailersIS())
+	def create_Electrifications(self):
+		if self.Electrifications == None:
+			self.Electrifications = []
+		self.Electrifications.append(Electrifications.Electrifications())
+	def create_KeyLocksIS(self):
+		if self.KeyLocksIS == None:
+			self.KeyLocksIS = []
+		self.KeyLocksIS.append(KeyLocksIS.KeyLocksIS())
+	def create_LevelCrossingsIS(self):
+		if self.LevelCrossingsIS == None:
+			self.LevelCrossingsIS = []
+		self.LevelCrossingsIS.append(LevelCrossingsIS.LevelCrossingsIS())
+	def create_Lines(self):
+		if self.Lines == None:
+			self.Lines = []
+		self.Lines.append(Lines.Lines())
+	def create_LoadingGauges(self):
+		if self.LoadingGauges == None:
+			self.LoadingGauges = []
+		self.LoadingGauges.append(LoadingGauges.LoadingGauges())
+	def create_OperationalPoints(self):
+		if self.OperationalPoints == None:
+			self.OperationalPoints = []
+		self.OperationalPoints.append(OperationalPoints.OperationalPoints())
+	def create_OverCrossings(self):
+		if self.OverCrossings == None:
+			self.OverCrossings = []
+		self.OverCrossings.append(OverCrossings.OverCrossings())
+	def create_Platforms(self):
+		if self.Platforms == None:
+			self.Platforms = []
+		self.Platforms.append(Platforms.Platforms())
+	def create_RestrictionAreas(self):
+		if self.RestrictionAreas == None:
+			self.RestrictionAreas = []
+		self.RestrictionAreas.append(RestrictionAreas.RestrictionAreas())
+	def create_ServiceSections(self):
+		if self.ServiceSections == None:
+			self.ServiceSections = []
+		self.ServiceSections.append(ServiceSections.ServiceSections())
+	def create_SignalsIS(self):
+		if self.SignalsIS == None:
+			self.SignalsIS = []
+		self.SignalsIS.append(SignalsIS.SignalsIS())
+	def create_Speeds(self):
+		if self.Speeds == None:
+			self.Speeds = []
+		self.Speeds.append(Speeds.Speeds())
+	def create_StoppingPlaces(self):
+		if self.StoppingPlaces == None:
+			self.StoppingPlaces = []
+		self.StoppingPlaces.append(StoppingPlaces.StoppingPlaces())
+	def create_SwitchesIS(self):
+		if self.SwitchesIS == None:
+			self.SwitchesIS = []
+		self.SwitchesIS.append(SwitchesIS.SwitchesIS())
+	def create_Tracks(self):
+		if self.Tracks == None:
+			self.Tracks = []
+		self.Tracks.append(Tracks.Tracks())
+	def create_TrackBeds(self):
+		if self.TrackBeds == None:
+			self.TrackBeds = []
+		self.TrackBeds.append(TrackBeds.TrackBeds())
+	def create_TrackGauges(self):
+		if self.TrackGauges == None:
+			self.TrackGauges = []
+		self.TrackGauges.append(TrackGauges.TrackGauges())
+	def create_TrainDetectionElements(self):
+		if self.TrainDetectionElements == None:
+			self.TrainDetectionElements = []
+		self.TrainDetectionElements.append(TrainDetectionElements.TrainDetectionElements())
+	def create_TrainProtectionElements(self):
+		if self.TrainProtectionElements == None:
+			self.TrainProtectionElements = []
+		self.TrainProtectionElements.append(TrainProtectionElements.TrainProtectionElements())
+	def create_TrainRadios(self):
+		if self.TrainRadios == None:
+			self.TrainRadios = []
+		self.TrainRadios.append(TrainRadios.TrainRadios())
+	def create_UnderCrossings(self):
+		if self.UnderCrossings == None:
+			self.UnderCrossings = []
+		self.UnderCrossings.append(UnderCrossings.UnderCrossings())
+	def create_WeightLimits(self):
+		if self.WeightLimits == None:
+			self.WeightLimits = []
+		self.WeightLimits.append(WeightLimits.WeightLimits())
 
 	def __init__(self):
 		self.___balises : Balises = None
@@ -282,4 +391,3 @@ class FunctionalInfrastructure(object):
 		# @AssociationType Infrastructure.WeightLimits
 		# @AssociationMultiplicity 0..1
 		# """container element for all weightLimit (axle load, meterload) elements"""
-

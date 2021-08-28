@@ -13,7 +13,7 @@ class DerailersIS(object):
 		self.___derailerIS = aDerailerIS
 
 	def __init__(self):
-		self.___derailerIS : DerailerIS = DerailerIS.DerailerIS()
+		self.___derailerIS : DerailerIS = None
 		# @AssociationType Infrastructure.DerailerIS*
 		# @AssociationMultiplicity 1..*
 
