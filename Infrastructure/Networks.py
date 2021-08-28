@@ -12,8 +12,13 @@ class Networks(object):
 	def Network(self, aNetwork : Network):
 		self.___network = aNetwork
 
+	def create_Network(self):
+		if self.Network == None:
+			self.Network = []
+		self.Network.append(Network.Network())
+
 	def __init__(self):
-		self.___network : Network = None#Network.Network()
+		self.___network : Network = None
 		# @AssociationType Infrastructure.Network*
-		# @AssociationMultiplicity 1..*	#TODO 1...*
+		# @AssociationMultiplicity 1..*
 

@@ -33,7 +33,7 @@ class Topology(object):
 	def create_NetRelations(self):
 		self.NetRelations = NetRelations.NetRelations()
 	def create_Networks(self):
-		self.ENetworks = Networks.Networks()
+		self.Networks = Networks.Networks()
     
 	def __init__(self):
 		self.___netElements : NetElements = None

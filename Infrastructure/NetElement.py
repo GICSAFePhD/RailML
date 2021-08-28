@@ -3,7 +3,7 @@
 import sys
 sys.path.append('.')
 from RailML.Common import tLengthM,Name
-from RailML.Infrastructure import Validity
+from RailML.Infrastructure import Validity, NetRelation
 from RailML.RailTopoModel import RTM_OrderedCollection, RTM_UnorderedCollection, RTM_PositioningNetElement, RTM_Relation, RTM_AssociatedPositioningSystem
 from typing import List
 
@@ -28,7 +28,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Name(self) -> Name:
 		return self.___name
 	@property
-	def Relation(self) -> RTM_Relation:
+	def Relation(self) -> NetRelation:
 		return self.___relation
 
 	@tLengthM.setter
@@ -50,7 +50,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Name(self, aName : Name):
 		self.___name = aName
 	@Relation.setter
-	def Relation(self, aRelation : RTM_Relation):
+	def Relation(self, aRelation : NetRelation):
 		self.___relation = aRelation
 
 	def create_tLengthM(self):
@@ -78,7 +78,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def create_Relation(self):
 		if self.Relation == None:
 			self.Relation = []
-		self.Relation.append(RTM_Relation.RTM_Relation())
+		self.Relation.append(NetRelation.NetRelation())
 
 	def __init__(self):
 		self.___length : tLengthM = None
@@ -94,5 +94,5 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 		# @AssociationMultiplicity 0..*
 		self.___name : Name = None
 		# @AssociationMultiplicity 0..*
-		self.___relation : RTM_Relation = None	#TODO POINTER TO RELATION
+		self.___relation : NetRelation = None	#TODO POINTER TO RELATION
 		# @AssociationMultiplicity 0..*
