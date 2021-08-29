@@ -6,6 +6,7 @@ from typing import List
 
 class RTM_NetworkResource(RTM_NamedResource.RTM_NamedResource):
 	def __init__(self):
+		super().__init__()
 		self._isValid : Validity = None
 		# @AssociationType Infrastructure.RTM.RTM_Validity*
 		# @AssociationMultiplicity 0..*

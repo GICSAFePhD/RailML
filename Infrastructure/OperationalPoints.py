@@ -12,8 +12,13 @@ class OperationalPoints(object):
 	def OperationalPoint(self, aOperationalPoint : OperationalPoint):
 		self.___operationalPoint = aOperationalPoint
 
+	def create_OperationalPoint(self):
+		if self.OperationalPoint == None:
+			self.OperationalPoint = []
+		self.OperationalPoint.append(OperationalPoint.OperationalPoint())
+
 	def __init__(self):
-		self.___operationalPoint : OperationalPoint = OperationalPoint.OperationalPoint()
+		self.___operationalPoint : OperationalPoint = None
 		# @AssociationType Infrastructure.OperationalPoint*
 		# @AssociationMultiplicity 1..*
 

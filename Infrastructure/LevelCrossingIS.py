@@ -52,28 +52,28 @@ class LevelCrossingIS(XCrossing.XCrossing):
 		self.___protection = aProtection
 
 	def __init__(self):
-		self.___obstacleDetection : tLevelCrossingObstacleDetection = tLevelCrossingObstacleDetection.tLevelCrossingObstacleDetection()
+		self.___obstacleDetection : tLevelCrossingObstacleDetection = None
 		# @AssociationType Infrastructure.tLevelCrossingObstacleDetection
 		# """obstacle detection: automatic (technical system, e.g. radar) or manual (e.g. by operator);
 		# missing attribute means that the information is not known"""
 		self.___opensOnDemand : Long = 0
 		"""set TRUE if the level crossing is closed for road users by default and gates are only opened on demand;
 		missing attribute means that the information is not known"""
-		self.___activation : tLevelCrossingActivation = tLevelCrossingActivation.tLevelCrossingActivation()
+		self.___activation : tLevelCrossingActivation = None
 		# @AssociationType Infrastructure.tLevelCrossingActivation
 		# """describes how the level crossing is being activated;
 		# missing attribute means that the information is not known"""
-		self.___supervision : tLevelCrossingSupervision = tLevelCrossingSupervision.tLevelCrossingSupervision()
+		self.___supervision : tLevelCrossingSupervision = None
 		# @AssociationType Infrastructure.tLevelCrossingSupervision
 		# """describes how the state of the level crossing is being supervised;
 		# missing attribute means that the information is not known"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		"""reference to the (one and only) parent level crossing"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a template level crossing"""
-		self.___protection : LevelCrossingProtection = LevelCrossingProtection.LevelCrossingProtection()
+		self.___protection : LevelCrossingProtection = None
 		# @AssociationType Infrastructure.LevelCrossingProtection
 		# @AssociationMultiplicity 0..1
 		# """summary of technical protection of the level crossing"""

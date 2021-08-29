@@ -39,19 +39,19 @@ class UnderCrossing(XCrossing.XCrossing):
 		self.___unnamed_aVerbalConstraint = aaVerbalConstraint
 
 	def __init__(self):
-		self.___constructionType : tCrossingConstructionTypeExt = tCrossingConstructionTypeExt.tCrossingConstructionTypeExt()
+		self.___constructionType : tCrossingConstructionTypeExt = None
 		# @AssociationType Infrastructure.tCrossingConstructionTypeExt
 		# """construction type of under crossing: bridge or tunnel"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a parent under crossing"""
-		self.___allowedWeightLimit : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___allowedWeightLimit : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to weight limit classes that are allowed to pass over this under crossing"""
-		self.___length : Length = Length.Length()
+		self.___length : Length = None
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the under crossing relative to the railway in metres"""
-		self.___unnamed_aVerbalConstraint : aVerbalConstraint = aVerbalConstraint.aVerbalConstraint()
+		self.___unnamed_aVerbalConstraint : aVerbalConstraint = None
 

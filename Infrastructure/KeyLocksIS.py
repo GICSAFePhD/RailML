@@ -12,8 +12,13 @@ class KeyLocksIS(object):
 	def KeyLockIS(self, aKeyLockIS : KeyLockIS):
 		self.___keyLockIS = aKeyLockIS
 
+	def create_KeyLockIS(self):
+		if self.KeyLockIS == None:
+			self.KeyLockIS = []
+		self.KeyLockIS.append(KeyLockIS.KeyLockIS())
+
 	def __init__(self):
-		self.___keyLockIS : KeyLockIS = KeyLockIS.KeyLockIS()
+		self.___keyLockIS : KeyLockIS = None
 		# @AssociationType Infrastructure.KeyLockIS*
 		# @AssociationMultiplicity 1..*
 

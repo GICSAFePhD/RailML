@@ -45,25 +45,25 @@ class Track(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___length = aLength
 
 	def __init__(self):
-		self.___type : tTrackType = tTrackType.tTrackType()
+		self.___type : tTrackType = None
 		# @AssociationType Infrastructure.tTrackType
 		# """type of the track defining the general functionality of the track"""
-		self.___infrastructureManagerRef : tRef = tRef.tRef()
+		self.___infrastructureManagerRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to the infrastructure manager who owns the track (see <organizationalUnits> in <common>)"""
-		self.___mainDirection : tExtendedDirection = tExtendedDirection.tExtendedDirection()
+		self.___mainDirection : tExtendedDirection = None
 		# @AssociationType Infrastructure.tExtendedDirection
 		# """predominant direction of operation on this track;
 		# use this attribute to define the default direction of train operations, especially on double track lines"""
-		self.___trackBegin : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___trackBegin : tElementWithIDref = None
 		"""reference to a track node (buffer stop, switch, etc.) that marks the begin of the track"""
-		self.___trackEnd : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___trackEnd : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to a track node (buffer stop, switch, etc.) that marks the end of the track"""
-		self.___length : Length = Length.Length()
+		self.___length : Length = None
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 1..*
 		# """length of track in metres"""

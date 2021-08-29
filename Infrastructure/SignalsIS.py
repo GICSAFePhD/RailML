@@ -9,11 +9,16 @@ class SignalsIS(object):
 		return self.___signalIS
 	
 	@SignalIS.setter
-	def SignalIS(self, *aSignalIS : SignalIS):
+	def SignalIS(self, aSignalIS : SignalIS):	#TODO *aSignalIS
 		self.___signalIS = aSignalIS
 
+	def create_SignalIS(self):
+		if self.SignalIS == None:
+			self.SignalIS = []
+		self.SignalIS.append(SignalIS.SignalIS())
+
 	def __init__(self):
-		self.___signalIS : SignalIS = SignalIS.SignalIS()
+		self.___signalIS : SignalIS = None
 		# @AssociationType Infrastructure.SignalIS*
 		# @AssociationMultiplicity 1..*
 

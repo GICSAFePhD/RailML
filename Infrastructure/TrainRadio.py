@@ -59,12 +59,12 @@ class TrainRadio(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		"""defines whether public emergency calls are available"""
 		self.___supportsPublicNetworkRoaming : Long = 0
 		"""defines whether roaming via public networks is available"""
-		self.___radioSystem : tTrainRadioSystemExt = tTrainRadioSystemExt.tTrainRadioSystemExt()
+		self.___radioSystem : tTrainRadioSystemExt = None
 		# @AssociationType Infrastructure.tTrainRadioSystemExt
 		# """the train radio system, e.g. 'GSM-R'"""
 		self.___supportsTextMessageService : Long = 0
 		"""defines whether text message service (SMS) is available"""
-		self.___networkSelection : tTrainRadioNetworkSelectionExt = tTrainRadioNetworkSelectionExt.tTrainRadioNetworkSelectionExt()
+		self.___networkSelection : tTrainRadioNetworkSelectionExt = None
 		# @AssociationType Infrastructure.tTrainRadioNetworkSelectionExt
 		# """defines the procedure of train radio network selection"""
 

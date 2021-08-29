@@ -13,8 +13,13 @@ class TrainDetectionElements(object):
 	def TrainDetectionElement(self, *aTrainDetectionElement : TrainDetectionElement):
 		self.___trainDetectionElement = aTrainDetectionElement
 
+	def create_TrainDetectionElement(self):
+		if self.TrainDetectionElement == None:
+			self.TrainDetectionElement = []
+		self.TrainDetectionElement.append(TrainDetectionElement.TrainDetectionElement())
+
 	def __init__(self):
-		self.___trainDetectionElement : TrainDetectionElement = TrainDetectionElement.TrainDetectionElement()
+		self.___trainDetectionElement : TrainDetectionElement = None
 		# @AssociationType Infrastructure.TrainDetectionElement*
 		# @AssociationMultiplicity 0..*
 

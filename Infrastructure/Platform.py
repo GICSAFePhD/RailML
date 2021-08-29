@@ -44,23 +44,23 @@ class Platform(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___length = aLength
 
 	def __init__(self):
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		"""reference to a parent platform (edge);
 		use this attribute for grouping of platform edges with different parameters (e.g. different heights)"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a template platform (edge)"""
-		self.___height : tLengthM = tLengthM.tLengthM()
+		self.___height : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """the height of the platform edge in metres"""
-		self.___ownsPlatformEdge : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___ownsPlatformEdge : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to platform edge that belongs to this platform"""
-		self.___width : Length = Length.Length()
+		self.___width : Length = None
 		"""width of the platform"""
-		self.___length : Length = Length.Length()
+		self.___length : Length = None
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Infrastructure.Length*

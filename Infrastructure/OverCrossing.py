@@ -40,19 +40,19 @@ class OverCrossing(XCrossing.XCrossing):
 		self.___unnamed_aVerbalConstraint_ = aaVerbalConstraint
 
 	def __init__(self):
-		self.___constructionType : tCrossingConstructionTypeExt = tCrossingConstructionTypeExt.tCrossingConstructionTypeExt()
+		self.___constructionType : tCrossingConstructionTypeExt = None
 		# @AssociationType Infrastructure.tCrossingConstructionTypeExt
 		# """construction type of over crossing: bridge or tunnel"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a parent over crossing"""
-		self.___allowedLoadingGauge : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___allowedLoadingGauge : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to train clearance gauge classes that are allowed to pass through the over crossing"""
-		self.___length : Length = Length.Length()
+		self.___length : Length = None
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the over crossing relative to the railway in metres"""
-		self.___unnamed_aVerbalConstraint_ : aVerbalConstraint = aVerbalConstraint.aVerbalConstraint()
+		self.___unnamed_aVerbalConstraint_ : aVerbalConstraint = None
 

@@ -12,8 +12,13 @@ class Speeds(object):
 	def SpeedSection(self, *aSpeedSection : SpeedSection):
 		self.___speedSection = aSpeedSection
 
+	def create_SpeedSection(self):
+		if self.SpeedSection == None:
+			self.SpeedSection = []
+		self.SpeedSection.append(SpeedSection.SpeedSection())
+
 	def __init__(self):
-		self.___speedSection : SpeedSection = SpeedSection.SpeedSection()
+		self.___speedSection : SpeedSection = None
 		# @AssociationType Infrastructure.SpeedSection*
 		# @AssociationMultiplicity 1..*
 

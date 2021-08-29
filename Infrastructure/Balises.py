@@ -12,6 +12,11 @@ class Balises(object):
 	def Balise(self, aBalise : Balise):
 		self.___balise = aBalise
 
+	def create_Balise(self):
+		if self.Balise == None:
+			self.Balise = []
+		self.Balise.append(Balise.Balise())
+
 	def __init__(self):
 		self.___balise : Balise = None
 		# @AssociationType Infrastructure.Balise*

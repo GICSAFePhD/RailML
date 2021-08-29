@@ -13,8 +13,13 @@ class TrackGauges(object):
 	def TrackGauge(self, *aTrackGauge : TrackGauge):
 		self.___trackGauge = aTrackGauge
 
+	def create_TrackGauge(self):
+		if self.TrackGauge == None:
+			self.TrackGauge = []
+		self.TrackGauge.append(TrackGauge.TrackGauge())
+
 	def __init__(self):
-		self.___trackGauge : TrackGauge = TrackGauge.TrackGauge()
+		self.___trackGauge : TrackGauge = None
 		# @AssociationType Infrastructure.TrackGauge*
 		# @AssociationMultiplicity 1..*
 

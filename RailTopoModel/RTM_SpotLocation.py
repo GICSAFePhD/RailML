@@ -5,9 +5,47 @@ from RailML.Infrastructure import tApplicationDirection
 from RailML.RailTopoModel import RTM_LinearCoordinate, RTM_GeometricCoordinate, RTM_EntityLocation
 from typing import List
 
-#class RTM_SpotLocation(RTM_EntityLocation): #TODO CON ESTA HERENCIA SE ROMPE
-class RTM_SpotLocation():
+class RTM_SpotLocation(RTM_EntityLocation.RTM_EntityLocation):
+	@property
+	def NetElementRef(self) -> tRef:
+		return self.___netElementRef
+	@property
+	def IntrinsicCoord(self) -> complex:
+		return self.___intrinsicCoord
+	@property
+	def ApplicationDirection(self) -> tApplicationDirection:
+		return self.___applicationDirection
+	@property
+	def Pos(self) -> tLengthM:
+		return self.___pos
+	@property
+	def LinearCoordinate(self) -> RTM_LinearCoordinate:
+		return self.___linearCoordinate
+	@property
+	def GeometricCoordinate(self) -> RTM_GeometricCoordinate:
+		return self.___geometricCoordinate
+
+	@NetElementRef.setter
+	def NetElementRef(self, aNetElementRef : tRef):
+		self.___netElementRef = aNetElementRef
+	@IntrinsicCoord.setter
+	def IntrinsicCoord(self, aIntrinsicCoord : complex):
+		self.___intrinsicCoord = aIntrinsicCoord
+	@ApplicationDirection.setter
+	def ApplicationDirection(self, aApplicationDirection : tApplicationDirection):
+		self.___applicationDirection = aApplicationDirection
+	@Pos.setter
+	def Pos(self, aPos : tLengthM):
+		self.___pos = aPos
+	@LinearCoordinate.setter
+	def LinearCoordinate(self, aLinearCoordinate : RTM_LinearCoordinate):
+		self.___linearCoordinate = aLinearCoordinate
+	@GeometricCoordinate.setter
+	def GeometricCoordinate(self, aGeometricCoordinate : RTM_GeometricCoordinate):
+		self.___geometricCoordinate = aGeometricCoordinate
+
 	def __init__(self):
+		super().__init__()
 		self.___netElementRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a railway topology <netElement> element"""
@@ -18,10 +56,10 @@ class RTM_SpotLocation():
 		# """direction in which the element is applied, related to the orientation of the <netElement>"""
 		self.___pos : tLengthM = None
 		# @AssociationType Common.tLengthM
-		self._linearCoordinate : RTM_LinearCoordinate = None
+		self.___linearCoordinate : RTM_LinearCoordinate = None
 		# @AssociationType Infrastructure.RTM.RTM_LinearCoordinate
 		# @AssociationMultiplicity 0..1
-		self._geometricCoordinate : RTM_GeometricCoordinate = None
+		self.___geometricCoordinate : RTM_GeometricCoordinate = None
 		# @AssociationType Infrastructure.RTM.RTM_GeometricCoordinate
 		# @AssociationMultiplicity 0..1
 

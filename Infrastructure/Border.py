@@ -35,7 +35,13 @@ class Border(TrackNode.TrackNode):
 	def Id(self, aId : tElementWithIDref):
 		self.___id = aId
 
+	def create_Type(self):
+		self.Type = tBorderTypeExt.tBorderTypeExt()
+	def create_Id(self):
+		self.Type = tElementWithIDref.tElementWithIDref()
+	
 	def __init__(self):
+		super().__init__()
 		self.___isOpenEnd : Long = 0
 		"""set TRUE if this represents the end of the known network; default value FALSE"""
 		self.___externalRef : str = ""
@@ -47,4 +53,3 @@ class Border(TrackNode.TrackNode):
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a functional infrastructure element that marks the border"""
-

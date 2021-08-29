@@ -13,7 +13,7 @@ class DerailerIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___derailSide = atSide
 
 	def __init__(self):
-		self.___derailSide : tSide = tSide.tSide()
+		self.___derailSide : tSide = None
 		# @AssociationType Infrastructure.tSide
 		# """the side to which the railway vehicle will be derailed in reference to the application direction of the derailer: possible values are left and right"""
 

@@ -12,8 +12,13 @@ class Lines(object):
 	def Line(self, aLine : Line):
 		self.___line = aLine
 
+	def create_Line(self):
+		if self.Line == None:
+			self.Line = []
+		self.Line.append(Line.Line())
+
 	def __init__(self):
-		self.___line : Line = Line.Line()
+		self.___line : Line = None
 		# @AssociationType Infrastructure.Line*
 		# @AssociationMultiplicity 1..*
 

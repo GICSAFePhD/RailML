@@ -13,7 +13,7 @@ class RestrictionArea(FunctionalInfrastructureEntity.FunctionalInfrastructureEnt
 		self.___type = atRestrictionAreaTypeExt
 
 	def __init__(self):
-		self.___type : tRestrictionAreaTypeExt = tRestrictionAreaTypeExt.tRestrictionAreaTypeExt()
+		self.___type : tRestrictionAreaTypeExt = None
 		# @AssociationType Infrastructure.tRestrictionAreaTypeExt
 		# """type of restriction that applies in the restriction area (for most values see UNISIG Subset 026, chapter 7.5.1.77 M_TRACKCOND)"""
 

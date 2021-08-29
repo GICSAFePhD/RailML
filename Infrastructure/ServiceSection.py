@@ -20,7 +20,7 @@ class ServiceSection(FunctionalInfrastructureEntity.FunctionalInfrastructureEnti
 		self.___unnamed_aServiceSection_ = aUnnamed_aServiceSection
 
 	def __init__(self):
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to the (one and only) parent service section"""
 		#self.___unnamed_aServiceSection_ : aServiceSection = aServiceSection.aServiceSection() #TODO FIX THIS

@@ -12,8 +12,13 @@ class SwitchesIS(object):
 	def SwitchIS(self, *aSwitchIS : SwitchIS):
 		self.___switchIS = aSwitchIS
 
+	def create_SwitchIS(self):
+		if self.SwitchIS == None:
+			self.SwitchIS = []
+		self.SwitchIS.append(SwitchIS.SwitchIS())
+
 	def __init__(self):
-		self.___switchIS : SwitchIS = SwitchIS.SwitchIS()
+		self.___switchIS : SwitchIS = None
 		# @AssociationType Infrastructure.SwitchIS*
 		# @AssociationMultiplicity 1..*
 

@@ -12,8 +12,13 @@ class Tracks(object):
 	def Track(self, *aTrack : Track):
 		self.___track = aTrack
 
+	def create_Track(self):
+		if self.Track == None:
+			self.Track = []
+		self.Track.append(Track.Track())
+
 	def __init__(self):
-		self.___track : Track = Track.Track()
+		self.___track : Track = None
 		# @AssociationType Infrastructure.Track*
 		# @AssociationMultiplicity 1..*
 

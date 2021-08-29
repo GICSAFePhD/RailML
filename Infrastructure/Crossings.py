@@ -12,6 +12,11 @@ class Crossings(object):
 	def Crossing(self, aCrossing : Crossing):
 		self.___crossing = aCrossing
 
+	def create_Crossing(self):
+		if self.Crossing == None:
+			self.Crossing = []
+		self.Crossing.append(Crossing.Crossing())
+
 	def __init__(self):
 		self.___crossing : Crossing = Crossing.Crossing()
 		# @AssociationType Infrastructure.Crossing*

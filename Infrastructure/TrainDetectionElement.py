@@ -26,12 +26,11 @@ class TrainDetectionElement(FunctionalInfrastructureEntity.FunctionalInfrastruct
 		self.___unnamed_aTrainDetectionElement = aUnnamed_aTrainDetectionElement
 
 	def __init__(self):
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a template train detection element/system"""
-		self.___limitsTrainDetectionElement : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___limitsTrainDetectionElement : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..2
 		# """If the current <trainDetectionElement> is an insulated rail joint or an axle counter and thus a border between two <trainDetectionElement> objects, these two <trainDetectionElement> objects can be referenced."""
-		self.___unnamed_aTrainDetectionElement : aTrainDetectionElement = aTrainDetectionElement.aTrainDetectionElement()
-
+		self.___unnamed_aTrainDetectionElement : aTrainDetectionElement = None

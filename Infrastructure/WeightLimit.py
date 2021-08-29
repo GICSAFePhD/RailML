@@ -20,8 +20,8 @@ class WeightLimit(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity)
 		self.___meterLoad = aMeterLoad
 
 	def __init__(self):
-		self.___axleLoad : tWeightTons = tWeightTons.tWeightTons()
+		self.___axleLoad : tWeightTons = None
 		# @AssociationType Common.tWeightTons
-		self.___meterLoad : tMeterloadTonsPerMeter = tMeterloadTonsPerMeter.tMeterloadTonsPerMeter()
+		self.___meterLoad : tMeterloadTonsPerMeter = None
 		# @AssociationType Common.tMeterloadTonsPerMeter
 

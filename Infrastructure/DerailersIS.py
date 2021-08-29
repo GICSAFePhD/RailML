@@ -12,6 +12,11 @@ class DerailersIS(object):
 	def DerailerIS(self, aDerailerIS : DerailerIS):
 		self.___derailerIS = aDerailerIS
 
+	def create_DerailerIS(self):
+		if self.DerailerIS == None:
+			self.DerailerIS = []
+		self.DerailerIS.append(DerailerIS.DerailerIS())
+
 	def __init__(self):
 		self.___derailerIS : DerailerIS = None
 		# @AssociationType Infrastructure.DerailerIS*

@@ -12,8 +12,13 @@ class ServiceSections(object):
 	def ServiceSection(self, *aServiceSection : ServiceSection):
 		self.___serviceSection = ServiceSection
 
+	def create_ServiceSection(self):
+		if self.ServiceSection == None:
+			self.ServiceSection = []
+		self.ServiceSection.append(ServiceSection.ServiceSection())
+
 	def __init__(self):
-		self.___serviceSection : ServiceSection = ServiceSection.ServiceSection()
+		self.___serviceSection : ServiceSection = None
 		# @AssociationType Infrastructure.ServiceSection*
 		# @AssociationMultiplicity 1..*
 

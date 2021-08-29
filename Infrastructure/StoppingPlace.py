@@ -19,7 +19,7 @@ class StoppingPlace(FunctionalInfrastructureEntity.FunctionalInfrastructureEntit
 		self.___unnamed_aStoppingPlace_ = aaStoppingPlace
 
 	def __init__(self):
-		self.___validForTrainMovement : TrainMovement = TrainMovement.TrainMovement()
+		self.___validForTrainMovement : TrainMovement = None
 		# @AssociationType Infrastructure.TrainMovement*
 		# @AssociationMultiplicity 0..*
 		# """specify the train movement types for which the stopping place is valid (freight trains, passenger trains, ...)"""

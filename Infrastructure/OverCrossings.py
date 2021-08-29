@@ -12,8 +12,13 @@ class OverCrossings(object):
 	def OverCrossing(self, aOverCrossing : OverCrossing):
 		self.___overCrossing = aOverCrossing
 
+	def create_OverCrossing(self):
+		if self.OverCrossing == None:
+			self.OverCrossing = []
+		self.OverCrossing.append(OverCrossing.OverCrossing())
+
 	def __init__(self):
-		self.___overCrossing : OverCrossing = OverCrossing.OverCrossing()
+		self.___overCrossing : OverCrossing = None
 		# @AssociationType Infrastructure.OverCrossing*
 		# @AssociationMultiplicity 1..*
 

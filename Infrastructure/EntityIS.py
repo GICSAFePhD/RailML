@@ -8,7 +8,6 @@ from typing import List
 
 class EntityIS(RTM_LocatedNetEntity.RTM_LocatedNetEntity):
 	"""An Entity is the base element for all railway related elements that can be geo-referenced and located on the railway network topology."""
-	#__metaclass__ = ABCMeta
 	@property
 	def GmlLocations(self) -> GmlLocations:
 		return self.___gmlLocations
@@ -35,11 +34,21 @@ class EntityIS(RTM_LocatedNetEntity.RTM_LocatedNetEntity):
 	def Unnamed_any(self, aUnnamed_any : list):
 		self.___unnamed_any_ = aUnnamed_any
 
+	def create_GmlLocations(self):
+		if self.GmlLocations == None:
+			self.GmlLocations = []
+		self.GmlLocations.append(GmlLocations.GmlLocations())
+	def create_LocationNetwork(self):
+		if self.LocationNetwork == None:
+			self.LocationNetwork = []
+		self.LocationNetwork.append(LocationNetwork.LocationNetwork())
+	
 	def __init__(self):
-		self.___gmlLocations : GmlLocations = GmlLocations.GmlLocations()
+		super().__init__()
+		self.___gmlLocations : GmlLocations = None
 		# @AssociationType Infrastructure.GmlLocations*
 		# @AssociationMultiplicity 0..*
-		self.___networkLocation : LocationNetwork = LocationNetwork.LocationNetwork()
+		self.___networkLocation : LocationNetwork = None
 		# @AssociationType Infrastructure.LocationNetwork*
 		# @AssociationMultiplicity 0..*
 		self.___unnamed_anyAttribute_ : anyAttribute = None

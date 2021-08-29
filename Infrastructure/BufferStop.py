@@ -13,7 +13,7 @@ class BufferStop(TrackNode.TrackNode):
 		self.___type = atBufferStopType
 
 	def __init__(self):
-		self.___type : tBufferStopType = tBufferStopType.tBufferStopType()
+		self.___type : tBufferStopType = None
 		# @AssociationType Infrastructure.tBufferStopType
 		# """type of the buffer stop"""
 

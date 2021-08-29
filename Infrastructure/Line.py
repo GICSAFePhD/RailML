@@ -81,46 +81,46 @@ class Line(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___linePerformance = aLinePerformance
 
 	def __init__(self):
-		self.___infrastructureManagerRef : tRef = tRef.tRef()
+		self.___infrastructureManagerRef : tRef = None
 		"""reference to the infrastructure manager who owns the line (section) (see common/organizationalUnits)"""
-		self.___lineCategory : tLineCategoryExt = tLineCategoryExt.tLineCategoryExt()
+		self.___lineCategory : tLineCategoryExt = None
 		# @AssociationType Infrastructure.tLineCategoryExt
 		# """the category of the line according to the EU regulation EN 15528 (A, B1, B2, C2, ..., E5; other national values are also possible)"""
-		self.___lineType : tLineType = tLineType.tLineType()
+		self.___lineType : tLineType =None
 		# @AssociationType Infrastructure.tLineType
 		# """this attribute is for distinguishing between main line and branch lines"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to the (one and only) parent line (section)"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic line (section)"""
-		self.___beginsInOP : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___beginsInOP : tElementWithIDref = None
 		"""reference to the operational point where the line (section) begins"""
-		self.___endsInOP : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___endsInOP : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to the operational point where the line (section) ends"""
-		self.___length : Length = Length.Length()
+		self.___length : Length = None
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the line (section)"""
-		self.___lineTrafficCode : LineTrafficCode = LineTrafficCode.LineTrafficCode()
+		self.___lineTrafficCode : LineTrafficCode = None
 		# @AssociationType Infrastructure.LineTrafficCode*
 		# @AssociationMultiplicity 0..*
 		# """TSI category of line as defined in TSI INF section 4.2.1; There should be one code for each type of traffic (passenger, freight) allowed on that line"""
-		self.___lineCombinedTransportCode : LineCombinedTransportCode = LineCombinedTransportCode.LineCombinedTransportCode()
+		self.___lineCombinedTransportCode : LineCombinedTransportCode = None
 		# @AssociationType Infrastructure.LineCombinedTransportCode*
 		# @AssociationMultiplicity 0..*
 		# """standard combined transport profile number as defined in UIC Code 596-6"""
-		self.___lineLayout : LineLayout = LineLayout.LineLayout()
+		self.___lineLayout : LineLayout = None
 		# @AssociationType Infrastructure.LineLayout
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the line layout parameters"""
-		self.___linePerformance : LinePerformance = LinePerformance.LinePerformance()
+		self.___linePerformance : LinePerformance = None
 		# @AssociationType Infrastructure.LinePerformance
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the line performance parameters"""

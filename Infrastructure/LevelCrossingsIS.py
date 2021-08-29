@@ -12,8 +12,13 @@ class LevelCrossingsIS(object):
 	def LevelCrossingIS(self, aLevelCrossingIS : LevelCrossingIS):
 		self.___levelCrossingIS = aLevelCrossingIS
 
+	def create_LevelCrossingIS(self):
+		if self.LevelCrossingIS == None:
+			self.LevelCrossingIS = []
+		self.LevelCrossingIS.append(LevelCrossingIS.LevelCrossingIS())
+
 	def __init__(self):
-		self.___levelCrossingIS : LevelCrossingIS = LevelCrossingIS.LevelCrossingIS()
+		self.___levelCrossingIS : LevelCrossingIS = None
 		# @AssociationType Infrastructure.LevelCrossingIS*
 		# @AssociationMultiplicity 1..*
 

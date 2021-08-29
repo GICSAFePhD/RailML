@@ -40,18 +40,27 @@ class Balise(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def BaliseGroupType(self, atBaliseGroupTypeExt : tBaliseGroupTypeExt):
 		self.___baliseGroupType = atBaliseGroupTypeExt
 
+	def create_Type(self):
+		self.Type = tBaliseType.tBaliseType()
+	def create_BelongsToParent(self):
+		self.BelongsToParent = tRef.tRef()
+	def create_BasedOnTemplate(self):
+		self.BasedOnTemplate = tRef.tRef() 
+	def create_BaliseGroupType(self):
+		self.BaliseGroupType = tBaliseGroupTypeExt.tBaliseGroupTypeExt()
+    
 	def __init__(self):
-		self.___type : tBaliseType = tBaliseType.tBaliseType()
+		self.___type : tBaliseType = None
 		# @AssociationType Infrastructure.tBaliseType
 		# """type of balise: fixed or transparent"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		"""reference to the (one and only) parent balise (group)"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic balise (group)"""
 		self.___isBaliseGroup : Long = 0
 		"""indicate whether the <balise> represents a balise group"""
-		self.___baliseGroupType : tBaliseGroupTypeExt = tBaliseGroupTypeExt.tBaliseGroupTypeExt()
+		self.___baliseGroupType : tBaliseGroupTypeExt = None
 		# @AssociationType Infrastructure.tBaliseGroupTypeExt
 		# """type of balise group: fixed, transparent or infill"""

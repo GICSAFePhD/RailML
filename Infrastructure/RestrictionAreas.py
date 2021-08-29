@@ -12,8 +12,13 @@ class RestrictionAreas(object):
 	def RestrictionArea(self, aRestrictionArea : RestrictionArea):
 		self.___restrictionArea = aRestrictionArea
 
+	def create_RestrictionArea(self):
+		if self.RestrictionArea == None:
+			self.RestrictionArea = []
+		self.RestrictionArea.append(RestrictionArea.RestrictionArea())
+
 	def __init__(self):
-		self.___restrictionArea : RestrictionArea = RestrictionArea.RestrictionArea()
+		self.___restrictionArea : RestrictionArea = None
 		# @AssociationType Infrastructure.RestrictionArea*
 		# @AssociationMultiplicity 1..*
 

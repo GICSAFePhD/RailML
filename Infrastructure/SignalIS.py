@@ -115,60 +115,59 @@ class SignalIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def __init__(self):
 		self.___isSwitchable : Long = 0
 		"""set TRUE if the signal is able to show several signal aspects, set FALSE if the signal is a static panel that always shows the same signal aspect"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		"""reference to the (one and only) parent signal this signal belongs to"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """reference to a generic signal"""
-		self.___isAnnouncementSignal : SignalAnnouncement = SignalAnnouncement.SignalAnnouncement()
+		self.___isAnnouncementSignal : SignalAnnouncement = None
 		# @AssociationType Infrastructure.SignalAnnouncement
 		# @AssociationMultiplicity 0..1
-		self.___isCatenarySignal : SignalCatenary = SignalCatenary.SignalCatenary()
+		self.___isCatenarySignal : SignalCatenary = None
 		# @AssociationType Infrastructure.SignalCatenary
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the catenary signal/sign in more detail"""
-		self.___isDangerSignal : SignalDanger = SignalDanger.SignalDanger()
+		self.___isDangerSignal : SignalDanger = None
 		# @AssociationType Infrastructure.SignalDanger
 		# @AssociationMultiplicity 0..1
-		self.___isEtcsSignal : SignalEtcs = SignalEtcs.SignalEtcs()
+		self.___isEtcsSignal : SignalEtcs = None
 		# @AssociationType Infrastructure.SignalEtcs
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the ETCS signal in more detail"""
-		self.___isInformationSignal : SignalInformation = SignalInformation.SignalInformation()
+		self.___isInformationSignal : SignalInformation = None
 		# @AssociationType Infrastructure.SignalInformation
 		# @AssociationMultiplicity 0..1
-		self.___isLevelCrossingSignal : SignalLevelCrossing = SignalLevelCrossing.SignalLevelCrossing()
+		self.___isLevelCrossingSignal : SignalLevelCrossing = None
 		# @AssociationType Infrastructure.SignalLevelCrossing
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the level crossing signal in more detail"""
-		self.___isMilepost : SignalMilepost = SignalMilepost.SignalMilepost()
+		self.___isMilepost : SignalMilepost = None
 		# @AssociationType Infrastructure.SignalMilepost
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the milepost marker in more detail"""
-		self.___isSpeedSignal : SignalSpeed = SignalSpeed.SignalSpeed()
+		self.___isSpeedSignal : SignalSpeed = None
 		# @AssociationType Infrastructure.SignalSpeed
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the speed signal in more detail"""
-		self.___isStopPost : SignalStopPost = SignalStopPost.SignalStopPost()
+		self.___isStopPost : SignalStopPost = None
 		# @AssociationType Infrastructure.SignalStopPost
 		# @AssociationMultiplicity 0..1
 		# """use this child element to specify the stop post in more detail"""
-		self.___isTrainMovementSignal : SignalTrainMovement = SignalTrainMovement.SignalTrainMovement()
+		self.___isTrainMovementSignal : SignalTrainMovement = None
 		# @AssociationType Infrastructure.SignalTrainMovement
 		# @AssociationMultiplicity 0..1
-		self.___isTrainRadioSignal : SignalRadio = SignalRadio.SignalRadio()
+		self.___isTrainRadioSignal : SignalRadio = None
 		# @AssociationType Infrastructure.SignalRadio
 		# @AssociationMultiplicity 0..1
-		self.___isVehicleEquipmentSignal : SignalVehicleEquipment = SignalVehicleEquipment.SignalVehicleEquipment()
+		self.___isVehicleEquipmentSignal : SignalVehicleEquipment = None
 		# @AssociationType Infrastructure.SignalVehicleEquipment
 		# @AssociationMultiplicity 0..1
-		self.___connectedWithBaliseGroup : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___connectedWithBaliseGroup : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a balise (group) that is connected with this signal"""
-		self.___signalConstruction : SignalConstruction = SignalConstruction.SignalConstruction()
+		self.___signalConstruction : SignalConstruction = None
 		# @AssociationType Infrastructure.SignalConstruction
 		# @AssociationMultiplicity 0..1
 		# """child element for construction details of the (physical) signal"""
-

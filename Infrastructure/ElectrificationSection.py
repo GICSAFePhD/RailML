@@ -76,43 +76,43 @@ class ElectrificationSection(FunctionalInfrastructureEntity.FunctionalInfrastruc
 		self.___systemSeparationSection = aSystemSeparationSection
 
 	def __init__(self):
-		self.___contactLineType : tContactLineType = tContactLineType.tContactLineType()
+		self.___contactLineType : tContactLineType = None
 		# @AssociationType Infrastructure.tContactLineType
 		# """type of the installed contact line (most common: overhead)"""
 		self.___isInsulatedSection : bool = False
 		"""set true if the described electrification section is an insulated section"""
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to the (one and only) parent electrification section"""
-		self.___electrificationSystemRef : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___electrificationSystemRef : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref
 		# @AssociationMultiplicity 0..1
 		# """reference to the electrification system"""
-		self.___energyCatenary : EnergyCatenary = EnergyCatenary.EnergyCatenary()
+		self.___energyCatenary : EnergyCatenary = None
 		# @AssociationType Infrastructure.EnergyCatenary
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the catenary energy parameters"""
-		self.___energyPantograph : EnergyPantograph = EnergyPantograph.EnergyPantograph()
+		self.___energyPantograph : EnergyPantograph = None
 		# @AssociationType Infrastructure.EnergyPantograph
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the pantograph energy parameters"""
-		self.___energyRollingstock : EnergyRollingstock = EnergyRollingstock.EnergyRollingstock()
+		self.___energyRollingstock : EnergyRollingstock = None
 		# @AssociationType Infrastructure.EnergyRollingstock
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the rollingstock energy parameters"""
-		self.___hasContactWire : ContactWire = ContactWire.ContactWire()
+		self.___hasContactWire : ContactWire = None
 		# @AssociationType Infrastructure.ContactWire
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the construction details of the contact wire"""
-		self.___pantographSpacing : PantographSpacing = PantographSpacing.PantographSpacing()
+		self.___pantographSpacing : PantographSpacing = None
 		# @AssociationType Infrastructure.PantographSpacing*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the pantograph spacing parameters"""
-		self.___phaseSeparationSection : PhaseSeparationSection = PhaseSeparationSection.PhaseSeparationSection()
+		self.___phaseSeparationSection : PhaseSeparationSection = None
 		# @AssociationType Infrastructure.PhaseSeparationSection*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the phase separation parameters"""
-		self.___systemSeparationSection : SystemSeparationSection = SystemSeparationSection.SystemSeparationSection()
+		self.___systemSeparationSection : SystemSeparationSection = None
 		# @AssociationType Infrastructure.SystemSeparationSection*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the electrification system separation parameters"""

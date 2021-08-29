@@ -26,13 +26,13 @@ class SignalConstruction(object):
 		self.___type = aType
 
 	def __init__(self):
-		self.___height : tLengthM = tLengthM.tLengthM()
+		self.___height : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """height of the (physical) signal/panel, in [m]"""
-		self.___positionAtTrack : tWiderTrackPosition = tWiderTrackPosition.tWiderTrackPosition()
+		self.___positionAtTrack : tWiderTrackPosition = None
 		# @AssociationType Infrastructure.tWiderTrackPosition
 		# """position of the (physical) signal/panel in relation to the railway track where it belongs to and the signal/panel application direction"""
-		self.___type : tSignalConstructionType = tSignalConstructionType.tSignalConstructionType()
+		self.___type : tSignalConstructionType = None
 		# @AssociationType Infrastructure.tSignalConstructionType
 		# """distinguish between light, form and virtual signals"""
 

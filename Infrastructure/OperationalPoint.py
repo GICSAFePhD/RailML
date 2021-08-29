@@ -57,30 +57,30 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 		self.___opOperations = aOpOperations
 
 	def __init__(self):
-		self.___belongsToParent : tRef = tRef.tRef()
+		self.___belongsToParent : tRef = None
 		"""references the one and only parent operational point of this operational point"""
-		self.___basedOnTemplate : tRef = tRef.tRef()
+		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """references a generic operational point"""
 		self.___timezone : str = ""
 		"""the timezone of the operational point as defined in the tz database, e.g. "Europe/Berlin"""
-		self.___infrastructureManagerRef : tElementWithIDref = tElementWithIDref.tElementWithIDref()
-		self.___connectedToLine : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___infrastructureManagerRef : tElementWithIDref = None
+		self.___connectedToLine : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a railway line (section) that is connected with this operational point"""
-		self.___limitedByBorder : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___limitedByBorder : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to a border element that delimits the operational point"""
-		self.___opEquipment : OpEquipment = OpEquipment.OpEquipment()
+		self.___opEquipment : OpEquipment = None
 		# @AssociationType Infrastructure.OpEquipment
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the equipment of the operational point"""
-		self.___opOperations : OpOperations = OpOperations.OpOperations()
+		self.___opOperations : OpOperations = None
 		# @AssociationType Infrastructure.OpOperations
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the operational aspects of the operational point"""

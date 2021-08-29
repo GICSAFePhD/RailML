@@ -19,6 +19,7 @@ class RTM_NamedResource(RTM_BaseObject.RTM_BaseObject):
 		self.Name.append(Name.Name())
 
 	def __init__(self):
+		super().__init__()
 		self.___name : Name = None
 		# @AssociationType Common.Name*
 		# @AssociationMultiplicity 0..*

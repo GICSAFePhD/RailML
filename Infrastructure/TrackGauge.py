@@ -14,7 +14,7 @@ class TrackGauge(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___value = aValue
 
 	def __init__(self):
-		self.___value : tLengthM = tLengthM.tLengthM()
+		self.___value : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """the track gauge is the distance between the rails, in metres"""
 

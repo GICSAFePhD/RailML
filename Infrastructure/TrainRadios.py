@@ -7,14 +7,19 @@ class TrainRadios(object):
 	"""umbrella element for all trainRadio elements"""
 	@property
 	def TrainRadio(self) -> TrainRadio:
-		return self.___gradientCurve
+		return self.___trainRadio
 	
 	@TrainRadio.setter
 	def TrainRadio(self, *aTrainRadio : TrainRadio):
-		self.___gradientCurve = aTrainRadio
+		self.___trainRadio = aTrainRadio
+
+	def create_TrainRadio(self):
+		if self.TrainRadio == None:
+			self.TrainRadio = []
+		self.TrainRadio.append(TrainRadio.TrainRadio())
 
 	def __init__(self):
-		self.___trainRadio : TrainRadio = TrainRadio.TrainRadio()
+		self.___trainRadio : TrainRadio = None
 		# @AssociationType Infrastructure.TrainRadio*
 		# @AssociationMultiplicity 1..*
 
