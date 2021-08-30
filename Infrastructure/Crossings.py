@@ -18,7 +18,7 @@ class Crossings(object):
 		self.Crossing.append(Crossing.Crossing())
 
 	def __init__(self):
-		self.___crossing : Crossing = Crossing.Crossing()
+		self.___crossing : Crossing = None
 		# @AssociationType Infrastructure.Crossing*
 		# @AssociationMultiplicity 1..*
 

@@ -32,6 +32,11 @@ class SpeedSection(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity
 	def ValidForSpeedProfile(self, aValidForSpeedProfile : tElementWithIDref):
 		self.___validForSpeedProfile = aValidForSpeedProfile
 
+	def create_ValidForSpeedProfile(self):
+		if self.ValidForSpeedProfile == None:
+			self.ValidForSpeedProfile = []
+		self.ValidForSpeedProfile.append(tElementWithIDref.tElementWithIDref())
+
 	def __init__(self):
 		self.___maxSpeed : tVMax = None
 		# @AssociationType Infrastructure.tVMax

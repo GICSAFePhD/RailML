@@ -14,6 +14,7 @@ class LoadingGauge(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity
 		self.___code = aCode
 
 	def __init__(self):
+		super().__init__()
 		self.___code : str = ""
 		"""code name of the train loading gauge;
 		use value from the separate codelist file 'TrainClearanceGauges.xml'/trainClearanceGauge"""

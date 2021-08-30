@@ -77,5 +77,5 @@ class aStoppingPlace(object):
 		"""set this value if the stopping place is only valid for trains with a certain number of wagons"""
 		self.___verbalConstraint : str = ""
 		"""set this value if the stopping place is only valid for trains fulfilling a certain verbal constraint"""
-		self.___unnamed_StoppingPlace : StoppingPlace = StoppingPlace.StoppingPlace()
+		#self.___unnamed_StoppingPlace : StoppingPlace = StoppingPlace.StoppingPlace()
 

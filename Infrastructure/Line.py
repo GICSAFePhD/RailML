@@ -80,7 +80,37 @@ class Line(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def LinePerformance(self, aLinePerformance : LinePerformance):
 		self.___linePerformance = aLinePerformance
 
+	def create_BeginsInOP(self):
+		if self.BeginsInOP == None:
+			self.BeginsInOP = []
+		self.BeginsInOP.append(tElementWithIDref.tElementWithIDref())
+	def create_EndsInOP(self):
+		if self.EndsInOP == None:
+			self.EndsInOP = []
+		self.EndsInOP.append(tElementWithIDref.tElementWithIDref())
+	def create_Length(self):
+		if self.Length == None:
+			self.Length = []
+		self.Length.append(Length.Length())
+	def create_LineTrafficCode(self):
+		if self.LineTrafficCode == None:
+			self.LineTrafficCode = []
+		self.LineTrafficCode.append(LineTrafficCode.LineTrafficCode())
+	def create_LineCombinedTransportCode(self):
+		if self.LineCombinedTransportCode == None:
+			self.LineCombinedTransportCode = []
+		self.LineCombinedTransportCode.append(LineCombinedTransportCode.LineCombinedTransportCode())
+	def create_LineLayout(self):
+		if self.LineLayout == None:
+			self.LineLayout = []
+		self.LineLayout.append(LineLayout.LineLayout())
+	def create_LinePerformance(self):
+		if self.LinePerformance == None:
+			self.LinePerformance = []
+		self.LinePerformance.append(LinePerformance.LinePerformance())
+
 	def __init__(self):
+		super().__init__()
 		self.___infrastructureManagerRef : tRef = None
 		"""reference to the infrastructure manager who owns the line (section) (see common/organizationalUnits)"""
 		self.___lineCategory : tLineCategoryExt = None
@@ -124,4 +154,3 @@ class Line(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		# @AssociationType Infrastructure.LinePerformance
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the line performance parameters"""
-

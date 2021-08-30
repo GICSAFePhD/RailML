@@ -43,7 +43,21 @@ class Platform(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def Length(self, *aLength : Length):
 		self.___length = aLength
 
+	def create_OwnsPlatformEdge(self):
+		if self.OwnsPlatformEdge == None:
+			self.OwnsPlatformEdge = []
+		self.OwnsPlatformEdge.append(tElementWithIDref.tElementWithIDref())
+	def create_Width(self):
+		if self.Width == None:
+			self.Width = []
+		self.Width.append(Length.Length())
+	def create_Length(self):
+		if self.Length == None:
+			self.Length = []
+		self.Length.append(Length.Length())
+
 	def __init__(self):
+		super().__init__()
 		self.___belongsToParent : tRef = None
 		"""reference to a parent platform (edge);
 		use this attribute for grouping of platform edges with different parameters (e.g. different heights)"""

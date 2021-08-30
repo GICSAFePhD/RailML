@@ -75,7 +75,47 @@ class ElectrificationSection(FunctionalInfrastructureEntity.FunctionalInfrastruc
 	def SystemSeparationSection(self, aSystemSeparationSection : SystemSeparationSection):
 		self.___systemSeparationSection = aSystemSeparationSection
 
+	def create_ContactLineType(self):
+		self.ContactLineType = tContactLineType.tContactLineType()
+	def create_IsInsulatedSection(self):
+		self.IsInsulatedSection = bool.bool()
+	def create_BelongsToParent(self):
+		self.BelongsToParent = tRef.tRef()
+	def create_ElectrificationSystemRef(self):
+		if self.ElectrificationSystemRef == None:
+			self.ElectrificationSystemRef = []
+		self.ElectrificationSystemRef.append(tElementWithIDref.tElementWithIDref())
+	def create_EnergyCatenary(self):
+		if self.EnergyCatenary == None:
+			self.EnergyCatenary = []
+		self.EnergyCatenary.append(EnergyCatenary.EnergyCatenary())
+	def create_EnergyPantograph(self):
+		if self.EnergyPantograph == None:
+			self.EnergyPantograph = []
+		self.EnergyPantograph.append(EnergyPantograph.EnergyPantograph())
+	def create_EnergyRollingstock(self):
+		if self.EnergyRollingstock == None:
+			self.EnergyRollingstock = []
+		self.EnergyRollingstock.append(EnergyRollingstock.EnergyRollingstock())
+	def create_ContactWire(self):
+		if self.ContactWire == None:
+			self.ContactWire = []
+		self.ContactWire.append(ContactWire.ContactWire())
+	def create_PantographSpacingn(self):
+		if self.PantographSpacing == None:
+			self.PantographSpacing = []
+		self.PantographSpacing.append(PantographSpacing.PantographSpacing())
+	def create_PhaseSeparationSection(self):
+		if self.PhaseSeparationSection == None:
+			self.PhaseSeparationSection = []
+		self.PhaseSeparationSection.append(PhaseSeparationSection.PhaseSeparationSection())
+	def create_SystemSeparationSection(self):
+		if self.SystemSeparationSection == None:
+			self.SystemSeparationSection = []
+		self.SystemSeparationSection.append(SystemSeparationSection.SystemSeparationSection())
+
 	def __init__(self):
+		super().__init__()
 		self.___contactLineType : tContactLineType = None
 		# @AssociationType Infrastructure.tContactLineType
 		# """type of the installed contact line (most common: overhead)"""
@@ -116,4 +156,3 @@ class ElectrificationSection(FunctionalInfrastructureEntity.FunctionalInfrastruc
 		# @AssociationType Infrastructure.SystemSeparationSection*
 		# @AssociationMultiplicity 0..*
 		# """child element summarizing the electrification system separation parameters"""
-

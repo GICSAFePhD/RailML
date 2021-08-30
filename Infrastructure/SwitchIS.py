@@ -49,19 +49,37 @@ class SwitchIS(TrackNode.TrackNode):
 	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
 		self.___basedOnTemplate = aBasedOnTemplate
 	@LeftBranch.setter
-	def LeftBranch(self, *aLeftBranch : SwitchCrossingBranch):
+	def LeftBranch(self, aLeftBranch : SwitchCrossingBranch):	# TODO *aLeftBranch
 		self.___leftBranch = aLeftBranch
 	@RightBranch.setter
-	def RightBranch(self, *aRightBranch : SwitchCrossingBranch):
+	def RightBranch(self, aRightBranch : SwitchCrossingBranch): # TODO *aRightBranch
 		self.___rightBranch = aRightBranch
 	@StraightBranch.setter
-	def StraightBranch(self, *aStraightBranch : SwitchCrossingBranch):
+	def StraightBranch(self, aStraightBranch : SwitchCrossingBranch): # TODO *aStraightBranch
 		self.___straightBranch = aStraightBranch
 	@TurningBranch.setter
-	def TurningBranch(self, *aTurningBranch : SwitchCrossingBranch):
+	def TurningBranch(self, aTurningBranch : SwitchCrossingBranch): # TODO *aTurningBranch
 		self.___turningBranch = aTurningBranch
 
+	def create_LeftBranch(self):
+		if self.LeftBranch == None:
+			self.LeftBranch = []
+		self.LeftBranch.append(SwitchCrossingBranch.SwitchCrossingBranch())
+	def create_RightBranch(self):
+		if self.RightBranch == None:
+			self.RightBranch = []
+		self.RightBranch.append(SwitchCrossingBranch.SwitchCrossingBranch())
+	def create_StraightBranch(self):
+		if self.StraightBranch == None:
+			self.StraightBranch = []
+		self.StraightBranch.append(SwitchCrossingBranch.SwitchCrossingBranch())
+	def create_TurningBranch(self):
+		if self.TurningBranch == None:
+			self.TurningBranch = []
+		self.TurningBranch.append(SwitchCrossingBranch.SwitchCrossingBranch())
+
 	def __init__(self):
+		super().__init__()
 		self.___belongsToParent : tRef = None
 		"""reference to the one an only parent switch of this switch (to be used at switch crossings)"""
 		self.___type : tSwitchType = None
@@ -93,4 +111,3 @@ class SwitchIS(TrackNode.TrackNode):
 		# @AssociationType Infrastructure.SwitchCrossingBranch
 		# @AssociationMultiplicity 0..1
 		# """only for switch crossings: turning branch"""
-

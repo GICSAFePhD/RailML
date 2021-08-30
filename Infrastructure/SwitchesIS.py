@@ -9,7 +9,7 @@ class SwitchesIS(object):
 		return self.___switchIS
 	
 	@SwitchIS.setter
-	def SwitchIS(self, *aSwitchIS : SwitchIS):
+	def SwitchIS(self, aSwitchIS : SwitchIS): #TODO *aSwitchIS
 		self.___switchIS = aSwitchIS
 
 	def create_SwitchIS(self):

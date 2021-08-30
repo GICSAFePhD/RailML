@@ -40,7 +40,6 @@ class railML():
 	@aRailML.setter
 	def aRailML(self, aaRailML : aRailML):
 		self.___aRailML = aaRailML
-
 	
 	def create_metadata(self):
 		self.Metadata = Metadata.Metadata()

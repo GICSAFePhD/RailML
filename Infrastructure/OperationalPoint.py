@@ -56,6 +56,27 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 	def OpOperations(self, aOpOperations : OpOperations):
 		self.___opOperations = aOpOperations
 
+	def create_InfrastructureManagerRef(self):
+		if self.InfrastructureManagerRef == None:
+			self.InfrastructureManagerRef = []
+		self.InfrastructureManagerRef.append(tElementWithIDref.tElementWithIDref())	
+	def create_ConnectedToLine(self):
+		if self.ConnectedToLine == None:
+			self.ConnectedToLine = []
+		self.ConnectedToLine.append(tElementWithIDref.tElementWithIDref())
+	def create_LimitedByBorder(self):
+		if self.LimitedByBorder == None:
+			self.LimitedByBorder = []
+		self.LimitedByBorder.append(tElementWithIDref.tElementWithIDref())
+	def create_OpEquipment(self):
+		if self.OpEquipment == None:
+			self.OpEquipment = []
+		self.OpEquipment.append(OpEquipment.OpEquipment())
+	def create_OpOperations(self):
+		if self.OpOperations == None:
+			self.OpOperations = []
+		self.OpOperations.append(OpOperations.OpOperations())
+
 	def __init__(self):
 		self.___belongsToParent : tRef = None
 		"""references the one and only parent operational point of this operational point"""

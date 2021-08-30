@@ -5,15 +5,18 @@ from typing import List
 
 class BufferStop(TrackNode.TrackNode):
 	@property
-	def tBufferStopType(self) -> tBufferStopType:
+	def Type(self) -> tBufferStopType:
 		return self.___type
 	
-	@tBufferStopType.setter
-	def tBufferStopType(self, atBufferStopType : tBufferStopType):
-		self.___type = atBufferStopType
+	@Type.setter
+	def Type(self, aType : tBufferStopType):
+		self.___type = aType
+
+	def create_Type(self):
+		self.Type = tBufferStopType.tBufferStopType()
 
 	def __init__(self):
+		super().__init__()
 		self.___type : tBufferStopType = None
 		# @AssociationType Infrastructure.tBufferStopType
 		# """type of the buffer stop"""
-

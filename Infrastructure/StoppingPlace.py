@@ -3,7 +3,7 @@
 from RailML.Infrastructure import TrainMovement, FunctionalInfrastructureEntity, aStoppingPlace
 from typing import List
 
-class StoppingPlace(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+class StoppingPlace(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity,aStoppingPlace.aStoppingPlace):
 	@property
 	def ValidForTrainMovement(self) -> TrainMovement:
 		return self.___validForTrainMovement
@@ -18,7 +18,13 @@ class StoppingPlace(FunctionalInfrastructureEntity.FunctionalInfrastructureEntit
 	def aStoppingPlace(self, aaStoppingPlace : aStoppingPlace):
 		self.___unnamed_aStoppingPlace_ = aaStoppingPlace
 
+	def create_ValidForTrainMovement(self):
+		if self.ValidForTrainMovement == None:
+			self.ValidForTrainMovement = []
+		self.ValidForTrainMovement.append(TrainMovement.TrainMovement())
+
 	def __init__(self):
+		super().__init__()
 		self.___validForTrainMovement : TrainMovement = None
 		# @AssociationType Infrastructure.TrainMovement*
 		# @AssociationMultiplicity 0..*

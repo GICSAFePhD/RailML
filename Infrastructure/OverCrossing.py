@@ -39,7 +39,17 @@ class OverCrossing(XCrossing.XCrossing):
 	def VerbalConstraint(self, aaVerbalConstraint : aVerbalConstraint):
 		self.___unnamed_aVerbalConstraint_ = aaVerbalConstraint
 
+	def create_AllowedLoadingGauge(self):
+		if self.AllowedLoadingGauge == None:
+			self.AllowedLoadingGauge = []
+		self.AllowedLoadingGauge.append(tElementWithIDref.tElementWithIDref())
+	def create_Length(self):
+		if self.Length == None:
+			self.Length = []
+		self.Length.append(Length.Length())
+
 	def __init__(self):
+		super().__init__()
 		self.___constructionType : tCrossingConstructionTypeExt = None
 		# @AssociationType Infrastructure.tCrossingConstructionTypeExt
 		# """construction type of over crossing: bridge or tunnel"""

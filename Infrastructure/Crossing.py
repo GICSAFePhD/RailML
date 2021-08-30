@@ -4,4 +4,5 @@ from RailML.Infrastructure import TrackNode
 from typing import List
 
 class Crossing(TrackNode.TrackNode):
-	pass
+	def __init__(self):
+		super().__init__()

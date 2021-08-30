@@ -41,8 +41,8 @@ class LevelCrossingIS(XCrossing.XCrossing):
 	@Supervision.setter
 	def Supervision(self, aSupervision : tLevelCrossingSupervision):
 		self.___supervision = aSupervision
-	@BasedOnTemplate.setter
-	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
+	@BelongsToParent.setter
+	def BelongsToParent(self, aBasedOnTemplate : tRef):
 		self.___belongsToParent = aBasedOnTemplate
 	@BasedOnTemplate.setter
 	def BasedOnTemplate(self, aBasedOnTemplate : tRef):
@@ -51,7 +51,13 @@ class LevelCrossingIS(XCrossing.XCrossing):
 	def Protection(self, aProtection : LevelCrossingProtection):
 		self.___protection = aProtection
 
+	def create_Protection(self):
+		if self.Protection == None:
+			self.Protection = []
+		self.Protection.append(LevelCrossingProtection.LevelCrossingProtection())
+
 	def __init__(self):
+		super().__init__()
 		self.___obstacleDetection : tLevelCrossingObstacleDetection = None
 		# @AssociationType Infrastructure.tLevelCrossingObstacleDetection
 		# """obstacle detection: automatic (technical system, e.g. radar) or manual (e.g. by operator);

@@ -4,4 +4,5 @@ from RailML.Infrastructure import FunctionalInfrastructureEntity
 from typing import List
 
 class KeyLockIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
-	pass
+	def __init__(self):
+		super().__init__()
