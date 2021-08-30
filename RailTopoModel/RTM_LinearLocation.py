@@ -4,8 +4,12 @@ from RailML.Infrastructure import tApplicationDirection
 from RailML.RailTopoModel import RTM_AssociatedNetElement, RTM_LinearCoordinate, RTM_GeometricCoordinate, RTM_EntityLocation
 from typing import List
 
-#class RTM_LinearLocation(RTM_EntityLocation): #TODO CON ESTA HERENCIA SE ROMPE
-class RTM_LinearLocation():
+class RTM_LinearLocation(RTM_EntityLocation.RTM_EntityLocation):
+    
+    #TODO
+    
+    
+    
 	def __init__(self):
 		self.___applicationDirection : tApplicationDirection = None
 		# @AssociationType schemas.3.1.tApplicationDirection

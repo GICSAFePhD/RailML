@@ -41,10 +41,24 @@ class Track(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def TrackEnd(self, aTrackEnd : tElementWithIDref):
 		self.___trackEnd = aTrackEnd
 	@Length.setter
-	def Length(self, *aLength : Length):
+	def Length(self, aLength : Length): # TODO *aLength
 		self.___length = aLength
 
+	def create_TrackBegin(self):
+		if self.TrackBegin == None:
+			self.TrackBegin = []
+		self.TrackBegin.append(tElementWithIDref.tElementWithIDref())
+	def create_TrackEnd(self):
+		if self.TrackEnd == None:
+			self.TrackEnd = []
+		self.TrackEnd.append(tElementWithIDref.tElementWithIDref())
+	def create_Length(self):
+		if self.Length == None:
+			self.Length = []
+		self.Length.append(Length.Length())
+
 	def __init__(self):
+		super().__init__()
 		self.___type : tTrackType = None
 		# @AssociationType Infrastructure.tTrackType
 		# """type of the track defining the general functionality of the track"""
@@ -67,4 +81,3 @@ class Track(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 1..*
 		# """length of track in metres"""
-

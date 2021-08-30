@@ -9,7 +9,7 @@ class Tracks(object):
 		return self.___track
 	
 	@Track.setter
-	def Track(self, *aTrack : Track):
+	def Track(self, aTrack : Track): # TODO *aTrack
 		self.___track = aTrack
 
 	def create_Track(self):
@@ -21,4 +21,3 @@ class Tracks(object):
 		self.___track : Track = None
 		# @AssociationType Infrastructure.Track*
 		# @AssociationMultiplicity 1..*
-

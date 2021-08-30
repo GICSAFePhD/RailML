@@ -218,12 +218,12 @@
                 <track id="trk1" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track1" language="en"/>
                     <linearLocation id="trk1_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne16"/>
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne16"/>  <!-- TODO -->
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track1"/>
-                    <trackBegin ref="swi84"/>
-                    <trackEnd ref="swi85"/>
-                    <length value="750" type="physical"/>
+                    <trackBegin ref="swi84"/>    <!-- TODO -->
+                    <trackEnd ref="swi85"/>  <!-- TODO -->
+                    <length value="750" type="physical"/> <!-- TODO -->
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
