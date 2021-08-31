@@ -9,11 +9,16 @@ class PeriodRule(TimePeriodRule.TimePeriodRule):
 		return self.___period
 	
 	@Period.setter
-	def Period(self, *aPeriod : ClockTimePeriod):
+	def Period(self, aPeriod : ClockTimePeriod): # TODO *aPeriod
 		self.___period = aPeriod
 
+	def create_Period(self):
+		if self.Period == None:
+			self.Period = []
+		self.Period.append(ClockTimePeriod.ClockTimePeriod())
+
 	def __init__(self):
-		self.___period : ClockTimePeriod = ClockTimePeriod.ClockTimePeriod()
+		self.___period : ClockTimePeriod = None
 		# @AssociationType Common.ClockTimePeriod*
 		# @AssociationMultiplicity 1..*
 

@@ -12,9 +12,13 @@ class InfrastructureStates(object):
 	def InfrastructureState(self, *aInfrastructureState : InfrastructureState):
 		self.___infrastructureState = aInfrastructureState
 
+	def create_InfrastructureState(self):
+		if self.InfrastructureState == None:
+			self.InfrastructureState = []
+		self.InfrastructureState.append(InfrastructureState.InfrastructureState())
+    
 	def __init__(self):
 		self.___infrastructureState : InfrastructureState = None
 		# @AssociationType Infrastructure.InfrastructureState*
 		# @AssociationMultiplicity 1..*
 		# """state of (a part of) the functional infrastructure regarding its availability and usability"""
-

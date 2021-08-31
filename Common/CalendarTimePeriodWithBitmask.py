@@ -25,11 +25,16 @@ class CalendarTimePeriodWithBitmask(TimePeriod.TimePeriod):
 	def PeriodRule(self, *aPeriodRule : PeriodRule):
 		self.___periodRule = aPeriodRule
 
+	def create_PeriodRule(self):
+		if self.PeriodRule == None:
+			self.PeriodRule = []
+		self.PeriodRule.append(PeriodRule.PeriodRule())
+
 	def __init__(self):
 		self.___fromDate : datetime = 0	#TODO DEFINED AS date
-		self.___bitmask : tBitmaskAny = tBitmaskAny.tBitmaskAny()
+		self.___bitmask : tBitmaskAny = None
 		# @AssociationType Common.tBitmaskAny
-		self.___periodRule : PeriodRule = PeriodRule.PeriodRule()
+		self.___periodRule : PeriodRule = None
 		# @AssociationType Common.PeriodRule*
 		# @AssociationMultiplicity 0..*
 

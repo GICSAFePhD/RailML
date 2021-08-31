@@ -19,22 +19,31 @@ class InfrastructureState(StatesBaseElement.StatesBaseElement):
 	def Value(self, aValue : tInfrastructureStateExt):
 		self.___value = aValue
 	@ElementState.setter
-	def ElementState(self, *aElementState : ElementState):
+	def ElementState(self, aElementState : ElementState): # TODO *aElementState
 		self.___elementState = aElementState
 	@ValidityTime.setter
-	def ValidityTime(self, *aValidityTime : Period):
+	def ValidityTime(self, aValidityTime : Period): # TODO *aValidityTime
 		self.___validityTime = aValidityTime
 
+	def create_ElementState(self):
+		if self.ElementState == None:
+			self.ElementState = []
+		self.ElementState.append(ElementState.ElementState())
+	def create_ValidityTime(self):
+		if self.ValidityTime == None:
+			self.ValidityTime = []
+		self.ValidityTime.append(Period.Period())
+
 	def __init__(self):
-		self.___value : tInfrastructureStateExt = tInfrastructureStateExt.tInfrastructureStateExt()
+		super().__init__()
+		self.___value : tInfrastructureStateExt = None
 		# @AssociationType Infrastructure.tInfrastructureStateExt
 		# """railway infrastructure functional state, e.g. "operational""""
-		self.___elementState : ElementState = ElementState.ElementState()
+		self.___elementState : ElementState = None
 		# @AssociationType Infrastructure.ElementState*
 		# @AssociationMultiplicity 0..*
 		# """list of infrastructure elements in a certain state that belong to this infrastructure state"""
-		self.___validityTime : Period = Period.Period()
+		self.___validityTime : Period = None
 		# @AssociationType Common.Period*
 		# @AssociationMultiplicity 0..*
 		# """list of time periods when the infrastructure state is valid"""
-

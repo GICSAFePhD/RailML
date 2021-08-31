@@ -48,4 +48,3 @@ class Interlocking(object):
 		# @AssociationType Interlocking.GenericIMs
 		# @AssociationMultiplicity 0..1
 		# """container for all SpecificIM elements"""
-
