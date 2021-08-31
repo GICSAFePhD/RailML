@@ -2,9 +2,10 @@
 # -*- coding: UTF-8 -*-
 from RailML.Common import tRef, tElementWithIDref
 from RailML.Infrastructure import tTrackType, tExtendedDirection, Length, FunctionalInfrastructureEntity
+from RailML.RailTopoModel import RTM_LinearLocation,RTM_LocatedNetEntity
 from typing import List
 
-class Track(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+class Track(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity,RTM_LocatedNetEntity.RTM_LocatedNetEntity):
 	"""A Track is defined by a railway section between two switches/crossings or between a switch/crossing and a buffer stop."""
 	@property
 	def Type(self) -> tTrackType:

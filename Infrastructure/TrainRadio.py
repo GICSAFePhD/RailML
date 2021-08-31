@@ -51,6 +51,7 @@ class TrainRadio(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.___networkSelection = aNetworkSelection
 
 	def __init__(self):
+		super().__init__()
 		self.___supportsBroadcastCalls : Long = 0
 		"""defines whether broadcast call functionality is available"""
 		self.___supportsDirectMode : Long = 0

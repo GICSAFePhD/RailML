@@ -6,23 +6,31 @@ from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElem
 from typing import List
 
 class ElementProjection(VisualizationBaseElement):
-	def setRefersToElement(self, aRefersToElement : tRef):
-		self.___refersToElement = aRefersToElement
-
-	def getRefersToElement(self) -> tRef:
+	@property
+	def RefersToElement(self) -> tRef:
 		return self.___refersToElement
+	@property
+	def UsesSymbol(self) -> ElementProjectionSymbol:
+		return self.___usesSymbol
 
-	def setUsesSymbol(self, aUsesSymbol : ElementProjectionSymbol):
-		self._usesSymbol = aUsesSymbol
+	@RefersToElement.setter
+	def RefersToElement(self, aRefersToElement : tRef):
+		self.___refersToElement = aRefersToElement
+	@UsesSymbol.setter
+	def UsesSymbol(self, aUsesSymbol : ElementProjectionSymbol):
+		self.___usesSymbol = aUsesSymbol
 
-	def getUsesSymbol(self) -> ElementProjectionSymbol:
-		return self._usesSymbol
+	def create_UsesSymbol(self):
+		if self.UsesSymbol == None:
+			self.UsesSymbol = []
+		self.UsesSymbol.append(ElementProjectionSymbol.ElementProjectionSymbol())
 
 	def __init__(self):
+		super().__init__()
 		self.___refersToElement : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to any element of infrastructure model"""
-		self._usesSymbol : ElementProjectionSymbol = None
+		self.___usesSymbol : ElementProjectionSymbol = None
 		# @AssociationType Infrastructure.ElementProjectionSymbol
 		# @AssociationMultiplicity 0..1
 		# """use an (external) symbol for element projection"""

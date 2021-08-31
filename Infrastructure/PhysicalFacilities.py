@@ -15,4 +15,3 @@ class PhysicalFacilities(object):
 	def __init__(self):
 		self.___unnamed_any = None#[]
 		"""# @AssociationMultiplicity 0..*"""
-

@@ -4,20 +4,17 @@ from abc import ABCMeta, abstractmethod
 from RailML.Common import Name, tElementWithID
 from typing import List
 
-#class tElementWithIDandName(tElementWithID): #TODO CON ESTA HERENCIA SE ROMPE
-class tElementWithIDandName():
-	__metaclass__ = ABCMeta
-	@classmethod
-	def setName(self, aName : Name):
-		self._name = aName
+class tElementWithIDandName(tElementWithID.tElementWithID):
+	@property
+	def Name(self) -> Name:
+		return self.___name
 
-	@classmethod
-	def getName(self) -> Name:
-		return self._name
+	@Name.setter
+	def Name(self, aName : Name):
+		self.___name = aName
 
-	@classmethod
 	def __init__(self):
-		self._name : Name = None
+		self.___name : Name = None
 		# @AssociationType Common.Name*
 		# @AssociationMultiplicity 0..*
 

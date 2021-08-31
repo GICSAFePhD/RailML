@@ -24,4 +24,3 @@ class WeightLimit(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity)
 		# @AssociationType Common.tWeightTons
 		self.___meterLoad : tMeterloadTonsPerMeter = None
 		# @AssociationType Common.tMeterloadTonsPerMeter
-

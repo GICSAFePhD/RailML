@@ -6,24 +6,24 @@ from typing import List
 
 class Length(object):
 	@property
-	def tLengthM(self) -> tLengthM:
+	def Value(self) -> tLengthM:
 		return self.___value
 	@property
-	def tLengthTypeExt(self) -> tLengthTypeExt:
+	def Type(self) -> tLengthTypeExt:
 		return self.___type
 	@property
-	def tExtendedDirection(self) -> tExtendedDirection:
+	def ValidForDirection(self) -> tExtendedDirection:
 		return self.___validForDirection
 
-	@tLengthM.setter
-	def tLengthM(self, atLengthM : tLengthM):
-		self.___value = atLengthM
-	@tLengthTypeExt.setter
-	def tLengthTypeExt(self, atLengthTypeExt : tLengthTypeExt):
-		self.___type = atLengthTypeExt
-	@tExtendedDirection.setter
-	def tExtendedDirection(self, atExtendedDirection : tExtendedDirection):
-		self.___validForDirection = atExtendedDirection
+	@Value.setter
+	def Value(self, aValue : tLengthM):
+		self.___value = aValue
+	@Type.setter
+	def Type(self, aType : tLengthTypeExt):
+		self.___type = aType
+	@ValidForDirection.setter
+	def ValidForDirection(self, aValidForDirection : tExtendedDirection):
+		self.___validForDirection = aValidForDirection
 
 	def __init__(self):
 		self.___value : tLengthM = tLengthM.tLengthM()

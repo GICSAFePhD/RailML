@@ -12,7 +12,7 @@ class TrackBed(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def aTrackbed(self, aaTrackbed : aTrackbed):
 		self.___unnamed_aTrackbed = aaTrackbed
     
-    
 	def __init__(self):
+		super().__init__()
 		self.___unnamed_aTrackbed : aTrackbed = None
 

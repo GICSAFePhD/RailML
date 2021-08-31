@@ -20,6 +20,7 @@ class TrainProtectionElement(FunctionalInfrastructureEntity.FunctionalInfrastruc
 		self.___unnamed_aTrainProtection = aUnnamed_aTrainProtection
 
 	def __init__(self):
+		super().__init__()
 		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a template train protection element/system"""

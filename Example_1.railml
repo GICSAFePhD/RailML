@@ -218,12 +218,12 @@
                 <track id="trk1" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track1" language="en"/>
                     <linearLocation id="trk1_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne16"/>  <!-- TODO -->
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne16"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track1"/>
-                    <trackBegin ref="swi84"/>    <!-- TODO -->
-                    <trackEnd ref="swi85"/>  <!-- TODO -->
-                    <length value="750" type="physical"/> <!-- TODO -->
+                    <trackBegin ref="swi84"/>
+                    <trackEnd ref="swi85"/>
+                    <length value="750" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -236,62 +236,7 @@
                     <trackEnd ref="line112"/>
                     <length value="600" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track3" language="en"/>
-                    <linearLocation id="trk3_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="false" netElementRef="ne15"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track3"/>
-                    <trackBegin ref="swi84"/>
-                    <trackEnd ref="line113"/>
-                    <length value="662.132" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk4" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track4" language="en"/>
-                    <linearLocation id="trk4_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne18"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track4"/>
-                    <trackBegin ref="swi85"/>
-                    <trackEnd ref="line114"/>
-                    <length value="750" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track5" language="en"/>
-                    <linearLocation id="trk5_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne17"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track5"/>
-                    <trackBegin ref="swi85"/>
-                    <trackEnd ref="swi87"/>
-                    <length value="212.132" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk6" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track6" language="en"/>
-                    <linearLocation id="trk6_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne20"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track6"/>
-                    <trackBegin ref="swi87"/>
-                    <trackEnd ref="line115"/>
-                    <length value="600" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk7" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track7" language="en"/>
-                    <linearLocation id="trk7_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne19"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track7"/>
-                    <trackBegin ref="swi87"/>
-                    <trackEnd ref="bus88"/>
-                    <length value="300" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
+                </track>                  
             </tracks>
             <trainDetectionElements>
                 <trainDetectionElement id="tde95" type="insulatedRailJoint">
@@ -347,122 +292,6 @@
                     <name name="LineBord01" language="en"/>
                     <coordinate x="-1050.000" y="-450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="line113" id="vis01_sep03">
-                    <name name="LineBord02" language="en"/>
-                    <coordinate x="-1050.000" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="line114" id="vis01_sep04">
-                    <name name="LineBord03" language="en"/>
-                    <coordinate x="1050.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="line115" id="vis01_sep05">
-                    <name name="LineBord04" language="en"/>
-                    <coordinate x="1050.000" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig89" id="vis01_sep06">
-                    <name name="S07" language="en"/>
-                    <coordinate x="-766.605" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig90" id="vis01_sep07">
-                    <name name="S08" language="en"/>
-                    <coordinate x="-760.884" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig91" id="vis01_sep08">
-                    <name name="S09" language="en"/>
-                    <coordinate x="746.581" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig92" id="vis01_sep09">
-                    <name name="S10" language="en"/>
-                    <coordinate x="752.302" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig93" id="vis01_sep10">
-                    <name name="S11" language="en"/>
-                    <coordinate x="-241.709" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="sig94" id="vis01_sep11">
-                    <name name="S12" language="en"/>
-                    <coordinate x="164.477" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="swi84" id="vis01_sep12">
-                    <name name="Sw01" language="en"/>
-                    <coordinate x="-450.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="swi85" id="vis01_sep13">
-                    <name name="Sw02" language="en"/>
-                    <coordinate x="300.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="swi87" id="vis01_sep14">
-                    <name name="Sw03" language="en"/>
-                    <coordinate x="450.000" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde95" id="vis01_sep15">
-                    <name name="J09" language="en"/>
-                    <coordinate x="-615.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde96" id="vis01_sep16">
-                    <name name="J10" language="en"/>
-                    <coordinate x="-622.151" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde97" id="vis01_sep17">
-                    <name name="J11" language="en"/>
-                    <coordinate x="-307.500" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde98" id="vis01_sep18">
-                    <name name="J12" language="en"/>
-                    <coordinate x="198.802" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde99" id="vis01_sep19">
-                    <name name="J13" language="en"/>
-                    <coordinate x="371.424" y="-378.576"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde100" id="vis01_sep20">
-                    <name name="J14" language="en"/>
-                    <coordinate x="280.326" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde101" id="vis01_sep21">
-                    <name name="J15" language="en"/>
-                    <coordinate x="526.326" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde102" id="vis01_sep22">
-                    <name name="J16" language="en"/>
-                    <coordinate x="527.756" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd103" id="vis01_sep23">
-                    <name name="109" language="en"/>
-                    <coordinate x="-882.453" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd104" id="vis01_sep24">
-                    <name name="110" language="en"/>
-                    <coordinate x="-881.023" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd105" id="vis01_sep25">
-                    <name name="111" language="en"/>
-                    <coordinate x="-541.535" y="-358.465"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd106" id="vis01_sep26">
-                    <name name="112" language="en"/>
-                    <coordinate x="-82.954" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd107" id="vis01_sep27">
-                    <name name="113" language="en"/>
-                    <coordinate x="402.890" y="-347.110"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd108" id="vis01_sep28">
-                    <name name="114" language="en"/>
-                    <coordinate x="210.244" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd109" id="vis01_sep29">
-                    <name name="115" language="en"/>
-                    <coordinate x="875.302" y="-300.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd110" id="vis01_sep30">
-                    <name name="116" language="en"/>
-                    <coordinate x="885.314" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd111" id="vis01_sep31">
-                    <name name="117" language="en"/>
-                    <coordinate x="434.791" y="-450.000"/>
-                </spotElementProjection>
                 <linearElementProjection refersToElement="ne14" id="vis01_lep1">
                     <name name="netElement_ne14" language="en"/>
                     <coordinate x="-1050.000" y="-450.000"/>
@@ -473,31 +302,6 @@
                     <coordinate x="-1050.000" y="-300.000"/>
                     <coordinate x="-600.000" y="-300.000"/>
                     <coordinate x="-450.000" y="-450.000"/>
-                </linearElementProjection>
-                <linearElementProjection refersToElement="ne16" id="vis01_lep3">
-                    <name name="netElement_ne16" language="en"/>
-                    <coordinate x="-450.000" y="-450.000"/>
-                    <coordinate x="300.000" y="-450.000"/>
-                </linearElementProjection>
-                <linearElementProjection refersToElement="ne17" id="vis01_lep4">
-                    <name name="netElement_ne17" language="en"/>
-                    <coordinate x="300.000" y="-450.000"/>
-                    <coordinate x="450.000" y="-300.000"/>
-                </linearElementProjection>
-                <linearElementProjection refersToElement="ne18" id="vis01_lep5">
-                    <name name="netElement_ne18" language="en"/>
-                    <coordinate x="300.000" y="-450.000"/>
-                    <coordinate x="1050.000" y="-450.000"/>
-                </linearElementProjection>
-                <linearElementProjection refersToElement="ne19" id="vis01_lep6">
-                    <name name="netElement_ne19" language="en"/>
-                    <coordinate x="450.000" y="-300.000"/>
-                    <coordinate x="150.000" y="-300.000"/>
-                </linearElementProjection>
-                <linearElementProjection refersToElement="ne20" id="vis01_lep7">
-                    <name name="netElement_ne20" language="en"/>
-                    <coordinate x="450.000" y="-300.000"/>
-                    <coordinate x="1050.000" y="-300.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>

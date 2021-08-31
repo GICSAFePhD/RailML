@@ -26,6 +26,7 @@ class TrainDetectionElement(FunctionalInfrastructureEntity.FunctionalInfrastruct
 		self.___unnamed_aTrainDetectionElement = aUnnamed_aTrainDetectionElement
 
 	def __init__(self):
+		super().__init__()
 		self.___basedOnTemplate : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a template train detection element/system"""

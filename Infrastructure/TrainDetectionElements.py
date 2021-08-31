@@ -5,12 +5,11 @@ from typing import List
 
 class TrainDetectionElements(object):
 	@property
-	@property
 	def TrainDetectionElement(self) -> TrainDetectionElement:
 		return self.___trainDetectionElement
 	
 	@TrainDetectionElement.setter
-	def TrainDetectionElement(self, *aTrainDetectionElement : TrainDetectionElement):
+	def TrainDetectionElement(self, aTrainDetectionElement : TrainDetectionElement): #TODO *aTrainDetectionElement
 		self.___trainDetectionElement = aTrainDetectionElement
 
 	def create_TrainDetectionElement(self):

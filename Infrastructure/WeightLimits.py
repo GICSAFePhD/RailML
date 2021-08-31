@@ -22,4 +22,3 @@ class WeightLimits(object):
 		self.___weightLimit : WeightLimit = None
 		# @AssociationType Infrastructure.WeightLimit*
 		# @AssociationMultiplicity 1..*
-

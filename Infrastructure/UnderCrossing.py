@@ -20,7 +20,7 @@ class UnderCrossing(XCrossing.XCrossing):
 		return self.___length
 	@property
 	def VerbalConstraint(self) -> aVerbalConstraint:
-		return self.___unnamed_aVerbalConstraint
+		return self.___VerbalConstraint
 
 	@ConstructionType.setter
 	def ConstructionType(self, aConstructionType : tCrossingConstructionTypeExt):
@@ -29,16 +29,26 @@ class UnderCrossing(XCrossing.XCrossing):
 	def BelongsToParent(self, aBelongsToParent : tRef):
 		self.___belongsToParent = aBelongsToParent
 	@AllowedLoadingGauge.setter
-	def AllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
+	def AllowedLoadingGauge(self, aAllowedLoadingGauge : tElementWithIDref): #TODO *aAllowedLoadingGauge
 		self.___allowedWeightLimit = aAllowedLoadingGauge
 	@Length.setter
 	def Length(self, *aLength : Length):
 		self.___length = aLength
 	@VerbalConstraint.setter
 	def VerbalConstraint(self, aaVerbalConstraint : aVerbalConstraint):
-		self.___unnamed_aVerbalConstraint = aaVerbalConstraint
+		self.___VerbalConstraint = aaVerbalConstraint
 
+	def create_AllowedLoadingGauge(self):
+		if self.AllowedLoadingGauge == None:
+			self.AllowedLoadingGauge = []
+		self.AllowedLoadingGauge.append(tElementWithIDref.tElementWithIDref())
+	def create_Length(self):
+		if self.Length == None:
+			self.Length = []
+		self.Length.append(Length.Length())
+	
 	def __init__(self):
+		super().__init__()
 		self.___constructionType : tCrossingConstructionTypeExt = None
 		# @AssociationType Infrastructure.tCrossingConstructionTypeExt
 		# """construction type of under crossing: bridge or tunnel"""
@@ -53,5 +63,4 @@ class UnderCrossing(XCrossing.XCrossing):
 		# @AssociationType Infrastructure.Length*
 		# @AssociationMultiplicity 0..*
 		# """length of the under crossing relative to the railway in metres"""
-		self.___unnamed_aVerbalConstraint : aVerbalConstraint = None
-
+		self.___VerbalConstraint : aVerbalConstraint = None
