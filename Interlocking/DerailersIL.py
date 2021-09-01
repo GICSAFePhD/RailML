@@ -13,8 +13,7 @@ class DerailersIL(object):
 		self.___derailerIL = aDerailerIL
 
 	def __init__(self):
-		self.___derailerIL : DerailerIL = DerailerIL.DerailerIL()
+		self.___derailerIL : DerailerIL = None
 		# @AssociationType Interlocking.DerailerIL*
 		# @AssociationMultiplicity 1..*
 		# """The derailer is a track asset that either allows or disallows train passage. Here the functional aspects for interlocking operation are considered."""
-

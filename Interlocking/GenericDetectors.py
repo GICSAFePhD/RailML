@@ -14,8 +14,7 @@ class GenericDetectors(object):
 		self.___genericDetector = aGenericDetector
 
 	def __init__(self):
-		self.___genericDetector : GenericDetector = GenericDetector.GenericDetector()
+		self.___genericDetector : GenericDetector = None
 		# @AssociationType Interlocking.GenericDetector*
 		# @AssociationMultiplicity 1..*
 		# """Device for detecting the exceeding of a particular characteristic."""
-

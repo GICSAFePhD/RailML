@@ -14,7 +14,7 @@ class GenericIMs(object):
 		self.___specificIM = aGenericIM
 
 	def __init__(self):
-		self.___specificIM : GenericIM = GenericIM.GenericIM()
+		self.___specificIM : GenericIM = None
 		# @AssociationType Interlocking.GenericIM*
 		# @AssociationMultiplicity 1..*
 		# """Container with the generic classification of types used by a specific infrastructure manager."""

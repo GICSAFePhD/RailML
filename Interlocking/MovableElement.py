@@ -7,7 +7,7 @@ from typing import List
 
 class MovableElement(TrackAsset):
 	"""Abstract element defining the attributes common to movable elements. The movable element refers to TrackAsset, thus creating a link to the IS namespace."""
-	__metaclass__ = ABCMeta
+	# TODO CONTINUE HERE TOMORROW!
 	@classmethod
 	def setMaxThrowTime(self, aMaxThrowTime : int):	#TODO DEFINED AS duration
 		self.___maxThrowTime = aMaxThrowTime

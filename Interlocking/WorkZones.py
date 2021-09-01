@@ -13,8 +13,7 @@ class WorkZones(object):
 		self.___workZone = aWorkZone
 
 	def __init__(self):
-		self.___workZone : WorkZone = WorkZone.WorkZone()
+		self.___workZone : WorkZone = None
 		# @AssociationType Interlocking.WorkZone*
 		# @AssociationMultiplicity 1..*
 		# """A set of track assets that track workers or the signalman can set apart from the main line."""
-

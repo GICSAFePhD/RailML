@@ -14,8 +14,7 @@ class DangerPoints(object):
 		self.___dangerPoint = aDangerPoint
 
 	def __init__(self):
-		self.___dangerPoint : DangerPoint = DangerPoint.DangerPoint()
+		self.___dangerPoint : DangerPoint = None
 		# @AssociationType Interlocking.DangerPoint*
 		# @AssociationMultiplicity 1..*
 		# """position beyond the exit signal up to where a train is likely to be safe"""
-

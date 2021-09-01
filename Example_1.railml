@@ -319,44 +319,6 @@
                     <hasDemarcatingBufferstop ref="line113"/>
                     <hasDemarcatingTraindetector ref="tde96"/>
                 </tvdSection>
-                <tvdSection id="tvd105" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="111"/>
-                    <hasDemarcatingTraindetector ref="tde95"/>
-                    <hasDemarcatingTraindetector ref="tde96"/>
-                    <hasDemarcatingTraindetector ref="tde97"/>
-                </tvdSection>
-                <tvdSection id="tvd106" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="112"/>
-                    <hasDemarcatingTraindetector ref="tde97"/>
-                    <hasDemarcatingTraindetector ref="tde98"/>
-                </tvdSection>
-                <tvdSection id="tvd107" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="113"/>
-                    <hasDemarcatingTraindetector ref="tde99"/>
-                    <hasDemarcatingTraindetector ref="tde100"/>
-                    <hasDemarcatingTraindetector ref="tde102"/>
-                </tvdSection>
-                <tvdSection id="tvd108" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="114"/>
-                    <hasDemarcatingBufferstop ref="bus88"/>
-                    <hasDemarcatingTraindetector ref="tde100"/>
-                </tvdSection>
-                <tvdSection id="tvd109" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="115"/>
-                    <hasDemarcatingBufferstop ref="line115"/>
-                    <hasDemarcatingTraindetector ref="tde102"/>
-                </tvdSection>
-                <tvdSection id="tvd110" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="116"/>
-                    <hasDemarcatingBufferstop ref="line114"/>
-                    <hasDemarcatingTraindetector ref="tde101"/>
-                </tvdSection>
-                <tvdSection id="tvd111" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="117"/>
-                    <hasDemarcatingTraindetector ref="tde99"/>
-                    <hasDemarcatingTraindetector ref="tde101"/>
-                    <hasDemarcatingTraindetector ref="tde98"/>
-                </tvdSection>
             </tvdSections>
             <switchesIL>
                 <switchIL id="il_swi84" maxThrowTime="PT10S" typicalThrowTime="PT6S" isKeyLocked="false" returnsToPreferredPosition="false">

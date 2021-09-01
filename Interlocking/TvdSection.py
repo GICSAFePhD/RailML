@@ -52,45 +52,62 @@ class TvdSection(TrackAsset.TrackAsset):
 	def Frequency(self, aFrequency : tFrequencyHertz):
 		self.___frequency = aFrequency
 	@HasDemarcatingBufferstop.setter
-	def HasDemarcatingBufferstop(self, *aHasDemarcatingBufferstop : EntityILref):
+	def HasDemarcatingBufferstop(self, aHasDemarcatingBufferstop : EntityILref): # TODO *aHasDemarcatingBufferstop
 		self.___hasDemarcatingBufferstop = aHasDemarcatingBufferstop
 	@HasExitSignal.setter
-	def HasExitSignal(self, *aHasExitSignal : EntityILref):
+	def HasExitSignal(self, aHasExitSignal : EntityILref): # TODO *aHasExitSignal
 		self.___hasExitSignal = aHasExitSignal
 	@HasDemarcatingTraindetector.setter
 	def HasDemarcatingTraindetector(self, aHasDemarcatingTraindetector : EntityILref):
 		self.___hasDemarcatingTraindetector = aHasDemarcatingTraindetector
 	@HasResetStrategy.setter
-	def HasResetStrategy(self, *aHasResetStrategy : EntityILref):
+	def HasResetStrategy(self, aHasResetStrategy : EntityILref): # TODO *aHasResetStrategy
 		self.___hasResetStrategy = aHasResetStrategy
 
+	def create_HasDemarcatingBufferstop(self):
+		if self.HasDemarcatingBufferstop == None:
+			self.HasDemarcatingBufferstop = []
+		self.HasDemarcatingBufferstop.append(EntityILref.EntityILref())
+	def create_HasExitSignal(self):
+		if self.HasExitSignal == None:
+			self.HasExitSignal = []
+		self.HasExitSignal.append(EntityILref.EntityILref())
+	def create_HasDemarcatingTraindetector(self):
+		if self.HasDemarcatingTraindetector == None:
+			self.HasDemarcatingTraindetector = []
+		self.HasDemarcatingTraindetector.append(EntityILref.EntityILref())
+	def create_HasResetStrategy(self):
+		if self.HasResetStrategy == None:
+			self.HasResetStrategy = []
+		self.HasResetStrategy.append(EntityILref.EntityILref())
+
 	def __init__(self):
+		super().__init__()
 		self.___isBerthingTrack : Long = 0
 		"""True if this section is part of a berthing track, i.e. track where trains may halt and change direction. Typically, an Interlocking assures that trains progress from section to section in an ordered sequence (aka. two/three phase release). This check would fail when a train changes direction. If this attribute is true, the interlocking doesn't carry out this check for this section."""
 		self.___residualRouteCancellationDelay : Duration = 0
 		"""The delay after which the interlocking may clear a partial route left by an unusual train run. The timer starts running when the interlocking accepts the signal man request to clear the section (DE: Restfahrstrasse aufl�sen) or when the interlocking algorithm detects that the train has set back (automatic route release)."""
 		self.___partialRouteReleaseDelay : Duration = 0
 		"""Delay time after which the section may be released for use in a new route"""
-		self.___technology : tTvdSectionTechnologyTypeExt = tTvdSectionTechnologyTypeExt.tTvdSectionTechnologyTypeExt()
+		self.___technology : tTvdSectionTechnologyTypeExt = None
 		# @AssociationType Interlocking.tTvdSectionTechnologyTypeExt
 		# """the technical type of the TVD section"""
-		self.___frequency : tFrequencyHertz = tFrequencyHertz.tFrequencyHertz()
+		self.___frequency : tFrequencyHertz = None
 		# @AssociationType Common.tFrequencyHertz
 		# """The frequency in Hertz in case of a track circuit. Shall be zero for direct current."""
-		self.___hasDemarcatingBufferstop : EntityILref = EntityILref.EntityILref()
+		self.___hasDemarcatingBufferstop : EntityILref = None
 		"""Reference to physical track ends, e.g. buffer stop."""
-		self.___hasExitSignal : EntityILref = EntityILref.EntityILref()
+		self.___hasExitSignal : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """Reference to delimiting signals for leaving the TVD section."""
-		self.___hasDemarcatingTraindetector : EntityILref = EntityILref.EntityILref()
+		self.___hasDemarcatingTraindetector : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# """Reference to the physical train detection points, e.g. axle counter point, insulated rail joint."""
-		self.___hasResetStrategy : EntityILref = EntityILref.EntityILref()
+		self.___hasResetStrategy : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..2
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..2
 		# """Reference to the IM specific reset strategy for this TVD section."""
-

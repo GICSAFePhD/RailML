@@ -13,8 +13,7 @@ class LocalOperationAreas(object):
 		self.___gradientCurve = aLocalOperationArea
 
 	def __init__(self):
-		self.___localOperationArea : LocalOperationArea = LocalOperationArea.LocalOperationArea()
+		self.___localOperationArea : LocalOperationArea = None
 		# @AssociationType Interlocking.LocalOperationArea*
 		# @AssociationMultiplicity 1..*
 		# """Area used for local shunting movements without routes. Movable elements within the area might be operated from onsite panels."""
-

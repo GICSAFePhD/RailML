@@ -14,8 +14,7 @@ class ATPdevices(object):
 		self.___atpDevice = aATPdevice
 
 	def __init__(self):
-		self.___atpDevice : ATPdevice = ATPdevice.ATPdevice()
+		self.___atpDevice : ATPdevice = None
 		# @AssociationType Interlocking.ATPdevice*
 		# @AssociationMultiplicity 1..*
 		# """not with railML3.1"""
-

@@ -14,8 +14,7 @@ class Routes(object):
 		self.___route = aRoute
 
 	def __init__(self):
-		self.___route : Route = Route.Route()
+		self.___route : Route = None
 		# @AssociationType Interlocking.Route*
 		# @AssociationMultiplicity 1..*
 		# """path for train movements in railway network secured by interlocking system"""
-

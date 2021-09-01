@@ -14,8 +14,7 @@ class ConflictingRoutes(object):
 		self.___conflictingRoute = aConflictingRoute
 
 	def __init__(self):
-		self.___conflictingRoute : ConflictingRoute = ConflictingRoute.ConflictingRoute()
+		self.___conflictingRoute : ConflictingRoute = None
 		# @AssociationType Interlocking.ConflictingRoute*
 		# @AssociationMultiplicity 1..*
 		# """identifies the routes that may never be simultaneously allocated"""
-

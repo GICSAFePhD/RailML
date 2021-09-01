@@ -14,8 +14,7 @@ class CombinedRoutes(object):
 		self.___combinedRoute = aCombinedRoute
 
 	def __init__(self):
-		self.___combinedRoute : CombinedRoute = CombinedRoute.CombinedRoute()
+		self.___combinedRoute : CombinedRoute = None
 		# @AssociationType Interlocking.CombinedRoute*
 		# @AssociationMultiplicity 1..*
 		# """a concatenation of single routes providing a continuous path for traffic movement"""
-

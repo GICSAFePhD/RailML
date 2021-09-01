@@ -13,8 +13,7 @@ class ShuntingZones(object):
 		self.___shuntingZone = aShuntingZone
 
 	def __init__(self):
-		self.___shuntingZone : ShuntingZone = ShuntingZone.ShuntingZone()
+		self.___shuntingZone : ShuntingZone = None
 		# @AssociationType Interlocking.ShuntingZone*
 		# @AssociationMultiplicity 1..*
 		# """Simple zone defined for shunting movements."""
-

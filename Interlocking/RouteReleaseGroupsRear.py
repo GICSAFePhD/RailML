@@ -13,8 +13,7 @@ class RouteReleaseGroupsRear(object):
 		self.___routeReleaseGroupRear = aRouteReleaseGroupRear
 
 	def __init__(self):
-		self.___routeReleaseGroupRear : RouteReleaseGroupRear = RouteReleaseGroupRear.RouteReleaseGroupRear()
+		self.___routeReleaseGroupRear : RouteReleaseGroupRear = None
 		# @AssociationType Interlocking.RouteReleaseGroupRear*
 		# @AssociationMultiplicity 1..*
 		# """One or more TVD sections as part of the route which can be released in a group in rear of passing train."""
-

@@ -14,8 +14,7 @@ class Overlaps(object):
 		self.___overlap = aOverlap
 
 	def __init__(self):
-		self.___overlap : Overlap = Overlap.Overlap()
+		self.___overlap : Overlap = None
 		# @AssociationType Interlocking.Overlap*
 		# @AssociationMultiplicity 1..*
 		# """track(s) in advance of a stop signal, or a stopping point in a continuous signalling system, which must be kept clear to avoid the risk of collision should a train inadvertently run past the signal or the stopping point"""
-

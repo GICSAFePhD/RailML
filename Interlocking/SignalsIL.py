@@ -14,8 +14,7 @@ class SignalsIL(object):
 		self.___signalIL = aSignalIL
 
 	def __init__(self):
-		self.___signalIL : SignalIL = SignalIL.SignalIL()
+		self.___signalIL : SignalIL = None
 		# @AssociationType Interlocking.SignalIL*
 		# @AssociationMultiplicity 1..*
 		# """The signal is a track asset used to transmit information to the train driver represented by its optical appearance."""
-

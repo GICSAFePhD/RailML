@@ -14,8 +14,7 @@ class PowerSuppliesIL(object):
 		self.___powerSupplyIL = aPowerSupplyIL
 
 	def __init__(self):
-		self.___powerSupplyIL : PowerSupplyIL = PowerSupplyIL.PowerSupplyIL()
+		self.___powerSupplyIL : PowerSupplyIL = None
 		# @AssociationType Interlocking.PowerSupplyIL*
 		# @AssociationMultiplicity 1..*
 		# """specific features of power supply used for interlocking"""
-

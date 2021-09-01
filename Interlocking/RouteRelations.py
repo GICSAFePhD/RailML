@@ -14,8 +14,7 @@ class RouteRelations(object):
 		self.___routeRelation = aRouteRelation
 
 	def __init__(self):
-		self.___routeRelation : RouteRelation = RouteRelation.RouteRelation()
+		self.___routeRelation : RouteRelation = None
 		# @AssociationType Interlocking.RouteRelation*
 		# @AssociationMultiplicity 1..*
 		# """states the conditions that must be fulfilled for a given signal to be open"""
-

@@ -15,7 +15,7 @@ class DestinationPoints(object):
 		self.___destinationPoint = aDestinationPoint
 
 	def __init__(self):
-		self.___destinationPoint : RouteExit = RouteExit.RouteExit()
+		self.___destinationPoint : RouteExit = None
 		# @AssociationType Interlocking.RouteExit*
 		# @AssociationMultiplicity 1..*
 		# """destination point of a secured running path"""

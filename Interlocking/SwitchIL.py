@@ -28,32 +28,50 @@ class SwitchIL(MovableElement.MovableElement):
 	def HasFoulingTrainDetectors(self, aHasFoulingTrainDetectors : EntityILref):
 		self.___hasFoulingTrainDetectors = aHasFoulingTrainDetectors
 	@BranchLeft.setter
-	def BranchLeft(self, *aBranchLeft : EntityILref):
+	def BranchLeft(self, aBranchLeft : EntityILref): # TODO *aBranchLeft
 		self.___branchLeft = aBranchLeft
 	@BranchRight.setter
-	def BranchRight(self, *aBranchRight : EntityILref):
+	def BranchRight(self, aBranchRight : EntityILref): # TODO *aBranchRight
 		self.___branchRight = aBranchRight
 	@HasPositionRestriction.setter
 	def HasPositionRestriction(self, aHasPositionRestriction : SwitchPositionRestriction):
 		self.___hasPositionRestriction = aHasPositionRestriction
 
+	def create_HasFoulingTrainDetectors(self):
+		if self.HasFoulingTrainDetectors == None:
+			self.HasFoulingTrainDetectors = []
+		self.HasFoulingTrainDetectors.append(EntityILref.EntityILref())
+	def create_BranchLeft(self):
+		if self.BranchLeft == None:
+			self.BranchLeft = []
+		self.BranchLeft.append(EntityILref.EntityILref())
+	def create_BranchRight(self):
+		if self.BranchRight == None:
+			self.BranchRight = []
+		self.BranchRight.append(EntityILref.EntityILref())
+	def create_HasPositionRestriction(self):
+		if self.HasPositionRestriction == None:
+			self.HasPositionRestriction = []
+		self.HasPositionRestriction.append(SwitchPositionRestriction.SwitchPositionRestriction())
+
 	def __init__(self):
-		self.___preferredPosition : tSwitchPosition = tSwitchPosition.tSwitchPosition()
+		super().__init__()
+		self.___preferredPosition : tSwitchPosition = None
 		# @AssociationType Interlocking.tSwitchPosition
 		# """This is the preferred position of the switch which it is switched to when not in use or in case of both positions required for flank protection."""
-		self.___hasFoulingTrainDetectors : EntityILref = EntityILref.EntityILref()
+		self.___hasFoulingTrainDetectors : EntityILref = None
 		"""This is the reference to any train detection device in infrastructure which is located to close to the switch, i.e. the gauge of the switch is not clear when the associated neighbouring TVD section is occupied."""
-		self.___branchLeft : EntityILref = EntityILref.EntityILref()
+		self.___branchLeft : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """This is the reference to the underlying track section in infrastructure of the left branch."""
-		self.___branchRight : EntityILref = EntityILref.EntityILref()
+		self.___branchRight : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """This is the reference to the underlying track section in infrastructure of the right branch."""
-		self.___hasPositionRestriction : SwitchPositionRestriction = SwitchPositionRestriction.SwitchPositionRestriction()
+		self.___hasPositionRestriction : SwitchPositionRestriction = None
 		# @AssociationType Interlocking.SwitchPositionRestriction
 		# @AssociationMultiplicity 0..1
 		# """It defines the position the switch shall have in dependency of the position of the related element."""

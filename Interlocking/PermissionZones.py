@@ -13,8 +13,7 @@ class PermissionZones(object):
 		self.___permissionZone = aPermissionZone
 
 	def __init__(self):
-		self.___permissionZone : PermissionZone = PermissionZone.PermissionZone()
+		self.___permissionZone : PermissionZone = None
 		# @AssociationType Interlocking.PermissionZone*
 		# @AssociationMultiplicity 1..*
 		# """A set of track assets inside a station which can have different operating permissions (being controlled from a different controller) as the rest of the station"""
-

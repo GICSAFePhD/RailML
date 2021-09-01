@@ -14,7 +14,7 @@ class Controllers(object):
 		self.___controller = aController
 
 	def __init__(self):
-		self.___controller : Controller = Controller.Controller()
+		self.___controller : Controller = None
 		# @AssociationType Interlocking.Controller*
 		# @AssociationMultiplicity 1..*
 		# """Container with reference to connected interlockings and system assets controlled by this operational terminal."""

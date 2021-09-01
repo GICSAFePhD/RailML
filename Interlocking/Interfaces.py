@@ -14,8 +14,7 @@ class Interfaces(object):
 		self.___interface = aInterface
 
 	def __init__(self):
-		self.___interface : Interface = Interface.Interface()
+		self.___interface : Interface = None
 		# @AssociationType Interlocking.Interface*
 		# @AssociationMultiplicity 1..*
 		# """Description of a physical interface with definition of the information to be exchanged in which direction."""
-

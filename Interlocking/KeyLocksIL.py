@@ -14,8 +14,7 @@ class KeyLocksIL(object):
 		self.___keyLockIL = aKeyLockIL
 
 	def __init__(self):
-		self.___keyLockIL : KeyLockIL = KeyLockIL.KeyLockIL()
+		self.___keyLockIL : KeyLockIL = None
 		# @AssociationType Interlocking.KeyLockIL*
 		# @AssociationMultiplicity 1..*
 		# """A device for locking a key which is released from interlocking or by using a master key."""
-

@@ -52,30 +52,30 @@ class GenericTypes(object):
 		self.___rail3_anyAttribute = aanyAttribute
 
 	def __init__(self):
-		self.___hasAspect : GenericAspect = GenericAspect.GenericAspect()
+		self.___hasAspect : GenericAspect = None
 		# @AssociationType Interlocking.GenericAspect*
 		# @AssociationMultiplicity 2..*
 		# """Classification of signal aspects."""
-		self.___hasTVDresetStrategy : GenericResetStrategy = GenericResetStrategy.GenericResetStrategy()
+		self.___hasTVDresetStrategy : GenericResetStrategy = None
 		# @AssociationType Interlocking.GenericResetStrategy*
 		# @AssociationMultiplicity 0..*
 		# """Classification of TVD section reset strategies"""
-		self.___hasRouteType : GenericRouteType = GenericRouteType.GenericRouteType()
+		self.___hasRouteType : GenericRouteType = None
 		# @AssociationType Interlocking.GenericRouteType*
 		# @AssociationMultiplicity 1..*
 		# """Classification of route types."""
-		self.___hasLevelCrossingType : LevelCrossingTypeList = LevelCrossingTypeList.LevelCrossingTypeList()
+		self.___hasLevelCrossingType : LevelCrossingTypeList = None
 		# @AssociationType Interlocking.LevelCrossingTypeList*
 		# @AssociationMultiplicity 0..*
 		# """Classification of basic level crossing types."""
-		self.___hasElementGroupType : ElementGroupingTypes = ElementGroupingTypes.ElementGroupingTypes()
+		self.___hasElementGroupType : ElementGroupingTypes = None
 		# @AssociationType Interlocking.ElementGroupingTypes*
 		# @AssociationMultiplicity 0..*
 		# """Classification of element groups used for operation from the interlock."""
-		self.___hasDetectorTypes : DetectorTypes = DetectorTypes.DetectorTypes()
+		self.___hasDetectorTypes : DetectorTypes = None
 		# @AssociationType Interlocking.DetectorTypes*
 		# @AssociationMultiplicity 0..*
 		# """The list of detector type classification."""
-		self.___rail3_anyAttribute : anyAttribute = anyAttribute.anyAttribute()
+		self.___rail3_anyAttribute : anyAttribute = None
 		"""# @AssociationKind Aggregation"""
 

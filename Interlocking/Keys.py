@@ -14,8 +14,7 @@ class Keys(object):
 		self.___key = aKey
 
 	def __init__(self):
-		self.___key : Key = Key.Key()
+		self.___key : Key = None
 		# @AssociationType Interlocking.Key*
 		# @AssociationMultiplicity 1..*
 		# """An ancillary element used for operation of a specific locking device."""
-

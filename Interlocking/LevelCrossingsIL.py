@@ -14,8 +14,7 @@ class LevelCrossingsIL(object):
 		self.___levelCrossingIL = aLevelCrossingIL
 
 	def __init__(self):
-		self.___levelCrossingIL : LevelCrossingIL = LevelCrossingIL.LevelCrossingIL()
+		self.___levelCrossingIL : LevelCrossingIL = None
 		# @AssociationType Interlocking.LevelCrossingIL*
 		# @AssociationMultiplicity 1..*
 		# """The level crossing is a track asset allowing road traffic to cross the railway track in a secure way on the same level. Here the functional aspects for interlocking operation are considered."""
-

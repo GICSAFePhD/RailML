@@ -19,14 +19,12 @@ class GenericIM(EntityIL.EntityIL):
 	def UsesTypes(self, aUsesTypes : GenericTypes):
 		self.___usesTypes = aUsesTypes
 
-
 	def __init__(self):
-		self.___ownsSetsOfAssets : EntityILref = EntityILref.EntityILref()
+		self.___ownsSetsOfAssets : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to the associated lists of assets."""
-		self.___usesTypes : GenericTypes = GenericTypes.GenericTypes()
+		self.___usesTypes : GenericTypes = None
 		# @AssociationType Interlocking.GenericTypes
 		# @AssociationMultiplicity 1
 		# """The types defined for this IM."""
-

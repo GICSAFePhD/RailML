@@ -21,6 +21,7 @@ class EntityIL(tElementWithIDandDesignator.tElementWithIDandDesignator):
 		self.___unnamed_anyAttribute_ = aUnnamed_anyAttribute
 
 	def __init__(self):
+		super().__init__()
 		self.___unnamed_any_ = []
 		"""# @AssociationMultiplicity 0..*"""
 		self.___unnamed_anyAttribute_ : anyAttribute = None

@@ -14,7 +14,7 @@ class SignalBoxes(object):
 		self.___signalBox = aSignalBox
 
 	def __init__(self):
-		self.___signalBox : SignalBox = SignalBox.SignalBox()
+		self.___signalBox : SignalBox = None
 		# @AssociationType Interlocking.SignalBox*
 		# @AssociationMultiplicity 1..*
 		# """Container with the characteristics of an individual interlocking system."""

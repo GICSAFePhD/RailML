@@ -31,6 +31,23 @@ class Interlocking(object):
 	def GenericIMs(self, aGenericIMs : GenericIMs):
 		self.___specificIMs = aGenericIMs
 
+	def create_AssetsForIL(self):
+		if self.AssetsForIL == None:
+			self.AssetsForIL = []
+		self.AssetsForIL.append(AssetsForIL.AssetsForIL())
+	def create_Controllers(self):
+		if self.Controllers == None:
+			self.Controllers = []
+		self.Controllers.append(Controllers.Controllers())
+	def create_SignalBoxes(self):
+		if self.SignalBoxes == None:
+			self.SignalBoxes = []
+		self.SignalBoxes.append(SignalBoxes.SignalBoxes())
+	def create_GenericIMs(self):
+		if self.GenericIMs == None:
+			self.GenericIMs = []
+		self.GenericIMs.append(GenericIMs.GenericIMs())
+
 	def __init__(self):
 		self.___assetsForIL : AssetsForIL = None
 		# @AssociationType Interlocking.AssetsForIL

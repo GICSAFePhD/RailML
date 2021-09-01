@@ -13,8 +13,7 @@ class MovableCrossings(object):
 		self.___movableCrossing = aMovableCrossing
 
 	def __init__(self):
-		self.___movableCrossing : MovableCrossing = MovableCrossing.MovableCrossing()
+		self.___movableCrossing : MovableCrossing = None
 		# @AssociationType Interlocking.MovableCrossing*
 		# @AssociationMultiplicity 1..*
 		# """Crossings are a special item for interlockings as a position is required for them even if there is no really movable item trackside. Here the functional aspects for interlocking operation are considered."""
-

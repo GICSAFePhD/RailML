@@ -165,104 +165,205 @@ class AssetsForIL(EntityIL.EntityIL):
 	def PowerSuppliesIL(self, aPowerSuppliesIL : PowerSuppliesIL):
 		self.___powerSuppliesIL = aPowerSuppliesIL
 
+	def create_TvdSections(self):
+		if self.TvdSections == None:
+			self.TvdSections = []
+		self.TvdSections.append(TvdSections.TvdSections())
+	def create_SwitchesIL(self):
+		if self.SwitchesIL == None:
+			self.SwitchesIL = []
+		self.SwitchesIL.append(SwitchesIL.SwitchesIL())
+	def create_DerailersIL(self):
+		if self.DerailersIL == None:
+			self.DerailersIL = []
+		self.DerailersIL.append(DerailersIL.DerailersIL())
+	def create_MovableCrossings(self):
+		if self.MovableCrossings == None:
+			self.MovableCrossings = []
+		self.MovableCrossings.append(MovableCrossings.MovableCrossings())
+	def create_LevelCrossingsIL(self):
+		if self.LevelCrossingsIL == None:
+			self.LevelCrossingsIL = []
+		self.LevelCrossingsIL.append(LevelCrossingsIL.LevelCrossingsIL())
+	def create_Keys(self):
+		if self.Keys == None:
+			self.Keys = []
+		self.Keys.append(Keys.Keys())
+	def create_KeyLocksIL(self):
+		if self.KeyLocksIL == None:
+			self.KeyLocksIL = []
+		self.KeyLocksIL.append(KeyLocksIL.KeyLocksIL())
+	def create_GenericDetectors(self):
+		if self.GenericDetectors == None:
+			self.GenericDetectors = []
+		self.GenericDetectors.append(GenericDetectors.GenericDetectors())
+	def create_SignalsIL(self):
+		if self.SignalsIL == None:
+			self.SignalsIL = []
+		self.SignalsIL.append(SignalsIL.SignalsIL())
+	def create_ATPdevices(self):
+		if self.ATPdevices == None:
+			self.ATPdevices = []
+		self.ATPdevices.append(ATPdevices.ATPdevices())
+	def create_Interfaces(self):
+		if self.Interfaces == None:
+			self.Interfaces = []
+		self.Interfaces.append(Interfaces.Interfaces())
+	def create_WorkZones(self):
+		if self.WorkZones == None:
+			self.WorkZones = []
+		self.WorkZones.append(WorkZones.WorkZones())
+	def create_LocalOperationAreas(self):
+		if self.LocalOperationAreas == None:
+			self.LocalOperationAreas = []
+		self.LocalOperationAreas.append(LocalOperationAreas.LocalOperationAreas())
+	def create_ShuntingZones(self):
+		if self.ShuntingZones == None:
+			self.ShuntingZones = []
+		self.ShuntingZones.append(ShuntingZones.ShuntingZones())
+	def create_PermissionZones(self):
+		if self.PermissionZones == None:
+			self.PermissionZones = []
+		self.PermissionZones.append(PermissionZones.PermissionZones())
+	def create_RouteReleaseGroupsAhead(self):
+		if self.RouteReleaseGroupsAhead == None:
+			self.RouteReleaseGroupsAhead = []
+		self.RouteReleaseGroupsAhead.append(RouteReleaseGroupsAhead.RouteReleaseGroupsAhead())
+	def create_RouteReleaseGroupsRear(self):
+		if self.RouteReleaseGroupsRear == None:
+			self.RouteReleaseGroupsRear = []
+		self.RouteReleaseGroupsRear.append(RouteReleaseGroupsRear.RouteReleaseGroupsRear())
+	def create_Routes(self):
+		if self.Routes == None:
+			self.Routes = []
+		self.Routes.append(Routes.Routes())
+	def create_ConflictingRoutes(self):
+		if self.ConflictingRoutes == None:
+			self.ConflictingRoutes = []
+		self.ConflictingRoutes.append(ConflictingRoutes.ConflictingRoutes())
+	def create_RouteRelations(self):
+		if self.RouteRelations == None:
+			self.RouteRelations = []
+		self.RouteRelations.append(RouteRelations.RouteRelations())	
+	def create_CombinedRoutes(self):
+		if self.CombinedRoutes == None:
+			self.CombinedRoutes = []
+		self.CombinedRoutes.append(CombinedRoutes.CombinedRoutes())
+	def create_Overlaps(self):
+		if self.Overlaps == None:
+			self.Overlaps = []
+		self.Overlaps.append(Overlaps.Overlaps())
+	def create_DangerPoints(self):
+		if self.DangerPoints == None:
+			self.DangerPoints = []
+		self.DangerPoints.append(DangerPoints.DangerPoints())
+	def create_DestinationPoints(self):
+		if self.DestinationPoints == None:
+			self.DestinationPoints = []
+		self.DestinationPoints.append(DestinationPoints.DestinationPoints())
+	def create_PowerSuppliesIL(self):
+		if self.PowerSuppliesIL == None:
+			self.PowerSuppliesIL = []
+		self.PowerSuppliesIL.append(PowerSuppliesIL.PowerSuppliesIL())
+
 	def __init__(self):
-		self.___tvdSections : TvdSections = TvdSections.TvdSections()
+		self.___tvdSections : TvdSections = None
 		# @AssociationType Interlocking.TvdSections
 		# @AssociationMultiplicity 0..1
 		# """contains all tvdSection elements"""
-		self.___switchesIL : SwitchesIL = SwitchesIL.SwitchesIL()
+		self.___switchesIL : SwitchesIL = None
 		# @AssociationType Interlocking.SwitchesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type SwitchIL"""
-		self.___derailersIL : DerailersIL = DerailersIL.DerailersIL()
+		self.___derailersIL : DerailersIL = None
 		# @AssociationType Interlocking.DerailersIL
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type DerailerIL"""
-		self.___movableCrossings : MovableCrossings = MovableCrossings.MovableCrossings()
+		self.___movableCrossings : MovableCrossings = None
 		# @AssociationType Interlocking.MovableCrossings
 		# @AssociationMultiplicity 0..1
 		# """contains all MovableElements of type MovableCrossing"""
-		self.___levelCrossingsIL : LevelCrossingsIL = LevelCrossingsIL.LevelCrossingsIL()
+		self.___levelCrossingsIL : LevelCrossingsIL = None
 		# @AssociationType Interlocking.LevelCrossingsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all levelCrossingIL elements"""
-		self.___keys : Keys = Keys.Keys()
+		self.___keys : Keys = None
 		# @AssociationType Interlocking.Keys
 		# @AssociationMultiplicity 0..1
 		# """contains all key elements"""
-		self.___keyLocksIL : KeyLocksIL = KeyLocksIL.KeyLocksIL()
+		self.___keyLocksIL : KeyLocksIL = None
 		# @AssociationType Interlocking.KeyLocksIL
 		# @AssociationMultiplicity 0..1
 		# """contains all keyLockIL elements"""
-		self.___genericDetectors : GenericDetectors = GenericDetectors.GenericDetectors()
+		self.___genericDetectors : GenericDetectors = None
 		# @AssociationType Interlocking.GenericDetectors
 		# @AssociationMultiplicity 0..1
 		# """contains all genericDetector elements"""
-		self.___signalsIL : SignalsIL = SignalsIL.SignalsIL()
+		self.___signalsIL : SignalsIL = None
 		# @AssociationType Interlocking.SignalsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all signalIL elements"""
-		self.___atpDevices : ATPdevices = ATPdevices.ATPdevices()
+		self.___atpDevices : ATPdevices = None
 		# @AssociationType Interlocking.ATPdevices
 		# @AssociationMultiplicity 0..1
 		# """contains all atpDevice elements (not with railML3.1)"""
-		self.___interfaces : Interfaces = Interfaces.Interfaces()
+		self.___interfaces : Interfaces = None
 		# @AssociationType Interlocking.Interfaces
 		# @AssociationMultiplicity 0..1
 		# """contains all interface elements"""
-		self.___workZones : WorkZones = WorkZones.WorkZones()
+		self.___workZones : WorkZones = None
 		# @AssociationType Interlocking.WorkZones
 		# @AssociationMultiplicity 0..1
 		# """contains all workZone elements"""
-		self.___localOperationAreas : LocalOperationAreas = LocalOperationAreas.LocalOperationAreas()
+		self.___localOperationAreas : LocalOperationAreas = None
 		# @AssociationType Interlocking.LocalOperationAreas
 		# @AssociationMultiplicity 0..1
 		# """contains all localOperationArea elements"""
-		self.___shuntingZones : ShuntingZones = ShuntingZones.ShuntingZones()
+		self.___shuntingZones : ShuntingZones = None
 		# @AssociationType Interlocking.ShuntingZones
 		# @AssociationMultiplicity 0..1
 		# """contains all shuntingZone elements"""
-		self.___permissionZones : PermissionZones = PermissionZones.PermissionZones()
+		self.___permissionZones : PermissionZones = None
 		# @AssociationType Interlocking.PermissionZones
 		# @AssociationMultiplicity 0..1
 		# """contains all permissionZone elements"""
-		self.___routeReleaseGroupsAhead : RouteReleaseGroupsAhead = RouteReleaseGroupsAhead.RouteReleaseGroupsAhead()
+		self.___routeReleaseGroupsAhead : RouteReleaseGroupsAhead = None
 		# @AssociationType Interlocking.RouteReleaseGroupsAhead
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupAhead elements"""
-		self.___routeReleaseGroupsRear : RouteReleaseGroupsRear = RouteReleaseGroupsRear.RouteReleaseGroupsRear()
+		self.___routeReleaseGroupsRear : RouteReleaseGroupsRear = None
 		# @AssociationType Interlocking.RouteReleaseGroupsRear
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupRear elements"""
-		self.___routes : Routes = Routes.Routes()
+		self.___routes : Routes = None
 		# @AssociationType Interlocking.Routes
 		# @AssociationMultiplicity 0..1
 		# """contains all route elements"""
-		self.___conflictingRoutes : ConflictingRoutes = ConflictingRoutes.ConflictingRoutes()
+		self.___conflictingRoutes : ConflictingRoutes = None
 		# @AssociationType Interlocking.ConflictingRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all conflictingRoute elements"""
-		self.___routeRelations : RouteRelations = RouteRelations.RouteRelations()
+		self.___routeRelations : RouteRelations = None
 		# @AssociationType Interlocking.RouteRelations
 		# @AssociationMultiplicity 0..1
 		# """contains all routeRelation elements"""
-		self.___combinedRoutes : CombinedRoutes = CombinedRoutes.CombinedRoutes()
+		self.___combinedRoutes : CombinedRoutes = None
 		# @AssociationType Interlocking.CombinedRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all combinedRoute elements"""
-		self.___overlaps : Overlaps = Overlaps.Overlaps()
+		self.___overlaps : Overlaps = None
 		# @AssociationType Interlocking.Overlaps
 		# @AssociationMultiplicity 0..1
 		# """contains all overlap elements"""
-		self.___dangerPoints : DangerPoints = DangerPoints.DangerPoints()
+		self.___dangerPoints : DangerPoints = None
 		# @AssociationType Interlocking.DangerPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all dangerPoints elements"""
-		self.___destinationPoints : DestinationPoints = DestinationPoints.DestinationPoints()
+		self.___destinationPoints : DestinationPoints = None
 		# @AssociationType Interlocking.DestinationPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all destinationPoint elements"""
-		self.___powerSuppliesIL : PowerSuppliesIL = PowerSuppliesIL.PowerSuppliesIL()
+		self.___powerSuppliesIL : PowerSuppliesIL = None
 		# @AssociationType Interlocking.PowerSuppliesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all powerSupplyIL elements"""

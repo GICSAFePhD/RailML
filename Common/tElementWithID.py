@@ -5,18 +5,15 @@ from RailML.Common import tID
 from typing import List
 
 class tElementWithID(object):
-
 	@property
-	def Id(self) -> tID:
+	def ID(self) -> tID:
 		return self.___id
 
-	@Id.setter
-	def Id(self, aId : tID):
-		self.___id = aId
+	@ID.setter
+	def ID(self, aID : tID):
+		self.___id = aID
 
-	@classmethod
 	def __init__(self):
 		self.___id : tID = None
 		# @AssociationType Common.tID
 		# """unique identifier"""
-
