@@ -15,7 +15,7 @@ class DerailerIL(MovableElement.MovableElement):
 		self.___preferredPosition = aPreferredPosition
 
 	def __init__(self):
-		self.___preferredPosition : tDerailingPosition = tDerailingPosition.tDerailingPosition()
+		super().__init__()
+		self.___preferredPosition : tDerailingPosition = None
 		# @AssociationType Interlocking.tDerailingPosition
 		# """This is the preferred position of the derailer which it is switched to when not in use."""
-

@@ -88,11 +88,31 @@ class LevelCrossingIL(TrackAsset.TrackAsset):
 	def HasTvdSection(self, aHasTvdSection : EntityILref):
 		self.___hasTvdSection = aHasTvdSection
 
+	def create_HasInterface(self):
+		self.HasInterface = EntityILref.EntityILref()
+	def create_IsLevelCrossingType(self):
+		self.IsLevelCrossingType = EntityILref.EntityILref()
+	def create_RefersTo(self):
+		self.RefersTo = EntityILref.EntityILref()
+	def create_DeactivatedBy(self):
+		if self.DeactivatedBy == None:
+			self.DeactivatedBy = []
+		self.DeactivatedBy.append(EntityILref.EntityILref())
+	def create_ActivationCondition(self):
+		if self.ActivationCondition == None:
+			self.ActivationCondition = []
+		self.ActivationCondition.append(EntityILref.EntityILref())
+	def create_HasTvdSection(self):
+		if self.HasTvdSection == None:
+			self.HasTvdSection = []
+		self.HasTvdSection.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___preferredPosition : tLevelCrossingState = tLevelCrossingState.tLevelCrossingState()
+		super().__init__()
+		self.___preferredPosition : tLevelCrossingState = None
 		# @AssociationType Interlocking.tLevelCrossingState
 		# """This is the state of level crossing under normal conditions, i.e. when not in use. For most level crossings this would be the open state."""
-		self.___unprotectedSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___unprotectedSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Speed in km/h at which the level crossing can be passed when it is not protected (V_LX)"""
 		self.___typicalTimeToClose : Duration = 0
@@ -105,28 +125,27 @@ class LevelCrossingIL(TrackAsset.TrackAsset):
 		"""This is the time span after a message to the operator is triggered because a level crossing being closed for too long time can be considered as unsafe. In such cases the road drivers and pedestrians might try to cross the railway line illegally."""
 		self.___requiresStopBeforeUnprotectedLevelCrossing : Long = 0
 		"""Flag to define whether any train needs to stop in front of the level crossing in case it is unprotected. Only afterwards it can proceed according the value in speedRestriction."""
-		self.___hasInterface : EntityILref = EntityILref.EntityILref()
+		self.___hasInterface : EntityILref = None
 		"""Reference to physical description of level crossing interface with list of commands to the field and notifications from the field"""
-		self.___isLevelCrossingType : EntityILref = EntityILref.EntityILref()
+		self.___isLevelCrossingType : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """Reference to the basic type of level crossing. It refers to a basic configuration of a level crossing for this IM."""
-		self.___refersTo : EntityILref = EntityILref.EntityILref()
+		self.___refersTo : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to the physical level crossing in infrastructure."""
-		self.___deactivatedBy : LevelCrossingDeactivator = LevelCrossingDeactivator.LevelCrossingDeactivator()
+		self.___deactivatedBy : LevelCrossingDeactivator = None
 		# @AssociationType Interlocking.LevelCrossingDeactivator*
 		# @AssociationMultiplicity 0..*
 		# """The description of deactivation conditions for this level crossing."""
-		self.___activationCondition : ActivationCondition = ActivationCondition.ActivationCondition()
+		self.___activationCondition : ActivationCondition = None
 		# @AssociationType Interlocking.ActivationCondition*
 		# @AssociationMultiplicity 0..*
 		# """Description of the possible activation conditions of this level crossing."""
-		self.___hasTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___hasTvdSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# """The reference to the TVD section(s) directly at the level crossing"""
-

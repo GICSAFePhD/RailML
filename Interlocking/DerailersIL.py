@@ -12,6 +12,11 @@ class DerailersIL(object):
 	def DerailerIL(self, *aDerailerIL : DerailerIL):
 		self.___derailerIL = aDerailerIL
 
+	def create_DerailerIL(self):
+		if self.DerailerIL == None:
+			self.DerailerIL = []
+		self.DerailerIL.append(DerailerIL.DerailerIL())
+
 	def __init__(self):
 		self.___derailerIL : DerailerIL = None
 		# @AssociationType Interlocking.DerailerIL*

@@ -44,28 +44,49 @@ class MovableCrossing(MovableElement.MovableElement):
 	def HasFoulingTrainDetectors(self, aHasFoulingTrainDetectors : EntityILref):
 		self.___hasFoulingTrainDetectors = aHasFoulingTrainDetectors
 
+	def create_BranchUpLeft(self):
+		if self.BranchUpLeft == None:
+			self.BranchUpLeft = []
+		self.BranchUpLeft.append(EntityILref.EntityILref())
+	def create_BranchUpRight(self):
+		if self.BranchUpRight == None:
+			self.BranchUpRight = []
+		self.BranchUpRight.append(EntityILref.EntityILref())
+	def create_BranchDownLeft(self):
+		if self.BranchDownLeft == None:
+			self.BranchDownLeft = []
+		self.BranchDownLeft.append(EntityILref.EntityILref())
+	def create_BranchDownRight(self):
+		if self.BranchDownRight == None:
+			self.BranchDownRight = []
+		self.BranchDownRight.append(EntityILref.EntityILref())
+	def create_HasFoulingTrainDetectors(self):
+		if self.HasFoulingTrainDetectors == None:
+			self.HasFoulingTrainDetectors = []
+		self.HasFoulingTrainDetectors.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___preferredPosition : tCrossingPosition = tCrossingPosition.tCrossingPosition()
+		super().__init__()
+		self.___preferredPosition : tCrossingPosition = None
 		# @AssociationType Interlocking.tCrossingPosition
 		# """This is the preferred position of the crossing which it is switched to when not in use."""
-		self.___branchUpLeft : EntityILref = EntityILref.EntityILref()
+		self.___branchUpLeft : EntityILref = None
 		"""Referral to the physical track that connects from upper left side to the crossing."""
-		self.___branchUpRight : EntityILref = EntityILref.EntityILref()
+		self.___branchUpRight : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """Referral to the physical track that connects from upper right side to the crossing."""
-		self.___branchDownLeft : EntityILref = EntityILref.EntityILref()
+		self.___branchDownLeft : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """Referral to the physical track that connects from lower left side to the crossing."""
-		self.___branchDownRight : EntityILref = EntityILref.EntityILref()
+		self.___branchDownRight : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """Referral to the physical track that connects from lower right side to the crossing."""
-		self.___hasFoulingTrainDetectors : EntityILref = EntityILref.EntityILref()
+		self.___hasFoulingTrainDetectors : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """This is the reference to the train detectors delimiting the TVD section of this crossing, which are too close and cannot guarantee a clear gauge of the set track."""
-

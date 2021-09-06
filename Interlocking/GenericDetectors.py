@@ -13,6 +13,11 @@ class GenericDetectors(object):
 	def GenericDetector(self, *aGenericDetector : GenericDetector):
 		self.___genericDetector = aGenericDetector
 
+	def create_GenericDetector(self):
+		if self.GenericDetector == None:
+			self.GenericDetector = []
+		self.GenericDetector.append(GenericDetector.GenericDetector())
+
 	def __init__(self):
 		self.___genericDetector : GenericDetector = None
 		# @AssociationType Interlocking.GenericDetector*

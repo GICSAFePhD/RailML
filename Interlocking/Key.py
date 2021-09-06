@@ -15,6 +15,6 @@ class Key(EntityIL.EntityIL):
 		self.___isPhysical = aIsPhysical
 
 	def __init__(self):
+		super().__init__()
 		self.___isPhysical : Long = 0
 		"""The key can be of physical type, i.e. key for a mechanical lock."""
-

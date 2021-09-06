@@ -75,4 +75,3 @@ class SwitchIL(MovableElement.MovableElement):
 		# @AssociationType Interlocking.SwitchPositionRestriction
 		# @AssociationMultiplicity 0..1
 		# """It defines the position the switch shall have in dependency of the position of the related element."""
-

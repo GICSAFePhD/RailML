@@ -12,6 +12,11 @@ class MovableCrossings(object):
 	def MovableCrossing(self, aMovableCrossing : MovableCrossing):
 		self.___movableCrossing = aMovableCrossing
 
+	def create_MovableCrossing(self):
+		if self.MovableCrossing == None:
+			self.MovableCrossing = []
+		self.MovableCrossing.append(MovableCrossing.MovableCrossing())
+    
 	def __init__(self):
 		self.___movableCrossing : MovableCrossing = None
 		# @AssociationType Interlocking.MovableCrossing*

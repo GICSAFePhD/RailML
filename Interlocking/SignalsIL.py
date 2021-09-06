@@ -13,6 +13,11 @@ class SignalsIL(object):
 	def SignalIL(self, *aSignalIL : SignalIL):
 		self.___signalIL = aSignalIL
 
+	def create_SignalIL(self):
+		if self.SignalIL == None:
+			self.SignalIL = []
+		self.SignalIL.append(SignalIL.SignalIL())
+	
 	def __init__(self):
 		self.___signalIL : SignalIL = None
 		# @AssociationType Interlocking.SignalIL*

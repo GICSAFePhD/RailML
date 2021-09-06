@@ -13,6 +13,11 @@ class KeyLocksIL(object):
 	def KeyLockIL(self, *aKeyLockIL : KeyLockIL):
 		self.___keyLockIL = aKeyLockIL
 
+	def create_KeyLockIL(self):
+		if self.KeyLockIL == None:
+			self.KeyLockIL = []
+		self.KeyLockIL.append(KeyLockIL.KeyLockIL())
+
 	def __init__(self):
 		self.___keyLockIL : KeyLockIL = None
 		# @AssociationType Interlocking.KeyLockIL*

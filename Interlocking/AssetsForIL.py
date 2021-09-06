@@ -291,7 +291,7 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.Keys
 		# @AssociationMultiplicity 0..1
 		# """contains all key elements"""
-		self.___keyLocksIL : KeyLocksIL = None
+		self.___keyLocksIL : KeyLocksIL = None 
 		# @AssociationType Interlocking.KeyLocksIL
 		# @AssociationMultiplicity 0..1
 		# """contains all keyLockIL elements"""
@@ -299,11 +299,11 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.GenericDetectors
 		# @AssociationMultiplicity 0..1
 		# """contains all genericDetector elements"""
-		self.___signalsIL : SignalsIL = None
+		self.___signalsIL : SignalsIL = None	
 		# @AssociationType Interlocking.SignalsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all signalIL elements"""
-		self.___atpDevices : ATPdevices = None
+		self.___atpDevices : ATPdevices = None	# TODO HERE
 		# @AssociationType Interlocking.ATPdevices
 		# @AssociationMultiplicity 0..1
 		# """contains all atpDevice elements (not with railML3.1)"""

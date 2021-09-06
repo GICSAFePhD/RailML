@@ -13,6 +13,11 @@ class LevelCrossingsIL(object):
 	def LevelCrossingIL(self, *aLevelCrossingIL : LevelCrossingIL):
 		self.___levelCrossingIL = aLevelCrossingIL
 
+	def create_LevelCrossingIL(self):
+		if self.LevelCrossingIL == None:
+			self.LevelCrossingIL = []
+		self.LevelCrossingIL.append(LevelCrossingIL.LevelCrossingIL())
+	
 	def __init__(self):
 		self.___levelCrossingIL : LevelCrossingIL = None
 		# @AssociationType Interlocking.LevelCrossingIL*

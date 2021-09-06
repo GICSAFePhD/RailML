@@ -13,6 +13,11 @@ class Keys(object):
 	def Key(self, aKey : Key):
 		self.___key = aKey
 
+	def create_Key(self):
+		if self.Key == None:
+			self.Key = []
+		self.Key.append(Key.Key())
+
 	def __init__(self):
 		self.___key : Key = None
 		# @AssociationType Interlocking.Key*

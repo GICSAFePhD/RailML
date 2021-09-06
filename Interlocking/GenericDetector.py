@@ -51,7 +51,13 @@ class GenericDetector(LogicalDevice.LogicalDevice):
 	def DetectorType(self, aDetectorType : EntityILref):
 		self.___detectorType = aDetectorType
 
+	def create_DetectorType(self):
+		if self.DetectorType == None:
+			self.DetectorType = []
+		self.DetectorType.append(EntityILref.EntityILref())
+
 	def __init__(self):
+		super().__init__()
 		self.___affectsRouteSignalling : Long = 0
 		"""indication whether the signalling of a related route is affected by the detector status"""
 		self.___allowsSingleOverride : Long = 0
@@ -64,8 +70,7 @@ class GenericDetector(LogicalDevice.LogicalDevice):
 		"""The time period for which the detector output shall be tolerated due to running self-test."""
 		self.___selfTestInterval : Duration = 0
 		"""The interval at which the self-test is running, i.e. automatically initiated or triggered from interlocking."""
-		self.___detectorType : EntityILref = EntityILref.EntityILref()
+		self.___detectorType : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the particular detector type."""
-

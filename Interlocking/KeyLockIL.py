@@ -52,6 +52,17 @@ class KeyLockIL(LogicalDevice.LogicalDevice):
 	def HasSlaveLock(self, aHasSlaveLock : EntityILref):
 		self.___hasSlaveLock = aHasSlaveLock
 
+	def create_AcceptsKey(self):
+		self.AcceptsKey.append(EntityILref.EntityILref())
+	def create_HasTvdSection(self):
+		if self.HasTvdSection == None:
+			self.HasTvdSection = []
+		self.HasTvdSection.append(EntityILref.EntityILref())
+	def create_HasSlaveLock(self):
+		if self.HasSlaveLock == None:
+			self.HasSlaveLock = []
+		self.HasSlaveLock.append(EntityILref.EntityILref())
+
 	def __init__(self):
 		self.___hasAutomaticKeyRelease : Long = 0
 		"""The key of a siding on open line may be released automatically when the related TVD section (trigger) becomes occupied."""
@@ -61,13 +72,13 @@ class KeyLockIL(LogicalDevice.LogicalDevice):
 		"""The time period a request for key release is indicated to the operator."""
 		self.___keyAuthoriseTime : Duration = 0
 		"""The time period the key release is active after commanded by the operator. Afterwards a not removed key will be automatically relocked again."""
-		self.___acceptsKey : EntityILref = EntityILref.EntityILref()
+		self.___acceptsKey : EntityILref = None
 		"""The reference to the particular key used with this master lock."""
-		self.___hasTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___hasTvdSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to the TVD section related to this master lock. This is especially used for siding key locks on open line."""
-		self.___hasSlaveLock : EntityILref = EntityILref.EntityILref()
+		self.___hasSlaveLock : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Interlocking.EntityILref
