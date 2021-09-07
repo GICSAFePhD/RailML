@@ -16,6 +16,7 @@ class RouteReleaseGroupAhead(PartialRoute.PartialRoute):
 		self.___isAutomatic = aIsAutomatic
 
 	def __init__(self):
+		super().__init__()
 		self.___isAutomatic : Long = 0
 		"""True if the route is released automatically after expiry of the delay. False otherwise, e.g. operator intervention is required."""
 

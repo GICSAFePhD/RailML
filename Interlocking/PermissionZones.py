@@ -12,6 +12,11 @@ class PermissionZones(object):
 	def PermissionZone(self, *aPermissionZone : PermissionZone):
 		self.___permissionZone = aPermissionZone
 
+	def create_PermissionZone(self):
+		if self.PermissionZone == None:
+			self.PermissionZone = []
+		self.PermissionZone.append(PermissionZone.PermissionZone())
+
 	def __init__(self):
 		self.___permissionZone : PermissionZone = None
 		# @AssociationType Interlocking.PermissionZone*

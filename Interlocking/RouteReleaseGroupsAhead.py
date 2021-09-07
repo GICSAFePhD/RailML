@@ -9,8 +9,13 @@ class RouteReleaseGroupsAhead(object):
 		return self.___routeReleaseGroupAhead
 	
 	@RouteReleaseGroupAhead.setter
-	def RouteReleaseGroupAhead(self, *aRouteReleaseGroupAhead : RouteReleaseGroupAhead):
+	def RouteReleaseGroupAhead(self, aRouteReleaseGroupAhead : RouteReleaseGroupAhead): # TODO *aRouteReleaseGroupAhead
 		self.___routeReleaseGroupAhead = aRouteReleaseGroupAhead
+
+	def create_RouteReleaseGroupAhead(self):
+		if self.RouteReleaseGroupAhead == None:
+			self.RouteReleaseGroupAhead = []
+		self.RouteReleaseGroupAhead.append(RouteReleaseGroupAhead.RouteReleaseGroupAhead())
 
 	def __init__(self):
 		self.___routeReleaseGroupAhead : RouteReleaseGroupAhead = None

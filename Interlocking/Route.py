@@ -67,34 +67,68 @@ class Route(TrackAsset.TrackAsset):
 	def ApproachReleaseDelay(self, aApproachReleaseDelay : Duration):
 		self.___approachReleaseDelay = aApproachReleaseDelay
 	@HandlesRouteType.setter
-	def HandlesRouteType(self, *aHandlesRouteType : EntityILref):
+	def HandlesRouteType(self, aHandlesRouteType : EntityILref):	# TODO *aHandlesRouteType
 		self.___handlesRouteType = aHandlesRouteType
 	@RouteActivationSection.setter
-	def RouteActivationSection(self, *aRouteActivationSection : RouteActivationSection):
+	def RouteActivationSection(self, aRouteActivationSection : RouteActivationSection):	# TODO *aRouteActivationSection
 		self.___routeActivationSection = aRouteActivationSection
 	@FacingSwitchInPosition.setter
-	def FacingSwitchInPosition(self, *aFacingSwitchInPosition : SwitchAndPosition):
+	def FacingSwitchInPosition(self, aFacingSwitchInPosition : SwitchAndPosition): # TODO *aFacingSwitchInPosition
 		self.___facingSwitchInPosition = aFacingSwitchInPosition
 	@HasTvdSection.setter
-	def HasTvdSection(self, *aHasTvdSection : EntityILref):
+	def HasTvdSection(self, aHasTvdSection : EntityILref):	# TODO *aHasTvdSection
 		self.___hasTvdSection = aHasTvdSection
 	@RouteEntry.setter
 	def RouteEntry(self, aRouteEntry : RouteEntry):
 		self.___routeEntry = aRouteEntry
 	@HasReleaseGroup.setter
-	def HasReleaseGroup(self, *aHasReleaseGroup : EntityILref):
+	def HasReleaseGroup(self, aHasReleaseGroup : EntityILref):	# TODO *aHasReleaseGroup
 		self.___hasReleaseGroup = aHasReleaseGroup
 	@SwitchPositionInDepartureTrack.setter
-	def SwitchPositionInDepartureTrack(self, *aSwitchPositionInDepartureTrack : SwitchAndPosition):
+	def SwitchPositionInDepartureTrack(self, aSwitchPositionInDepartureTrack : SwitchAndPosition):	# TODO *aSwitchPositionInDepartureTrack
 		self.___switchPositionInDepartureTrack = aSwitchPositionInDepartureTrack
 	@RouteExit.setter
 	def RouteExit(self, aRouteExit : RouteExit):
 		self.___routeExit = aRouteExit
 	@AdditionalRelation.setter
-	def AdditionalRelation(self, *aAdditionalRelation : EntityILref):
+	def AdditionalRelation(self, aAdditionalRelation : EntityILref):	# TODO *aAdditionalRelation
 		self.___additionalRelation = aAdditionalRelation
 
+	def create_HandlesRouteType(self):
+		if self.HandlesRouteType == None:
+			self.HandlesRouteType = []
+		self.HandlesRouteType.append(EntityILref.EntityILref())
+	def create_RouteActivationSection(self):
+		if self.RouteActivationSection == None:
+			self.RouteActivationSection = []
+		self.RouteActivationSection.append(RouteActivationSection.RouteActivationSection())
+	def create_FacingSwitchInPosition(self):
+		if self.FacingSwitchInPosition == None:
+			self.FacingSwitchInPosition = []
+		self.FacingSwitchInPosition.append(SwitchAndPosition.SwitchAndPosition())
+	def create_HasTvdSection(self):
+		if self.HasTvdSection == None:
+			self.HasTvdSection = []
+		self.HasTvdSection.append(EntityILref.EntityILref())
+	def create_RouteEntry(self):
+		self.RouteEntry.append(RouteEntry.RouteEntry())
+	def create_HasReleaseGroup(self):
+		if self.HasReleaseGroup == None:
+			self.HasReleaseGroup = []
+		self.HasReleaseGroup.append(EntityILref.EntityILref())
+	def create_SwitchPositionInDepartureTrack(self):
+		if self.SwitchPositionInDepartureTrack == None:
+			self.SwitchPositionInDepartureTrack = []
+		self.SwitchPositionInDepartureTrack.append(SwitchAndPosition.SwitchAndPosition())
+	def create_RouteExit(self):
+		self.RouteExit.append(RouteExit.RouteExit())
+	def create_AdditionalRelation(self):
+		if self.AdditionalRelation == None:
+			self.AdditionalRelation = []
+		self.AdditionalRelation.append(EntityILref.EntityILref())
+
 	def __init__(self):
+		super().__init__()
 		self.___locksAutomatically : Long = 0
 		"""If true, the interlocking locks this route automatically and immediately after it was cleared. The operator has to intervene if he wishes to call another route. Automatikfahrstrasse in German, trace automatique in French. Note that this functionality is often part of the control system in which case this attribute should be omitted."""
 		self.___processingDelay : Duration = 0
@@ -125,17 +159,17 @@ class Route(TrackAsset.TrackAsset):
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The references to any partial routes which are to be released together within a group."""
-		self.___switchPositionInDepartureTrack : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+		self.___switchPositionInDepartureTrack : SwitchAndPosition = None
 		# @AssociationType Interlocking.SwitchAndPosition*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.SwitchAndPosition*
 		# @AssociationMultiplicity 0..*
 		# """The tuple for any switch in the track in rear of the start signal required for this route containing the reference to the switch and its position."""
-		self.___routeExit : RouteExit = RouteExit.RouteExit()
+		self.___routeExit : RouteExit = None
 		# @AssociationType Interlocking.RouteExit
 		# @AssociationMultiplicity 1
 		# """Description of the route destination point. In most cases the route destination is a signal or a buffer stop."""
-		self.___additionalRelation : EntityILref = EntityILref.EntityILref()
+		self.___additionalRelation : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.EntityILref*

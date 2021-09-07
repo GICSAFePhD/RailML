@@ -9,8 +9,13 @@ class ShuntingZones(object):
 		return self.___shuntingZone
 	
 	@ShuntingZone.setter
-	def ShuntingZone(self, *aShuntingZone : ShuntingZone):
+	def ShuntingZone(self, aShuntingZone : ShuntingZone):	# TODO *aShuntingZone
 		self.___shuntingZone = aShuntingZone
+
+	def create_ShuntingZone(self):
+		if self.ShuntingZone == None:
+			self.ShuntingZone = []
+		self.ShuntingZone.append(ShuntingZone.ShuntingZone())
 
 	def __init__(self):
 		self.___shuntingZone : ShuntingZone = None

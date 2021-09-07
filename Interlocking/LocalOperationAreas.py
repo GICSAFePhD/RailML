@@ -12,6 +12,11 @@ class LocalOperationAreas(object):
 	def LocalOperationArea(self, *aLocalOperationArea : LocalOperationArea):
 		self.___gradientCurve = aLocalOperationArea
 
+	def create_LocalOperationArea(self):
+		if self.LocalOperationArea == None:
+			self.LocalOperationArea = []
+		self.LocalOperationArea.append(LocalOperationArea.LocalOperationArea())
+
 	def __init__(self):
 		self.___localOperationArea : LocalOperationArea = None
 		# @AssociationType Interlocking.LocalOperationArea*

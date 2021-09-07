@@ -6,12 +6,12 @@ from typing import List
 
 class tElementWithID(object):
 	@property
-	def ID(self) -> tID:
+	def Id(self) -> tID:
 		return self.___id
 
-	@ID.setter
-	def ID(self, aID : tID):
-		self.___id = aID
+	@Id.setter
+	def Id(self, aId : tID):
+		self.___id = aId
 
 	def __init__(self):
 		self.___id : tID = None

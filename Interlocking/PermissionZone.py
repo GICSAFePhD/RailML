@@ -13,19 +13,28 @@ class PermissionZone(TrackAsset.TrackAsset):
 		return self.___controlledElement
 
 	@CanBeControlledBy.setter
-	def CanBeControlledBy(self, *aCanBeControlledBy : EntityILref):
+	def CanBeControlledBy(self, aCanBeControlledBy : EntityILref):	# TODO *aCanBeControlledBy
 		self.___canBeControlledBy = aCanBeControlledBy
 	@ControlledElement.setter
-	def ControlledElement(self, *aControlledElement : EntityILref):
+	def ControlledElement(self, aControlledElement : EntityILref):	# TODO *aControlledElement
 		self.___controlledElement = aControlledElement
 
+	def create_CanBeControlledBy(self):
+		if self.CanBeControlledBy == None:
+			self.CanBeControlledBy = []
+		self.CanBeControlledBy.append(EntityILref.EntityILref())
+	def create_ControlledElement(self):
+		if self.ControlledElement == None:
+			self.ControlledElement = []
+		self.ControlledElement.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___canBeControlledBy : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___canBeControlledBy : EntityILref = None
 		"""reference to any controller, which can control this permission zone"""
-		self.___controlledElement : EntityILref = EntityILref.EntityILref()
+		self.___controlledElement : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 1..*
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 1..*
 		# """References to elements which belong to this zone and have the same operating permission"""
-

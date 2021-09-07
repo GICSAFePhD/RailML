@@ -10,7 +10,7 @@ class SignalsIL(object):
 		return self.___signalIL
 	
 	@SignalIL.setter
-	def SignalIL(self, *aSignalIL : SignalIL):
+	def SignalIL(self, aSignalIL : SignalIL):	# TODO *aSignalIL
 		self.___signalIL = aSignalIL
 
 	def create_SignalIL(self):

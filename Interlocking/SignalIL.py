@@ -78,7 +78,7 @@ class SignalIL(TrackAsset.TrackAsset):
 		self.___protectsBlockExit = aProtectsBlockExit
 
 	def create_RefersTo(self):
-		self.RefersTo.append(EntityILref.EntityILref())
+		self.RefersTo = EntityILref.EntityILref()
 	def create_ProtectsBlockExit(self):
 		if self.ProtectsBlockExit == None:
 			self.ProtectsBlockExit = []

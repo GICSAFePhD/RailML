@@ -12,6 +12,11 @@ class RouteReleaseGroupsRear(object):
 	def RouteReleaseGroupRear(self, *aRouteReleaseGroupRear : RouteReleaseGroupRear):
 		self.___routeReleaseGroupRear = aRouteReleaseGroupRear
 
+	def create_RouteReleaseGroupRear(self):
+		if self.RouteReleaseGroupRear == None:
+			self.RouteReleaseGroupRear = []
+		self.RouteReleaseGroupRear.append(RouteReleaseGroupRear.RouteReleaseGroupRear())
+
 	def __init__(self):
 		self.___routeReleaseGroupRear : RouteReleaseGroupRear = None
 		# @AssociationType Interlocking.RouteReleaseGroupRear*

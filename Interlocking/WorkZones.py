@@ -12,6 +12,11 @@ class WorkZones(object):
 	def WorkZone(self, *aWorkZone : WorkZone):
 		self.___workZone = aWorkZone
 
+	def create_WorkZone(self):
+		if self.WorkZone == None:
+			self.WorkZone = []
+		self.WorkZone.append(WorkZone.WorkZone())
+
 	def __init__(self):
 		self.___workZone : WorkZone = None
 		# @AssociationType Interlocking.WorkZone*

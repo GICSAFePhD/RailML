@@ -13,6 +13,11 @@ class Interfaces(object):
 	def Interface(self, *aInterface : Interface):
 		self.___interface = aInterface
 
+	def create_Interface(self):
+		if self.Interface == None:
+			self.Interface = []
+		self.Interface.append(Interface.Interface())
+	
 	def __init__(self):
 		self.___interface : Interface = None
 		# @AssociationType Interlocking.Interface*

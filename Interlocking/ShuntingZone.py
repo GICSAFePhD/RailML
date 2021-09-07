@@ -5,4 +5,5 @@ from typing import List
 
 class ShuntingZone(RestrictedArea.RestrictedArea):
 	"""Simple zone defined for shunting movements. It can be used to define any shunting zones."""
-	pass
+	def __init__(self):
+		super().__init__()

@@ -10,8 +10,13 @@ class ATPdevices(object):
 		return self.___atpDevice
 	
 	@ATPdevice.setter
-	def ATPdevice(self, *aATPdevice : ATPdevice):
+	def ATPdevice(self, aATPdevice : ATPdevice):	# TODO *aATPdevice
 		self.___atpDevice = aATPdevice
+
+	def create_ATPdevice(self):
+		if self.ATPdevice == None:
+			self.ATPdevice = []
+		self.ATPdevice.append(ATPdevice.ATPdevice())
 
 	def __init__(self):
 		self.___atpDevice : ATPdevice = None

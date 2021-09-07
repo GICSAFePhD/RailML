@@ -166,105 +166,55 @@ class AssetsForIL(EntityIL.EntityIL):
 		self.___powerSuppliesIL = aPowerSuppliesIL
 
 	def create_TvdSections(self):
-		if self.TvdSections == None:
-			self.TvdSections = []
-		self.TvdSections.append(TvdSections.TvdSections())
+		self.TvdSections = TvdSections.TvdSections()
 	def create_SwitchesIL(self):
-		if self.SwitchesIL == None:
-			self.SwitchesIL = []
-		self.SwitchesIL.append(SwitchesIL.SwitchesIL())
+		self.SwitchesIL = SwitchesIL.SwitchesIL()
 	def create_DerailersIL(self):
-		if self.DerailersIL == None:
-			self.DerailersIL = []
-		self.DerailersIL.append(DerailersIL.DerailersIL())
+		self.DerailersIL = DerailersIL.DerailersIL()
 	def create_MovableCrossings(self):
-		if self.MovableCrossings == None:
-			self.MovableCrossings = []
-		self.MovableCrossings.append(MovableCrossings.MovableCrossings())
+		self.MovableCrossings = MovableCrossings.MovableCrossings()
 	def create_LevelCrossingsIL(self):
-		if self.LevelCrossingsIL == None:
-			self.LevelCrossingsIL = []
-		self.LevelCrossingsIL.append(LevelCrossingsIL.LevelCrossingsIL())
+		self.LevelCrossingsIL = LevelCrossingsIL.LevelCrossingsIL()
 	def create_Keys(self):
-		if self.Keys == None:
-			self.Keys = []
 		self.Keys.append(Keys.Keys())
 	def create_KeyLocksIL(self):
-		if self.KeyLocksIL == None:
-			self.KeyLocksIL = []
-		self.KeyLocksIL.append(KeyLocksIL.KeyLocksIL())
+		self.KeyLocksIL = KeyLocksIL.KeyLocksIL()
 	def create_GenericDetectors(self):
-		if self.GenericDetectors == None:
-			self.GenericDetectors = []
-		self.GenericDetectors.append(GenericDetectors.GenericDetectors())
+		self.GenericDetectors = GenericDetectors.GenericDetectors()
 	def create_SignalsIL(self):
-		if self.SignalsIL == None:
-			self.SignalsIL = []
-		self.SignalsIL.append(SignalsIL.SignalsIL())
+		self.SignalsIL = SignalsIL.SignalsIL()
 	def create_ATPdevices(self):
-		if self.ATPdevices == None:
-			self.ATPdevices = []
-		self.ATPdevices.append(ATPdevices.ATPdevices())
+		self.ATPdevices = ATPdevices.ATPdevices()
 	def create_Interfaces(self):
-		if self.Interfaces == None:
-			self.Interfaces = []
-		self.Interfaces.append(Interfaces.Interfaces())
+		self.Interfaces = Interfaces.Interfaces()
 	def create_WorkZones(self):
-		if self.WorkZones == None:
-			self.WorkZones = []
-		self.WorkZones.append(WorkZones.WorkZones())
+		self.WorkZones = WorkZones.WorkZones()
 	def create_LocalOperationAreas(self):
-		if self.LocalOperationAreas == None:
-			self.LocalOperationAreas = []
-		self.LocalOperationAreas.append(LocalOperationAreas.LocalOperationAreas())
+		self.LocalOperationAreas = LocalOperationAreas.LocalOperationAreas()
 	def create_ShuntingZones(self):
-		if self.ShuntingZones == None:
-			self.ShuntingZones = []
-		self.ShuntingZones.append(ShuntingZones.ShuntingZones())
+		self.ShuntingZones = ShuntingZones.ShuntingZones()
 	def create_PermissionZones(self):
-		if self.PermissionZones == None:
-			self.PermissionZones = []
-		self.PermissionZones.append(PermissionZones.PermissionZones())
+		self.PermissionZones = PermissionZones.PermissionZones()
 	def create_RouteReleaseGroupsAhead(self):
-		if self.RouteReleaseGroupsAhead == None:
-			self.RouteReleaseGroupsAhead = []
-		self.RouteReleaseGroupsAhead.append(RouteReleaseGroupsAhead.RouteReleaseGroupsAhead())
+		self.RouteReleaseGroupsAhead = RouteReleaseGroupsAhead.RouteReleaseGroupsAhead()
 	def create_RouteReleaseGroupsRear(self):
-		if self.RouteReleaseGroupsRear == None:
-			self.RouteReleaseGroupsRear = []
-		self.RouteReleaseGroupsRear.append(RouteReleaseGroupsRear.RouteReleaseGroupsRear())
+		self.RouteReleaseGroupsRear = RouteReleaseGroupsRear.RouteReleaseGroupsRear()
 	def create_Routes(self):
-		if self.Routes == None:
-			self.Routes = []
-		self.Routes.append(Routes.Routes())
+		self.Routes = Routes.Routes()
 	def create_ConflictingRoutes(self):
-		if self.ConflictingRoutes == None:
-			self.ConflictingRoutes = []
-		self.ConflictingRoutes.append(ConflictingRoutes.ConflictingRoutes())
+		self.ConflictingRoutes = ConflictingRoutes.ConflictingRoutes()
 	def create_RouteRelations(self):
-		if self.RouteRelations == None:
-			self.RouteRelations = []
-		self.RouteRelations.append(RouteRelations.RouteRelations())	
+		self.RouteRelations = RouteRelations.RouteRelations()	
 	def create_CombinedRoutes(self):
-		if self.CombinedRoutes == None:
-			self.CombinedRoutes = []
-		self.CombinedRoutes.append(CombinedRoutes.CombinedRoutes())
+		self.CombinedRoutes = CombinedRoutes.CombinedRoutes()
 	def create_Overlaps(self):
-		if self.Overlaps == None:
-			self.Overlaps = []
-		self.Overlaps.append(Overlaps.Overlaps())
+		self.Overlaps = Overlaps.Overlaps()
 	def create_DangerPoints(self):
-		if self.DangerPoints == None:
-			self.DangerPoints = []
-		self.DangerPoints.append(DangerPoints.DangerPoints())
+		self.DangerPoints = DangerPoints.DangerPoints()
 	def create_DestinationPoints(self):
-		if self.DestinationPoints == None:
-			self.DestinationPoints = []
-		self.DestinationPoints.append(DestinationPoints.DestinationPoints())
+		self.DestinationPoints = DestinationPoints.DestinationPoints()
 	def create_PowerSuppliesIL(self):
-		if self.PowerSuppliesIL == None:
-			self.PowerSuppliesIL = []
-		self.PowerSuppliesIL.append(PowerSuppliesIL.PowerSuppliesIL())
+		self.PowerSuppliesIL = PowerSuppliesIL.PowerSuppliesIL()
 
 	def __init__(self):
 		self.___tvdSections : TvdSections = None
@@ -303,15 +253,15 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.SignalsIL
 		# @AssociationMultiplicity 0..1
 		# """contains all signalIL elements"""
-		self.___atpDevices : ATPdevices = None	# TODO HERE
+		self.___atpDevices : ATPdevices = None	
 		# @AssociationType Interlocking.ATPdevices
 		# @AssociationMultiplicity 0..1
 		# """contains all atpDevice elements (not with railML3.1)"""
-		self.___interfaces : Interfaces = None
+		self.___interfaces : Interfaces = None	
 		# @AssociationType Interlocking.Interfaces
 		# @AssociationMultiplicity 0..1
 		# """contains all interface elements"""
-		self.___workZones : WorkZones = None
+		self.___workZones : WorkZones = None	
 		# @AssociationType Interlocking.WorkZones
 		# @AssociationMultiplicity 0..1
 		# """contains all workZone elements"""
@@ -319,27 +269,27 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.LocalOperationAreas
 		# @AssociationMultiplicity 0..1
 		# """contains all localOperationArea elements"""
-		self.___shuntingZones : ShuntingZones = None
+		self.___shuntingZones : ShuntingZones = None	
 		# @AssociationType Interlocking.ShuntingZones
 		# @AssociationMultiplicity 0..1
 		# """contains all shuntingZone elements"""
-		self.___permissionZones : PermissionZones = None
+		self.___permissionZones : PermissionZones = None	
 		# @AssociationType Interlocking.PermissionZones
 		# @AssociationMultiplicity 0..1
 		# """contains all permissionZone elements"""
-		self.___routeReleaseGroupsAhead : RouteReleaseGroupsAhead = None
+		self.___routeReleaseGroupsAhead : RouteReleaseGroupsAhead = None	
 		# @AssociationType Interlocking.RouteReleaseGroupsAhead
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupAhead elements"""
-		self.___routeReleaseGroupsRear : RouteReleaseGroupsRear = None
+		self.___routeReleaseGroupsRear : RouteReleaseGroupsRear = None	
 		# @AssociationType Interlocking.RouteReleaseGroupsRear
 		# @AssociationMultiplicity 0..1
 		# """contains all routeReleaseGroupRear elements"""
-		self.___routes : Routes = None
+		self.___routes : Routes = None	
 		# @AssociationType Interlocking.Routes
 		# @AssociationMultiplicity 0..1
 		# """contains all route elements"""
-		self.___conflictingRoutes : ConflictingRoutes = None
+		self.___conflictingRoutes : ConflictingRoutes = None	# TODO HERE
 		# @AssociationType Interlocking.ConflictingRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all conflictingRoute elements"""

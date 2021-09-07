@@ -2,7 +2,6 @@
 # -*- coding: UTF-8 -*-
 from RailML.Common import tElementWithIDref
 from RailML.Infrastructure import tBorderTypeExt, TrackNode
-
 from typing import List, NewType
 
 Long = NewType("Long", int)

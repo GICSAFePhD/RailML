@@ -13,6 +13,11 @@ class Routes(object):
 	def Route(self, *aRoute : Route):
 		self.___route = aRoute
 
+	def create_Route(self):
+		if self.Route == None:
+			self.Route = []
+		self.Route.append(Route.Route())
+
 	def __init__(self):
 		self.___route : Route = None
 		# @AssociationType Interlocking.Route*
