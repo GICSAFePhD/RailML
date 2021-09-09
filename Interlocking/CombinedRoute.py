@@ -26,17 +26,26 @@ class CombinedRoute(EntityIL.EntityIL):
 	def ContainsRoute(self, aContainsRoute : EntityILref):
 		self.___containsRoute = aContainsRoute
 
+	def create_ComboEntry(self):
+		self.ComboEntry = EntityILref.EntityILref()
+	def create_ComboExit(self):
+		self.ComboExit = EntityILref.EntityILref()
+	def create_ContainsRoute(self):
+		if self.ContainsRoute == None:
+			self.ContainsRoute = []
+		self.ContainsRoute.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___comboEntry : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___comboEntry : EntityILref = None
 		"""Reference to the entry/start of the combined route"""
-		self.___comboExit : EntityILref = EntityILref.EntityILref()
+		self.___comboExit : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 1..*
 		# """Reference to exit/destination of combined route"""
-		self.___containsRoute : EntityILref = EntityILref.EntityILref()
+		self.___containsRoute : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """Reference to a single route contained in the combined route"""
-

@@ -22,9 +22,9 @@ class PowerSupplyIL(EntityIL.EntityIL):
 		self.___signalVoltageMode = aSignalVoltageMode
 
 	def __init__(self):
+		super().__init__()
 		self.___numberOfSimultaneousSwitchingActuators : nonNegativeInteger = 0
 		"""maximum number of switch actuators that can be activated simultaneously with this power supply"""
 		self.___signalVoltageMode : tSignalVoltageModes = tSignalVoltageModes.tSignalVoltageModes()
 		# @AssociationType Interlocking.tSignalVoltageModes
 		# """mode of switching signal voltage for day and night voltage"""
-

@@ -13,6 +13,11 @@ class RouteRelations(object):
 	def RouteRelation(self, *aRouteRelation : RouteRelation):
 		self.___routeRelation = aRouteRelation
 
+	def create_RouteRelation(self):
+		if self.RouteRelation == None:
+			self.RouteRelation = []
+		self.RouteRelation.append(RouteRelation.RouteRelation())
+	
 	def __init__(self):
 		self.___routeRelation : RouteRelation = None
 		# @AssociationType Interlocking.RouteRelation*

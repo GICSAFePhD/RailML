@@ -17,26 +17,37 @@ class ConflictingRoute(EntityIL.EntityIL):
 		return self.___reasonForConflict
 
 	@RefersToRoute.setter
-	def RefersToRoute(self, *aRefersToRoute : EntityILref):
+	def RefersToRoute(self, aRefersToRoute : EntityILref):	# TODO *aRefersToRoute
 		self.___refersToRoute = aRefersToRoute
 	@ConflictsWithRoute.setter
 	def ConflictsWithRoute(self, aConflictsWithRoute : EntityILref):
 		self.___conflictsWithRoute = aConflictsWithRoute
 	@ReasonForConflict.setter
-	def ReasonForConflict(self, *aReasonForConflict : ConflictReason):
+	def ReasonForConflict(self, aReasonForConflict : ConflictReason):	# TODO *aReasonForConflict
 		self.___reasonForConflict = aReasonForConflict
 
+	def create_RefersToRoute(self):
+		self.RefersToRoute = EntityILref.EntityILref()
+	def create_ConflictsWithRoute(self):
+		if self.ConflictsWithRoute == None:
+			self.ConflictsWithRoute = []
+		self.ConflictsWithRoute.append(EntityILref.EntityILref())
+	def create_ReasonForConflict(self):
+		if self.ReasonForConflict == None:
+			self.ReasonForConflict = []
+		self.ReasonForConflict.append(ConflictReason.ConflictReason())
+
 	def __init__(self):
-		self.___refersToRoute : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___refersToRoute : EntityILref = None
 		"""The reference to the affected route."""
-		self.___conflictsWithRoute : EntityILref = EntityILref.EntityILref()
+		self.___conflictsWithRoute : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the route causing the conflict."""
-		self.___reasonForConflict : ConflictReason = ConflictReason.ConflictReason()
+		self.___reasonForConflict : ConflictReason = None
 		# @AssociationType Interlocking.ConflictReason*
 		# @AssociationMultiplicity 0..*
 		# """Description of the reason for the conflict."""
-

@@ -289,19 +289,19 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.Routes
 		# @AssociationMultiplicity 0..1
 		# """contains all route elements"""
-		self.___conflictingRoutes : ConflictingRoutes = None	# TODO HERE
+		self.___conflictingRoutes : ConflictingRoutes = None
 		# @AssociationType Interlocking.ConflictingRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all conflictingRoute elements"""
-		self.___routeRelations : RouteRelations = None
+		self.___routeRelations : RouteRelations = None	
 		# @AssociationType Interlocking.RouteRelations
 		# @AssociationMultiplicity 0..1
 		# """contains all routeRelation elements"""
-		self.___combinedRoutes : CombinedRoutes = None
+		self.___combinedRoutes : CombinedRoutes = None	
 		# @AssociationType Interlocking.CombinedRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all combinedRoute elements"""
-		self.___overlaps : Overlaps = None
+		self.___overlaps : Overlaps = None	# TODO HERE
 		# @AssociationType Interlocking.Overlaps
 		# @AssociationMultiplicity 0..1
 		# """contains all overlap elements"""
@@ -309,11 +309,11 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.DangerPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all dangerPoints elements"""
-		self.___destinationPoints : DestinationPoints = None
+		self.___destinationPoints : DestinationPoints = None	# TODO DONE
 		# @AssociationType Interlocking.DestinationPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all destinationPoint elements"""
-		self.___powerSuppliesIL : PowerSuppliesIL = None
+		self.___powerSuppliesIL : PowerSuppliesIL = None	# TODO DONE
 		# @AssociationType Interlocking.PowerSuppliesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all powerSupplyIL elements"""

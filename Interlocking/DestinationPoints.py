@@ -14,6 +14,11 @@ class DestinationPoints(object):
 	def DestinationPoint(self, *aDestinationPoint : RouteExit):
 		self.___destinationPoint = aDestinationPoint
 
+	def create_DestinationPoint(self):
+		if self.DestinationPoint == None:
+			self.DestinationPoint = []
+		self.DestinationPoint.append(RouteExit.RouteExit())
+	
 	def __init__(self):
 		self.___destinationPoint : RouteExit = None
 		# @AssociationType Interlocking.RouteExit*

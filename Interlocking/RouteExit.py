@@ -25,17 +25,23 @@ class RouteExit(EntityIL.EntityIL):
 	def HasOverlap(self, aHasOverlap : EntityILref):
 		self.___hasOverlap = aHasOverlap
 
+	def create_RefersTo(self):
+		self.RefersTo = EntityILref.EntityILref()
+	def create_HasDangerPoint(self):
+		self.HasDangerPoint = EntityILref.EntityILref()
+	def create_HasOverlap(self):
+		self.HasOverlap = EntityILref.EntityILref()
+
 	def __init__(self):
-		self.___refersTo : EntityILref = EntityILref.EntityILref()
+		self.___refersTo : EntityILref = None
 		"""The reference to the track asset representing the destination point of the route. In most cases this is a signal or buffer stop."""
-		self.___hasDangerPoint : EntityILref = EntityILref.EntityILref()
+		self.___hasDangerPoint : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to any danger point related to this route end."""
-		self.___hasOverlap : EntityILref = EntityILref.EntityILref()
+		self.___hasOverlap : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to any overlap related to this route end."""
-

@@ -13,6 +13,11 @@ class ConflictingRoutes(object):
 	def ConflictingRoute(self, *aConflictingRoute : ConflictingRoute):
 		self.___conflictingRoute = aConflictingRoute
 
+	def create_ConflictingRoute(self):
+		if self.ConflictingRoute == None:
+			self.ConflictingRoute = []
+		self.ConflictingRoute.append(ConflictingRoute.ConflictingRoute())
+
 	def __init__(self):
 		self.___conflictingRoute : ConflictingRoute = None
 		# @AssociationType Interlocking.ConflictingRoute*

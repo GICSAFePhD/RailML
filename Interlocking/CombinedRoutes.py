@@ -13,6 +13,11 @@ class CombinedRoutes(object):
 	def CombinedRoute(self, *aCombinedRoute : CombinedRoute):
 		self.___combinedRoute = aCombinedRoute
 
+	def create_CombinedRoute(self):
+		if self.CombinedRoute == None:
+			self.CombinedRoute = []
+		self.CombinedRoute.append(CombinedRoute.CombinedRoute())
+
 	def __init__(self):
 		self.___combinedRoute : CombinedRoute = None
 		# @AssociationType Interlocking.CombinedRoute*

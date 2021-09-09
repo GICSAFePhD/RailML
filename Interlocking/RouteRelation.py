@@ -33,31 +33,65 @@ class RouteRelation(EntityIL.EntityIL):
 		return self.___requiredLevelCrossingState
 
 	@RequiredSwitchPosition.setter
-	def RequiredSwitchPosition(self, *aRequiredSwitchPosition : SwitchAndGivenPosition):
+	def RequiredSwitchPosition(self, aRequiredSwitchPosition : SwitchAndGivenPosition):	# TODO *aRequiredSwitchPosition
 		self.___requiredSwitchPosition = aRequiredSwitchPosition
 	@RequiredDerailerPosition.setter
-	def RequiredDerailerPosition(self, *aRequiredDerailerPosition : DerailerAndGivenPosition):
+	def RequiredDerailerPosition(self, aRequiredDerailerPosition : DerailerAndGivenPosition):	# TODO *aRequiredDerailerPosition
 		self.___requiredDerailerPosition = aRequiredDerailerPosition
 	@RequiredCrossingPosition.setter
-	def RequiredCrossingPosition(self, *aRequiredCrossingPosition : CrossingAndGivenPosition):
+	def RequiredCrossingPosition(self, aRequiredCrossingPosition : CrossingAndGivenPosition):	# TODO *aRequiredCrossingPosition
 		self.___requiredCrossingPosition = aRequiredCrossingPosition
 	@RequiredDetectorState.setter
-	def RequiredDetectorState(self, *aRequiredDetectorState : DetectorAndGivenState):
+	def RequiredDetectorState(self, aRequiredDetectorState : DetectorAndGivenState):	# TODO *aRequiredDetectorState
 		self.___requiredDetectorState = aRequiredDetectorState
 	@RequiredSignalAspect.setter
-	def RequiredSignalAspect(self, *aRequiredSignalAspect : SignalAndGivenAspect):
+	def RequiredSignalAspect(self, aRequiredSignalAspect : SignalAndGivenAspect):	# TODO *aRequiredSignalAspect
 		self.___requiredSignalAspect = aRequiredSignalAspect
 	@RequiredSectionState.setter
-	def RequiredSectionState(self, *aRequiredSectionState : SectionAndGivenVacancy):
+	def RequiredSectionState(self, aRequiredSectionState : SectionAndGivenVacancy):	# TODO *aRequiredSectionState
 		self.___requiredSectionState = aRequiredSectionState
 	@RequiredKeyLockState.setter
-	def RequiredKeyLockState(self, *aRequiredKeyLockState : LockAndGivenState):
+	def RequiredKeyLockState(self, aRequiredKeyLockState : LockAndGivenState):	# TODO *aRequiredKeyLockState
 		self.___requiredKeyLockState = aRequiredKeyLockState
 	@RequiredLevelCrossingState.setter
-	def RequiredLevelCrossingState(self, *aRequiredLevelCrossingState : LevelCrossingAndGivenState):
+	def RequiredLevelCrossingState(self, aRequiredLevelCrossingState : LevelCrossingAndGivenState):	# TODO *aRequiredLevelCrossingState
 		self.___requiredLevelCrossingState = aRequiredLevelCrossingState
 
+	def create_RequiredSwitchPosition(self):
+		if self.RequiredSwitchPosition == None:
+			self.RequiredSwitchPosition = []
+		self.RequiredSwitchPosition.append(SwitchAndGivenPosition.SwitchAndGivenPosition())
+	def create_RequiredDerailerPosition(self):
+		if self.RequiredDerailerPosition == None:
+			self.RequiredDerailerPosition = []
+		self.RequiredDerailerPosition.append(DerailerAndGivenPosition.DerailerAndGivenPosition())
+	def create_RequiredCrossingPosition(self):
+		if self.RequiredCrossingPosition == None:
+			self.RequiredCrossingPosition = []
+		self.RequiredCrossingPosition.append(CrossingAndGivenPosition.CrossingAndGivenPosition())
+	def create_RequiredDetectorState(self):
+		if self.RequiredDetectorState == None:
+			self.RequiredDetectorState = []
+		self.RequiredDetectorState.append(DetectorAndGivenState.DetectorAndGivenState())
+	def create_RequiredSignalAspect(self):
+		if self.RequiredSignalAspect == None:
+			self.RequiredSignalAspect = []
+		self.RequiredSignalAspect.append(SignalAndGivenAspect.SignalAndGivenAspect())
+	def create_RequiredSectionState(self):
+		if self.RequiredSectionState == None:
+			self.RequiredSectionState = []
+		self.RequiredSectionState.append(SectionAndGivenVacancy.SectionAndGivenVacancy())
+	def create_RequiredKeyLockState(self):
+		if self.RequiredKeyLockState == None:
+			self.RequiredKeyLockState = []
+		self.RequiredKeyLockState.append(LockAndGivenState.LockAndGivenState())
+	def create_RequiredLevelCrossingState(self):
+		if self.RequiredLevelCrossingState == None:
+			self.RequiredLevelCrossingState = []
+		self.RequiredLevelCrossingState.append(LevelCrossingAndGivenState.LevelCrossingAndGivenState())
+
 	def __init__(self):
+		super().__init__()
 		self.___requiredSwitchPosition : SwitchAndGivenPosition = SwitchAndGivenPosition.SwitchAndGivenPosition()
 		# @AssociationType Interlocking.SwitchAndGivenPosition*
 		# @AssociationMultiplicity 0..*

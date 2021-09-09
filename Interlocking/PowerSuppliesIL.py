@@ -13,6 +13,11 @@ class PowerSuppliesIL(object):
 	def PowerSupplyIL(self, *aPowerSupplyIL : PowerSupplyIL):
 		self.___powerSupplyIL = aPowerSupplyIL
 
+	def create_PowerSupplyIL(self):
+		if self.PowerSupplyIL == None:
+			self.PowerSupplyIL = []
+		self.PowerSupplyIL.append(PowerSupplyIL.PowerSupplyIL())
+
 	def __init__(self):
 		self.___powerSupplyIL : PowerSupplyIL = None
 		# @AssociationType Interlocking.PowerSupplyIL*
