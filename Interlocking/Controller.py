@@ -28,4 +28,3 @@ class Controller(EntityIL.EntityIL):
 		# @AssociationType Interlocking.Itineraries
 		# @AssociationMultiplicity 0..1
 		# """The container of all itineraries as a combination of single routes defining the path from A to B independent of involved signalBoxes (interlockings)."""
-

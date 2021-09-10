@@ -14,7 +14,8 @@ class LevelCrossingAndGivenState(AssetAndGivenState.AssetAndGivenState):
 		self.___relatedLevelCrossingAndState = aRelatedLevelCrossingAndState
 
 	def __init__(self):
-		self.___relatedLevelCrossingAndState : LevelCrossingAndState = LevelCrossingAndState.LevelCrossingAndState()
+		super().__init__()
+		self.___relatedLevelCrossingAndState : LevelCrossingAndState = None
 		# @AssociationType Interlocking.LevelCrossingAndState
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the level crossing and its state"""

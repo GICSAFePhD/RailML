@@ -18,4 +18,3 @@ class Controllers(object):
 		# @AssociationType Interlocking.Controller*
 		# @AssociationMultiplicity 1..*
 		# """Container with reference to connected interlockings and system assets controlled by this operational terminal."""
-

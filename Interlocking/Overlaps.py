@@ -13,6 +13,11 @@ class Overlaps(object):
 	def Overlap(self, *aOverlap : Overlap):
 		self.___overlap = aOverlap
 
+	def create_Overlap(self):
+		if self.Overlap == None:
+			self.Overlap = []
+		self.Overlap.append(Overlap.Overlap())
+
 	def __init__(self):
 		self.___overlap : Overlap = None
 		# @AssociationType Interlocking.Overlap*

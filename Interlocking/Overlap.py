@@ -43,15 +43,15 @@ class Overlap(EntityIL.EntityIL):
 	@property
 	def OverlapRelease(self) -> OverlapRelease:
 		return self.___overlapRelease
-	@property
-	def Unnamed_RouteExit_(self) -> RouteExit:
-		return self.___unnamed_RouteExit_
-	@property
-	def RequiresPointInPosition(self) -> List:
-		return self.___requiresPointInPosition
-	@property
-	def RequiresAssetInState(self) -> List:
-		return self.___requiresAssetInState
+	#@property
+	#def Unnamed_RouteExit_(self) -> RouteExit:
+	#		return self.___unnamed_RouteExit_
+	#@property
+	#def RequiresPointInPosition(self) -> List:
+	#	return self.___requiresPointInPosition
+	#@property
+	#def RequiresAssetInState(self) -> List:
+	#	return self.___requiresAssetInState
 
 	@ReleaseSpeed.setter
 	def ReleaseSpeed(self, aReleaseSpeed : tSpeedKmPerHour):
@@ -69,75 +69,101 @@ class Overlap(EntityIL.EntityIL):
 	def ActiveForApproachRoute(self, aActiveForApproachRoute : EntityILref):
 		self.___activeForApproachRoute = aActiveForApproachRoute
 	@RelatedToTrackAsset.setter
-	def RelatedToTrackAsset(self, *aRelatedToTrackAsset : EntityILref):
+	def RelatedToTrackAsset(self, aRelatedToTrackAsset : EntityILref): # TODO *aRelatedToTrackAsset
 		self.___relatedToTrackAsset = aRelatedToTrackAsset
 	@RequiresSwitchInPosition.setter
-	def RequiresSwitchInPosition(self, *aRequiresSwitchInPosition : SwitchAndGivenPosition):
+	def RequiresSwitchInPosition(self, aRequiresSwitchInPosition : SwitchAndGivenPosition): # TODO *aRequiresSwitchInPosition
 		self.___requiresSwitchInPosition = aRequiresSwitchInPosition
 	@RequiresLevelCrossingInState.setter
-	def RequiresLevelCrossingInState(self, *aRequiresLevelCrossingInState : LevelCrossingAndGivenState):
+	def RequiresLevelCrossingInState(self, aRequiresLevelCrossingInState : LevelCrossingAndGivenState): # TODO *aRequiresLevelCrossingInState
 		self.___requiresLevelCrossingInState = aRequiresLevelCrossingInState
 	@HasTvdSection.setter
-	def HasTvdSection(self, *aHasTvdSection : EntityILref):
+	def HasTvdSection(self, aHasTvdSection : EntityILref):	# TODO *aHasTvdSection
 		self.___hasTvdSection = aHasTvdSection
 	@IsLimitedBy.setter
-	def IsLimitedBy(self, *aIsLimitedBy : EntityILref):
+	def IsLimitedBy(self, aIsLimitedBy : EntityILref):	# TODO *aIsLimitedBy
 		self.___isLimitedBy = aIsLimitedBy
 	@OverlapRelease.setter
 	def OverlapRelease(self, aOverlapRelease : OverlapRelease):
 		self.___overlapRelease = aOverlapRelease
-	@Unnamed_RouteExit_.setter
-	def Unnamed_RouteExit_(self, aUnnamed_RouteExit_ : RouteExit):
-		self.___unnamed_RouteExit_ = aUnnamed_RouteExit_
-	@RequiresPointInPosition.setter
-	def RequiresPointInPosition(self, aRequiresPointInPosition : List):
-		self.___requiresPointInPosition = aRequiresPointInPosition
-	@RequiresAssetInState.setter
-	def RequiresAssetInState(self, aRequiresAssetInState : List):
-		self.___requiresAssetInState = aRequiresAssetInState
+	#@Unnamed_RouteExit_.setter
+	#def Unnamed_RouteExit_(self, aUnnamed_RouteExit_ : RouteExit):
+	#	self.___unnamed_RouteExit_ = aUnnamed_RouteExit_
+	#@RequiresPointInPosition.setter
+	#def RequiresPointInPosition(self, aRequiresPointInPosition : List):
+	#	self.___requiresPointInPosition = aRequiresPointInPosition
+	#@RequiresAssetInState.setter
+	#def RequiresAssetInState(self, aRequiresAssetInState : List):
+	#	self.___requiresAssetInState = aRequiresAssetInState
+
+	def create_ActiveForApproachRoute(self):
+		if self.ActiveForApproachRoute == None:
+			self.ActiveForApproachRoute = []
+		self.ActiveForApproachRoute.append(EntityILref.EntityILref())
+	def create_RelatedToTrackAsset(self):
+		self.RelatedToTrackAsset = EntityILref.EntityILref()
+	def create_RequiresSwitchInPosition(self):
+		if self.RequiresSwitchInPosition == None:
+			self.RequiresSwitchInPosition = []
+		self.RequiresSwitchInPosition.append(SwitchAndGivenPosition.SwitchAndGivenPosition())
+	def create_RequiresLevelCrossingInState(self):
+		if self.RequiresLevelCrossingInState == None:
+			self.RequiresLevelCrossingInState = []
+		self.RequiresLevelCrossingInState.append(LevelCrossingAndGivenState.LevelCrossingAndGivenState())
+	def create_HasTvdSection(self):
+		if self.HasTvdSection == None:
+			self.HasTvdSection = []
+		self.HasTvdSection.append(EntityILref.EntityILref())
+	def create_IsLimitedBy(self):
+		if self.IsLimitedBy == None:
+			self.IsLimitedBy = []
+		self.IsLimitedBy.append(EntityILref.EntityILref())
+	def create_OverlapRelease(self):
+		self.OverlapRelease =  OverlapRelease.OverlapRelease()
 
 	def __init__(self):
-		self.___releaseSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		super().__init__()
+		self.___releaseSpeed : tSpeedKmPerHour = None
 		"""Release speed in km/h associated with the overlap"""
-		self.___overlapSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___overlapSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum speed in the overlap in km/h for other trains than the one using the related route."""
 		self.___overlapValidityTime : Duration = 0
 		"""The overlap validity time is the time that the train assumes the overlap to be locked. This is the ETCS validity time T_OL."""
-		self.___length : tLengthM = tLengthM.tLengthM()
+		self.___length : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """Alternatively to a particular limit the length of the overlap in metres can be given."""
-		self.___activeForApproachRoute : EntityILref = EntityILref.EntityILref()
+		self.___activeForApproachRoute : EntityILref = None
 		"""The reference to the related route using the overlap."""
-		self.___relatedToTrackAsset : EntityILref = EntityILref.EntityILref()
+		self.___relatedToTrackAsset : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """Alternatively to a specific route a reference to a track asset the danger point is related to can be given. This can be a destination signal of a route or any other suitable object."""
-		self.___requiresSwitchInPosition : SwitchAndGivenPosition = SwitchAndGivenPosition.SwitchAndGivenPosition()
+		self.___requiresSwitchInPosition : SwitchAndGivenPosition = None
 		# @AssociationType Interlocking.SwitchAndGivenPosition*
 		# @AssociationMultiplicity 0..*
 		# """The reference to any switch in the overlap required to be in a particular position and its position."""
-		self.___requiresLevelCrossingInState : LevelCrossingAndGivenState = LevelCrossingAndGivenState.LevelCrossingAndGivenState()
+		self.___requiresLevelCrossingInState : LevelCrossingAndGivenState = None
 		# @AssociationType Interlocking.LevelCrossingAndGivenState*
 		# @AssociationMultiplicity 0..*
 		# """The reference to any level crossing in the overlap required to be in a particular state and its state."""
-		self.___hasTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___hasTvdSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to any TVD section(s) within the path of the overlap."""
-		self.___isLimitedBy : EntityILref = EntityILref.EntityILref()
+		self.___isLimitedBy : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """References to track assets limiting the overlap. It may be used in conjunction to attribute length."""
-		self.___overlapRelease : OverlapRelease = OverlapRelease.OverlapRelease()
+		self.___overlapRelease : OverlapRelease = None
 		# @AssociationType Interlocking.OverlapRelease
 		# @AssociationMultiplicity 0..1
 		# """Overlap is set in lockstep with the route. The interlocking releases the overlap when it is safe to presume that an approaching train will not overrun a closed destination signal. When the train occupied the last section (or destination area), an overlap release timer starts running. The timer value is defined by operational rules and the approaching speed. Upon expiry, the interlocking releases the overlap. Overlap is released together with the route or after expiration of the release timer. Overlap is released after a defined time in a timer that starts from a timerTriggerPoint."""
-		self.___unnamed_RouteExit_ : RouteExit = RouteExit.RouteExit()
-		self.___requiresPointInPosition = []
-		"""# @AssociationMultiplicity 0..*"""
-		self.___requiresAssetInState = []
-		"""# @AssociationMultiplicity 0..*"""
+		#self.___unnamed_RouteExit_ : RouteExit = None
+		#self.___requiresPointInPosition = []
+		#"""# @AssociationMultiplicity 0..*"""
+		#self.___requiresAssetInState = []
+		#"""# @AssociationMultiplicity 0..*"""

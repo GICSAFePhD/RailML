@@ -20,11 +20,11 @@ class SwitchAndPosition(AssetAndState.AssetAndState):
 		self.___refersToSwitch = aRefersToSwitch
 
 	def __init__(self):
-		self.___inPosition : tSwitchPosition = tSwitchPosition.tSwitchPosition()
+		super().__init__()
+		self.___inPosition : tSwitchPosition = None
 		# @AssociationType Interlocking.tSwitchPosition
 		# """The position the switch is in."""
-		self.___refersToSwitch : EntityILref = EntityILref.EntityILref()
+		self.___refersToSwitch : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the switch."""
-

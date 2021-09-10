@@ -37,7 +37,7 @@ class Border(TrackNode.TrackNode):
 	def create_Type(self):
 		self.Type = tBorderTypeExt.tBorderTypeExt()
 	def create_Id(self):
-		self.Type = tElementWithIDref.tElementWithIDref()
+		self.Id = tElementWithIDref.tElementWithIDref()
 	
 	def __init__(self):
 		super().__init__()

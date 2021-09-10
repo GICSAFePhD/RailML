@@ -111,7 +111,7 @@ class Route(TrackAsset.TrackAsset):
 			self.HasTvdSection = []
 		self.HasTvdSection.append(EntityILref.EntityILref())
 	def create_RouteEntry(self):
-		self.RouteEntry.append(RouteEntry.RouteEntry())
+		self.RouteEntry = RouteEntry.RouteEntry()
 	def create_HasReleaseGroup(self):
 		if self.HasReleaseGroup == None:
 			self.HasReleaseGroup = []
@@ -121,7 +121,7 @@ class Route(TrackAsset.TrackAsset):
 			self.SwitchPositionInDepartureTrack = []
 		self.SwitchPositionInDepartureTrack.append(SwitchAndPosition.SwitchAndPosition())
 	def create_RouteExit(self):
-		self.RouteExit.append(RouteExit.RouteExit())
+		self.RouteExit = RouteExit.RouteExit()
 	def create_AdditionalRelation(self):
 		if self.AdditionalRelation == None:
 			self.AdditionalRelation = []
@@ -139,23 +139,23 @@ class Route(TrackAsset.TrackAsset):
 		"""The delay for the signal after the conditions for proceed aspect are removed and the physical closure of the signal."""
 		self.___approachReleaseDelay : Duration = 0
 		"""The delay between the request from signalman to release an already approached (definitely locked) route and the real release of associated elements of the route."""
-		self.___handlesRouteType : EntityILref = EntityILref.EntityILref()
+		self.___handlesRouteType : EntityILref = None
 		"""The reference to the IM specific route type. This implies particular characteristics of the route dependent on the IM operational rules."""
-		self.___routeActivationSection : RouteActivationSection = RouteActivationSection.RouteActivationSection()
+		self.___routeActivationSection : RouteActivationSection = None
 		# @AssociationType Interlocking.RouteActivationSection*
 		# @AssociationMultiplicity 0..*
 		# """Description of the route activation, i.e. automatic setting or locking when the route entry is approached."""
-		self.___facingSwitchInPosition : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+		self.___facingSwitchInPosition : SwitchAndPosition = None
 		"""The tuple for each facing switch in the running path to unambiguously define the route containing the reference to the switch and its position."""
-		self.___hasTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___hasTvdSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to TVD section(s) within the running path of the route."""
-		self.___routeEntry : RouteEntry = RouteEntry.RouteEntry()
+		self.___routeEntry : RouteEntry = None
 		# @AssociationType Interlocking.RouteEntry
 		# @AssociationMultiplicity 1
 		# """Description of the start point of the route. This is normally a signal."""
-		self.___hasReleaseGroup : EntityILref = EntityILref.EntityILref()
+		self.___hasReleaseGroup : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The references to any partial routes which are to be released together within a group."""

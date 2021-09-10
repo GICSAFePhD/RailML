@@ -301,7 +301,7 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.CombinedRoutes
 		# @AssociationMultiplicity 0..1
 		# """contains all combinedRoute elements"""
-		self.___overlaps : Overlaps = None	# TODO HERE
+		self.___overlaps : Overlaps = None
 		# @AssociationType Interlocking.Overlaps
 		# @AssociationMultiplicity 0..1
 		# """contains all overlap elements"""
@@ -309,11 +309,11 @@ class AssetsForIL(EntityIL.EntityIL):
 		# @AssociationType Interlocking.DangerPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all dangerPoints elements"""
-		self.___destinationPoints : DestinationPoints = None	# TODO DONE
+		self.___destinationPoints : DestinationPoints = None
 		# @AssociationType Interlocking.DestinationPoints
 		# @AssociationMultiplicity 0..1
 		# """contains all destinationPoint elements"""
-		self.___powerSuppliesIL : PowerSuppliesIL = None	# TODO DONE
+		self.___powerSuppliesIL : PowerSuppliesIL = None
 		# @AssociationType Interlocking.PowerSuppliesIL
 		# @AssociationMultiplicity 0..1
 		# """contains all powerSupplyIL elements"""

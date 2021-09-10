@@ -20,11 +20,11 @@ class LevelCrossingAndState(AssetAndState.AssetAndState):
 		self.___refersToLevelCrossing = aRefersToLevelCrossing
 
 	def __init__(self):
-		self.___inState : tLevelCrossingState = tLevelCrossingState.tLevelCrossingState()
+		None
+		self.___inState : tLevelCrossingState = None
 		# @AssociationType Interlocking.tLevelCrossingState
 		# """The state the level crossing has."""
-		self.___refersToLevelCrossing : EntityILref = EntityILref.EntityILref()
+		self.___refersToLevelCrossing : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the level crossing."""
-

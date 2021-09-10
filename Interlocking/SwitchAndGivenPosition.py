@@ -13,9 +13,12 @@ class SwitchAndGivenPosition(AssetAndGivenState.AssetAndGivenState):
 	def RelatedSwitchAndPosition(self, aRelatedSwitchAndPosition : SwitchAndPosition):
 		self.___relatedSwitchAndPosition = aRelatedSwitchAndPosition
 
+	def create_RelatedSwitchAndPosition(self):
+		self.RelatedSwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+
 	def __init__(self):
-		self.___relatedSwitchAndPosition : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+		super().__init__()
+		self.___relatedSwitchAndPosition : SwitchAndPosition = None
 		# @AssociationType Interlocking.SwitchAndPosition
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the switch and its position"""
-
