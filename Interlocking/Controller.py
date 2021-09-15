@@ -20,11 +20,12 @@ class Controller(EntityIL.EntityIL):
 		self.___itineraries = aItineraries
 
 	def __init__(self):
-		self.___controlledAssets : ControlledAssets = ControlledAssets.ControlledAssets()
+		super().__init__()
+		self.___controlledAssets : ControlledAssets = None
 		# @AssociationType Interlocking.ControlledAssets
 		# @AssociationMultiplicity 1
 		# """The container of references to all signalBox (interlocking) and system assets controlled from this unit."""
-		self.___itineraries : Itineraries = Itineraries.Itineraries()
+		self.___itineraries : Itineraries = None
 		# @AssociationType Interlocking.Itineraries
 		# @AssociationMultiplicity 0..1
 		# """The container of all itineraries as a combination of single routes defining the path from A to B independent of involved signalBoxes (interlockings)."""

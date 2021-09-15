@@ -13,6 +13,11 @@ class Controllers(object):
 	def Controller(self, *aController : Controller):
 		self.___controller = aController
 
+	def create_Controller(self):
+		if self.Controller == None:
+			self.Controller = []
+		self.Controller.append(Controller.Controller())
+	
 	def __init__(self):
 		self.___controller : Controller = None
 		# @AssociationType Interlocking.Controller*

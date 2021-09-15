@@ -20,11 +20,11 @@ class ControlledAssets(object):
 		self.___controlledSystemAsset = aSystemAssetConnectedToIL
 
 	def __init__(self):
-		self.___controlledInterlocking : ControlledSignalBox = ControlledSignalBox.ControlledSignalBox()
+		self.___controlledInterlocking : ControlledSignalBox = None
 		# @AssociationType Interlocking.ControlledSignalBox*
 		# @AssociationMultiplicity 1..*
 		# """The reference to a signalBox (interlocking) controlled from this unit."""
-		self.___controlledSystemAsset : SystemAssetConnectedToIL = SystemAssetConnectedToIL.SystemAssetConnectedToIL()
+		self.___controlledSystemAsset : SystemAssetConnectedToIL = None
 		# @AssociationType Interlocking.SystemAssetConnectedToIL*
 		# @AssociationMultiplicity 0..*
 		# """The reference to a system asset controlled from this unit. It shall not repeat system assets already controlled from a particular interlocking."""
