@@ -19,11 +19,15 @@ class SystemAssetConnectedToIL(EntityIL.EntityIL):
 	def ConnectedSystemAsset(self, aConnectedSystemAsset : EntityILref):
 		self.___connectedSystemAsset = aConnectedSystemAsset
 
+	def create_ConnectedSystemAsset(self):
+		self.ConnectedSystemAsset = EntityILref.EntityILref()
+	
 	def __init__(self):
-		self.___extentOfControl : tExtentOfControl = tExtentOfControl.tExtentOfControl()
+		super().__init__()
+		self.___extentOfControl : tExtentOfControl = None
 		# @AssociationType Interlocking.tExtentOfControl
 		# """The level of control of the asset by the interlocking."""
-		self.___connectedSystemAsset : EntityILref = EntityILref.EntityILref()
+		self.___connectedSystemAsset : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the connected system asset."""

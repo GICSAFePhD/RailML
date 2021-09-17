@@ -49,11 +49,11 @@ class Interlocking(object):
 		self.GenericIMs.append(GenericIMs.GenericIMs())
 
 	def __init__(self):
-		self.___assetsForIL : AssetsForIL = None
+		self.___assetsForIL : AssetsForIL = None	# TODO DONE
 		# @AssociationType Interlocking.AssetsForIL
 		# @AssociationMultiplicity 0..1
 		# """container for all asset elements needed for interlocking purpose"""
-		self.___controllers : Controllers = None
+		self.___controllers : Controllers = None	# TODO DONE
 		# @AssociationType Interlocking.Controllers
 		# @AssociationMultiplicity 0..1
 		# """container for all Controller elements"""

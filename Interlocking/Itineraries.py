@@ -13,9 +13,13 @@ class Itineraries(object):
 	def Itinerary(self, *aItinerary : CombinedRoute):
 		self.___itinerary = aItinerary
 
+	def create_Itinerary(self):
+		if self.Itinerary == None:
+			self.Itinerary = []
+		self.Itinerary.append(CombinedRoute.CombinedRoute())
+	
 	def __init__(self):
-		self.___itinerary : CombinedRoute = CombinedRoute.CombinedRoute()
+		self.___itinerary : CombinedRoute = None
 		# @AssociationType Interlocking.CombinedRoute*
 		# @AssociationMultiplicity 1..*
 		# """Itinerary is a combination of single routes defining the path from A to B independent of involved signalBoxes (interlockings)."""
-

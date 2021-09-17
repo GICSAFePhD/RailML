@@ -13,11 +13,20 @@ class ControlledAssets(object):
 		return self.___controlledSystemAsset
 
 	@ControlledSignalBox.setter
-	def ControlledSignalBox(self, *aControlledSignalBox : ControlledSignalBox):
+	def ControlledSignalBox(self, aControlledSignalBox : ControlledSignalBox):	# TODO *aControlledSignalBox
 		self.___controlledInterlocking = aControlledSignalBox
 	@SystemAssetConnectedToIL.setter
-	def SystemAssetConnectedToIL(self, *aSystemAssetConnectedToIL : SystemAssetConnectedToIL):
+	def SystemAssetConnectedToIL(self, aSystemAssetConnectedToIL : SystemAssetConnectedToIL):	# TODO *aSystemAssetConnectedToIL
 		self.___controlledSystemAsset = aSystemAssetConnectedToIL
+
+	def create_ControlledSignalBox(self):
+		if self.ControlledSignalBox == None:
+			self.ControlledSignalBox = []
+		self.ControlledSignalBox.append(ControlledSignalBox.ControlledSignalBox())
+	def create_SystemAssetConnectedToIL(self):
+		if self.SystemAssetConnectedToIL == None:
+			self.SystemAssetConnectedToIL = []
+		self.SystemAssetConnectedToIL.append(SystemAssetConnectedToIL.SystemAssetConnectedToIL())
 
 	def __init__(self):
 		self.___controlledInterlocking : ControlledSignalBox = None
@@ -28,4 +37,3 @@ class ControlledAssets(object):
 		# @AssociationType Interlocking.SystemAssetConnectedToIL*
 		# @AssociationMultiplicity 0..*
 		# """The reference to a system asset controlled from this unit. It shall not repeat system assets already controlled from a particular interlocking."""
-

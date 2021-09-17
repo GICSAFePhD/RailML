@@ -19,6 +19,11 @@ class Controller(EntityIL.EntityIL):
 	def Itineraries(self, aItineraries : Itineraries):
 		self.___itineraries = aItineraries
 
+	def create_ControlledAssets(self):
+		self.ControlledAssets = ControlledAssets.ControlledAssets()
+	def create_Itineraries(self):
+		self.Itineraries = Itineraries.Itineraries()
+
 	def __init__(self):
 		super().__init__()
 		self.___controlledAssets : ControlledAssets = None

@@ -19,6 +19,9 @@ class ControlledSignalBox(EntityIL.EntityIL):
 	def ConnectedSignalBox(self, aConnectedSignalBox : EntityILref):
 		self.___connectedSignalBox = aConnectedSignalBox
 
+	def create_ConnectedSignalBox(self):
+		self.ConnectedSignalBox = EntityILref.EntityILref()
+
 	def __init__(self):
 		self.___extentOfControl : tExtentOfControl = None
 		# @AssociationType Interlocking.tExtentOfControl
@@ -27,4 +30,3 @@ class ControlledSignalBox(EntityIL.EntityIL):
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the controlled signalBox"""
-
