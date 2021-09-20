@@ -30,26 +30,51 @@ class GenericTypes(object):
 		return self.___rail3_anyAttribute
 
 	@GenericAspect.setter
-	def GenericAspect(self, *aGenericAspect : GenericAspect):
+	def GenericAspect(self, aGenericAspect : GenericAspect):	# TODO *aGenericAspect
 		self.___hasAspect = aGenericAspect
 	@GenericResetStrategy.setter
-	def GenericResetStrategy(self, *aGenericResetStrategy : GenericResetStrategy):
+	def GenericResetStrategy(self, aGenericResetStrategy : GenericResetStrategy):	# TODO *aGenericResetStrategy
 		self.___hasTVDresetStrategy = aGenericResetStrategy
 	@GenericRouteType.setter
-	def GenericRouteType(self, *aGenericRouteType : GenericRouteType):
+	def GenericRouteType(self, aGenericRouteType : GenericRouteType):	# TODO *aGenericRouteType
 		self.___hasRouteType = aGenericRouteType
 	@LevelCrossingTypeList.setter
-	def LevelCrossingTypeList(self, *aLevelCrossingTypeList : LevelCrossingTypeList):
+	def LevelCrossingTypeList(self, aLevelCrossingTypeList : LevelCrossingTypeList):	# TODO *aLevelCrossingTypeList
 		self.___hasLevelCrossingType = aLevelCrossingTypeList
 	@ElementGroupingTypes.setter
-	def ElementGroupingTypes(self, *aElementGroupingTypes : ElementGroupingTypes):
+	def ElementGroupingTypes(self, aElementGroupingTypes : ElementGroupingTypes):	# TODO *aElementGroupingTypes
 		self.___hasElementGroupType = aElementGroupingTypes
 	@DetectorTypes.setter
-	def DetectorTypes(self, *aDetectorTypes : DetectorTypes):
+	def DetectorTypes(self, aDetectorTypes : DetectorTypes):	# TODO *aDetectorTypes
 		self.___hasDetectorTypes = aDetectorTypes
 	@anyAttribute.setter
 	def anyAttribute(self, aanyAttribute : anyAttribute):
 		self.___rail3_anyAttribute = aanyAttribute
+
+	def create_GenericAspect(self):
+		if self.GenericAspect == None:
+			self.GenericAspect = []
+		self.GenericAspect.append(GenericAspect.GenericAspect())
+	def create_GenericResetStrategy(self):
+		if self.GenericResetStrategy == None:
+			self.GenericResetStrategy = []
+		self.GenericResetStrategy.append(GenericResetStrategy.GenericResetStrategy())
+	def create_GenericRouteType(self):
+		if self.GenericRouteType == None:
+			self.GenericRouteType = []
+		self.GenericRouteType.append(GenericRouteType.GenericRouteType())
+	def create_LevelCrossingTypeList(self):
+		if self.LevelCrossingTypeList == None:
+			self.LevelCrossingTypeList = []
+		self.LevelCrossingTypeList.append(LevelCrossingTypeList.LevelCrossingTypeList())
+	def create_ElementGroupingTypes(self):
+		if self.ElementGroupingTypes == None:
+			self.ElementGroupingTypes = []
+		self.ElementGroupingTypes.append(ElementGroupingTypes.ElementGroupingTypes())
+	def create_DetectorTypes(self):
+		if self.DetectorTypes == None:
+			self.DetectorTypes = []
+		self.DetectorTypes.append(DetectorTypes.DetectorTypes())
 
 	def __init__(self):
 		self.___hasAspect : GenericAspect = None
@@ -78,4 +103,3 @@ class GenericTypes(object):
 		# """The list of detector type classification."""
 		self.___rail3_anyAttribute : anyAttribute = None
 		"""# @AssociationKind Aggregation"""
-

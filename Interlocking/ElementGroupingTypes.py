@@ -14,7 +14,8 @@ class ElementGroupingTypes(EntityIL.EntityIL):
 		self.___elementGroupType = atGroupingTypesExt
 
 	def __init__(self):
-		self.___elementGroupType : tGroupingTypesExt = tGroupingTypesExt.tGroupingTypesExt()
+		super().__init__()
+		self.___elementGroupType : tGroupingTypesExt = None
 		# @AssociationType Interlocking.tGroupingTypesExt
 		# """The classification of the element group."""
 

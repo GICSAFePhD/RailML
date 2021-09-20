@@ -14,7 +14,8 @@ class GenericResetStrategy(EntityIL.EntityIL):
 		self.___resetStrategy = atGenericResetStrategyList
 
 	def __init__(self):
-		self.___resetStrategy : tGenericResetStrategyList = tGenericResetStrategyList.tGenericResetStrategyList()
+		super().__init__()
+		self.___resetStrategy : tGenericResetStrategyList = None
 		# @AssociationType Interlocking.tGenericResetStrategyList
 		# """The classification of the reset strategy."""
 

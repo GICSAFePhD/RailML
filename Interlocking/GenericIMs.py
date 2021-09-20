@@ -10,9 +10,14 @@ class GenericIMs(object):
 		return self.___specificIM
 	
 	@GenericIM.setter
-	def GenericIM(self, *aGenericIM : GenericIM):
+	def GenericIM(self, aGenericIM : GenericIM):	# TODO *aGenericIM
 		self.___specificIM = aGenericIM
 
+	def create_GenericIM(self):
+		if self.GenericIM == None:
+			self.GenericIM = []
+		self.GenericIM.append(GenericIM.GenericIM())
+	
 	def __init__(self):
 		self.___specificIM : GenericIM = None
 		# @AssociationType Interlocking.GenericIM*

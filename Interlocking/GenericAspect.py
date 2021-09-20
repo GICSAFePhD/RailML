@@ -14,7 +14,7 @@ class GenericAspect(EntityIL.EntityIL):
 		self.___genericAspect = atGenericAspectList
 
 	def __init__(self):
-		self.___genericAspect : tGenericAspectList = tGenericAspectList.tGenericAspectList()
+		super().__init__()
+		self.___genericAspect : tGenericAspectList = None
 		# @AssociationType Interlocking.tGenericAspectList
 		# """The classification of the aspect."""
-

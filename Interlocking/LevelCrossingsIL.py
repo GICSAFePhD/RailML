@@ -10,7 +10,7 @@ class LevelCrossingsIL(object):
 		return self.___levelCrossingIL
 	
 	@LevelCrossingIL.setter
-	def LevelCrossingIL(self, *aLevelCrossingIL : LevelCrossingIL):
+	def LevelCrossingIL(self, aLevelCrossingIL : LevelCrossingIL):	# TODO *aLevelCrossingIL
 		self.___levelCrossingIL = aLevelCrossingIL
 
 	def create_LevelCrossingIL(self):

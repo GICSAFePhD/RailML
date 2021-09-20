@@ -14,7 +14,8 @@ class DetectorTypes(EntityIL.EntityIL):
 		self.___detectorType = atDetectorTypeListExt
 
 	def __init__(self):
-		self.___detectorType : tDetectorTypeListExt = tDetectorTypeListExt.tDetectorTypeListExt()
+		super().__init__()
+		self.___detectorType : tDetectorTypeListExt = None
 		# @AssociationType Interlocking.tDetectorTypeListExt
 		# """The classification of the particular detector type."""
 

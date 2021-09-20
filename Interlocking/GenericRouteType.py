@@ -14,7 +14,8 @@ class GenericRouteType(EntityIL.EntityIL):
 		self.___genericRouteType = atGenericRouteTypeExt
 
 	def __init__(self):
-		self.___genericRouteType : tGenericRouteTypeExt = tGenericRouteTypeExt.tGenericRouteTypeExt()
+		super().__init__()
+		self.___genericRouteType : tGenericRouteTypeExt = None
 		# @AssociationType Interlocking.tGenericRouteTypeExt
 		# """The classification of the route types."""
 

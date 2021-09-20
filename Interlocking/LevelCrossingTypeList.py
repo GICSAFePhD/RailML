@@ -33,7 +33,8 @@ class LevelCrossingTypeList(EntityIL.EntityIL):
 		self.___hasTrafficWarning = aHasTrafficWarning
 
 	def __init__(self):
-		self.___controlType : tLevelCrossingControlTypes = tLevelCrossingControlTypes.tLevelCrossingControlTypes()
+		super().__init__()
+		self.___controlType : tLevelCrossingControlTypes = None
 		# @AssociationType Interlocking.tLevelCrossingControlTypes
 		# """The classification of the control type w.r.t. the interlocking operation."""
 		self.___allowsLocalOperation : Long = 0

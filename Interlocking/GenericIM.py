@@ -13,13 +13,21 @@ class GenericIM(EntityIL.EntityIL):
 		return self.___usesTypes
 
 	@OwnsSetsOfAssets.setter
-	def OwnsSetsOfAssets(self, *aOwnsSetsOfAssets : EntityILref):
+	def OwnsSetsOfAssets(self, aOwnsSetsOfAssets : EntityILref):	# TODO *aOwnsSetsOfAssets
 		self.___ownsSetsOfAssets = aOwnsSetsOfAssets
 	@UsesTypes.setter
 	def UsesTypes(self, aUsesTypes : GenericTypes):
 		self.___usesTypes = aUsesTypes
 
+	def create_OwnsSetsOfAssets(self):
+		if self.OwnsSetsOfAssets == None:
+			self.OwnsSetsOfAssets = []
+		self.OwnsSetsOfAssets.append(EntityILref.EntityILref())
+	def create_UsesTypes(self):
+		self.UsesTypes = GenericTypes.GenericTypes()
+	
 	def __init__(self):
+		super().__init__()
 		self.___ownsSetsOfAssets : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
