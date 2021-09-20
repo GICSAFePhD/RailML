@@ -1,27 +1,30 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Interlocking.EntityILref import EntityILref
-from RailML.Interlocking.EntityIL import EntityIL
+from RailML.Interlocking import EntityILref
+from RailML.Interlocking import EntityIL
 from typing import List
 
-class RouteEntry(EntityIL):
+class RouteEntry(EntityIL.EntityIL):
 	"""The route entry is normally a (virtual) signal."""
-	def setRefersTo(self, *aRefersTo : EntityILref):
-		self._refersTo = aRefersTo
+	@property
+	def RefersTo(self) -> EntityILref:
+		return self.___refersTo
+	@property
+	def NonReplacement(self) -> EntityILref:
+		return self.___nonReplacement
 
-	def getRefersTo(self) -> EntityILref:
-		return self._refersTo
-
-	def setNonReplacement(self, aNonReplacement : EntityILref):
-		self._nonReplacement = aNonReplacement
-
-	def getNonReplacement(self) -> EntityILref:
-		return self._nonReplacement
+	@RefersTo.setter
+	def RefersTo(self, aRefersTo : EntityILref):	# TODO *RefersTo
+		self.___refersTo = aRefersTo
+	@NonReplacement.setter
+	def NonReplacement(self, aNonReplacement : EntityILref):
+		self.___nonReplacement = aNonReplacement
 
 	def __init__(self):
-		self._refersTo : EntityILref = None
+		super().__init__()
+		self.___refersTo : EntityILref = None
 		"""The reference to the track asset representing the start point of the route. In most cases this is a signal."""
-		self._nonReplacement : EntityILref = None
+		self.___nonReplacement : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref

@@ -15,7 +15,7 @@ class Interlocking(object):
 	def SignalBoxes(self) -> SignalBoxes:
 		return self.___signalBoxes
 	@property
-	def GenericIMs(self) -> GenericIMs:
+	def SpecificIMs(self) -> GenericIMs:
 		return self.___specificIMs
 
 	@AssetsForIL.setter
@@ -27,9 +27,9 @@ class Interlocking(object):
 	@SignalBoxes.setter
 	def SignalBoxes(self, aSignalBoxes : SignalBoxes):
 		self.___signalBoxes = aSignalBoxes
-	@GenericIMs.setter
-	def GenericIMs(self, aGenericIMs : GenericIMs):
-		self.___specificIMs = aGenericIMs
+	@SpecificIMs.setter
+	def SpecificIMs(self, aSpecificIMs : GenericIMs):
+		self.___specificIMs = aSpecificIMs
 
 	def create_AssetsForIL(self):
 		if self.AssetsForIL == None:
@@ -43,10 +43,10 @@ class Interlocking(object):
 		if self.SignalBoxes == None:
 			self.SignalBoxes = []
 		self.SignalBoxes.append(SignalBoxes.SignalBoxes())
-	def create_GenericIMs(self):
-		if self.GenericIMs == None:
-			self.GenericIMs = []
-		self.GenericIMs.append(GenericIMs.GenericIMs())
+	def create_SpecificIMs(self):
+		if self.SpecificIMs == None:
+			self.SpecificIMs = []
+		self.SpecificIMs.append(GenericIMs.GenericIMs())
 
 	def __init__(self):
 		self.___assetsForIL : AssetsForIL = None	

@@ -6,17 +6,17 @@ from typing import List
 class GenericIMs(object):
 	"""container element for all specificIM elements"""
 	@property
-	def GenericIM(self) -> GenericIM:
+	def SpecificIM(self) -> GenericIM:
 		return self.___specificIM
 	
-	@GenericIM.setter
-	def GenericIM(self, aGenericIM : GenericIM):	# TODO *aGenericIM
-		self.___specificIM = aGenericIM
+	@SpecificIM.setter
+	def SpecificIM(self, aSpecificIM : GenericIM):	# TODO *aSpecificIM
+		self.___specificIM = aSpecificIM
 
-	def create_GenericIM(self):
-		if self.GenericIM == None:
-			self.GenericIM = []
-		self.GenericIM.append(GenericIM.GenericIM())
+	def create_SpecificIM(self):
+		if self.SpecificIM == None:
+			self.SpecificIM = []
+		self.SpecificIM.append(GenericIM.GenericIM())
 	
 	def __init__(self):
 		self.___specificIM : GenericIM = None

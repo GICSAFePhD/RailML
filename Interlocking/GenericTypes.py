@@ -8,73 +8,73 @@ from typing import List
 class GenericTypes(object):
 	"""The list of all possible types being specific for this IM."""
 	@property
-	def GenericAspect(self) -> GenericAspect:
+	def HasAspect(self) -> GenericAspect:
 		return self.___hasAspect
 	@property
-	def GenericResetStrategy(self) -> GenericResetStrategy:
+	def HasTVDresetStrategy(self) -> GenericResetStrategy:
 		return self.___hasTVDresetStrategy
 	@property
-	def GenericRouteType(self) -> GenericRouteType:
+	def HasRouteType(self) -> GenericRouteType:
 		return self.___hasRouteType
 	@property
-	def LevelCrossingTypeList(self) -> LevelCrossingTypeList:
+	def HasLevelCrossingType(self) -> LevelCrossingTypeList:
 		return self.___hasLevelCrossingType
 	@property
-	def ElementGroupingTypes(self) -> ElementGroupingTypes:
+	def HasElementGroupType(self) -> ElementGroupingTypes:
 		return self.___hasElementGroupType
 	@property
-	def DetectorTypes(self) -> DetectorTypes:
+	def HasDetectorTypes(self) -> DetectorTypes:
 		return self.___hasDetectorTypes
 	@property
 	def anyAttribute(self) -> anyAttribute:
 		return self.___rail3_anyAttribute
 
-	@GenericAspect.setter
-	def GenericAspect(self, aGenericAspect : GenericAspect):	# TODO *aGenericAspect
-		self.___hasAspect = aGenericAspect
-	@GenericResetStrategy.setter
-	def GenericResetStrategy(self, aGenericResetStrategy : GenericResetStrategy):	# TODO *aGenericResetStrategy
-		self.___hasTVDresetStrategy = aGenericResetStrategy
-	@GenericRouteType.setter
-	def GenericRouteType(self, aGenericRouteType : GenericRouteType):	# TODO *aGenericRouteType
-		self.___hasRouteType = aGenericRouteType
-	@LevelCrossingTypeList.setter
-	def LevelCrossingTypeList(self, aLevelCrossingTypeList : LevelCrossingTypeList):	# TODO *aLevelCrossingTypeList
-		self.___hasLevelCrossingType = aLevelCrossingTypeList
-	@ElementGroupingTypes.setter
-	def ElementGroupingTypes(self, aElementGroupingTypes : ElementGroupingTypes):	# TODO *aElementGroupingTypes
-		self.___hasElementGroupType = aElementGroupingTypes
-	@DetectorTypes.setter
-	def DetectorTypes(self, aDetectorTypes : DetectorTypes):	# TODO *aDetectorTypes
-		self.___hasDetectorTypes = aDetectorTypes
+	@HasAspect.setter
+	def HasAspect(self, aHasAspect : GenericAspect):	# TODO *aHasAspect
+		self.___hasAspect = aHasAspect
+	@HasTVDresetStrategy.setter
+	def HasTVDresetStrategy(self, aHasTVDresetStrategy : GenericResetStrategy):	# TODO *aHasTVDresetStrategy
+		self.___hasTVDresetStrategy = aHasTVDresetStrategy
+	@HasRouteType.setter
+	def HasRouteType(self, aHasRouteType : GenericRouteType):	# TODO *aHasRouteType
+		self.___hasRouteType = aHasRouteType
+	@HasLevelCrossingType.setter
+	def HasLevelCrossingType(self, aHasLevelCrossingType : LevelCrossingTypeList):	# TODO *aHasLevelCrossingType
+		self.___hasLevelCrossingType = aHasLevelCrossingType
+	@HasElementGroupType.setter
+	def HasElementGroupType(self, aHasElementGroupType : ElementGroupingTypes):	# TODO *aHasElementGroupType
+		self.___hasElementGroupType = aHasElementGroupType
+	@HasDetectorTypes.setter
+	def HasDetectorTypes(self, aHasDetectorTypes : DetectorTypes):	# TODO *aHasDetectorTypes
+		self.___hasDetectorTypes = aHasDetectorTypes
 	@anyAttribute.setter
 	def anyAttribute(self, aanyAttribute : anyAttribute):
 		self.___rail3_anyAttribute = aanyAttribute
 
-	def create_GenericAspect(self):
-		if self.GenericAspect == None:
-			self.GenericAspect = []
-		self.GenericAspect.append(GenericAspect.GenericAspect())
-	def create_GenericResetStrategy(self):
-		if self.GenericResetStrategy == None:
-			self.GenericResetStrategy = []
-		self.GenericResetStrategy.append(GenericResetStrategy.GenericResetStrategy())
-	def create_GenericRouteType(self):
-		if self.GenericRouteType == None:
-			self.GenericRouteType = []
-		self.GenericRouteType.append(GenericRouteType.GenericRouteType())
-	def create_LevelCrossingTypeList(self):
-		if self.LevelCrossingTypeList == None:
-			self.LevelCrossingTypeList = []
-		self.LevelCrossingTypeList.append(LevelCrossingTypeList.LevelCrossingTypeList())
-	def create_ElementGroupingTypes(self):
-		if self.ElementGroupingTypes == None:
-			self.ElementGroupingTypes = []
-		self.ElementGroupingTypes.append(ElementGroupingTypes.ElementGroupingTypes())
-	def create_DetectorTypes(self):
-		if self.DetectorTypes == None:
-			self.DetectorTypes = []
-		self.DetectorTypes.append(DetectorTypes.DetectorTypes())
+	def create_HasAspect(self):
+		if self.HasAspect == None:
+			self.HasAspect = []
+		self.HasAspect.append(GenericAspect.GenericAspect())
+	def create_HasTVDresetStrategy(self):
+		if self.HasTVDresetStrategy == None:
+			self.HasTVDresetStrategy = []
+		self.HasTVDresetStrategy.append(GenericResetStrategy.GenericResetStrategy())
+	def create_HasRouteType(self):
+		if self.HasRouteType == None:
+			self.HasRouteType = []
+		self.HasRouteType.append(GenericRouteType.GenericRouteType())
+	def create_HasLevelCrossingType(self):
+		if self.HasLevelCrossingType == None:
+			self.HasLevelCrossingType = []
+		self.HasLevelCrossingType.append(LevelCrossingTypeList.LevelCrossingTypeList())
+	def create_HasElementGroupType(self):
+		if self.HasElementGroupType == None:
+			self.HasElementGroupType = []
+		self.HasElementGroupType.append(ElementGroupingTypes.ElementGroupingTypes())
+	def create_HasDetectorTypes(self):
+		if self.HasDetectorTypes == None:
+			self.HasDetectorTypes = []
+		self.HasDetectorTypes.append(DetectorTypes.DetectorTypes())
 
 	def __init__(self):
 		self.___hasAspect : GenericAspect = None
