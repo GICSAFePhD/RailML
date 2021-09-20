@@ -5,4 +5,5 @@ from typing import List
 
 class tIxlTechnologyTypeListExt(tIxlTechnologyTypeList.tIxlTechnologyTypeList):
 	"""The list of possible interlocking technologies with extension point."""
-	pass
+	def __init__(self):
+		super().__init__()

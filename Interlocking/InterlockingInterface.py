@@ -51,27 +51,43 @@ class InterlockingInterface(EntityIL.EntityIL):
 	def HasInterface(self, aHasInterface : EntityILref):
 		self.___hasInterface = aHasInterface
 
+	def create_LastOwnTvdSection(self):
+		self.LastOwnTvdSection = EntityILref.EntityILref()
+	def create_FirstRemoteTvdSection(self):
+		self.FirstRemoteTvdSection = EntityILref.EntityILref()
+	def create_IncomingRoute(self):
+		if self.IncomingRoute == None:
+			self.IncomingRoute = []
+		self.IncomingRoute.append(EntityILref.EntityILref())
+	def create_OutgoingRoute(self):
+		if self.OutgoingRoute == None:
+			self.OutgoingRoute = []
+		self.OutgoingRoute.append(EntityILref.EntityILref())
+	def create_HasInterface(self):
+		self.HasInterface = EntityILref.EntityILref()
+
 	def __init__(self):
-		self.___interfaceLocation : tIxlInterfaceLocationTypeList = tIxlInterfaceLocationTypeList.tIxlInterfaceLocationTypeList()
+		super().__init__()
+		self.___interfaceLocation : tIxlInterfaceLocationTypeList = None
 		# @AssociationType Interlocking.tIxlInterfaceLocationTypeList
 		# """The topology view of interface location determining the extent of information to be exchanged."""
 		self.___isOnCommandSide : Long = 0
 		"""True means the related interlocking uses the described commands for output towards the partner. With false it is inverted for the related interlocking."""
-		self.___lastOwnTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___lastOwnTvdSection : EntityILref = None
 		"""The reference to the last TVD section just before the interface."""
-		self.___firstRemoteTvdSection : EntityILref = EntityILref.EntityILref()
+		self.___firstRemoteTvdSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """The reference to the first TVD section within the other interlocking beyond the interface."""
-		self.___incomingRoute : EntityILref = EntityILref.EntityILref()
+		self.___incomingRoute : EntityILref = None
 		# @AssociationType Interlocking.EntityILref*
 		# @AssociationMultiplicity 0..*
 		# """This is the reference to all routes the interlocking knows that start at the interface location or in rear of it in direction towards the interlocking."""
-		self.___outgoingRoute : EntityILref = EntityILref.EntityILref()
+		self.___outgoingRoute : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# """This is the reference to all routes the interlocking knows that end at the interface location or in advance of it in direction towards the other interlocking."""
-		self.___hasInterface : EntityILref = EntityILref.EntityILref()
+		self.___hasInterface : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref

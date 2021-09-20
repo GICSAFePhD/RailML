@@ -18,4 +18,3 @@ class GenericIMs(object):
 		# @AssociationType Interlocking.GenericIM*
 		# @AssociationMultiplicity 1..*
 		# """Container with the generic classification of types used by a specific infrastructure manager."""
-

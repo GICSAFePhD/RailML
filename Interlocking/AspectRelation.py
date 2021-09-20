@@ -45,42 +45,60 @@ class AspectRelation(EntityIL.EntityIL):
 	def MasterAspect(self, aMasterAspect : SignalAndAspect):
 		self.___masterAspect = aMasterAspect
 	@SlaveAspect.setter
-	def SlaveAspect(self, *aSlaveAspect : SignalAndAspect):
+	def SlaveAspect(self, aSlaveAspect : SignalAndAspect):	# TODO *aSlaveAspect
 		self.___slaveAspect = aSlaveAspect
 	@DistantAspect.setter
 	def DistantAspect(self, aDistantAspect : SignalAndAspect):
 		self.___distantAspect = aDistantAspect
 	@SignalsSpeedProfile.setter
-	def SignalsSpeedProfile(self, *aSignalsSpeedProfile : EntityILref):
+	def SignalsSpeedProfile(self, aSignalsSpeedProfile : EntityILref):	# TODO *aSignalsSpeedProfile
 		self.___signalsSpeedProfile = aSignalsSpeedProfile
 	@AppliesToRoute.setter
 	def AppliesToRoute(self, aAppliesToRoute : EntityILref):
 		self.___appliesToRoute = aAppliesToRoute
 
+	def create_MasterAspect(self):
+		self.MasterAspect = SignalAndAspect.SignalAndAspect()
+	def create_SlaveAspect(self):
+		self.SlaveAspect = SignalAndAspect.SignalAndAspect()
+	def create_DistantAspect(self):
+		if self.DistantAspect == None:
+			self.DistantAspect = []
+		self.DistantAspect.append(SignalAndAspect.SignalAndAspect())
+	def create_SignalsSpeedProfile(self):
+		if self.SignalsSpeedProfile == None:
+			self.SignalsSpeedProfile = []
+		self.SignalsSpeedProfile.append(EntityILref.EntityILref())
+	def create_AppliesToRoute(self):
+		if self.AppliesToRoute == None:
+			self.AppliesToRoute = []
+		self.AppliesToRoute.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___passingSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		super().__init__()
+		self.___passingSpeed : tSpeedKmPerHour = None
 		"""The speed in km/h signalled by the slave aspect, i.e. the speed that the train must respect when passing the slave signal (at route entry)."""
-		self.___expectingSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___expectingSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum signalled speed in km/h at master signal (aka target speed)."""
 		self.___endSectionTime : Duration = 0
 		"""The end-section of a route is the section between the closed route exit signal and the previous slave signal. Commonly, the interlocking revokes (part of) the route when this time period is passed."""
-		self.___masterAspect : SignalAndAspect = SignalAndAspect.SignalAndAspect()
+		self.___masterAspect : SignalAndAspect = None
 		"""The combination of the master signal (at route exit) and the aspect it is showing."""
-		self.___slaveAspect : SignalAndAspect = SignalAndAspect.SignalAndAspect()
+		self.___slaveAspect : SignalAndAspect = None
 		# @AssociationType Interlocking.SignalAndAspect*
 		# @AssociationMultiplicity 0..*
 		# """The combination of the slave signal (at route entry) and the aspect it is showing."""
-		self.___distantAspect : SignalAndAspect = SignalAndAspect.SignalAndAspect()
+		self.___distantAspect : SignalAndAspect = None
 		# @AssociationType Interlocking.SignalAndAspect
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Interlocking.SignalAndAspect
 		# @AssociationMultiplicity 0..1
 		# """The combination of the master's distant signal (within the route or its start) and the aspect it is showing. This includes also any repeaters."""
-		self.___signalsSpeedProfile : EntityILref = EntityILref.EntityILref()
+		self.___signalsSpeedProfile : EntityILref = None
 		"""The reference to a SpeedSection in infrastructure applicable for the signalled section."""
-		self.___appliesToRoute : EntityILref = EntityILref.EntityILref()
+		self.___appliesToRoute : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Interlocking.EntityILref

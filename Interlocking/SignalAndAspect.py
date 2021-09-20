@@ -13,19 +13,26 @@ class SignalAndAspect(AssetAndState.AssetAndState):
 		return self.___showsAspect
 
 	@RefersToSignal.setter
-	def RefersToSignal(self, *aRefersToSignal : EntityILref):
+	def RefersToSignal(self, aRefersToSignal : EntityILref):	# TODO *aRefersToSignal
 		self.___refersToSignal = aRefersToSignal
 	@ShowsAspect.setter
 	def ShowsAspect(self, aShowsAspect : EntityILref):
 		self.___showsAspect = aShowsAspect
 
+	def create_RefersToSignal(self):
+		self.RefersToSignal  = EntityILref.EntityILref()
+	def create_ShowsAspect(self):
+		if self.ShowsAspect == None:
+			self.ShowsAspect = []
+		self.ShowsAspect.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___refersToSignal : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___refersToSignal : EntityILref = None
 		"""The reference to the signal."""
-		self.___showsAspect : EntityILref = EntityILref.EntityILref()
+		self.___showsAspect : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The aspect the signal is showing."""
-

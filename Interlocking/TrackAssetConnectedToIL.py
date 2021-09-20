@@ -19,11 +19,17 @@ class TrackAssetConnectedToIL(EntityIL.EntityIL):
 	def ConnectedTrackAsset(self, aConnectedTrackAsset : EntityILref):
 		self.___connectedTrackAsset = aConnectedTrackAsset
 
+	def create_ConnectedTrackAsset(self):
+		if self.ConnectedTrackAsset == None:
+			self.ConnectedTrackAsset = []
+		self.ConnectedTrackAsset.append(EntityILref.EntityILref())
+	
 	def __init__(self):
-		self.___extentOfControl : tExtentOfControl = tExtentOfControl.tExtentOfControl()
+		super().__init__()
+		self.___extentOfControl : tExtentOfControl = None
 		# @AssociationType Interlocking.tExtentOfControl
 		# """The level of control of the asset by the interlocking."""
-		self.___connectedTrackAsset : EntityILref = EntityILref.EntityILref()
+		self.___connectedTrackAsset : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the connected track asset."""

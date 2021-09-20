@@ -10,8 +10,13 @@ class SignalBoxes(object):
 		return self.___signalBox
 	
 	@SignalBox.setter
-	def SignalBox(self, *aSignalBox : SignalBox):
+	def SignalBox(self, aSignalBox : SignalBox):	# TODO *aSignalBox
 		self.___signalBox = aSignalBox
+
+	def create_SignalBox(self):
+		if self.SignalBox == None:
+			self.SignalBox = []
+		self.SignalBox.append(SignalBox.SignalBox())
 
 	def __init__(self):
 		self.___signalBox : SignalBox = None

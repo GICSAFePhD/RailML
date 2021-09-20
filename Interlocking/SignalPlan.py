@@ -11,11 +11,16 @@ class SignalPlan(EntityIL.EntityIL):
 		return self.___aspectRelation
 	
 	@AspectRelation.setter
-	def AspectRelation(self, *aAspectRelation : AspectRelation):
+	def AspectRelation(self, aAspectRelation : AspectRelation):	# TODO *aAspectRelation
 		self.___aspectRelation = aAspectRelation
 
+	def create_AspectRelation(self):
+		if self.AspectRelation == None:
+			self.AspectRelation = []
+		self.AspectRelation.append(AspectRelation.AspectRelation())
+	
 	def __init__(self):
-		self.___aspectRelation : AspectRelation = AspectRelation.AspectRelation()
+		super().__init__()
+		self.___aspectRelation : AspectRelation = None
 		# @AssociationType Interlocking.AspectRelation*
 		# @AssociationMultiplicity 1..*
-

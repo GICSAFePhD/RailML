@@ -34,11 +34,10 @@ class Configuration(EntityIL.EntityIL):
 	def __init__(self):
 		self.___model : str = ""
 		"""The vendor specific model of the interlocking."""
-		self.___technologyType : tIxlTechnologyTypeListExt = tIxlTechnologyTypeListExt.tIxlTechnologyTypeListExt()
+		self.___technologyType : tIxlTechnologyTypeListExt = None
 		# @AssociationType Interlocking.tIxlTechnologyTypeListExt
 		# """The basic technology type of the interlocking"""
 		self.___sWversion : str = ""
 		"""The software version used by this interlocking."""
 		self.___signalSystem : str = ""
 		"""The name of the signal system used with this interlocking, e.g. Hl or Ks system of Deutsche Bahn."""
-

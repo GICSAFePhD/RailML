@@ -13,16 +13,24 @@ class ElementGroup(EntityIL.EntityIL):
 		return self.___refersToMember
 
 	@GroupType.setter
-	def GroupType(self, *aGroupType : EntityILref):
+	def GroupType(self, aGroupType : EntityILref):	# TODO *aGroupType
 		self.___groupType = aGroupType
 	@RefersToMember.setter
 	def RefersToMember(self, aRefersToMember : EntityILref):
 		self.___refersToMember = aRefersToMember
 
+	def create_GroupType(self):
+		self.GroupType = EntityILref.EntityILref()
+	def create_RefersToMember(self):
+		if self.RefersToMember == None:
+			self.RefersToMember = []
+		self.RefersToMember.append(EntityILref.EntityILref())
+
 	def __init__(self):
-		self.___groupType : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___groupType : EntityILref = None
 		"""The reference to the IM specific element group type."""
-		self.___refersToMember : EntityILref = EntityILref.EntityILref()
+		self.___refersToMember : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# @AssociationType Interlocking.EntityILref

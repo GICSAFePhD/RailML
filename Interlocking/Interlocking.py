@@ -57,7 +57,7 @@ class Interlocking(object):
 		# @AssociationType Interlocking.Controllers
 		# @AssociationMultiplicity 0..1
 		# """container for all Controller elements"""
-		self.___signalBoxes : SignalBoxes = None
+		self.___signalBoxes : SignalBoxes = None	# TODO DONE
 		# @AssociationType Interlocking.SignalBoxes
 		# @AssociationMultiplicity 0..1
 		# """container for all SignalBox elements"""
