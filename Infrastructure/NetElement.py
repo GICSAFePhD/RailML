@@ -3,7 +3,7 @@
 import sys
 sys.path.append('.')
 from RailML.Common import tLengthM,Name
-from RailML.Infrastructure import Validity, NetRelation
+from RailML.Infrastructure import IsValid, NetRelation
 from RailML.RailTopoModel import RTM_OrderedCollection, RTM_UnorderedCollection, RTM_PositioningNetElement, RTM_Relation, RTM_AssociatedPositioningSystem
 from typing import List
 
@@ -22,7 +22,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def ElementCollectionUnordered(self) -> RTM_UnorderedCollection:
 		return self.___elementCollectionUnordered
 	@property
-	def IsValid(self) -> Validity:
+	def IsValid(self) -> IsValid:
 		return self.___isValid
 	@property
 	def Name(self) -> Name:
@@ -44,7 +44,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def ElementCollectionUnordered(self, aElementCollectionUnordered : RTM_UnorderedCollection):
 		self.___elementCollectionUnordered = aElementCollectionUnordered
 	@IsValid.setter
-	def IsValid(self, aIsValid : Validity):
+	def IsValid(self, aIsValid : IsValid):
 		self.___isValid = aIsValid
 	@Name.setter
 	def Name(self, aName : Name):
@@ -70,7 +70,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def create_IsValid(self):
 		if self.IsValid == None:
 			self.IsValid = []
-		self.IsValid.append(Validity.Validity())
+		self.IsValid.append(IsValid.IsValid())
 	def create_Name(self):
 		if self.Name == None:
 			self.Name = []
@@ -90,7 +90,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 		# @AssociationMultiplicity 0..*
 		self.___elementCollectionUnordered : RTM_UnorderedCollection = None
 		# @AssociationMultiplicity 0..*
-		self.___isValid : Validity = None
+		self.___isValid : IsValid = None
 		# @AssociationMultiplicity 0..*
 		self.___name : Name = None
 		# @AssociationMultiplicity 0..*

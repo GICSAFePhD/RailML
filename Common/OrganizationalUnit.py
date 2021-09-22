@@ -1,21 +1,20 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from RailML.Common.tElementWithIDandName import tElementWithIDandName
+from RailML.Common import tElementWithIDandName
 from typing import List
 
-class OrganizationalUnit(tElementWithIDandName):
-	__metaclass__ = ABCMeta
-	@classmethod
-	def setCode(self, aCode : str):
-		self.___code = aCode
-
-	@classmethod
-	def getCode(self) -> str:
+class OrganizationalUnit(tElementWithIDandName.tElementWithIDandName):
+	@property
+	def Code(self) -> str:
 		return self.___code
 
-	@classmethod
+	@Code.setter
+	def Code(self, aCode : str):
+		self.___code = aCode
+
 	def __init__(self):
+		super().__init__()
 		self.___code : str = None
 		"""insert here the matching code from the relevant codelist"""
 

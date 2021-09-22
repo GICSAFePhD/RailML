@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 from typing import List
 
-class Validity(object):
+class IsValid(object):
 	@property
 	def From(self) -> str:
 		return self.___from

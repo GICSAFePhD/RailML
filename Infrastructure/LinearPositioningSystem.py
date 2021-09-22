@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 from RailML.RailTopoModel import RTM_LinearAnchorPoint, RTM_PositioningSystem, RTM_NamedResource
 from RailML.Common import Name 
-from RailML.Infrastructure import Validity, tLrsMethod
+from RailML.Infrastructure import IsValid, tLrsMethod
 from typing import List
 
 class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_NamedResource.RTM_NamedResource):
@@ -25,7 +25,7 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_Na
 	def Name(self) -> Name:
 		return self.___name
 	@property
-	def IsValid(self) -> Validity:
+	def IsValid(self) -> IsValid:
 		return self.___isValid	
 
 	@LinearReferencingMethod.setter
@@ -47,7 +47,7 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_Na
 	def Name(self, aName : Name):
 		self.___name = aName
 	@IsValid.setter
-	def IsValid(self, aIsValid : Validity):
+	def IsValid(self, aIsValid : IsValid):
 		self.___isValid = aIsValid
 
 	def __init__(self):
@@ -61,5 +61,4 @@ class LinearPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem,RTM_Na
 		# @AssociationType Infrastructure.RTM.RTM_LinearAnchorPoint*
 		# @AssociationMultiplicity 0..*
 		self.___name : Name = None
-		self.___isValid : Validity = None
-
+		self.___isValid : IsValid = None

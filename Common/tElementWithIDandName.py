@@ -14,6 +14,7 @@ class tElementWithIDandName(tElementWithID.tElementWithID):
 		self.___name = aName
 
 	def __init__(self):
+		super().__init__()
 		self.___name : Name = None
 		# @AssociationType Common.Name*
 		# @AssociationMultiplicity 0..*

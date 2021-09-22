@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 from RailML.Common import tRef
 from RailML.RailTopoModel import RTM_IntrinsicCoordinate, RTM_BaseObject
-from RailML.Infrastructure import Validity
+from RailML.Infrastructure import IsValid
 from typing import List
 
 class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
@@ -13,7 +13,7 @@ class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
 	def IntrinsicCoordinate(self) -> RTM_IntrinsicCoordinate:
 		return self.___intrinsicCoordinate
 	@property
-	def IsValid(self) -> Validity:
+	def IsValid(self) -> IsValid:
 		return self.___isValid
 
 	@PositioningSystemRef.setter
@@ -23,7 +23,7 @@ class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
 	def IntrinsicCoordinate(self, aIntrinsicCoordinate : RTM_IntrinsicCoordinate):
 		self.___intrinsicCoordinate = aIntrinsicCoordinate
 	@IsValid.setter
-	def IsValid(self, aIsValid : Validity):
+	def IsValid(self, aIsValid : IsValid):
 		self.___isValid = aIsValid
 
 
@@ -36,7 +36,7 @@ class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
 	def create_IsValid(self):
 		if self.IsValid == None:
 			self.IsValid = []
-		self.IsValid.append(Validity.Validity())
+		self.IsValid.append(IsValid.IsValid())
 
 	def __init__(self):
 		self.___positioningSystemRef : tRef = None
@@ -44,6 +44,6 @@ class RTM_AssociatedPositioningSystem(RTM_BaseObject.RTM_BaseObject):
 		self.___intrinsicCoordinate : RTM_IntrinsicCoordinate = None
 		# @AssociationType Infrastructure.RTM.RTM_IntrinsicCoordinate*
 		# @AssociationMultiplicity 1..*
-		self.___isValid : Validity = None
+		self.___isValid : IsValid = None
 		# @AssociationType Infrastructure.RTM.RTM_Validity*
 		# @AssociationMultiplicity 0..*

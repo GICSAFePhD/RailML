@@ -14,6 +14,7 @@ class tElementWithID(object):
 		self.___id = aId
 
 	def __init__(self):
+		super().__init__()
 		self.___id : tID = None
 		# @AssociationType Common.tID
 		# """unique identifier"""
