@@ -31,4 +31,3 @@ class Name(object):
 		#self.___language : language = None
 		self.___language : str = None
 		"""natural language identification according to http://www.w3.org/TR/xml/#sec-lang-tag; should always be given"""
-

@@ -23,4 +23,3 @@ class RTM_NamedResource(RTM_BaseObject.RTM_BaseObject):
 		self.___name : Name = None
 		# @AssociationType Common.Name*
 		# @AssociationMultiplicity 0..*
-

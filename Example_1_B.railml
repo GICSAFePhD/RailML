@@ -1,0 +1,18 @@
+<railml>
+	<common id="co_01">
+		<organizationalunits>
+			<infrastructuremanager id="im_01">
+		<\organizationalunits>
+		<positioningsystems>
+			<geometricpositioningsystems>
+				<geometricpositioningsystem id="gps01">
+					<isvalid from="2019-11-21" to="2020-11-21">
+					<name name="Example_1.railml" language="en">
+			<\geometricpositioningsystems>
+			<linearpositioningsystems>
+				<linearpositioningsystem linearReferencingMethod="absolute" startMeasure="0" endMeasure="0" units="Km" id="loc-1">
+					<isvalid from="2019-11-21" to="2020-11-21">
+					<name name="Loc-1" language="en">
+			<\linearpositioningsystems>
+		<\positioningsystems>
+<\railml>
