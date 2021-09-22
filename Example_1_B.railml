@@ -1,12 +1,15 @@
 <railML>
-	<Metadata>
-	<\Metadata>
-	<Common>
+	<Common Id="co_01">
+		<OrganizationalUnits>
+			<InfrastructureManager>[<RailML.Common.InfrastructureManager.InfrastructureManager object at 0x000001C895C8DAC0>]<\InfrastructureManager>
+		<\OrganizationalUnits>
+		<PositioningSystems>
+			<GeometricPositioningSystems>
+				<GeometricPositioningSystem>[<RailML.Infrastructure.GeometricPositioningSystem.GeometricPositioningSystem object at 0x000001C895C962B0>]<\GeometricPositioningSystem>
+			<\GeometricPositioningSystems>
+			<LinearPositioningSystems>
+				<LinearPositioningSystem>[<RailML.Infrastructure.LinearPositioningSystem.LinearPositioningSystem object at 0x000001C895C96D90>]<\LinearPositioningSystem>
+			<\LinearPositioningSystems>
+		<\PositioningSystems>
 	<\Common>
-	<Infrastructure>
-	<\Infrastructure>
-	<Interlocking>
-	<\Interlocking>
-	<aRailML>
-	<\aRailML>
 <\railML>
