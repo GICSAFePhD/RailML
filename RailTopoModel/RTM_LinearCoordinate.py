@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from RailML.Infrastructure import tLateralSide, tVerticalSide
-from RailML.RailTopoModel import RTM_PositioningSystemCoordinate
+from RailML.RailTopoModel import PositioningSystemCoordinate
 from typing import List
 
-class RTM_LinearCoordinate(RTM_PositioningSystemCoordinate.RTM_PositioningSystemCoordinate): 
+class RTM_LinearCoordinate(PositioningSystemCoordinate.PositioningSystemCoordinate): 
 	@property
 	def LateralDistance(self) -> complex:
 		return self.___lateralDistance

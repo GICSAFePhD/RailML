@@ -1,10 +1,9 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.RailTopoModel import RTM_PositioningSystemCoordinate
+from RailML.RailTopoModel import PositioningSystemCoordinate
 from typing import List
 
-#class RTM_GeometricCoordinate(RTM_PositioningSystemCoordinate): # NO SE XQ CON ESTA HERENCIA SE ROMPE
-class RTM_GeometricCoordinate():    
+class GeometricCoordinate(PositioningSystemCoordinate.PositioningSystemCoordinate):
 	@property
 	def X(self) -> complex:
 		return self.___x
@@ -26,7 +25,7 @@ class RTM_GeometricCoordinate():
 		self.___z = aZ
     
 	def __init__(self):
+		super().__init__()
 		self.___x : complex = None
 		self.___y : complex = None
 		self.___z : complex = None
-

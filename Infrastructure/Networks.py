@@ -21,4 +21,3 @@ class Networks(object):
 		self.___network : Network = None
 		# @AssociationType Infrastructure.Network*
 		# @AssociationMultiplicity 1..*
-

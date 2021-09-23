@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 from RailML.Common import tLengthM
 #from RailML.Common import tRef
-from RailML.RailTopoModel import RTM_GeometricCoordinate,RTM_LinearCoordinate
+from RailML.RailTopoModel import GeometricCoordinate,RTM_LinearCoordinate
 from typing import List, NewType
 
 Long = NewType("Long", int)
@@ -27,13 +27,13 @@ class RTM_AssociatedNetElement(object):
 	def PosEnd(self) -> tLengthM:
 		return self.___posEnd
 	@property
-	def GeometricCoordinateBegin(self) -> RTM_GeometricCoordinate:
+	def GeometricCoordinateBegin(self) -> GeometricCoordinate:
 		return self.___geometricCoordinateBegin
 	@property
 	def LinearCoordinateBegin(self) -> RTM_LinearCoordinate:
 		return self.___linearCoordinateBegin
 	@property
-	def GeometricCoordinateEnd(self) -> RTM_GeometricCoordinate:
+	def GeometricCoordinateEnd(self) -> GeometricCoordinate:
 		return self.___geometricCoordinateEnd
 	@property
 	def LinearCoordinateEnd(self) -> RTM_LinearCoordinate:
@@ -58,24 +58,24 @@ class RTM_AssociatedNetElement(object):
 	def PosEnd(self, aPosEnd : tLengthM):
 		self.___posEnd = aPosEnd
 	@IntrinsicCoordBegin.setter
-	def GeometricCoordinateBegin(self, aGeometricCoordinateBegin : RTM_GeometricCoordinate):
+	def GeometricCoordinateBegin(self, aGeometricCoordinateBegin : GeometricCoordinate):
 		self.___geometricCoordinateBegin = aGeometricCoordinateBegin
 	@IntrinsicCoordBegin.setter
 	def LinearCoordinateBegin(self, aLinearCoordinateBegin : RTM_LinearCoordinate):
 		self.___linearCoordinateBegin = aLinearCoordinateBegin
 	@IntrinsicCoordBegin.setter
-	def GeometricCoordinateEnd(self, aGeometricCoordinateEnd : RTM_GeometricCoordinate):
+	def GeometricCoordinateEnd(self, aGeometricCoordinateEnd : GeometricCoordinate):
 		self.___geometricCoordinateEnd = aGeometricCoordinateEnd
 	@IntrinsicCoordBegin.setter
 	def LinearCoordinateEnd(self, aLinearCoordinateEnd : RTM_LinearCoordinate):
 		self.___linearCoordinateEnd = aLinearCoordinateEnd
 
 	def create_GeometricCoordinateBegin(self):
-		self.GeometricCoordinateBegin = RTM_GeometricCoordinate.RTM_GeometricCoordinate()
+		self.GeometricCoordinateBegin = GeometricCoordinate.GeometricCoordinate()
 	def create_LinearCoordinateBegin(self):
 		self.LinearCoordinateBegin = RTM_LinearCoordinate.RTM_LinearCoordinate()
 	def create_GeometricCoordinateEnd(self):
-		self.GeometricCoordinateEnd = RTM_GeometricCoordinate.RTM_GeometricCoordinate()
+		self.GeometricCoordinateEnd = GeometricCoordinate.GeometricCoordinate()
 	def create_LinearCoordinateEnd(self):
 		self.LinearCoordinateEnd = RTM_LinearCoordinate.RTM_LinearCoordinate()
 
@@ -90,9 +90,9 @@ class RTM_AssociatedNetElement(object):
 		self.___posEnd : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# @AssociationType Common.tLengthM
-		self.___geometricCoordinateBegin : RTM_GeometricCoordinate = None
+		self.___geometricCoordinateBegin : GeometricCoordinate = None
 		self.___linearCoordinateBegin : RTM_LinearCoordinate = None
-		self.___geometricCoordinateEnd : RTM_GeometricCoordinate = None
+		self.___geometricCoordinateEnd : GeometricCoordinate = None
 		# @AssociationType Infrastructure.RTM.RTM_GeometricCoordinate
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Infrastructure.RTM.RTM_GeometricCoordinate

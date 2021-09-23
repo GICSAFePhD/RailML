@@ -19,6 +19,7 @@ class Network(RTM_Network.RTM_Network):
 		self.Level.append(RTM_LevelNetwork.RTM_LevelNetwork())
 
 	def __init__(self):	
+		super().__init__()
 		self.___level : RTM_LevelNetwork = None
 		# @AssociationType Infrastructure.RTM.RTM_LevelNetwork*
 		# @AssociationMultiplicity 1..*

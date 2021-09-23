@@ -5,7 +5,7 @@ from RailML.Infrastructure import tNavigability, tUsage
 from RailML.RailTopoModel import RTM_NetworkResource
 from typing import List
 
-class RTM_Relation(RTM_NetworkResource.RTM_NetworkResource):
+class Relation(RTM_NetworkResource.RTM_NetworkResource):
 	@property
 	def Navigability(self) -> tNavigability:
 		return self.___navigability
@@ -50,6 +50,7 @@ class RTM_Relation(RTM_NetworkResource.RTM_NetworkResource):
 		self.ElementB = tElementWithIDref.tElementWithIDref()
     
 	def __init__(self):
+		super().__init__()
 		self.___navigability : tNavigability = None
 		# @AssociationType schemas.3.1.tNavigability
 		self.___positionOnA : tUsage = None

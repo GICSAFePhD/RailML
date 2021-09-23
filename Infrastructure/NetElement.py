@@ -3,8 +3,8 @@
 import sys
 sys.path.append('.')
 from RailML.Common import tLengthM,Name
-from RailML.Infrastructure import IsValid, NetRelation
-from RailML.RailTopoModel import RTM_OrderedCollection, RTM_UnorderedCollection, RTM_PositioningNetElement, RTM_Relation, RTM_AssociatedPositioningSystem
+from RailML.Infrastructure import IsValid
+from RailML.RailTopoModel import RTM_OrderedCollection, RTM_UnorderedCollection, RTM_PositioningNetElement, Relation,  AssociatedPositioningSystem
 from typing import List
 
 class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
@@ -13,7 +13,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def tLengthM(self) -> tLengthM:
 		return self.___length
 	@property
-	def AssociatedPositioningSystem(self) -> RTM_AssociatedPositioningSystem:
+	def AssociatedPositioningSystem(self) -> AssociatedPositioningSystem:
 		return self.___associatedPositioningSystem
 	@property
 	def ElementCollectionOrdered(self) -> RTM_OrderedCollection:
@@ -28,14 +28,14 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Name(self) -> Name:
 		return self.___name
 	@property
-	def Relation(self) -> NetRelation:
+	def Relation(self) -> Relation:
 		return self.___relation
 
 	@tLengthM.setter
 	def tLengthM(self, atLengthM : tLengthM):
 		self.___length = atLengthM
 	@AssociatedPositioningSystem.setter
-	def AssociatedPositioningSystem(self, aAssociatedPositioningSystem : RTM_AssociatedPositioningSystem):
+	def AssociatedPositioningSystem(self, aAssociatedPositioningSystem : AssociatedPositioningSystem):
 		self.___associatedPositioningSystem = aAssociatedPositioningSystem
 	@ElementCollectionOrdered.setter
 	def ElementCollectionOrdered(self, aElementCollectionOrdered : RTM_OrderedCollection):
@@ -50,7 +50,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Name(self, aName : Name):
 		self.___name = aName
 	@Relation.setter
-	def Relation(self, aRelation : NetRelation):
+	def Relation(self, aRelation : Relation):
 		self.___relation = aRelation
 
 	def create_tLengthM(self):
@@ -58,7 +58,7 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def create_AssociatedPositioningSystem(self):
 		if self.AssociatedPositioningSystem == None:
 			self.AssociatedPositioningSystem = []
-		self.AssociatedPositioningSystem.append(RTM_AssociatedPositioningSystem.RTM_AssociatedPositioningSystem())
+		self.AssociatedPositioningSystem.append(AssociatedPositioningSystem.AssociatedPositioningSystem())
 	def create_ElementCollectionOrdered(self):
 		if self.ElementCollectionOrdered == None:
 			self.ElementCollectionOrdered = []
@@ -78,13 +78,14 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def create_Relation(self):
 		if self.Relation == None:
 			self.Relation = []
-		self.Relation.append(NetRelation.NetRelation())
+		self.Relation.append(Relation.Relation())
 
 	def __init__(self):
+		super().__init__()
 		self.___length : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """length of the NetElement in metres"""
-		self.___associatedPositioningSystem : RTM_AssociatedPositioningSystem = None
+		self.___associatedPositioningSystem : AssociatedPositioningSystem = None
 		# @AssociationMultiplicity 1..*
 		self.___elementCollectionOrdered : RTM_OrderedCollection = None
 		# @AssociationMultiplicity 0..*
@@ -94,5 +95,5 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 		# @AssociationMultiplicity 0..*
 		self.___name : Name = None
 		# @AssociationMultiplicity 0..*
-		self.___relation : NetRelation = None	#TODO POINTER TO RELATION
+		self.___relation : Relation = None	#TODO POINTER TO RELATION
 		# @AssociationMultiplicity 0..*

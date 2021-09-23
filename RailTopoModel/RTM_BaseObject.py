@@ -19,4 +19,3 @@ class RTM_BaseObject(object):
 		self.___id : tID = None
 		# @AssociationType Common.tID
 		# """the identifier of the object; this can be either of type xs:ID or UUID"""
-

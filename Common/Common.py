@@ -3,7 +3,7 @@
 import sys
 from xml.dom.minidom import Identified
 sys.path.append('.')
-from RailML.Common import Common, ElectrificationSystems, OrganizationalUnits, SpeedProfiles, PositioningSystems, tElementWithID
+from RailML.Common import Common, ElectrificationSystems, OrganizationalUnits, SpeedProfiles, Positioning, tElementWithID
 from typing import List
 
 class Common(tElementWithID.tElementWithID):
@@ -19,7 +19,7 @@ class Common(tElementWithID.tElementWithID):
 	def SpeedProfiles(self) -> SpeedProfiles:
 		return self.___speedProfiles
 	@property
-	def Positioning(self) -> PositioningSystems:
+	def Positioning(self) -> Positioning:
 		return self.___positioning
 
 	@ElectrificationSystems.setter
@@ -32,7 +32,7 @@ class Common(tElementWithID.tElementWithID):
 	def SpeedProfiles(self, aSpeedProfiles : SpeedProfiles):
 		self.___speedProfiles = aSpeedProfiles
 	@Positioning.setter
-	def Positioning(self, aPositioningSystems : PositioningSystems):
+	def Positioning(self, aPositioningSystems : Positioning):
 		self.___positioning = aPositioningSystems
 
 	def create_ElectrificationSystems(self):
@@ -42,7 +42,7 @@ class Common(tElementWithID.tElementWithID):
 	def create_SpeedProfiles(self):
 		self.SpeedProfiles = SpeedProfiles.SpeedProfiles() 
 	def create_PositioningSystems(self):
-		self.Positioning = PositioningSystems.PositioningSystems()
+		self.Positioning = Positioning.Positioning()
 
 	def __init__(self):
 		self.___electrificationSystems : ElectrificationSystems = None
@@ -57,6 +57,6 @@ class Common(tElementWithID.tElementWithID):
 		# @AssociationType Common.SpeedProfiles
 		# @AssociationMultiplicity 0..1
 		# """container element for all speedProfile elements"""
-		self.___positioning : PositioningSystems = None
+		self.___positioning : Positioning = None
 		# @AssociationType Common.PositioningSystems
 		# @AssociationMultiplicity 0..1

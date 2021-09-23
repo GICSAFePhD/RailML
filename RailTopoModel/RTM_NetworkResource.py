@@ -18,4 +18,3 @@ class RTM_NetworkResource(RTM_NamedResource.RTM_NamedResource):
 		self.___isValid : IsValid = None
 		# @AssociationType Infrastructure.RTM.RTM_Validity*
 		# @AssociationMultiplicity 0..*
-

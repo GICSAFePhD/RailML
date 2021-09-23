@@ -36,7 +36,8 @@ class RTM_Network(RTM_NamedResource.RTM_NamedResource):
 		self.NetworkResource.append(RTM_NetworkResource.RTM_NetworkResource())
 
 	def __init__(self):
-		self.___id : str = ""
+		super().__init__()
+		#self.___id : str = ""
 		self.___level : RTM_LevelNetwork = None
 		# @AssociationType Infrastructure.RTM.RTM_LevelNetwork*
 		# @AssociationMultiplicity 1..*

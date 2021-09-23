@@ -21,4 +21,3 @@ class NetRelations(object):
 		self.___netRelation : NetRelation = None
 		# @AssociationType Infrastructure.NetRelation*
 		# @AssociationMultiplicity 1..*	#TODO 1..*
-

@@ -3,7 +3,7 @@
 from RailML.Common import GeometricPositioningSystems, LinearPositioningSystems, ScreenPositioningSystems
 from typing import List
 
-class PositioningSystems(object):
+class Positioning(object):
 	"""This is the top level element for railML3 positioning and coordinate systems model."""
 	@property
 	def GeometricPositioningSystems(self) -> GeometricPositioningSystems:
