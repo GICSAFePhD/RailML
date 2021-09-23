@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure import tDescriptionLevel
 from RailML.Common import tElementWithIDref
+from RailML.Infrastructure import tDescriptionLevel
 from RailML.RailTopoModel import RTM_BaseObject
 from typing import List
 
@@ -26,6 +26,7 @@ class RTM_LevelNetwork(RTM_BaseObject.RTM_BaseObject):
 		self.NetworkResource.append(tElementWithIDref.tElementWithIDref())
 
 	def __init__(self):
+		super().__init__()
 		self.___descriptionLevel : tDescriptionLevel = None
 		# @AssociationType schemas.3.1.tDescriptionLevel
 		self.___networkResource : tElementWithIDref = None

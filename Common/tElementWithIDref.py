@@ -6,15 +6,14 @@ from typing import List
 class tElementWithIDref(object):
 	"""generic base type, used for inheritance of types deploying references"""
 	@property
-	def tRef(self) -> tRef:
+	def Ref(self) -> tRef:
 		return self.___ref
 	
-	@tRef.setter
-	def tRef(self, atRef : tRef):
+	@Ref.setter
+	def Ref(self, atRef : tRef):
 		self.___ref = atRef
 
 	def __init__(self):
-		self.___ref : tRef = tRef.tRef()
+		self.___ref : tRef = None
 		# @AssociationType Common.tRef
 		# """reference is required because it's the purpose of the element"""
-
