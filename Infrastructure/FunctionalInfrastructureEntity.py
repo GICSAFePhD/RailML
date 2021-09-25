@@ -38,4 +38,3 @@ class FunctionalInfrastructureEntity(EntityIS.EntityIS):
 		self.___external : External = None
 		# @AssociationType Common.External*
 		# @AssociationMultiplicity 0..*
-

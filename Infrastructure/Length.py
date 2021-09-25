@@ -26,13 +26,13 @@ class Length(object):
 		self.___validForDirection = aValidForDirection
 
 	def __init__(self):
-		self.___value : tLengthM = tLengthM.tLengthM()
+		self.___value : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """the distance value given in meters"""
-		self.___type : tLengthTypeExt = tLengthTypeExt.tLengthTypeExt()
+		self.___type : tLengthTypeExt = None
 		# @AssociationType Infrastructure.tLengthTypeExt
 		# """type of length (operational, physical, administrative...)"""
-		self.___validForDirection : tExtendedDirection = tExtendedDirection.tExtendedDirection()
+		self.___validForDirection : tExtendedDirection = None
 		# @AssociationType Infrastructure.tExtendedDirection
 		# """indicate the direction for which the length information applies"""
 

@@ -34,4 +34,3 @@ class ElementProjection(VisualizationBaseElement):
 		# @AssociationType Infrastructure.ElementProjectionSymbol
 		# @AssociationMultiplicity 0..1
 		# """use an (external) symbol for element projection"""
-

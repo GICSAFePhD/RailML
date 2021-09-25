@@ -11,4 +11,3 @@ class VisualizationBaseElement(tElementWithIDandName.tElementWithIDandName):
 		self._unnamed_any_ = []
 		"""# @AssociationMultiplicity 0..*"""
 		self._unnamed_anyAttribute_ : anyAttribute = None
-

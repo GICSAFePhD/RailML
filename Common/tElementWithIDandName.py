@@ -18,4 +18,3 @@ class tElementWithIDandName(tElementWithID.tElementWithID):
 		self.___name : Name = None
 		# @AssociationType Common.Name*
 		# @AssociationMultiplicity 0..*
-

@@ -38,17 +38,16 @@ class SwitchCrossingBranch(object):
 		self.___length = aLength
 
 	def __init__(self):
-		self.___branchingSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
-		self.___joiningSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___branchingSpeed : tSpeedKmPerHour = None
+		self.___joiningSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
-		self.___netRelationRef : tRef = tRef.tRef()
+		self.___netRelationRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to the netRelation that defines the navigability at this switch branch"""
-		self.___radius : tLengthM = tLengthM.tLengthM()
+		self.___radius : tLengthM = None
 		"""radius of the switch branch in metres"""
-		self.___length : tLengthM = tLengthM.tLengthM()
+		self.___length : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# @AssociationType Common.tLengthM
 		# """length of the switch branch in metres"""
-

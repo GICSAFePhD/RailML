@@ -48,4 +48,3 @@ class RTM_LocatedNetEntity(RTM_NetEntity.RTM_NetEntity):
 		self.___spotLocation : RTM_SpotLocation = None
 		# @AssociationType Infrastructure.RTM.RTM_SpotLocation*
 		# @AssociationMultiplicity 0..*
-

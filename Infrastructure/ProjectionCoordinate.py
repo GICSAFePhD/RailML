@@ -25,7 +25,6 @@ class ProjectionCoordinate(object):
 		self.___z = aZ
 
 	def __init__(self):
-		self.___x : Decimal = 0
-		self.___y : Decimal = 0
-		self.___z : Decimal = 0
-
+		self.___x : Decimal = None
+		self.___y : Decimal = None
+		self.___z : Decimal = None

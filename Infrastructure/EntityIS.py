@@ -54,4 +54,3 @@ class EntityIS(RTM_LocatedNetEntity.RTM_LocatedNetEntity):
 		self.___unnamed_anyAttribute_ : anyAttribute = None
 		self.___unnamed_any_ = []
 		"""# @AssociationMultiplicity 0..*"""
-

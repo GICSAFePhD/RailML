@@ -1,13 +1,16 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from RailML.Common import tLengthM
-#from RailML.Common import tRef
+from RailML.Common import tRef
 from RailML.RailTopoModel import GeometricCoordinate,RTM_LinearCoordinate
 from typing import List, NewType
 
 Long = NewType("Long", int)
 
 class RTM_AssociatedNetElement(object):
+	@property
+	def NetElementRef(self) -> tRef:
+		return self.___netElementRef
 	@property
 	def IntrinsicCoordBegin(self) -> complex:
 		return self.___intrinsicCoordBegin
@@ -39,34 +42,37 @@ class RTM_AssociatedNetElement(object):
 	def LinearCoordinateEnd(self) -> RTM_LinearCoordinate:
 		return self.___linearCoordinateEnd
 
+	@NetElementRef.setter
+	def NetElementRef(self, aNetElementRef : tRef):
+		self.___netElementRef = aNetElementRef
 	@IntrinsicCoordBegin.setter
 	def IntrinsicCoordBegin(self, aIntrinsicCoordBegin : complex):
 		self.___intrinsicCoordBegin = aIntrinsicCoordBegin
-	@IntrinsicCoordBegin.setter
+	@IntrinsicCoordEnd.setter
 	def IntrinsicCoordEnd(self, aIntrinsicCoordEnd : complex):
 		self.___intrinsicCoordEnd = aIntrinsicCoordEnd
-	@IntrinsicCoordBegin.setter
+	@KeepsOrientation.setter
 	def KeepsOrientation(self, aKeepsOrientation : Long):
 		self.___keepsOrientation = aKeepsOrientation
-	@IntrinsicCoordBegin.setter
+	@Sequence.setter
 	def Sequence(self, aSequence : int):
 		self.___sequence = aSequence
-	@IntrinsicCoordBegin.setter
+	@PosBegin.setter
 	def PosBegin(self, aPosBegin : tLengthM):
 		self.___posBegin = aPosBegin
-	@IntrinsicCoordBegin.setter
+	@PosEnd.setter
 	def PosEnd(self, aPosEnd : tLengthM):
 		self.___posEnd = aPosEnd
-	@IntrinsicCoordBegin.setter
+	@GeometricCoordinateBegin.setter
 	def GeometricCoordinateBegin(self, aGeometricCoordinateBegin : GeometricCoordinate):
 		self.___geometricCoordinateBegin = aGeometricCoordinateBegin
-	@IntrinsicCoordBegin.setter
+	@LinearCoordinateBegin.setter
 	def LinearCoordinateBegin(self, aLinearCoordinateBegin : RTM_LinearCoordinate):
 		self.___linearCoordinateBegin = aLinearCoordinateBegin
-	@IntrinsicCoordBegin.setter
+	@GeometricCoordinateEnd.setter
 	def GeometricCoordinateEnd(self, aGeometricCoordinateEnd : GeometricCoordinate):
 		self.___geometricCoordinateEnd = aGeometricCoordinateEnd
-	@IntrinsicCoordBegin.setter
+	@LinearCoordinateEnd.setter
 	def LinearCoordinateEnd(self, aLinearCoordinateEnd : RTM_LinearCoordinate):
 		self.___linearCoordinateEnd = aLinearCoordinateEnd
 
@@ -80,7 +86,7 @@ class RTM_AssociatedNetElement(object):
 		self.LinearCoordinateEnd = RTM_LinearCoordinate.RTM_LinearCoordinate()
 
 	def __init__(self):
-		#self.___netElementRef : tRef = None
+		self.___netElementRef : tRef = None
 		# @AssociationType Common.tRef
 		self.___intrinsicCoordBegin : complex = None
 		self.___intrinsicCoordEnd : complex = None
@@ -102,4 +108,3 @@ class RTM_AssociatedNetElement(object):
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Infrastructure.RTM.RTM_LinearCoordinate
 		# @AssociationMultiplicity 0..1
-
