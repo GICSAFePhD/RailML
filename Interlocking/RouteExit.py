@@ -33,6 +33,7 @@ class RouteExit(EntityIL.EntityIL):
 		self.HasOverlap = EntityILref.EntityILref()
 
 	def __init__(self):
+		super().__init__()
 		self.___refersTo : EntityILref = None
 		"""The reference to the track asset representing the destination point of the route. In most cases this is a signal or buffer stop."""
 		self.___hasDangerPoint : EntityILref = None

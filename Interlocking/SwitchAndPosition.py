@@ -19,6 +19,9 @@ class SwitchAndPosition(AssetAndState.AssetAndState):
 	def RefersToSwitch(self, aRefersToSwitch : EntityILref):
 		self.___refersToSwitch = aRefersToSwitch
 
+	def create_RefersToSwitch(self):
+		self.RefersToSwitch = EntityILref.EntityILref()
+
 	def __init__(self):
 		super().__init__()
 		self.___inPosition : tSwitchPosition = None

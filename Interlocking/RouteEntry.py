@@ -30,4 +30,3 @@ class RouteEntry(EntityIL.EntityIL):
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to any TVD section in advance to the start signal which sequential occupation will not cause the signal closure."""
-

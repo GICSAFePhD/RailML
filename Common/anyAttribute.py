@@ -34,8 +34,8 @@ class anyAttribute(object):
 		self.___unnamed_EntityILref_ = aUnnamed_EntityILref
 
 	def __init__(self):
-		self.___unnamed_EntityIS_ : EntityIS = EntityIS.EntityIS()
-		self.___unnamed_VisualizationBaseElement_ : VisualizationBaseElement = VisualizationBaseElement.VisualizationBaseElement()
-		self.___unnamed_EntityIL_ : EntityIL = EntityIL.EntityIL()
-		self.___unnamed_EntityILref_ : EntityILref = EntityILref.EntityILref()
+		self.___unnamed_EntityIS_ : EntityIS = None
+		self.___unnamed_VisualizationBaseElement_ : VisualizationBaseElement = None
+		self.___unnamed_EntityIL_ : EntityIL = None
+		self.___unnamed_EntityILref_ : EntityILref = None
 

@@ -217,6 +217,7 @@ class AssetsForIL(EntityIL.EntityIL):
 		self.PowerSuppliesIL = PowerSuppliesIL.PowerSuppliesIL()
 
 	def __init__(self):
+		super().__init__()
 		self.___tvdSections : TvdSections = None
 		# @AssociationType Interlocking.TvdSections
 		# @AssociationMultiplicity 0..1

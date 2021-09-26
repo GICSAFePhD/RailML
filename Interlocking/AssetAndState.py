@@ -17,10 +17,8 @@ class AssetAndState(EntityIL.EntityIL):
 	def IsNegated (self, aIsNegated : Long):
 		self.___isNegated = aIsNegated
 
-
 	def __init__(self):
 		super().__init__()
 		self.___isNegated : Long = None
 		"""The exclusion of a particular state, i.e. everything else that this one."""
 		#self._unnamed_Overlap_ : Overlap = None	#TODO CIRCULAR!
-

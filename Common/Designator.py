@@ -22,4 +22,3 @@ class Designator(object):
 		"""name of a register where the designator entry can be found"""
 		self.___entry : str = ""
 		"""the designator of the element in the specified register"""
-

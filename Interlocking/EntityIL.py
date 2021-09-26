@@ -6,6 +6,7 @@ from typing import List
 
 class EntityIL(tElementWithIDandDesignator.tElementWithIDandDesignator):
 	"""base type for normal elements in IL providing attributes @id and @name plus the possibility to add an anyAttribute"""
+	''' 
 	@property
 	def Unnamed_any(self) -> list:
 		return self.___unnamed_any_
@@ -18,11 +19,10 @@ class EntityIL(tElementWithIDandDesignator.tElementWithIDandDesignator):
 		self.___unnamed_any_ = aUnnamed_any
 	@Unnamed_anyAttribute.setter
 	def Unnamed_anyAttribute(self, aUnnamed_anyAttribute : anyAttribute):
-		self.___unnamed_anyAttribute_ = aUnnamed_anyAttribute
+		self.___unnamed_anyAttribute_ = aUnnamed_anyAttribute '''
 
 	def __init__(self):
 		super().__init__()
-		self.___unnamed_any_ = []
-		"""# @AssociationMultiplicity 0..*"""
-		self.___unnamed_anyAttribute_ : anyAttribute = None
-
+		#self.___unnamed_any_ = []
+		#"""# @AssociationMultiplicity 0..*"""
+		#self.___unnamed_anyAttribute_ : anyAttribute = None

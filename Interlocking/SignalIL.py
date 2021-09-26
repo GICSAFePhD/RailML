@@ -98,14 +98,14 @@ class SignalIL(TrackAsset.TrackAsset):
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum speed in km/h beyond the signal. This is suitable for defining the line speed profile."""
-		self.___releaseDelay : Duration = 0
+		self.___releaseDelay : Duration = None
 		"""Time to elapse between receiving the revocation command and before route release."""
 		self.___function : tSignalFunctionListExt = None
 		# @AssociationType Interlocking.tSignalFunctionListExt
 		# """Function of the signal for usage by the interlocking. This is in addition to signalType in infrastructure."""
-		self.___isVirtual : Long = 0
+		self.___isVirtual : Long = None
 		"""Often, users label signals virtual. A virtual signal can be a dummy-signal that is a software object in the interlocking but has no physical trackside presence. Such virtual signals can be useful for modelling speed steps; there need not be a physical signal but the interlocking enforces a different speed at the position of the virtual signal. The other way round, stand-alone boards that are not wired to the interlocking can be labelled virtual. Such stand-alone signals are of interest to simulations because when they affect driver behaviour thus influence train runs."""
-		self.___callOnAspectTime : Duration = 0
+		self.___callOnAspectTime : Duration = None
 		"""time for duration to show call-on aspect on this signal"""
 		self.___sightDistance : tLengthM = None
 		# @AssociationType Common.tLengthM

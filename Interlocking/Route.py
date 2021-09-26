@@ -129,15 +129,15 @@ class Route(TrackAsset.TrackAsset):
 
 	def __init__(self):
 		super().__init__()
-		self.___locksAutomatically : Long = 0
+		self.___locksAutomatically : Long = None
 		"""If true, the interlocking locks this route automatically and immediately after it was cleared. The operator has to intervene if he wishes to call another route. Automatikfahrstrasse in German, trace automatique in French. Note that this functionality is often part of the control system in which case this attribute should be omitted."""
-		self.___processingDelay : Duration = 0
+		self.___processingDelay : Duration = None
 		"""The delay in seconds between the moment the interlocking receives the route call and the moment the route the interlocking reports back that the route is locked, i.e. the processing time for setting that route."""
-		self.___proceedAspectDelay : Duration = 0
+		self.___proceedAspectDelay : Duration = None
 		"""The delay for the signal before it will change from closed to any proceed aspect."""
-		self.___signalClosureDelay : Duration = 0
+		self.___signalClosureDelay : Duration = None
 		"""The delay for the signal after the conditions for proceed aspect are removed and the physical closure of the signal."""
-		self.___approachReleaseDelay : Duration = 0
+		self.___approachReleaseDelay : Duration = None
 		"""The delay between the request from signalman to release an already approached (definitely locked) route and the real release of associated elements of the route."""
 		self.___handlesRouteType : EntityILref = None
 		"""The reference to the IM specific route type. This implies particular characteristics of the route dependent on the IM operational rules."""

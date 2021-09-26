@@ -17,9 +17,6 @@ class Border(TrackNode.TrackNode):
 	@property
 	def Type(self) -> tBorderTypeExt:
 		return self.___type
-	@property
-	def Id(self) -> tElementWithIDref:
-		return self.___id
 
 	@IsOpenEnd.setter
 	def IsOpenEnd(self, aIsOpenEnd : Long):
@@ -30,14 +27,9 @@ class Border(TrackNode.TrackNode):
 	@Type.setter
 	def Type(self, aType : tBorderTypeExt):
 		self.___type = aType
-	@Id.setter
-	def Id(self, aId : tElementWithIDref):
-		self.___id = aId
 
 	def create_Type(self):
 		self.Type = tBorderTypeExt.tBorderTypeExt()
-	def create_Id(self):
-		self.Id = tElementWithIDref.tElementWithIDref()
 	
 	def __init__(self):
 		super().__init__()
