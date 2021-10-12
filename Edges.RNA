@@ -1,0 +1,19 @@
+Edges: 9 | ['nr_ne14ne16_swi84', 'nr_ne14ne15_swi84', 'nr_ne15ne16_swi84', 'nr_ne16ne18_swi85', 'nr_ne16ne17_swi85', 'nr_ne17ne18_swi85', 'nr_ne17ne20_swi87', 'nr_ne17ne19_swi87', 'nr_ne19ne20_swi87']
+Edge nr_ne14ne16_swi84:
+	navigability = Both
+Edge nr_ne14ne15_swi84:
+	navigability = None
+Edge nr_ne15ne16_swi84:
+	navigability = Both
+Edge nr_ne16ne18_swi85:
+	navigability = Both
+Edge nr_ne16ne17_swi85:
+	navigability = Both
+Edge nr_ne17ne18_swi85:
+	navigability = None
+Edge nr_ne17ne20_swi87:
+	navigability = Both
+Edge nr_ne17ne19_swi87:
+	navigability = None
+Edge nr_ne19ne20_swi87:
+	navigability = Both

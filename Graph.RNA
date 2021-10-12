@@ -1,0 +1,62 @@
+Nodes: 7 | Switches: 3 | Signals: 6 | Detectors: 8 | Ends: 5
+Node ne14:
+	Track = track2
+	TrainDetectionElements = J09
+	Type = Border --> line112
+	Neighbours = 2 --> ['ne16', 'ne15']
+	Signals -> S07
+		Direction -> normal
+		Position -> left
+Node ne15:
+	Track = track3
+	TrainDetectionElements = J10
+	Type = Border --> line113
+	Neighbours = 2 --> ['ne14', 'ne16']
+	Signals -> S08
+		Direction -> normal
+		Position -> left
+Node ne16:
+	Track = track1
+	TrainDetectionElements = J11
+	TrainDetectionElements = J12
+	Neighbours = 4 --> ['ne14', 'ne15', 'ne18', 'ne17']
+	Signals -> S11
+		Direction -> normal
+		Position -> left
+	Signals -> S12
+		Direction -> reverse
+		Position -> left
+	Switches = Sw01
+		ContinueCourse -> right -> ne14
+		BranchCourse -> left -> ne15
+	Switches = Sw02
+		ContinueCourse -> right -> ne17
+		BranchCourse -> left -> ne18
+Node ne17:
+	Track = track5
+	TrainDetectionElements = J13
+	Neighbours = 4 --> ['ne16', 'ne18', 'ne20', 'ne19']
+Node ne18:
+	Track = track4
+	TrainDetectionElements = J15
+	Type = Border --> line114
+	Neighbours = 2 --> ['ne16', 'ne17']
+	Signals -> S09
+		Direction -> reverse
+		Position -> right
+Node ne19:
+	Track = track7
+	TrainDetectionElements = J14
+	Type = BufferStop --> bus88
+	Neighbours = 2 --> ['ne17', 'ne20']
+Node ne20:
+	Track = track6
+	TrainDetectionElements = J16
+	Type = Border --> line115
+	Neighbours = 2 --> ['ne17', 'ne19']
+	Signals -> S10
+		Direction -> reverse
+		Position -> right
+	Switches = Sw03
+		ContinueCourse -> right -> ne17
+		BranchCourse -> left -> ne19
