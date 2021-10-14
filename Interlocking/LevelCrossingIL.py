@@ -76,13 +76,13 @@ class LevelCrossingIL(TrackAsset.TrackAsset):
 	def IsLevelCrossingType(self, aIsLevelCrossingType : EntityILref):
 		self.___isLevelCrossingType = aIsLevelCrossingType
 	@RefersTo.setter
-	def RefersTo(self, *aRefersTo : EntityILref):
+	def RefersTo(self, aRefersTo : EntityILref):	# TODO *aRefersTo
 		self.___refersTo = aRefersTo
 	@DeactivatedBy.setter
-	def DeactivatedBy(self, *aDeactivatedBy : LevelCrossingDeactivator):
+	def DeactivatedBy(self, aDeactivatedBy : LevelCrossingDeactivator):	# TODO *aDeactivatedBy
 		self.___deactivatedBy = aDeactivatedBy
 	@ActivationCondition.setter
-	def ActivationCondition(self, *aActivationCondition : ActivationCondition):
+	def ActivationCondition(self, aActivationCondition : ActivationCondition):	# TODO *aActivationCondition
 		self.___activationCondition = aActivationCondition
 	@HasTvdSection.setter
 	def HasTvdSection(self, aHasTvdSection : EntityILref):

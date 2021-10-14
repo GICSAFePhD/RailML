@@ -34,13 +34,13 @@ class Platform(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 	def Height(self, aHeight : tLengthM):
 		self.___height = aHeight
 	@OwnsPlatformEdge.setter
-	def OwnsPlatformEdge(self, *aOwnsPlatformEdge : tLengthM):
+	def OwnsPlatformEdge(self, aOwnsPlatformEdge : tLengthM):	# TODO *aOwnsPlatformEdge
 		self.___ownsPlatformEdge = aOwnsPlatformEdge
 	@Width.setter
-	def Width(self, *aWidth : Length):
+	def Width(self, aWidth : Length):	# TODO *aWidth
 		self.___width = aWidth
 	@Length.setter
-	def Length(self, *aLength : Length):
+	def Length(self, aLength : Length):	# TODO *aLength
 		self.___length = aLength
 
 	def create_OwnsPlatformEdge(self):

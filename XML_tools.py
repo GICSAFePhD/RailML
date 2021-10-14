@@ -79,22 +79,6 @@ def save_xml(object,f,name = "",level = 0, test = False):
             print(' '*(level)+f'<\{tag}>')
         f.write('\t'*(level)+f'</{tag}>\n')
 #%%%
-def get_leaves(root):
-    leaves = []
-    leaf = []
-    text = []
-    #ns_leaf = '{'+tag+'}'
-    
-    for i in root:  # HERE I CAN DO IT GENERIC
-        ns = re.match(r'{.*}', i.tag).group(0)
-        leaves.append(i.tag[len(ns):])
-        leaf.append(i)
-        
-        if i.text and i.text[0] != '\n':
-            text.append(i.text)
-    
-    return [leaf,leaves,text]   
-#%%%
 def get_attributes(object):
     try:
         attribute_inherated = []
@@ -113,7 +97,7 @@ def get_name(object):
     return object.__class__.__name__
 #%%%
 def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0, test = False):
-    a = 0
+    #a = 0
     # xml_node: the old-tree
     # child[i]: the new-tree
 
@@ -150,8 +134,9 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0, tes
             
             if test:          
                 print('>'*(level+1)+f'{xml_tag[xml_tag_i]}[{xml_tag_i+1} de {size_xml_tag}]') 
-            if xml_text:
-                #print(f'{text}|{text[idx_txt]}')
+            if xml_text and idx_txt <= xml_tag_i:
+                #print(f'{xml_text}|{xml_text[idx_txt]}')
+                #print(f'L:{xml_tag[xml_tag_i]}|{xml_text[idx_txt]}')
                 constructors[xml_tag[xml_tag_i]](current_object,capitalized_tag,xml_text[idx_txt])
                 idx_txt = idx_txt + 1
             else:
@@ -196,14 +181,16 @@ def get_leaves(root):
     
     for i in root:  # HERE I CAN DO IT GENERIC
         ns = re.match(r'{.*}', i.tag).group(0)
+        #print(i.tag[len(ns):],i.text)
         leaves.append(i.tag[len(ns):])
         leaf.append(i)
         
         if i.text and i.text[0] != '\n':
             text.append(i.text)
-    
+
+    #print(leaves,text)
     return [leaf,leaves,text]
-    
+
 constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.create_common,'infrastructure':railML.railML.create_infrastructure,'interlocking':railML.railML.create_interlocking, # RailML
                 'title':set_text,'date':set_text,'creator':set_text,'source':set_text,'identifier':set_text,'subject':set_text,'format':set_text,'description':set_text,'publisher':set_text,   # Metadata
                 
@@ -270,6 +257,7 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'keyLockIS':railML.Infrastructure.FunctionalInfrastructure.KeyLocksIS.KeyLocksIS.create_KeyLockIS, # KeyLocksIS
                 'levelCrossingIS':railML.Infrastructure.FunctionalInfrastructure.LevelCrossingsIS.LevelCrossingsIS.create_LevelCrossingIS, # LevelCrossingsIS
                 'protection':railML.Infrastructure.FunctionalInfrastructure.LevelCrossingsIS.LevelCrossingIS.LevelCrossingIS.create_Protection, # LevelCrossingIS
+                'crossedElement':railML.Infrastructure.FunctionalInfrastructure.LevelCrossingsIS.LevelCrossingIS.XCrossing.XCrossing.create_CrossedElement, # XCrossing
                 
                 'line':railML.Infrastructure.FunctionalInfrastructure.Lines.Lines.create_Line, # Lines
                 'beginsInOP':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_BeginsInOP,'endsInOP':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_EndsInOP,'length':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_Length,'lineTrafficCode':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineTrafficCode,'lineCombinedTransportCode':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineCombinedTransportCode,'lineLayout':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineLayout,'linePerformance':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line. create_LinePerformance, # Line

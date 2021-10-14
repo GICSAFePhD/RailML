@@ -78,6 +78,7 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 		self.OpOperations.append(OpOperations.OpOperations())
 
 	def __init__(self):
+		super().__init__()
 		self.___belongsToParent : tRef = None
 		"""references the one and only parent operational point of this operational point"""
 		self.___basedOnTemplate : tRef = None
@@ -105,4 +106,3 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 		# @AssociationType Infrastructure.OpOperations
 		# @AssociationMultiplicity 0..1
 		# """child element summarizing the operational aspects of the operational point"""
-

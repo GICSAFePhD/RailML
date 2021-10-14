@@ -32,7 +32,7 @@ class UnderCrossing(XCrossing.XCrossing):
 	def AllowedLoadingGauge(self, aAllowedLoadingGauge : tElementWithIDref): #TODO *aAllowedLoadingGauge
 		self.___allowedWeightLimit = aAllowedLoadingGauge
 	@Length.setter
-	def Length(self, *aLength : Length):
+	def Length(self, aLength : Length):	# TODO *aLength
 		self.___length = aLength
 	@VerbalConstraint.setter
 	def VerbalConstraint(self, aaVerbalConstraint : aVerbalConstraint):

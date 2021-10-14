@@ -83,4 +83,3 @@ class LevelCrossingIS(XCrossing.XCrossing):
 		# @AssociationType Infrastructure.LevelCrossingProtection
 		# @AssociationMultiplicity 0..1
 		# """summary of technical protection of the level crossing"""
-

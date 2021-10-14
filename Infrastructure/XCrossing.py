@@ -1,23 +1,25 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from abc import ABCMeta, abstractmethod
-from RailML.Infrastructure.CrossedElement import CrossedElement
-from RailML.Infrastructure.FunctionalInfrastructureEntity import FunctionalInfrastructureEntity
+from RailML.Infrastructure import CrossedElement
+from RailML.Infrastructure import FunctionalInfrastructureEntity
 from typing import List
 
-class XCrossing(FunctionalInfrastructureEntity):
-	__metaclass__ = ABCMeta
-	@classmethod
-	def setCrossesElement(self, *aCrossesElement : CrossedElement):
-		self._crossesElement = aCrossesElement
+class XCrossing(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
+	@property
+	def CrossedElement(self) -> CrossedElement:
+		return self.___crossesElement
+	@CrossedElement.setter
+	def CrossedElement(self, aCrossedElement : CrossedElement):		#TODO *aCrossesElement
+		self.___crossesElement = aCrossedElement
 
-	@classmethod
-	def getCrossesElement(self) -> CrossedElement:
-		return self._crossesElement
-
-	@classmethod
+	def create_CrossedElement(self):
+		if self.CrossedElement == None:
+			self.CrossedElement = []
+		self.CrossedElement.append(CrossedElement.CrossedElement())
+	
 	def __init__(self):
-		self._crossesElement : CrossedElement = None
+		super().__init__()
+		self.___crossesElement : CrossedElement = None
 		# @AssociationType Infrastructure.CrossedElement*
 		# @AssociationMultiplicity 0..*
-

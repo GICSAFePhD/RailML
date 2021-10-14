@@ -17,4 +17,3 @@ class OpOperations(object):
 		# @AssociationType Infrastructure.OpOperation*
 		# @AssociationMultiplicity 1..*
 		# """railway operation"""
-

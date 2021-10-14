@@ -15,4 +15,3 @@ class LocationNetwork(object):
 		self.___networkRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a railway topology <network> element"""
-

@@ -25,4 +25,3 @@ class OpOperation(object):
 		self.___trafficType : tOpTrafficTypeExt = tOpTrafficTypeExt.tOpTrafficTypeExt()
 		# @AssociationType Infrastructure.tOpTrafficTypeExt
 		# """definition of traffic type that is operating in this operational point"""
-

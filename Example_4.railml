@@ -3,12 +3,12 @@
     <metadata>
         <dc:title>Example_4.railml</dc:title>
         <dc:date>2021-09-20T17:03:25Z</dc:date>
-        <dc:creator></dc:creator>
+        <dc:creator> </dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
         <dc:subject>railML.org</dc:subject>
         <dc:format>0.9.5</dc:format>
-        <dc:description></dc:description>
+        <dc:description> </dc:description>
         <dc:publisher>This export has been generated using RaIL-AiD framework, a NEAT S.r.l. intellectual property. (http://www.rail-aid.com/) (c) NEAT S.r.l., Rome, Italy (http://www.neat.it)</dc:publisher>
     </metadata>
     <common id="co_01">

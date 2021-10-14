@@ -9,7 +9,7 @@ class DerailersIL(object):
 		return self.___derailerIL
 	
 	@DerailerIL.setter
-	def DerailerIL(self, *aDerailerIL : DerailerIL):
+	def DerailerIL(self, aDerailerIL : DerailerIL):	# TODO *aDerailerIL
 		self.___derailerIL = aDerailerIL
 
 	def create_DerailerIL(self):
