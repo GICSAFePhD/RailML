@@ -15,7 +15,7 @@ class LevelCrossingProtection(object):
 	def Acoustic(self) -> tLevelCrossingProtectionAcousticExt:
 		return self.___acoustic
 	@property
-	def HasActiveProtection(self) -> Long:
+	def HasActiveProtection(self) -> bool:
 		return self.___hasActiveProtection
 
 	@Barriers.setter
@@ -28,21 +28,21 @@ class LevelCrossingProtection(object):
 	def Acoustic(self, aAcoustic : tLevelCrossingProtectionAcousticExt):
 		self.___acoustic = aAcoustic
 	@HasActiveProtection.setter
-	def HasActiveProtection(self, aHasActiveProtection : Long):
+	def HasActiveProtection(self, aHasActiveProtection : bool):
 		self.___hasActiveProtection = aHasActiveProtection
 
 	def __init__(self):
-		self.___barriers : tLevelCrossingProtectionBarrierExt = tLevelCrossingProtectionBarrierExt.tLevelCrossingProtectionBarrierExt()
+		self.___barriers : tLevelCrossingProtectionBarrierExt = None
 		# @AssociationType Infrastructure.tLevelCrossingProtectionBarrierExt
 		# """technical level crossing protection: barriers;
 		# missing attribute means that the information is not known"""
-		self.___lights : tLevelCrossingProtectionLightsExt = tLevelCrossingProtectionLightsExt.tLevelCrossingProtectionLightsExt()
+		self.___lights : tLevelCrossingProtectionLightsExt = None
 		# @AssociationType Infrastructure.tLevelCrossingProtectionLightsExt
 		# """technical level crossing protection: lights;
 		# missing attribute means that the information is not known"""
-		self.___acoustic : tLevelCrossingProtectionAcousticExt = tLevelCrossingProtectionAcousticExt.tLevelCrossingProtectionAcousticExt()
+		self.___acoustic : tLevelCrossingProtectionAcousticExt = None
 		# @AssociationType Infrastructure.tLevelCrossingProtectionAcousticExt
 		# """technical level crossing protection: acoustic warning system;
 		# missing attribute means that the information is not known"""
-		self.___hasActiveProtection : Long = 0
+		self.___hasActiveProtection : bool = False
 

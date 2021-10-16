@@ -1,78 +1,32 @@
-Nodes: 9 | Switches: 3 | Signals: 8 | Detectors: 12 | Ends: 7
+Nodes: 1 | Switches: 0 | Signals: 6 | Detectors: 2 | Ends: 2
 Node ne1:
-	Track = track2
-	TrainDetectionElements = AxC01
-	Type = Border --> line84
-	Neighbours = 2 --> ['ne6', 'ne4']
-	Signals -> 68N2
-		Direction -> normal
-		Position -> right
-Node ne4:
-	Track = track3
-	TrainDetectionElements = AxC02
-	Type = Border --> line85
-	Neighbours = 2 --> ['ne1', 'ne6']
-	Signals -> 68N1
-		Direction -> normal
-		Position -> left
-Node ne6:
 	Track = track1
-	TrainDetectionElements = AxC03
-	TrainDetectionElements = AxC04
-	Type = Border --> sb82
-	Neighbours = 3 --> ['ne1', 'ne4', 'ne15']
-	Signals -> 68F
-		Direction -> reverse
-		Position -> left
-	Switches = 68W02
-		ContinueCourse -> right -> ne1
-		BranchCourse -> left -> ne4
-Node ne8:
-	Track = track5
-	Neighbours = 4 --> ['ne9', 'ne12', 'ne13', 'ne16']
-Node ne9:
-	Track = track4
-	TrainDetectionElements = J04
-	Type = Border --> line86
-	Neighbours = 2 --> ['ne8', 'ne16']
-	Signals -> 69P2
-		Direction -> reverse
-		Position -> left
-Node ne12:
-	Track = track7
-	TrainDetectionElements = J02
-	Type = BufferStop --> bus15
-	Neighbours = 2 --> ['ne8', 'ne13']
-	Signals -> 69W04Y
-		Direction -> reverse
-		Position -> left
-Node ne13:
-	Track = track6
-	TrainDetectionElements = J05
-	Type = Border --> line87
-	Neighbours = 2 --> ['ne8', 'ne12']
-	Signals -> 69P1
-		Direction -> reverse
-		Position -> right
-	Switches = 69W04
-		ContinueCourse -> right -> ne8
-		BranchCourse -> left -> ne12
-Node ne15:
-	TrainDetectionElements = AxC05
-	TrainDetectionElements = AxC06
-	Type = Border --> sb83
-	Neighbours = 2 --> ['ne6', 'ne16']
-	Signals -> 69Va
+	TrainDetectionElements -> tde19
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde20
+		Type -> insulatedRailJoint
+	Type = Border -> line4
+		Type -> station
+		IsOpenEnd -> true
+	Type = Border -> line5
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 0 -> []
+	Signals -> S01
 		Direction -> normal
 		Position -> right
-Node ne16:
-	TrainDetectionElements = AxC07
-	TrainDetectionElements = J01
-	TrainDetectionElements = J03
-	Neighbours = 3 --> ['ne8', 'ne9', 'ne15']
-	Signals -> 69A
+	Signals -> S02
 		Direction -> normal
 		Position -> right
-	Switches = 69W03
-		ContinueCourse -> right -> ne8
-		BranchCourse -> left -> ne9
+	Signals -> S03
+		Direction -> normal
+		Position -> right
+	Signals -> S04
+		Direction -> reverse
+		Position -> left
+	Signals -> S05
+		Direction -> reverse
+		Position -> left
+	Signals -> S06
+		Direction -> reverse
+		Position -> left

@@ -271,6 +271,10 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 
                 'platform':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platforms.create_Platform, # Platforms
                 'ownsPlatformEdge':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_OwnsPlatformEdge,'width':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_Width,'length':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_Length, # Platform
+                'linearCoordinateBegin':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_LinearCoordinateBegin,'linearCoordinateEnd':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_LinearCoordinateEnd,'geometricCoordinateBegin':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_GeometricCoordinateBegin,'geometricCoordinateEnd':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_GeometricCoordinateEnd, # RTM_AssociatedNetElement
+                
+                
+                
                 
                 'restrictionArea':railML.Infrastructure.FunctionalInfrastructure.RestrictionAreas.RestrictionAreas.create_RestrictionArea, # RestrictionAreas
                 'serviceSection':railML.Infrastructure.FunctionalInfrastructure.ServiceSections.ServiceSections.create_ServiceSection, # ServiceSections
