@@ -8,7 +8,7 @@ from RailML.Infrastructure import Infrastructure
 from RailML.Interlocking import Interlocking
 from RailML import aRailML
 
-IGNORE = {None}
+#IGNORE = {None}
 
 #%%%        
 def load_xml(file):
@@ -17,7 +17,7 @@ def load_xml(file):
     return root
 
 #%%%
-def save_xml(object,f,name = "",level = 0, test = False):
+def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
     
     all_attributes = get_attributes(object)
     
@@ -53,15 +53,18 @@ def save_xml(object,f,name = "",level = 0, test = False):
             for i in attributes:
                 next_object = getattr(object,  i) 
                 f.write('\t'*(level+1)+f'<dc:{i.lower()}>{next_object}</dc:{i.lower()}>\n')
-            f.write('\t'*(level)+f'</{tag}>\n') 
+            f.write('\t'*(level)+f'</{tag}>\n')
+        elif ignore != None and name == "SpotElementProjection" and "sig" in attr:
+            pass 
         else:
             if nodes == []:
                 f.write('\t'*(level)+f'<{tag} {attr}/>\n') 
             else:
                 f.write('\t'*(level)+f'<{tag} {attr}>\n')        
-        #print(attr)
     
     for i in nodes:
+        if name == "SpotElementProjection" and "sig" in attr:
+            continue
         next_object = getattr(object,  i)  
         if next_object != None:
             #print(' '*(level)+f'--{i} -> {next_object}')
@@ -74,10 +77,18 @@ def save_xml(object,f,name = "",level = 0, test = False):
             else:
                 save_xml(next_object,f,i,level+1)
                 
-    if nodes != []:    
+    if nodes != []:
         if test:    
             print(' '*(level)+f'<\{tag}>')
-        f.write('\t'*(level)+f'</{tag}>\n')
+            
+        if ignore == None:
+            f.write('\t'*(level)+f'</{tag}>\n')
+        elif name == "SpotElementProjection" and "sig" in attr:
+            return    
+        else:
+            f.write('\t'*(level)+f'</{tag}>\n')
+            
+        
 #%%%
 def get_attributes(object):
     try:
@@ -96,7 +107,7 @@ def set_text(object,tag,text):
 def get_name(object):
     return object.__class__.__name__
 #%%%
-def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0, test = False):
+def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,ignore = {None}, test = False):
     #a = 0
     # xml_node: the old-tree
     # child[i]: the new-tree
@@ -121,7 +132,8 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0, tes
     for xml_tag_i in range(size_xml_tag):
         capitalized_tag = xml_tag[xml_tag_i][0].upper() + xml_tag[xml_tag_i][1:]
         
-        if capitalized_tag in IGNORE:
+        #print(capitalized_tag,ignore)
+        if capitalized_tag in ignore:
             continue
         
         #print(f'{capitalized_tag}|{capitalized_tag in object_attributes}')
@@ -151,13 +163,13 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0, tes
             
             if(type(next_object) == list):
                 if size_xml_tag == 1:
-                    get_branches(next_object[0],next_xml_child,level+1, test = test)
+                    get_branches(next_object[0],next_xml_child,level+1, ignore = ignore , test = test)
                 if xml_tag_i < size_xml_tag and 1 < size_xml_tag:
                     #print(f'----------------INCREMENTANDO:{xml_tag_i}[{idx}->{idx+1}]') 
                     #idx = idx + 1
-                    get_branches(next_object[-1],next_xml_child,level+1, test = test)
+                    get_branches(next_object[-1],next_xml_child,level+1, ignore = ignore , test = test)
             else:
-                get_branches(next_object,next_xml_child,level+1,idx_txt=idx_txt, test = test)
+                get_branches(next_object,next_xml_child,level+1,idx_txt=idx_txt, ignore = ignore , test = test)
         else:
             print(f'{capitalized_tag} doesn\'t exists! in {object_attributes}')
 #%%%

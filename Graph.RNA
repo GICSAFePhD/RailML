@@ -1,32 +1,97 @@
-Nodes: 1 | Switches: 0 | Signals: 6 | Detectors: 2 | Ends: 2
+Nodes: 9 | Switches: 4 | Signals: 12 | Detectors: 10 | Ends: 1
 Node ne1:
 	Track = track1
-	TrainDetectionElements -> tde19
+	TrainDetectionElements -> tde73
 		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde20
-		Type -> insulatedRailJoint
-	Type = Border -> line4
-		Type -> station
-		IsOpenEnd -> true
-	Type = Border -> line5
-		Type -> station
-		IsOpenEnd -> true
-	Neighbours = 0 -> []
+	Type = BufferStop -> bus19
+	Neighbours = 2 -> ['ne8', 'ne7']
 	Signals -> S01
 		Direction -> normal
-		Position -> right
-	Signals -> S02
+		Position -> left
+	Switches -> D01
+		ContinueCourse -> right -> ne8
+		BranchCourse -> left -> ne7
+Node ne4:
+	Track = track3
+	TrainDetectionElements -> tde74
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne16', 'ne17']
+	Signals -> S05
 		Direction -> normal
+		Position -> left
+	Switches -> D04
+		ContinueCourse -> right -> ne16
+		BranchCourse -> left -> ne17
+Node ne7:
+	Track = track6
+	Neighbours = 4 -> ['ne1', 'ne8', 'ne12', 'ne13']
+	Switches -> D03
+		ContinueCourse -> right -> ne13
+		BranchCourse -> left -> ne12
+Node ne8:
+	Track = track5
+	TrainDetectionElements -> tde77
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde81
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne1', 'ne7', 'ne10', 'ne13']
+	Signals -> S06
+		Direction -> reverse
 		Position -> right
 	Signals -> S03
 		Direction -> normal
+		Position -> left
+Node ne10:
+	Track = track2
+	Neighbours = 2 -> ['ne8', 'ne13']
+	Signals -> S10
+		Direction -> reverse
+		Position -> right
+	Switches -> D02
+		ContinueCourse -> right -> ne13
+		BranchCourse -> left -> ne8
+Node ne12:
+	Track = track8
+	TrainDetectionElements -> tde75
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne7', 'ne13']
+	Signals -> S12
+		Direction -> normal
+		Position -> left
+Node ne13:
+	Track = track7
+	TrainDetectionElements -> tde76
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde82
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne7', 'ne8', 'ne10', 'ne12']
+	Signals -> S08
+		Direction -> reverse
+		Position -> left
+	Signals -> S02
+		Direction -> normal
+		Position -> left
+Node ne16:
+	Track = track9
+	TrainDetectionElements -> tde79
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne4', 'ne17']
+	Signals -> S09
+		Direction -> reverse
+		Position -> right
+Node ne17:
+	Track = track4
+	TrainDetectionElements -> tde78
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde80
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne4', 'ne16']
+	Signals -> S11
+		Direction -> reverse
+		Position -> right
+	Signals -> S07
+		Direction -> reverse
 		Position -> right
 	Signals -> S04
-		Direction -> reverse
-		Position -> left
-	Signals -> S05
-		Direction -> reverse
-		Position -> left
-	Signals -> S06
-		Direction -> reverse
+		Direction -> normal
 		Position -> left
