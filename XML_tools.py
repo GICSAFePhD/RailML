@@ -87,8 +87,6 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
             return    
         else:
             f.write('\t'*(level)+f'</{tag}>\n')
-            
-        
 #%%%
 def get_attributes(object):
     try:
@@ -112,6 +110,8 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
     # xml_node: the old-tree
     # child[i]: the new-tree
 
+    #print(f'Object:{current_object}')
+    
     if (type(current_object) != list and current_object != None):    
         if (xml_node.attrib):    
             #print(xml_node.attrib)         
@@ -121,7 +121,7 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
                 setattr(current_object,attribute_tag,xml_node.attrib[tag_i]) 
                 
     [xml_child,xml_tag,xml_text] = get_leaves(xml_node)
-    #print(xml_child,xml_tag,xml_text)
+    #print(xml_child,xml_tag,xml_text)  
     object_attributes = get_attributes(current_object)
     #print(f'Attributes:{object_attributes}')
     #if xml_tag:
@@ -133,6 +133,9 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
         capitalized_tag = xml_tag[xml_tag_i][0].upper() + xml_tag[xml_tag_i][1:]
         
         #print(capitalized_tag,ignore)
+        #ignore = {"Common","Topology","Interlocking","InfrastructureVisualizations", 
+        #    "TrainDetectionElements","Tracks","SwitchesIS","Metadata","SignalsIS"}
+        
         if capitalized_tag in ignore:
             continue
         
@@ -172,7 +175,7 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
                 get_branches(next_object,next_xml_child,level+1,idx_txt=idx_txt, ignore = ignore , test = test)
         else:
             print(f'{capitalized_tag} doesn\'t exists! in {object_attributes}')
-#%%%
+##%%%
 def print_leaves(root,leaf,tag):
     print('-'*20+ leaf +'-'*20)
     ns = re.match(r'{.*}', root.tag).group(0)
@@ -256,8 +259,16 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'linearLocation':railML.Infrastructure.FunctionalInfrastructure.Borders.Border.Border.create_LinearLocation,
                 'spotLocation':railML.Infrastructure.FunctionalInfrastructure.Borders.Border.Border.create_SpotLocation,
                 
-                'bufferstop':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStops.create_BufferStop, # BufferStops
+                'bufferStop':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStops.create_BufferStop, # BufferStops
                 'type':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_Type, # BufferStop
+                'designator':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_Designator,
+                'external':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_External,
+                'name':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_Name,
+                'gmlLocations':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_GmlLocations,
+                'locationNetwork':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_LocationNetwork,
+                'areaLocation':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_AreaLocation,
+                'linearLocation':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_LinearLocation,
+                'spotLocation':railML.Infrastructure.FunctionalInfrastructure.BufferStops.BufferStop.BufferStop.create_SpotLocation,
                 
                 'crossing':railML.Infrastructure.FunctionalInfrastructure.Crossings.Crossings.create_Crossing, # Crossings
                 'derailerIS':railML.Infrastructure.FunctionalInfrastructure.DerailersIS.DerailersIS.create_DerailerIS, # DerailersIS

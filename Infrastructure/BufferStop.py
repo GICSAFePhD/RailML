@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+from RailML.Common import tElementWithIDref
 from RailML.Infrastructure import tBufferStopType, TrackNode
 from typing import List
 

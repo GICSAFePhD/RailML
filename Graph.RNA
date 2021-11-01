@@ -1,9 +1,8 @@
-Nodes: 9 | Switches: 4 | Signals: 12 | Detectors: 10 | Ends: 1
+Nodes: 9 | Switches: 4 | Signals: 12 | Detectors: 10 | Ends: 0
 Node ne1:
 	Track = track1
 	TrainDetectionElements -> tde73
 		Type -> insulatedRailJoint
-	Type = BufferStop -> bus19
 	Neighbours = 2 -> ['ne8', 'ne7']
 	Signals -> S01
 		Direction -> normal

@@ -18,7 +18,6 @@ class BufferStops(object):
 		self.BufferStop.append(BufferStop.BufferStop())
 
 	def __init__(self):
-		self.___bufferStop : BufferStop = BufferStop.BufferStop()
+		self.___bufferStop : BufferStop = None
 		# @AssociationType Infrastructure.BufferStop*
 		# @AssociationMultiplicity 1..*
-
