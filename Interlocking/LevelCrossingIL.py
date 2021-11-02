@@ -115,15 +115,15 @@ class LevelCrossingIL(TrackAsset.TrackAsset):
 		self.___unprotectedSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Speed in km/h at which the level crossing can be passed when it is not protected (V_LX)"""
-		self.___typicalTimeToClose : Duration = 0
+		self.___typicalTimeToClose : Duration = None
 		"""Average time between the time a train detector notes an approaching train and the moment the level crossing is closed to road traffic, i.e. the moment that the interlocking can lock a route across the level crossing. This equates to the time it takes to close the barrier (if present). Should be set to 0 if no barrier is configured. Useful for simulation."""
-		self.___constantWarningTime : Duration = 0
+		self.___constantWarningTime : Duration = None
 		"""A level crossing must cause as little as possible hindering to train as well as road traffic. Therefore, the level crossing must close as late as safely possible. The optimal delay, known as constant warning time, between activation and closing is possible when the train speed and position are known."""
-		self.___minimumOpenTime : Duration = 0
+		self.___minimumOpenTime : Duration = None
 		"""This is the time the level crossing has to be open before it is allowed to close again. This is to ensure a certain capacity for the crossing road traffic."""
-		self.___maximumClosedTime : Duration = 0
+		self.___maximumClosedTime : Duration = None
 		"""This is the time span after a message to the operator is triggered because a level crossing being closed for too long time can be considered as unsafe. In such cases the road drivers and pedestrians might try to cross the railway line illegally."""
-		self.___requiresStopBeforeUnprotectedLevelCrossing : Long = 0
+		self.___requiresStopBeforeUnprotectedLevelCrossing : Long = None
 		"""Flag to define whether any train needs to stop in front of the level crossing in case it is unprotected. Only afterwards it can proceed according the value in speedRestriction."""
 		self.___hasInterface : EntityILref = None
 		"""Reference to physical description of level crossing interface with list of commands to the field and notifications from the field"""

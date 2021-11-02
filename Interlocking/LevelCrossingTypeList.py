@@ -37,10 +37,10 @@ class LevelCrossingTypeList(EntityIL.EntityIL):
 		self.___controlType : tLevelCrossingControlTypes = None
 		# @AssociationType Interlocking.tLevelCrossingControlTypes
 		# """The classification of the control type w.r.t. the interlocking operation."""
-		self.___allowsLocalOperation : Long = 0
+		self.___allowsLocalOperation : Long = None
 		"""The level crossing may have a control unit which allows local operation from the field."""
-		self.___hasBarrier : Long = 0
+		self.___hasBarrier : Long = None
 		"""The level crossing may be equipped with barriers for road traffic."""
-		self.___hasTrafficWarning :Long = 0
+		self.___hasTrafficWarning :Long = None
 		"""The level crossing may be equipped with audible/optical means to allow warning of road traffic."""
 

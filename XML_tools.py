@@ -29,6 +29,8 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
     attributes = []
     nodes = []
     
+    #print(ignore)
+    
     for i in all_attributes:
         next_object = getattr(object, i)
         if next_object != None:
@@ -54,7 +56,7 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
                 next_object = getattr(object,  i) 
                 f.write('\t'*(level+1)+f'<dc:{i.lower()}>{next_object}</dc:{i.lower()}>\n')
             f.write('\t'*(level)+f'</{tag}>\n')
-        elif ignore != None and name == "SpotElementProjection" and "sig" in attr:
+        elif ignore != {None} and name == "SpotElementProjection" and "sig" in attr:
             pass 
         else:
             if nodes == []:
@@ -63,7 +65,7 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
                 f.write('\t'*(level)+f'<{tag} {attr}>\n')        
     
     for i in nodes:
-        if name == "SpotElementProjection" and "sig" in attr:
+        if ignore != {None} and name == "SpotElementProjection" and "sig" in attr:
             continue
         next_object = getattr(object,  i)  
         if next_object != None:
@@ -73,17 +75,17 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
                 #if len(next_object) > 1:
                 #    print(len(next_object))
                 for j in next_object:
-                    save_xml(j,f,i,level+1)         
+                    save_xml(j,f,i,level+1, ignore = ignore)         
             else:
-                save_xml(next_object,f,i,level+1)
+                save_xml(next_object,f,i,level+1, ignore = ignore)
                 
     if nodes != []:
         if test:    
             print(' '*(level)+f'<\{tag}>')
             
-        if ignore == None:
+        if ignore == {None}:
             f.write('\t'*(level)+f'</{tag}>\n')
-        elif name == "SpotElementProjection" and "sig" in attr:
+        elif ignore != {None} and name == "SpotElementProjection" and "sig" in attr:
             return    
         else:
             f.write('\t'*(level)+f'</{tag}>\n')
@@ -134,7 +136,9 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
         
         #print(capitalized_tag,ignore)
         #ignore = {"Common","Topology","Interlocking","InfrastructureVisualizations", 
-        #    "TrainDetectionElements","Tracks","SwitchesIS","Metadata","SignalsIS"}
+        #    "TrainDetectionElements","Tracks","SwitchesIS","Metadata","SignalsIS",
+        #    "Borders","BufferStops","DerailersIS","LevelCrossingsIS","Lines",
+        #    "Platforms","SignalsIS","SwitchesIS","Tracks","TrainDetectionElements"}
         
         if capitalized_tag in ignore:
             continue
@@ -285,9 +289,13 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'line':railML.Infrastructure.FunctionalInfrastructure.Lines.Lines.create_Line, # Lines
                 'beginsInOP':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_BeginsInOP,'endsInOP':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_EndsInOP,'length':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_Length,'lineTrafficCode':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineTrafficCode,'lineCombinedTransportCode':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineCombinedTransportCode,'lineLayout':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line.create_LineLayout,'linePerformance':railML.Infrastructure.FunctionalInfrastructure.Lines.Line.Line. create_LinePerformance, # Line
 
+                'ownsPlatform':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpEquipment.OpEquipment.create_OwnsPlatform,'ownsTrack':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpEquipment.OpEquipment.create_OwnsTrack,'ownsSignal':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpEquipment.OpEquipment.create_OwnsSignal,'ownsStoppingPlace':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpEquipment.OpEquipment.create_OwnsStoppingPlace,'ownsServiceSection':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpEquipment.OpEquipment.create_OwnsServiceSection, # OpEquipment
+
                 'loadingGauge':railML.Infrastructure.FunctionalInfrastructure.LoadingGauges.LoadingGauges.create_LoadingGauge, # LoadingGauges
                 'operationalPoint':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoints.create_OperationalPoint, # OperationalPoints
-                'infrastructureManagerRef':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_InfrastructureManagerRef,'connectedToLine':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_ConnectedToLine,'limitedByBorder':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_LimitedByBorder,'opEquipment':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_OpEquipment,'opOperations':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_OpOperations, # OperationalPoint
+                'infrastructureManagerRef':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_InfrastructureManagerRef,'connectedToLine':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_ConnectedToLine,'limitedByBorder':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_LimitedByBorder,'opEquipment':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_OpEquipment ,'opOperations':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OperationalPoint.create_OpOperations, # OperationalPoint
+                
+                'opOperation':railML.Infrastructure.FunctionalInfrastructure.OperationalPoints.OperationalPoint.OpOperations.OpOperations.create_OpOperation, # OpOperations
                 
                 'overCrossing':railML.Infrastructure.FunctionalInfrastructure.OverCrossings.OverCrossings.create_OverCrossing, # OverCrossings
                 'allowedLoadingGauge':railML.Infrastructure.FunctionalInfrastructure.OverCrossings.OverCrossing.OverCrossing.create_AllowedLoadingGauge,'length':railML.Infrastructure.FunctionalInfrastructure.OverCrossings.OverCrossing.OverCrossing.create_Length, # OverCrossing
@@ -295,9 +303,6 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'platform':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platforms.create_Platform, # Platforms
                 'ownsPlatformEdge':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_OwnsPlatformEdge,'width':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_Width,'length':railML.Infrastructure.FunctionalInfrastructure.Platforms.Platform.Platform.create_Length, # Platform
                 'linearCoordinateBegin':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_LinearCoordinateBegin,'linearCoordinateEnd':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_LinearCoordinateEnd,'geometricCoordinateBegin':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_GeometricCoordinateBegin,'geometricCoordinateEnd':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.RTM_LinearLocation.RTM_AssociatedNetElement.RTM_AssociatedNetElement.create_GeometricCoordinateEnd, # RTM_AssociatedNetElement
-                
-                
-                
                 
                 'restrictionArea':railML.Infrastructure.FunctionalInfrastructure.RestrictionAreas.RestrictionAreas.create_RestrictionArea, # RestrictionAreas
                 'serviceSection':railML.Infrastructure.FunctionalInfrastructure.ServiceSections.ServiceSections.create_ServiceSection, # ServiceSections

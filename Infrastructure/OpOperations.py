@@ -9,11 +9,16 @@ class OpOperations(object):
 		return self.___opOperation
 	
 	@OpOperation.setter
-	def OpOperation(self, *aOpOperation : OpOperation):
+	def OpOperation(self, aOpOperation : OpOperation):	# *aOpOperation
 		self.___opOperation = aOpOperation
 
+	def create_OpOperation(self):
+		if self.OpOperation == None:
+			self.OpOperation = []
+		self.OpOperation.append(OpOperation.OpOperation())
+
 	def __init__(self):
-		self.___opOperation : OpOperation = OpOperation.OpOperation()
+		self.___opOperation : OpOperation = None
 		# @AssociationType Infrastructure.OpOperation*
 		# @AssociationMultiplicity 1..*
 		# """railway operation"""

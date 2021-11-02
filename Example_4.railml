@@ -569,7 +569,6 @@
                     <trackBegin ref="swi7"/>
                     <trackEnd ref="line84"/>
                     <length value="1200" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track3" language="en"/>
@@ -580,7 +579,6 @@
                     <trackBegin ref="swi7"/>
                     <trackEnd ref="line85"/>
                     <length value="1262.13" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk4" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track4" language="en"/>
@@ -591,7 +589,6 @@
                     <trackBegin ref="swi10"/>
                     <trackEnd ref="line86"/>
                     <length value="1230" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track5" language="en"/>
@@ -612,7 +609,6 @@
                     <trackBegin ref="swi14"/>
                     <trackEnd ref="line87"/>
                     <length value="1080" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk7" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track7" language="en"/>

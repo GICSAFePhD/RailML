@@ -69,13 +69,9 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 			self.LimitedByBorder = []
 		self.LimitedByBorder.append(tElementWithIDref.tElementWithIDref())
 	def create_OpEquipment(self):
-		if self.OpEquipment == None:
-			self.OpEquipment = []
-		self.OpEquipment.append(OpEquipment.OpEquipment())
+		self.OpEquipment = OpEquipment.OpEquipment()
 	def create_OpOperations(self):
-		if self.OpOperations == None:
-			self.OpOperations = []
-		self.OpOperations.append(OpOperations.OpOperations())
+		self.OpOperations = OpOperations.OpOperations()
 
 	def __init__(self):
 		super().__init__()
@@ -85,7 +81,7 @@ class OperationalPoint(FunctionalInfrastructureEntity.FunctionalInfrastructureEn
 		# @AssociationType Common.tRef
 		# @AssociationType Common.tRef
 		# """references a generic operational point"""
-		self.___timezone : str = ""
+		self.___timezone : str = None
 		"""the timezone of the operational point as defined in the tz database, e.g. "Europe/Berlin"""
 		self.___infrastructureManagerRef : tElementWithIDref = None
 		self.___connectedToLine : tElementWithIDref = None

@@ -5,23 +5,23 @@ from typing import List
 
 class OpOperation(object):
 	@property
-	def tOpOperationalTypeExt(self) -> tOpOperationalTypeExt:
+	def OperationalType(self) -> tOpOperationalTypeExt:
 		return self.___operationalType
 	@property
-	def tOpTrafficTypeExt(self) -> tOpTrafficTypeExt:
+	def TrafficType(self) -> tOpTrafficTypeExt:
 		return self.___trafficType
 	
-	@tOpOperationalTypeExt.setter
-	def tOpOperationalTypeExt(self, atOpOperationalTypeExt : tOpOperationalTypeExt):
-		self.___operationalType = atOpOperationalTypeExt
-	@tOpTrafficTypeExt.setter
-	def tOpTrafficTypeExt(self, atOpTrafficTypeExt : tOpTrafficTypeExt):
-		self.___trafficType = atOpTrafficTypeExt
+	@OperationalType.setter
+	def OperationalType(self, aOperationalType : tOpOperationalTypeExt):
+		self.___operationalType = aOperationalType
+	@TrafficType.setter
+	def TrafficType(self, aTrafficType : tOpTrafficTypeExt):
+		self.___trafficType = aTrafficType
 
 	def __init__(self):
-		self.___operationalType : tOpOperationalTypeExt = tOpOperationalTypeExt.tOpOperationalTypeExt()
+		self.___operationalType : tOpOperationalTypeExt = None
 		# @AssociationType Infrastructure.tOpOperationalTypeExt
 		# """operational characterization of the operational point"""
-		self.___trafficType : tOpTrafficTypeExt = tOpTrafficTypeExt.tOpTrafficTypeExt()
+		self.___trafficType : tOpTrafficTypeExt = None
 		# @AssociationType Infrastructure.tOpTrafficTypeExt
 		# """definition of traffic type that is operating in this operational point"""

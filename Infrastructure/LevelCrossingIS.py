@@ -62,7 +62,7 @@ class LevelCrossingIS(XCrossing.XCrossing):
 		# @AssociationType Infrastructure.tLevelCrossingObstacleDetection
 		# """obstacle detection: automatic (technical system, e.g. radar) or manual (e.g. by operator);
 		# missing attribute means that the information is not known"""
-		self.___opensOnDemand : Long = 0
+		self.___opensOnDemand : Long = None
 		"""set TRUE if the level crossing is closed for road users by default and gates are only opened on demand;
 		missing attribute means that the information is not known"""
 		self.___activation : tLevelCrossingActivation = None

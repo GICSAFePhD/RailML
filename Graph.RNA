@@ -1,96 +1,137 @@
-Nodes: 9 | Switches: 4 | Signals: 12 | Detectors: 10 | Ends: 0
+Nodes: 9 | Switches: 3 | Signals: 8 | Detectors: 12 | Ends: 7
 Node ne1:
-	Track = track1
-	TrainDetectionElements -> tde73
-		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne8', 'ne7']
-	Signals -> S01
-		Direction -> normal
-		Position -> left
-	Switches -> D01
-		ContinueCourse -> right -> ne8
-		BranchCourse -> left -> ne7
-Node ne4:
-	Track = track3
-	TrainDetectionElements -> tde74
-		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne16', 'ne17']
-	Signals -> S05
-		Direction -> normal
-		Position -> left
-	Switches -> D04
-		ContinueCourse -> right -> ne16
-		BranchCourse -> left -> ne17
-Node ne7:
-	Track = track6
-	Neighbours = 4 -> ['ne1', 'ne8', 'ne12', 'ne13']
-	Switches -> D03
-		ContinueCourse -> right -> ne13
-		BranchCourse -> left -> ne12
-Node ne8:
-	Track = track5
-	TrainDetectionElements -> tde77
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde81
-		Type -> insulatedRailJoint
-	Neighbours = 4 -> ['ne1', 'ne7', 'ne10', 'ne13']
-	Signals -> S06
-		Direction -> reverse
-		Position -> right
-	Signals -> S03
-		Direction -> normal
-		Position -> left
-Node ne10:
+	Lines -> line93
 	Track = track2
-	Neighbours = 2 -> ['ne8', 'ne13']
-	Signals -> S10
-		Direction -> reverse
+	TrainDetectionElements -> ac69
+		Type -> axleCounter
+		Side -> right
+	Type = Border -> line84
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne6', 'ne4']
+	Platform  -> plf16
+		Side -> right
+	Signals -> 68N2
+		Direction -> normal
 		Position -> right
-	Switches -> D02
-		ContinueCourse -> right -> ne13
-		BranchCourse -> left -> ne8
-Node ne12:
-	Track = track8
-	TrainDetectionElements -> tde75
-		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne7', 'ne13']
-	Signals -> S12
+Node ne4:
+	Lines -> line93
+	Track = track3
+	TrainDetectionElements -> ac70
+		Type -> axleCounter
+		Side -> left
+	Type = Border -> line85
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne1', 'ne6']
+	Platform  -> plf17
+		Side -> left
+	Signals -> 68N1
 		Direction -> normal
 		Position -> left
-Node ne13:
-	Track = track7
-	TrainDetectionElements -> tde76
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde82
-		Type -> insulatedRailJoint
-	Neighbours = 4 -> ['ne7', 'ne8', 'ne10', 'ne12']
-	Signals -> S08
+Node ne6:
+	Lines -> line93
+	Track = track1
+	TrainDetectionElements -> ac71
+		Type -> axleCounter
+		Side -> right
+	TrainDetectionElements -> ac72
+		Type -> axleCounter
+		Side -> right
+	Type = Border -> sb82
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 3 -> ['ne1', 'ne4', 'ne15']
+	Signals -> 68F
 		Direction -> reverse
 		Position -> left
-	Signals -> S02
-		Direction -> normal
-		Position -> left
-Node ne16:
-	Track = track9
+	Switches -> 68W02
+		ContinueCourse -> right -> ne1
+		BranchCourse -> left -> ne4
+Node ne8:
+	Lines -> line93
+	Track = track5
+	Neighbours = 4 -> ['ne9', 'ne12', 'ne13', 'ne16']
+Node ne9:
+	Lines -> line93
+	Track = track4
 	TrainDetectionElements -> tde79
 		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne4', 'ne17']
-	Signals -> S09
+		Side -> right
+	Type = Border -> line86
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne8', 'ne16']
+	Platform  -> plf18
+		Side -> left
+	Signals -> 69P2
 		Direction -> reverse
-		Position -> right
-Node ne17:
-	Track = track4
-	TrainDetectionElements -> tde78
+		Position -> left
+Node ne12:
+	Lines -> line93
+	Track = track7
+	TrainDetectionElements -> tde77
 		Type -> insulatedRailJoint
+		Side -> right
+	Derailer -> der45
+		 Side -> right
+	Type = BufferStop -> bus15
+	Neighbours = 2 -> ['ne8', 'ne13']
+	Signals -> 69W04Y
+		Direction -> reverse
+		Position -> left
+Node ne13:
+	Lines -> line93
+	Track = track6
 	TrainDetectionElements -> tde80
 		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne4', 'ne16']
-	Signals -> S11
+		Side -> left
+	Type = Border -> line87
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne8', 'ne12']
+	Platform  -> plf19
+		Side -> right
+	Signals -> 69P1
 		Direction -> reverse
 		Position -> right
-	Signals -> S07
-		Direction -> reverse
-		Position -> right
-	Signals -> S04
+	Switches -> 69W04
+		ContinueCourse -> right -> ne8
+		BranchCourse -> left -> ne12
+Node ne15:
+	Lines -> line93
+	TrainDetectionElements -> ac73
+		Type -> axleCounter
+		Side -> left
+	TrainDetectionElements -> ac74
+		Type -> axleCounter
+		Side -> left
+	Type = Border -> sb83
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne6', 'ne16']
+	Level crossing -> lcr68
+		Protection -> true
+		Barriers -> singleHalfBarrier
+		Lights -> none
+		Acoustic -> none
+	Signals -> 69Va
 		Direction -> normal
-		Position -> left
+		Position -> right
+Node ne16:
+	Lines -> line93
+	TrainDetectionElements -> ac75
+		Type -> axleCounter
+		Side -> left
+	TrainDetectionElements -> tde76
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde78
+		Type -> insulatedRailJoint
+		Side -> right
+	Neighbours = 3 -> ['ne8', 'ne9', 'ne15']
+	Signals -> 69A
+		Direction -> normal
+		Position -> right
+	Switches -> 69W03
+		ContinueCourse -> right -> ne8
+		BranchCourse -> left -> ne9
