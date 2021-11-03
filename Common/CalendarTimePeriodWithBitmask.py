@@ -22,7 +22,7 @@ class CalendarTimePeriodWithBitmask(TimePeriod.TimePeriod):
 	def Bitmask(self, aBitmask : tBitmaskAny):
 		self.___bitmask = aBitmask
 	@PeriodRule.setter
-	def PeriodRule(self, *aPeriodRule : PeriodRule):
+	def PeriodRule(self, aPeriodRule : PeriodRule):	# *aPeriodRule
 		self.___periodRule = aPeriodRule
 
 	def create_PeriodRule(self):
@@ -31,7 +31,8 @@ class CalendarTimePeriodWithBitmask(TimePeriod.TimePeriod):
 		self.PeriodRule.append(PeriodRule.PeriodRule())
 
 	def __init__(self):
-		self.___fromDate : datetime = 0	#TODO DEFINED AS date
+		super().__init__()
+		self.___fromDate : datetime = None	#TODO DEFINED AS date
 		self.___bitmask : tBitmaskAny = None
 		# @AssociationType Common.tBitmaskAny
 		self.___periodRule : PeriodRule = None

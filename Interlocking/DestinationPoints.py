@@ -11,7 +11,7 @@ class DestinationPoints(object):
 		return self.___destinationPoint
 	
 	@DestinationPoint.setter
-	def DestinationPoint(self, *aDestinationPoint : RouteExit):
+	def DestinationPoint(self, aDestinationPoint : RouteExit):	# *aDestinationPoint
 		self.___destinationPoint = aDestinationPoint
 
 	def create_DestinationPoint(self):

@@ -84,4 +84,3 @@ class Infrastructure(tElementWithID.tElementWithID):
 		# @AssociationType Infrastructure.InfrastructureStates
 		# @AssociationMultiplicity 0..1
 		# """container element for infrastructure states model"""
-

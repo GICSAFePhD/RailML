@@ -19,7 +19,7 @@ class RouteExit(EntityIL.EntityIL):
 	def RefersTo(self, aRefersTo : EntityILref):
 		self.___refersTo = aRefersTo
 	@HasDangerPoint.setter
-	def HasDangerPoint(self, *aHasDangerPoint : EntityILref):
+	def HasDangerPoint(self, aHasDangerPoint : EntityILref):	# *aHasDangerPoint
 		self.___hasDangerPoint = aHasDangerPoint
 	@HasOverlap.setter
 	def HasOverlap(self, aHasOverlap : EntityILref):

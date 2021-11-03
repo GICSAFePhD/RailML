@@ -9,7 +9,7 @@ class InfrastructureStates(object):
 		return self.___infrastructureState
 	
 	@InfrastructureState.setter
-	def InfrastructureState(self, *aInfrastructureState : InfrastructureState):
+	def InfrastructureState(self, aInfrastructureState : InfrastructureState):	# *aInfrastructureState
 		self.___infrastructureState = aInfrastructureState
 
 	def create_InfrastructureState(self):

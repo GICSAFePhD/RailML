@@ -135,10 +135,9 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
         capitalized_tag = xml_tag[xml_tag_i][0].upper() + xml_tag[xml_tag_i][1:]
         
         #print(capitalized_tag,ignore)
-        #ignore = {"Common","Topology","Interlocking","InfrastructureVisualizations", 
-        #    "TrainDetectionElements","Tracks","SwitchesIS","Metadata","SignalsIS",
-        #    "Borders","BufferStops","DerailersIS","LevelCrossingsIS","Lines",
-        #    "Platforms","SignalsIS","SwitchesIS","Tracks","TrainDetectionElements"}
+        #ignore = {"Metadata","Common","Topology","Infrastructure","TvdSections","SwitchesIL"
+        #        ,"DerailersIL","LevelCrossingsIL","SignalsIL","Routes","ShuntingZones","RouteReleaseGroupsRear",
+        #        "ConflictingRoutes","Overlaps","RouteRelations","AssetsForIL","SignalBoxes"}
         
         if capitalized_tag in ignore:
             continue
@@ -153,9 +152,10 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
             
             if test:          
                 print('>'*(level+1)+f'{xml_tag[xml_tag_i]}[{xml_tag_i+1} de {size_xml_tag}]') 
-            if xml_text and idx_txt <= xml_tag_i:
+            if xml_text and idx_txt <= xml_tag_i:   # NO DEBERIA ENTRAR ACA!
                 #print(f'{xml_text}|{xml_text[idx_txt]}')
                 #print(f'L:{xml_tag[xml_tag_i]}|{xml_text[idx_txt]}')
+                #print(current_object,capitalized_tag,xml_text[idx_txt])
                 constructors[xml_tag[xml_tag_i]](current_object,capitalized_tag,xml_text[idx_txt])
                 idx_txt = idx_txt + 1
             else:
@@ -380,6 +380,9 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'localOperationArea':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationAreas.create_LocalOperationArea, # LocalOperationAreas
                 'deactivationKey':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_DeactivationKey,'switchInPosition':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_SwitchInPosition,'derailerInPosition':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_DerailerInPosition,'crossingInPosition':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_CrossingInPosition,'detectorInState':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_DetectorInState,'signalWithAspect':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_SignalWithAspect,'keyLockInState':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_KeyLockInState,'levelCrossingInState':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_LevelCrossingInState,'releasedForLocalOperation':railML.Interlocking.AssetsForIL.LocalOperationAreas.LocalOperationArea.LocalOperationArea.create_ReleasedForLocalOperation, # LocalOperationArea
                 'shuntingZone':railML.Interlocking.AssetsForIL.ShuntingZones.ShuntingZones.create_ShuntingZone, # ShuntingZones
+                
+                'isLimitedBy':railML.Interlocking.AssetsForIL.ShuntingZones.ShuntingZone.RestrictedArea.RestrictedArea.create_IsLimitedBy, #RestrictedArea 
+                
                 'permissionZone':railML.Interlocking.AssetsForIL.PermissionZones.PermissionZones.create_PermissionZone, # PermissionZones
                 'canBeControlledBy':railML.Interlocking.AssetsForIL.PermissionZones.PermissionZone.PermissionZone.create_CanBeControlledBy,'controlledElement':railML.Interlocking.AssetsForIL.PermissionZones.PermissionZone.PermissionZone.create_ControlledElement, # PermissionZone
                 'routeReleaseGroupAhead':railML.Interlocking.AssetsForIL.RouteReleaseGroupsAhead.RouteReleaseGroupsAhead.create_RouteReleaseGroupAhead, # RouteReleaseGroupsAhead
@@ -388,12 +391,20 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'handlesRouteType':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HandlesRouteType,'routeActivationSection':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteActivationSection,'facingSwitchInPosition':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_FacingSwitchInPosition,'refersToSwitch':railML.Interlocking.AssetsForIL.Routes.Route.SwitchAndPosition.SwitchAndPosition.create_RefersToSwitch,'hasTvdSection':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HasTvdSection,'routeEntry':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteEntry,'hasReleaseGroup':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HasReleaseGroup,'switchPositionInDepartureTrack':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_SwitchPositionInDepartureTrack,'routeExit':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteExit,'additionalRelation':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_AdditionalRelation, # Route
                 'conflictingRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoutes.create_ConflictingRoute, # ConflictingRoutes
                 'refersToRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_RefersToRoute,'conflictsWithRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_ConflictsWithRoute,'reasonForConflict':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_ReasonForConflict, # ConflictingRoute
-                'routeRelations':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelations.create_RouteRelation, # RouteRelations
+                'routeRelation':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelations.create_RouteRelation, # RouteRelations
                 'requiredSwitchPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSwitchPosition,'requiredDerailerPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredDerailerPosition,'requiredCrossingPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredCrossingPosition,'requiredDetectorState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredDetectorState,'requiredSignalAspect':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSignalAspect,'requiredSectionState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSectionState,'requiredKeyLockState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredKeyLockState,'requiredLevelCrossingState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredLevelCrossingState, # RouteRelation
+                
+                'relatedSectionAndVacancy':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.SectionAndGivenVacancy.SectionAndGivenVacancy.create_RelatedSectionAndVacancy , # RequiredSectionState
+                
                 'combinedRoute':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoutes.create_CombinedRoute, # CombinedRoutes
                 'comboEntry':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ComboEntry,'comboExit':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ComboExit,'containsRoute':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ContainsRoute, # CombinedRoute
                 'overlap':railML.Interlocking.AssetsForIL.Overlaps.Overlaps.create_Overlap, # Overlaps
                 'activeForApproachRoute':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_ActiveForApproachRoute,'relatedToTrackAsset':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RelatedToTrackAsset,'requiresSwitchInPosition':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RequiresSwitchInPosition,'requiresLevelCrossingInState':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RequiresLevelCrossingInState,'hasTvdSection':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_HasTvdSection,'isLimitedBy':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_IsLimitedBy,'overlapRelease':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_OverlapRelease, # Overlap
+                
+                'relatedSwitchAndPosition':railML.Interlocking.AssetsForIL.Overlaps.Overlap.SwitchAndGivenPosition.SwitchAndGivenPosition.create_RelatedSwitchAndPosition, # RequiresSwitchInPosition
+                
+                'dangerPoint':railML.Interlocking.AssetsForIL.DangerPoints.DangerPoints.create_DangerPoint, # DangerPoints
+                
                 'destinationPoint':railML.Interlocking.AssetsForIL.DestinationPoints.DestinationPoints.create_DestinationPoint, # DestinationPoints
                 'refersTo':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_RefersTo,'hasDangerPoint':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_HasDangerPoint,'hasOverlap':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_HasOverlap, # RouteExit
                 'powerSupplyIL':railML.Interlocking.AssetsForIL.PowerSuppliesIL.PowerSuppliesIL.create_PowerSupplyIL, # PowerSuppliesIL

@@ -9,7 +9,7 @@ class RouteReleaseGroupsRear(object):
 		return self.___routeReleaseGroupRear
 	
 	@RouteReleaseGroupRear.setter
-	def RouteReleaseGroupRear(self, *aRouteReleaseGroupRear : RouteReleaseGroupRear):
+	def RouteReleaseGroupRear(self, aRouteReleaseGroupRear : RouteReleaseGroupRear):	# *aRouteReleaseGroupRear 
 		self.___routeReleaseGroupRear = aRouteReleaseGroupRear
 
 	def create_RouteReleaseGroupRear(self):

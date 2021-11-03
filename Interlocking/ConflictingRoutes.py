@@ -10,7 +10,7 @@ class ConflictingRoutes(object):
 		return self.___conflictingRoute
 	
 	@ConflictingRoute.setter
-	def ConflictingRoute(self, *aConflictingRoute : ConflictingRoute):
+	def ConflictingRoute(self, aConflictingRoute : ConflictingRoute):	# *aConflictingRoute
 		self.___conflictingRoute = aConflictingRoute
 
 	def create_ConflictingRoute(self):

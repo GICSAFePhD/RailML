@@ -6,15 +6,19 @@ from typing import List
 class SectionAndGivenVacancy(AssetAndGivenState.AssetAndGivenState):
 	"""the tuple of references to the TVD section and its state plus the level of enforcement"""
 	@property
-	def SectionAndVacancy(self) -> SectionAndVacancy:
+	def RelatedSectionAndVacancy(self) -> SectionAndVacancy:
 		return self.___relatedSectionAndVacancy
 	
-	@SectionAndVacancy.setter
-	def SectionAndVacancy(self, aSectionAndVacancy : SectionAndVacancy):
-		self.___relatedSectionAndVacancy = aSectionAndVacancy
+	@RelatedSectionAndVacancy.setter
+	def RelatedSectionAndVacancy(self, aRelatedSectionAndVacancy : SectionAndVacancy):
+		self.___relatedSectionAndVacancy = aRelatedSectionAndVacancy
 
+	def create_RelatedSectionAndVacancy(self):
+		self.RelatedSectionAndVacancy = SectionAndVacancy.SectionAndVacancy()
+    
 	def __init__(self):
-		self.___relatedSectionAndVacancy : SectionAndVacancy = SectionAndVacancy.SectionAndVacancy()
+		super().__init__()
+		self.___relatedSectionAndVacancy : SectionAndVacancy = None
 		# @AssociationType Interlocking.SectionAndVacancy
 		# @AssociationMultiplicity 1
 		# """the tuple of references to the TVD section and its state plus the level of enforcement"""

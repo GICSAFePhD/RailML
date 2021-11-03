@@ -15,6 +15,7 @@ class AspectRelatedLevelCrossingDelay(SignalAndAspect.SignalAndAspect):
 		self.___delay = aDelay
 
 	def __init__(self):
-		self.___delay : Duration = 0
+		super().__init__()
+		self.___delay : Duration = None
 		"""Delay between signal aspect detection and level crossing activation. This delay depends on the signalled speed of the approaching train hence on signal aspect."""
 

@@ -40,17 +40,17 @@ class SpeedProfile(tElementWithIDandName.tElementWithIDandName):
 			self.SpeedProfileTrainType = SpeedProfileTrainType.SpeedProfileTrainType()
 
 	def __init__(self):
-		self.___tilting : SpeedProfileTilting = SpeedProfileTilting.SpeedProfileTilting()
+		super().__init__()
+		self.___tilting : SpeedProfileTilting = None
 		# @AssociationType Common.SpeedProfileTilting
 		# @AssociationMultiplicity 0..1
-		self.___load : SpeedProfileLoad = SpeedProfileLoad.SpeedProfileLoad()
+		self.___load : SpeedProfileLoad = None
 		# @AssociationType Common.SpeedProfileLoad
 		# @AssociationMultiplicity 0..1
-		self.___braking : SpeedProfileBraking = SpeedProfileBraking.SpeedProfileBraking()
+		self.___braking : SpeedProfileBraking = None
 		# @AssociationType Common.SpeedProfileBraking
 		# @AssociationMultiplicity 0..1
-		self.___trainType : SpeedProfileTrainType = SpeedProfileTrainType.SpeedProfileTrainType()
+		self.___trainType : SpeedProfileTrainType = None
 		# @AssociationType Common.SpeedProfileTrainType
 		# @AssociationMultiplicity 0..1
-		#self._unnamed_aSpeedProfile_ : aSpeedProfile = aSpeedProfile.aSpeedProfile()	#TODO CIRCULAR INCLUDE!
-
+		#self._unnamed_aSpeedProfile_ : aSpeedProfile = None	#TODO CIRCULAR INCLUDE!

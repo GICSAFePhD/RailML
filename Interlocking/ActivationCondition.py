@@ -38,6 +38,7 @@ class ActivationCondition(EntityIL.EntityIL):
 		self.___activatedBy = aActivatedBy
 
 	def __init__(self):
+		super().__init__()
 		self.___andOr : tAndOr = tAndOr.tAndOr()
 		# @AssociationType Interlocking.tAndOr
 		# """The logical combination of all activation conditions."""

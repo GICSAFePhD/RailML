@@ -20,11 +20,11 @@ class SectionAndVacancy(AssetAndState.AssetAndState):
 		self.___refersToSection = aRefersToSection
 
 	def __init__(self):
-		self.___inState : tSectionVacancy = tSectionVacancy.tSectionVacancy()
+		super().__init__()
+		self.___inState : tSectionVacancy = None
 		# @AssociationType Interlocking.tSectionVacancy
 		# """The occupation status of the TVD section."""
-		self.___refersToSection : EntityILref = EntityILref.EntityILref()
+		self.___refersToSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the TVD section."""
-

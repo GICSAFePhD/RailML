@@ -22,9 +22,10 @@ class SignalDelayTime(EntityIL.EntityIL):
 		self.___hasDelayedSignal = aHasDelayedSignal
 
 	def __init__(self):
-		self.___delay : Duration = 0
+		super().__init__()
+		self.___delay : Duration = None
 		"""Time during which the signal remains closed. Starts counting when the level crossing is triggered."""
-		self.___hasDelayedSignal : EntityILref = EntityILref.EntityILref()
+		self.___hasDelayedSignal : Duration = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the signal."""

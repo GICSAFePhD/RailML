@@ -9,7 +9,7 @@ class Speeds(object):
 		return self.___speedSection
 	
 	@SpeedSection.setter
-	def SpeedSection(self, *aSpeedSection : SpeedSection):
+	def SpeedSection(self, aSpeedSection : SpeedSection):	# *aSpeedSection
 		self.___speedSection = aSpeedSection
 
 	def create_SpeedSection(self):

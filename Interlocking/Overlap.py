@@ -129,7 +129,7 @@ class Overlap(EntityIL.EntityIL):
 		# @AssociationType Common.tSpeedKmPerHour
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Maximum speed in the overlap in km/h for other trains than the one using the related route."""
-		self.___overlapValidityTime : Duration = 0
+		self.___overlapValidityTime : Duration = None
 		"""The overlap validity time is the time that the train assumes the overlap to be locked. This is the ETCS validity time T_OL."""
 		self.___length : tLengthM = None
 		# @AssociationType Common.tLengthM

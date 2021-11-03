@@ -21,10 +21,10 @@ class LevelCrossingDeactivator(EntityIL.EntityIL):
 		self.___tvdDetectorRef = aTvdDetectorRef
 
 	def __init__(self):
-		self.___delay : Duration = 0
+		super().__init__()
+		self.___delay : Duration = None
 		"""Deactivation can be delayed by this timer. Starts counting when the associated TVD section is vacated."""
-		self.___tvdDetectorRef : EntityILref = EntityILref.EntityILref()
+		self.___tvdDetectorRef : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the train detection element in infrastructure or a dedicated TVD section."""
-

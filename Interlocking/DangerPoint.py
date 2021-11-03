@@ -40,19 +40,19 @@ class DangerPoint(EntityIL.EntityIL):
 		self.___unnamed_RouteExit_ = aUnnamed_RouteExit_
 
 	def __init__(self):
-		self.___distance : tLengthM = tLengthM.tLengthM()
+		super().__init__()
+		self.___distance : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# """Distance in metres from exit signal to danger point. Optional because one may also derive this distance from the track asset where the danger point is situated."""
-		self.___releaseSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___releaseSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# """Release speed in km/h associated with the danger point."""
-		self.___lastSupervisedSectionBeforeDP : EntityILref = EntityILref.EntityILref()
+		self.___lastSupervisedSectionBeforeDP : EntityILref = None
 		"""This is the reference to last TVD section which is completely before the danger point. It is used when the danger point is situated at the end of a TVD section."""
-		self.___situatedAtTrackAsset : EntityILref = EntityILref.EntityILref()
+		self.___situatedAtTrackAsset : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# """This is the reference to the track asset the danger point is located. It is used when the danger point is situated in the middle of a TVD section or beyond any TVD section in case of not supervised tracks."""
-		self.___unnamed_RouteExit_ : RouteExit = RouteExit.RouteExit()
-
+		self.___unnamed_RouteExit_ : RouteExit =None

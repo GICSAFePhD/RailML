@@ -92,35 +92,35 @@ class RouteRelation(EntityIL.EntityIL):
 
 	def __init__(self):
 		super().__init__()
-		self.___requiredSwitchPosition : SwitchAndGivenPosition = SwitchAndGivenPosition.SwitchAndGivenPosition()
+		self.___requiredSwitchPosition : SwitchAndGivenPosition = None
 		# @AssociationType Interlocking.SwitchAndGivenPosition*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular switch and its required position to fulfil the route relation"""
-		self.___requiredDerailerPosition : DerailerAndGivenPosition = DerailerAndGivenPosition.DerailerAndGivenPosition()
+		self.___requiredDerailerPosition : DerailerAndGivenPosition = None
 		# @AssociationType Interlocking.DerailerAndGivenPosition*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular derailer and its required position to fulfil the route relation"""
-		self.___requiredCrossingPosition : CrossingAndGivenPosition = CrossingAndGivenPosition.CrossingAndGivenPosition()
+		self.___requiredCrossingPosition : CrossingAndGivenPosition = None
 		# @AssociationType Interlocking.CrossingAndGivenPosition*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular movable crossing and its required position to fulfil the route relation"""
-		self.___requiredDetectorState : DetectorAndGivenState = DetectorAndGivenState.DetectorAndGivenState()
+		self.___requiredDetectorState : DetectorAndGivenState = None
 		# @AssociationType Interlocking.DetectorAndGivenState*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular detector and its required state to fulfil the route relation"""
-		self.___requiredSignalAspect : SignalAndGivenAspect = SignalAndGivenAspect.SignalAndGivenAspect()
+		self.___requiredSignalAspect : SignalAndGivenAspect = None
 		# @AssociationType Interlocking.SignalAndGivenAspect*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular signal and its required aspect to fulfil the route relation"""
-		self.___requiredSectionState : SectionAndGivenVacancy = SectionAndGivenVacancy.SectionAndGivenVacancy()
+		self.___requiredSectionState : SectionAndGivenVacancy = None
 		# @AssociationType Interlocking.SectionAndGivenVacancy*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular TVD section and its required state to fulfil the route relation"""
-		self.___requiredKeyLockState : LockAndGivenState = LockAndGivenState.LockAndGivenState()
+		self.___requiredKeyLockState : LockAndGivenState = None
 		# @AssociationType Interlocking.LockAndGivenState*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular key lock and its required state to fulfil the route relation"""
-		self.___requiredLevelCrossingState : LevelCrossingAndGivenState = LevelCrossingAndGivenState.LevelCrossingAndGivenState()
+		self.___requiredLevelCrossingState : LevelCrossingAndGivenState = None
 		# @AssociationType Interlocking.LevelCrossingAndGivenState*
 		# @AssociationMultiplicity 0..*
 		# """References to a particular level crossing and its required state to fulfil the route relation"""

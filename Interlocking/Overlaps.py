@@ -10,7 +10,7 @@ class Overlaps(object):
 		return self.___overlap
 	
 	@Overlap.setter
-	def Overlap(self, *aOverlap : Overlap):
+	def Overlap(self, aOverlap : Overlap):	# *aOverlap
 		self.___overlap = aOverlap
 
 	def create_Overlap(self):

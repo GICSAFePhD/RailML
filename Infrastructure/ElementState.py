@@ -22,7 +22,7 @@ class ElementState(StatesBaseElement.StatesBaseElement):
 	def Value(self, aValue : tInfrastructureStateExt):
 		self.___value = aValue
 	@ValidityTime.setter
-	def ValidityTime(self, *aValidityTime : Period):
+	def ValidityTime(self, aValidityTime : Period):	# *aValidityTime
 		self.___validityTime = aValidityTime
 
 	def create_ValidityTime(self):
@@ -31,6 +31,7 @@ class ElementState(StatesBaseElement.StatesBaseElement):
 		self.ValidityTime.append(Period.Period())
 
 	def __init__(self):
+		super().__init__()
 		self.___refersToElement : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to any element of infrastructure model"""

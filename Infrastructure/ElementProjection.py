@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from RailML.Common.tRef import tRef
-from RailML.Infrastructure.ElementProjectionSymbol import ElementProjectionSymbol
-from RailML.Infrastructure.VisualizationBaseElement import VisualizationBaseElement
+from RailML.Infrastructure import ElementProjectionSymbol
+from RailML.Infrastructure import VisualizationBaseElement
 from typing import List
 
-class ElementProjection(VisualizationBaseElement):
+class ElementProjection(VisualizationBaseElement.VisualizationBaseElement):
 	@property
 	def RefersToElement(self) -> tRef:
 		return self.___refersToElement

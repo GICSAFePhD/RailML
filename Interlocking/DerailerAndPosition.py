@@ -20,10 +20,11 @@ class DerailerAndPosition(AssetAndState.AssetAndState):
 		self.___refersToDerailer = aRefersToDerailer
 
 	def __init__(self):
-		self.___inPosition : tDerailingPosition = tDerailingPosition.tDerailingPosition()
+		super().__init__()
+		self.___inPosition : tDerailingPosition = None
 		# @AssociationType Interlocking.tDerailingPosition
 		# """The position the derailer is in."""
-		self.___refersToDerailer : EntityILref = EntityILref.EntityILref()
+		self.___refersToDerailer : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the derailer."""

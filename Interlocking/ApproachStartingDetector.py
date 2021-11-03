@@ -22,11 +22,11 @@ class ApproachStartingDetector(EntityIL.EntityIL):
 		self.___refersTo = aRefersTo
 
 	def __init__(self):
-		self.___delay : Duration = 0
+		super().__init__()
+		self.___delay : Duration = None
 		"""The level crossing is activated only after a given delay. This delay doesn't depend on any aspect. If there's a delay that depends on signalled speed, please use the aspectRelatedLevelCrossingDelay.
 		The timer starts running when the first train axle triggers the train detector."""
-		self.___refersTo : EntityILref = EntityILref.EntityILref()
+		self.___refersTo : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 1
 		# """The reference to the train detection element in infrastructure."""
-

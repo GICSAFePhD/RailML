@@ -20,12 +20,12 @@ class OverlapRelease(EntityIL.EntityIL):
 		self.___overlapReleaseTimer = aOverlapReleaseTimer
 
 	def __init__(self):
-		self.___releaseTriggerSection : EntityILref = EntityILref.EntityILref()
+		super().__init__()
+		self.___releaseTriggerSection : EntityILref = None
 		# @AssociationType Interlocking.EntityILref
 		# @AssociationMultiplicity 0..1
 		# """The reference to the TVD section triggering the overlap release."""
-		self.___overlapReleaseTimer : OverlapReleaseTimer = OverlapReleaseTimer.OverlapReleaseTimer()
+		self.___overlapReleaseTimer : OverlapReleaseTimer = None
 		# @AssociationType Interlocking.OverlapReleaseTimer*
 		# @AssociationMultiplicity 1..*
 		# """Description of overlap release timer (duration, start condition)"""
-

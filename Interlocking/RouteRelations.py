@@ -10,7 +10,7 @@ class RouteRelations(object):
 		return self.___routeRelation
 	
 	@RouteRelation.setter
-	def RouteRelation(self, *aRouteRelation : RouteRelation):
+	def RouteRelation(self, aRouteRelation : RouteRelation):	# *aRouteRelation
 		self.___routeRelation = aRouteRelation
 
 	def create_RouteRelation(self):

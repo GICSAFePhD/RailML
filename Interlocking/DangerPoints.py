@@ -10,8 +10,13 @@ class DangerPoints(object):
 		return self.___dangerPoint
 	
 	@DangerPoint.setter
-	def DangerPoint(self, *aDangerPoint : DangerPoint):
+	def DangerPoint(self, aDangerPoint : DangerPoint):	# *aDangerPoint
 		self.___dangerPoint = aDangerPoint
+
+	def create_DangerPoint(self):
+		if self.DangerPoint == None:
+			self.DangerPoint = []
+		self.DangerPoint.append(DangerPoint.DangerPoint())
 
 	def __init__(self):
 		self.___dangerPoint : DangerPoint = None

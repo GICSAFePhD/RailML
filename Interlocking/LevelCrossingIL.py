@@ -97,11 +97,11 @@ class LevelCrossingIL(TrackAsset.TrackAsset):
 	def create_DeactivatedBy(self):
 		if self.DeactivatedBy == None:
 			self.DeactivatedBy = []
-		self.DeactivatedBy.append(EntityILref.EntityILref())
+		self.DeactivatedBy.append(LevelCrossingDeactivator.LevelCrossingDeactivator())
 	def create_ActivationCondition(self):
 		if self.ActivationCondition == None:
 			self.ActivationCondition = []
-		self.ActivationCondition.append(EntityILref.EntityILref())
+		self.ActivationCondition.append(ActivationCondition.ActivationCondition())
 	def create_HasTvdSection(self):
 		if self.HasTvdSection == None:
 			self.HasTvdSection = []

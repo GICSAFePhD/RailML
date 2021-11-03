@@ -29,9 +29,9 @@ class OverlapReleaseTimer(object):
 		self.___rail3_anyAttribute = aRail3_anyAttribute
 
 	def __init__(self):
-		self.___timerValue : Duration = 0
+		self.___timerValue : Duration = None
 		"""The time period which has to be elapsed after the trigger condition and physical release of the overlap."""
-		self.___overlapReleaseCondition : tOverlapReleaseCondition = tOverlapReleaseCondition.tOverlapReleaseCondition()
+		self.___overlapReleaseCondition : tOverlapReleaseCondition = None
 		# @AssociationType Interlocking.tOverlapReleaseCondition
 		# @AssociationMultiplicity 0..1
 		# """The condition to start the release timer."""

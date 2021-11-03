@@ -16,6 +16,7 @@ class SwitchRelatedDelay(SwitchAndPosition.SwitchAndPosition):
 		self.___delay = aDelay
 
 	def __init__(self):
-		self.___delay : Duration = 0
+		super().__init__()
+		self.___delay : Duration = None
 		"""The delay for activation to be considered when the switch is in the specified position."""
 

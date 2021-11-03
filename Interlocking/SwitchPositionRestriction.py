@@ -12,7 +12,7 @@ class SwitchPositionRestriction(EntityIL.EntityIL):
 	def SwitchAndPosition(self) -> SwitchAndPosition:
 		return self.___relatedSwitchInPosition
 	@property
-	def DerailerAndPosition(self) -> DerailerAndPosition:
+	def RelatedDerailerInPosition(self) -> DerailerAndPosition:
 		return self.___relatedDerailerInPosition
 
 	@tSwitchPosition.setter
@@ -21,20 +21,20 @@ class SwitchPositionRestriction(EntityIL.EntityIL):
 	@SwitchAndPosition.setter
 	def SwitchAndPosition(self, aSwitchAndPosition : SwitchAndPosition):
 		self.___relatedSwitchInPosition = aSwitchAndPosition
-	@DerailerAndPosition.setter
-	def DerailerAndPosition(self, aDerailerAndPosition : DerailerAndPosition):
-		self.___relatedDerailerInPosition = aDerailerAndPosition
+	@RelatedDerailerInPosition.setter
+	def RelatedDerailerInPosition(self, aRelatedDerailerInPosition : DerailerAndPosition):
+		self.___relatedDerailerInPosition = aRelatedDerailerInPosition
 
 	def __init__(self):
-		self.___restrictedPosition : tSwitchPosition = tSwitchPosition.tSwitchPosition()
+		super().__init__()
+		self.___restrictedPosition : tSwitchPosition = None
 		# @AssociationType Interlocking.tSwitchPosition
 		# """This is the position which is needed when the other element has the named state/position."""
-		self.___relatedSwitchInPosition : SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+		self.___relatedSwitchInPosition : SwitchAndPosition = None
 		# @AssociationType Interlocking.SwitchAndPosition
 		# @AssociationMultiplicity 0..1
 		# """This is the reference and the state/position of the other switch of the relation."""
-		self.___relatedDerailerInPosition : DerailerAndPosition = DerailerAndPosition.DerailerAndPosition()
+		self.___relatedDerailerInPosition : DerailerAndPosition = None
 		# @AssociationType Interlocking.DerailerAndPosition
 		# @AssociationMultiplicity 0..1
 		# """This is the reference and the state/position of the derailer of the relation."""
-

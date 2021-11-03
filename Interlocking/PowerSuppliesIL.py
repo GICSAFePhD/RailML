@@ -10,7 +10,7 @@ class PowerSuppliesIL(object):
 		return self.___powerSupplyIL
 	
 	@PowerSupplyIL.setter
-	def PowerSupplyIL(self, *aPowerSupplyIL : PowerSupplyIL):
+	def PowerSupplyIL(self, aPowerSupplyIL : PowerSupplyIL):	# *aPowerSupplyIL
 		self.___powerSupplyIL = aPowerSupplyIL
 
 	def create_PowerSupplyIL(self):

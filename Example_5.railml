@@ -564,7 +564,6 @@
           </isSpeedSignal>
         </signalIS>
       </signalsIS>
-      
       <speeds>
         <speedSection id="sps01" maxSpeed="80" isTemporary="false" isSignalized="true">
           <linearLocation id="sps01_lloc01" applicationDirection="normal">
@@ -617,7 +616,6 @@
           </linearLocation>
         </speedSection>
       </speeds>
-      
       <switchesIS>
         <switchIS id="swi01" continueCourse="right" branchCourse="left" type="ordinarySwitch">
           <name name="68W02" language="en"/>
@@ -644,7 +642,6 @@
           <rightBranch netRelationRef="nr_b02b04" branchingSpeed="40" joiningSpeed="40" radius="300"/>
         </switchIS>
       </switchesIS>
-      
       <tracks>
         <track id="trc01" type="mainTrack">
           <name name="2" language="en"/>
@@ -718,7 +715,6 @@
           <length value="50.0" type="physical"/>
         </track>
       </tracks>
-      
       <trainDetectionElements>
         <trainDetectionElement id="tde01" type="axleCounter">
           <spotLocation id="tde01_sloc01" netElementRef="ne_a01" applicationDirection="both" pos="475.0">
@@ -776,7 +772,6 @@
         </trainDetectionElement>
       </trainDetectionElements>
     </functionalInfrastructure>
-    
     <infrastructureVisualizations>
       <visualization id="vis01" positioningSystemRef="scs01">
         <name name="Simple Example macroscopic screen visualization" language="en"/>
@@ -801,7 +796,6 @@
         </linearElementProjection>
       </visualization>
     </infrastructureVisualizations>
-
     <infrastructureStates>
       <infrastructureState id="iss01" value="operational">
         <name name="operational infrastructure 2018" language="en"/>
@@ -817,9 +811,7 @@
         </elementState>
       </infrastructureState>
     </infrastructureStates>
-    
   </infrastructure>
-  
   <interlocking>
 		<assetsForIL id="ass_simpex_v0.9">
 			<designator register="_SimpleRegister" entry="simple example v0.9"/>
@@ -911,24 +903,21 @@
 				</tvdSection>
 			</tvdSections>
 			<switchesIL>
-				<switchIL returnsToPreferredPosition="false" id="pt_swi01" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S"
-					preferredPosition="right" numberOfBladeSwitchActuators="2" numberOfFrogSwitchActuators="0">
+				<switchIL returnsToPreferredPosition="false" id="pt_swi01" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S" preferredPosition="right" numberOfBladeSwitchActuators="2" numberOfFrogSwitchActuators="0">
 					<designator register="_SimpleRegister" entry="68W02" />
 					<refersTo ref="swi01" />
 					<connectedToPowerSupply ref="ups01" />
 					<branchLeft ref="trc02" />
 					<branchRight ref="trc01" />
 				</switchIL>
-				<switchIL returnsToPreferredPosition="true" id="pt_swi02" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S"
-					 numberOfBladeSwitchActuators="1" numberOfFrogSwitchActuators="0">
+				<switchIL returnsToPreferredPosition="true" id="pt_swi02" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S" numberOfBladeSwitchActuators="1" numberOfFrogSwitchActuators="0">
 					<designator register="_SimpleRegister" entry="69W03"/>
 					<refersTo ref="swi02" />
 					<connectedToPowerSupply ref="ups01"/>
 					<branchLeft ref="trc04" />
 					<branchRight ref="trc07" />
 				</switchIL>
-				<switchIL returnsToPreferredPosition="true" id="pt_swi03" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S"
-					preferredPosition="left" numberOfBladeSwitchActuators="1" numberOfFrogSwitchActuators="0">
+				<switchIL returnsToPreferredPosition="true" id="pt_swi03" isKeyLocked="false" maxThrowTime="PT10S" typicalThrowTime="PT6S" preferredPosition="left" numberOfBladeSwitchActuators="1" numberOfFrogSwitchActuators="0">
 					<designator register="_SimpleRegister" entry="69W04"/>
 					<refersTo ref="swi03" />
 					<connectedToPowerSupply ref="ups01"/>
@@ -1013,7 +1002,7 @@
 				</signalIL>
 			</signalsIL>
 			<shuntingZones>
-				<shuntingZone id="rae01"> 
+				<shuntingZone id="rae01">
 					<designator register="_SimpleRegister" entry="Cstadt RA1"/>
 					<isLimitedBy ref="bus01"/>
 					<isLimitedBy ref="bus02"/>
