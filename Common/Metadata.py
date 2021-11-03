@@ -16,6 +16,8 @@ class Metadata(elementContainer.elementContainer):
 		self.___format : str = None
 		self.___description : str = None
 		self.___publisher : str = None
+		self.___langauge : str = None
+		self.___rights : str = None
 	
 	@property
 	def Title(self):
@@ -44,6 +46,12 @@ class Metadata(elementContainer.elementContainer):
 	@property
 	def Publisher(self):
 		return self.___publisher
+	@property
+	def Language(self):
+		return self.___langauge
+	@property
+	def Rights(self):
+		return self.___rights
 
 	@Title.setter
 	def Title(self, aTitle : str):
@@ -72,6 +80,12 @@ class Metadata(elementContainer.elementContainer):
 	@Publisher.setter
 	def Publisher(self, aPublisher : str):
 		self.___publisher = aPublisher
+	@Language.setter
+	def Language(self, aLanguage : str):
+		self.___langauge = aLanguage
+	@Rights.setter
+	def Rights(self, aRights : str):
+		self.___rights = aRights
 
 	# def __str__(self):  
 	# 	print(f'Title:{self.Title}')

@@ -37,18 +37,18 @@ class LinePerformance(object):
 		self.___allowedWeight = aAllowedWeight
 
 	def __init__(self):
-		self.___maxSpeed : tSpeedKmPerHour = tSpeedKmPerHour.tSpeedKmPerHour()
+		self.___maxSpeed : tSpeedKmPerHour = None
 		# @AssociationType Common.tSpeedKmPerHour
 		# """maximum line speed in km/h"""
-		self.___maxTrainLength : tLengthM = tLengthM.tLengthM()
+		self.___maxTrainLength : tLengthM = None
 		"""maximum allowed length for trains that run on this line"""
-		self.___usablePlatformLength : tLengthM = tLengthM.tLengthM()
+		self.___usablePlatformLength : tLengthM = None
 		# @AssociationType Common.tLengthM
 		# @AssociationType Common.tLengthM
 		# """minimum platform length that is available in stations along that line"""
-		self.___allowedLoadingGauge : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___allowedLoadingGauge : tElementWithIDref = None
 		"""reference to a vehicle loading gauge that is allowed on this line"""
-		self.___allowedWeight : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___allowedWeight : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Common.tElementWithIDref*

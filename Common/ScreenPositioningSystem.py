@@ -27,7 +27,7 @@ class ScreenPositioningSystem(RTM_PositioningSystem.RTM_PositioningSystem):
 		self.___pxZ = apxZ
 
 	def __init__(self):
+		super().__init__()
 		self.___pxX : PositiveInteger = None
 		self.___pxY : PositiveInteger = None
 		self.___pxZ : PositiveInteger = None
-

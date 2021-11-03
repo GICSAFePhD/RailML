@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<railML xmlns="https://www.railml.org/schemas/3.1" 
-        xmlns:dc="http://purl.org/dc/elements/1.1/"
-        xmlns:gml="http://www.opengis.net/gml/3.2/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd"
-        version="3.1">
-        
+<railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">    
   <metadata>
-    <dc:format>3.1</dc:format>
-    <dc:identifier>3</dc:identifier>
-    <dc:source>railML.org</dc:source>
-    <dc:title xml:lang="en">Simple Example v11 railML 3.1</dc:title>
-    <dc:language>en</dc:language>
+    <dc:title>Simple Example v11 railML 3.1</dc:title>
     <dc:date>2019-02-18T14:36:00+01:00</dc:date>
-    <dc:creator xml:lang="de">Christian Rahmig</dc:creator>
-    <dc:creator xml:lang="de">Dr. Jörg von Lingen</dc:creator>
+    <dc:creator>Christian Rahmig</dc:creator>
+    <dc:creator>Dr. Jörg von Lingen</dc:creator>
+    <dc:source>railML.org</dc:source>
+    <dc:identifier>3</dc:identifier>
+    <dc:format>3.1</dc:format>
     <dc:description>This example file has been coded manually and therefore may not be free of errors.</dc:description>
-    <dc:rights>Copyright (c) railML.org e.V. Dresden/Germany; All Rights Reserved.
-      This work is licensed under the restricted CreativeCommons Attribution-NonCommercial-NoDerivatives 4.0 International License with additional license conditions of railML.org.
-      For further information see: https://www.railml.org/licence
-      Content of this file: railML 3.1 Simple Example</dc:rights>
+    <dc:language>en</dc:language>
+    <dc:rights>Copyright (c) railML.org e.V. Dresden/Germany; All Rights Reserved. This work is licensed under the restricted CreativeCommons Attribution-NonCommercial-NoDerivatives 4.0 International License with additional license conditions of railML.org. For further information see: https://www.railml.org/licence Content of this file: railML 3.1 Simple Example</dc:rights>
   </metadata>
-  
   <common id="co_01">
     <organizationalUnits>
       <infrastructureManager id="im_01" code="SZDC"/>
@@ -54,7 +44,6 @@
       </screenPositioningSystems>
     </positioning>
   </common>
-  
   <infrastructure id="is_01">
     <topology>
       <netElements>
@@ -307,10 +296,8 @@
         </network>
       </networks>
     </topology>
-    
     <geometry>
     </geometry>
-    
     <functionalInfrastructure>
       <bufferStops>
         <bufferStop id="bus01" type="fixedBufferStop">
@@ -338,14 +325,12 @@
           </spotLocation>
         </bufferStop>
       </bufferStops>
-      
       <derailersIS>
         <derailerIS id="der01" derailSide="right">
           <spotLocation id="der01_sloc01" netElementRef="ne_b05" applicationDirection="normal" pos="150.0">
           </spotLocation>
         </derailerIS>
       </derailersIS>
-      
       <levelCrossingsIS>
         <levelCrossingIS id="lcr01" activation="infrastructureAutomatic">
           <name name="LX Arnau Cstadt" language="en"/>
@@ -355,7 +340,6 @@
           <protection barriers="singleHalfBarrier" lights="none" acoustic="none"/>
         </levelCrossingIS>
       </levelCrossingsIS>
-      
       <lines>
         <line id="lin01" lineCategory="other:CE" lineType="mainLine" infrastructureManagerRef="im_01">
           <name name="Malý příklad železniční tratě" language="cz"/>
@@ -388,11 +372,9 @@
           </linePerformance>
         </line>
       </lines>
-      
       <loadingGauges>
         <loadingGauge id="log01" code="GA"/>
       </loadingGauges>
-      
       <operationalPoints>
         <operationalPoint id="opp01">
           <name name="Bf Arnau" language="de"/>
@@ -432,7 +414,6 @@
           </opOperations> 
         </operationalPoint>
       </operationalPoints>
-      
       <platforms>
         <platform id="plf01">
           <spotLocation id="plf01_sloc01" netElementRef="ne_a11" applicationDirection="both">
@@ -493,66 +474,54 @@
           </linearLocation>
           <length type="physical" value="250.00" validForDirection="both"/>
         </platform>
-      </platforms>
-      
+      </platforms>    
       <signalsIS>
         <signalIS id="sig01" isSwitchable="false">
           <name name="68N2" language="en"/>
           <spotLocation id="sig01_sloc01" netElementRef="ne_a01" applicationDirection="normal" pos="450.0">
             <linearCoordinate positioningSystemRef="lps01" measure="450.0" lateralDistance="2.2" lateralSide="right"/>
           </spotLocation>
-          <isEtcsSignal/>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig02" isSwitchable="false">
           <name name="68N1" language="en"/>
           <spotLocation id="sig02_sloc01" netElementRef="ne_a02" applicationDirection="normal" pos="450.0">
             <linearCoordinate positioningSystemRef="lps01" measure="450.0" lateralDistance="2.2" lateralSide="right"/>
           </spotLocation>
-          <isEtcsSignal/>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig03" isSwitchable="false">
           <name name="68F" language="en"/>
           <spotLocation id="sig03_sloc01" netElementRef="ne_a03" applicationDirection="reverse" pos="200.0">
             <linearCoordinate positioningSystemRef="lps01" measure="700.0" lateralDistance="2.2" lateralSide="left"/>
           </spotLocation>
-          <isEtcsSignal/>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig04" isSwitchable="true">
           <name name="69A" language="en"/>
           <spotLocation id="sig04_sloc01" netElementRef="ne_b03" applicationDirection="normal" pos="0.0">
             <linearCoordinate positioningSystemRef="lps01" measure="4300.0" lateralDistance="2.2" lateralSide="right"/>
           </spotLocation>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig05" isSwitchable="true">
           <name name="69P2" language="en"/>
           <spotLocation id="sig05_sloc01" netElementRef="ne_b01" applicationDirection="reverse" pos="100.0">
             <linearCoordinate positioningSystemRef="lps01" measure="4600.0" lateralDistance="2.2" lateralSide="left"/>
           </spotLocation>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig06" isSwitchable="true">
           <name name="69P1" language="en"/>
           <spotLocation id="sig06_sloc01" netElementRef="ne_b02" applicationDirection="reverse" pos="50.0">
             <linearCoordinate positioningSystemRef="lps01" measure="4600.0" lateralDistance="2.2" lateralSide="left"/>
           </spotLocation>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig07" isSwitchable="true">
           <name name="69Va" language="en"/>
           <spotLocation id="sig07_sloc01" netElementRef="ne_x01" applicationDirection="normal" pos="2900.0">
             <linearCoordinate positioningSystemRef="lps01" measure="3600.0" lateralDistance="2.2" lateralSide="right"/>
           </spotLocation>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig08" isSwitchable="true">
           <name name="69W04Y" language="en"/>
           <spotLocation id="sig08_sloc01" netElementRef="ne_b05" applicationDirection="normal" pos="100.0">
           </spotLocation>
-          <isTrainMovementSignal/>
         </signalIS>
         <signalIS id="sig09" isSwitchable="false">
           <spotLocation id="sig09_sloc01" netElementRef="ne_a03" applicationDirection="normal" pos="100.0">
