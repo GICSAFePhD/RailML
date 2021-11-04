@@ -21,4 +21,3 @@ class SpeedProfiles(object):
 		self.___speedProfile : SpeedProfile = None
 		# @AssociationType Common.SpeedProfile*
 		# @AssociationMultiplicity 1..*
-

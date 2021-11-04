@@ -19,6 +19,16 @@ class DerailerAndPosition(AssetAndState.AssetAndState):
 	def RefersToDerailer(self, aRefersToDerailer : EntityILref):
 		self.___refersToDerailer = aRefersToDerailer
 
+	def create_InPosition(self):
+		if self.InPosition == None:
+			self.InPosition = []
+		self.InPosition.append(tDerailingPosition.tDerailingPosition())
+
+	def create_RefersToDerailer(self):
+		if self.RefersToDerailer == None:
+			self.RefersToDerailer = []
+		self.RefersToDerailer.append(EntityILref.EntityILref())
+
 	def __init__(self):
 		super().__init__()
 		self.___inPosition : tDerailingPosition = None

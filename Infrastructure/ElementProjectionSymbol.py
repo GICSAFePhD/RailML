@@ -26,6 +26,11 @@ class ElementProjectionSymbol(VisualizationBaseElement.VisualizationBaseElement)
 	def IsLocatedAt(self, aIsLocatedAt : ProjectionCoordinate):
 		self.___isLocatedAt = aIsLocatedAt
 
+	def create_IsLocatedAt(self):
+		if self.IsLocatedAt == None:
+			self.IsLocatedAt = []
+		self.IsLocatedAt.append(ProjectionCoordinate.ProjectionCoordinate())
+
 	def __init__(self):
 		super().__init__()
 		self.___externalIconRef : str = None

@@ -16,8 +16,16 @@ class OverlapRelease(EntityIL.EntityIL):
 	def ReleaseTriggerSection(self, aReleaseTriggerSection : EntityILref):
 		self.___releaseTriggerSection = aReleaseTriggerSection
 	@OverlapReleaseTimer.setter
-	def OverlapReleaseTimer(self, *aOverlapReleaseTimer : OverlapReleaseTimer):
+	def OverlapReleaseTimer(self, aOverlapReleaseTimer : OverlapReleaseTimer):	# *aOverlapReleaseTimer
 		self.___overlapReleaseTimer = aOverlapReleaseTimer
+
+	def create_ReleaseTriggerSection(self):
+		self.ReleaseTriggerSection = EntityILref.EntityILref()
+	def create_OverlapReleaseTimer(self):
+		if self.OverlapReleaseTimer == None:
+			self.OverlapReleaseTimer = []
+		self.OverlapReleaseTimer.append(OverlapReleaseTimer.OverlapReleaseTimer())
+
 
 	def __init__(self):
 		super().__init__()

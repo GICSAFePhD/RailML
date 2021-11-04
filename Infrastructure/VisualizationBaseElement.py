@@ -8,6 +8,6 @@ class VisualizationBaseElement(tElementWithIDandName.tElementWithIDandName):
 
 	def __init__(self):
 		super().__init__()
-		self._unnamed_any_ = []
+		self._unnamed_any_ = None
 		"""# @AssociationMultiplicity 0..*"""
 		self._unnamed_anyAttribute_ : anyAttribute = None

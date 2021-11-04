@@ -25,25 +25,34 @@ class SignalSpeed(SignalX.SignalX):
 	def tTrainRelation(self, atTrainRelation : tTrainRelation):
 		self.___trainRelation = atTrainRelation
 	@RefersToBeginOfSpeedSection.setter
-	def RefersToBeginOfSpeedSection(self, *aRefersToBeginOfSpeedSection : tElementWithIDref):
+	def RefersToBeginOfSpeedSection(self, aRefersToBeginOfSpeedSection : tElementWithIDref):	# *aRefersToBeginOfSpeedSection
 		self.___refersToBeginOfSpeedSection = aRefersToBeginOfSpeedSection
 	@RefersToEndOfSpeedSection.setter
-	def RefersToEndOfSpeedSection(self, *aRefersToEndOfSpeedSection : tElementWithIDref):
+	def RefersToEndOfSpeedSection(self, aRefersToEndOfSpeedSection : tElementWithIDref):	# *aRefersToEndOfSpeedSection
 		self.___refersToEndOfSpeedSection = aRefersToEndOfSpeedSection
 
+	def create_RefersToBeginOfSpeedSection(self):
+		if self.RefersToBeginOfSpeedSection == None:
+			self.RefersToBeginOfSpeedSection = []
+		self.RefersToBeginOfSpeedSection.append(tElementWithIDref.tElementWithIDref())
+	def create_RefersToEndOfSpeedSection(self):
+		if self.RefersToEndOfSpeedSection == None:
+			self.RefersToEndOfSpeedSection = []
+		self.RefersToEndOfSpeedSection.append(tElementWithIDref.tElementWithIDref())
+
 	def __init__(self):
-		self.___type : tSignalSpeedType = tSignalSpeedType.tSignalSpeedType()
+		super().__init__()
+		self.___type : tSignalSpeedType = None
 		# @AssociationType Infrastructure.tSignalSpeedType
 		# """speed signal/panel type (announcement, execution)"""
-		self.___trainRelation : tTrainRelation = tTrainRelation.tTrainRelation()
+		self.___trainRelation : tTrainRelation = None
 		# @AssociationType Infrastructure.tTrainRelation
 		# """Reference to the part of the train from where on the shown speed signal aspect is valid. Normally, a limiting speed signal aspect relates to the head of the train while a speed release refers to the end of the train."""
-		self.___refersToBeginOfSpeedSection : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___refersToBeginOfSpeedSection : tElementWithIDref = None
 		"""reference to the begin of a speedSection"""
-		self.___refersToEndOfSpeedSection : tElementWithIDref = tElementWithIDref.tElementWithIDref()
+		self.___refersToEndOfSpeedSection : tElementWithIDref = None
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# @AssociationType Common.tElementWithIDref*
 		# @AssociationMultiplicity 0..*
 		# """reference to the end of a speedSection"""
-

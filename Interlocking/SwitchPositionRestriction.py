@@ -25,6 +25,11 @@ class SwitchPositionRestriction(EntityIL.EntityIL):
 	def RelatedDerailerInPosition(self, aRelatedDerailerInPosition : DerailerAndPosition):
 		self.___relatedDerailerInPosition = aRelatedDerailerInPosition
 
+	def create_SwitchAndPosition(self):
+		self.SwitchAndPosition = SwitchAndPosition.SwitchAndPosition()
+	def create_RelatedDerailerInPosition(self):
+		self.RelatedDerailerInPosition = DerailerAndPosition.DerailerAndPosition()
+
 	def __init__(self):
 		super().__init__()
 		self.___restrictedPosition : tSwitchPosition = None

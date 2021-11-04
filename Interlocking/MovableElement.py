@@ -11,7 +11,6 @@ nonNegativeInteger = NewType("nonNegativeInteger", int)
 
 class MovableElement(TrackAsset.TrackAsset):
 	"""Abstract element defining the attributes common to movable elements. The movable element refers to TrackAsset, thus creating a link to the IS namespace."""
-	# TODO CONTINUE HERE TOMORROW!
 	@property
 	def MaxThrowTime(self) -> Duration:
 		return self.___maxThrowTime

@@ -22,4 +22,3 @@ class LoadingGauges(object):
 		self.___loadingGauge : LoadingGauge = None
 		# @AssociationType Infrastructure.LoadingGauge*
 		# @AssociationMultiplicity 1..*
-

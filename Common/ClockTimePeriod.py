@@ -6,20 +6,20 @@ from typing import List
 
 class ClockTimePeriod(TimePeriod.TimePeriod):
 	@property
-	def From_62(self) -> time:
-		return self.___from_62
+	def From(self) -> time:
+		return self.___from
 	@property
 	def To(self) -> time:
 		return self.___to
 
-	@From_62.setter
-	def From_62(self, aFrom_62 : time):
-		self.___from_62 = aFrom_62
+	@From.setter
+	def From(self, aFrom : time):
+		self.___from = aFrom
 	@To.setter
 	def To(self, aTo : time):
 		self.___to = aTo
 
 	def __init__(self):
-		self.___from_62 : time = 0
-		self.___to : time = 0
+		self.___from : time = None
+		self.___to : time = None
 

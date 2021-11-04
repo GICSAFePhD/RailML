@@ -18,7 +18,7 @@ class PeriodRule(TimePeriodRule.TimePeriodRule):
 		self.Period.append(ClockTimePeriod.ClockTimePeriod())
 
 	def __init__(self):
+		super().__init__()
 		self.___period : ClockTimePeriod = None
 		# @AssociationType Common.ClockTimePeriod*
 		# @AssociationMultiplicity 1..*
-

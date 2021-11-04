@@ -21,10 +21,11 @@ class ConflictReason(EntityIL.EntityIL):
 		self.___refersTo = aRefersTo
 
 	def __init__(self):
-		self.___origin : tRouteConflictTypesExt = tRouteConflictTypesExt.tRouteConflictTypesExt()
+		super().__init__()
+		self.___origin : tRouteConflictTypesExt = None
 		# @AssociationType Interlocking.tRouteConflictTypesExt
 		# """The type of route conflict."""
-		self.___refersTo : tRef = tRef.tRef()
+		self.___refersTo : tRef = None
 		# @AssociationType Common.tRef
 		# """The reference to the track asset (movable element, TVD section or signal) causing the conflict."""
 

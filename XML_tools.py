@@ -15,7 +15,6 @@ def load_xml(file):
     tree = ET.parse(file)
     root = tree.getroot()
     return root
-
 #%%%
 def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
     
@@ -75,14 +74,18 @@ def save_xml(object,f,name = "",level = 0, ignore = {None}, test = False):
                 #if len(next_object) > 1:
                 #    print(len(next_object))
                 for j in next_object:
-                    save_xml(j,f,i,level+1, ignore = ignore)         
+                    save_xml(j,f,i,level+1, ignore = ignore, test = test)         
             else:
-                save_xml(next_object,f,i,level+1, ignore = ignore)
-                
+                save_xml(next_object,f,i,level+1, ignore = ignore, test = test)
+    
+    #if name == "IsSpeedSignal":
+    #    print(nodes) 
+            
     if nodes != []:
+        
         if test:    
             print(' '*(level)+f'<\{tag}>')
-            
+        
         if ignore == {None}:
             f.write('\t'*(level)+f'</{tag}>\n')
         elif ignore != {None} and name == "SpotElementProjection" and "sig" in attr:
@@ -112,7 +115,9 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
     # xml_node: the old-tree
     # child[i]: the new-tree
 
-    #print(f'Object:{current_object}')
+    
+    if current_object == None:
+        print("-"*50+f'Object:{current_object}')
     
     if (type(current_object) != list and current_object != None):    
         if (xml_node.attrib):    
@@ -135,7 +140,7 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
         capitalized_tag = xml_tag[xml_tag_i][0].upper() + xml_tag[xml_tag_i][1:]
         
         #print(capitalized_tag,ignore)
-        #ignore = {"Metadata","Common","Topology","Infrastructure","TvdSections","SwitchesIL"
+        #ignore = {"Metadata","Common","Infrastructure"}
         #        ,"DerailersIL","LevelCrossingsIL","SignalsIL","Routes","ShuntingZones","RouteReleaseGroupsRear",
         #        "ConflictingRoutes","Overlaps","RouteRelations","AssetsForIL","SignalBoxes"}
         
@@ -217,7 +222,7 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'electrificationSystem':railML.Common.ElectrificationSystems.ElectrificationSystems.create_ElectrificationSystem, # ElectrificationSystems
                 'tVoltageVolt':railML.Common.ElectrificationSystems.ElectrificationSystem.ElectrificationSystem.create_tVoltageVolt,'frequencyHertz':railML.Common.ElectrificationSystems.ElectrificationSystem.ElectrificationSystem.create_tFrequencyHertz, # ElectrificationSystem              
                 'infrastructureManager':railML.Common.OrganizationalUnits.OrganizationalUnits.create_InfrastructureManager,'vehicleManufacturer':railML.Common.OrganizationalUnits.OrganizationalUnits.create_VehicleManufacturer,'vehicleOperator':railML.Common.OrganizationalUnits.OrganizationalUnits.create_VehicleOperator,'customer':railML.Common.OrganizationalUnits.OrganizationalUnits.create_Customer,'railwayUndertaking':railML.Common.OrganizationalUnits.OrganizationalUnits.create_RailwayUndertaking,'operationalUndertaking':railML.Common.OrganizationalUnits.OrganizationalUnits.create_OperationalUndertaking,'concessionaire':railML.Common.OrganizationalUnits.OrganizationalUnits.create_Concessionaire,'contractor':railML.Common.OrganizationalUnits.OrganizationalUnits.create_Contractor, # OrganizationalUnits  
-                'speedfprofiles':railML.Common.SpeedProfiles.SpeedProfiles.create_SpeedProfile, # SpeedProfiles
+                'speedProfile':railML.Common.SpeedProfiles.SpeedProfiles.create_SpeedProfile, # SpeedProfiles
                 'speedProfileTilting':railML.Common.SpeedProfiles.SpeedProfile.SpeedProfile.create_SpeedProfileTilting,'speedProfileLoad':railML.Common.SpeedProfiles.SpeedProfile.SpeedProfile.create_SpeedProfileLoad,'speedProfileBraking':railML.Common.SpeedProfiles.SpeedProfile.SpeedProfile.create_SpeedProfileBraking,'speedProfileTrainType':railML.Common.SpeedProfiles.SpeedProfile.SpeedProfile.create_SpeedProfileTrainType, # SpeedProfile
                 'geometricPositioningSystems':railML.Common.Positioning.Positioning.create_GeometricPositioningSystems,'linearPositioningSystems':railML.Common.Positioning.Positioning.create_LinearPositioningSystems,'screenPositioningSystems':railML.Common.Positioning.Positioning.create_ScreenPositioningSystems, # PositioningSystems
                 'geometricPositioningSystem':railML.Common.Positioning.GeometricPositioningSystems.GeometricPositioningSystems.create_GeometricPositioningSystem, # GeometricPositioningSystems
@@ -228,7 +233,7 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'topology':railML.Infrastructure.Infrastructure.create_Topology,'geometry':railML.Infrastructure.Infrastructure.create_Geometry,'functionalInfrastructure':railML.Infrastructure.Infrastructure.create_FunctionalInfrastructure,'physicalFacilities':railML.Infrastructure.Infrastructure.create_PhysicalFacilities,'infrastructureVisualizations':railML.Infrastructure.Infrastructure.create_InfrastructureVisualizations,'infrastructureStates':railML.Infrastructure.Infrastructure.create_InfrastructureStates, # Infrastructure
                 'netElements':railML.Infrastructure.Topology.Topology.create_NetElements, 'netRelations':railML.Infrastructure.Topology.Topology.create_NetRelations,'networks':railML.Infrastructure.Topology.Topology.create_Networks, # Topology
                 'netElement':railML.Infrastructure.Topology.NetElements.NetElements.create_NetElement, # NetElements
-                'tLengthM':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_tLengthM,'associatedPositioningSystem':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_AssociatedPositioningSystem,'elementCollectionOrdered':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_ElementCollectionOrdered,'elementCollectionUnordered':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_ElementCollectionUnordered,'isValid':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_IsValid,'name':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_Name,'relation':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_Relation, # NetElement
+                'Length':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_Length,'associatedPositioningSystem':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_AssociatedPositioningSystem,'elementCollectionOrdered':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_ElementCollectionOrdered,'elementCollectionUnordered':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_ElementCollectionUnordered,'isValid':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_IsValid,'name':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_Name,'relation':railML.Infrastructure.Topology.NetElements.NetElement.NetElement.create_Relation, # NetElement
                 'positioningSystemRef':railML.Infrastructure.Topology.NetElements.NetElement.AssociatedPositioningSystem.AssociatedPositioningSystem.create_PositioningSystemRef,'intrinsicCoordinate':railML.Infrastructure.Topology.NetElements.NetElement.AssociatedPositioningSystem.AssociatedPositioningSystem.create_IntrinsicCoordinate,'isValid':railML.Infrastructure.Topology.NetElements.NetElement.AssociatedPositioningSystem.AssociatedPositioningSystem.create_IsValid, # AssociatedPositionyngSystem
                 
                 'linearCoordinate':railML.Infrastructure.Topology.NetElements.NetElement.AssociatedPositioningSystem.IntrinsicCoordinate.IntrinsicCoordinate.create_LinearCoordinate,'geometricCoordinate':railML.Infrastructure.Topology.NetElements.NetElement.AssociatedPositioningSystem.IntrinsicCoordinate.IntrinsicCoordinate.create_GeometricCoordinate, # IntrinsicCoordinate
@@ -310,18 +315,16 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'signalIS':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalsIS.create_SignalIS, # SignalsIS
                 'isAnnouncementSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsAnnouncementSignal,'isCatenarySignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsCatenarySignal,'isDangerSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsDangerSignal,'isEtcsSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsEtcsSignal,'isInformationSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsInformationSignal,'isLevelCrossingSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsLevelCrossingSignal,'isMilepostSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsMilepostSignal,'isSpeedSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsSpeedSignal,'isStopPostSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsStopPostSignal,'isTrainMovementSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsTrainMovementSignal,'isRadioSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsRadioSignal,'isVehicleEquipmentSignal':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_IsVehicleEquipmentSignal,'connectedWithBaliseGroup':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_ConnectedWithBaliseGroup,'signalConstruction':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalIS.create_SignalConstruction, # SignalIS
                 
+                'refersToBeginOfSpeedSection':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalSpeed.SignalSpeed.create_RefersToBeginOfSpeedSection,'refersToEndOfSpeedSection':railML.Infrastructure.FunctionalInfrastructure.SignalsIS.SignalIS.SignalSpeed.SignalSpeed.create_RefersToEndOfSpeedSection,  # IsSpeedSignal
+
                 'speedSection':railML.Infrastructure.FunctionalInfrastructure.Speeds.Speeds.create_SpeedSection, # Speeds
-                'validForSpeedProfil':railML.Infrastructure.FunctionalInfrastructure.Speeds.SpeedSection.SpeedSection.create_ValidForSpeedProfile, # SpeedSection
+                'validForSpeedProfile':railML.Infrastructure.FunctionalInfrastructure.Speeds.SpeedSection.SpeedSection.create_ValidForSpeedProfile, # SpeedSection
                 
                 'stoppingPlace':railML.Infrastructure.FunctionalInfrastructure.StoppingPlaces.StoppingPlaces.create_StoppingPlace, # StoppingPlaces
                 'validForTrainMovement':railML.Infrastructure.FunctionalInfrastructure.StoppingPlaces.StoppingPlace.StoppingPlace.create_ValidForTrainMovement, # StoppingPlace
                 
                 'switchIS':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchesIS.create_SwitchIS, # SwitchesIS
-                
-                'leftBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_LeftBranch,
-                'rightBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_RightBranch,
-                'straightBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_StraightBranch,
-                'turningBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_TurningBranch, # SwitchIS
+                'leftBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_LeftBranch,'rightBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_RightBranch,'straightBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_StraightBranch,'turningBranch':railML.Infrastructure.FunctionalInfrastructure.SwitchesIS.SwitchIS.SwitchIS.create_TurningBranch, # SwitchIS
 
                 'track':railML.Infrastructure.FunctionalInfrastructure.Tracks.Tracks.create_Track, # Tracks
                 'trackBegin':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.Track.create_TrackBegin,'trackEnd':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.Track.create_TrackEnd,'length':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.Track.create_Length,'linearLocation':railML.Infrastructure.FunctionalInfrastructure.Tracks.Track.Track.create_LinearLocation, # Track
@@ -342,6 +345,9 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
 
                 'coordinate':railML.Infrastructure.InfrastructureVisualizations.Visualization.SpotProjection.SpotProjection.create_Coordinate, 
                 'usesSymbol':railML.Infrastructure.InfrastructureVisualizations.Visualization.SpotProjection.SpotProjection.create_UsesSymbol, # SpotProjection
+                
+                'isLocatedAt':railML.Infrastructure.InfrastructureVisualizations.Visualization.SpotProjection.ElementProjection.ElementProjectionSymbol.ElementProjectionSymbol.create_IsLocatedAt , # UsesSymbol
+                
                 'coordinate':railML.Infrastructure.InfrastructureVisualizations.Visualization.LinearProjection.LinearProjection.create_Coordinate, # LinearProjection
                 'coordinate':railML.Infrastructure.InfrastructureVisualizations.Visualization.AreaProjection.AreaProjection.create_Coordinate, # SpotProjection
 
@@ -359,11 +365,23 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'designator':railML.Interlocking.AssetsForIL.TvdSections.TvdSection.TvdSection.create_Designator,'hasDemarcatingBufferstop':railML.Interlocking.AssetsForIL.TvdSections.TvdSection.TvdSection.create_HasDemarcatingBufferstop,'hasExitSignal':railML.Interlocking.AssetsForIL.TvdSections.TvdSection.TvdSection.create_HasExitSignal,'hasDemarcatingTraindetector':railML.Interlocking.AssetsForIL.TvdSections.TvdSection.TvdSection.create_HasDemarcatingTraindetector,'hasResetStrategy':railML.Interlocking.AssetsForIL.TvdSections.TvdSection.TvdSection.create_HasResetStrategy, # TvdSection
                 'switchIL':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchesIL.create_SwitchIL, # SwitchesIL
                 'hasFoulingTrainDetectors':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_HasFoulingTrainDetectors,'branchLeft':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_BranchLeft,'branchRight':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_BranchRight,'hasPositionRestriction':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_HasPositionRestriction,'refersTo':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_RefersTo,'hasGaugeClearanceMarker':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_HasGaugeClearanceMarker,'hasTvdSection':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_HasTvdSection,'connectedToPowerSupply':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_ConnectedToPowerSupply,'relatedMovableElement':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchIL.create_RelatedMovableElement, # SwitchIL
+                
+                'switchAndPosition':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchPositionRestriction.SwitchPositionRestriction.create_SwitchAndPosition,'relatedDerailerInPosition':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchPositionRestriction.SwitchPositionRestriction.create_RelatedDerailerInPosition, # HasPositionRestriction
+                
+                'inPosition':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchPositionRestriction.DerailerAndPosition.DerailerAndPosition.create_InPosition,'refersToDerailer':railML.Interlocking.AssetsForIL.SwitchesIL.SwitchIL.SwitchPositionRestriction.DerailerAndPosition.DerailerAndPosition.create_RefersToDerailer, # DerailerAndPosition
+                
                 'derailerIL':railML.Interlocking.AssetsForIL.DerailersIL.DerailersIL.create_DerailerIL, # DerailersIL
                 'movableCrossing':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossings.create_MovableCrossing, # MovableCrossings                
                 'branchUpLeft':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossing.MovableCrossing.create_BranchUpLeft,'branchUpRight':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossing.MovableCrossing.create_BranchUpRight,'branchDownLeft':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossing.MovableCrossing.create_BranchDownLeft,'branchDownRight':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossing.MovableCrossing.create_BranchDownRight,'hasFoulingTrainDetectors':railML.Interlocking.AssetsForIL.MovableCrossings.MovableCrossing.MovableCrossing.create_HasFoulingTrainDetectors, # MovableCrossing
                 'levelCrossingIL':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingsIL.create_LevelCrossingIL, # LevelCrossingsIL
                 'hasInterface':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_HasInterface,'isLevelCrossingType':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_IsLevelCrossingType,'refersTo':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_RefersTo,'deactivatedBy':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_DeactivatedBy,'activationCondition':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_ActivationCondition,'hasTvdSection':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingIL.create_HasTvdSection, # LevelCrossingIL
+                
+                'tvdDetectorRef':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.LevelCrossingDeactivator.LevelCrossingDeactivator.create_TvdDetectorRef, # LevelCrossingDeactivator
+                
+                'andOr':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.ActivationCondition.create_AndOr,'delayBySwitchPosition':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.ActivationCondition.create_DelayBySwitchPosition,'aspectRelatedDelay':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.ActivationCondition.create_AspectRelatedDelay,'signalDelayTime':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.ActivationCondition.create_SignalDelayTime,'activatedBy':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.ActivationCondition.create_ActivatedBy, # ActivationCondition
+
+                'hasDelayedSignal':railML.Interlocking.AssetsForIL.LevelCrossingsIL.LevelCrossingIL.ActivationCondition.SignalDelayTime.SignalDelayTime.create_HasDelayedSignal, # SignalDelayTime
+
                 'key':railML.Interlocking.AssetsForIL.Keys.Keys.create_Key, # Keys
                 'keyLockIL':railML.Interlocking.AssetsForIL.KeyLocksIL.KeyLocksIL.create_KeyLockIL, # KeyLocksIL
                 'acceptsKey':railML.Interlocking.AssetsForIL.KeyLocksIL.KeyLockIL.KeyLockIL.create_AcceptsKey,'hasTvdSection':railML.Interlocking.AssetsForIL.KeyLocksIL.KeyLockIL.KeyLockIL.create_HasTvdSection,'hasSlaveLock':railML.Interlocking.AssetsForIL.KeyLocksIL.KeyLockIL.KeyLockIL. create_HasSlaveLock, # KeyLockIL
@@ -389,24 +407,33 @@ constructors = {'metadata':railML.railML.create_metadata,'common':railML.railML.
                 'routeReleaseGroupRear':railML.Interlocking.AssetsForIL.RouteReleaseGroupsRear.RouteReleaseGroupsRear.create_RouteReleaseGroupRear, # RouteReleaseGroupsRear
                 'route':railML.Interlocking.AssetsForIL.Routes.Routes.create_Route, # Routes
                 'handlesRouteType':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HandlesRouteType,'routeActivationSection':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteActivationSection,'facingSwitchInPosition':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_FacingSwitchInPosition,'refersToSwitch':railML.Interlocking.AssetsForIL.Routes.Route.SwitchAndPosition.SwitchAndPosition.create_RefersToSwitch,'hasTvdSection':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HasTvdSection,'routeEntry':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteEntry,'hasReleaseGroup':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_HasReleaseGroup,'switchPositionInDepartureTrack':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_SwitchPositionInDepartureTrack,'routeExit':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_RouteExit,'additionalRelation':railML.Interlocking.AssetsForIL.Routes.Route.Route.create_AdditionalRelation, # Route
+                'activationSection':railML.Interlocking.AssetsForIL.Routes.Route.RouteActivationSection.RouteActivationSection.create_ActivationSection, # RouteActivationSection
+                'nonReplacement':railML.Interlocking.AssetsForIL.Routes.Route.RouteEntry.RouteEntry.create_NonReplacement, # RouteExit
+                
                 'conflictingRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoutes.create_ConflictingRoute, # ConflictingRoutes
                 'refersToRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_RefersToRoute,'conflictsWithRoute':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_ConflictsWithRoute,'reasonForConflict':railML.Interlocking.AssetsForIL.ConflictingRoutes.ConflictingRoute.ConflictingRoute.create_ReasonForConflict, # ConflictingRoute
                 'routeRelation':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelations.create_RouteRelation, # RouteRelations
                 'requiredSwitchPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSwitchPosition,'requiredDerailerPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredDerailerPosition,'requiredCrossingPosition':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredCrossingPosition,'requiredDetectorState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredDetectorState,'requiredSignalAspect':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSignalAspect,'requiredSectionState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredSectionState,'requiredKeyLockState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredKeyLockState,'requiredLevelCrossingState':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.RouteRelation.create_RequiredLevelCrossingState, # RouteRelation
                 
                 'relatedSectionAndVacancy':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.SectionAndGivenVacancy.SectionAndGivenVacancy.create_RelatedSectionAndVacancy , # RequiredSectionState
+                'refersToSection':railML.Interlocking.AssetsForIL.RouteRelations.RouteRelation.SectionAndGivenVacancy.SectionAndVacancy.SectionAndVacancy.create_RefersToSection, # SectionAndGivenVacancy
                 
                 'combinedRoute':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoutes.create_CombinedRoute, # CombinedRoutes
                 'comboEntry':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ComboEntry,'comboExit':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ComboExit,'containsRoute':railML.Interlocking.AssetsForIL.CombinedRoutes.CombinedRoute.CombinedRoute.create_ContainsRoute, # CombinedRoute
                 'overlap':railML.Interlocking.AssetsForIL.Overlaps.Overlaps.create_Overlap, # Overlaps
                 'activeForApproachRoute':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_ActiveForApproachRoute,'relatedToTrackAsset':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RelatedToTrackAsset,'requiresSwitchInPosition':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RequiresSwitchInPosition,'requiresLevelCrossingInState':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_RequiresLevelCrossingInState,'hasTvdSection':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_HasTvdSection,'isLimitedBy':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_IsLimitedBy,'overlapRelease':railML.Interlocking.AssetsForIL.Overlaps.Overlap.Overlap.create_OverlapRelease, # Overlap
                 
+                'releaseTriggerSection':railML.Interlocking.AssetsForIL.Overlaps.Overlap.OverlapRelease.OverlapRelease.create_ReleaseTriggerSection,'overlapReleaseTimer':railML.Interlocking.AssetsForIL.Overlaps.Overlap.OverlapRelease.OverlapRelease.create_OverlapReleaseTimer, # OverlapRelease
+                
                 'relatedSwitchAndPosition':railML.Interlocking.AssetsForIL.Overlaps.Overlap.SwitchAndGivenPosition.SwitchAndGivenPosition.create_RelatedSwitchAndPosition, # RequiresSwitchInPosition
                 
                 'dangerPoint':railML.Interlocking.AssetsForIL.DangerPoints.DangerPoints.create_DangerPoint, # DangerPoints
+                'lastSupervisedSectionBeforeDP':railML.Interlocking.AssetsForIL.DangerPoints.DangerPoint.DangerPoint.create_LastSupervisedSectionBeforeDP,'situatedAtTrackAsset':railML.Interlocking.AssetsForIL.DangerPoints.DangerPoint.DangerPoint.create_SituatedAtTrackAsset, # DangerPoint
+                
                 
                 'destinationPoint':railML.Interlocking.AssetsForIL.DestinationPoints.DestinationPoints.create_DestinationPoint, # DestinationPoints
                 'refersTo':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_RefersTo,'hasDangerPoint':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_HasDangerPoint,'hasOverlap':railML.Interlocking.AssetsForIL.DestinationPoints.RouteExit.RouteExit.create_HasOverlap, # RouteExit
+
                 'powerSupplyIL':railML.Interlocking.AssetsForIL.PowerSuppliesIL.PowerSuppliesIL.create_PowerSupplyIL, # PowerSuppliesIL
 
                 'controller':railML.Interlocking.Controllers.Controllers.create_Controller, # Controllers 

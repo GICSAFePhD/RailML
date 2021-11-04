@@ -23,4 +23,3 @@ class SignalBoxes(object):
 		# @AssociationType Interlocking.SignalBox*
 		# @AssociationMultiplicity 1..*
 		# """Container with the characteristics of an individual interlocking system."""
-

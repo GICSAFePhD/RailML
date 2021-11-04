@@ -52,5 +52,5 @@ class EntityIS(RTM_LocatedNetEntity.RTM_LocatedNetEntity):
 		# @AssociationType Infrastructure.LocationNetwork*
 		# @AssociationMultiplicity 0..*
 		self.___unnamed_anyAttribute_ : anyAttribute = None
-		self.___unnamed_any_ = []
+		self.___unnamed_any_ = None
 		"""# @AssociationMultiplicity 0..*"""

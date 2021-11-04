@@ -39,6 +39,11 @@ class DangerPoint(EntityIL.EntityIL):
 	def Unnamed_RouteExit_(self, aUnnamed_RouteExit_ : RouteExit):
 		self.___unnamed_RouteExit_ = aUnnamed_RouteExit_
 
+	def create_LastSupervisedSectionBeforeDP(self):
+		self.LastSupervisedSectionBeforeDP = EntityILref.EntityILref()
+	def create_SituatedAtTrackAsset(self):
+		self.SituatedAtTrackAsset = EntityILref.EntityILref()
+
 	def __init__(self):
 		super().__init__()
 		self.___distance : tLengthM = None

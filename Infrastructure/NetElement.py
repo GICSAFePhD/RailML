@@ -10,7 +10,7 @@ from typing import List
 class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	"""The NetElement type is derived from the RailTopoModel class PositioningNetElement."""
 	@property
-	def tLengthM(self) -> tLengthM:
+	def Length(self) -> tLengthM:
 		return self.___length
 	@property
 	def AssociatedPositioningSystem(self) -> AssociatedPositioningSystem:
@@ -31,9 +31,9 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Relation(self) -> Relation:
 		return self.___relation
 
-	@tLengthM.setter
-	def tLengthM(self, atLengthM : tLengthM):
-		self.___length = atLengthM
+	@Length.setter
+	def Length(self, aLength : Length):
+		self.___length = aLength
 	@AssociatedPositioningSystem.setter
 	def AssociatedPositioningSystem(self, aAssociatedPositioningSystem : AssociatedPositioningSystem):
 		self.___associatedPositioningSystem = aAssociatedPositioningSystem
@@ -53,8 +53,8 @@ class NetElement(RTM_PositioningNetElement.RTM_PositioningNetElement):
 	def Relation(self, aRelation : Relation):
 		self.___relation = aRelation
 
-	def create_tLengthM(self):
-		self.tLengthM = tLengthM.tLengthM()
+	def create_Length(self):
+		self.Length = tLengthM.tLengthM()
 	def create_AssociatedPositioningSystem(self):
 		if self.AssociatedPositioningSystem == None:
 			self.AssociatedPositioningSystem = []

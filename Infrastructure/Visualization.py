@@ -46,7 +46,7 @@ class Visualization(VisualizationBaseElement.VisualizationBaseElement):
 
 	def __init__(self):
 		super().__init__()
-		self.___positioningSystemRef : tRef = tRef.tRef()
+		self.___positioningSystemRef : tRef = None
 		# @AssociationType Common.tRef
 		# """reference to a positioning system"""
 		self.___spotElementProjection : SpotProjection = None

@@ -44,5 +44,5 @@ class LevelCrossingProtection(object):
 		# @AssociationType Infrastructure.tLevelCrossingProtectionAcousticExt
 		# """technical level crossing protection: acoustic warning system;
 		# missing attribute means that the information is not known"""
-		self.___hasActiveProtection : bool = False
+		self.___hasActiveProtection : bool = None
 

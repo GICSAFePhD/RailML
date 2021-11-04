@@ -20,6 +20,11 @@ class LevelCrossingDeactivator(EntityIL.EntityIL):
 	def TvdDetectorRef(self, aTvdDetectorRef : EntityILref):
 		self.___tvdDetectorRef = aTvdDetectorRef
 
+	def create_TvdDetectorRef(self):
+		if self.TvdDetectorRef == None:
+			self.TvdDetectorRef = []
+		self.TvdDetectorRef.append(EntityILref.EntityILref())
+
 	def __init__(self):
 		super().__init__()
 		self.___delay : Duration = None

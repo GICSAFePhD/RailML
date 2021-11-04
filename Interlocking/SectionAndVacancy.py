@@ -19,6 +19,11 @@ class SectionAndVacancy(AssetAndState.AssetAndState):
 	def RefersToSection(self, aRefersToSection : EntityILref):
 		self.___refersToSection = aRefersToSection
 
+	def create_RefersToSection(self):
+		if self.RefersToSection == None:
+			self.RefersToSection = []
+		self.RefersToSection.append(EntityILref.EntityILref())
+
 	def __init__(self):
 		super().__init__()
 		self.___inState : tSectionVacancy = None
