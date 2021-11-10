@@ -1,0 +1,42 @@
+Dangers> Switches:8+Level crossings:NaN+Borders:NaN
+
+Sw01
+	{'Node': 'ne01', 'ContinueCourse': 'right', 'BranchCourse': 'left', 'Direction': 'normal', 'LeftBranch': 'nr_ne01ne03_swi01', 'RightBranch': 'nr_ne01ne02_swi01'}
+	Start: ne01
+	Continue: Right > nr_ne01ne02_swi01 > ne02
+	Branch: Left > nr_ne01ne03_swi01 > ne03
+Sw02
+	{'Node': 'ne04', 'ContinueCourse': 'left', 'BranchCourse': 'right', 'Direction': 'normal', 'LeftBranch': 'nr_ne02ne04_swi02', 'RightBranch': 'nr_ne03ne04_swi02'}
+	Start: ne04
+	Continue: Left > nr_ne02ne04_swi02 > ne02
+	Branch: Right > nr_ne03ne04_swi02 > ne03
+Sw03
+	{'Node': 'ne05', 'ContinueCourse': 'left', 'BranchCourse': 'right', 'Direction': 'normal', 'LeftBranch': 'nr_ne05ne06_swi03', 'RightBranch': 'nr_ne05ne07_swi03'}
+	Start: ne05
+	Continue: Left > nr_ne05ne06_swi03 > ne06
+	Branch: Right > nr_ne05ne07_swi03 > ne07
+Sw04
+	{'Node': 'ne08', 'ContinueCourse': 'right', 'BranchCourse': 'left', 'Direction': 'normal', 'LeftBranch': 'nr_ne07ne08_swi04', 'RightBranch': 'nr_ne06ne08_swi04'}
+	Start: ne08
+	Continue: Right > nr_ne06ne08_swi04 > ne06
+	Branch: Left > nr_ne07ne08_swi04 > ne07
+Sw05
+	{'Node': 'ne09', 'ContinueCourse': 'right', 'BranchCourse': 'left', 'Direction': 'normal', 'LeftBranch': 'nr_ne09ne11_swi05', 'RightBranch': 'nr_ne09ne10_swi05'}
+	Start: ne09
+	Continue: Right > nr_ne09ne10_swi05 > ne10
+	Branch: Left > nr_ne09ne11_swi05 > ne11
+Sw06
+	{'Node': 'ne12', 'ContinueCourse': 'left', 'BranchCourse': 'right', 'Direction': 'normal', 'LeftBranch': 'nr_ne10ne12_swi06', 'RightBranch': 'nr_ne11ne12_swi06'}
+	Start: ne12
+	Continue: Left > nr_ne10ne12_swi06 > ne10
+	Branch: Right > nr_ne11ne12_swi06 > ne11
+Sw07
+	{'Node': 'ne14', 'ContinueCourse': 'right', 'BranchCourse': 'left', 'Direction': 'normal', 'LeftBranch': 'nr_ne14ne15_swi07', 'RightBranch': 'nr_ne13ne14_swi07'}
+	Start: ne14
+	Continue: Right > nr_ne13ne14_swi07 > ne13
+	Branch: Left > nr_ne14ne15_swi07 > ne15
+Sw08
+	{'Node': 'ne14', 'ContinueCourse': 'left', 'BranchCourse': 'right', 'Direction': 'normal', 'LeftBranch': 'nr_ne14ne16_swi08', 'RightBranch': 'nr_ne14ne17_swi08'}
+	Start: ne14
+	Continue: Left > nr_ne14ne16_swi08 > ne16
+	Branch: Right > nr_ne14ne17_swi08 > ne17
