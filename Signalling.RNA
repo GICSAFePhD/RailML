@@ -48,7 +48,7 @@ Sig08:
 	Coordinate: 0.33
 Sig09:
 	Net: ne2
-	Type: Maneuver
+	Type: Straight
 	Direction: Normal 
 	Position: Left
 	Coordinate: 0.33
@@ -59,13 +59,13 @@ Sig10:
 	Position: Left
 	Coordinate: 0.33
 Sig11:
-	Net: ne6
-	Type: Maneuver
+	Net: ne7
+	Type: Straight
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.33
 Sig12:
-	Net: ne7
+	Net: ne6
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
@@ -83,13 +83,13 @@ Sig14:
 	Position: Left
 	Coordinate: 0.33
 Sig15:
-	Net: ne8
+	Net: ne9
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.33
 Sig16:
-	Net: ne9
+	Net: ne8
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right

@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_6.railml</dc:title>
-		<dc:date>2021-11-21T14:00:42Z</dc:date>
+		<dc:date>2021-11-21T17:34:07Z</dc:date>
 		<dc:creator>f</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -492,6 +492,11 @@
 					<spotLocation netElementRef="ne9" intrinsicCoord="0.5420" applicationDirection="both" id="tde24_sloc01"/>
 					<name name="J05" language="en"/>
 				</trainDetectionElement>
+				<trainDetectionElement id="tde25">
+					<designator register="_Example" entry="TRAIN DETECTION ELEMENT J06"/>
+					<spotLocation netElementRef="ne5" intrinsicCoord="0.5177" applicationDirection="both" id="tde25_sloc01"/>
+					<name name="J06" language="en"/>
+				</trainDetectionElement>
 			</trainDetectionElements>
 		</functionalInfrastructure>
 		<infrastructureVisualizations>
@@ -563,6 +568,10 @@
 				<spotElementProjection refersToElement="tde24" id="vis01_sep17">
 					<coordinate x="1013.750" y="-1380.000"/>
 					<name name="J05" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="tde25" id="vis01_sep18">
+					<coordinate x="765.942" y="-450.000"/>
+					<name name="J06" language="en"/>
 				</spotElementProjection>
 				<linearElementProjection refersToElement="ne1" id="vis01_lep01">
 					<coordinate x="-1500.000" y="-450.000"/>
