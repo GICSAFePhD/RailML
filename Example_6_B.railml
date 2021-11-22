@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_6.railml</dc:title>
-		<dc:date>2021-11-21T22:22:15Z</dc:date>
+		<dc:date>2021-11-22T18:39:32Z</dc:date>
 		<dc:creator>f</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -189,8 +189,14 @@
 						<intrinsicCoordinate intrinsicCoord="0" id="ne18_aps01_ic01">
 							<geometricCoordinate x="1320.000" y="-1380.000" positioningSystemRef="gps01"/>
 						</intrinsicCoordinate>
-						<intrinsicCoordinate intrinsicCoord="1" id="ne18_aps01_ic02">
+						<intrinsicCoordinate intrinsicCoord="0.333333" id="ne18_aps01_ic02">
 							<geometricCoordinate x="1950.000" y="-1380.000" positioningSystemRef="gps01"/>
+						</intrinsicCoordinate>
+						<intrinsicCoordinate intrinsicCoord="0.666667" id="ne18_aps01_ic03">
+							<geometricCoordinate x="2160.000" y="-1590.000" positioningSystemRef="gps01"/>
+						</intrinsicCoordinate>
+						<intrinsicCoordinate intrinsicCoord="1" id="ne18_aps01_ic04">
+							<geometricCoordinate x="2520.000" y="-1590.000" positioningSystemRef="gps01"/>
 						</intrinsicCoordinate>
 					</associatedPositioningSystem>
 					<relation ref="nr_ne17ne18_swi36"/>
@@ -202,10 +208,10 @@
 							<geometricCoordinate x="1320.000" y="-1380.000" positioningSystemRef="gps01"/>
 						</intrinsicCoordinate>
 						<intrinsicCoordinate intrinsicCoord="0.5" id="ne19_aps01_ic02">
-							<geometricCoordinate x="930.000" y="-1605.167" positioningSystemRef="gps01"/>
+							<geometricCoordinate x="930.000" y="-1605.170" positioningSystemRef="gps01"/>
 						</intrinsicCoordinate>
 						<intrinsicCoordinate intrinsicCoord="1" id="ne19_aps01_ic03">
-							<geometricCoordinate x="360.000" y="-1605.167" positioningSystemRef="gps01"/>
+							<geometricCoordinate x="360.000" y="-1605.170" positioningSystemRef="gps01"/>
 						</intrinsicCoordinate>
 					</associatedPositioningSystem>
 					<relation ref="nr_ne17ne19_swi36"/>
@@ -281,9 +287,9 @@
 					<elementA ref="ne17"/>
 					<elementB ref="ne19"/>
 				</netRelation>
-				<netRelation navigability="Both" positionOnA="0" positionOnB="0" id="nr_ne18ne19_swi36">
-					<elementA ref="ne18"/>
-					<elementB ref="ne19"/>
+				<netRelation navigability="Both" positionOnA="0" positionOnB="0" id="nr_ne19ne18_swi36">
+					<elementA ref="ne19"/>
+					<elementB ref="ne18"/>
 				</netRelation>
 			</netRelations>
 			<networks>
@@ -357,15 +363,15 @@
 					<spotLocation netElementRef="ne1" intrinsicCoord="0.0000" applicationDirection="reverse" id="bus13_sloc01"/>
 					<name name="Buf09" language="en"/>
 				</bufferStop>
-				<bufferStop type="fixedBufferStop" id="bus35">
-					<designator register="_Example" entry="BUFFERSTOP Buf20"/>
-					<spotLocation netElementRef="ne18" intrinsicCoord="1.0000" applicationDirection="normal" id="bus35_sloc01"/>
-					<name name="Buf20" language="en"/>
-				</bufferStop>
 				<bufferStop type="fixedBufferStop" id="bus37">
 					<designator register="_Example" entry="BUFFERSTOP Buf21"/>
 					<spotLocation netElementRef="ne19" intrinsicCoord="1.0000" applicationDirection="normal" id="bus37_sloc01"/>
 					<name name="Buf21" language="en"/>
+				</bufferStop>
+				<bufferStop type="fixedBufferStop" id="bus41">
+					<designator register="_Example" entry="BUFFERSTOP Buf22"/>
+					<spotLocation netElementRef="ne18" intrinsicCoord="1.0000" applicationDirection="normal" id="bus41_sloc01"/>
+					<name name="Buf22" language="en"/>
 				</bufferStop>
 			</bufferStops>
 			<switchesIS>
@@ -524,12 +530,12 @@
 					<name name="track11" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk12">
-					<trackBegin ref="bus35"/>
-					<trackEnd ref="swi36"/>
-					<length value="630" type="physical"/>
+					<trackBegin ref="swi36"/>
+					<trackEnd ref="bus41"/>
+					<length value="1286.98" type="physical"/>
 					<designator register="_Example" entry="TRACK track12"/>
 					<linearLocation applicationDirection="both" id="trk12_lloc01">
-						<associatedNetElement netElementRef="ne18" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne18" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track12" language="en"/>
 				</track>
@@ -552,7 +558,7 @@
 				</trainDetectionElement>
 				<trainDetectionElement id="tde21">
 					<designator register="_Example" entry="TRAIN DETECTION ELEMENT J02"/>
-					<spotLocation netElementRef="ne11" intrinsicCoord="0.6516" applicationDirection="both" id="tde21_sloc01"/>
+					<spotLocation netElementRef="ne11" intrinsicCoord="0.6050" applicationDirection="both" id="tde21_sloc01"/>
 					<name name="J02" language="en"/>
 				</trainDetectionElement>
 				<trainDetectionElement id="tde22">
@@ -603,13 +609,13 @@
 					<coordinate x="-1500.000" y="-450.000"/>
 					<name name="Buf09" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="bus35" id="vis01_sep07">
-					<coordinate x="1950.000" y="-1380.000"/>
-					<name name="Buf20" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="bus37" id="vis01_sep08">
-					<coordinate x="360.000" y="-1605.167"/>
+				<spotElementProjection refersToElement="bus37" id="vis01_sep07">
+					<coordinate x="360.000" y="-1605.170"/>
 					<name name="Buf21" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="bus41" id="vis01_sep08">
+					<coordinate x="2520.000" y="-1590.000"/>
+					<name name="Buf22" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="swi4" id="vis01_sep09">
 					<coordinate x="-600.000" y="-450.000"/>
@@ -640,7 +646,7 @@
 					<name name="J01" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="tde21" id="vis01_sep16">
-					<coordinate x="1688.720" y="-450.000"/>
+					<coordinate x="1653.780" y="-450.000"/>
 					<name name="J02" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="tde22" id="vis01_sep17">
@@ -720,12 +726,14 @@
 				<linearElementProjection refersToElement="ne18" id="vis01_lep12">
 					<coordinate x="1320.000" y="-1380.000"/>
 					<coordinate x="1950.000" y="-1380.000"/>
+					<coordinate x="2160.000" y="-1590.000"/>
+					<coordinate x="2520.000" y="-1590.000"/>
 					<name name="netElement_ne18" language="en"/>
 				</linearElementProjection>
 				<linearElementProjection refersToElement="ne19" id="vis01_lep13">
 					<coordinate x="1320.000" y="-1380.000"/>
-					<coordinate x="930.000" y="-1605.167"/>
-					<coordinate x="360.000" y="-1605.167"/>
+					<coordinate x="930.000" y="-1605.170"/>
+					<coordinate x="360.000" y="-1605.170"/>
 					<name name="netElement_ne19" language="en"/>
 				</linearElementProjection>
 				<name name="Example_6 microscopic screen visualization" language="en"/>

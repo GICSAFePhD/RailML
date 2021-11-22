@@ -67,7 +67,7 @@ Node ne17:
 	Neighbours = 4 -> ['ne7', 'ne16', 'ne18', 'ne19']
 Node ne18:
 	Track = track12
-	Type = BufferStop -> bus35
+	Type = BufferStop -> bus41
 	Neighbours = 2 -> ['ne17', 'ne19']
 	Switches -> Sw09
 		ContinueCourse -> left -> ne17
