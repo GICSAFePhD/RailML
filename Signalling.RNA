@@ -107,37 +107,37 @@ Sig18:
 	Position: Left
 	Coordinate: 0.33
 Sig19:
-	Net: ne16
+	Net: ne23
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.33
 Sig20:
-	Net: ne17
+	Net: ne24
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.33
 Sig21:
-	Net: ne18
+	Net: ne25
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.66
 Sig22:
-	Net: ne18
+	Net: ne25
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
 	Coordinate: 0.66
 Sig23:
-	Net: ne17
+	Net: ne24
 	Type: Maneuver
 	Direction: Normal 
 	Position: Left
 	Coordinate: 0.66
 Sig24:
-	Net: ne19
+	Net: ne26
 	Type: Maneuver
 	Direction: Normal 
 	Position: Left
