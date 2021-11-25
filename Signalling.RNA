@@ -113,7 +113,7 @@ Sig19:
 	Position: Right
 	Coordinate: 0.33
 Sig20:
-	Net: ne24
+	Net: ne27
 	Type: Maneuver
 	Direction: Reverse 
 	Position: Right
@@ -131,13 +131,13 @@ Sig22:
 	Position: Right
 	Coordinate: 0.66
 Sig23:
-	Net: ne24
+	Net: ne27
 	Type: Maneuver
 	Direction: Normal 
 	Position: Left
 	Coordinate: 0.66
 Sig24:
-	Net: ne26
+	Net: ne28
 	Type: Maneuver
 	Direction: Normal 
 	Position: Left
