@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_6.railml</dc:title>
-		<dc:date>2021-11-23T20:35:21Z</dc:date>
+		<dc:date>2021-11-29T13:38:38Z</dc:date>
 		<dc:creator>f</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -403,7 +403,7 @@
 					<spotLocation netElementRef="ne5" intrinsicCoord="1.0000" applicationDirection="normal" id="swi17_sloc01"/>
 					<name name="Sw05" language="en"/>
 				</switchIS>
-				<switchIS type="ordinarySwitch" continueCourse="right" branchCourse="left" id="swi44">
+				<switchIS type="ordinarySwitch" continueCourse="left" branchCourse="right" id="swi44">
 					<leftBranch branchingSpeed="60" joiningSpeed="60" netRelationRef="nr_ne7ne27_swi44" radius="0"/>
 					<rightBranch branchingSpeed="60" joiningSpeed="60" netRelationRef="nr_ne7ne23_swi44" radius="500"/>
 					<designator register="_Example" entry="SWITCH Sw11"/>

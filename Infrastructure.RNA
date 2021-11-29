@@ -42,8 +42,8 @@ Node ne7:
 	Track = track7
 	Neighbours = 4 -> ['ne2', 'ne6', 'ne23', 'ne27']
 	Switches -> Sw11
-		ContinueCourse -> right -> ne23
-		BranchCourse -> left -> ne27
+		ContinueCourse -> left -> ne27
+		BranchCourse -> right -> ne23
 Node ne10:
 	Track = track6
 	Type = BufferStop -> bus7
