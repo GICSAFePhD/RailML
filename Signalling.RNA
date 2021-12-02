@@ -1,144 +1,108 @@
 Sig01:
 	Net: ne1
+	Switch: Sw01
 	Type: Straight
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
+	Direction: Left 
+	Position: [-1139.5, 450.0]
 Sig02:
-	Net: ne1
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
+	Net: ne5
+	Switch: Sw02
+	Type: Straight
+	Direction: Right 
+	Position: [822.375, 450.0]
 Sig03:
-	Net: ne3
-	Type: Straight
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
+	Net: ne27
+	Switch: Sw13
+	Type: Maneuver
+	Direction: Left 
+	Position: [138.0, 1188.0]
 Sig04:
-	Net: ne2
-	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
+	Net: ne1
+	Switch: Sw01
+	Type: Straight
+	Direction: Left 
+	Position: [-1139.5, 450.0]
 Sig05:
-	Net: ne3
+	Net: ne5
+	Switch: Sw02
 	Type: Straight
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
+	Direction: Right 
+	Position: [822.375, 450.0]
 Sig06:
-	Net: ne3
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig07:
-	Net: ne5
-	Type: Straight
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig08:
 	Net: ne4
+	Switch: Sw02
 	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
+	Direction: Right 
+	Position: [825.0, 750.0]
+Sig07:
+	Net: ne1
+	Switch: Sw01
+	Type: Straight
+	Direction: Left 
+	Position: [-1139.5, 450.0]
+Sig08:
+	Net: ne27
+	Switch: Sw13
+	Type: Straight
+	Direction: Left 
+	Position: [138.0, 1188.0]
 Sig09:
-	Net: ne2
-	Type: Straight
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig10:
-	Net: ne2
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig11:
-	Net: ne7
-	Type: Straight
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig12:
 	Net: ne6
+	Switch: Sw03
 	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig13:
+	Direction: Right 
+	Position: [141.9, 750.0]
+Sig10:
 	Net: ne5
+	Switch: Sw05
 	Type: Straight
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig14:
-	Net: ne5
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig15:
+	Direction: Left 
+	Position: [707.625, 450.0]
+Sig11:
 	Net: ne11
+	Switch: Sw05
 	Type: Straight
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig16:
+	Direction: Right 
+	Position: [1776.975, 450.0]
+Sig12:
 	Net: ne10
+	Switch: Sw05
 	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig17:
-	Net: ne7
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig18:
-	Net: ne7
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.33
-Sig19:
+	Direction: Right 
+	Position: [1635.0, 750.0]
+Sig13:
+	Net: ne1
+	Switch: Sw01
+	Type: Straight
+	Direction: Left 
+	Position: [-1139.5, 450.0]
+Sig14:
+	Net: ne27
+	Switch: Sw11
+	Type: Straight
+	Direction: Right 
+	Position: [714.0, 1440.0]
+Sig15:
 	Net: ne23
+	Switch: Sw11
 	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig20:
-	Net: ne27
-	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.33
-Sig21:
+	Direction: Right 
+	Position: [1064.25, 1080.0]
+Sig16:
 	Net: ne25
-	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.66
-Sig22:
-	Net: ne25
-	Type: Maneuver
-	Direction: Reverse 
-	Position: Right
-	Coordinate: 0.66
-Sig23:
+	Switch: Sw13
+	Type: Straight
+	Direction: Right 
+	Position: [2040.0, 1530.0]
+Sig17:
 	Net: ne27
-	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.66
-Sig24:
+	Switch: Sw13
+	Type: Straight
+	Direction: Left 
+	Position: [138.0, 1188.0]
+Sig18:
 	Net: ne28
+	Switch: Sw13
 	Type: Maneuver
-	Direction: Normal 
-	Position: Left
-	Coordinate: 0.66
+	Direction: Left 
+	Position: [636.0, 1770.0]
