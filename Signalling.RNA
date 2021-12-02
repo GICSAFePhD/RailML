@@ -1,108 +1,108 @@
-Sig01:
+sig01:
 	Net: ne1
 	Switch: Sw01
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [-1139.5, 450.0]
-Sig02:
+sig02:
 	Net: ne5
 	Switch: Sw02
 	Type: Straight
-	Direction: Right 
+	Direction: right 
 	Position: [822.375, 450.0]
-Sig03:
+sig03:
 	Net: ne27
 	Switch: Sw13
 	Type: Maneuver
-	Direction: Left 
+	Direction: left 
 	Position: [138.0, 1188.0]
-Sig04:
+sig04:
 	Net: ne1
 	Switch: Sw01
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [-1139.5, 450.0]
-Sig05:
+sig05:
 	Net: ne5
 	Switch: Sw02
 	Type: Straight
-	Direction: Right 
+	Direction: right 
 	Position: [822.375, 450.0]
-Sig06:
+sig06:
 	Net: ne4
 	Switch: Sw02
 	Type: Maneuver
-	Direction: Right 
+	Direction: right 
 	Position: [825.0, 750.0]
-Sig07:
+sig07:
 	Net: ne1
 	Switch: Sw01
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [-1139.5, 450.0]
-Sig08:
+sig08:
 	Net: ne27
 	Switch: Sw13
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [138.0, 1188.0]
-Sig09:
+sig09:
 	Net: ne6
 	Switch: Sw03
 	Type: Maneuver
-	Direction: Right 
+	Direction: right 
 	Position: [141.9, 750.0]
-Sig10:
+sig10:
 	Net: ne5
 	Switch: Sw05
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [707.625, 450.0]
-Sig11:
+sig11:
 	Net: ne11
 	Switch: Sw05
 	Type: Straight
-	Direction: Right 
+	Direction: right 
 	Position: [1776.975, 450.0]
-Sig12:
+sig12:
 	Net: ne10
 	Switch: Sw05
 	Type: Maneuver
-	Direction: Right 
+	Direction: right 
 	Position: [1635.0, 750.0]
-Sig13:
+sig13:
 	Net: ne1
 	Switch: Sw01
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [-1139.5, 450.0]
-Sig14:
+sig14:
 	Net: ne27
 	Switch: Sw11
 	Type: Straight
-	Direction: Right 
+	Direction: right 
 	Position: [714.0, 1440.0]
-Sig15:
+sig15:
 	Net: ne23
 	Switch: Sw11
 	Type: Maneuver
-	Direction: Right 
+	Direction: right 
 	Position: [1064.25, 1080.0]
-Sig16:
+sig16:
 	Net: ne25
 	Switch: Sw13
 	Type: Straight
-	Direction: Right 
+	Direction: right 
 	Position: [2040.0, 1530.0]
-Sig17:
+sig17:
 	Net: ne27
 	Switch: Sw13
 	Type: Straight
-	Direction: Left 
+	Direction: left 
 	Position: [138.0, 1188.0]
-Sig18:
+sig18:
 	Net: ne28
 	Switch: Sw13
 	Type: Maneuver
-	Direction: Left 
+	Direction: left 
 	Position: [636.0, 1770.0]

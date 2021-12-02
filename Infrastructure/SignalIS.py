@@ -169,9 +169,13 @@ class SignalIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 			self.SignalConstruction = []
 		self.SignalConstruction.append(SignalConstruction.SignalConstruction())
 
+	def __str__(self):
+		return f'Id:{self.Id}|Net:{self.SpotLocation[0].NetElementRef}'
+
+
 	def __init__(self):
 		super().__init__()
-		self.___isSwitchable : Long = 0
+		self.___isSwitchable : Long = None
 		"""set TRUE if the signal is able to show several signal aspects, set FALSE if the signal is a static panel that always shows the same signal aspect"""
 		self.___belongsToParent : tRef = None
 		"""reference to the (one and only) parent signal this signal belongs to"""

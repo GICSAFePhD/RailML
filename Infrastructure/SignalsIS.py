@@ -21,4 +21,3 @@ class SignalsIS(object):
 		self.___signalIS : SignalIS = None
 		# @AssociationType Infrastructure.SignalIS*
 		# @AssociationMultiplicity 1..*
-

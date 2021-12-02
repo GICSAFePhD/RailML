@@ -235,8 +235,7 @@ class FunctionalInfrastructure(object):
 		self.ServiceSections.append(ServiceSections.ServiceSections())
 	def create_SignalsIS(self):
 		if self.SignalsIS == None:
-			self.SignalsIS = []
-		self.SignalsIS.append(SignalsIS.SignalsIS())
+			self.SignalsIS = SignalsIS.SignalsIS()
 	def create_Speeds(self):
 		if self.Speeds == None:
 			self.Speeds = []
