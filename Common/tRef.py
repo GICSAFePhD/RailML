@@ -6,4 +6,5 @@ from typing import List
 class tRef(tUUID.tUUID, tGenericRef.tGenericRef):     
 	"""reference an object using its UUID or GenericID (xs:ID)"""
 	def __init__(self):
-		pass
+		super().__init__()
+		#pass

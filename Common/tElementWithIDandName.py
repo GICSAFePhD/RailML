@@ -12,6 +12,10 @@ class tElementWithIDandName(tElementWithID.tElementWithID):
 	@Name.setter
 	def Name(self, aName : Name):
 		self.___name = aName
+	def create_Name(self):
+		if self.Name == None:
+			self.Name = []
+		self.Name.append(Name.Name())
 
 	def __init__(self):
 		super().__init__()

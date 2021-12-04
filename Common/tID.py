@@ -3,7 +3,7 @@
 from RailML.Common import tGenericID, tUUID
 from typing import List
 
-#class tID(tGenericID, tUUID): #TODO CON ESTA HERENCIA SE ROMPE!
-class tID():
+class tID(tGenericID.tGenericID, tUUID.tUUID):
 	"""use UUID if your system supports this functionality, otherwise use GenericID (xs:ID)"""
-	pass
+	def __init__(self):
+		super().__init__()
