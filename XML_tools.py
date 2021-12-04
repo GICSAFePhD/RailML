@@ -115,7 +115,6 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
     # xml_node: the old-tree
     # child[i]: the new-tree
 
-    
     if current_object == None:
         print("-"*50+f'Object:{current_object}')
     
