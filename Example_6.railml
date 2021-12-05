@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_6.railml</dc:title>
-        <dc:date>2021-12-02T21:43:06Z</dc:date>
+        <dc:date>2021-12-05T22:50:47Z</dc:date>
         <dc:creator>f</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -332,6 +332,18 @@
             </networks>
         </topology>
         <functionalInfrastructure>
+            <borders>
+                <border id="oe51" type="station" isOpenEnd="true">
+                    <name name="Buf09" language="en"/>
+                    <spotLocation id="oe51_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.0000"/>
+                    <designator register="_Example" entry="BORDER Buf09"/>
+                </border>
+                <border id="oe52" type="station" isOpenEnd="true">
+                    <name name="Buf12" language="en"/>
+                    <spotLocation id="oe52_sloc01" netElementRef="ne11" applicationDirection="both" intrinsicCoord="1.0000"/>
+                    <designator register="_Example" entry="BORDER Buf12"/>
+                </border>
+            </borders>
             <bufferStops>
                 <bufferStop id="bus7" type="fixedBufferStop">
                     <name name="Buf05" language="en"/>
@@ -348,20 +360,10 @@
                     <spotLocation id="bus15_sloc01" netElementRef="ne4" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_Example" entry="BUFFERSTOP Buf11"/>
                 </bufferStop>
-                <bufferStop id="bus18" type="fixedBufferStop">
-                    <name name="Buf12" language="en"/>
-                    <spotLocation id="bus18_sloc01" netElementRef="ne11" applicationDirection="normal" intrinsicCoord="1.0000"/>
-                    <designator register="_Example" entry="BUFFERSTOP Buf12"/>
-                </bufferStop>
                 <bufferStop id="bus19" type="fixedBufferStop">
                     <name name="Buf13" language="en"/>
                     <spotLocation id="bus19_sloc01" netElementRef="ne23" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_Example" entry="BUFFERSTOP Buf13"/>
-                </bufferStop>
-                <bufferStop id="bus13" type="fixedBufferStop">
-                    <name name="Buf09" language="en"/>
-                    <spotLocation id="bus13_sloc01" netElementRef="ne1" applicationDirection="reverse" intrinsicCoord="0.0000"/>
-                    <designator register="_Example" entry="BUFFERSTOP Buf09"/>
                 </bufferStop>
                 <bufferStop id="bus48" type="fixedBufferStop">
                     <name name="Buf26" language="en"/>
@@ -426,7 +428,7 @@
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track1"/>
                     <trackBegin ref="swi4"/>
-                    <trackEnd ref="bus13"/>
+                    <trackEnd ref="oe51"/>
                     <length value="900" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
@@ -514,7 +516,7 @@
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track9"/>
                     <trackBegin ref="swi17"/>
-                    <trackEnd ref="bus18"/>
+                    <trackEnd ref="oe52"/>
                     <length value="750" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
@@ -606,25 +608,25 @@
                     <name name="Buf11" language="en"/>
                     <coordinate x="1350.000" y="-750.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus18" id="vis01_sep04">
-                    <name name="Buf12" language="en"/>
-                    <coordinate x="1950.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="bus19" id="vis01_sep05">
+                <spotElementProjection refersToElement="bus19" id="vis01_sep04">
                     <name name="Buf13" language="en"/>
                     <coordinate x="1950.000" y="-1080.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus13" id="vis01_sep06">
-                    <name name="Buf09" language="en"/>
-                    <coordinate x="-1500.000" y="-450.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="bus48" id="vis01_sep07">
+                <spotElementProjection refersToElement="bus48" id="vis01_sep05">
                     <name name="Buf26" language="en"/>
                     <coordinate x="2820.000" y="-1740.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus49" id="vis01_sep08">
+                <spotElementProjection refersToElement="bus49" id="vis01_sep06">
                     <name name="Buf27" language="en"/>
                     <coordinate x="420.000" y="-1770.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="oe51" id="vis01_sep07">
+                    <name name="Buf09" language="en"/>
+                    <coordinate x="-1500.000" y="-450.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="oe52" id="vis01_sep08">
+                    <name name="Buf12" language="en"/>
+                    <coordinate x="1950.000" y="-450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="swi4" id="vis01_sep09">
                     <name name="Sw01" language="en"/>
