@@ -3,7 +3,9 @@ Node ne1:
 	Track = track1
 	TrainDetectionElements -> tde16
 		Type -> insulatedRailJoint
-	Type = BufferStop -> bus13
+	Type = Border -> oe51
+		Type -> station
+		IsOpenEnd -> true
 	Neighbours = 2 -> ['ne3', 'ne2']
 	Switches -> Sw01
 		ContinueCourse -> right -> ne3
@@ -52,7 +54,9 @@ Node ne11:
 	Track = track9
 	TrainDetectionElements -> tde21
 		Type -> insulatedRailJoint
-	Type = BufferStop -> bus18
+	Type = Border -> oe52
+		Type -> station
+		IsOpenEnd -> true
 	Neighbours = 2 -> ['ne5', 'ne10']
 Node ne23:
 	Track = track10
