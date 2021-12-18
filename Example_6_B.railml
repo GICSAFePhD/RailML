@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_6.railml</dc:title>
-		<dc:date>2021-12-05T22:50:47Z</dc:date>
+		<dc:date>2021-12-18T21:43:33Z</dc:date>
 		<dc:creator>f</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -18,13 +18,13 @@
 		<positioning>
 			<geometricPositioningSystems>
 				<geometricPositioningSystem id="gps01">
-					<isValid from="2021-11-21" to="2022-11-21"/>
+					<isValid from="2021-12-18" to="2022-12-18"/>
 					<name name="Example_6.railml" language="en"/>
 				</geometricPositioningSystem>
 			</geometricPositioningSystems>
 			<linearPositioningSystems>
 				<linearPositioningSystem linearReferencingMethod="absolute" startMeasure="0" endMeasure="0" units="Km" id="loc-1">
-					<isValid from="2021-11-21" to="2022-11-21"/>
+					<isValid from="2021-12-18" to="2022-12-18"/>
 					<name name="Loc-1" language="en"/>
 				</linearPositioningSystem>
 			</linearPositioningSystems>
@@ -402,13 +402,13 @@
 					<name name="S04" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig05">
-					<signalConstruction positionAtTrack="left" type="light"/>
+					<signalConstruction positionAtTrack="Right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S05"/>
-					<spotLocation netElementRef="ne25" intrinsicCoord="0.9321" applicationDirection="normal" id="sig05_sloc01"/>
+					<spotLocation netElementRef="ne25" intrinsicCoord="0.9321" applicationDirection="reverse" id="sig05_sloc01"/>
 					<name name="S05" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig06">
-					<signalConstruction positionAtTrack="right" type="light"/>
+					<signalConstruction positionAtTrack="Right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S06"/>
 					<spotLocation netElementRef="ne28" intrinsicCoord="0.4775" applicationDirection="reverse" id="sig06_sloc01"/>
 					<name name="S06" language="en"/>
@@ -454,138 +454,138 @@
 					<leftBranch branchingSpeed="60" joiningSpeed="60" netRelationRef="nr_ne25ne27_swi50" radius="0"/>
 					<rightBranch branchingSpeed="60" joiningSpeed="60" netRelationRef="nr_ne25ne28_swi50" radius="500"/>
 					<designator register="_Example" entry="SWITCH Sw13"/>
-					<spotLocation netElementRef="ne25" intrinsicCoord="1.0000" applicationDirection="reverse" id="swi50_sloc01"/>
+					<spotLocation netElementRef="ne25" intrinsicCoord="1.0000" applicationDirection="normal" id="swi50_sloc01"/>
 					<name name="Sw13" language="en"/>
 				</switchIS>
 			</switchesIS>
 			<tracks>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk1">
-					<trackBegin ref="swi4"/>
-					<trackEnd ref="oe51"/>
+					<trackBegin ref="oe51"/>
+					<trackEnd ref="swi4"/>
 					<length value="900" type="physical"/>
 					<designator register="_Example" entry="TRACK track1"/>
 					<linearLocation applicationDirection="both" id="trk1_lloc01">
-						<associatedNetElement netElementRef="ne1" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne1" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track1" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk2">
-					<trackBegin ref="swi4"/>
-					<trackEnd ref="swi6"/>
-					<length value="900" type="physical"/>
+					<trackBegin ref="oe52"/>
+					<trackEnd ref="swi17"/>
+					<length value="750" type="physical"/>
 					<designator register="_Example" entry="TRACK track2"/>
 					<linearLocation applicationDirection="both" id="trk2_lloc01">
-						<associatedNetElement netElementRef="ne3" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne11" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track2" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk3">
-					<trackBegin ref="swi4"/>
-					<trackEnd ref="swi8"/>
-					<length value="424.264" type="physical"/>
+					<trackBegin ref="bus7"/>
+					<trackEnd ref="swi17"/>
+					<length value="874.264" type="physical"/>
 					<designator register="_Example" entry="TRACK track3"/>
 					<linearLocation applicationDirection="both" id="trk3_lloc01">
-						<associatedNetElement netElementRef="ne2" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne10" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track3" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk4">
-					<trackBegin ref="swi6"/>
-					<trackEnd ref="swi17"/>
-					<length value="900" type="physical"/>
+					<trackBegin ref="bus14"/>
+					<trackEnd ref="swi8"/>
+					<length value="780" type="physical"/>
 					<designator register="_Example" entry="TRACK track4"/>
 					<linearLocation applicationDirection="both" id="trk4_lloc01">
-						<associatedNetElement netElementRef="ne5" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne6" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track4" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk5">
-					<trackBegin ref="swi6"/>
-					<trackEnd ref="bus15"/>
+					<trackBegin ref="bus15"/>
+					<trackEnd ref="swi6"/>
 					<length value="1174.26" type="physical"/>
 					<designator register="_Example" entry="TRACK track5"/>
 					<linearLocation applicationDirection="both" id="trk5_lloc01">
-						<associatedNetElement netElementRef="ne4" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne4" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track5" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk6">
-					<trackBegin ref="bus7"/>
-					<trackEnd ref="swi17"/>
-					<length value="874.264" type="physical"/>
+					<trackBegin ref="bus19"/>
+					<trackEnd ref="swi44"/>
+					<length value="1920" type="physical"/>
 					<designator register="_Example" entry="TRACK track6"/>
 					<linearLocation applicationDirection="both" id="trk6_lloc01">
-						<associatedNetElement netElementRef="ne10" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne23" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track6" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk7">
-					<trackBegin ref="swi8"/>
-					<trackEnd ref="swi44"/>
-					<length value="466.69" type="physical"/>
+					<trackBegin ref="bus48"/>
+					<trackEnd ref="swi50"/>
+					<length value="1474.26" type="physical"/>
 					<designator register="_Example" entry="TRACK track7"/>
 					<linearLocation applicationDirection="both" id="trk7_lloc01">
-						<associatedNetElement netElementRef="ne7" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne25" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track7" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk8">
-					<trackBegin ref="swi8"/>
-					<trackEnd ref="bus14"/>
-					<length value="780" type="physical"/>
+					<trackBegin ref="bus49"/>
+					<trackEnd ref="swi50"/>
+					<length value="1186.69" type="physical"/>
 					<designator register="_Example" entry="TRACK track8"/>
 					<linearLocation applicationDirection="both" id="trk8_lloc01">
-						<associatedNetElement netElementRef="ne6" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne28" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track8" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk9">
-					<trackBegin ref="swi17"/>
-					<trackEnd ref="oe52"/>
-					<length value="750" type="physical"/>
+					<trackBegin ref="swi4"/>
+					<trackEnd ref="swi6"/>
+					<length value="900" type="physical"/>
 					<designator register="_Example" entry="TRACK track9"/>
 					<linearLocation applicationDirection="both" id="trk9_lloc01">
-						<associatedNetElement netElementRef="ne11" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne3" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track9" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk10">
-					<trackBegin ref="bus19"/>
-					<trackEnd ref="swi44"/>
-					<length value="1920" type="physical"/>
+					<trackBegin ref="swi4"/>
+					<trackEnd ref="swi8"/>
+					<length value="424.264" type="physical"/>
 					<designator register="_Example" entry="TRACK track10"/>
 					<linearLocation applicationDirection="both" id="trk10_lloc01">
-						<associatedNetElement netElementRef="ne23" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne2" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track10" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk11">
-					<trackBegin ref="swi44"/>
-					<trackEnd ref="swi50"/>
-					<length value="1589.12" type="physical"/>
+					<trackBegin ref="swi6"/>
+					<trackEnd ref="swi17"/>
+					<length value="900" type="physical"/>
 					<designator register="_Example" entry="TRACK track11"/>
 					<linearLocation applicationDirection="both" id="trk11_lloc01">
-						<associatedNetElement netElementRef="ne27" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne5" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track11" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk12">
-					<trackBegin ref="bus48"/>
-					<trackEnd ref="swi50"/>
-					<length value="1474.26" type="physical"/>
+					<trackBegin ref="swi8"/>
+					<trackEnd ref="swi44"/>
+					<length value="466.69" type="physical"/>
 					<designator register="_Example" entry="TRACK track12"/>
 					<linearLocation applicationDirection="both" id="trk12_lloc01">
-						<associatedNetElement netElementRef="ne25" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne7" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track12" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk13">
-					<trackBegin ref="bus49"/>
+					<trackBegin ref="swi44"/>
 					<trackEnd ref="swi50"/>
-					<length value="1186.69" type="physical"/>
+					<length value="1589.12" type="physical"/>
 					<designator register="_Example" entry="TRACK track13"/>
 					<linearLocation applicationDirection="both" id="trk13_lloc01">
-						<associatedNetElement netElementRef="ne28" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne27" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track13" language="en"/>
 				</track>

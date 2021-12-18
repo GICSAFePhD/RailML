@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_6.railml</dc:title>
-        <dc:date>2021-12-05T22:50:47Z</dc:date>
+        <dc:date>2021-12-18T21:43:33Z</dc:date>
         <dc:creator>f</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_6.railml" language="en"/>
-                    <isValid from="2021-11-21" to="2022-11-21"/>
+                    <isValid from="2021-12-18" to="2022-12-18"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-11-21" to="2022-11-21"/>
+                    <isValid from="2021-12-18" to="2022-12-18"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -414,7 +414,7 @@
                 </switchIS>
                 <switchIS id="swi50" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw13" language="en"/>
-                    <spotLocation id="swi50_sloc01" netElementRef="ne25" applicationDirection="reverse" intrinsicCoord="1.0000"/>
+                    <spotLocation id="swi50_sloc01" netElementRef="ne25" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_Example" entry="SWITCH Sw13"/>
                     <leftBranch netRelationRef="nr_ne25ne27_swi50" branchingSpeed="60" joiningSpeed="60" radius="0"/>
                     <rightBranch netRelationRef="nr_ne25ne28_swi50" branchingSpeed="60" joiningSpeed="60" radius="500"/>
@@ -424,169 +424,169 @@
                 <track id="trk1" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track1" language="en"/>
                     <linearLocation id="trk1_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="false" netElementRef="ne1"/>
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne1"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track1"/>
-                    <trackBegin ref="swi4"/>
-                    <trackEnd ref="oe51"/>
+                    <trackBegin ref="oe51"/>
+                    <trackEnd ref="swi4"/>
                     <length value="900" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track2" language="en"/>
                     <linearLocation id="trk2_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne3"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne11"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track2"/>
-                    <trackBegin ref="swi4"/>
-                    <trackEnd ref="swi6"/>
-                    <length value="900" type="physical"/>
+                    <trackBegin ref="oe52"/>
+                    <trackEnd ref="swi17"/>
+                    <length value="750" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track3" language="en"/>
                     <linearLocation id="trk3_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne2"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne10"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track3"/>
-                    <trackBegin ref="swi4"/>
-                    <trackEnd ref="swi8"/>
-                    <length value="424.264" type="physical"/>
+                    <trackBegin ref="bus7"/>
+                    <trackEnd ref="swi17"/>
+                    <length value="874.264" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk4" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track4" language="en"/>
                     <linearLocation id="trk4_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne5"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne6"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track4"/>
-                    <trackBegin ref="swi6"/>
-                    <trackEnd ref="swi17"/>
-                    <length value="900" type="physical"/>
+                    <trackBegin ref="bus14"/>
+                    <trackEnd ref="swi8"/>
+                    <length value="780" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track5" language="en"/>
                     <linearLocation id="trk5_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne4"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne4"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track5"/>
-                    <trackBegin ref="swi6"/>
-                    <trackEnd ref="bus15"/>
+                    <trackBegin ref="bus15"/>
+                    <trackEnd ref="swi6"/>
                     <length value="1174.26" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk6" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track6" language="en"/>
                     <linearLocation id="trk6_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="false" netElementRef="ne10"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track6"/>
-                    <trackBegin ref="bus7"/>
-                    <trackEnd ref="swi17"/>
-                    <length value="874.264" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk7" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track7" language="en"/>
-                    <linearLocation id="trk7_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne7"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track7"/>
-                    <trackBegin ref="swi8"/>
-                    <trackEnd ref="swi44"/>
-                    <length value="466.69" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk8" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track8" language="en"/>
-                    <linearLocation id="trk8_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne6"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track8"/>
-                    <trackBegin ref="swi8"/>
-                    <trackEnd ref="bus14"/>
-                    <length value="780" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk9" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track9" language="en"/>
-                    <linearLocation id="trk9_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne11"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track9"/>
-                    <trackBegin ref="swi17"/>
-                    <trackEnd ref="oe52"/>
-                    <length value="750" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk10" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track10" language="en"/>
-                    <linearLocation id="trk10_lloc01" applicationDirection="both">
                         <associatedNetElement keepsOrientation="false" netElementRef="ne23"/>
                     </linearLocation>
-                    <designator register="_Example" entry="TRACK track10"/>
+                    <designator register="_Example" entry="TRACK track6"/>
                     <trackBegin ref="bus19"/>
                     <trackEnd ref="swi44"/>
                     <length value="1920" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
-                <track id="trk11" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track11" language="en"/>
-                    <linearLocation id="trk11_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="false" netElementRef="ne27"/>
-                    </linearLocation>
-                    <designator register="_Example" entry="TRACK track11"/>
-                    <trackBegin ref="swi44"/>
-                    <trackEnd ref="swi50"/>
-                    <length value="1589.12" type="physical"/>
-                    <!--No mileage values found, the length was calculated from screen coordinates-->
-                </track>
-                <track id="trk12" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track12" language="en"/>
-                    <linearLocation id="trk12_lloc01" applicationDirection="both">
+                <track id="trk7" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track7" language="en"/>
+                    <linearLocation id="trk7_lloc01" applicationDirection="both">
                         <associatedNetElement keepsOrientation="true" netElementRef="ne25"/>
                     </linearLocation>
-                    <designator register="_Example" entry="TRACK track12"/>
+                    <designator register="_Example" entry="TRACK track7"/>
                     <trackBegin ref="bus48"/>
                     <trackEnd ref="swi50"/>
                     <length value="1474.26" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
-                <track id="trk13" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
-                    <name name="track13" language="en"/>
-                    <linearLocation id="trk13_lloc01" applicationDirection="both">
+                <track id="trk8" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track8" language="en"/>
+                    <linearLocation id="trk8_lloc01" applicationDirection="both">
                         <associatedNetElement keepsOrientation="true" netElementRef="ne28"/>
                     </linearLocation>
-                    <designator register="_Example" entry="TRACK track13"/>
+                    <designator register="_Example" entry="TRACK track8"/>
                     <trackBegin ref="bus49"/>
                     <trackEnd ref="swi50"/>
                     <length value="1186.69" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
+                <track id="trk9" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track9" language="en"/>
+                    <linearLocation id="trk9_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne3"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="TRACK track9"/>
+                    <trackBegin ref="swi4"/>
+                    <trackEnd ref="swi6"/>
+                    <length value="900" type="physical"/>
+                    <!--No mileage values found, the length was calculated from screen coordinates-->
+                </track>
+                <track id="trk10" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track10" language="en"/>
+                    <linearLocation id="trk10_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne2"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="TRACK track10"/>
+                    <trackBegin ref="swi4"/>
+                    <trackEnd ref="swi8"/>
+                    <length value="424.264" type="physical"/>
+                    <!--No mileage values found, the length was calculated from screen coordinates-->
+                </track>
+                <track id="trk11" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track11" language="en"/>
+                    <linearLocation id="trk11_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne5"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="TRACK track11"/>
+                    <trackBegin ref="swi6"/>
+                    <trackEnd ref="swi17"/>
+                    <length value="900" type="physical"/>
+                    <!--No mileage values found, the length was calculated from screen coordinates-->
+                </track>
+                <track id="trk12" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track12" language="en"/>
+                    <linearLocation id="trk12_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne7"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="TRACK track12"/>
+                    <trackBegin ref="swi8"/>
+                    <trackEnd ref="swi44"/>
+                    <length value="466.69" type="physical"/>
+                    <!--No mileage values found, the length was calculated from screen coordinates-->
+                </track>
+                <track id="trk13" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
+                    <name name="track13" language="en"/>
+                    <linearLocation id="trk13_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne27"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="TRACK track13"/>
+                    <trackBegin ref="swi44"/>
+                    <trackEnd ref="swi50"/>
+                    <length value="1589.12" type="physical"/>
+                    <!--No mileage values found, the length was calculated from screen coordinates-->
+                </track>
             </tracks>
             <trainDetectionElements>
-                <trainDetectionElement id="tde21" type="insulatedRailJoint">
+                <trainDetectionElement id="tde21" type="">
                     <name name="J02" language="en"/>
                     <spotLocation id="tde21_sloc01" netElementRef="ne11" applicationDirection="both" intrinsicCoord="0.6050"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J02"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde22" type="insulatedRailJoint">
+                <trainDetectionElement id="tde22" type="">
                     <name name="J03" language="en"/>
                     <spotLocation id="tde22_sloc01" netElementRef="ne6" applicationDirection="both" intrinsicCoord="0.5550"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J03"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde23" type="insulatedRailJoint">
+                <trainDetectionElement id="tde23" type="">
                     <name name="J04" language="en"/>
                     <spotLocation id="tde23_sloc01" netElementRef="ne23" applicationDirection="both" intrinsicCoord="0.5002"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J04"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde25" type="insulatedRailJoint">
+                <trainDetectionElement id="tde25" type="">
                     <name name="J06" language="en"/>
                     <spotLocation id="tde25_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.5177"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J06"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde16" type="insulatedRailJoint">
+                <trainDetectionElement id="tde16" type="">
                     <name name="J01" language="en"/>
                     <spotLocation id="tde16_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.4882"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J01"/>
