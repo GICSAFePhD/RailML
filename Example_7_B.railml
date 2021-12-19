@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_7.railml</dc:title>
-		<dc:date>2021-12-18T23:25:19Z</dc:date>
+		<dc:date>2021-12-19T16:51:06Z</dc:date>
 		<dc:creator>Martin</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -18,13 +18,13 @@
 		<positioning>
 			<geometricPositioningSystems>
 				<geometricPositioningSystem id="gps01">
-					<isValid from="2021-12-18" to="2022-12-18"/>
+					<isValid from="2021-12-19" to="2022-12-19"/>
 					<name name="Example_7.railml" language="en"/>
 				</geometricPositioningSystem>
 			</geometricPositioningSystems>
 			<linearPositioningSystems>
 				<linearPositioningSystem linearReferencingMethod="absolute" startMeasure="0" endMeasure="0" units="Km" id="loc-1">
-					<isValid from="2021-12-18" to="2022-12-18"/>
+					<isValid from="2021-12-19" to="2022-12-19"/>
 					<name name="Loc-1" language="en"/>
 				</linearPositioningSystem>
 			</linearPositioningSystems>
@@ -66,9 +66,17 @@
 					<name name="Buf02" language="en"/>
 				</bufferStop>
 			</bufferStops>
+			<levelCrossingsIS>
+				<levelCrossingIS activation="none" id="lcr9">
+					<protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
+					<designator register="_Example" entry="LEVEL CROSSING Lc04"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.4375" applicationDirection="both" id="lcr9_sloc01"/>
+					<name name="Lc04" language="en"/>
+				</levelCrossingIS>
+			</levelCrossingsIS>
 			<signalsIS>
 				<signalIS isSwitchable="false" id="sig01">
-					<signalConstruction positionAtTrack="Right" type="light"/>
+					<signalConstruction positionAtTrack="right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S01"/>
 					<spotLocation netElementRef="ne1" intrinsicCoord="0.0416" applicationDirection="reverse" id="sig01_sloc01"/>
 					<name name="S01" language="en"/>
@@ -78,6 +86,18 @@
 					<designator register="_Example" entry="SIGNAL S02"/>
 					<spotLocation netElementRef="ne1" intrinsicCoord="0.9583" applicationDirection="normal" id="sig02_sloc01"/>
 					<name name="S02" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig03">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S03"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.3541" applicationDirection="normal" id="sig03_sloc01"/>
+					<name name="S03" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig04">
+					<signalConstruction positionAtTrack="right" type="light"/>
+					<designator register="_Example" entry="SIGNAL S04"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.4791" applicationDirection="reverse" id="sig04_sloc01"/>
+					<name name="S04" language="en"/>
 				</signalIS>
 			</signalsIS>
 			<tracks>
@@ -103,13 +123,25 @@
 					<coordinate x="1350.000" y="150.000"/>
 					<name name="Buf02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig01" id="vis01_sep3">
+				<spotElementProjection refersToElement="lcr9" id="vis01_sep3">
+					<coordinate x="0.000" y="150.000"/>
+					<name name="Lc04" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig01" id="vis01_sep4">
 					<coordinate x="-950" y="150"/>
 					<name name="S01" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig02" id="vis01_sep4">
+				<spotElementProjection refersToElement="sig02" id="vis01_sep5">
 					<coordinate x="1250" y="150"/>
 					<name name="S02" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig03" id="vis01_sep6">
+					<coordinate x="-200" y="150"/>
+					<name name="S03" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig04" id="vis01_sep7">
+					<coordinate x="100.0" y="150"/>
+					<name name="S04" language="en"/>
 				</spotElementProjection>
 				<linearElementProjection refersToElement="ne1" id="vis01_lep1">
 					<coordinate x="-1050.000" y="150.000"/>
@@ -128,6 +160,12 @@
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig02">
 					<refersTo ref="sig02"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig03">
+					<refersTo ref="sig03"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig04">
+					<refersTo ref="sig04"/>
 				</signalIL>
 			</signalsIL>
 		</assetsForIL>

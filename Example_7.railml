@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2021-12-18T23:25:19Z</dc:date>
+        <dc:date>2021-12-19T16:51:06Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_7.railml" language="en"/>
-                    <isValid from="2021-12-18" to="2022-12-18"/>
+                    <isValid from="2021-12-19" to="2022-12-19"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-12-18" to="2022-12-18"/>
+                    <isValid from="2021-12-19" to="2022-12-19"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -66,6 +66,14 @@
                     <designator register="_Example" entry="BUFFERSTOP Buf02"/>
                 </bufferStop>
             </bufferStops>
+            <levelCrossingsIS>
+                <levelCrossingIS id="lcr9" activation="none">
+                    <name name="Lc04" language="en"/>
+                    <spotLocation id="lcr9_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.4375"/>
+                    <designator register="_Example" entry="LEVEL CROSSING Lc04"/>
+                    <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
+                </levelCrossingIS>
+            </levelCrossingsIS>
             <tracks>
                 <track id="trk1" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track1" language="en"/>
@@ -90,6 +98,10 @@
                 <spotElementProjection refersToElement="bus2" id="vis01_sep2">
                     <name name="Buf02" language="en"/>
                     <coordinate x="1350.000" y="150.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="lcr9" id="vis01_sep3">
+                    <name name="Lc04" language="en"/>
+                    <coordinate x="0.000" y="150.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
