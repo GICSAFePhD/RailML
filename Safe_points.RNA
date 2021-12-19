@@ -1,3 +1,5 @@
 ne1:
-  Next: [-100, 150]
-  Prev: [100, 150]
+  Next: -100
+  Next: 150
+  Prev: 100
+  Prev: 150

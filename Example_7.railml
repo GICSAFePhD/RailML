@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2021-12-19T16:51:06Z</dc:date>
+        <dc:date>2021-12-19T20:55:20Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -74,6 +74,16 @@
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
             </levelCrossingsIS>
+            <platforms>
+                <platform id="plf10" height="0">
+                    <name name="Plat01" language="en"/>
+                    <linearLocation id="plf10_lloc01" applicationDirection="both">
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne1"/>
+                    </linearLocation>
+                    <designator register="_Example" entry="PLATFORM Plat01"/>
+                    <length type="physical" value="200" validForDirection="both"/>
+                </platform>
+            </platforms>
             <tracks>
                 <track id="trk1" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track1" language="en"/>
@@ -102,6 +112,10 @@
                 <spotElementProjection refersToElement="lcr9" id="vis01_sep3">
                     <name name="Lc04" language="en"/>
                     <coordinate x="0.000" y="150.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="plf10" id="vis01_sep4">
+                    <name name="Plat01" language="en"/>
+                    <coordinate x="669.091" y="150.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
