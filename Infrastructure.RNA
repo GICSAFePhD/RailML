@@ -1,8 +1,15 @@
-Nodes: 1 | Switches: 0 | Signals: 0 | Detectors: 0 | Ends: 2 | Barriers: 1
+Nodes: 2 | Switches: 0 | Signals: 0 | Detectors: 0 | Ends: 4 | Barriers: 2
 Node ne1:
 	Track = track1
 	Type = BufferStop -> ['bus1', 'bus2']
 	Neighbours = 0 -> []
-	Level crossing -> lcr9
+	Level crossing -> lcr23
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [0, 150] | Coordinate: 0.4375
+		Position -> [-329, 150] | Coordinate: 0.3003
+Node ne2:
+	Track = track2
+	Type = BufferStop -> ['bus11', 'bus12']
+	Neighbours = 0 -> []
+	Level crossing -> lcr22
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [-329, -150] | Coordinate: 0.3003
