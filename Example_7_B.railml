@@ -283,19 +283,19 @@
 					<name name="S08" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig09" id="vis01_sep17">
-					<coordinate x="487.0" y="150"/>
+					<coordinate x="487" y="150"/>
 					<name name="S09" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig10" id="vis01_sep18">
-					<coordinate x="887.0" y="150"/>
+					<coordinate x="887" y="150"/>
 					<name name="S10" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig11" id="vis01_sep19">
-					<coordinate x="487.0" y="-150"/>
+					<coordinate x="487" y="-150"/>
 					<name name="S11" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig12" id="vis01_sep20">
-					<coordinate x="887.0" y="-150"/>
+					<coordinate x="887" y="-150"/>
 					<name name="S12" language="en"/>
 				</spotElementProjection>
 				<linearElementProjection refersToElement="ne1" id="vis01_lep1">
