@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2021-12-20T20:25:01Z</dc:date>
+        <dc:date>2021-12-22T00:19:50Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_7.railml" language="en"/>
-                    <isValid from="2021-12-20" to="2022-12-20"/>
+                    <isValid from="2021-12-21" to="2022-12-21"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-12-20" to="2022-12-20"/>
+                    <isValid from="2021-12-21" to="2022-12-21"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -90,7 +90,7 @@
             <levelCrossingsIS>
                 <levelCrossingIS id="lcr22" activation="none">
                     <name name="Lc07" language="en"/>
-                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.3003"/>
+                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.4344"/>
                     <designator register="_Example" entry="LEVEL CROSSING Lc07"/>
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
@@ -165,7 +165,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr22" id="vis01_sep5">
                     <name name="Lc07" language="en"/>
-                    <coordinate x="-329.286" y="-150.000"/>
+                    <coordinate x="-7.468" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr23" id="vis01_sep6">
                     <name name="Lc08" language="en"/>
@@ -177,7 +177,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="plf26" id="vis01_sep8">
                     <name name="Plat03" language="en"/>
-                    <coordinate x="687.273" y="-150.000"/>
+                    <coordinate x="332.728" y="-150.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>

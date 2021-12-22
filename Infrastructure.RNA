@@ -12,4 +12,4 @@ Node ne2:
 	Neighbours = 0 -> []
 	Level crossing -> lcr22
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-329, -150] | Coordinate: 0.3003
+		Position -> [-7, -150] | Coordinate: 0.4344
