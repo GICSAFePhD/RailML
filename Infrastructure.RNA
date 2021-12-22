@@ -1,4 +1,4 @@
-Nodes: 2 | Switches: 0 | Signals: 0 | Detectors: 0 | Ends: 4 | Barriers: 2
+Nodes: 2 | Switches: 0 | Signals: 0 | Detectors: 1 | Ends: 4 | Barriers: 2
 Node ne1:
 	Track = track1
 	Type = BufferStop -> ['bus1', 'bus2']
@@ -8,8 +8,10 @@ Node ne1:
 		Position -> [-329, 150] | Coordinate: 0.3003
 Node ne2:
 	Track = track2
-	Type = BufferStop -> ['bus11', 'bus30']
+	TrainDetectionElements -> tde32
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus11', 'bus31']
 	Neighbours = 0 -> []
 	Level crossing -> lcr22
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-74, -150] | Coordinate: 0.4064
+		Position -> [-74, -150] | Coordinate: 0.3251

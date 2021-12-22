@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2021-12-22T14:29:51Z</dc:date>
+        <dc:date>2021-12-22T18:43:54Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -49,7 +49,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="-1050.000" y="-150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne2_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1350.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1950.000" y="-150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -81,16 +81,16 @@
                     <spotLocation id="bus11_sloc01" netElementRef="ne2" applicationDirection="reverse" intrinsicCoord="0.0000"/>
                     <designator register="_Example" entry="BUFFERSTOP Buf01"/>
                 </bufferStop>
-                <bufferStop id="bus30" type="fixedBufferStop">
-                    <name name="Buf02" language="en"/>
-                    <spotLocation id="bus30_sloc01" netElementRef="ne2" applicationDirection="normal" intrinsicCoord="1.0000"/>
-                    <designator register="_Example" entry="BUFFERSTOP Buf02"/>
+                <bufferStop id="bus31" type="fixedBufferStop">
+                    <name name="Buf03" language="en"/>
+                    <spotLocation id="bus31_sloc01" netElementRef="ne2" applicationDirection="normal" intrinsicCoord="1.0000"/>
+                    <designator register="_Example" entry="BUFFERSTOP Buf03"/>
                 </bufferStop>
             </bufferStops>
             <levelCrossingsIS>
                 <levelCrossingIS id="lcr22" activation="none">
                     <name name="Lc07" language="en"/>
-                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.4064"/>
+                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.3251"/>
                     <designator register="_Example" entry="LEVEL CROSSING Lc07"/>
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
@@ -138,11 +138,18 @@
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track2"/>
                     <trackBegin ref="bus11"/>
-                    <trackEnd ref="bus30"/>
-                    <length value="2400" type="physical"/>
+                    <trackEnd ref="bus31"/>
+                    <length value="3000" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
+            <trainDetectionElements>
+                <trainDetectionElement id="tde32" type="insulatedRailJoint">
+                    <name name="J01" language="en"/>
+                    <spotLocation id="tde32_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.7478"/>
+                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J01"/>
+                </trainDetectionElement>
+            </trainDetectionElements>
         </functionalInfrastructure>
         <infrastructureVisualizations>
             <visualization id="vis01" positioningSystemRef="gps01">
@@ -159,9 +166,9 @@
                     <name name="Buf01" language="en"/>
                     <coordinate x="-1050.000" y="-150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus30" id="vis01_sep4">
-                    <name name="Buf02" language="en"/>
-                    <coordinate x="1350.000" y="-150.000"/>
+                <spotElementProjection refersToElement="bus31" id="vis01_sep4">
+                    <name name="Buf03" language="en"/>
+                    <coordinate x="1950.000" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr22" id="vis01_sep5">
                     <name name="Lc07" language="en"/>
@@ -179,6 +186,10 @@
                     <name name="Plat03" language="en"/>
                     <coordinate x="247.335" y="-150.000"/>
                 </spotElementProjection>
+                <spotElementProjection refersToElement="tde32" id="vis01_sep9">
+                    <name name="J01" language="en"/>
+                    <coordinate x="1193.433" y="-150.000"/>
+                </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
                     <coordinate x="-1050.000" y="150.000"/>
@@ -187,7 +198,7 @@
                 <linearElementProjection refersToElement="ne2" id="vis01_lep2">
                     <name name="netElement_ne2" language="en"/>
                     <coordinate x="-1050.000" y="-150.000"/>
-                    <coordinate x="1350.000" y="-150.000"/>
+                    <coordinate x="1950.000" y="-150.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>

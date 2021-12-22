@@ -9,15 +9,15 @@ sig02:
 sig03:
 	From: ne2 | To: bus11
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-950, -150] | Coordinate: 0.0416
+	Position: [-950, -150] | Coordinate: 0.0333
 sig04:
-	From: ne2 | To: bus30
+	From: ne2 | To: bus31
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [1250, -150] | Coordinate: 0.9583
+	Position: [1850, -150] | Coordinate: 0.9666
 sig05:
 	From: ne2 | To: ne2_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-274, -150] | Coordinate: 0.3233
+	Position: [-274, -150] | Coordinate: 0.2586
 sig06:
 	From: ne1 | To: ne1_right
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -37,4 +37,4 @@ sig09:
 sig10:
 	From: ne2 | To: ne2_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [447, -150] | Coordinate: 0.6237
+	Position: [447, -150] | Coordinate: 0.499
