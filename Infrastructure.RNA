@@ -8,8 +8,8 @@ Node ne1:
 		Position -> [-329, 150] | Coordinate: 0.3003
 Node ne2:
 	Track = track2
-	Type = BufferStop -> ['bus11', 'bus12']
+	Type = BufferStop -> ['bus11', 'bus30']
 	Neighbours = 0 -> []
 	Level crossing -> lcr22
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-7, -150] | Coordinate: 0.4344
+		Position -> [-74, -150] | Coordinate: 0.4064
