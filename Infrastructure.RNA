@@ -1,17 +1,26 @@
-Nodes: 2 | Switches: 0 | Signals: 0 | Detectors: 1 | Ends: 4 | Barriers: 2
+Nodes: 5 | Switches: 2 | Signals: 0 | Detectors: 0 | Ends: 4 | Barriers: 0
 Node ne1:
 	Track = track1
-	Type = BufferStop -> ['bus1', 'bus2']
-	Neighbours = 0 -> []
-	Level crossing -> lcr23
-		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-329, 150] | Coordinate: 0.3003
+	Type = BufferStop -> ['bus1']
+	Neighbours = 2 -> ['ne2', 'ne3']
+	Switches -> Sw01
+		ContinueCourse -> right -> ne2
+		BranchCourse -> left -> ne3
 Node ne2:
 	Track = track2
-	TrainDetectionElements -> tde32
-		Type -> insulatedRailJoint
-	Type = BufferStop -> ['bus11', 'bus31']
-	Neighbours = 0 -> []
-	Level crossing -> lcr22
-		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-74, -150] | Coordinate: 0.3251
+	Neighbours = 4 -> ['ne1', 'ne3', 'ne6', 'ne7']
+Node ne3:
+	Track = track3
+	Type = BufferStop -> ['bus4']
+	Neighbours = 2 -> ['ne1', 'ne2']
+Node ne6:
+	Track = track4
+	Type = BufferStop -> ['bus6']
+	Neighbours = 2 -> ['ne2', 'ne7']
+	Switches -> Sw03
+		ContinueCourse -> left -> ne7
+		BranchCourse -> right -> ne2
+Node ne7:
+	Track = track5
+	Type = BufferStop -> ['bus8']
+	Neighbours = 2 -> ['ne2', 'ne6']
