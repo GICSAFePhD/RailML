@@ -2,25 +2,25 @@ Nodes: 5 | Switches: 2 | Signals: 0 | Detectors: 0 | Ends: 4 | Barriers: 0
 Node ne1:
 	Track = track1
 	Type = BufferStop -> ['bus1']
-	Neighbours = 2 -> ['ne2', 'ne3']
-	Switches -> Sw01
-		ContinueCourse -> right -> ne2
-		BranchCourse -> left -> ne3
-Node ne2:
+	Neighbours = 2 -> ['ne28', 'ne27']
+	Switches -> Sw12
+		ContinueCourse -> right -> ne28
+		BranchCourse -> left -> ne27
+Node ne27:
 	Track = track2
-	Neighbours = 4 -> ['ne1', 'ne3', 'ne6', 'ne7']
-Node ne3:
-	Track = track3
 	Type = BufferStop -> ['bus4']
-	Neighbours = 2 -> ['ne1', 'ne2']
-Node ne6:
+	Neighbours = 2 -> ['ne1', 'ne28']
+Node ne28:
+	Track = track3
+	Neighbours = 4 -> ['ne1', 'ne27', 'ne29', 'ne30']
+Node ne29:
 	Track = track4
-	Type = BufferStop -> ['bus6']
-	Neighbours = 2 -> ['ne2', 'ne7']
-	Switches -> Sw03
-		ContinueCourse -> left -> ne7
-		BranchCourse -> right -> ne2
-Node ne7:
+	Type = BufferStop -> ['bus29']
+	Neighbours = 2 -> ['ne28', 'ne30']
+	Switches -> Sw13
+		ContinueCourse -> left -> ne30
+		BranchCourse -> right -> ne28
+Node ne30:
 	Track = track5
-	Type = BufferStop -> ['bus8']
-	Neighbours = 2 -> ['ne2', 'ne6']
+	Type = BufferStop -> ['bus28']
+	Neighbours = 2 -> ['ne28', 'ne29']
