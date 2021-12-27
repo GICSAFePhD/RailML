@@ -11,7 +11,7 @@ Node ne27:
 	Type = BufferStop -> ['bus4']
 	Neighbours = 2 -> ['ne1', 'ne28']
 Node ne28:
-	Track = track3
+	Track = track5
 	Neighbours = 4 -> ['ne1', 'ne27', 'ne29', 'ne30']
 Node ne29:
 	Track = track4
@@ -21,6 +21,6 @@ Node ne29:
 		ContinueCourse -> left -> ne30
 		BranchCourse -> right -> ne28
 Node ne30:
-	Track = track5
+	Track = track3
 	Type = BufferStop -> ['bus31']
 	Neighbours = 2 -> ['ne28', 'ne29']

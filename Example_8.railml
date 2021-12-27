@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_8.railml</dc:title>
-        <dc:date>2021-12-27T18:08:58Z</dc:date>
+        <dc:date>2021-12-27T21:22:19Z</dc:date>
         <dc:creator>Menendez</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_8.railml" language="en"/>
-                    <isValid from="2021-12-22" to="2022-12-22"/>
+                    <isValid from="2021-12-27" to="2022-12-27"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-12-22" to="2022-12-22"/>
+                    <isValid from="2021-12-27" to="2022-12-27"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -170,6 +170,70 @@
                     <designator register="_Example" entry="BUFFERSTOP Buf20"/>
                 </bufferStop>
             </bufferStops>
+            <signalsIS>
+                <signalIS id="sig01" isSwitchable="false">
+                    <name name="S01" language="en"/>
+                    <spotLocation id="sig01_sloc01" netElementRef="ne1" applicationDirection="reverse" intrinsicCoord="0.1235"/>
+                    <designator register="_Example" entry="SIGNAL S01"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig02" isSwitchable="false">
+                    <name name="S02" language="en"/>
+                    <spotLocation id="sig02_sloc01" netElementRef="ne27" applicationDirection="normal" intrinsicCoord="0.9183"/>
+                    <designator register="_Example" entry="SIGNAL S02"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig03" isSwitchable="false">
+                    <name name="S03" language="en"/>
+                    <spotLocation id="sig03_sloc01" netElementRef="ne29" applicationDirection="normal" intrinsicCoord="0.9020"/>
+                    <designator register="_Example" entry="SIGNAL S03"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig04" isSwitchable="false">
+                    <name name="S04" language="en"/>
+                    <spotLocation id="sig04_sloc01" netElementRef="ne30" applicationDirection="normal" intrinsicCoord="0.9020"/>
+                    <designator register="_Example" entry="SIGNAL S04"/>
+                    <isAnnouncementSignal/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig05" isSwitchable="false">
+                    <name name="S05" language="en"/>
+                    <spotLocation id="sig05_sloc01" netElementRef="ne29" applicationDirection="reverse" intrinsicCoord="0.6961"/>
+                    <designator register="_Example" entry="SIGNAL S05"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig06" isSwitchable="false">
+                    <name name="S06" language="en"/>
+                    <spotLocation id="sig06_sloc01" netElementRef="ne27" applicationDirection="reverse" intrinsicCoord="0.5623"/>
+                    <designator register="_Example" entry="SIGNAL S06"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig07" isSwitchable="false">
+                    <name name="S07" language="en"/>
+                    <spotLocation id="sig07_sloc01" netElementRef="ne1" applicationDirection="normal" intrinsicCoord="0.2531"/>
+                    <designator register="_Example" entry="SIGNAL S07"/>
+                    <isAnnouncementSignal/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig08" isSwitchable="false">
+                    <name name="S08" language="en"/>
+                    <spotLocation id="sig08_sloc01" netElementRef="ne30" applicationDirection="reverse" intrinsicCoord="0.6961"/>
+                    <designator register="_Example" entry="SIGNAL S08"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig09" isSwitchable="false">
+                    <name name="S09" language="en"/>
+                    <spotLocation id="sig09_sloc01" netElementRef="ne28" applicationDirection="normal" intrinsicCoord="0.3684"/>
+                    <designator register="_Example" entry="SIGNAL S09"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig10" isSwitchable="false">
+                    <name name="S10" language="en"/>
+                    <spotLocation id="sig10_sloc01" netElementRef="ne29" applicationDirection="reverse" intrinsicCoord="0.6961"/>
+                    <designator register="_Example" entry="SIGNAL S10"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+            </signalsIS>
             <switchesIS>
                 <switchIS id="swi25" continueCourse="right" branchCourse="left" type="ordinarySwitch">
                     <name name="Sw12" language="en"/>
@@ -180,7 +244,7 @@
                 </switchIS>
                 <switchIS id="swi27" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw13" language="en"/>
-                    <spotLocation id="swi27_sloc01" netElementRef="ne29" applicationDirection="reverse" intrinsicCoord="0.0000"/>
+                    <spotLocation id="swi27_sloc01" netElementRef="ne29" applicationDirection="normal" intrinsicCoord="0.0000"/>
                     <designator register="_Example" entry="SWITCH Sw13"/>
                     <leftBranch netRelationRef="nr_ne29ne30_swi27" branchingSpeed="60" joiningSpeed="60" radius="0"/>
                     <rightBranch netRelationRef="nr_ne28ne29_swi27" branchingSpeed="60" joiningSpeed="60" radius="500"/>
@@ -212,34 +276,34 @@
                 <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track3" language="en"/>
                     <linearLocation id="trk3_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne28"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne30"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track3"/>
-                    <trackBegin ref="swi25"/>
+                    <trackBegin ref="bus31"/>
                     <trackEnd ref="swi27"/>
-                    <length value="1031.54" type="physical"/>
+                    <length value="1020" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk4" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track4" language="en"/>
                     <linearLocation id="trk4_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne29"/>
+                        <associatedNetElement keepsOrientation="false" netElementRef="ne29"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track4"/>
-                    <trackBegin ref="swi27"/>
-                    <trackEnd ref="bus33"/>
+                    <trackBegin ref="bus33"/>
+                    <trackEnd ref="swi27"/>
                     <length value="1020" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
                     <name name="track5" language="en"/>
                     <linearLocation id="trk5_lloc01" applicationDirection="both">
-                        <associatedNetElement keepsOrientation="true" netElementRef="ne30"/>
+                        <associatedNetElement keepsOrientation="true" netElementRef="ne28"/>
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track5"/>
-                    <trackBegin ref="swi27"/>
-                    <trackEnd ref="bus31"/>
-                    <length value="1020" type="physical"/>
+                    <trackBegin ref="swi25"/>
+                    <trackEnd ref="swi27"/>
+                    <length value="1031.54" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
@@ -247,27 +311,67 @@
         <infrastructureVisualizations>
             <visualization id="vis01" positioningSystemRef="gps01">
                 <name name="Example_8 microscopic screen visualization" language="en"/>
-                <spotElementProjection refersToElement="bus1" id="vis01_sep1">
+                <spotElementProjection refersToElement="bus1" id="vis01_sep01">
                     <name name="Buf01" language="en"/>
                     <coordinate x="-660.000" y="30.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus4" id="vis01_sep2">
+                <spotElementProjection refersToElement="bus4" id="vis01_sep02">
                     <name name="Buf03" language="en"/>
                     <coordinate x="1080.000" y="-480.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus31" id="vis01_sep3">
+                <spotElementProjection refersToElement="bus31" id="vis01_sep03">
                     <name name="Buf18" language="en"/>
                     <coordinate x="0.000" y="420.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus33" id="vis01_sep4">
+                <spotElementProjection refersToElement="bus33" id="vis01_sep04">
                     <name name="Buf20" language="en"/>
                     <coordinate x="2040.000" y="420.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi25" id="vis01_sep5">
+                <spotElementProjection refersToElement="sig01" id="vis01_sep05">
+                    <name name="S01" language="en"/>
+                    <coordinate x="-560.000" y="30.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig02" id="vis01_sep06">
+                    <name name="S02" language="en"/>
+                    <coordinate x="980.000" y="-480.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig03" id="vis01_sep07">
+                    <name name="S03" language="en"/>
+                    <coordinate x="1940.000" y="420.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig04" id="vis01_sep08">
+                    <name name="S04" language="en"/>
+                    <coordinate x="100.000" y="420.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig05" id="vis01_sep09">
+                    <name name="S05" language="en"/>
+                    <coordinate x="1730.000" y="420.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig06" id="vis01_sep10">
+                    <name name="S06" language="en"/>
+                    <coordinate x="544.000" y="-480.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig07" id="vis01_sep11">
+                    <name name="S07" language="en"/>
+                    <coordinate x="-455.000" y="30.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig08" id="vis01_sep12">
+                    <name name="S08" language="en"/>
+                    <coordinate x="310.000" y="420.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig09" id="vis01_sep13">
+                    <name name="S09" language="en"/>
+                    <coordinate x="530.000" y="30.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig10" id="vis01_sep14">
+                    <name name="S10" language="en"/>
+                    <coordinate x="1730.000" y="420.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="swi25" id="vis01_sep15">
                     <name name="Sw12" language="en"/>
                     <coordinate x="150.000" y="30.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi27" id="vis01_sep6">
+                <spotElementProjection refersToElement="swi27" id="vis01_sep16">
                     <name name="Sw13" language="en"/>
                     <coordinate x="1020.000" y="420.000"/>
                 </spotElementProjection>
@@ -315,6 +419,126 @@
                     <branchRight ref="ne28"/>
                 </switchIL>
             </switchesIL>
+            <signalsIL>
+                <signalIL id="il_sig01" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig01"/>
+                </signalIL>
+                <signalIL id="il_sig02" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig02"/>
+                </signalIL>
+                <signalIL id="il_sig03" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig03"/>
+                </signalIL>
+                <signalIL id="il_sig04" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig04"/>
+                </signalIL>
+                <signalIL id="il_sig05" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig05"/>
+                </signalIL>
+                <signalIL id="il_sig06" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig06"/>
+                </signalIL>
+                <signalIL id="il_sig07" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig07"/>
+                </signalIL>
+                <signalIL id="il_sig08" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig08"/>
+                </signalIL>
+                <signalIL id="il_sig09" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig09"/>
+                </signalIL>
+                <signalIL id="il_sig10" isVirtual="false" approachSpeed="0" passingSpeed="0" releaseSpeed="0">
+                    <refersTo ref="sig10"/>
+                </signalIL>
+            </signalsIL>
+            <routes>
+                <route id="rt_sig06_sig01">
+                    <designator register="_Example" entry="Route S06-S01"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <routeEntry id="rts_sig06_rt_sig06_sig01">
+                        <refersTo ref="il_sig06"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig01_rt_sig06_sig01">
+                        <refersTo ref="il_sig01"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig07_sig09_swi25N">
+                    <designator register="_Example" entry="Route S07-S09 (Sw12N)"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <facingSwitchInPosition id="rp_pt_swi25_rt_sig07_sig09_swi25N" inPosition="right">
+                        <designator register="_Example" entry="Sw12 in right"/>
+                        <refersToSwitch ref="il_swi25"/>
+                    </facingSwitchInPosition>
+                    <routeEntry id="rts_sig07_rt_sig07_sig09_swi25N">
+                        <refersTo ref="il_sig07"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig09_rt_sig07_sig09_swi25N">
+                        <refersTo ref="il_sig09"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig07_sig02_swi25R">
+                    <designator register="_Example" entry="Route S07-S02 (Sw12R)"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <facingSwitchInPosition id="rp_pt_swi25_rt_sig07_sig02_swi25R" inPosition="left">
+                        <designator register="_Example" entry="Sw12 in left"/>
+                        <refersToSwitch ref="il_swi25"/>
+                    </facingSwitchInPosition>
+                    <routeEntry id="rts_sig07_rt_sig07_sig02_swi25R">
+                        <refersTo ref="il_sig07"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig02_rt_sig07_sig02_swi25R">
+                        <refersTo ref="il_sig02"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig08_sig03">
+                    <designator register="_Example" entry="Route S08-S03"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <routeEntry id="rts_sig08_rt_sig08_sig03">
+                        <refersTo ref="il_sig08"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig03_rt_sig08_sig03">
+                        <refersTo ref="il_sig03"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig09_sig03">
+                    <designator register="_Example" entry="Route S09-S03"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <routeEntry id="rts_sig09_rt_sig09_sig03">
+                        <refersTo ref="il_sig09"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig03_rt_sig09_sig03">
+                        <refersTo ref="il_sig03"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig10_sig04_swi27N">
+                    <designator register="_Example" entry="Route S10-S04 (Sw13N)"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <facingSwitchInPosition id="rp_pt_swi27_rt_sig10_sig04_swi27N" inPosition="left">
+                        <designator register="_Example" entry="Sw13 in left"/>
+                        <refersToSwitch ref="il_swi27"/>
+                    </facingSwitchInPosition>
+                    <routeEntry id="rts_sig10_rt_sig10_sig04_swi27N">
+                        <refersTo ref="il_sig10"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig04_rt_sig10_sig04_swi27N">
+                        <refersTo ref="il_sig04"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig10_sig01_swi27R">
+                    <designator register="_Example" entry="Route S10-S01 (Sw13R)"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <facingSwitchInPosition id="rp_pt_swi27_rt_sig10_sig01_swi27R" inPosition="right">
+                        <designator register="_Example" entry="Sw13 in right"/>
+                        <refersToSwitch ref="il_swi27"/>
+                    </facingSwitchInPosition>
+                    <routeEntry id="rts_sig10_rt_sig10_sig01_swi27R">
+                        <refersTo ref="il_sig10"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig01_rt_sig10_sig01_swi27R">
+                        <refersTo ref="il_sig01"/>
+                    </routeExit>
+                </route>
+            </routes>
         </assetsForIL>
         <specificIMs>
             <specificIM>
