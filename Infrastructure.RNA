@@ -15,12 +15,12 @@ Node ne28:
 	Neighbours = 4 -> ['ne1', 'ne27', 'ne29', 'ne30']
 Node ne29:
 	Track = track4
-	Type = BufferStop -> ['bus29']
+	Type = BufferStop -> ['bus33']
 	Neighbours = 2 -> ['ne28', 'ne30']
 	Switches -> Sw13
 		ContinueCourse -> left -> ne30
 		BranchCourse -> right -> ne28
 Node ne30:
 	Track = track5
-	Type = BufferStop -> ['bus28']
+	Type = BufferStop -> ['bus31']
 	Neighbours = 2 -> ['ne28', 'ne29']

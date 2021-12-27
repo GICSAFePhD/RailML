@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_8.railml</dc:title>
-        <dc:date>2021-12-27T15:30:11Z</dc:date>
+        <dc:date>2021-12-27T18:08:58Z</dc:date>
         <dc:creator>Menendez</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -85,7 +85,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="1020.000" y="420.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne29_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1680.000" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="2040.000" y="420.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -97,7 +97,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="1020.000" y="420.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne30_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="120.000" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="0.000" y="420.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -159,15 +159,15 @@
                     <spotLocation id="bus4_sloc01" netElementRef="ne27" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_Example" entry="BUFFERSTOP Buf03"/>
                 </bufferStop>
-                <bufferStop id="bus28" type="fixedBufferStop">
-                    <name name="Buf15" language="en"/>
-                    <spotLocation id="bus28_sloc01" netElementRef="ne30" applicationDirection="normal" intrinsicCoord="1.0000"/>
-                    <designator register="_Example" entry="BUFFERSTOP Buf15"/>
+                <bufferStop id="bus31" type="fixedBufferStop">
+                    <name name="Buf18" language="en"/>
+                    <spotLocation id="bus31_sloc01" netElementRef="ne30" applicationDirection="normal" intrinsicCoord="1.0000"/>
+                    <designator register="_Example" entry="BUFFERSTOP Buf18"/>
                 </bufferStop>
-                <bufferStop id="bus29" type="fixedBufferStop">
-                    <name name="Buf16" language="en"/>
-                    <spotLocation id="bus29_sloc01" netElementRef="ne29" applicationDirection="normal" intrinsicCoord="1.0000"/>
-                    <designator register="_Example" entry="BUFFERSTOP Buf16"/>
+                <bufferStop id="bus33" type="fixedBufferStop">
+                    <name name="Buf20" language="en"/>
+                    <spotLocation id="bus33_sloc01" netElementRef="ne29" applicationDirection="normal" intrinsicCoord="1.0000"/>
+                    <designator register="_Example" entry="BUFFERSTOP Buf20"/>
                 </bufferStop>
             </bufferStops>
             <switchesIS>
@@ -227,8 +227,8 @@
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track4"/>
                     <trackBegin ref="swi27"/>
-                    <trackEnd ref="bus29"/>
-                    <length value="660" type="physical"/>
+                    <trackEnd ref="bus33"/>
+                    <length value="1020" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -238,8 +238,8 @@
                     </linearLocation>
                     <designator register="_Example" entry="TRACK track5"/>
                     <trackBegin ref="swi27"/>
-                    <trackEnd ref="bus28"/>
-                    <length value="900" type="physical"/>
+                    <trackEnd ref="bus31"/>
+                    <length value="1020" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
@@ -255,13 +255,13 @@
                     <name name="Buf03" language="en"/>
                     <coordinate x="1080.000" y="-480.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus28" id="vis01_sep3">
-                    <name name="Buf15" language="en"/>
-                    <coordinate x="120.000" y="420.000"/>
+                <spotElementProjection refersToElement="bus31" id="vis01_sep3">
+                    <name name="Buf18" language="en"/>
+                    <coordinate x="0.000" y="420.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="bus29" id="vis01_sep4">
-                    <name name="Buf16" language="en"/>
-                    <coordinate x="1680.000" y="420.000"/>
+                <spotElementProjection refersToElement="bus33" id="vis01_sep4">
+                    <name name="Buf20" language="en"/>
+                    <coordinate x="2040.000" y="420.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="swi25" id="vis01_sep5">
                     <name name="Sw12" language="en"/>
@@ -291,12 +291,12 @@
                 <linearElementProjection refersToElement="ne29" id="vis01_lep4">
                     <name name="netElement_ne29" language="en"/>
                     <coordinate x="1020.000" y="420.000"/>
-                    <coordinate x="1680.000" y="420.000"/>
+                    <coordinate x="2040.000" y="420.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne30" id="vis01_lep5">
                     <name name="netElement_ne30" language="en"/>
                     <coordinate x="1020.000" y="420.000"/>
-                    <coordinate x="120.000" y="420.000"/>
+                    <coordinate x="0.000" y="420.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>
