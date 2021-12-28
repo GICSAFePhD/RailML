@@ -3,46 +3,30 @@ sig01:
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [-560, 30] | Coordinate: 0.1234
 sig02:
-	From: ne27 | To: bus4
-	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [980, -480] | Coordinate: 0.9183
-sig03:
 	From: ne29 | To: bus33
 	Type: Circulation | Direction: normal | AtTrack: left 
 	Position: [1940, 420] | Coordinate: 0.9019
-sig04:
+sig03:
 	From: ne30 | To: bus31
 	Type: Circulation | Direction: normal | AtTrack: left 
 	Position: [100, 420] | Coordinate: 0.0980
-sig05:
-	From: ne29 | To: ne29_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1730.0, -420] | Coordinate: 1.0782
-sig06:
-	From: ne27 | To: ne27_left
-	Type: Manouver | Direction: reverse | AtTrack: right 
-	Position: [544.0, -480] | Coordinate: 0.5623
-sig07:
-	From: ne1 | To: ne1_left
+sig04:
+	From: ne31 | To: bus4
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-455.0, -30] | Coordinate: 0.2637
-sig08:
-	From: ne1 | To: ne1_left
-	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [-455.0, -30] | Coordinate: 0.2637
-sig09:
+	Position: [980, -480] | Coordinate: 0.8427
+sig05:
+	From: ne32 | To: bus35
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1250, -957] | Coordinate: 0.9153
+sig06:
+	From: ne29 | To: ne29_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1730.0, 420] | Coordinate: 0.6960
+sig07:
 	From: ne30 | To: ne30_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [310.0, -420] | Coordinate: 0.8778
-sig10:
-	From: ne28 | To: ne28_left
-	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [530.0, 30] | Coordinate: 0.9030
-sig11:
-	From: ne29 | To: ne29_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1730.0, -420] | Coordinate: 1.0782
-sig12:
-	From: ne29 | To: ne29_left
+	Position: [310.0, 420] | Coordinate: 0.3039
+sig08:
+	From: ne32 | To: ne32_left
 	Type: Manouver | Direction: reverse | AtTrack: right 
-	Position: [1730.0, -420] | Coordinate: 1.0782
+	Position: [820.0, -957] | Coordinate: 0.5512
