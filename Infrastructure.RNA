@@ -1,36 +1,80 @@
-Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 0
+Nodes: 13 | Switches: 6 | Signals: 0 | Detectors: 5 | Ends: 8 | Barriers: 0
 Node ne1:
 	Track = track1
-	Type = BufferStop -> ['bus1']
-	Neighbours = 2 -> ['ne28', 'ne27']
-	Switches -> Sw12
-		ContinueCourse -> right -> ne28
-		BranchCourse -> left -> ne27
-Node ne27:
-	Track = track4
-	Neighbours = 4 -> ['ne1', 'ne28', 'ne32', 'ne31']
-	Switches -> Sw14
-		ContinueCourse -> left -> ne32
-		BranchCourse -> right -> ne31
-Node ne28:
-	Track = track3
-	Neighbours = 4 -> ['ne1', 'ne27', 'ne29', 'ne30']
-Node ne29:
+	TrainDetectionElements -> tde16
+		Type -> 
+	Type = Border -> oe51
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne3', 'ne2']
+	Switches -> Sw01
+		ContinueCourse -> right -> ne3
+		BranchCourse -> left -> ne2
+Node ne2:
+	Track = track10
+	Neighbours = 4 -> ['ne1', 'ne3', 'ne7', 'ne6']
+	Switches -> Sw03
+		ContinueCourse -> left -> ne7
+		BranchCourse -> right -> ne6
+Node ne3:
+	Track = track9
+	Neighbours = 4 -> ['ne1', 'ne2', 'ne5', 'ne4']
+	Switches -> Sw02
+		ContinueCourse -> right -> ne5
+		BranchCourse -> left -> ne4
+Node ne4:
 	Track = track5
-	Type = BufferStop -> ['bus33']
-	Neighbours = 2 -> ['ne28', 'ne30']
-	Switches -> Sw13
-		ContinueCourse -> left -> ne30
-		BranchCourse -> right -> ne28
-Node ne30:
-	Track = track6
-	Type = BufferStop -> ['bus31']
-	Neighbours = 2 -> ['ne28', 'ne29']
-Node ne31:
+	Type = BufferStop -> ['bus15']
+	Neighbours = 2 -> ['ne3', 'ne5']
+Node ne5:
+	Track = track11
+	TrainDetectionElements -> tde25
+		Type -> 
+	Neighbours = 4 -> ['ne3', 'ne4', 'ne10', 'ne11']
+	Switches -> Sw05
+		ContinueCourse -> right -> ne11
+		BranchCourse -> left -> ne10
+Node ne6:
+	Track = track4
+	TrainDetectionElements -> tde22
+		Type -> 
+	Type = BufferStop -> ['bus14']
+	Neighbours = 2 -> ['ne2', 'ne7']
+Node ne7:
+	Track = track12
+	Neighbours = 4 -> ['ne2', 'ne6', 'ne23', 'ne27']
+	Switches -> Sw11
+		ContinueCourse -> left -> ne27
+		BranchCourse -> right -> ne23
+Node ne10:
+	Track = track3
+	Type = BufferStop -> ['bus7']
+	Neighbours = 2 -> ['ne5', 'ne11']
+Node ne11:
 	Track = track2
-	Type = BufferStop -> ['bus4']
-	Neighbours = 2 -> ['ne27', 'ne32']
-Node ne32:
+	TrainDetectionElements -> tde21
+		Type -> 
+	Type = Border -> oe52
+		Type -> station
+		IsOpenEnd -> true
+	Neighbours = 2 -> ['ne5', 'ne10']
+Node ne23:
+	Track = track6
+	TrainDetectionElements -> tde23
+		Type -> 
+	Type = BufferStop -> ['bus19']
+	Neighbours = 2 -> ['ne7', 'ne27']
+Node ne25:
 	Track = track7
-	Type = BufferStop -> ['bus35']
-	Neighbours = 2 -> ['ne27', 'ne31']
+	Type = BufferStop -> ['bus48']
+	Neighbours = 2 -> ['ne27', 'ne28']
+	Switches -> Sw13
+		ContinueCourse -> left -> ne27
+		BranchCourse -> right -> ne28
+Node ne27:
+	Track = track13
+	Neighbours = 4 -> ['ne7', 'ne23', 'ne25', 'ne28']
+Node ne28:
+	Track = track8
+	Type = BufferStop -> ['bus49']
+	Neighbours = 2 -> ['ne25', 'ne27']

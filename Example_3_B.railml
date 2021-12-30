@@ -66,6 +66,20 @@
 					<name name="LineBord02" language="en"/>
 				</border>
 			</borders>
+			<signalsIS>
+				<signalIS isSwitchable="false" id="sig01">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S01"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.6208" applicationDirection="normal" id="sig01_sloc01"/>
+					<name name="S01" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig02">
+					<signalConstruction positionAtTrack="right" type="light"/>
+					<designator register="_Example" entry="SIGNAL S02"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.7398" applicationDirection="reverse" id="sig02_sloc01"/>
+					<name name="S02" language="en"/>
+				</signalIS>
+			</signalsIS>
 			<tracks>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk1">
 					<trackBegin ref="line4"/>
@@ -101,6 +115,30 @@
 					<coordinate x="840.000" y="0.000"/>
 					<name name="LineBord02" language="en"/>
 				</spotElementProjection>
+				<spotElementProjection refersToElement="sig13" id="vis01_sep03">
+					<coordinate x="-676.364" y="0.000"/>
+					<name name="S01" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig14" id="vis01_sep04">
+					<coordinate x="-220.000" y="0.000"/>
+					<name name="S02" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig15" id="vis01_sep05">
+					<coordinate x="358.182" y="0.000"/>
+					<name name="S03" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig16" id="vis01_sep06">
+					<coordinate x="-421.818" y="0.000"/>
+					<name name="S04" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig17" id="vis01_sep07">
+					<coordinate x="129.091" y="0.000"/>
+					<name name="S05" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig18" id="vis01_sep08">
+					<coordinate x="630.909" y="0.000"/>
+					<name name="S06" language="en"/>
+				</spotElementProjection>
 				<spotElementProjection refersToElement="tde19" id="vis01_sep09">
 					<coordinate x="-365.808" y="0.000"/>
 					<name name="J01" language="en"/>
@@ -120,6 +158,14 @@
 				<spotElementProjection refersToElement="tvd22" id="vis01_sep13">
 					<coordinate x="630.909" y="0.000"/>
 					<name name="12" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig01" id="vis01_sep14">
+					<coordinate x="203.0" y="0"/>
+					<name name="S01" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig02" id="vis01_sep15">
+					<coordinate x="403.0" y="0"/>
+					<name name="S02" language="en"/>
 				</spotElementProjection>
 				<linearElementProjection refersToElement="ne1" id="vis01_lep1">
 					<coordinate x="-840.000" y="0.000"/>
@@ -149,6 +195,14 @@
 					<designator register="_Example" entry="12"/>
 				</tvdSection>
 			</tvdSections>
+			<signalsIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig01">
+					<refersTo ref="sig01"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig02">
+					<refersTo ref="sig02"/>
+				</signalIL>
+			</signalsIL>
 		</assetsForIL>
 		<specificIMs>
 			<specificIM>
