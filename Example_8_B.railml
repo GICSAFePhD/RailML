@@ -463,11 +463,11 @@
 					<name name="S07" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig08" id="vis01_sep16">
-					<coordinate x="-455.0" y="30"/>
+					<coordinate x="-365.0" y="30"/>
 					<name name="S08" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig09" id="vis01_sep17">
-					<coordinate x="-455.0" y="30"/>
+					<coordinate x="-275.0" y="30"/>
 					<name name="S09" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig10" id="vis01_sep18">
@@ -479,7 +479,7 @@
 					<name name="S11" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig12" id="vis01_sep20">
-					<coordinate x="1730.0" y="420"/>
+					<coordinate x="1820.0" y="420"/>
 					<name name="S12" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig13" id="vis01_sep21">

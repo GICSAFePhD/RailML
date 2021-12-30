@@ -29,11 +29,11 @@ sig07:
 sig08:
 	From: ne1 | To: ne1_left
 	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [-455.0, 30] | Coordinate: 0.2530
+	Position: [-365.0, 30] | Coordinate: 0.2530
 sig09:
 	From: ne1 | To: ne1_left
 	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [-455.0, 30] | Coordinate: 0.2530
+	Position: [-275.0, 30] | Coordinate: 0.2530
 sig10:
 	From: ne30 | To: ne30_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
@@ -45,7 +45,7 @@ sig11:
 sig12:
 	From: ne29 | To: ne29_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1730.0, 420] | Coordinate: 0.6960
+	Position: [1820.0, 420] | Coordinate: 0.6960
 sig13:
 	From: ne32 | To: ne32_left
 	Type: Manouver | Direction: reverse | AtTrack: right 
