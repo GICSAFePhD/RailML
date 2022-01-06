@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_6.railml</dc:title>
-        <dc:date>2021-12-18T21:43:33Z</dc:date>
+        <dc:date>2022-01-06T13:34:12Z</dc:date>
         <dc:creator>f</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -566,27 +566,27 @@
                 </track>
             </tracks>
             <trainDetectionElements>
-                <trainDetectionElement id="tde21" type="">
+                <trainDetectionElement id="tde21" type="insulatedRailJoint">
                     <name name="J02" language="en"/>
                     <spotLocation id="tde21_sloc01" netElementRef="ne11" applicationDirection="both" intrinsicCoord="0.6050"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J02"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde22" type="">
+                <trainDetectionElement id="tde22" type="insulatedRailJoint">
                     <name name="J03" language="en"/>
                     <spotLocation id="tde22_sloc01" netElementRef="ne6" applicationDirection="both" intrinsicCoord="0.5550"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J03"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde23" type="">
+                <trainDetectionElement id="tde23" type="insulatedRailJoint">
                     <name name="J04" language="en"/>
                     <spotLocation id="tde23_sloc01" netElementRef="ne23" applicationDirection="both" intrinsicCoord="0.5002"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J04"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde25" type="">
+                <trainDetectionElement id="tde25" type="insulatedRailJoint">
                     <name name="J06" language="en"/>
                     <spotLocation id="tde25_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.5177"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J06"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde16" type="">
+                <trainDetectionElement id="tde16" type="insulatedRailJoint">
                     <name name="J01" language="en"/>
                     <spotLocation id="tde16_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.4882"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J01"/>
