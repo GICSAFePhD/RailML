@@ -11,13 +11,13 @@ Node ne1:
 		ContinueCourse -> right -> ne3
 		BranchCourse -> left -> ne2
 Node ne2:
-	Track = track10
+	Track = track8
 	Neighbours = 4 -> ['ne1', 'ne3', 'ne7', 'ne6']
 	Switches -> Sw03
 		ContinueCourse -> left -> ne7
 		BranchCourse -> right -> ne6
 Node ne3:
-	Track = track9
+	Track = track7
 	Neighbours = 4 -> ['ne1', 'ne2', 'ne5', 'ne4']
 	Switches -> Sw02
 		ContinueCourse -> right -> ne5
@@ -27,7 +27,7 @@ Node ne4:
 	Type = BufferStop -> ['bus15']
 	Neighbours = 2 -> ['ne3', 'ne5']
 Node ne5:
-	Track = track11
+	Track = track9
 	TrainDetectionElements -> tde25
 		Type -> insulatedRailJoint
 	Neighbours = 4 -> ['ne3', 'ne4', 'ne10', 'ne11']
@@ -41,11 +41,11 @@ Node ne6:
 	Type = BufferStop -> ['bus14']
 	Neighbours = 2 -> ['ne2', 'ne7']
 Node ne7:
-	Track = track12
-	Neighbours = 4 -> ['ne2', 'ne6', 'ne23', 'ne27']
-	Switches -> Sw11
-		ContinueCourse -> left -> ne27
-		BranchCourse -> right -> ne23
+	Track = track10
+	Neighbours = 4 -> ['ne2', 'ne6', 'ne32', 'ne33']
+	Switches -> Sw06
+		ContinueCourse -> left -> ne33
+		BranchCourse -> right -> ne32
 Node ne10:
 	Track = track3
 	Type = BufferStop -> ['bus7']
@@ -58,23 +58,23 @@ Node ne11:
 		Type -> station
 		IsOpenEnd -> true
 	Neighbours = 2 -> ['ne5', 'ne10']
-Node ne23:
+Node ne32:
 	Track = track6
 	TrainDetectionElements -> tde23
 		Type -> insulatedRailJoint
 	Type = BufferStop -> ['bus19']
-	Neighbours = 2 -> ['ne7', 'ne27']
-Node ne25:
-	Track = track7
-	Type = BufferStop -> ['bus48']
-	Neighbours = 2 -> ['ne27', 'ne28']
-	Switches -> Sw13
-		ContinueCourse -> left -> ne27
-		BranchCourse -> right -> ne28
-Node ne27:
+	Neighbours = 2 -> ['ne7', 'ne33']
+Node ne33:
+	Track = track11
+	Neighbours = 4 -> ['ne7', 'ne32', 'ne34', 'ne35']
+Node ne34:
+	Track = track12
+	Type = BufferStop -> ['bus57']
+	Neighbours = 2 -> ['ne33', 'ne35']
+	Switches -> Sw04
+		ContinueCourse -> left -> ne33
+		BranchCourse -> right -> ne35
+Node ne35:
 	Track = track13
-	Neighbours = 4 -> ['ne7', 'ne23', 'ne25', 'ne28']
-Node ne28:
-	Track = track8
-	Type = BufferStop -> ['bus49']
-	Neighbours = 2 -> ['ne25', 'ne27']
+	Type = BufferStop -> ['bus58']
+	Neighbours = 2 -> ['ne33', 'ne34']
