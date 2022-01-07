@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_0.railml</dc:title>
-        <dc:date>2021-11-10T23:24:06Z</dc:date>
+        <dc:date>2022-01-07T19:14:08Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_0.railml" language="en"/>
-                    <isValid from="2021-11-10" to="2022-11-10"/>
+                    <isValid from="2021-11-19" to="2022-11-19"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-11-10" to="2022-11-10"/>
+                    <isValid from="2021-11-19" to="2022-11-19"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -1157,99 +1157,99 @@
                     <coordinate x="1043.750" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig09" id="vis01_sep019">
-                    <name name="S11" language="en"/>
+                    <name name="S09" language="en"/>
                     <coordinate x="-1044.480" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig13" id="vis01_sep020">
-                    <name name="S15" language="en"/>
+                    <name name="S13" language="en"/>
                     <coordinate x="1043.750" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig11" id="vis01_sep021">
-                    <name name="S13" language="en"/>
+                    <name name="S11" language="en"/>
                     <coordinate x="-345.012" y="750.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig15" id="vis01_sep022">
-                    <name name="S17" language="en"/>
+                    <name name="S15" language="en"/>
                     <coordinate x="341.380" y="750.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig10" id="vis01_sep023">
-                    <name name="S12" language="en"/>
+                    <name name="S10" language="en"/>
                     <coordinate x="-1044.480" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig12" id="vis01_sep024">
-                    <name name="S14" language="en"/>
+                    <name name="S12" language="en"/>
                     <coordinate x="-345.012" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig16" id="vis01_sep025">
-                    <name name="S18" language="en"/>
+                    <name name="S16" language="en"/>
                     <coordinate x="341.380" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig14" id="vis01_sep026">
-                    <name name="S16" language="en"/>
+                    <name name="S14" language="en"/>
                     <coordinate x="1043.750" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig26" id="vis01_sep027">
-                    <name name="S32" language="en"/>
+                    <name name="S26" language="en"/>
                     <coordinate x="-868.630" y="1650.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig25" id="vis01_sep028">
-                    <name name="S31" language="en"/>
+                    <name name="S25" language="en"/>
                     <coordinate x="-868.630" y="1950.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig28" id="vis01_sep029">
-                    <name name="S34" language="en"/>
-                    <coordinate x="-173.733" y="2226.270"/>
+                    <name name="S28" language="en"/>
+                    <coordinate x="-173.731" y="2226.270"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig27" id="vis01_sep030">
-                    <name name="S33" language="en"/>
-                    <coordinate x="-173.733" y="2226.270"/>
+                    <name name="S27" language="en"/>
+                    <coordinate x="-173.731" y="2226.270"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig31" id="vis01_sep031">
-                    <name name="S37" language="en"/>
-                    <coordinate x="173.733" y="2226.270"/>
+                    <name name="S31" language="en"/>
+                    <coordinate x="173.731" y="2226.270"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig32" id="vis01_sep032">
-                    <name name="S38" language="en"/>
-                    <coordinate x="173.733" y="2226.270"/>
+                    <name name="S32" language="en"/>
+                    <coordinate x="173.731" y="2226.270"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig29" id="vis01_sep033">
-                    <name name="S35" language="en"/>
+                    <name name="S29" language="en"/>
                     <coordinate x="849.847" y="1950.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig30" id="vis01_sep034">
-                    <name name="S36" language="en"/>
+                    <name name="S30" language="en"/>
                     <coordinate x="849.847" y="1650.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig18" id="vis01_sep035">
-                    <name name="S22" language="en"/>
-                    <coordinate x="-1111.650" y="988.348"/>
+                    <name name="S18" language="en"/>
+                    <coordinate x="-1111.650" y="988.349"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig17" id="vis01_sep036">
-                    <name name="S21" language="en"/>
-                    <coordinate x="-1111.650" y="988.348"/>
+                    <name name="S17" language="en"/>
+                    <coordinate x="-1111.650" y="988.349"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig19" id="vis01_sep037">
-                    <name name="S23" language="en"/>
+                    <name name="S19" language="en"/>
                     <coordinate x="-476.142" y="1500.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig20" id="vis01_sep038">
-                    <name name="S24" language="en"/>
+                    <name name="S20" language="en"/>
                     <coordinate x="-476.142" y="1200.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig23" id="vis01_sep039">
-                    <name name="S27" language="en"/>
+                    <name name="S23" language="en"/>
                     <coordinate x="483.730" y="1500.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig24" id="vis01_sep040">
-                    <name name="S28" language="en"/>
+                    <name name="S24" language="en"/>
                     <coordinate x="483.730" y="1200.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig22" id="vis01_sep041">
-                    <name name="S26" language="en"/>
+                    <name name="S22" language="en"/>
                     <coordinate x="1094.150" y="1005.850"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig21" id="vis01_sep042">
-                    <name name="S25" language="en"/>
+                    <name name="S21" language="en"/>
                     <coordinate x="1094.150" y="1005.850"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="swi01" id="vis01_sep043">
@@ -1350,11 +1350,11 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde113" id="vis01_sep067">
                     <name name="J17" language="en"/>
-                    <coordinate x="990.245" y="1109.760"/>
+                    <coordinate x="990.242" y="1109.760"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde116" id="vis01_sep068">
                     <name name="J20" language="en"/>
-                    <coordinate x="756.612" y="1343.390"/>
+                    <coordinate x="756.611" y="1343.390"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde117" id="vis01_sep069">
                     <name name="J21" language="en"/>
@@ -1386,7 +1386,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde132" id="vis01_sep076">
                     <name name="J28" language="en"/>
-                    <coordinate x="-615.852" y="1784.150"/>
+                    <coordinate x="-615.851" y="1784.150"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde133" id="vis01_sep077">
                     <name name="J29" language="en"/>
@@ -1398,7 +1398,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde135" id="vis01_sep079">
                     <name name="J31" language="en"/>
-                    <coordinate x="311.019" y="2088.980"/>
+                    <coordinate x="311.020" y="2088.980"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tde136" id="vis01_sep080">
                     <name name="J32" language="en"/>
@@ -1442,7 +1442,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd123" id="vis01_sep090">
                     <name name="09" language="en"/>
-                    <coordinate x="-1167.230" y="932.766"/>
+                    <coordinate x="-1167.230" y="932.768"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd124" id="vis01_sep091">
                     <name name="10" language="en"/>
@@ -1466,11 +1466,11 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd129" id="vis01_sep096">
                     <name name="15" language="en"/>
-                    <coordinate x="813.422" y="1286.580"/>
+                    <coordinate x="813.421" y="1286.580"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd130" id="vis01_sep097">
                     <name name="16" language="en"/>
-                    <coordinate x="1169.080" y="930.919"/>
+                    <coordinate x="1169.080" y="930.920"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd138" id="vis01_sep098">
                     <name name="17" language="en"/>
@@ -1644,14 +1644,14 @@
                 </tvdSection>
                 <tvdSection id="tvd98" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="02"/>
-                    <hasDemarcatingTraindetector ref="tde89"/>
                     <hasDemarcatingTraindetector ref="tde91"/>
                     <hasDemarcatingTraindetector ref="tde90"/>
+                    <hasDemarcatingTraindetector ref="tde89"/>
                 </tvdSection>
                 <tvdSection id="tvd99" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="03"/>
-                    <hasDemarcatingTraindetector ref="tde92"/>
                     <hasDemarcatingTraindetector ref="tde90"/>
+                    <hasDemarcatingTraindetector ref="tde92"/>
                 </tvdSection>
                 <tvdSection id="tvd100" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="04"/>
@@ -1660,19 +1660,19 @@
                 </tvdSection>
                 <tvdSection id="tvd101" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="05"/>
-                    <hasDemarcatingTraindetector ref="tde93"/>
                     <hasDemarcatingTraindetector ref="tde94"/>
+                    <hasDemarcatingTraindetector ref="tde93"/>
                 </tvdSection>
                 <tvdSection id="tvd102" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="06"/>
-                    <hasDemarcatingTraindetector ref="tde92"/>
                     <hasDemarcatingTraindetector ref="tde95"/>
+                    <hasDemarcatingTraindetector ref="tde92"/>
                 </tvdSection>
                 <tvdSection id="tvd103" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="07"/>
-                    <hasDemarcatingTraindetector ref="tde96"/>
-                    <hasDemarcatingTraindetector ref="tde95"/>
                     <hasDemarcatingTraindetector ref="tde94"/>
+                    <hasDemarcatingTraindetector ref="tde95"/>
+                    <hasDemarcatingTraindetector ref="tde96"/>
                 </tvdSection>
                 <tvdSection id="tvd104" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="08"/>
@@ -1687,18 +1687,18 @@
                 <tvdSection id="tvd124" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="10"/>
                     <hasDemarcatingTraindetector ref="tde121"/>
-                    <hasDemarcatingTraindetector ref="tde120"/>
                     <hasDemarcatingTraindetector ref="tde122"/>
+                    <hasDemarcatingTraindetector ref="tde120"/>
                 </tvdSection>
                 <tvdSection id="tvd125" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="11"/>
-                    <hasDemarcatingTraindetector ref="tde121"/>
                     <hasDemarcatingTraindetector ref="tde119"/>
+                    <hasDemarcatingTraindetector ref="tde121"/>
                 </tvdSection>
                 <tvdSection id="tvd126" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="12"/>
-                    <hasDemarcatingTraindetector ref="tde119"/>
                     <hasDemarcatingTraindetector ref="tde116"/>
+                    <hasDemarcatingTraindetector ref="tde119"/>
                 </tvdSection>
                 <tvdSection id="tvd127" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="13"/>
@@ -1733,15 +1733,15 @@
                 </tvdSection>
                 <tvdSection id="tvd140" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="19"/>
-                    <hasDemarcatingTraindetector ref="tde135"/>
                     <hasDemarcatingTraindetector ref="tde136"/>
+                    <hasDemarcatingTraindetector ref="tde135"/>
                     <hasDemarcatingTraindetector ref="tde137"/>
                 </tvdSection>
                 <tvdSection id="tvd141" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="20"/>
+                    <hasDemarcatingTraindetector ref="tde133"/>
                     <hasDemarcatingTraindetector ref="tde131"/>
                     <hasDemarcatingTraindetector ref="tde132"/>
-                    <hasDemarcatingTraindetector ref="tde133"/>
                 </tvdSection>
                 <tvdSection id="tvd142" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="21"/>
@@ -1750,8 +1750,8 @@
                 </tvdSection>
                 <tvdSection id="tvd143" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="22"/>
-                    <hasDemarcatingTraindetector ref="tde135"/>
                     <hasDemarcatingTraindetector ref="tde134"/>
+                    <hasDemarcatingTraindetector ref="tde135"/>
                 </tvdSection>
                 <tvdSection id="tvd144" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="23"/>
@@ -1770,9 +1770,9 @@
                 </tvdSection>
                 <tvdSection id="tvd163" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="26"/>
+                    <hasDemarcatingTraindetector ref="tde107"/>
                     <hasDemarcatingTraindetector ref="tde106"/>
                     <hasDemarcatingTraindetector ref="tde105"/>
-                    <hasDemarcatingTraindetector ref="tde107"/>
                 </tvdSection>
                 <tvdSection id="tvd164" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="27"/>
@@ -1791,14 +1791,14 @@
                 </tvdSection>
                 <tvdSection id="tvd171" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="34"/>
-                    <hasDemarcatingTraindetector ref="tde108"/>
                     <hasDemarcatingTraindetector ref="tde111"/>
+                    <hasDemarcatingTraindetector ref="tde108"/>
                 </tvdSection>
                 <tvdSection id="tvd172" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="35"/>
-                    <hasDemarcatingTraindetector ref="tde112"/>
                     <hasDemarcatingTraindetector ref="tde110"/>
                     <hasDemarcatingTraindetector ref="tde111"/>
+                    <hasDemarcatingTraindetector ref="tde112"/>
                 </tvdSection>
                 <tvdSection id="tvd173" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="36"/>
@@ -2094,7 +2094,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig09_sig16_swi03N">
-                    <designator register="_Example" entry="Route S11-S18 (Sw03N)"/>
+                    <designator register="_Example" entry="Route S09-S16 (Sw03N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi03_rt_sig09_sig16_swi03N" inPosition="left">
                         <designator register="_Example" entry="Sw03 in left"/>
@@ -2112,7 +2112,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig09_sig15_swi03R">
-                    <designator register="_Example" entry="Route S11-S17 (Sw03R)"/>
+                    <designator register="_Example" entry="Route S09-S15 (Sw03R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi03_rt_sig09_sig15_swi03R" inPosition="right">
                         <designator register="_Example" entry="Sw03 in right"/>
@@ -2130,7 +2130,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig13_sig12_swi04N">
-                    <designator register="_Example" entry="Route S15-S14 (Sw04N)"/>
+                    <designator register="_Example" entry="Route S13-S12 (Sw04N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi04_rt_sig13_sig12_swi04N" inPosition="right">
                         <designator register="_Example" entry="Sw04 in right"/>
@@ -2148,7 +2148,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig13_sig11_swi04R">
-                    <designator register="_Example" entry="Route S15-S13 (Sw04R)"/>
+                    <designator register="_Example" entry="Route S13-S11 (Sw04R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi04_rt_sig13_sig11_swi04R" inPosition="left">
                         <designator register="_Example" entry="Sw04 in left"/>
@@ -2166,7 +2166,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig10_sig16_swi03N">
-                    <designator register="_Example" entry="Route S12-S18 (Sw03N)"/>
+                    <designator register="_Example" entry="Route S10-S16 (Sw03N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi03_rt_sig10_sig16_swi03N" inPosition="left">
                         <designator register="_Example" entry="Sw03 in left"/>
@@ -2184,7 +2184,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig10_sig15_swi03R">
-                    <designator register="_Example" entry="Route S12-S17 (Sw03R)"/>
+                    <designator register="_Example" entry="Route S10-S15 (Sw03R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi03_rt_sig10_sig15_swi03R" inPosition="right">
                         <designator register="_Example" entry="Sw03 in right"/>
@@ -2202,7 +2202,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig14_sig12_swi04N">
-                    <designator register="_Example" entry="Route S16-S14 (Sw04N)"/>
+                    <designator register="_Example" entry="Route S14-S12 (Sw04N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi04_rt_sig14_sig12_swi04N" inPosition="right">
                         <designator register="_Example" entry="Sw04 in right"/>
@@ -2221,7 +2221,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig14_sig11_swi04R">
-                    <designator register="_Example" entry="Route S16-S13 (Sw04R)"/>
+                    <designator register="_Example" entry="Route S14-S11 (Sw04R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi04_rt_sig14_sig11_swi04R" inPosition="left">
                         <designator register="_Example" entry="Sw04 in left"/>
@@ -2240,7 +2240,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig26_sig32">
-                    <designator register="_Example" entry="Route S32-S38"/>
+                    <designator register="_Example" entry="Route S26-S32"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd145"/>
                     <hasTvdSection ref="tvd141"/>
@@ -2254,7 +2254,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig26_sig31">
-                    <designator register="_Example" entry="Route S32-S37"/>
+                    <designator register="_Example" entry="Route S26-S31"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd145"/>
                     <hasTvdSection ref="tvd141"/>
@@ -2268,7 +2268,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig25_sig32">
-                    <designator register="_Example" entry="Route S31-S38"/>
+                    <designator register="_Example" entry="Route S25-S32"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd144"/>
                     <hasTvdSection ref="tvd141"/>
@@ -2282,7 +2282,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig25_sig31">
-                    <designator register="_Example" entry="Route S31-S37"/>
+                    <designator register="_Example" entry="Route S25-S31"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd144"/>
                     <hasTvdSection ref="tvd141"/>
@@ -2296,7 +2296,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig29_sig27">
-                    <designator register="_Example" entry="Route S35-S33"/>
+                    <designator register="_Example" entry="Route S29-S27"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd139"/>
                     <hasTvdSection ref="tvd140"/>
@@ -2310,7 +2310,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig29_sig28">
-                    <designator register="_Example" entry="Route S35-S34"/>
+                    <designator register="_Example" entry="Route S29-S28"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd139"/>
                     <hasTvdSection ref="tvd140"/>
@@ -2324,7 +2324,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig30_sig27">
-                    <designator register="_Example" entry="Route S36-S33"/>
+                    <designator register="_Example" entry="Route S30-S27"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd138"/>
                     <hasTvdSection ref="tvd140"/>
@@ -2338,7 +2338,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig30_sig28">
-                    <designator register="_Example" entry="Route S36-S34"/>
+                    <designator register="_Example" entry="Route S30-S28"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd138"/>
                     <hasTvdSection ref="tvd140"/>
@@ -2352,7 +2352,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig18_sig23_swi05N">
-                    <designator register="_Example" entry="Route S22-S27 (Sw05N)"/>
+                    <designator register="_Example" entry="Route S18-S23 (Sw05N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi05_rt_sig18_sig23_swi05N" inPosition="right">
                         <designator register="_Example" entry="Sw05 in right"/>
@@ -2370,7 +2370,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig18_sig24_swi05R">
-                    <designator register="_Example" entry="Route S22-S28 (Sw05R)"/>
+                    <designator register="_Example" entry="Route S18-S24 (Sw05R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi05_rt_sig18_sig24_swi05R" inPosition="left">
                         <designator register="_Example" entry="Sw05 in left"/>
@@ -2388,7 +2388,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig17_sig23_swi05N">
-                    <designator register="_Example" entry="Route S21-S27 (Sw05N)"/>
+                    <designator register="_Example" entry="Route S17-S23 (Sw05N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi05_rt_sig17_sig23_swi05N" inPosition="right">
                         <designator register="_Example" entry="Sw05 in right"/>
@@ -2406,7 +2406,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig17_sig24_swi05R">
-                    <designator register="_Example" entry="Route S21-S28 (Sw05R)"/>
+                    <designator register="_Example" entry="Route S17-S24 (Sw05R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi05_rt_sig17_sig24_swi05R" inPosition="left">
                         <designator register="_Example" entry="Sw05 in left"/>
@@ -2424,7 +2424,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig22_sig19_swi06N">
-                    <designator register="_Example" entry="Route S26-S23 (Sw06N)"/>
+                    <designator register="_Example" entry="Route S22-S19 (Sw06N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi06_rt_sig22_sig19_swi06N" inPosition="left">
                         <designator register="_Example" entry="Sw06 in left"/>
@@ -2442,7 +2442,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig22_sig20_swi06R">
-                    <designator register="_Example" entry="Route S26-S24 (Sw06R)"/>
+                    <designator register="_Example" entry="Route S22-S20 (Sw06R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi06_rt_sig22_sig20_swi06R" inPosition="right">
                         <designator register="_Example" entry="Sw06 in right"/>
@@ -2460,7 +2460,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig21_sig19_swi06N">
-                    <designator register="_Example" entry="Route S25-S23 (Sw06N)"/>
+                    <designator register="_Example" entry="Route S21-S19 (Sw06N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi06_rt_sig21_sig19_swi06N" inPosition="left">
                         <designator register="_Example" entry="Sw06 in left"/>
@@ -2479,7 +2479,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig21_sig20_swi06R">
-                    <designator register="_Example" entry="Route S25-S24 (Sw06R)"/>
+                    <designator register="_Example" entry="Route S21-S20 (Sw06R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi06_rt_sig21_sig20_swi06R" inPosition="right">
                         <designator register="_Example" entry="Sw06 in right"/>
