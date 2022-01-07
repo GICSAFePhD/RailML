@@ -1,36 +1,114 @@
-Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 0
-Node ne1:
+Nodes: 17 | Switches: 8 | Signals: 0 | Detectors: 14 | Ends: 10 | Barriers: 0
+Node ne01:
 	Track = track1
-	Type = BufferStop -> ['bus1']
-	Neighbours = 2 -> ['ne28', 'ne27']
-	Switches -> Sw12
-		ContinueCourse -> right -> ne28
-		BranchCourse -> left -> ne27
-Node ne27:
-	Track = track4
-	Neighbours = 4 -> ['ne1', 'ne28', 'ne32', 'ne31']
-	Switches -> Sw14
-		ContinueCourse -> left -> ne32
-		BranchCourse -> right -> ne31
-Node ne28:
+	TrainDetectionElements -> tde89
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus174']
+	Neighbours = 2 -> ['ne02', 'ne03']
+	Switches -> Sw01
+		ContinueCourse -> right -> ne02
+		BranchCourse -> left -> ne03
+Node ne02:
+	Track = track11
+	TrainDetectionElements -> tde92
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne01', 'ne03', 'ne04']
+Node ne03:
+	Track = track12
+	TrainDetectionElements -> tde93
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne01', 'ne02', 'ne04']
+Node ne04:
 	Track = track3
-	Neighbours = 4 -> ['ne1', 'ne27', 'ne29', 'ne30']
-Node ne29:
-	Track = track5
-	Type = BufferStop -> ['bus33']
-	Neighbours = 2 -> ['ne28', 'ne30']
-	Switches -> Sw13
-		ContinueCourse -> left -> ne30
-		BranchCourse -> right -> ne28
-Node ne30:
-	Track = track6
-	Type = BufferStop -> ['bus31']
-	Neighbours = 2 -> ['ne28', 'ne29']
-Node ne31:
+	TrainDetectionElements -> tde96
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus176']
+	Neighbours = 2 -> ['ne02', 'ne03']
+	Switches -> Sw02
+		ContinueCourse -> left -> ne02
+		BranchCourse -> right -> ne03
+Node ne05:
 	Track = track2
-	Type = BufferStop -> ['bus4']
-	Neighbours = 2 -> ['ne27', 'ne32']
-Node ne32:
+	TrainDetectionElements -> tde105
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus175']
+	Neighbours = 2 -> ['ne06', 'ne07']
+	Switches -> Sw03
+		ContinueCourse -> left -> ne06
+		BranchCourse -> right -> ne07
+Node ne06:
+	Track = track13
+	TrainDetectionElements -> tde109
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne05', 'ne07', 'ne08']
+Node ne07:
+	Track = track14
+	TrainDetectionElements -> tde108
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne05', 'ne06', 'ne08']
+Node ne08:
+	Track = track4
+	TrainDetectionElements -> tde112
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus177']
+	Neighbours = 2 -> ['ne06', 'ne07']
+	Switches -> Sw04
+		ContinueCourse -> right -> ne06
+		BranchCourse -> left -> ne07
+Node ne09:
+	Track = track6
+	TrainDetectionElements -> tde122
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus179']
+	Neighbours = 2 -> ['ne10', 'ne11']
+	Switches -> Sw05
+		ContinueCourse -> right -> ne10
+		BranchCourse -> left -> ne11
+Node ne11:
+	Track = track16
+	TrainDetectionElements -> tde118
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne09', 'ne12', 'ne10']
+Node ne10:
+	Track = track15
+	TrainDetectionElements -> tde119
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne09', 'ne11', 'ne12']
+Node ne12:
+	Track = track5
+	TrainDetectionElements -> tde113
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus178']
+	Neighbours = 2 -> ['ne11', 'ne10']
+	Switches -> Sw06
+		ContinueCourse -> left -> ne10
+		BranchCourse -> right -> ne11
+Node ne13:
 	Track = track7
-	Type = BufferStop -> ['bus35']
-	Neighbours = 2 -> ['ne27', 'ne31']
+	Type = BufferStop -> ['bus180']
+	Neighbours = 2 -> ['ne14', 'ne15']
+Node ne14:
+	Track = track17
+	Neighbours = 4 -> ['ne13', 'ne15', 'ne16', 'ne17']
+	Switches -> Sw07
+		ContinueCourse -> right -> ne13
+		BranchCourse -> left -> ne15
+	Switches -> Sw08
+		ContinueCourse -> left -> ne16
+		BranchCourse -> right -> ne17
+Node ne15:
+	Track = track8
+	TrainDetectionElements -> tde131
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus181']
+	Neighbours = 2 -> ['ne13', 'ne14']
+Node ne16:
+	Track = track9
+	Type = BufferStop -> ['bus182']
+	Neighbours = 2 -> ['ne14', 'ne17']
+Node ne17:
+	Track = track10
+	TrainDetectionElements -> tde136
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus183']
+	Neighbours = 2 -> ['ne14', 'ne16']
