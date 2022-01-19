@@ -467,24 +467,6 @@
 					<spotLocation netElementRef="ne3" intrinsicCoord="0.6111" applicationDirection="reverse" id="sig17_sloc01"/>
 					<name name="C17" language="en"/>
 				</signalIS>
-				<signalIS isSwitchable="false" id="sig19">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S19"/>
-					<spotLocation netElementRef="ne1" intrinsicCoord="0.3777" applicationDirection="normal" id="sig19_sloc01"/>
-					<name name="H19" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig20">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S20"/>
-					<spotLocation netElementRef="ne1" intrinsicCoord="0.3777" applicationDirection="normal" id="sig20_sloc01"/>
-					<name name="H20" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig21">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S21"/>
-					<spotLocation netElementRef="ne1" intrinsicCoord="0.3777" applicationDirection="normal" id="sig21_sloc01"/>
-					<name name="H21" language="en"/>
-				</signalIS>
 				<signalIS isSwitchable="false" id="sig23">
 					<signalConstruction positionAtTrack="right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S23"/>
@@ -497,12 +479,6 @@
 					<spotLocation netElementRef="ne3" intrinsicCoord="0.3888" applicationDirection="normal" id="sig24_sloc01"/>
 					<name name="S24" language="en"/>
 				</signalIS>
-				<signalIS isSwitchable="false" id="sig25">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S25"/>
-					<spotLocation netElementRef="ne3" intrinsicCoord="0.3888" applicationDirection="normal" id="sig25_sloc01"/>
-					<name name="H25" language="en"/>
-				</signalIS>
 				<signalIS isSwitchable="false" id="sig26">
 					<signalConstruction positionAtTrack="right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S26"/>
@@ -514,12 +490,6 @@
 					<designator register="_Example" entry="SIGNAL S28"/>
 					<spotLocation netElementRef="ne10" intrinsicCoord="0.5996" applicationDirection="reverse" id="sig28_sloc01"/>
 					<name name="B28" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig30">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S30"/>
-					<spotLocation netElementRef="ne5" intrinsicCoord="0.4055" applicationDirection="normal" id="sig30_sloc01"/>
-					<name name="H30" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig31">
 					<signalConstruction positionAtTrack="right" type="light"/>
@@ -544,12 +514,6 @@
 					<designator register="_Example" entry="SIGNAL S34"/>
 					<spotLocation netElementRef="ne34" intrinsicCoord="0.6573" applicationDirection="reverse" id="sig34_sloc01"/>
 					<name name="S34" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig35">
-					<signalConstruction positionAtTrack="right" type="light"/>
-					<designator register="_Example" entry="SIGNAL S35"/>
-					<spotLocation netElementRef="ne34" intrinsicCoord="0.6573" applicationDirection="reverse" id="sig35_sloc01"/>
-					<name name="H35" language="en"/>
 				</signalIS>
 			</signalsIS>
 			<switchesIS>
@@ -875,7 +839,7 @@
 					<name name="S11" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig13" id="vis01_sep30">
-					<coordinate x="575.0" y="-450"/>
+					<coordinate x="665.0" y="-450"/>
 					<name name="S13" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig14" id="vis01_sep31">
@@ -883,7 +847,7 @@
 					<name name="S14" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig15" id="vis01_sep32">
-					<coordinate x="-1430.0" y="-450"/>
+					<coordinate x="-1160.0" y="-450"/>
 					<name name="S15" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig16" id="vis01_sep33">
@@ -894,61 +858,37 @@
 					<coordinate x="-50.0" y="-450"/>
 					<name name="S17" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig19" id="vis01_sep35">
-					<coordinate x="-1340.0" y="-450"/>
-					<name name="S19" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig20" id="vis01_sep36">
-					<coordinate x="-1250.0" y="-450"/>
-					<name name="S20" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig21" id="vis01_sep37">
-					<coordinate x="-1160.0" y="-450"/>
-					<name name="S21" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig23" id="vis01_sep38">
+				<spotElementProjection refersToElement="sig23" id="vis01_sep35">
 					<coordinate x="700.0" y="-750"/>
 					<name name="S23" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig24" id="vis01_sep39">
-					<coordinate x="-340.0" y="-450"/>
+				<spotElementProjection refersToElement="sig24" id="vis01_sep36">
+					<coordinate x="-250.0" y="-450"/>
 					<name name="S24" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig25" id="vis01_sep40">
-					<coordinate x="-250.0" y="-450"/>
-					<name name="S25" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig26" id="vis01_sep41">
+				<spotElementProjection refersToElement="sig26" id="vis01_sep37">
 					<coordinate x="232.0" y="-750"/>
 					<name name="S26" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig28" id="vis01_sep42">
+				<spotElementProjection refersToElement="sig28" id="vis01_sep38">
 					<coordinate x="1600.0" y="-750"/>
 					<name name="S28" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig30" id="vis01_sep43">
-					<coordinate x="665.0" y="-450"/>
-					<name name="S30" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig31" id="vis01_sep44">
+				<spotElementProjection refersToElement="sig31" id="vis01_sep39">
 					<coordinate x="580.0" y="-1530"/>
 					<name name="S31" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig32" id="vis01_sep45">
+				<spotElementProjection refersToElement="sig32" id="vis01_sep40">
 					<coordinate x="1090.0" y="-1080"/>
 					<name name="S32" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig33" id="vis01_sep46">
+				<spotElementProjection refersToElement="sig33" id="vis01_sep41">
 					<coordinate x="1040.0" y="-1920"/>
 					<name name="S33" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig34" id="vis01_sep47">
-					<coordinate x="2410.0" y="-1800"/>
-					<name name="S34" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig35" id="vis01_sep48">
+				<spotElementProjection refersToElement="sig34" id="vis01_sep42">
 					<coordinate x="2320.0" y="-1800"/>
-					<name name="S35" language="en"/>
+					<name name="S34" language="en"/>
 				</spotElementProjection>
 				<linearElementProjection refersToElement="ne1" id="vis01_lep01">
 					<coordinate x="-1500.000" y="-450.000"/>
@@ -1105,32 +1045,17 @@
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig17">
 					<refersTo ref="sig17"/>
 				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig19">
-					<refersTo ref="sig19"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig20">
-					<refersTo ref="sig20"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig21">
-					<refersTo ref="sig21"/>
-				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig23">
 					<refersTo ref="sig23"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig24">
 					<refersTo ref="sig24"/>
 				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig25">
-					<refersTo ref="sig25"/>
-				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig26">
 					<refersTo ref="sig26"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig28">
 					<refersTo ref="sig28"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig30">
-					<refersTo ref="sig30"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig31">
 					<refersTo ref="sig31"/>
@@ -1143,9 +1068,6 @@
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig34">
 					<refersTo ref="sig34"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig35">
-					<refersTo ref="sig35"/>
 				</signalIL>
 			</signalsIL>
 		</assetsForIL>
