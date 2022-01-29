@@ -30,7 +30,7 @@ class OverCrossing(XCrossing.XCrossing):
 	def BelongsToParent(self, aBelongsToParent : tRef):
 		self.___belongsToParent = aBelongsToParent
 	@AllowedLoadingGauge.setter
-	def AllowedLoadingGauge(self, *aAllowedLoadingGauge : tElementWithIDref):
+	def AllowedLoadingGauge(self, aAllowedLoadingGauge : tElementWithIDref):	# *aAllowedLoadingGauge
 		self.___allowedLoadingGauge = aAllowedLoadingGauge
 	@Length.setter
 	def Length(self, *aLength : Length):

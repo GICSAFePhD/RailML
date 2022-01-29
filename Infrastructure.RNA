@@ -16,7 +16,7 @@ Node ne16:
 	Neighbours = 4 -> ['ne14', 'ne15', 'ne18', 'ne17']
 	Level crossing -> lcr120
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-278, -450] | Coordinate: 0.3873
+		Position -> [-147, -450] | Coordinate: 0.3839
 	Switches -> Sw01
 		ContinueCourse -> right -> ne14
 		BranchCourse -> left -> ne15

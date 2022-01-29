@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-from RailML.Infrastructure.tCrossedElementTypeExt import tCrossedElementTypeExt
-from RailML.Common.tElementWithIDandName import tElementWithIDandName
-from RailML.Common.tRef import tRef
+from RailML.Infrastructure import tCrossedElementTypeExt
+from RailML.Common import tElementWithIDandName
+from RailML.Common import tRef
 from typing import List
 
-class CrossedElement(tElementWithIDandName):
+class CrossesElement(tElementWithIDandName.tElementWithIDandName):
 	def setType(self, aType : tCrossedElementTypeExt):
 		self.___type = aType
 
@@ -19,6 +19,7 @@ class CrossedElement(tElementWithIDandName):
 		return self.___ref
 
 	def __init__(self):
+		super().__init__()
 		self.___type : tCrossedElementTypeExt = None
 		# @AssociationType Infrastructure.tCrossedElementTypeExt
 		# """type of the element that is crossed by the over/under/level crossing"""

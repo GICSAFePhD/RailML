@@ -9,7 +9,7 @@ class UnderCrossings(object):
 		return self.___underCrossing
 	
 	@UnderCrossing.setter
-	def UnderCrossing(self, *aUnderCrossing : UnderCrossing):
+	def UnderCrossing(self, aUnderCrossing : UnderCrossing):	#TODO *aUnderCrossing
 		self.___underCrossing = aUnderCrossing
 
 	def create_UnderCrossing(self):

@@ -34,7 +34,7 @@ class KeyLockIL(LogicalDevice.LogicalDevice):
 	def HasAutomaticKeyRelease(self, aHasAutomaticKeyRelease : Long):
 		self.___hasAutomaticKeyRelease = aHasAutomaticKeyRelease
 	@HasAutomaticKeyLock.setter
-	def GradienHasAutomaticKeyLocktCurve(self, aHasAutomaticKeyLock : Long):
+	def HasAutomaticKeyLock(self, aHasAutomaticKeyLock : Long):
 		self.___hasAutomaticKeyLock = aHasAutomaticKeyLock
 	@KeyRequestTime.setter
 	def KeyRequestTime(self, aKeyRequestTime : Duration):
@@ -46,7 +46,7 @@ class KeyLockIL(LogicalDevice.LogicalDevice):
 	def AcceptsKey(self, aAcceptsKey : EntityILref):
 		self.___acceptsKey = aAcceptsKey
 	@HasTvdSection.setter
-	def HasTvdSection(self, *aHasTvdSection : EntityILref):
+	def HasTvdSection(self, aHasTvdSection : EntityILref):	#TODO *aHasTvdSection
 		self.___hasTvdSection = aHasTvdSection
 	@HasSlaveLock.setter
 	def HasSlaveLock(self, aHasSlaveLock : EntityILref):
@@ -64,13 +64,14 @@ class KeyLockIL(LogicalDevice.LogicalDevice):
 		self.HasSlaveLock.append(EntityILref.EntityILref())
 
 	def __init__(self):
-		self.___hasAutomaticKeyRelease : Long = 0
+		super().__init__()
+		self.___hasAutomaticKeyRelease : Long = None
 		"""The key of a siding on open line may be released automatically when the related TVD section (trigger) becomes occupied."""
-		self.___hasAutomaticKeyLock : Long = 0
+		self.___hasAutomaticKeyLock : Long = None
 		"""The key may be automatically relocked when returned into the lock. Thus the key can be used only once."""
-		self.___keyRequestTime : Duration = 0
+		self.___keyRequestTime : Duration = None
 		"""The time period a request for key release is indicated to the operator."""
-		self.___keyAuthoriseTime : Duration = 0
+		self.___keyAuthoriseTime : Duration = None
 		"""The time period the key release is active after commanded by the operator. Afterwards a not removed key will be automatically relocked again."""
 		self.___acceptsKey : EntityILref = None
 		"""The reference to the particular key used with this master lock."""
