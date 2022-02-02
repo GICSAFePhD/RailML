@@ -1,47 +1,810 @@
-Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 1
-Node ne14:
-	Track = track2
-	Type = Border -> line112
-		Type -> station
-		IsOpenEnd -> true
-	Neighbours = 2 -> ['ne16', 'ne15']
-Node ne15:
-	Track = track3
-	Type = Border -> line113
-		Type -> station
-		IsOpenEnd -> true
-	Neighbours = 2 -> ['ne14', 'ne16']
-Node ne16:
+Nodes: 59 | Switches: 19 | Signals: 0 | Detectors: 49 | Ends: 31 | Barriers: 1
+Node ne1:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
 	Track = track1
-	Neighbours = 4 -> ['ne14', 'ne15', 'ne18', 'ne17']
-	Level crossing -> lcr120
-		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [-147, -450] | Coordinate: 0.3839
-	Switches -> Sw01
-		ContinueCourse -> right -> ne14
-		BranchCourse -> left -> ne15
-	Switches -> Sw02
-		ContinueCourse -> left -> ne18
-		BranchCourse -> right -> ne17
-Node ne17:
+	TrainDetectionElements -> ac235
+		Type -> axleCounter
+		Side -> right
+	Type = BufferStop -> ['bus2']
+	Neighbours = 2 -> ['ne9', 'ne7']
+Node ne4:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track3
+	Type = Border -> sb450
+		Type -> station
+		IsOpenEnd -> false
+	Type = BufferStop -> ['bus5']
+	Neighbours = 1 -> ['ne106']
+Node ne7:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
 	Track = track5
-	Neighbours = 4 -> ['ne16', 'ne18', 'ne20', 'ne19']
-Node ne18:
-	Track = track4
-	Type = Border -> line114
-		Type -> station
-		IsOpenEnd -> true
-	Neighbours = 2 -> ['ne16', 'ne17']
-Node ne19:
-	Track = track7
-	Type = BufferStop -> ['bus88']
-	Neighbours = 2 -> ['ne17', 'ne20']
-Node ne20:
+	TrainDetectionElements -> ac236
+		Type -> axleCounter
+		Side -> left
+	Type = BufferStop -> ['bus8']
+	Neighbours = 2 -> ['ne1', 'ne9']
+Node ne9:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
 	Track = track6
-	Type = Border -> line115
+	TrainDetectionElements -> ac237
+		Type -> axleCounter
+		Side -> right
+	TrainDetectionElements -> ac238
+		Type -> axleCounter
+		Side -> right
+	Type = Border -> sb431
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 3 -> ['ne1', 'ne7', 'ne95']
+	Switches -> 68W02
+		ContinueCourse -> right -> ne1
+		BranchCourse -> left -> ne7
+Node ne11:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track8
+	TrainDetectionElements -> tde244
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne59', 'ne17', 'ne52', 'ne14']
+Node ne14:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track4
+	TrainDetectionElements -> tde243
+		Type -> insulatedRailJoint
+	Derailer -> der172
+		 Side -> left
+	Type = BufferStop -> ['bus6']
+	Neighbours = 2 -> ['ne11', 'ne52']
+Node ne17:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track7
+	TrainDetectionElements -> tde245
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde255
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne11', 'ne78', 'ne79', 'ne59']
+Node ne21:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track30
+	TrainDetectionElements -> tde247
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde253
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde257
+		Type -> insulatedRailJoint
+	Neighbours = 5 -> ['ne72', 'ne71', 'ne79', 'ne77', 'ne94']
+	Switches -> Sw01
+		ContinueCourse -> right -> ne72
+		BranchCourse -> left -> ne71
+Node ne23:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track12
+	TrainDetectionElements -> tde264
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde266
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne64', 'ne24', 'ne26']
+Node ne24:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track11
+	TrainDetectionElements -> tde263
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde265
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne23', 'ne64', 'ne26']
+Node ne26:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track13
+	TrainDetectionElements -> tde267
+		Type -> insulatedRailJoint
+	Type = Border -> sb307
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 3 -> ['ne23', 'ne24', 'ne65']
+	Switches -> 70W02
+		ContinueCourse -> right -> ne23
+		BranchCourse -> left -> ne24
+Node ne29:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track16
+	TrainDetectionElements -> tde272
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde278
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne30', 'ne83', 'ne35', 'ne32']
+Node ne30:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track14
+	TrainDetectionElements -> tde279
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne29', 'ne83', 'ne89', 'ne91']
+	Switches -> Sw08
+		ContinueCourse -> right -> ne83
+		BranchCourse -> left -> ne29
+	Switches -> Sw12
+		ContinueCourse -> right -> ne91
+		BranchCourse -> left -> ne89
+Node ne32:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track18
+	TrainDetectionElements -> tde273
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne29', 'ne35', 'ne83', 'ne82']
+	Switches -> Sw04
+		ContinueCourse -> right -> ne83
+		BranchCourse -> left -> ne82
+Node ne35:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track17
+	Neighbours = 4 -> ['ne29', 'ne32', 'ne85', 'ne100']
+	Switches -> Sw09
+		ContinueCourse -> right -> ne29
+		BranchCourse -> left -> ne32
+Node ne41:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track21
+	TrainDetectionElements -> tde276
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus37']
+	Neighbours = 3 -> ['ne82', 'ne84', 'ne85']
+Node ne43:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track22
+	TrainDetectionElements -> tde268
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne44', 'ne48', 'ne47', 'ne102']
+Node ne44:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> tde270
+		Type -> insulatedRailJoint
+	Type = Border -> sb437
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 3 -> ['ne43', 'ne101', 'ne102']
+	Switches -> 71W01
+		ContinueCourse -> right -> ne43
+		BranchCourse -> left -> ne102
+Node ne47:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track24
+	Type = BufferStop -> ['bus50']
+	Neighbours = 2 -> ['ne43', 'ne48']
+Node ne48:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track23
+	Type = Border -> line441
 		Type -> station
 		IsOpenEnd -> true
-	Neighbours = 2 -> ['ne17', 'ne19']
-	Switches -> Sw03
-		ContinueCourse -> left -> ne19
-		BranchCourse -> right -> ne17
+	Neighbours = 2 -> ['ne43', 'ne47']
+	Switches -> 71W02
+		ContinueCourse -> right -> ne43
+		BranchCourse -> left -> ne47
+Node ne51:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track26
+	Neighbours = 5 -> ['ne52', 'ne72', 'ne71', 'ne74', 'ne75']
+Node ne52:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track9
+	TrainDetectionElements -> tde246
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne11', 'ne14', 'ne51', 'ne72']
+	Switches -> 69W04
+		ContinueCourse -> right -> ne11
+		BranchCourse -> left -> ne14
+	Switches -> Sw15
+		ContinueCourse -> right -> ne51
+		BranchCourse -> left -> ne72
+Node ne59:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> ac241
+		Type -> axleCounter
+		Side -> left
+	TrainDetectionElements -> tde242
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde281
+		Type -> insulatedRailJoint
+		Side -> left
+	Neighbours = 3 -> ['ne11', 'ne17', 'ne95']
+	Switches -> 69W03
+		ContinueCourse -> left -> ne17
+		BranchCourse -> right -> ne11
+Node ne64:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track10
+	TrainDetectionElements -> tde261
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde262
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne23', 'ne24', 'ne103']
+	Switches -> 70W01
+		ContinueCourse -> right -> ne24
+		BranchCourse -> left -> ne23
+Node ne65:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb438
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne26', 'ne102']
+Node ne67:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb439
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne70', 'ne103']
+Node ne70:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> tde248
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde250
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde251
+		Type -> insulatedRailJoint
+	Type = Border -> sb309
+		Type -> station
+		IsOpenEnd -> false
+	Type = Border -> sb440
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne67', 'ne104']
+Node ne71:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track31
+	Neighbours = 5 -> ['ne21', 'ne51', 'ne72', 'ne74', 'ne75']
+Node ne72:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track25
+	Neighbours = 4 -> ['ne21', 'ne51', 'ne52', 'ne71']
+Node ne73:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track28
+	TrainDetectionElements -> tde249
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne74', 'ne77', 'ne75', 'ne104']
+Node ne74:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track32
+	Neighbours = 5 -> ['ne51', 'ne71', 'ne73', 'ne75', 'ne104']
+Node ne75:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track29
+	Neighbours = 5 -> ['ne51', 'ne71', 'ne73', 'ne74', 'ne77']
+Node ne77:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track27
+	TrainDetectionElements -> tde252
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde254
+		Type -> insulatedRailJoint
+	Neighbours = 5 -> ['ne21', 'ne73', 'ne75', 'ne79', 'ne94']
+	Switches -> Sw16
+		ContinueCourse -> right -> ne75
+		BranchCourse -> left -> ne73
+Node ne78:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> tde259
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde319
+		Type -> insulatedRailJoint
+	Type = Border -> sb398
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 3 -> ['ne17', 'ne79', 'ne93']
+	Switches -> Sw06
+		ContinueCourse -> right -> ne17
+		BranchCourse -> left -> ne79
+Node ne79:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track33
+	TrainDetectionElements -> tde256
+		Type -> insulatedRailJoint
+	Neighbours = 5 -> ['ne17', 'ne21', 'ne77', 'ne78', 'ne94']
+Node ne82:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track34
+	Neighbours = 5 -> ['ne32', 'ne41', 'ne83', 'ne84', 'ne85']
+Node ne83:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track15
+	TrainDetectionElements -> tde277
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde280
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne29', 'ne30', 'ne32', 'ne82']
+Node ne84:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track35
+	TrainDetectionElements -> tde329
+		Type -> insulatedRailJoint
+	Type = BufferStop -> ['bus327']
+	Neighbours = 3 -> ['ne41', 'ne82', 'ne85']
+Node ne85:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track20
+	TrainDetectionElements -> tde274
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde275
+		Type -> insulatedRailJoint
+	Neighbours = 5 -> ['ne35', 'ne41', 'ne82', 'ne84', 'ne100']
+Node ne86:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track37
+	Type = BufferStop -> ['bus331']
+	Neighbours = 2 -> ['ne88', 'ne87']
+	Switches -> Sw11
+		ContinueCourse -> right -> ne87
+		BranchCourse -> left -> ne88
+Node ne87:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track39
+	Neighbours = 4 -> ['ne86', 'ne88', 'ne91', 'ne90']
+Node ne88:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track38
+	Type = BufferStop -> ['bus332']
+	Neighbours = 2 -> ['ne86', 'ne87']
+Node ne89:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track36
+	Type = BufferStop -> ['bus330']
+	Neighbours = 2 -> ['ne30', 'ne91']
+Node ne90:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track41
+	Type = BufferStop -> ['bus335']
+	Neighbours = 2 -> ['ne87', 'ne91']
+Node ne91:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track40
+	Neighbours = 4 -> ['ne30', 'ne87', 'ne89', 'ne90']
+	Switches -> Sw13
+		ContinueCourse -> right -> ne87
+		BranchCourse -> left -> ne90
+Node ne93:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb432
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne78', 'ne96']
+Node ne94:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> tde260
+		Type -> insulatedRailJoint
+	TrainDetectionElements -> tde320
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne21', 'ne77', 'ne79', 'ne97']
+Node ne95:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> ac239
+		Type -> axleCounter
+		Side -> left
+	TrainDetectionElements -> ac240
+		Type -> axleCounter
+		Side -> left
+	Type = Border -> sb301
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne9', 'ne59']
+	Level crossing -> lcr176
+		Protection -> true | Barriers -> doubleHalfBarrier | Lights -> none Acoustic -> bell
+		Position -> [784, -300] | Coordinate: 0.4424
+Node ne96:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb434
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne93', 'ne98']
+Node ne97:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb399
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne94', 'ne99']
+Node ne98:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb449
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne96', 'ne105']
+Node ne99:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb433
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne97', 'ne106']
+Node ne100:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track19
+	TrainDetectionElements -> tde271
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne35', 'ne85', 'ne101']
+	Switches -> Sw10
+		ContinueCourse -> right -> ne35
+		BranchCourse -> left -> ne85
+Node ne101:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb436
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne44', 'ne100']
+Node ne102:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	TrainDetectionElements -> tde269
+		Type -> insulatedRailJoint
+	Neighbours = 3 -> ['ne43', 'ne44', 'ne65']
+Node ne103:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb306
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne64', 'ne67']
+Node ne104:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Neighbours = 3 -> ['ne70', 'ne73', 'ne74']
+	Switches -> Sw02
+		ContinueCourse -> right -> ne73
+		BranchCourse -> left -> ne74
+Node ne105:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Track = track2
+	Type = BufferStop -> ['bus3']
+	Neighbours = 1 -> ['ne98']
+Node ne106:
+	Lines -> line442
+	Lines -> line443
+	Lines -> line451
+	Lines -> line445
+	Lines -> line446
+	Lines -> line447
+	Lines -> line448
+	Type = Border -> sb435
+		Type -> station
+		IsOpenEnd -> false
+	Neighbours = 2 -> ['ne4', 'ne99']
