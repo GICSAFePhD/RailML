@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_2.railml</dc:title>
-        <dc:date>2022-01-28T12:34:06Z</dc:date>
+        <dc:date>2022-02-04T14:34:07Z</dc:date>
         <dc:creator>Neat</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -2817,7 +2817,7 @@
                     <leftBranch netRelationRef="nr_ne17ne59_swi13" branchingSpeed="40" joiningSpeed="40" radius="0"/>
                     <rightBranch netRelationRef="nr_ne11ne59_swi13" branchingSpeed="40" joiningSpeed="40" radius="400"/>
                 </switchIS>
-                <switchIS id="swi15" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi15" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="69W04" language="en"/>
                     <spotLocation id="swi15_loc-1" netElementRef="ne52" applicationDirection="normal" intrinsicCoord="1.0000">
                         <linearCoordinate positioningSystemRef="loc-1" measure="4.5"/>
@@ -2847,7 +2847,7 @@
                     <leftBranch netRelationRef="nr_ne29ne30_swi31" branchingSpeed="40" joiningSpeed="40" radius="-500"/>
                     <rightBranch netRelationRef="nr_ne30ne83_swi31" branchingSpeed="40" joiningSpeed="40" radius="0"/>
                 </switchIS>
-                <switchIS id="swi33" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi33" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw09" language="en"/>
                     <spotLocation id="swi33_sloc01" netElementRef="ne35" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH Sw09"/>
@@ -2861,7 +2861,7 @@
                     <leftBranch netRelationRef="nr_ne85ne100_swi36" branchingSpeed="40" joiningSpeed="40" radius="-500"/>
                     <rightBranch netRelationRef="nr_ne35ne100_swi36" branchingSpeed="40" joiningSpeed="40" radius="0"/>
                 </switchIS>
-                <switchIS id="swi45" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi45" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="71W01" language="en"/>
                     <spotLocation id="swi45_sloc01" netElementRef="ne44" applicationDirection="reverse" intrinsicCoord="0.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH 71W01"/>
@@ -2875,14 +2875,14 @@
                     <leftBranch netRelationRef="nr_ne47ne48_swi49" branchingSpeed="60" joiningSpeed="60" radius="-500"/>
                     <rightBranch netRelationRef="nr_ne43ne48_swi49" branchingSpeed="40" joiningSpeed="60" radius="0"/>
                 </switchIS>
-                <switchIS id="swi53" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi53" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw15" language="en"/>
                     <spotLocation id="swi53_sloc01" netElementRef="ne52" applicationDirection="reverse" intrinsicCoord="0.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH Sw15"/>
                     <leftBranch netRelationRef="nr_ne52ne72_swi53" branchingSpeed="60" joiningSpeed="40" radius="0"/>
                     <rightBranch netRelationRef="nr_ne51ne52_swi53" branchingSpeed="40" joiningSpeed="40" radius="500"/>
                 </switchIS>
-                <switchIS id="swi55" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi55" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw16" language="en"/>
                     <spotLocation id="swi55_sloc01" netElementRef="ne77" applicationDirection="normal" intrinsicCoord="0.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH Sw16"/>
@@ -2939,14 +2939,14 @@
                     <turningBranch netRelationRef="nr_ne41ne82_dsw328" branchingSpeed="60" joiningSpeed="60" radius="-500"/>
                     <turningBranch netRelationRef="nr_ne84ne85_dsw328" branchingSpeed="60" joiningSpeed="60" radius="-500"/>
                 </switchIS>
-                <switchIS id="swi333" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi333" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw11" language="en"/>
                     <spotLocation id="swi333_sloc01" netElementRef="ne86" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH Sw11"/>
                     <leftBranch netRelationRef="nr_ne86ne88_swi333" branchingSpeed="60" joiningSpeed="60" radius="0"/>
                     <rightBranch netRelationRef="nr_ne86ne87_swi333" branchingSpeed="60" joiningSpeed="60" radius="500"/>
                 </switchIS>
-                <switchIS id="swi334" continueCourse="right" branchCourse="left" type="ordinarySwitch">
+                <switchIS id="swi334" continueCourse="left" branchCourse="right" type="ordinarySwitch">
                     <name name="Sw12" language="en"/>
                     <spotLocation id="swi334_sloc01" netElementRef="ne30" applicationDirection="normal" intrinsicCoord="1.0000"/>
                     <designator register="_AdvancedExample" entry="SWITCH Sw12"/>
@@ -4874,21 +4874,21 @@
             <tvdSections>
                 <tvdSection id="tvd230" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="40"/>
-                    <hasDemarcatingTraindetector ref="tde272"/>
-                    <hasDemarcatingTraindetector ref="tde274"/>
-                    <hasDemarcatingTraindetector ref="tde271"/>
                     <hasDemarcatingTraindetector ref="tde273"/>
+                    <hasDemarcatingTraindetector ref="tde274"/>
+                    <hasDemarcatingTraindetector ref="tde272"/>
+                    <hasDemarcatingTraindetector ref="tde271"/>
                 </tvdSection>
                 <tvdSection id="tvd344" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="08"/>
-                    <hasDemarcatingTraindetector ref="tde242"/>
                     <hasDemarcatingTraindetector ref="tde281"/>
+                    <hasDemarcatingTraindetector ref="tde242"/>
                 </tvdSection>
                 <tvdSection id="tvd345" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="09"/>
-                    <hasDemarcatingTraindetector ref="tde242"/>
                     <hasDemarcatingTraindetector ref="tde245"/>
                     <hasDemarcatingTraindetector ref="tde244"/>
+                    <hasDemarcatingTraindetector ref="tde242"/>
                 </tvdSection>
                 <tvdSection id="tvd346" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="10"/>
@@ -4898,13 +4898,13 @@
                 <tvdSection id="tvd347" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="11"/>
                     <hasDemarcatingTraindetector ref="tde243"/>
-                    <hasDemarcatingTraindetector ref="tde244"/>
                     <hasDemarcatingTraindetector ref="tde246"/>
+                    <hasDemarcatingTraindetector ref="tde244"/>
                 </tvdSection>
                 <tvdSection id="tvd348" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="12"/>
-                    <hasDemarcatingTraindetector ref="tde255"/>
                     <hasDemarcatingTraindetector ref="tde245"/>
+                    <hasDemarcatingTraindetector ref="tde255"/>
                 </tvdSection>
                 <tvdSection id="tvd349" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="13"/>
@@ -4944,22 +4944,22 @@
                 </tvdSection>
                 <tvdSection id="tvd358" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="21"/>
-                    <hasDemarcatingTraindetector ref="tde246"/>
-                    <hasDemarcatingTraindetector ref="tde252"/>
                     <hasDemarcatingTraindetector ref="tde248"/>
-                    <hasDemarcatingTraindetector ref="tde247"/>
+                    <hasDemarcatingTraindetector ref="tde246"/>
                     <hasDemarcatingTraindetector ref="tde249"/>
+                    <hasDemarcatingTraindetector ref="tde247"/>
+                    <hasDemarcatingTraindetector ref="tde252"/>
                 </tvdSection>
                 <tvdSection id="tvd359" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="22"/>
-                    <hasDemarcatingTraindetector ref="tde248"/>
                     <hasDemarcatingTraindetector ref="tde250"/>
+                    <hasDemarcatingTraindetector ref="tde248"/>
                 </tvdSection>
                 <tvdSection id="tvd360" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="23"/>
                     <hasDemarcatingTraindetector ref="tde257"/>
-                    <hasDemarcatingTraindetector ref="tde320"/>
                     <hasDemarcatingTraindetector ref="tde254"/>
+                    <hasDemarcatingTraindetector ref="tde320"/>
                     <hasDemarcatingTraindetector ref="tde256"/>
                 </tvdSection>
                 <tvdSection id="tvd361" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
@@ -4969,19 +4969,19 @@
                 </tvdSection>
                 <tvdSection id="tvd362" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="25"/>
-                    <hasDemarcatingTraindetector ref="tde251"/>
                     <hasDemarcatingTraindetector ref="tde250"/>
+                    <hasDemarcatingTraindetector ref="tde251"/>
                 </tvdSection>
                 <tvdSection id="tvd364" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="27"/>
-                    <hasDemarcatingTraindetector ref="tde261"/>
                     <hasDemarcatingTraindetector ref="tde262"/>
+                    <hasDemarcatingTraindetector ref="tde261"/>
                 </tvdSection>
                 <tvdSection id="tvd365" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="28"/>
                     <hasDemarcatingTraindetector ref="tde262"/>
-                    <hasDemarcatingTraindetector ref="tde264"/>
                     <hasDemarcatingTraindetector ref="tde263"/>
+                    <hasDemarcatingTraindetector ref="tde264"/>
                 </tvdSection>
                 <tvdSection id="tvd366" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="29"/>
@@ -4990,8 +4990,8 @@
                 </tvdSection>
                 <tvdSection id="tvd367" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="30"/>
-                    <hasDemarcatingTraindetector ref="tde265"/>
                     <hasDemarcatingTraindetector ref="tde263"/>
+                    <hasDemarcatingTraindetector ref="tde265"/>
                 </tvdSection>
                 <tvdSection id="tvd368" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="31"/>
@@ -5001,14 +5001,14 @@
                 </tvdSection>
                 <tvdSection id="tvd370" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="33"/>
-                    <hasDemarcatingTraindetector ref="tde268"/>
-                    <hasDemarcatingTraindetector ref="tde269"/>
                     <hasDemarcatingTraindetector ref="tde270"/>
+                    <hasDemarcatingTraindetector ref="tde269"/>
+                    <hasDemarcatingTraindetector ref="tde268"/>
                 </tvdSection>
                 <tvdSection id="tvd371" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="34"/>
-                    <hasDemarcatingBufferstop ref="line441"/>
                     <hasDemarcatingBufferstop ref="bus50"/>
+                    <hasDemarcatingBufferstop ref="line441"/>
                     <hasDemarcatingTraindetector ref="tde268"/>
                 </tvdSection>
                 <tvdSection id="tvd373" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
@@ -5023,16 +5023,16 @@
                 </tvdSection>
                 <tvdSection id="tvd375" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="38"/>
-                    <hasDemarcatingTraindetector ref="tde276"/>
-                    <hasDemarcatingTraindetector ref="tde275"/>
                     <hasDemarcatingTraindetector ref="tde277"/>
                     <hasDemarcatingTraindetector ref="tde273"/>
+                    <hasDemarcatingTraindetector ref="tde275"/>
+                    <hasDemarcatingTraindetector ref="tde276"/>
                     <hasDemarcatingTraindetector ref="tde329"/>
                 </tvdSection>
                 <tvdSection id="tvd376" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="39"/>
-                    <hasDemarcatingTraindetector ref="tde280"/>
                     <hasDemarcatingTraindetector ref="tde277"/>
+                    <hasDemarcatingTraindetector ref="tde280"/>
                 </tvdSection>
                 <tvdSection id="tvd377" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="41"/>
@@ -5042,8 +5042,8 @@
                 <tvdSection id="tvd378" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="42"/>
                     <hasDemarcatingTraindetector ref="tde280"/>
-                    <hasDemarcatingTraindetector ref="tde279"/>
                     <hasDemarcatingTraindetector ref="tde278"/>
+                    <hasDemarcatingTraindetector ref="tde279"/>
                 </tvdSection>
                 <tvdSection id="tvd458" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="43"/>
@@ -5057,14 +5057,14 @@
                 </tvdSection>
                 <tvdSection id="tvd460" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="45"/>
-                    <hasDemarcatingTraindetector ref="ac236"/>
                     <hasDemarcatingTraindetector ref="ac235"/>
                     <hasDemarcatingTraindetector ref="ac237"/>
+                    <hasDemarcatingTraindetector ref="ac236"/>
                 </tvdSection>
                 <tvdSection id="tvd461" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="46"/>
-                    <hasDemarcatingTraindetector ref="ac237"/>
                     <hasDemarcatingTraindetector ref="ac238"/>
+                    <hasDemarcatingTraindetector ref="ac237"/>
                 </tvdSection>
                 <tvdSection id="tvd462" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_AdvancedExample" entry="47"/>

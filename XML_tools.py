@@ -138,11 +138,6 @@ def get_branches(current_object, xml_node, level = 0, idx = "", idx_txt = 0,igno
     for xml_tag_i in range(size_xml_tag):
         capitalized_tag = xml_tag[xml_tag_i][0].upper() + xml_tag[xml_tag_i][1:]
         
-        #print(capitalized_tag,ignore)
-        #ignore = {"Metadata","Common","Infrastructure"}
-        #        ,"DerailersIL","LevelCrossingsIL","SignalsIL","Routes","ShuntingZones","RouteReleaseGroupsRear",
-        #        "ConflictingRoutes","Overlaps","RouteRelations","AssetsForIL","SignalBoxes"}
-        
         if capitalized_tag in ignore:
             continue
         

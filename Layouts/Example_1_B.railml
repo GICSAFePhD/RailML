@@ -429,34 +429,6 @@
 					<coordinate x="1111.764" y="-450.000"/>
 					<name name="Plat02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig90" id="vis01_sep09">
-					<coordinate x="-1050.197" y="-300.000"/>
-					<name name="S08" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig91" id="vis01_sep10">
-					<coordinate x="955.833" y="-450.000"/>
-					<name name="S09" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig89" id="vis01_sep11">
-					<coordinate x="-939.465" y="-450.000"/>
-					<name name="S07" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig118" id="vis01_sep12">
-					<coordinate x="75.318" y="-450.000"/>
-					<name name="S12" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig119" id="vis01_sep13">
-					<coordinate x="-289.019" y="-450.000"/>
-					<name name="S11" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig121" id="vis01_sep14">
-					<coordinate x="1096.203" y="-300.000"/>
-					<name name="S10" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig122" id="vis01_sep15">
-					<coordinate x="122.465" y="-300.000"/>
-					<name name="S13" language="en"/>
-				</spotElementProjection>
 				<spotElementProjection refersToElement="swi84" id="vis01_sep16">
 					<coordinate x="-560.994" y="-450.000"/>
 					<name name="Sw01" language="en"/>
@@ -469,39 +441,39 @@
 					<coordinate x="666.530" y="-300.000"/>
 					<name name="Sw03" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig01" id="vis01_sep19">
+				<spotElementProjection refersToElement="sig01" id="vis01_sep12">
 					<coordinate x="128" y="-300"/>
 					<name name="S01" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig02" id="vis01_sep20">
+				<spotElementProjection refersToElement="sig02" id="vis01_sep13">
 					<coordinate x="-347" y="450"/>
 					<name name="S02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig03" id="vis01_sep21">
+				<spotElementProjection refersToElement="sig03" id="vis01_sep14">
 					<coordinate x="-47.0" y="450"/>
 					<name name="S03" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig04" id="vis01_sep22">
+				<spotElementProjection refersToElement="sig04" id="vis01_sep15">
 					<coordinate x="-875" y="450"/>
 					<name name="S04" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig05" id="vis01_sep23">
+				<spotElementProjection refersToElement="sig05" id="vis01_sep16">
 					<coordinate x="-1275" y="450"/>
 					<name name="S05" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig06" id="vis01_sep24">
+				<spotElementProjection refersToElement="sig06" id="vis01_sep17">
 					<coordinate x="1311" y="450"/>
 					<name name="S06" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig07" id="vis01_sep25">
+				<spotElementProjection refersToElement="sig07" id="vis01_sep18">
 					<coordinate x="911" y="450"/>
 					<name name="S07" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig09" id="vis01_sep26">
+				<spotElementProjection refersToElement="sig09" id="vis01_sep19">
 					<coordinate x="-810.0" y="-300"/>
 					<name name="S09" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig16" id="vis01_sep27">
+				<spotElementProjection refersToElement="sig16" id="vis01_sep20">
 					<coordinate x="1193.5" y="-300"/>
 					<name name="S16" language="en"/>
 				</spotElementProjection>

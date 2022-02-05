@@ -199,8 +199,8 @@ Node ne30:
 		ContinueCourse -> right -> ne83
 		BranchCourse -> left -> ne29
 	Switches -> Sw12
-		ContinueCourse -> right -> ne91
-		BranchCourse -> left -> ne89
+		ContinueCourse -> left -> ne89
+		BranchCourse -> right -> ne91
 Node ne32:
 	Lines -> line442
 	Lines -> line443
@@ -227,8 +227,8 @@ Node ne35:
 	Track = track17
 	Neighbours = 4 -> ['ne29', 'ne32', 'ne85', 'ne100']
 	Switches -> Sw09
-		ContinueCourse -> right -> ne29
-		BranchCourse -> left -> ne32
+		ContinueCourse -> left -> ne32
+		BranchCourse -> right -> ne29
 Node ne41:
 	Lines -> line442
 	Lines -> line443
@@ -269,8 +269,8 @@ Node ne44:
 		IsOpenEnd -> false
 	Neighbours = 3 -> ['ne43', 'ne101', 'ne102']
 	Switches -> 71W01
-		ContinueCourse -> right -> ne43
-		BranchCourse -> left -> ne102
+		ContinueCourse -> left -> ne102
+		BranchCourse -> right -> ne43
 Node ne47:
 	Lines -> line442
 	Lines -> line443
@@ -321,11 +321,11 @@ Node ne52:
 		Type -> insulatedRailJoint
 	Neighbours = 4 -> ['ne11', 'ne14', 'ne51', 'ne72']
 	Switches -> 69W04
-		ContinueCourse -> right -> ne11
-		BranchCourse -> left -> ne14
+		ContinueCourse -> left -> ne14
+		BranchCourse -> right -> ne11
 	Switches -> Sw15
-		ContinueCourse -> right -> ne51
-		BranchCourse -> left -> ne72
+		ContinueCourse -> left -> ne72
+		BranchCourse -> right -> ne51
 Node ne59:
 	Lines -> line442
 	Lines -> line443
@@ -475,8 +475,8 @@ Node ne77:
 		Type -> insulatedRailJoint
 	Neighbours = 5 -> ['ne21', 'ne73', 'ne75', 'ne79', 'ne94']
 	Switches -> Sw16
-		ContinueCourse -> right -> ne75
-		BranchCourse -> left -> ne73
+		ContinueCourse -> left -> ne73
+		BranchCourse -> right -> ne75
 Node ne78:
 	Lines -> line442
 	Lines -> line443
@@ -571,8 +571,8 @@ Node ne86:
 	Type = BufferStop -> ['bus331']
 	Neighbours = 2 -> ['ne88', 'ne87']
 	Switches -> Sw11
-		ContinueCourse -> right -> ne87
-		BranchCourse -> left -> ne88
+		ContinueCourse -> left -> ne88
+		BranchCourse -> right -> ne87
 Node ne87:
 	Lines -> line442
 	Lines -> line443
