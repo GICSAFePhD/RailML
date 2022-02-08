@@ -10,6 +10,12 @@
         <Attribute id="R_Main.A_RailMLPlugin_Version">0.9.5</Attribute>
         <Attribute id="_R_Core.A_RouteTerminalCategory">signals</Attribute>
         <Attribute id="_R_Core.A_RouteRailSetCategory">tvdSections</Attribute>
+        <Attribute id="R_Project_Info.A_Project_Name">Example_3</Attribute>
+        <Attribute id="R_Project_Info.A_Revision">1</Attribute>
+        <Attribute id="R_Project_Info.A_Author">Rail-AiD</Attribute>
+        <Attribute id="R_Project_Info.A_Comments">No</Attribute>
+        <Attribute id="R_railML_Info.A_Description">Example_3</Attribute>
+        <Attribute id="R_railML_Info.A_Author">Rail-AiD</Attribute>
         <Attribute id="R_railML_Info.A_Designator_registry">_Example</Attribute>
         <Attribute id="R_railML_Info.A_Validity_from">2019-11-21</Attribute>
         <Attribute id="R_railML_Info.A_Validity_to">2020-11-21</Attribute>
@@ -26,150 +32,150 @@
         <EntityName definitionId="TrackCircuitNameGen" nextId="14"/>
     </IdGenerators>
     <Rails>
-        <Rail id="R1" macro-area="">
+        <Rail id="ne991" macro-area="">
             <Path>
                 <Point x="-791.547" y="1.16141e-14"/>
                 <Point x="-2050" y="1.28588e-13"/>
             </Path>
         </Rail>
-        <Rail id="R61" macro-area="">
+        <Rail id="ne61" macro-area="">
             <Path>
                 <Point x="4500" y="0"/>
                 <Point x="4750" y="-250"/>
                 <Point x="4800" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R63" macro-area="">
+        <Rail id="ne63" macro-area="">
             <Path>
                 <Point x="4500" y="0"/>
                 <Point x="5758.7" y="0"/>
             </Path>
         </Rail>
-        <Rail id="R65" macro-area="">
+        <Rail id="ne65" macro-area="">
             <Path>
                 <Point x="7250" y="0"/>
                 <Point x="8368.4" y="0"/>
             </Path>
         </Rail>
-        <Rail id="R110" macro-area="">
+        <Rail id="ne910" macro-area="">
             <Path>
                 <Point x="11250" y="-1.77636e-15"/>
                 <Point x="11500" y="-250"/>
                 <Point x="11550" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R112" macro-area="">
+        <Rail id="ne912" macro-area="">
             <Path>
                 <Point x="11250" y="-1.77636e-15"/>
                 <Point x="12838.6" y="6.73007e-16"/>
             </Path>
         </Rail>
-        <Rail id="R114" macro-area="">
+        <Rail id="ne114" macro-area="">
             <Path>
                 <Point x="15397.5" y="0"/>
                 <Point x="14210" y="-4.77736e-15"/>
             </Path>
         </Rail>
-        <Rail id="R288" macro-area="">
+        <Rail id="ne288" macro-area="">
             <Path>
                 <Point x="-791.547" y="1.16141e-14"/>
                 <Point x="-655.662" y="-250"/>
                 <Point x="-591.547" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R290" macro-area="">
+        <Rail id="ne290" macro-area="">
             <Path>
                 <Point x="-791.547" y="1.16141e-14"/>
                 <Point x="-61.6906" y="1.4071e-14"/>
             </Path>
         </Rail>
-        <Rail id="R292" macro-area="">
+        <Rail id="ne292" macro-area="">
             <Path>
                 <Point x="835.885" y="0"/>
                 <Point x="1722.53" y="0"/>
             </Path>
         </Rail>
-        <Rail id="R295" macro-area="">
+        <Rail id="ne295" macro-area="">
             <Path>
                 <Point x="-591.547" y="-250"/>
                 <Point x="607.017" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R297" macro-area="">
+        <Rail id="ne297" macro-area="">
             <Path>
                 <Point x="607.017" y="-250"/>
                 <Point x="709.129" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R310" macro-area="">
+        <Rail id="ne310" macro-area="">
             <Path>
                 <Point x="709.129" y="-250"/>
                 <Point x="1000" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R312" macro-area="">
+        <Rail id="ne312" macro-area="">
             <Path>
                 <Point x="709.129" y="-250"/>
                 <Point x="835.885" y="0"/>
             </Path>
         </Rail>
-        <Rail id="R377" macro-area="">
+        <Rail id="ne377" macro-area="">
             <Path>
                 <Point x="500" y="200"/>
                 <Point x="56.4845" y="200"/>
             </Path>
         </Rail>
-        <Rail id="R384" macro-area="">
+        <Rail id="ne384" macro-area="">
             <Path>
                 <Point x="607.017" y="-250"/>
                 <Point x="500" y="-450"/>
                 <Point x="44.8622" y="-450"/>
             </Path>
         </Rail>
-        <Rail id="R400" macro-area="">
+        <Rail id="ne400" macro-area="">
             <Path>
                 <Point x="6900" y="-250"/>
                 <Point x="7000" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R404" macro-area="">
+        <Rail id="ne404" macro-area="">
             <Path>
                 <Point x="4800" y="-250"/>
                 <Point x="6900" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R407" macro-area="">
+        <Rail id="ne407" macro-area="">
             <Path>
                 <Point x="6900" y="-250"/>
                 <Point x="6650" y="-500"/>
                 <Point x="5850.65" y="-500"/>
             </Path>
         </Rail>
-        <Rail id="R409" macro-area="">
+        <Rail id="ne409" macro-area="">
             <Path>
                 <Point x="7000" y="-250"/>
                 <Point x="7500" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R411" macro-area="">
+        <Rail id="ne411" macro-area="">
             <Path>
                 <Point x="7000" y="-250"/>
                 <Point x="7250" y="0"/>
             </Path>
         </Rail>
-        <Rail id="R421" macro-area="">
+        <Rail id="ne421" macro-area="">
             <Path>
                 <Point x="6450" y="259.808"/>
                 <Point x="5910.75" y="259.808"/>
             </Path>
         </Rail>
-        <Rail id="R450" macro-area="">
+        <Rail id="ne450" macro-area="">
             <Path>
                 <Point x="14450" y="-250"/>
                 <Point x="13960" y="-250"/>
             </Path>
         </Rail>
-        <Rail id="R465" macro-area="">
+        <Rail id="ne465" macro-area="">
             <Path>
                 <Point x="13500" y="259.808"/>
                 <Point x="12990.8" y="259.808"/>
@@ -328,7 +334,7 @@
         <Entity id="E16" type="T_BufferStop">
             <Placement x="-2050" y="1.28588e-13"/>
             <Ports>
-                <Port rail="R1" side="end"/>
+                <Port rail="ne991" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf01</Attribute>
@@ -339,7 +345,7 @@
         <Entity id="E25" type="T_Fixed_Balise">
             <Placement x="-284.897" y="1.18219e-14" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R290" side="0.694178"/>
+                <Port rail="ne290" side="0.694178"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -369,7 +375,7 @@
         <Entity id="E33" type="T_Fixed_Balise">
             <Placement x="1606.52" y="0" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R292" side="0.869158"/>
+                <Port rail="ne292" side="0.869158"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -384,7 +390,7 @@
         <Entity id="E34" type="T_Fixed_Balise">
             <Placement x="-921.635" y="2.61903e-14" angle="180"/>
             <Ports>
-                <Port rail="R1" side="0.103371"/>
+                <Port rail="ne991" side="0.103371"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -399,7 +405,7 @@
         <Entity id="E35" type="T_Fixed_Balise">
             <Placement x="-1963.24" y="1.20715e-13" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R1" side="0.931058"/>
+                <Port rail="ne991" side="0.931058"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -440,12 +446,12 @@
                 <Attribute id="A_Lps.loc-1">1300</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E62" type="T_RailPoint">
+        <Entity id="sw62" type="T_RailPoint">
             <Placement x="4500" y="0"/>
             <Ports>
                 <Port rail="ne99" side="end"/>
-                <Port rail="R63" side="start"/>
-                <Port rail="R61" side="start"/>
+                <Port rail="ne63" side="start"/>
+                <Port rail="ne61" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D05</Attribute>
@@ -465,12 +471,12 @@
                 <Attribute id="A_Lps.loc-1">1860</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E64" type="T_RailPoint">
+        <Entity id="sw64" type="T_RailPoint">
             <Placement x="7250" y="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R65" side="start"/>
+                <Port rail="ne65" side="start"/>
                 <Port rail="ne125" side="end"/>
-                <Port rail="R411" side="end"/>
+                <Port rail="ne411" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D06</Attribute>
@@ -493,7 +499,7 @@
         <Entity id="E80" type="T_Fixed_Balise">
             <Placement x="5180.25" y="-250" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R404" side="0.181071"/>
+                <Port rail="ne404" side="0.181071"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -508,7 +514,7 @@
         <Entity id="E81" type="T_Fixed_Balise">
             <Placement x="5191.58" y="0" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R63" side="0.54944"/>
+                <Port rail="ne63" side="0.54944"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -523,7 +529,7 @@
         <Entity id="E83" type="T_Fixed_Balise">
             <Placement x="6460.4" y="-250" flipAcross="true"/>
             <Ports>
-                <Port rail="R404" side="0.790667"/>
+                <Port rail="ne404" side="0.790667"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -583,7 +589,7 @@
         <Entity id="E103" type="T_Fixed_Balise">
             <Placement x="7877.74" y="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R65" side="0.561284"/>
+                <Port rail="ne65" side="0.561284"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -598,7 +604,7 @@
         <Entity id="E107" type="T_Fixed_Balise">
             <Placement x="8277.87" y="0" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R65" side="0.919054"/>
+                <Port rail="ne65" side="0.919054"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -622,12 +628,12 @@
                 <Attribute id="A_Lps.loc-1">5000</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E111" type="T_RailPoint">
+        <Entity id="sw111" type="T_RailPoint">
             <Placement x="11250" y="-1.77636e-15"/>
             <Ports>
                 <Port rail="ne101" side="end"/>
-                <Port rail="R112" side="start"/>
-                <Port rail="R110" side="start"/>
+                <Port rail="ne912" side="start"/>
+                <Port rail="ne910" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D09</Attribute>
@@ -665,7 +671,7 @@
         <Entity id="E127" type="T_Fixed_Balise">
             <Placement x="11946.1" y="5.76519e-16" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R112" side="0.438184"/>
+                <Port rail="ne912" side="0.438184"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -740,7 +746,7 @@
         <Entity id="E149" type="T_Fixed_Balise">
             <Placement x="14845.9" y="0" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R114" side="0.464505"/>
+                <Port rail="ne114" side="0.464505"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -755,7 +761,7 @@
         <Entity id="E150" type="T_Fixed_Balise">
             <Placement x="15289.4" y="0" angle="180"/>
             <Ports>
-                <Port rail="R114" side="0.0910312"/>
+                <Port rail="ne114" side="0.0910312"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -770,7 +776,7 @@
         <Entity id="E163" type="T_VirtSignal">
             <Placement x="5092.22" y="-250" flipAlong="true"/>
             <Ports>
-                <Port rail="R404" side="0.139152"/>
+                <Port rail="ne404" side="0.139152"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -801,7 +807,7 @@
         <Entity id="E164" type="T_VirtSignal">
             <Placement x="5077.64" y="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R63" side="0.458918"/>
+                <Port rail="ne63" side="0.458918"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -832,7 +838,7 @@
         <Entity id="E166" type="T_VirtSignal">
             <Placement x="6607.48" y="-250"/>
             <Ports>
-                <Port rail="R404" side="0.860705"/>
+                <Port rail="ne404" side="0.860705"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -925,7 +931,7 @@
         <Entity id="E170" type="T_VirtSignal">
             <Placement x="1466.97" y="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R292" side="0.711767"/>
+                <Port rail="ne292" side="0.711767"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -987,7 +993,7 @@
         <Entity id="E176" type="T_VirtSignal">
             <Placement x="-378.479" y="1.24269e-14" flipAlong="true"/>
             <Ports>
-                <Port rail="R290" side="0.565958"/>
+                <Port rail="ne290" side="0.565958"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1018,7 +1024,7 @@
         <Entity id="E178" type="T_VirtSignal">
             <Placement x="-1679.1" y="9.49293e-14" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R1" side="0.705273"/>
+                <Port rail="ne991" side="0.705273"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1049,7 +1055,7 @@
         <Entity id="E179" type="T_VirtSignal">
             <Placement x="8184.18" y="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R65" side="0.835282"/>
+                <Port rail="ne65" side="0.835282"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1142,7 +1148,7 @@
         <Entity id="E182" type="T_VirtSignal">
             <Placement x="11796" y="4.52205e-16" flipAlong="true"/>
             <Ports>
-                <Port rail="R112" side="0.343699"/>
+                <Port rail="ne912" side="0.343699"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1235,7 +1241,7 @@
         <Entity id="E187" type="T_VirtSignal">
             <Placement x="15178.1" y="0" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R114" side="0.184758"/>
+                <Port rail="ne114" side="0.184758"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1266,7 +1272,7 @@
         <Entity id="E206" type="T_TrackCircuit">
             <Placement x="-1440" y="7.32313e-14" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R1" side="0.515278"/>
+                <Port rail="ne991" side="0.515278"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1283,7 +1289,7 @@
         <Entity id="E207" type="T_TrackCircuit">
             <Placement x="-867.505" y="2.12781e-14" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R1" side="0.0603582"/>
+                <Port rail="ne991" side="0.0603582"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1300,7 +1306,7 @@
         <Entity id="E209" type="T_TrackCircuit">
             <Placement x="-127.273" y="1.08028e-14"/>
             <Ports>
-                <Port rail="R290" side="0.910143"/>
+                <Port rail="ne290" side="0.910143"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1317,7 +1323,7 @@
         <Entity id="E214" type="T_TrackCircuit">
             <Placement x="795.608" y="-84.4029" angle="63.5797"/>
             <Ports>
-                <Port rail="R312" side="0.66645"/>
+                <Port rail="ne312" side="0.66645"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1368,7 +1374,7 @@
         <Entity id="E217" type="T_TrackCircuit">
             <Placement x="5241.82" y="-250"/>
             <Ports>
-                <Port rail="R404" side="0.21039"/>
+                <Port rail="ne404" side="0.21039"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1385,7 +1391,7 @@
         <Entity id="E218" type="T_TrackCircuit">
             <Placement x="5436.18" y="0"/>
             <Ports>
-                <Port rail="R63" side="0.743767"/>
+                <Port rail="ne63" side="0.743767"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1402,7 +1408,7 @@
         <Entity id="E226" type="T_TrackCircuit">
             <Placement x="7396.36" y="0"/>
             <Ports>
-                <Port rail="R65" side="0.130865"/>
+                <Port rail="ne65" side="0.130865"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1470,7 +1476,7 @@
         <Entity id="E230" type="T_TrackCircuit">
             <Placement x="12571" y="1.09407e-15"/>
             <Ports>
-                <Port rail="R112" side="0.83155"/>
+                <Port rail="ne912" side="0.83155"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1487,7 +1493,7 @@
         <Entity id="E235" type="T_TrackCircuit">
             <Placement x="14412.7" y="0" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R114" side="0.829305"/>
+                <Port rail="ne114" side="0.829305"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1518,12 +1524,12 @@
                 <Attribute id="A_Lps.loc-1">3900</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E289" type="T_RailPoint">
+        <Entity id="sw289" type="T_RailPoint">
             <Placement x="-791.547" y="1.16141e-14" offx="-8.45296" offy="3.53801e-15"/>
             <Ports>
-                <Port rail="R1" side="start"/>
-                <Port rail="R290" side="start"/>
-                <Port rail="R288" side="start"/>
+                <Port rail="ne991" side="start"/>
+                <Port rail="ne290" side="start"/>
+                <Port rail="ne288" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D01</Attribute>
@@ -1543,12 +1549,12 @@
                 <Attribute id="A_Lps.loc-1">100</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E291" type="T_RailPoint">
+        <Entity id="sw291" type="T_RailPoint">
             <Placement x="835.885" y="0" offx="8.45296" offy="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R292" side="start"/>
+                <Port rail="ne292" side="start"/>
                 <Port rail="ne112" side="end"/>
-                <Port rail="R312" side="end"/>
+                <Port rail="ne312" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D02</Attribute>
@@ -1568,11 +1574,11 @@
                 <Attribute id="A_Lps.loc-1">680</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E294" type="T_RailPoint">
+        <Entity id="sw294" type="T_RailPoint">
             <Placement x="-591.547" y="-250" offx="-8.453" offy="0"/>
             <Ports>
-                <Port rail="R288" side="end"/>
-                <Port rail="R295" side="start"/>
+                <Port rail="ne288" side="end"/>
+                <Port rail="ne295" side="start"/>
                 <Port rail="ne110" side="end"/>
             </Ports>
             <Attributes>
@@ -1593,12 +1599,12 @@
                 <Attribute id="A_Lps.loc-1">200</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E296" type="T_RailPoint">
+        <Entity id="sw296" type="T_RailPoint">
             <Placement x="607.017" y="-250" offx="8.453" offy="0" flipAlong="true"/>
             <Ports>
-                <Port rail="R297" side="start"/>
-                <Port rail="R295" side="end"/>
-                <Port rail="R384" side="start"/>
+                <Port rail="ne297" side="start"/>
+                <Port rail="ne295" side="end"/>
+                <Port rail="ne384" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D04</Attribute>
@@ -1621,7 +1627,7 @@
         <Entity id="E305" type="T_BufferStop">
             <Placement x="500" y="200" angle="180"/>
             <Ports>
-                <Port rail="R377" side="start"/>
+                <Port rail="ne377" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf04</Attribute>
@@ -1630,12 +1636,12 @@
                 <Attribute id="A_Lps.loc-1">500</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E311" type="T_RailPoint">
+        <Entity id="sw311" type="T_RailPoint">
             <Placement x="709.129" y="-250" offx="-9.1292" offy="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R297" side="end"/>
-                <Port rail="R310" side="start"/>
-                <Port rail="R312" side="start"/>
+                <Port rail="ne297" side="end"/>
+                <Port rail="ne310" side="start"/>
+                <Port rail="ne312" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D02</Attribute>
@@ -1658,7 +1664,7 @@
         <Entity id="E313" type="T_BufferStop">
             <Placement x="1000" y="-250" angle="180"/>
             <Ports>
-                <Port rail="R310" side="end"/>
+                <Port rail="ne310" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf05</Attribute>
@@ -1670,7 +1676,7 @@
         <Entity id="E314" type="T_VirtSignal">
             <Placement x="-381.818" y="-250" flipAlong="true"/>
             <Ports>
-                <Port rail="R295" side="0.179504"/>
+                <Port rail="ne295" side="0.179504"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1732,7 +1738,7 @@
         <Entity id="E316" type="T_VirtSignal">
             <Placement x="347.273" y="-450" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R384" side="1.33556"/>
+                <Port rail="ne384" side="1.33556"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1763,7 +1769,7 @@
         <Entity id="E317" type="T_VirtSignal">
             <Placement x="398.182" y="-250"/>
             <Ports>
-                <Port rail="R295" side="0.821231"/>
+                <Port rail="ne295" side="0.821231"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -1809,7 +1815,7 @@
         <Entity id="E327" type="T_Fixed_Balise">
             <Placement x="-292.495" y="-250" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R295" side="0.252993"/>
+                <Port rail="ne295" side="0.252993"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -1824,7 +1830,7 @@
         <Entity id="E328" type="T_Fixed_Balise">
             <Placement x="303.636" y="-250" flipAcross="true"/>
             <Ports>
-                <Port rail="R295" side="0.743446"/>
+                <Port rail="ne295" side="0.743446"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -1839,7 +1845,7 @@
         <Entity id="E329" type="T_Fixed_Balise">
             <Placement x="252.959" y="-450" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R384" side="1.54278"/>
+                <Port rail="ne384" side="1.54278"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -1871,7 +1877,7 @@
         <Entity id="E351" type="T_TrackCircuit">
             <Placement x="-130.818" y="-250"/>
             <Ports>
-                <Port rail="R295" side="0.386009"/>
+                <Port rail="ne295" side="0.386009"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -1888,7 +1894,7 @@
         <Entity id="E366" type="T_Fixed_Balise">
             <Placement x="274.699" y="200" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R377" side="0.507989"/>
+                <Port rail="ne377" side="0.507989"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -1926,12 +1932,12 @@
                 <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E399" type="T_RailPoint">
+        <Entity id="sw399" type="T_RailPoint">
             <Placement x="6900" y="-250" flipAlong="true"/>
             <Ports>
-                <Port rail="R400" side="start"/>
-                <Port rail="R404" side="end"/>
-                <Port rail="R407" side="start"/>
+                <Port rail="ne400" side="start"/>
+                <Port rail="ne404" side="end"/>
+                <Port rail="ne407" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D07</Attribute>
@@ -1951,11 +1957,11 @@
                 <Attribute id="A_Lps.loc-1">2340</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E403" type="T_RailPoint">
+        <Entity id="sw403" type="T_RailPoint">
             <Placement x="4800" y="-250"/>
             <Ports>
-                <Port rail="R61" side="end"/>
-                <Port rail="R404" side="start"/>
+                <Port rail="ne61" side="end"/>
+                <Port rail="ne404" side="start"/>
                 <Port rail="ne123" side="end"/>
             </Ports>
             <Attributes>
@@ -1987,12 +1993,12 @@
                 <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E410" type="T_RailPoint">
+        <Entity id="sw410" type="T_RailPoint">
             <Placement x="7000" y="-250" flipAcross="true"/>
             <Ports>
-                <Port rail="R400" side="end"/>
-                <Port rail="R409" side="start"/>
-                <Port rail="R411" side="start"/>
+                <Port rail="ne400" side="end"/>
+                <Port rail="ne409" side="start"/>
+                <Port rail="ne411" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D06</Attribute>
@@ -2015,7 +2021,7 @@
         <Entity id="E412" type="T_BufferStop">
             <Placement x="7500" y="-250" angle="180"/>
             <Ports>
-                <Port rail="R409" side="end"/>
+                <Port rail="ne409" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf08</Attribute>
@@ -2027,7 +2033,7 @@
         <Entity id="E418" type="T_BufferStop">
             <Placement x="6450" y="259.808" angle="180"/>
             <Ports>
-                <Port rail="R421" side="start"/>
+                <Port rail="ne421" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf09</Attribute>
@@ -2080,7 +2086,7 @@
         <Entity id="E433" type="T_Fixed_Balise">
             <Placement x="6175.7" y="259.808" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R421" side="0.508669"/>
+                <Port rail="ne421" side="0.508669"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2126,7 +2132,7 @@
         <Entity id="E435" type="T_VirtSignal">
             <Placement x="6372.99" y="-500" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R407" side="1.34654"/>
+                <Port rail="ne407" side="1.34654"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -2157,7 +2163,7 @@
         <Entity id="E436" type="T_Fixed_Balise">
             <Placement x="6278.44" y="-500" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R407" side="1.46483"/>
+                <Port rail="ne407" side="1.46483"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2201,10 +2207,10 @@
                 <Attribute id="A_Lps.loc-1">2050</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="E443" type="T_RailPoint">
+        <Entity id="sw443" type="T_RailPoint">
             <Placement x="11550" y="-250"/>
             <Ports>
-                <Port rail="R110" side="end"/>
+                <Port rail="ne910" side="end"/>
                 <Port rail="ne130" side="end"/>
                 <Port rail="ne135" side="end"/>
             </Ports>
@@ -2321,7 +2327,7 @@
         <Entity id="E462" type="T_BufferStop">
             <Placement x="13500" y="259.808" angle="180"/>
             <Ports>
-                <Port rail="R465" side="start"/>
+                <Port rail="ne465" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf11</Attribute>
@@ -2344,7 +2350,7 @@
         <Entity id="E478" type="T_BufferStop">
             <Placement x="14450" y="-250" angle="180"/>
             <Ports>
-                <Port rail="R450" side="start"/>
+                <Port rail="ne450" side="start"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">Buf14</Attribute>
@@ -2356,7 +2362,7 @@
         <Entity id="E479" type="T_Fixed_Balise">
             <Placement x="13123.2" y="259.808" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R465" side="0.739984"/>
+                <Port rail="ne465" side="0.739984"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2544,7 +2550,7 @@
         <Entity id="tde501" type="T_Connection">
             <Placement x="-1077.05" y="4.0294e-14" angle="180"/>
             <Ports>
-                <Port rail="R1" side="0.22164"/>
+                <Port rail="ne991" side="0.22164"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2557,7 +2563,7 @@
         <Entity id="tde502" type="T_Connection">
             <Placement x="-484.009" y="1.31092e-14"/>
             <Ports>
-                <Port rail="R290" side="0.421368"/>
+                <Port rail="ne290" side="0.421368"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2570,7 +2576,7 @@
         <Entity id="tde506" type="T_Connection">
             <Placement x="-483.596" y="-250"/>
             <Ports>
-                <Port rail="R295" side="0.0957687"/>
+                <Port rail="ne295" side="0.0957687"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2595,7 +2601,7 @@
         <Entity id="tde509" type="T_Connection">
             <Placement x="466.809" y="-450" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R384" side="1.07293"/>
+                <Port rail="ne384" side="1.07293"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2608,7 +2614,7 @@
         <Entity id="tde510" type="T_Connection">
             <Placement x="558.141" y="-250"/>
             <Ports>
-                <Port rail="R295" side="0.952834"/>
+                <Port rail="ne295" side="0.952834"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2647,7 +2653,7 @@
         <Entity id="tde513" type="T_Connection">
             <Placement x="927.785" y="-250"/>
             <Ports>
-                <Port rail="R310" side="0.759283"/>
+                <Port rail="ne310" side="0.759283"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2660,7 +2666,7 @@
         <Entity id="tde514" type="T_Connection">
             <Placement x="1244.11" y="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R292" side="0.460415"/>
+                <Port rail="ne292" side="0.460415"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2686,7 +2692,7 @@
         <Entity id="tde516" type="T_Connection">
             <Placement x="4905.8" y="-250" flipAcross="true"/>
             <Ports>
-                <Port rail="R404" side="0.0503809"/>
+                <Port rail="ne404" side="0.0503809"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2699,7 +2705,7 @@
         <Entity id="tde517" type="T_Connection">
             <Placement x="4894.03" y="0"/>
             <Ports>
-                <Port rail="R63" side="0.313045"/>
+                <Port rail="ne63" side="0.313045"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2751,7 +2757,7 @@
         <Entity id="tde521" type="T_Connection">
             <Placement x="6572.77" y="-500" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="R407" side="1.09662"/>
+                <Port rail="ne407" side="1.09662"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2764,7 +2770,7 @@
         <Entity id="tde522" type="T_Connection">
             <Placement x="6809.26" y="-250" flipAcross="true"/>
             <Ports>
-                <Port rail="R404" side="0.95679"/>
+                <Port rail="ne404" side="0.95679"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2790,7 +2796,7 @@
         <Entity id="tde525" type="T_Connection">
             <Placement x="8042.23" y="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R65" side="0.70836"/>
+                <Port rail="ne65" side="0.70836"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2816,7 +2822,7 @@
         <Entity id="tde527" type="T_Connection">
             <Placement x="11594.9" y="2.85651e-16"/>
             <Ports>
-                <Port rail="R112" side="0.21711"/>
+                <Port rail="ne912" side="0.21711"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2907,7 +2913,7 @@
         <Entity id="tde534" type="T_Connection">
             <Placement x="15021.7" y="0" angle="180" flipAlong="true"/>
             <Ports>
-                <Port rail="R114" side="0.316463"/>
+                <Port rail="ne114" side="0.316463"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -2933,7 +2939,7 @@
         <Entity id="sb536" type="T_RailBoundary">
             <Placement x="1722.53" y="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R292" side="end"/>
+                <Port rail="ne292" side="end"/>
                 <Port rail="ne98" side="start"/>
             </Ports>
             <Attributes>
@@ -2955,7 +2961,7 @@
         <Entity id="sb538" type="T_RailBoundary">
             <Placement x="8368.4" y="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R65" side="end"/>
+                <Port rail="ne65" side="end"/>
                 <Port rail="ne100" side="start"/>
             </Ports>
             <Attributes>
@@ -2977,7 +2983,7 @@
         <Entity id="sb540" type="T_RailBoundary">
             <Placement x="15397.5" y="0"/>
             <Ports>
-                <Port rail="R114" side="start"/>
+                <Port rail="ne114" side="start"/>
                 <Port rail="ne102" side="start"/>
             </Ports>
             <Attributes>
@@ -3027,7 +3033,7 @@
         <Entity id="swi548" type="T_RailPoint">
             <Placement x="44.8622" y="-450" offx="7.51378" offy="0" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R384" side="end"/>
+                <Port rail="ne384" side="end"/>
                 <Port rail="ne110" side="start"/>
                 <Port rail="ne104" side="end"/>
             </Ports>
@@ -3051,7 +3057,7 @@
         <Entity id="swi549" type="T_RailPoint">
             <Placement x="-61.6906" y="1.4071e-14" offx="-6.76239" offy="-3.64848e-15" flipAcross="true"/>
             <Ports>
-                <Port rail="R290" side="end"/>
+                <Port rail="ne290" side="end"/>
                 <Port rail="ne112" side="start"/>
                 <Port rail="ne111" side="start"/>
             </Ports>
@@ -3076,7 +3082,7 @@
         <Entity id="swi550" type="T_RailPoint">
             <Placement x="56.4845" y="200" offx="7.43863" offy="0" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R377" side="end"/>
+                <Port rail="ne377" side="end"/>
                 <Port rail="ne113" side="start"/>
                 <Port rail="ne111" side="end"/>
             </Ports>
@@ -3101,7 +3107,7 @@
         <Entity id="swi561" type="T_RailPoint">
             <Placement x="5850.65" y="-500" offx="7.80253" offy="0" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R407" side="end"/>
+                <Port rail="ne407" side="end"/>
                 <Port rail="ne123" side="start"/>
                 <Port rail="ne122" side="end"/>
             </Ports>
@@ -3126,7 +3132,7 @@
         <Entity id="swi562" type="T_RailPoint">
             <Placement x="5758.7" y="0" offx="-7.15205" offy="0" flipAcross="true"/>
             <Ports>
-                <Port rail="R63" side="end"/>
+                <Port rail="ne63" side="end"/>
                 <Port rail="ne125" side="start"/>
                 <Port rail="ne124" side="start"/>
             </Ports>
@@ -3151,7 +3157,7 @@
         <Entity id="swi563" type="T_RailPoint">
             <Placement x="5910.75" y="259.808" offx="7.70262" offy="0" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R421" side="end"/>
+                <Port rail="ne421" side="end"/>
                 <Port rail="ne126" side="start"/>
                 <Port rail="ne124" side="end"/>
             </Ports>
@@ -3176,7 +3182,7 @@
         <Entity id="swi566" type="T_RailPoint">
             <Placement x="14210" y="-4.77736e-15" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R114" side="end"/>
+                <Port rail="ne114" side="end"/>
                 <Port rail="ne132" side="end"/>
                 <Port rail="ne129" side="end"/>
             </Ports>
@@ -3204,7 +3210,7 @@
                 <Port rail="ne127" side="start"/>
                 <Port rail="ne129" side="start"/>
                 <Port rail="ne130" side="start"/>
-                <Port rail="R450" side="end"/>
+                <Port rail="ne450" side="end"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Name">D12</Attribute>
@@ -3226,7 +3232,7 @@
         <Entity id="swi568" type="T_RailPoint">
             <Placement x="12838.6" y="6.73007e-16" offx="-7.14435" offy="6.36813e-16" angle="4.80597e-17" flipAcross="true"/>
             <Ports>
-                <Port rail="R112" side="end"/>
+                <Port rail="ne912" side="end"/>
                 <Port rail="ne132" side="start"/>
                 <Port rail="ne131" side="start"/>
             </Ports>
@@ -3251,7 +3257,7 @@
         <Entity id="swi569" type="T_RailPoint">
             <Placement x="12990.8" y="259.808" offx="7.69432" offy="5.68434e-14" angle="180" flipAcross="true"/>
             <Ports>
-                <Port rail="R465" side="end"/>
+                <Port rail="ne465" side="end"/>
                 <Port rail="ne133" side="start"/>
                 <Port rail="ne131" side="end"/>
             </Ports>
