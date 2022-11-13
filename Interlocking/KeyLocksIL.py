@@ -10,7 +10,7 @@ class KeyLocksIL(object):
 		return self.___keyLockIL
 	
 	@KeyLockIL.setter
-	def KeyLockIL(self, *aKeyLockIL : KeyLockIL):
+	def KeyLockIL(self, aKeyLockIL : KeyLockIL):	#TODO *aKeyLockIL
 		self.___keyLockIL = aKeyLockIL
 
 	def create_KeyLockIL(self):

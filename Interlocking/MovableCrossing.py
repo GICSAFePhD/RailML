@@ -29,16 +29,16 @@ class MovableCrossing(MovableElement.MovableElement):
 	def PreferredPosition(self, aPreferredPosition : tCrossingPosition):
 		self.___preferredPosition = aPreferredPosition
 	@BranchUpLeft.setter
-	def BranchUpLeft(self, *aBranchUpLeft : EntityILref):
+	def BranchUpLeft(self, aBranchUpLeft : EntityILref):	# TODO *aBranchUpLeft
 		self.___branchUpLeft = aBranchUpLeft
 	@BranchUpRight.setter
-	def BranchUpRight(self, *aBranchUpRight : EntityILref):
+	def BranchUpRight(self, aBranchUpRight : EntityILref):	# TODO *aBranchUpRight
 		self.___branchUpRight = aBranchUpRight
 	@BranchDownLeft.setter
-	def BranchDownLeft(self, *aBranchDownLeft : EntityILref):
+	def BranchDownLeft(self, aBranchDownLeft : EntityILref): #TODO *aBranchDownLeft
 		self.___branchDownLeft = aBranchDownLeft
 	@BranchDownRight.setter
-	def BranchDownRight(self, *aBranchDownRight : EntityILref):
+	def BranchDownRight(self, aBranchDownRight : EntityILref):	#TODO *aBranchDownRight
 		self.___branchDownRight = aBranchDownRight
 	@HasFoulingTrainDetectors.setter
 	def HasFoulingTrainDetectors(self, aHasFoulingTrainDetectors : EntityILref):

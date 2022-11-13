@@ -50,6 +50,7 @@ class Balise(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.BaliseGroupType = tBaliseGroupTypeExt.tBaliseGroupTypeExt()
     
 	def __init__(self):
+		super().__init__()
 		self.___type : tBaliseType = None
 		# @AssociationType Infrastructure.tBaliseType
 		# """type of balise: fixed or transparent"""

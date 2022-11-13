@@ -3,23 +3,25 @@
 from typing import List
 
 class External(object):
-	def setId(self, aId : str):
-		self.___id = aId
-
-	def getId(self) -> str:
+	@property
+	def Id(self) -> str:
 		return self.___id
-
-	def setRef(self, aRef : str):
-		self.___ref = aRef
-
-	def getRef(self) -> str:
+	@property
+	def Ref(self) -> str:
 		return self.___ref
-
-	def setDescription(self, aDescription : str):
-		self.___description = aDescription
-
-	def getDescription(self) -> str:
+	@property
+	def Description(self) -> str:
 		return self.___description
+
+	@Id.setter
+	def Id(self, aId : str):
+		self.___id = aId
+	@Ref.setter
+	def Ref(self, aRef : str):
+		self.___ref = aRef
+	@Description.setter
+	def Description(self, aDescription : str):
+		self.___description = aDescription
 
 	def __init__(self):
 		self.___id : str = None
@@ -28,4 +30,3 @@ class External(object):
 		"""a reference to an external element"""
 		self.___description : str = None
 		"""description of the external identifier or reference, providing basic information about external system"""
-

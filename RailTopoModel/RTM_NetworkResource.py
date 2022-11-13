@@ -12,6 +12,10 @@ class RTM_NetworkResource(RTM_NamedResource.RTM_NamedResource):
 	@IsValid.setter
 	def IsValid(self, aIsValid : IsValid):
 		self.___isValid = aIsValid
+	def create_IsValid(self):
+		if self.IsValid == None:
+			self.IsValid = []
+		self.IsValid.append(IsValid.IsValid())
 
 	def __init__(self):
 		super().__init__()
