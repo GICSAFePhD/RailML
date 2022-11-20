@@ -1,14 +1,10 @@
-Nodes: 9 | Switches: 4 | Signals: 0 | Detectors: 9 | Ends: 6 | Barriers: 2
+Nodes: 9 | Switches: 4 | Signals: 0 | Detectors: 2 | Ends: 6 | Barriers: 2
 Node ne1:
 	Track = track8
-	TrainDetectionElements -> tde11
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde13
-		Type -> insulatedRailJoint
 	Neighbours = 2 -> ['ne8', 'ne9']
 	Level crossing -> lcr37
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
-		Position -> [454, -150] | Coordinate: 0.2961
+		Position -> [588, -150] | Coordinate: 0.4053
 	Switches -> Sw04
 		ContinueCourse -> right -> ne8
 		BranchCourse -> left -> ne9
@@ -20,12 +16,10 @@ Node ne2:
 		BranchCourse -> left -> ne4
 Node ne3:
 	Track = track2
-	TrainDetectionElements -> tde18
-		Type -> insulatedRailJoint
 	Neighbours = 4 -> ['ne2', 'ne4', 'ne5', 'ne7']
 	Switches -> Sw02
-		ContinueCourse -> right -> ne7
-		BranchCourse -> left -> ne5
+		ContinueCourse -> left -> ne5
+		BranchCourse -> right -> ne7
 Node ne4:
 	Track = track3
 	TrainDetectionElements -> tde19
@@ -33,33 +27,25 @@ Node ne4:
 	Neighbours = 2 -> ['ne2', 'ne3']
 Node ne5:
 	Track = track4
-	TrainDetectionElements -> tde12
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde14
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde15
-		Type -> insulatedRailJoint
 	Neighbours = 2 -> ['ne3', 'ne7']
 	Level crossing -> lcr38
 		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
 		Position -> [534, 0] | Coordinate: 0.7851
 Node ne6:
 	Track = track7
-	TrainDetectionElements -> tde17
-		Type -> insulatedRailJoint
 	Neighbours = 2 -> ['ne8', 'ne7']
 Node ne7:
 	Track = track5
 	Neighbours = 4 -> ['ne3', 'ne5', 'ne6', 'ne8']
 Node ne8:
 	Track = track6
-	TrainDetectionElements -> tde16
-		Type -> insulatedRailJoint
 	Neighbours = 4 -> ['ne1', 'ne6', 'ne7', 'ne9']
 	Switches -> Sw03
-		ContinueCourse -> right -> ne7
-		BranchCourse -> left -> ne6
+		ContinueCourse -> left -> ne6
+		BranchCourse -> right -> ne7
 Node ne9:
 	Track = track9
+	TrainDetectionElements -> tde46
+		Type -> insulatedRailJoint
 	Type = BufferStop -> ['bus10']
 	Neighbours = 2 -> ['ne1', 'ne8']

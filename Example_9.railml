@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_9.railml</dc:title>
-        <dc:date>2022-11-13T12:59:41Z</dc:date>
+        <dc:date>2022-11-20T10:24:00Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -50,7 +50,7 @@
                     <relation ref="nr_ne2ne4_swi6"/>
                     <associatedPositioningSystem id="ne2_aps01">
                         <intrinsicCoordinate id="ne2_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="2820.000" y="0.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="2970.000" y="-0.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne2_aps01_ic02" intrinsicCoord="1">
                             <geometricCoordinate positioningSystemRef="gps01" x="2550.000" y="0.000"/>
@@ -106,7 +106,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="2010.000" y="-150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne6_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="2820.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="2970.000" y="-150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -149,7 +149,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="1530.000" y="-360.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne9_aps01_ic03" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="2820.000" y="-360.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="2970.000" y="-360.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -271,7 +271,7 @@
             <levelCrossingsIS>
                 <levelCrossingIS id="lcr37" activation="none">
                     <name name="Lc01" language="en"/>
-                    <spotLocation id="lcr37_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.2961"/>
+                    <spotLocation id="lcr37_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.4053"/>
                     <designator register="_Example" entry="LEVEL CROSSING Lc01"/>
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
@@ -345,7 +345,7 @@
                     <designator register="_Example" entry="TRACK track1"/>
                     <trackBegin ref="swi6"/>
                     <trackEnd ref="oe42"/>
-                    <length value="270" type="physical"/>
+                    <length value="420" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -411,7 +411,7 @@
                     <designator register="_Example" entry="TRACK track7"/>
                     <trackBegin ref="swi8"/>
                     <trackEnd ref="oe41"/>
-                    <length value="810" type="physical"/>
+                    <length value="960" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk8" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -433,55 +433,20 @@
                     <designator register="_Example" entry="TRACK track9"/>
                     <trackBegin ref="swi9"/>
                     <trackEnd ref="bus10"/>
-                    <length value="1586.98" type="physical"/>
+                    <length value="1736.98" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
             <trainDetectionElements>
-                <trainDetectionElement id="tde11" type="insulatedRailJoint">
-                    <name name="J01" language="en"/>
-                    <spotLocation id="tde11_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.1308"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J01"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde12" type="insulatedRailJoint">
-                    <name name="J02" language="en"/>
-                    <spotLocation id="tde12_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.9223"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J02"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde13" type="insulatedRailJoint">
-                    <name name="J03" language="en"/>
-                    <spotLocation id="tde13_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.7398"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J03"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde14" type="insulatedRailJoint">
-                    <name name="J04" language="en"/>
-                    <spotLocation id="tde14_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.7387"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J04"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde15" type="insulatedRailJoint">
-                    <name name="J05" language="en"/>
-                    <spotLocation id="tde15_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.4058"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J05"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde16" type="insulatedRailJoint">
-                    <name name="J06" language="en"/>
-                    <spotLocation id="tde16_sloc01" netElementRef="ne8" applicationDirection="both" intrinsicCoord="0.5244"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J06"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde17" type="insulatedRailJoint">
-                    <name name="J07" language="en"/>
-                    <spotLocation id="tde17_sloc01" netElementRef="ne6" applicationDirection="both" intrinsicCoord="0.3939"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J07"/>
-                </trainDetectionElement>
-                <trainDetectionElement id="tde18" type="insulatedRailJoint">
-                    <name name="J08" language="en"/>
-                    <spotLocation id="tde18_sloc01" netElementRef="ne3" applicationDirection="both" intrinsicCoord="0.5664"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J08"/>
-                </trainDetectionElement>
                 <trainDetectionElement id="tde19" type="insulatedRailJoint">
                     <name name="J09" language="en"/>
-                    <spotLocation id="tde19_sloc01" netElementRef="ne4" applicationDirection="both" intrinsicCoord="0.8372"/>
+                    <spotLocation id="tde19_sloc01" netElementRef="ne4" applicationDirection="both" intrinsicCoord="0.6219"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J09"/>
+                </trainDetectionElement>
+                <trainDetectionElement id="tde46" type="insulatedRailJoint">
+                    <name name="J12" language="en"/>
+                    <spotLocation id="tde46_sloc01" netElementRef="ne9" applicationDirection="both" intrinsicCoord="0.4847"/>
+                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J12"/>
                 </trainDetectionElement>
             </trainDetectionElements>
         </functionalInfrastructure>
@@ -490,7 +455,7 @@
                 <name name="Example_9 microscopic screen visualization" language="en"/>
                 <spotElementProjection refersToElement="bus10" id="vis01_sep01">
                     <name name="Buf06" language="en"/>
-                    <coordinate x="2820.000" y="-360.000"/>
+                    <coordinate x="2970.000" y="-360.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="oe39" id="vis01_sep02">
                     <name name="Buf04" language="en"/>
@@ -502,11 +467,11 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="oe41" id="vis01_sep04">
                     <name name="Buf02" language="en"/>
-                    <coordinate x="2820.000" y="-150.000"/>
+                    <coordinate x="2970.000" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="oe42" id="vis01_sep05">
                     <name name="Buf03" language="en"/>
-                    <coordinate x="2820.000" y="0.000"/>
+                    <coordinate x="2970.000" y="-0.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="oe43" id="vis01_sep06">
                     <name name="Buf05" language="en"/>
@@ -514,7 +479,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr37" id="vis01_sep07">
                     <name name="Lc01" language="en"/>
-                    <coordinate x="454.221" y="-150.000"/>
+                    <coordinate x="588.489" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr38" id="vis01_sep08">
                     <name name="Lc02" language="en"/>
@@ -526,7 +491,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="plf36" id="vis01_sep10">
                     <name name="Plat05" language="en"/>
-                    <coordinate x="858.096" y="-150.000"/>
+                    <coordinate x="818.278" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="swi6" id="vis01_sep11">
                     <name name="Sw01" language="en"/>
@@ -544,81 +509,29 @@
                     <name name="Sw04" language="en"/>
                     <coordinate x="1320.000" y="-150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde11" id="vis01_sep15">
-                    <name name="J01" language="en"/>
-                    <coordinate x="250.909" y="-150.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde12" id="vis01_sep16">
-                    <name name="J02" language="en"/>
-                    <coordinate x="250.909" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde13" id="vis01_sep17">
-                    <name name="J03" language="en"/>
-                    <coordinate x="1000.000" y="-150.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde14" id="vis01_sep18">
-                    <name name="J04" language="en"/>
-                    <coordinate x="630.909" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde15" id="vis01_sep19">
-                    <name name="J05" language="en"/>
-                    <coordinate x="1320.000" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde16" id="vis01_sep20">
-                    <name name="J06" language="en"/>
-                    <coordinate x="1681.820" y="-150.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde17" id="vis01_sep21">
-                    <name name="J07" language="en"/>
-                    <coordinate x="2329.090" y="-150.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde18" id="vis01_sep22">
-                    <name name="J08" language="en"/>
-                    <coordinate x="2329.090" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde19" id="vis01_sep23">
+                <spotElementProjection refersToElement="tde19" id="vis01_sep15">
                     <name name="J09" language="en"/>
-                    <coordinate x="2232.730" y="240.000"/>
+                    <coordinate x="1681.820" y="240.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd24" id="vis01_sep24">
-                    <name name="01" language="en"/>
-                    <coordinate x="210.909" y="-150.000"/>
+                <spotElementProjection refersToElement="tde46" id="vis01_sep16">
+                    <name name="J12" language="en"/>
+                    <coordinate x="2074.940" y="-360.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd25" id="vis01_sep25">
-                    <name name="02" language="en"/>
-                    <coordinate x="210.909" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd26" id="vis01_sep26">
-                    <name name="03" language="en"/>
-                    <coordinate x="296.364" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd27" id="vis01_sep27">
+                <spotElementProjection refersToElement="tvd27" id="vis01_sep17">
                     <name name="04" language="en"/>
-                    <coordinate x="858.096" y="-150.000"/>
+                    <coordinate x="818.278" y="-150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd28" id="vis01_sep28">
-                    <name name="05" language="en"/>
-                    <coordinate x="1180.000" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd29" id="vis01_sep29">
+                <spotElementProjection refersToElement="tvd29" id="vis01_sep18">
                     <name name="06" language="en"/>
                     <coordinate x="1681.820" y="-360.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd30" id="vis01_sep30">
-                    <name name="07" language="en"/>
-                    <coordinate x="1681.820" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd31" id="vis01_sep31">
-                    <name name="08" language="en"/>
-                    <coordinate x="2412.730" y="-150.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd32" id="vis01_sep32">
-                    <name name="09" language="en"/>
-                    <coordinate x="2412.730" y="0.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tvd33" id="vis01_sep33">
+                <spotElementProjection refersToElement="tvd33" id="vis01_sep19">
                     <name name="10" language="en"/>
-                    <coordinate x="2160.000" y="240.000"/>
+                    <coordinate x="1355.350" y="240.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="tvd47" id="vis01_sep20">
+                    <name name="12" language="en"/>
+                    <coordinate x="2262.820" y="-360.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
@@ -627,7 +540,7 @@
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne2" id="vis01_lep2">
                     <name name="netElement_ne2" language="en"/>
-                    <coordinate x="2820.000" y="0.000"/>
+                    <coordinate x="2970.000" y="-0.000"/>
                     <coordinate x="2550.000" y="0.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne3" id="vis01_lep3">
@@ -649,7 +562,7 @@
                 <linearElementProjection refersToElement="ne6" id="vis01_lep6">
                     <name name="netElement_ne6" language="en"/>
                     <coordinate x="2010.000" y="-150.000"/>
-                    <coordinate x="2820.000" y="-150.000"/>
+                    <coordinate x="2970.000" y="-150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne7" id="vis01_lep7">
                     <name name="netElement_ne7" language="en"/>
@@ -665,7 +578,7 @@
                     <name name="netElement_ne9" language="en"/>
                     <coordinate x="1320.000" y="-150.000"/>
                     <coordinate x="1530.000" y="-360.000"/>
-                    <coordinate x="2820.000" y="-360.000"/>
+                    <coordinate x="2970.000" y="-360.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>
@@ -673,59 +586,33 @@
     <interlocking>
         <assetsForIL id="ass_Example_9">
             <tvdSections>
-                <tvdSection id="tvd24" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="01"/>
-                    <hasDemarcatingBufferstop ref="oe40"/>
-                    <hasDemarcatingTraindetector ref="tde11"/>
-                </tvdSection>
-                <tvdSection id="tvd25" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="02"/>
-                    <hasDemarcatingBufferstop ref="oe39"/>
-                    <hasDemarcatingTraindetector ref="tde12"/>
-                </tvdSection>
-                <tvdSection id="tvd26" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="03"/>
-                    <hasDemarcatingTraindetector ref="tde12"/>
-                    <hasDemarcatingTraindetector ref="tde14"/>
-                </tvdSection>
                 <tvdSection id="tvd27" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="04"/>
-                    <hasDemarcatingTraindetector ref="tde13"/>
-                    <hasDemarcatingTraindetector ref="tde11"/>
-                </tvdSection>
-                <tvdSection id="tvd28" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="05"/>
-                    <hasDemarcatingTraindetector ref="tde14"/>
-                    <hasDemarcatingTraindetector ref="tde15"/>
+                    <hasDemarcatingBufferstop ref="oe40"/>
+                    <hasDemarcatingBufferstop ref="oe39"/>
+                    <hasDemarcatingBufferstop ref="oe42"/>
+                    <hasDemarcatingBufferstop ref="oe41"/>
+                    <hasDemarcatingTraindetector ref="tde46"/>
+                    <hasDemarcatingTraindetector ref="tde19"/>
                 </tvdSection>
                 <tvdSection id="tvd29" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="06"/>
-                    <hasDemarcatingBufferstop ref="bus10"/>
-                    <hasDemarcatingTraindetector ref="tde16"/>
-                    <hasDemarcatingTraindetector ref="tde13"/>
-                </tvdSection>
-                <tvdSection id="tvd30" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="07"/>
-                    <hasDemarcatingTraindetector ref="tde18"/>
-                    <hasDemarcatingTraindetector ref="tde16"/>
-                    <hasDemarcatingTraindetector ref="tde17"/>
-                    <hasDemarcatingTraindetector ref="tde15"/>
-                </tvdSection>
-                <tvdSection id="tvd31" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="08"/>
-                    <hasDemarcatingBufferstop ref="oe41"/>
-                    <hasDemarcatingTraindetector ref="tde17"/>
-                </tvdSection>
-                <tvdSection id="tvd32" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
-                    <designator register="_Example" entry="09"/>
+                    <hasDemarcatingBufferstop ref="oe40"/>
+                    <hasDemarcatingBufferstop ref="oe39"/>
                     <hasDemarcatingBufferstop ref="oe42"/>
+                    <hasDemarcatingBufferstop ref="oe41"/>
+                    <hasDemarcatingTraindetector ref="tde46"/>
                     <hasDemarcatingTraindetector ref="tde19"/>
-                    <hasDemarcatingTraindetector ref="tde18"/>
                 </tvdSection>
                 <tvdSection id="tvd33" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="10"/>
                     <hasDemarcatingBufferstop ref="oe43"/>
                     <hasDemarcatingTraindetector ref="tde19"/>
+                </tvdSection>
+                <tvdSection id="tvd47" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
+                    <designator register="_Example" entry="12"/>
+                    <hasDemarcatingBufferstop ref="bus10"/>
+                    <hasDemarcatingTraindetector ref="tde46"/>
                 </tvdSection>
             </tvdSections>
             <switchesIL>
