@@ -416,13 +416,13 @@
 					<name name="B19" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig20">
-					<signalConstruction positionAtTrack="right" type="light"/>
+					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S20"/>
 					<spotLocation netElementRef="ne2" intrinsicCoord="0.5" applicationDirection="normal" id="sig20_sloc01"/>
 					<name name="S20" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig21">
-					<signalConstruction positionAtTrack="right" type="light"/>
+					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S21"/>
 					<spotLocation netElementRef="ne2" intrinsicCoord="0.5" applicationDirection="normal" id="sig21_sloc01"/>
 					<name name="H21" language="en"/>

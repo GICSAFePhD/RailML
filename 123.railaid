@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RaILAiD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.rail-aid.com/schema/ SchematicPlan-1.8.xsd" version="1.8">
+    <Globals>
+        <Attribute id="R_Main.A_Path">C:/PhD/RailML/123.railaid</Attribute>
+        <Attribute id="R_Main.A_Created">vie. dic. 2 17:39:31 2022</Attribute>
+        <Attribute id="R_Main.A_Object_Library_Version">Italia 4.6</Attribute>
+        <Attribute id="R_Main.A_Object_Library_FileName">ObjectLibrary_GA.xml</Attribute>
+        <Attribute id="R_Main.A_RaILAiD_Version">1.1.9</Attribute>
+        <Attribute id="R_Main.A_RailML_Version">3.1</Attribute>
+        <Attribute id="R_Main.A_RailMLPlugin_Version">0.9.5</Attribute>
+        <Attribute id="_R_Core.A_RouteTerminalCategory">signals</Attribute>
+        <Attribute id="_R_Core.A_RouteRailSetCategory">tvdSections</Attribute>
+        <Attribute id="R_railML_Info.A_Designator_registry">_Example</Attribute>
+        <Attribute id="R_railML_Info.A_Validity_from">2022-12-02</Attribute>
+        <Attribute id="R_railML_Info.A_Validity_to">2023-12-02</Attribute>
+    </Globals>
+    <MacroAreas/>
+    <BackgroundImage/>
+    <IdGenerators nextRailId="39" nextEntityId="62">
+        <EntityName definitionId="BufferStopNameGen" nextId="40"/>
+        <EntityName definitionId="RailPointNameGen" nextId="16"/>
+        <EntityName definitionId="SignalNameGen" nextId="7"/>
+        <EntityName definitionId="TrackCircuitNameGen" nextId="2"/>
+    </IdGenerators>
+    <Rails>
+        <Rail id="ne1" macro-area="">
+            <Path>
+                <Point x="-1230" y="60"/>
+                <Point x="-870" y="60"/>
+            </Path>
+        </Rail>
+        <Rail id="ne2" macro-area="">
+            <Path>
+                <Point x="-240" y="-180"/>
+                <Point x="270" y="-180"/>
+            </Path>
+        </Rail>
+        <Rail id="ne3" macro-area="">
+            <Path>
+                <Point x="-240" y="-180"/>
+                <Point x="0" y="-420"/>
+                <Point x="270" y="-420"/>
+            </Path>
+        </Rail>
+        <Rail id="ne4" macro-area="">
+            <Path>
+                <Point x="-870" y="60"/>
+                <Point x="-630" y="-180"/>
+                <Point x="-240" y="-180"/>
+            </Path>
+        </Rail>
+        <Rail id="ne5" macro-area="">
+            <Path>
+                <Point x="-870" y="60"/>
+                <Point x="-450" y="60"/>
+            </Path>
+        </Rail>
+        <Rail id="ne10" macro-area="">
+            <Path>
+                <Point x="240" y="240"/>
+                <Point x="-60" y="240"/>
+                <Point x="-300" y="480"/>
+            </Path>
+        </Rail>
+        <Rail id="ne11" macro-area="">
+            <Path>
+                <Point x="240" y="480"/>
+                <Point x="-300" y="480"/>
+            </Path>
+        </Rail>
+        <Rail id="ne12" macro-area="">
+            <Path>
+                <Point x="-300" y="480"/>
+                <Point x="-923.205" y="480"/>
+            </Path>
+        </Rail>
+        <Rail id="ne13" macro-area="">
+            <Path>
+                <Point x="-390" y="180"/>
+                <Point x="-750" y="180"/>
+                <Point x="-923.205" y="480"/>
+            </Path>
+        </Rail>
+        <Rail id="ne14" macro-area="">
+            <Path>
+                <Point x="-923.205" y="480"/>
+                <Point x="-1230" y="480"/>
+            </Path>
+        </Rail>
+        <Rail id="ne15" macro-area="">
+            <Path>
+                <Point x="2100" y="-510"/>
+                <Point x="1710" y="-510"/>
+            </Path>
+        </Rail>
+        <Rail id="ne16" macro-area="">
+            <Path>
+                <Point x="911.436" y="-270"/>
+                <Point x="540" y="-270"/>
+            </Path>
+        </Rail>
+        <Rail id="ne17" macro-area="">
+            <Path>
+                <Point x="911.436" y="-270"/>
+                <Point x="1350" y="-270"/>
+            </Path>
+        </Rail>
+        <Rail id="ne18" macro-area="">
+            <Path>
+                <Point x="1710" y="-510"/>
+                <Point x="1050" y="-510"/>
+                <Point x="911.436" y="-270"/>
+            </Path>
+        </Rail>
+        <Rail id="ne19" macro-area="">
+            <Path>
+                <Point x="1710" y="-510"/>
+                <Point x="1571.44" y="-750"/>
+                <Point x="1080" y="-750"/>
+            </Path>
+        </Rail>
+        <Rail id="ne20" macro-area="">
+            <Path>
+                <Point x="1230" y="-30"/>
+                <Point x="1320" y="-30"/>
+            </Path>
+        </Rail>
+        <Rail id="ne21" macro-area="">
+            <Path>
+                <Point x="1930.53" y="300"/>
+                <Point x="2430" y="300"/>
+            </Path>
+        </Rail>
+        <Rail id="ne22" macro-area="">
+            <Path>
+                <Point x="1930.53" y="300"/>
+                <Point x="990" y="300"/>
+            </Path>
+        </Rail>
+        <Rail id="ne23" macro-area="">
+            <Path>
+                <Point x="990" y="300"/>
+                <Point x="510" y="300"/>
+            </Path>
+        </Rail>
+        <Rail id="ne24" macro-area="">
+            <Path>
+                <Point x="1320" y="-30"/>
+                <Point x="1740" y="-30"/>
+                <Point x="1930.53" y="300"/>
+            </Path>
+        </Rail>
+        <Rail id="ne25" macro-area="">
+            <Path>
+                <Point x="990" y="300"/>
+                <Point x="1320" y="-30"/>
+            </Path>
+        </Rail>
+        <Rail id="ne26" macro-area="">
+            <Path>
+                <Point x="1620" y="720"/>
+                <Point x="2010" y="720"/>
+                <Point x="2340" y="1050"/>
+            </Path>
+        </Rail>
+        <Rail id="ne27" macro-area="">
+            <Path>
+                <Point x="2340" y="1050"/>
+                <Point x="2760" y="1050"/>
+            </Path>
+        </Rail>
+        <Rail id="ne28" macro-area="">
+            <Path>
+                <Point x="2340" y="1050"/>
+                <Point x="1470" y="1050"/>
+            </Path>
+        </Rail>
+        <Rail id="ne29" macro-area="">
+            <Path>
+                <Point x="1470" y="1050"/>
+                <Point x="1140" y="720"/>
+                <Point x="510" y="720"/>
+            </Path>
+        </Rail>
+        <Rail id="ne30" macro-area="">
+            <Path>
+                <Point x="1470" y="1050"/>
+                <Point x="720" y="1050"/>
+            </Path>
+        </Rail>
+        <Rail id="ne34" macro-area="">
+            <Path>
+                <Point x="-1260" y="2040"/>
+                <Point x="-690" y="2040"/>
+            </Path>
+        </Rail>
+        <Rail id="ne35" macro-area="">
+            <Path>
+                <Point x="-690" y="2040"/>
+                <Point x="-480" y="1830"/>
+                <Point x="210" y="1830"/>
+            </Path>
+        </Rail>
+        <Rail id="ne36" macro-area="">
+            <Path>
+                <Point x="-690" y="2040"/>
+                <Point x="-90" y="2040"/>
+            </Path>
+        </Rail>
+        <Rail id="ne37" macro-area="">
+            <Path>
+                <Point x="210" y="1830"/>
+                <Point x="450" y="1590"/>
+                <Point x="750" y="1590"/>
+            </Path>
+        </Rail>
+        <Rail id="ne38" macro-area="">
+            <Path>
+                <Point x="210" y="1830"/>
+                <Point x="750" y="1830"/>
+            </Path>
+        </Rail>
+    </Rails>
+    <LinearLocationSystems>
+        <LinearLocationSystem id="loc-1" unit="Km">Loc-1</LinearLocationSystem>
+    </LinearLocationSystems>
+    <Entities>
+        <Entity id="bus2" type="T_BufferStop">
+            <Placement x="270" y="-180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne2" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf02</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi3" type="T_RailPoint">
+            <Placement x="-240" y="-180"/>
+            <Ports>
+                <Port rail="ne4" side="end"/>
+                <Port rail="ne2" side="start"/>
+                <Port rail="ne3" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw01</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus4" type="T_BufferStop">
+            <Placement x="270" y="-420" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne3" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf03</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus5" type="T_BufferStop">
+            <Placement x="-1230" y="60" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne1" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf04</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi6" type="T_RailPoint">
+            <Placement x="-870" y="60" angle="-6.78518e-15"/>
+            <Ports>
+                <Port rail="ne1" side="end"/>
+                <Port rail="ne5" side="start"/>
+                <Port rail="ne4" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw02</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus7" type="T_BufferStop">
+            <Placement x="-450" y="60" angle="-6.78518e-15" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne5" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf05</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus14" type="T_BufferStop">
+            <Placement x="240" y="240" angle="180"/>
+            <Ports>
+                <Port rail="ne10" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf11</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus16" type="T_BufferStop">
+            <Placement x="240" y="480" angle="180"/>
+            <Ports>
+                <Port rail="ne11" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf13</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi18" type="T_RailPoint">
+            <Placement x="-300" y="480" angle="-7.01671e-15"/>
+            <Ports>
+                <Port rail="ne12" side="start"/>
+                <Port rail="ne11" side="end"/>
+                <Port rail="ne10" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw04</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus19" type="T_BufferStop">
+            <Placement x="-390" y="180" angle="180"/>
+            <Ports>
+                <Port rail="ne13" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf15</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus20" type="T_BufferStop">
+            <Placement x="-1230" y="480" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne14" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf16</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi21" type="T_RailPoint">
+            <Placement x="-923.205" y="480" offx="-8.45299" offy="1.56618e-15" angle="2.22158e-14"/>
+            <Ports>
+                <Port rail="ne14" side="start"/>
+                <Port rail="ne12" side="end"/>
+                <Port rail="ne13" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw05</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus23" type="T_BufferStop">
+            <Placement x="540" y="-270" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne16" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf18</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi24" type="T_RailPoint">
+            <Placement x="911.436" y="-270" offx="-8.45299" offy="1.29362e-15" angle="-7.42625e-15"/>
+            <Ports>
+                <Port rail="ne16" side="start"/>
+                <Port rail="ne17" side="start"/>
+                <Port rail="ne18" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw06</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus25" type="T_BufferStop">
+            <Placement x="1350" y="-270" angle="-7.42625e-15" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne17" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf19</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus26" type="T_BufferStop">
+            <Placement x="2100" y="-510" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne15" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf20</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi27" type="T_RailPoint">
+            <Placement x="1710" y="-510" offx="8.45299" offy="-1.03519e-15" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne15" side="end"/>
+                <Port rail="ne18" side="start"/>
+                <Port rail="ne19" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw07</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus28" type="T_BufferStop">
+            <Placement x="1080" y="-750" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne19" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf21</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig29" type="T_Signal">
+            <Placement x="719.755" y="-270" angle="180" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne16" side="0.516054"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S01</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus30" type="T_BufferStop">
+            <Placement x="1230" y="-30"/>
+            <Ports>
+                <Port rail="ne20" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf22</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus31" type="T_BufferStop">
+            <Placement x="2430" y="300" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne21" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf23</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi32" type="T_RailPoint">
+            <Placement x="1930.53" y="300" offx="8.45299" offy="0" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne21" side="start"/>
+                <Port rail="ne22" side="start"/>
+                <Port rail="ne24" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw08</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus34" type="T_BufferStop">
+            <Placement x="510" y="300" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne23" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf25</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi35" type="T_RailPoint">
+            <Placement x="990" y="300" angle="-7.01671e-15"/>
+            <Ports>
+                <Port rail="ne23" side="start"/>
+                <Port rail="ne22" side="end"/>
+                <Port rail="ne25" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw09</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi36" type="T_RailPoint">
+            <Placement x="1320" y="-30" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne24" side="start"/>
+                <Port rail="ne20" side="end"/>
+                <Port rail="ne25" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw10</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig37" type="T_Signal">
+            <Placement x="1495.6" y="300" angle="180" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne22" side="0.462425"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S02</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus38" type="T_BufferStop">
+            <Placement x="1620" y="720"/>
+            <Ports>
+                <Port rail="ne26" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf26</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus39" type="T_BufferStop">
+            <Placement x="2760" y="1050" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne27" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf27</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi40" type="T_RailPoint">
+            <Placement x="2340" y="1050" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne27" side="start"/>
+                <Port rail="ne28" side="start"/>
+                <Port rail="ne26" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw11</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus41" type="T_BufferStop">
+            <Placement x="510" y="720" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne29" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf28</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi42" type="T_RailPoint">
+            <Placement x="1470" y="1050" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne28" side="end"/>
+                <Port rail="ne30" side="start"/>
+                <Port rail="ne29" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw12</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus43" type="T_BufferStop">
+            <Placement x="720" y="1050" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne30" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf29</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig44" type="T_Signal">
+            <Placement x="1924.6" y="1050" angle="180" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne28" side="0.477474"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S03</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig45" type="T_Signal">
+            <Placement x="-1057.79" y="60" angle="360"/>
+            <Ports>
+                <Port rail="ne1" side="0.478349"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S04</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig47" type="T_Signal">
+            <Placement x="-511.267" y="480" angle="180" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne12" side="0.339001"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S05</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus55" type="T_BufferStop">
+            <Placement x="-1260" y="2040" angle="180" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne34" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf36</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi56" type="T_RailPoint">
+            <Placement x="-690" y="2040"/>
+            <Ports>
+                <Port rail="ne34" side="end"/>
+                <Port rail="ne36" side="start"/>
+                <Port rail="ne35" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw14</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus57" type="T_BufferStop">
+            <Placement x="-90" y="2040" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne36" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf37</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus58" type="T_BufferStop">
+            <Placement x="750" y="1590" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne37" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf38</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="swi59" type="T_RailPoint">
+            <Placement x="210" y="1830"/>
+            <Ports>
+                <Port rail="ne35" side="end"/>
+                <Port rail="ne38" side="start"/>
+                <Port rail="ne37" side="start"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Sw15</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_BranchingSpeedRight">60</Attribute>
+                <Attribute id="A_railML_BranchingSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedRight">60</Attribute>
+                <Attribute id="A_railML_JoiningSpeedLeft">60</Attribute>
+                <Attribute id="A_railML_Radius">500</Attribute>
+                <Attribute id="A_railML_ContinueCourse">right</Attribute>
+                <Attribute id="A_railML_SwPosition">nominal</Attribute>
+                <Attribute id="A_railML_IsKeyLocked">false</Attribute>
+                <Attribute id="A_railML_ReturnsToPreferredPosition">false</Attribute>
+                <Attribute id="A_railML_MaxThrowTime">PT10S</Attribute>
+                <Attribute id="A_railML_TypicalThrowTime">PT6S</Attribute>
+                <Attribute id="A_railML_Type">ordinarySwitch</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="bus60" type="T_BufferStop">
+            <Placement x="750" y="1830" flipAlong="true"/>
+            <Ports>
+                <Port rail="ne38" side="end"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Name">Buf39</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig61" type="T_Signal">
+            <Placement x="515.476" y="1830" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne38" side="0.565696"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S06</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+    </Entities>
+    <TrackCircuits/>
+</RaILAiD>
