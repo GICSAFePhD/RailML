@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2022-01-19T18:52:37Z</dc:date>
+        <dc:date>2022-12-23T11:40:24Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_7.railml" language="en"/>
-                    <isValid from="2021-12-22" to="2022-12-22"/>
+                    <isValid from="2022-12-20" to="2023-12-20"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2021-12-22" to="2022-12-22"/>
+                    <isValid from="2022-12-20" to="2023-12-20"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
