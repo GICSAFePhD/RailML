@@ -6,21 +6,13 @@ sig02 [T02] <<:
 	From: ne19 | To: ne19
 	Type: Stop | Direction: reverse | AtTrack: right 
 	Position: [128, -300] | Coordinate: 0.1567
-sig03 [L03] <<:
-	From: ne14 | To: line112
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [-1421, -450] | Coordinate: 0.1040
 sig04 [L04] <<:
 	From: ne15 | To: line113
-	Type: Stop | Direction: reverse | AtTrack: right 
+	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [-1421, -300] | Coordinate: 0.3050
-sig05 [L05] >>:
-	From: ne18 | To: line114
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [1421, -450] | Coordinate: 0.9004
 sig06 [L06] >>:
 	From: ne20 | To: line115
-	Type: Stop | Direction: normal | AtTrack: left 
+	Type: Circulation | Direction: normal | AtTrack: left 
 	Position: [1421, -300] | Coordinate: 0.8830
 sig09 [P09] <<:
 	From: ne14 | To: ne14_right
