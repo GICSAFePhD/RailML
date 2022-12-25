@@ -1,52 +1,35 @@
-Nodes: 5 | Switches: 2 | Signals: 0 | Detectors: 14 | Ends: 4 | Barriers: 0
-Node ne3:
+Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 1
+Node ne14:
 	Track = track2
-	TrainDetectionElements -> tde180
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde181
-		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne26', 'ne27']
-	Switches -> Sw12
-		ContinueCourse -> right -> ne26
-		BranchCourse -> left -> ne27
-Node ne23:
-	Track = track4
-	TrainDetectionElements -> tde182
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde183
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde184
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde185
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde186
-		Type -> insulatedRailJoint
-	Type = BufferStop -> ['bus152']
-	Neighbours = 2 -> ['ne25', 'ne27']
-	Switches -> Sw11
-		ContinueCourse -> right -> ne25
-		BranchCourse -> left -> ne27
-Node ne25:
+	Neighbours = 2 -> ['ne16', 'ne15']
+Node ne15:
 	Track = track3
-	TrainDetectionElements -> tde187
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde188
-		Type -> insulatedRailJoint
-	Type = BufferStop -> ['bus151']
-	Neighbours = 2 -> ['ne23', 'ne27']
-Node ne26:
+	Neighbours = 2 -> ['ne14', 'ne16']
+Node ne16:
 	Track = track1
-	TrainDetectionElements -> tde174
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde175
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde176
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde177
-		Type -> insulatedRailJoint
-	TrainDetectionElements -> tde178
-		Type -> insulatedRailJoint
-	Neighbours = 2 -> ['ne3', 'ne27']
-Node ne27:
+	Neighbours = 4 -> ['ne14', 'ne15', 'ne18', 'ne17']
+	Level crossing -> lcr120
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [-147, -450] | Coordinate: 0.3839
+	Switches -> Sw01
+		ContinueCourse -> right -> ne14
+		BranchCourse -> left -> ne15
+	Switches -> Sw02
+		ContinueCourse -> left -> ne18
+		BranchCourse -> right -> ne17
+Node ne17:
 	Track = track5
-	Neighbours = 4 -> ['ne3', 'ne23', 'ne25', 'ne26']
+	Neighbours = 4 -> ['ne16', 'ne18', 'ne20', 'ne19']
+Node ne18:
+	Track = track4
+	Neighbours = 2 -> ['ne16', 'ne17']
+Node ne19:
+	Track = track7
+	Type = BufferStop -> ['bus88']
+	Neighbours = 2 -> ['ne17', 'ne20']
+Node ne20:
+	Track = track6
+	Neighbours = 2 -> ['ne17', 'ne19']
+	Switches -> Sw03
+		ContinueCourse -> left -> ne19
+		BranchCourse -> right -> ne17
