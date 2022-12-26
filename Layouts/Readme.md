@@ -8,10 +8,10 @@
 
 ![alt text](1_B.png)
 
-| First Header  | Second Header |
-|  :---:   |  :---:   |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Route  | Route Name | Entry | Exit | Switches | Tracks | Crossings | Platforms |
+|  :---:   |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  | Content Cell  |
+
 
 # Example_2
 ## Name: 
