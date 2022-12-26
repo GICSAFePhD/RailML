@@ -8,9 +8,9 @@
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_3 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
-| R_1 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16  |
-| R_2 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16  |
+| R_1 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
+| R_2 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16  |
+| R_3 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16  |
 | R_4 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19  |
 | R_5 |  S10  |  S12  | Sw03_R + Sw02_R  | - | - | ne20-ne17-ne16  |
 
@@ -29,8 +29,7 @@
 | R_9 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20  |
 | R_10 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20  |
 
-
-
+Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. It does not affect safety, RNA always considers every possible route in the layout.
 
 # Example_2
 ## Name: 
