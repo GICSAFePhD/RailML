@@ -8,9 +8,9 @@
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_1 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16  |
-| R_2 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16  |
-| R_3 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
+| R_1 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
+| R_2 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16  |
+| R_3 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16  |
 | R_4 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19  |
 | R_5 |  S10  |  S12  | Sw03_R + Sw02_R  | - | - | ne20-ne17-ne16  |
 
@@ -18,17 +18,18 @@
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_1 |  T02  |  C20  | -  | -  | - | ne19  |
-| R_2 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16  |
+| R_1 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16  |
+| R_2 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16  |
 | R_3 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16  |
-| R_4 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16  |
-| R_5 |  C20  |  L06  | Sw03_N  | - | - | ne19-ne20  |
-| R_6 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18  |
-| R_7 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20  |
-| R_8 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14  |
-| R_9 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15  |
-| R_10 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19  |
-| R_11 |  S21  |  S15  | Sw03_R  | - | - | ne20-ne17-ne16  |
+| R_4 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19  |
+| R_5 |  S21  |  S15  | Sw03_R + Sw02_R | - | - | ne20-ne17-ne16  |
+| R_6 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14  |
+| R_7 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15  |
+| R_8 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18  |
+| R_9 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20  |
+| R_10 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20  |
+
+Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. It does not affect safety, RNA always considers every possible route in the layout.
 
 # Example_2
 ## Name: 
