@@ -37,7 +37,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 # Example_4
 ## Name:
 
-![alt text](4_B.png)
+![alt text](4_A.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
