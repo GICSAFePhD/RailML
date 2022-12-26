@@ -17,7 +17,7 @@
 ![alt text](1_B.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
-|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  | Eq to R_X
 | R_1 |  T02  |  C20  | -  | -  | - | ne19  |
 | R_2 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16  |
 | R_3 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16  |
