@@ -1,9 +1,6 @@
 # Example_1
 ## Name: 
 
-- [x] Original signalling
-- [x] Original interlocking table
-
 ![alt text](1_A.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
@@ -35,8 +32,41 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 ## Name: 
 
 # Example_3
+## Name:
 
 # Example_4
+## Name:
+
+![alt text](4_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_1 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
+
+![alt text](4_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_13 |  S23  |  C25  | Sw01_N | - | - | ne01-ne02 |
+| R_09 |  C21  |  T01  | Sw01_N | - | - | ne02-ne01 |
+| R_14 |  S23  |  J11  | Sw01_R | - | - | ne01-ne03 |
+| R_06 |  J12  |  T01  | Sw01_R | - | - | ne03-ne01 |
+| R_19 |  S27  |  C21  | Sw02_N | - | - | ne04-ne02 |
+| R_10 |  C25  |  T03  | Sw02_N | - | - | ne02-ne04 |
+| R_20 |  S27  |  J12  | Sw02_R | - | - | ne04-ne03 |
+| R_05 |  J11  |  T04  | Sw02_R | - | - | ne03-ne04 |
+| R_15 |  S31  |  C33  | Sw03_N | - | - | ne05-ne06 |
+| R_11 |  C29  |  T05  | Sw03_N | - | - | ne06-ne05 |
+| R_16 |  S31  |  J17  | Sw03_R | - | - | ne05-ne07 |
+| R_08 |  J18  |  T05  | Sw03_R | - | - | ne07-ne05 |
+| R_17 |  S35  |  C29  | Sw04_N | - | - | ne08-ne06 |
+| R_12 |  C33  |  T07  | Sw04_N | - | - | ne06-ne08 |
+| R_18 |  S35  |  J18  | Sw04_R | - | - | ne08-ne07 |
+| R_07 |  J17  |  T07  | Sw04_R | - | - | ne07-ne08 |
+| R_01 |  T02  |  S23  | - | - | - | ne01 |
+| R_02 |  T04  |  S27  | - | - | - | ne04 |
+| R_03 |  T06  |  S31  | - | - | - | ne05 |
+| R_04 |  T08  |  S35  | - | - | - | ne08 |
 
 # Example_5
 
