@@ -18,61 +18,61 @@
     </Globals>
     <MacroAreas/>
     <BackgroundImage/>
-    <IdGenerators nextRailId="9" nextEntityId="200">
-        <EntityName definitionId="SignalNameGen" nextId="13"/>
+    <IdGenerators nextRailId="9" nextEntityId="204">
+        <EntityName definitionId="SignalNameGen" nextId="17"/>
         <EntityName definitionId="TrackCircuitNameGen" nextId="19"/>
     </IdGenerators>
     <Rails>
         <Rail id="ne01" macro-area="">
             <Path>
-                <Point x="-1500" y="150"/>
-                <Point x="-750" y="150"/>
+                <Point x="-1451.4" y="150"/>
+                <Point x="-763.589" y="150"/>
             </Path>
         </Rail>
         <Rail id="ne02" macro-area="">
             <Path>
-                <Point x="-750" y="150"/>
-                <Point x="750" y="150"/>
+                <Point x="-763.589" y="150"/>
+                <Point x="736.411" y="150"/>
             </Path>
         </Rail>
         <Rail id="ne03" macro-area="">
             <Path>
-                <Point x="-750" y="150"/>
-                <Point x="-450" y="-150"/>
-                <Point x="450" y="-150"/>
-                <Point x="750" y="150"/>
+                <Point x="-763.589" y="150"/>
+                <Point x="-463.589" y="-150"/>
+                <Point x="436.411" y="-150"/>
+                <Point x="736.411" y="150"/>
             </Path>
         </Rail>
         <Rail id="ne04" macro-area="">
             <Path>
-                <Point x="750" y="150"/>
-                <Point x="1500" y="150"/>
+                <Point x="736.411" y="150"/>
+                <Point x="1451.4" y="150"/>
             </Path>
         </Rail>
         <Rail id="ne05" macro-area="">
             <Path>
-                <Point x="-1500" y="450"/>
-                <Point x="-750" y="450"/>
+                <Point x="-1451.4" y="450"/>
+                <Point x="-763.589" y="450"/>
             </Path>
         </Rail>
         <Rail id="ne06" macro-area="">
             <Path>
-                <Point x="-750" y="450"/>
-                <Point x="750" y="450"/>
+                <Point x="-763.589" y="450"/>
+                <Point x="736.411" y="450"/>
             </Path>
         </Rail>
         <Rail id="ne07" macro-area="">
             <Path>
-                <Point x="-750" y="450"/>
-                <Point x="-450" y="750"/>
-                <Point x="450" y="750"/>
-                <Point x="750" y="450"/>
+                <Point x="-763.589" y="450"/>
+                <Point x="-463.589" y="750"/>
+                <Point x="436.411" y="750"/>
+                <Point x="736.411" y="450"/>
             </Path>
         </Rail>
         <Rail id="ne08" macro-area="">
             <Path>
-                <Point x="750" y="450"/>
-                <Point x="1500" y="450"/>
+                <Point x="736.411" y="450"/>
+                <Point x="1451.4" y="450"/>
             </Path>
         </Rail>
     </Rails>
@@ -81,7 +81,7 @@
     </LinearLocationSystems>
     <Entities>
         <Entity id="bus174" type="T_BufferStop">
-            <Placement x="-1500" y="150"/>
+            <Placement x="-1451.4" y="150"/>
             <Ports>
                 <Port rail="ne01" side="start"/>
             </Ports>
@@ -93,7 +93,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus175" type="T_BufferStop">
-            <Placement x="-1500" y="450"/>
+            <Placement x="-1451.4" y="450"/>
             <Ports>
                 <Port rail="ne05" side="start"/>
             </Ports>
@@ -105,7 +105,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus176" type="T_BufferStop">
-            <Placement x="1500" y="150" flipAlong="true"/>
+            <Placement x="1451.4" y="150" flipAlong="true"/>
             <Ports>
                 <Port rail="ne04" side="end"/>
             </Ports>
@@ -117,7 +117,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus177" type="T_BufferStop">
-            <Placement x="1500" y="450" flipAlong="true"/>
+            <Placement x="1451.4" y="450" flipAlong="true"/>
             <Ports>
                 <Port rail="ne08" side="end"/>
             </Ports>
@@ -129,7 +129,7 @@
             </Attributes>
         </Entity>
         <Entity id="swi01" type="T_RailPoint">
-            <Placement x="-750" y="150"/>
+            <Placement x="-763.589" y="150"/>
             <Ports>
                 <Port rail="ne01" side="end"/>
                 <Port rail="ne02" side="start"/>
@@ -154,7 +154,7 @@
             </Attributes>
         </Entity>
         <Entity id="swi02" type="T_RailPoint">
-            <Placement x="750" y="150" angle="180" flipAcross="true"/>
+            <Placement x="736.411" y="150" angle="180" flipAcross="true"/>
             <Ports>
                 <Port rail="ne04" side="start"/>
                 <Port rail="ne02" side="end"/>
@@ -179,7 +179,7 @@
             </Attributes>
         </Entity>
         <Entity id="swi03" type="T_RailPoint">
-            <Placement x="-750" y="450" flipAcross="true"/>
+            <Placement x="-763.589" y="450" flipAcross="true"/>
             <Ports>
                 <Port rail="ne05" side="end"/>
                 <Port rail="ne06" side="start"/>
@@ -204,7 +204,7 @@
             </Attributes>
         </Entity>
         <Entity id="swi04" type="T_RailPoint">
-            <Placement x="750" y="450" angle="180"/>
+            <Placement x="736.411" y="450" angle="180"/>
             <Ports>
                 <Port rail="ne08" side="start"/>
                 <Port rail="ne06" side="end"/>
@@ -229,9 +229,9 @@
             </Attributes>
         </Entity>
         <Entity id="tde89" type="T_Connection">
-            <Placement x="-1088.04" y="150" flipAlong="true"/>
+            <Placement x="-1101.62" y="150" flipAlong="true"/>
             <Ports>
-                <Port rail="ne01" side="0.54928"/>
+                <Port rail="ne01" side="0.508537"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -242,7 +242,7 @@
             </Attributes>
         </Entity>
         <Entity id="tde93" type="T_Connection">
-            <Placement x="2.53699" y="-150" flipAlong="true"/>
+            <Placement x="-11.0518" y="-150" flipAlong="true"/>
             <Ports>
                 <Port rail="ne03" side="1.50282"/>
             </Ports>
@@ -255,9 +255,9 @@
             </Attributes>
         </Entity>
         <Entity id="tde96" type="T_Connection">
-            <Placement x="1113.75" y="150" flipAlong="true"/>
+            <Placement x="1100.17" y="150" flipAlong="true"/>
             <Ports>
-                <Port rail="ne04" side="0.485"/>
+                <Port rail="ne04" side="0.508755"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -268,9 +268,9 @@
             </Attributes>
         </Entity>
         <Entity id="tde105" type="T_Connection">
-            <Placement x="-1104.88" y="450" flipAlong="true"/>
+            <Placement x="-1118.46" y="450" flipAlong="true"/>
             <Ports>
-                <Port rail="ne05" side="0.526827"/>
+                <Port rail="ne05" side="0.484054"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -281,7 +281,7 @@
             </Attributes>
         </Entity>
         <Entity id="tde108" type="T_Connection">
-            <Placement x="7.61099" y="750" flipAlong="true"/>
+            <Placement x="-5.9778" y="750" flipAlong="true"/>
             <Ports>
                 <Port rail="ne07" side="1.50846"/>
             </Ports>
@@ -294,9 +294,9 @@
             </Attributes>
         </Entity>
         <Entity id="tde112" type="T_Connection">
-            <Placement x="1113.75" y="450" flipAlong="true"/>
+            <Placement x="1100.17" y="450" flipAlong="true"/>
             <Ports>
-                <Port rail="ne08" side="0.485"/>
+                <Port rail="ne08" side="0.508755"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -307,9 +307,9 @@
             </Attributes>
         </Entity>
         <Entity id="tvd97" type="T_TrackCircuit">
-            <Placement x="-1281.64" y="150"/>
+            <Placement x="-1295.22" y="150"/>
             <Ports>
-                <Port rail="ne01" side="0.291147"/>
+                <Port rail="ne01" side="0.227065"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -323,7 +323,7 @@
             </Attributes>
         </Entity>
         <Entity id="tvd98" type="T_TrackCircuit">
-            <Placement x="-603.66" y="3.65999" angle="315"/>
+            <Placement x="-617.249" y="3.65999" angle="315"/>
             <Ports>
                 <Port rail="ne03" side="0.4878"/>
             </Ports>
@@ -339,7 +339,7 @@
             </Attributes>
         </Entity>
         <Entity id="tvd103" type="T_TrackCircuit">
-            <Placement x="597.743" y="-2.25702" angle="45"/>
+            <Placement x="584.154" y="-2.25702" angle="45"/>
             <Ports>
                 <Port rail="ne03" side="2.49248"/>
             </Ports>
@@ -355,9 +355,9 @@
             </Attributes>
         </Entity>
         <Entity id="tvd104" type="T_TrackCircuit">
-            <Placement x="1284.55" y="150"/>
+            <Placement x="1264.26" y="150"/>
             <Ports>
-                <Port rail="ne04" side="0.712733"/>
+                <Port rail="ne04" side="0.738265"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -371,9 +371,9 @@
             </Attributes>
         </Entity>
         <Entity id="tvd162" type="T_TrackCircuit">
-            <Placement x="-1281.64" y="450"/>
+            <Placement x="-1295.22" y="450"/>
             <Ports>
-                <Port rail="ne05" side="0.291147"/>
+                <Port rail="ne05" side="0.227065"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -387,7 +387,7 @@
             </Attributes>
         </Entity>
         <Entity id="tvd163" type="T_TrackCircuit">
-            <Placement x="-593.24" y="606.76" angle="45"/>
+            <Placement x="-606.829" y="606.76" angle="45"/>
             <Ports>
                 <Port rail="ne07" side="0.522533"/>
             </Ports>
@@ -403,7 +403,7 @@
             </Attributes>
         </Entity>
         <Entity id="tvd172" type="T_TrackCircuit">
-            <Placement x="596.515" y="603.485" angle="315"/>
+            <Placement x="582.926" y="603.485" angle="315"/>
             <Ports>
                 <Port rail="ne07" side="2.48838"/>
             </Ports>
@@ -419,9 +419,9 @@
             </Attributes>
         </Entity>
         <Entity id="tvd173" type="T_TrackCircuit">
-            <Placement x="1315.82" y="450"/>
+            <Placement x="1295.53" y="450"/>
             <Ports>
-                <Port rail="ne08" side="0.754427"/>
+                <Port rail="ne08" side="0.781999"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_TrackCircuits</Attribute>
@@ -435,7 +435,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig186" type="T_Signal">
-            <Placement x="339.221" y="-150"/>
+            <Placement x="325.632" y="-150"/>
             <Ports>
                 <Port rail="ne03" side="1.87691"/>
             </Ports>
@@ -465,7 +465,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig187" type="T_Signal">
-            <Placement x="-339.221" y="-150" flipAlong="true" flipAcross="true"/>
+            <Placement x="-352.81" y="-150" flipAlong="true" flipAcross="true"/>
             <Ports>
                 <Port rail="ne03" side="1.12309"/>
             </Ports>
@@ -495,7 +495,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig188" type="T_Signal">
-            <Placement x="-339.221" y="150" flipAlong="true" flipAcross="true"/>
+            <Placement x="-352.81" y="150" flipAlong="true" flipAcross="true"/>
             <Ports>
                 <Port rail="ne02" side="0.273853"/>
             </Ports>
@@ -525,7 +525,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig189" type="T_Signal">
-            <Placement x="339.221" y="150"/>
+            <Placement x="325.632" y="150"/>
             <Ports>
                 <Port rail="ne02" side="0.726147"/>
             </Ports>
@@ -555,7 +555,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig191" type="T_Signal">
-            <Placement x="-339.221" y="750" flipAlong="true" flipAcross="true"/>
+            <Placement x="-352.81" y="750" flipAlong="true" flipAcross="true"/>
             <Ports>
                 <Port rail="ne07" side="1.12309"/>
             </Ports>
@@ -585,7 +585,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig192" type="T_Signal">
-            <Placement x="339.221" y="750"/>
+            <Placement x="325.632" y="750"/>
             <Ports>
                 <Port rail="ne07" side="1.87691"/>
             </Ports>
@@ -615,7 +615,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig193" type="T_Signal">
-            <Placement x="-339.221" y="450" flipAlong="true" flipAcross="true"/>
+            <Placement x="-352.81" y="450" flipAlong="true" flipAcross="true"/>
             <Ports>
                 <Port rail="ne06" side="0.273853"/>
             </Ports>
@@ -645,7 +645,7 @@
             </Attributes>
         </Entity>
         <Entity id="sig194" type="T_Signal">
-            <Placement x="339.221" y="450"/>
+            <Placement x="325.632" y="450"/>
             <Ports>
                 <Port rail="ne06" side="0.726147"/>
             </Ports>
@@ -675,9 +675,9 @@
             </Attributes>
         </Entity>
         <Entity id="sig196" type="T_Signal_2">
-            <Placement x="1255.56" y="450" flipAlong="true" flipAcross="true"/>
+            <Placement x="1235.27" y="450" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="ne08" side="0.674076"/>
+                <Port rail="ne08" side="0.697719"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -705,9 +705,9 @@
             </Attributes>
         </Entity>
         <Entity id="sig197" type="T_Signal_2">
-            <Placement x="1255.56" y="150" flipAlong="true" flipAcross="true"/>
+            <Placement x="1235.27" y="150" flipAlong="true" flipAcross="true"/>
             <Ports>
-                <Port rail="ne04" side="0.674076"/>
+                <Port rail="ne04" side="0.697719"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -735,9 +735,9 @@
             </Attributes>
         </Entity>
         <Entity id="sig198" type="T_Signal_2">
-            <Placement x="-1240.14" y="150"/>
+            <Placement x="-1253.72" y="150"/>
             <Ports>
-                <Port rail="ne01" side="0.346483"/>
+                <Port rail="ne01" side="0.287401"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
@@ -765,13 +765,133 @@
             </Attributes>
         </Entity>
         <Entity id="sig199" type="T_Signal_2">
-            <Placement x="-1240.14" y="450"/>
+            <Placement x="-1253.72" y="450"/>
             <Ports>
-                <Port rail="ne05" side="0.346483"/>
+                <Port rail="ne05" side="0.287401"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
                 <Attribute id="A_Name">S07</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig200" type="T_Signal">
+            <Placement x="-1364.03" y="150" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne01" side="0.127026"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S13</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig201" type="T_Signal">
+            <Placement x="-1364.03" y="450" flipAlong="true" flipAcross="true"/>
+            <Ports>
+                <Port rail="ne05" side="0.127026"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S14</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig202" type="T_Signal">
+            <Placement x="1362.12" y="150"/>
+            <Ports>
+                <Port rail="ne04" side="0.875131"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S15</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_SignalType">V_main</Attribute>
+                <Attribute id="A_railML_IsSwitchable">false</Attribute>
+                <Attribute id="A_railML_IsVirtual">false</Attribute>
+                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
+                <Attribute id="A_railML_IsCatenary">false</Attribute>
+                <Attribute id="A_railML_IsDanger">false</Attribute>
+                <Attribute id="A_railML_IsEtcs">false</Attribute>
+                <Attribute id="A_railML_IsInformation">false</Attribute>
+                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
+                <Attribute id="A_railML_IsMilePost">false</Attribute>
+                <Attribute id="A_railML_IsStopPost">false</Attribute>
+                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
+                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
+                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
+                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
+                <Attribute id="A_railML_ConstructionType">light</Attribute>
+                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
+                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
+                <Attribute id="A_railML_PassingSpeed">180</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="sig203" type="T_Signal">
+            <Placement x="1362.12" y="450"/>
+            <Ports>
+                <Port rail="ne08" side="0.875131"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Signals</Attribute>
+                <Attribute id="A_Name">S16</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
                 <Attribute id="A_railML_IsSwitchable">false</Attribute>

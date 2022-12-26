@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_4.railml</dc:title>
-        <dc:date>2022-12-26T08:53:40Z</dc:date>
+        <dc:date>2022-12-26T10:21:42Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -38,10 +38,10 @@
                     <relation ref="nr_ne01ne03_swi01"/>
                     <associatedPositioningSystem id="ne01_aps01">
                         <intrinsicCoordinate id="ne01_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-1500.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-1451.402" y="150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne01_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -52,10 +52,10 @@
                     <relation ref="nr_ne02ne03_swi02"/>
                     <associatedPositioningSystem id="ne02_aps01">
                         <intrinsicCoordinate id="ne02_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne02_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -66,16 +66,16 @@
                     <relation ref="nr_ne03ne04_swi02"/>
                     <associatedPositioningSystem id="ne03_aps01">
                         <intrinsicCoordinate id="ne03_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne03_aps01_ic02" intrinsicCoord="0.333333">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-450.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-463.589" y="-150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne03_aps01_ic03" intrinsicCoord="0.666667">
-                            <geometricCoordinate positioningSystemRef="gps01" x="450.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="436.411" y="-150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne03_aps01_ic04" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -84,10 +84,10 @@
                     <relation ref="nr_ne03ne04_swi02"/>
                     <associatedPositioningSystem id="ne04_aps01">
                         <intrinsicCoordinate id="ne04_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne04_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1500.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1451.402" y="150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -96,10 +96,10 @@
                     <relation ref="nr_ne05ne07_swi03"/>
                     <associatedPositioningSystem id="ne05_aps01">
                         <intrinsicCoordinate id="ne05_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-1500.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-1451.402" y="450.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne05_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="450.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -110,10 +110,10 @@
                     <relation ref="nr_ne06ne07_swi04"/>
                     <associatedPositioningSystem id="ne06_aps01">
                         <intrinsicCoordinate id="ne06_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="450.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne06_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="450.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -124,16 +124,16 @@
                     <relation ref="nr_ne07ne08_swi04"/>
                     <associatedPositioningSystem id="ne07_aps01">
                         <intrinsicCoordinate id="ne07_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-763.589" y="450.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne07_aps01_ic02" intrinsicCoord="0.333333">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-450.000" y="750.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-463.589" y="750.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne07_aps01_ic03" intrinsicCoord="0.666667">
-                            <geometricCoordinate positioningSystemRef="gps01" x="450.000" y="750.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="436.411" y="750.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne07_aps01_ic04" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="450.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -142,10 +142,10 @@
                     <relation ref="nr_ne07ne08_swi04"/>
                     <associatedPositioningSystem id="ne08_aps01">
                         <intrinsicCoordinate id="ne08_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="750.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="736.411" y="450.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne08_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1500.000" y="450.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1451.402" y="450.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -302,26 +302,50 @@
                 </signalIS>
                 <signalIS id="sig196" isSwitchable="false">
                     <name name="S12" language="en"/>
-                    <spotLocation id="sig196_sloc01" netElementRef="ne08" applicationDirection="reverse" intrinsicCoord="0.6741"/>
+                    <spotLocation id="sig196_sloc01" netElementRef="ne08" applicationDirection="reverse" intrinsicCoord="0.6977"/>
                     <designator register="_Example" entry="SIGNAL S12"/>
                     <signalConstruction type="light" positionAtTrack="left"/>
                 </signalIS>
                 <signalIS id="sig197" isSwitchable="false">
                     <name name="S02" language="en"/>
-                    <spotLocation id="sig197_sloc01" netElementRef="ne04" applicationDirection="reverse" intrinsicCoord="0.6741"/>
+                    <spotLocation id="sig197_sloc01" netElementRef="ne04" applicationDirection="reverse" intrinsicCoord="0.6977"/>
                     <designator register="_Example" entry="SIGNAL S02"/>
                     <signalConstruction type="light" positionAtTrack="left"/>
                 </signalIS>
                 <signalIS id="sig198" isSwitchable="false">
                     <name name="S01" language="en"/>
-                    <spotLocation id="sig198_sloc01" netElementRef="ne01" applicationDirection="normal" intrinsicCoord="0.3465"/>
+                    <spotLocation id="sig198_sloc01" netElementRef="ne01" applicationDirection="normal" intrinsicCoord="0.2874"/>
                     <designator register="_Example" entry="SIGNAL S01"/>
                     <signalConstruction type="light" positionAtTrack="left"/>
                 </signalIS>
                 <signalIS id="sig199" isSwitchable="false">
                     <name name="S07" language="en"/>
-                    <spotLocation id="sig199_sloc01" netElementRef="ne05" applicationDirection="normal" intrinsicCoord="0.3465"/>
+                    <spotLocation id="sig199_sloc01" netElementRef="ne05" applicationDirection="normal" intrinsicCoord="0.2874"/>
                     <designator register="_Example" entry="SIGNAL S07"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig200" isSwitchable="false">
+                    <name name="S13" language="en"/>
+                    <spotLocation id="sig200_sloc01" netElementRef="ne01" applicationDirection="reverse" intrinsicCoord="0.1270"/>
+                    <designator register="_Example" entry="SIGNAL S13"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig201" isSwitchable="false">
+                    <name name="S14" language="en"/>
+                    <spotLocation id="sig201_sloc01" netElementRef="ne05" applicationDirection="reverse" intrinsicCoord="0.1270"/>
+                    <designator register="_Example" entry="SIGNAL S14"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig202" isSwitchable="false">
+                    <name name="S15" language="en"/>
+                    <spotLocation id="sig202_sloc01" netElementRef="ne04" applicationDirection="normal" intrinsicCoord="0.8751"/>
+                    <designator register="_Example" entry="SIGNAL S15"/>
+                    <signalConstruction type="light" positionAtTrack="left"/>
+                </signalIS>
+                <signalIS id="sig203" isSwitchable="false">
+                    <name name="S16" language="en"/>
+                    <spotLocation id="sig203_sloc01" netElementRef="ne08" applicationDirection="normal" intrinsicCoord="0.8751"/>
+                    <designator register="_Example" entry="SIGNAL S16"/>
                     <signalConstruction type="light" positionAtTrack="left"/>
                 </signalIS>
             </signalsIS>
@@ -364,7 +388,7 @@
                     <designator register="_Example" entry="TRACK track1"/>
                     <trackBegin ref="bus174"/>
                     <trackEnd ref="swi01"/>
-                    <length value="750" type="physical"/>
+                    <length value="687.814" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -375,7 +399,7 @@
                     <designator register="_Example" entry="TRACK track2"/>
                     <trackBegin ref="bus175"/>
                     <trackEnd ref="swi03"/>
-                    <length value="750" type="physical"/>
+                    <length value="687.814" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -386,7 +410,7 @@
                     <designator register="_Example" entry="TRACK track3"/>
                     <trackBegin ref="bus176"/>
                     <trackEnd ref="swi02"/>
-                    <length value="750" type="physical"/>
+                    <length value="714.991" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk4" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -397,7 +421,7 @@
                     <designator register="_Example" entry="TRACK track4"/>
                     <trackBegin ref="bus177"/>
                     <trackEnd ref="swi04"/>
-                    <length value="750" type="physical"/>
+                    <length value="714.991" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk5" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -448,7 +472,7 @@
             <trainDetectionElements>
                 <trainDetectionElement id="tde89" type="insulatedRailJoint">
                     <name name="J01" language="en"/>
-                    <spotLocation id="tde89_sloc01" netElementRef="ne01" applicationDirection="both" intrinsicCoord="0.5493"/>
+                    <spotLocation id="tde89_sloc01" netElementRef="ne01" applicationDirection="both" intrinsicCoord="0.5085"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J01"/>
                 </trainDetectionElement>
                 <trainDetectionElement id="tde93" type="insulatedRailJoint">
@@ -458,12 +482,12 @@
                 </trainDetectionElement>
                 <trainDetectionElement id="tde96" type="insulatedRailJoint">
                     <name name="J08" language="en"/>
-                    <spotLocation id="tde96_sloc01" netElementRef="ne04" applicationDirection="both" intrinsicCoord="0.4850"/>
+                    <spotLocation id="tde96_sloc01" netElementRef="ne04" applicationDirection="both" intrinsicCoord="0.5088"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J08"/>
                 </trainDetectionElement>
                 <trainDetectionElement id="tde105" type="insulatedRailJoint">
                     <name name="J09" language="en"/>
-                    <spotLocation id="tde105_sloc01" netElementRef="ne05" applicationDirection="both" intrinsicCoord="0.5268"/>
+                    <spotLocation id="tde105_sloc01" netElementRef="ne05" applicationDirection="both" intrinsicCoord="0.4841"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J09"/>
                 </trainDetectionElement>
                 <trainDetectionElement id="tde108" type="insulatedRailJoint">
@@ -473,7 +497,7 @@
                 </trainDetectionElement>
                 <trainDetectionElement id="tde112" type="insulatedRailJoint">
                     <name name="J16" language="en"/>
-                    <spotLocation id="tde112_sloc01" netElementRef="ne08" applicationDirection="both" intrinsicCoord="0.4850"/>
+                    <spotLocation id="tde112_sloc01" netElementRef="ne08" applicationDirection="both" intrinsicCoord="0.5088"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J16"/>
                 </trainDetectionElement>
             </trainDetectionElements>
@@ -483,183 +507,199 @@
                 <name name="Example_4 microscopic screen visualization" language="en"/>
                 <spotElementProjection refersToElement="bus174" id="vis01_sep01">
                     <name name="Buf01" language="en"/>
-                    <coordinate x="-1500.000" y="150.000"/>
+                    <coordinate x="-1451.402" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus175" id="vis01_sep02">
                     <name name="Buf02" language="en"/>
-                    <coordinate x="-1500.000" y="450.000"/>
+                    <coordinate x="-1451.402" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus176" id="vis01_sep03">
                     <name name="Buf03" language="en"/>
-                    <coordinate x="1500.000" y="150.000"/>
+                    <coordinate x="1451.402" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus177" id="vis01_sep04">
                     <name name="Buf04" language="en"/>
-                    <coordinate x="1500.000" y="450.000"/>
+                    <coordinate x="1451.402" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig186" id="vis01_sep05">
                     <name name="S03" language="en"/>
-                    <coordinate x="339.221" y="-150.000"/>
+                    <coordinate x="325.632" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig187" id="vis01_sep06">
                     <name name="S04" language="en"/>
-                    <coordinate x="-339.221" y="-150.000"/>
+                    <coordinate x="-352.810" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig188" id="vis01_sep07">
                     <name name="S05" language="en"/>
-                    <coordinate x="-339.221" y="150.000"/>
+                    <coordinate x="-352.810" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig189" id="vis01_sep08">
                     <name name="S06" language="en"/>
-                    <coordinate x="339.221" y="150.000"/>
+                    <coordinate x="325.632" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig191" id="vis01_sep09">
                     <name name="S08" language="en"/>
-                    <coordinate x="-339.221" y="750.000"/>
+                    <coordinate x="-352.810" y="750.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig192" id="vis01_sep10">
                     <name name="S09" language="en"/>
-                    <coordinate x="339.221" y="750.000"/>
+                    <coordinate x="325.632" y="750.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig193" id="vis01_sep11">
                     <name name="S10" language="en"/>
-                    <coordinate x="-339.221" y="450.000"/>
+                    <coordinate x="-352.810" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig194" id="vis01_sep12">
                     <name name="S11" language="en"/>
-                    <coordinate x="339.221" y="450.000"/>
+                    <coordinate x="325.632" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig196" id="vis01_sep13">
                     <name name="S12" language="en"/>
-                    <coordinate x="1255.557" y="450.000"/>
+                    <coordinate x="1235.274" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig197" id="vis01_sep14">
                     <name name="S02" language="en"/>
-                    <coordinate x="1255.557" y="150.000"/>
+                    <coordinate x="1235.274" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig198" id="vis01_sep15">
                     <name name="S01" language="en"/>
-                    <coordinate x="-1240.138" y="150.000"/>
+                    <coordinate x="-1253.724" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig199" id="vis01_sep16">
                     <name name="S07" language="en"/>
-                    <coordinate x="-1240.138" y="450.000"/>
+                    <coordinate x="-1253.724" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi01" id="vis01_sep17">
+                <spotElementProjection refersToElement="sig200" id="vis01_sep17">
+                    <name name="S13" language="en"/>
+                    <coordinate x="-1364.032" y="150.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig201" id="vis01_sep18">
+                    <name name="S14" language="en"/>
+                    <coordinate x="-1364.032" y="450.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig202" id="vis01_sep19">
+                    <name name="S15" language="en"/>
+                    <coordinate x="1362.122" y="150.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="sig203" id="vis01_sep20">
+                    <name name="S16" language="en"/>
+                    <coordinate x="1362.122" y="450.000"/>
+                </spotElementProjection>
+                <spotElementProjection refersToElement="swi01" id="vis01_sep21">
                     <name name="Sw01" language="en"/>
-                    <coordinate x="-750.000" y="150.000"/>
+                    <coordinate x="-763.589" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi02" id="vis01_sep18">
+                <spotElementProjection refersToElement="swi02" id="vis01_sep22">
                     <name name="Sw02" language="en"/>
-                    <coordinate x="750.000" y="150.000"/>
+                    <coordinate x="736.411" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi03" id="vis01_sep19">
+                <spotElementProjection refersToElement="swi03" id="vis01_sep23">
                     <name name="Sw03" language="en"/>
-                    <coordinate x="-750.000" y="450.000"/>
+                    <coordinate x="-763.589" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="swi04" id="vis01_sep20">
+                <spotElementProjection refersToElement="swi04" id="vis01_sep24">
                     <name name="Sw04" language="en"/>
-                    <coordinate x="750.000" y="450.000"/>
+                    <coordinate x="736.411" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde89" id="vis01_sep21">
+                <spotElementProjection refersToElement="tde89" id="vis01_sep25">
                     <name name="J01" language="en"/>
-                    <coordinate x="-1088.040" y="150.000"/>
+                    <coordinate x="-1101.624" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde93" id="vis01_sep22">
+                <spotElementProjection refersToElement="tde93" id="vis01_sep26">
                     <name name="J05" language="en"/>
-                    <coordinate x="2.537" y="-150.000"/>
+                    <coordinate x="-11.052" y="-150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde96" id="vis01_sep23">
+                <spotElementProjection refersToElement="tde96" id="vis01_sep27">
                     <name name="J08" language="en"/>
-                    <coordinate x="1113.750" y="150.000"/>
+                    <coordinate x="1100.166" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde105" id="vis01_sep24">
+                <spotElementProjection refersToElement="tde105" id="vis01_sep28">
                     <name name="J09" language="en"/>
-                    <coordinate x="-1104.880" y="450.000"/>
+                    <coordinate x="-1118.464" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde108" id="vis01_sep25">
+                <spotElementProjection refersToElement="tde108" id="vis01_sep29">
                     <name name="J12" language="en"/>
-                    <coordinate x="7.611" y="750.000"/>
+                    <coordinate x="-5.978" y="750.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde112" id="vis01_sep26">
+                <spotElementProjection refersToElement="tde112" id="vis01_sep30">
                     <name name="J16" language="en"/>
-                    <coordinate x="1113.750" y="450.000"/>
+                    <coordinate x="1100.166" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd97" id="vis01_sep27">
+                <spotElementProjection refersToElement="tvd97" id="vis01_sep31">
                     <name name="01" language="en"/>
-                    <coordinate x="-1281.640" y="150.000"/>
+                    <coordinate x="-1295.224" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd98" id="vis01_sep28">
+                <spotElementProjection refersToElement="tvd98" id="vis01_sep32">
                     <name name="02" language="en"/>
-                    <coordinate x="-603.660" y="3.660"/>
+                    <coordinate x="-617.249" y="3.660"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd103" id="vis01_sep29">
+                <spotElementProjection refersToElement="tvd103" id="vis01_sep33">
                     <name name="03" language="en"/>
-                    <coordinate x="597.743" y="-2.257"/>
+                    <coordinate x="584.154" y="-2.257"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd104" id="vis01_sep30">
+                <spotElementProjection refersToElement="tvd104" id="vis01_sep34">
                     <name name="04" language="en"/>
-                    <coordinate x="1284.550" y="150.000"/>
+                    <coordinate x="1264.264" y="150.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd162" id="vis01_sep31">
+                <spotElementProjection refersToElement="tvd162" id="vis01_sep35">
                     <name name="14" language="en"/>
-                    <coordinate x="-1281.640" y="450.000"/>
+                    <coordinate x="-1295.224" y="450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd163" id="vis01_sep32">
+                <spotElementProjection refersToElement="tvd163" id="vis01_sep36">
                     <name name="15" language="en"/>
-                    <coordinate x="-593.240" y="606.760"/>
+                    <coordinate x="-606.829" y="606.760"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd172" id="vis01_sep33">
+                <spotElementProjection refersToElement="tvd172" id="vis01_sep37">
                     <name name="17" language="en"/>
-                    <coordinate x="596.515" y="603.485"/>
+                    <coordinate x="582.926" y="603.485"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tvd173" id="vis01_sep34">
+                <spotElementProjection refersToElement="tvd173" id="vis01_sep38">
                     <name name="18" language="en"/>
-                    <coordinate x="1315.820" y="450.000"/>
+                    <coordinate x="1295.534" y="450.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne01" id="vis01_lep1">
                     <name name="netElement_ne01" language="en"/>
-                    <coordinate x="-1500.000" y="150.000"/>
-                    <coordinate x="-750.000" y="150.000"/>
+                    <coordinate x="-1451.402" y="150.000"/>
+                    <coordinate x="-763.589" y="150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne02" id="vis01_lep2">
                     <name name="netElement_ne02" language="en"/>
-                    <coordinate x="-750.000" y="150.000"/>
-                    <coordinate x="750.000" y="150.000"/>
+                    <coordinate x="-763.589" y="150.000"/>
+                    <coordinate x="736.411" y="150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne03" id="vis01_lep3">
                     <name name="netElement_ne03" language="en"/>
-                    <coordinate x="-750.000" y="150.000"/>
-                    <coordinate x="-450.000" y="-150.000"/>
-                    <coordinate x="450.000" y="-150.000"/>
-                    <coordinate x="750.000" y="150.000"/>
+                    <coordinate x="-763.589" y="150.000"/>
+                    <coordinate x="-463.589" y="-150.000"/>
+                    <coordinate x="436.411" y="-150.000"/>
+                    <coordinate x="736.411" y="150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne04" id="vis01_lep4">
                     <name name="netElement_ne04" language="en"/>
-                    <coordinate x="750.000" y="150.000"/>
-                    <coordinate x="1500.000" y="150.000"/>
+                    <coordinate x="736.411" y="150.000"/>
+                    <coordinate x="1451.402" y="150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne05" id="vis01_lep5">
                     <name name="netElement_ne05" language="en"/>
-                    <coordinate x="-1500.000" y="450.000"/>
-                    <coordinate x="-750.000" y="450.000"/>
+                    <coordinate x="-1451.402" y="450.000"/>
+                    <coordinate x="-763.589" y="450.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne06" id="vis01_lep6">
                     <name name="netElement_ne06" language="en"/>
-                    <coordinate x="-750.000" y="450.000"/>
-                    <coordinate x="750.000" y="450.000"/>
+                    <coordinate x="-763.589" y="450.000"/>
+                    <coordinate x="736.411" y="450.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne07" id="vis01_lep7">
                     <name name="netElement_ne07" language="en"/>
-                    <coordinate x="-750.000" y="450.000"/>
-                    <coordinate x="-450.000" y="750.000"/>
-                    <coordinate x="450.000" y="750.000"/>
-                    <coordinate x="750.000" y="450.000"/>
+                    <coordinate x="-763.589" y="450.000"/>
+                    <coordinate x="-463.589" y="750.000"/>
+                    <coordinate x="436.411" y="750.000"/>
+                    <coordinate x="736.411" y="450.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne08" id="vis01_lep8">
                     <name name="netElement_ne08" language="en"/>
-                    <coordinate x="750.000" y="450.000"/>
-                    <coordinate x="1500.000" y="450.000"/>
+                    <coordinate x="736.411" y="450.000"/>
+                    <coordinate x="1451.402" y="450.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>
@@ -771,8 +811,124 @@
                 <signalIL id="il_sig199" isVirtual="false" approachSpeed="180" passingSpeed="180" releaseSpeed="180">
                     <refersTo ref="sig199"/>
                 </signalIL>
+                <signalIL id="il_sig200" isVirtual="false" approachSpeed="180" passingSpeed="180" releaseSpeed="180">
+                    <refersTo ref="sig200"/>
+                </signalIL>
+                <signalIL id="il_sig201" isVirtual="false" approachSpeed="180" passingSpeed="180" releaseSpeed="180">
+                    <refersTo ref="sig201"/>
+                </signalIL>
+                <signalIL id="il_sig202" isVirtual="false" approachSpeed="180" passingSpeed="180" releaseSpeed="180">
+                    <refersTo ref="sig202"/>
+                </signalIL>
+                <signalIL id="il_sig203" isVirtual="false" approachSpeed="180" passingSpeed="180" releaseSpeed="180">
+                    <refersTo ref="sig203"/>
+                </signalIL>
             </signalsIL>
             <routes>
+                <route id="rt_sig186_sig202">
+                    <designator register="_Example" entry="Route S03-S15"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd98"/>
+                    <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd104"/>
+                    <routeEntry id="rts_sig186_rt_sig186_sig202">
+                        <refersTo ref="il_sig186"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig202_rt_sig186_sig202">
+                        <refersTo ref="il_sig202"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig187_sig200">
+                    <designator register="_Example" entry="Route S04-S13"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd98"/>
+                    <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd97"/>
+                    <routeEntry id="rts_sig187_rt_sig187_sig200">
+                        <refersTo ref="il_sig187"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig200_rt_sig187_sig200">
+                        <refersTo ref="il_sig200"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig188_sig200">
+                    <designator register="_Example" entry="Route S05-S13"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd98"/>
+                    <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd97"/>
+                    <routeEntry id="rts_sig188_rt_sig188_sig200">
+                        <refersTo ref="il_sig188"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig200_rt_sig188_sig200">
+                        <refersTo ref="il_sig200"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig189_sig202">
+                    <designator register="_Example" entry="Route S06-S15"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd98"/>
+                    <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd104"/>
+                    <routeEntry id="rts_sig189_rt_sig189_sig202">
+                        <refersTo ref="il_sig189"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig202_rt_sig189_sig202">
+                        <refersTo ref="il_sig202"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig191_sig201">
+                    <designator register="_Example" entry="Route S08-S14"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
+                    <hasTvdSection ref="tvd162"/>
+                    <routeEntry id="rts_sig191_rt_sig191_sig201">
+                        <refersTo ref="il_sig191"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig201_rt_sig191_sig201">
+                        <refersTo ref="il_sig201"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig192_sig203">
+                    <designator register="_Example" entry="Route S09-S16"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
+                    <hasTvdSection ref="tvd173"/>
+                    <routeEntry id="rts_sig192_rt_sig192_sig203">
+                        <refersTo ref="il_sig192"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig203_rt_sig192_sig203">
+                        <refersTo ref="il_sig203"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig193_sig201">
+                    <designator register="_Example" entry="Route S10-S14"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
+                    <hasTvdSection ref="tvd162"/>
+                    <routeEntry id="rts_sig193_rt_sig193_sig201">
+                        <refersTo ref="il_sig193"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig201_rt_sig193_sig201">
+                        <refersTo ref="il_sig201"/>
+                    </routeExit>
+                </route>
+                <route id="rt_sig194_sig203">
+                    <designator register="_Example" entry="Route S11-S16"/>
+                    <handlesRouteType ref="rt_main"/>
+                    <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
+                    <hasTvdSection ref="tvd173"/>
+                    <routeEntry id="rts_sig194_rt_sig194_sig203">
+                        <refersTo ref="il_sig194"/>
+                    </routeEntry>
+                    <routeExit id="rtd_sig203_rt_sig194_sig203">
+                        <refersTo ref="il_sig203"/>
+                    </routeExit>
+                </route>
                 <route id="rt_sig196_sig193_swi04N">
                     <designator register="_Example" entry="Route S12-S10 (Sw04N)"/>
                     <handlesRouteType ref="rt_main"/>
