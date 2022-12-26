@@ -50,10 +50,6 @@ sig19 [H19] >>:
 	From: ne16 | To: ne16_left
 	Type: Manouver | Direction: normal | AtTrack: left 
 	Position: [-392, 450] | Coordinate: 0.8508
-sig20 [C20] <<:
-	From: ne19 | To: ne19_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [347.0, -300] | Coordinate: 0.5
 sig21 [S21] <<:
 	From: ne20 | To: ne20_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
