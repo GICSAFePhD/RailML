@@ -3,28 +3,28 @@
 
 ![alt text](1_A.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16  |
-| R_02 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16  |
-| R_03 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16  |
-| R_04 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19  |
+| R_01 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16 |
+| R_02 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16 |
+| R_03 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16 |
+| R_04 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19 |
 | R_05 |  S10  |  S12  | Sw03_R + Sw02_R  | - | - | ne20-ne17-ne16  |
 
 ![alt text](1_B.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16  |
-| R_02 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16  |
-| R_03 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16  |
-| R_04 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19  |
-| R_05 |  S21  |  S15  | Sw03_R + Sw02_R | - | - | ne20-ne17-ne16  |
-| R_06 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14  |
-| R_07 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15  |
-| R_08 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18  |
-| R_09 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20  |
-| R_10 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20  |
+| R_01 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16 |
+| R_02 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16 |
+| R_03 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16 |
+| R_04 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19 |
+| R_05 |  S21  |  S15  | Sw03_R + Sw02_R | - | - | ne20-ne17-ne16 |
+| R_06 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14 |
+| R_07 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15 |
+| R_08 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18 |
+| R_09 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20 |
+| R_10 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20 |
 
 Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. It does not affect safety, RNA always considers every possible route in the layout. What is more, departure signal are considered for line borders and buffer stops for extra protection.
 
@@ -39,7 +39,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 ![alt text](4_A.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S01  |  S06  | Sw01_N  | - | - | ne01-ne02 |
 | R_02 |  S05  |  S13  | Sw01_N  | - | - | ne02-ne01 |
@@ -60,7 +60,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 ![alt text](4_B.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S23  |  C25  | Sw01_N | - | - | ne01-ne02 |
 | R_02 |  C21  |  T01  | Sw01_N | - | - | ne02-ne01 |
@@ -93,5 +93,55 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 # Example_8
 
-- [ ] Original signalling
-- [ ] Original interlocking table
+# Example_9
+
+# Example_10
+
+![alt text](10_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x  | - | - | nexx-nexx |
+
+![alt text](10_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  T02  |  P20  | - | - | Lc08 | ne13 |
+| R_01 |  T04  |  X16  | - | - | - | ne14 |
+| R_01 |  T06  |  C29  | - | - | - | ne15 |
+| R_01 |  J11  |  L09  | - | - | - | ne22 |
+| R_01 |  J12  |  C21  | Sw12_N | - | - | ne22-ne08 |
+| R_01 |  J13  |  C25  | Sw13_N | - | - | ne23-ne12 |
+| R_01 |  J14  |  L10  | - | - | - | ne23 |
+| R_01 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
+| R_01 |  X16  |  L07  | Sw04_R + Sw07_R | - | Lc06 | ne14-ne09-ne01 |
+| R_01 |  P20  |  L08  | Sw06_R  | - | - | ne13-ne02 |
+| R_01 |  C21  |  L07  | Sw04_N  | - | - | ne08-ne01 |
+| R_01 |  C25  |  L08  | Sw06_N  | - | - | nex12-ne02 |
+| R_01 |  C29  |  L07  | Sw04_N + Sw07_R | - | - | ne15-ne09-ne01 |
+| R_01 |  S22  |  S32  | Sw04_N  | - | - | ne01-ne08 |
+| R_01 |  S22  |  T05  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
+| R_01 |  S32  |  X15  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
+| R_01 |  S32  |  J11  | Sw12_N | - | - | ne08-ne22 |
+| R_01 |  S33  |  C25  | Sw12_R + Sw13_R | - | - | ne08-ne24-ne12 |
+| R_01 |  S35  |  J14  | Sw13_N | - | - | ne12-ne23 |
+| R_01 |  S35  |  C21  | Sw12_R + Sw13_R | - | - | ne22-ne24-ne08 |
+| R_01 |  S27  |  S35  | Sw06_N | - | - | ne02-ne12 |
+| R_01 |  S27  |  T01  | Sw06_R | - | - | ne02-ne13 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
