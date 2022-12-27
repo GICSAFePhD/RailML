@@ -133,7 +133,7 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 | R_01 |  S27  |  T01  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
 | R_01 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
 | R_01 |  T04  |  X16  | - | - | - | ne14 |
-| R_01 |  T02  |  P20  | - | - | Lc08 | ne13 |
+| R_01 |  T02  |  P20  | - | Plat13 | Lc08 | ne13 |
 | R_01 |  T06  |  C29  | - | - | - | ne15 |
 | R_01 |  J11  |  L09  | - | - | - | ne22 |
 | R_01 |  J14  |  L10  | - | - | - | ne23 |
