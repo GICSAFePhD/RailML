@@ -3,7 +3,7 @@
 
 ![alt text](1_A.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16 |
 | R_02 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16 |
@@ -13,7 +13,7 @@
 
 ![alt text](1_B.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16 |
 | R_02 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16 |
@@ -39,7 +39,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 ![alt text](4_A.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S01  |  S06  | Sw01_N  | - | - | ne01-ne02 |
 | R_02 |  S05  |  S13  | Sw01_N  | - | - | ne02-ne01 |
@@ -60,7 +60,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 ![alt text](4_B.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S23  |  C25  | Sw01_N | - | - | ne01-ne02 |
 | R_02 |  C21  |  T01  | Sw01_N | - | - | ne02-ne01 |
@@ -99,12 +99,12 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 ![alt text](10_A.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  Sxx  |  Sxx  | Sw0x_x  | - | - | nexx-nexx |
 
 ![alt text](10_B.png)
 
-| Route  | Entry | Exit | Switches | Platforms | Crossings | Tracks |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  Sxx  |  Sxx  | Sw0x_x  | - | - | nexx-nexx |
