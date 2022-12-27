@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_7.railml</dc:title>
-        <dc:date>2022-12-23T11:40:24Z</dc:date>
+        <dc:date>2022-12-26T23:14:29Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -36,20 +36,20 @@
                 <netElement id="ne1">
                     <associatedPositioningSystem id="ne1_aps01">
                         <intrinsicCoordinate id="ne1_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-1050.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-704.261" y="150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne1_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1350.000" y="150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1004.261" y="150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
                 <netElement id="ne2">
                     <associatedPositioningSystem id="ne2_aps01">
                         <intrinsicCoordinate id="ne2_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="-1050.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="-704.261" y="-150.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne2_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1350.000" y="-150.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1004.261" y="-150.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -90,13 +90,13 @@
             <levelCrossingsIS>
                 <levelCrossingIS id="lcr22" activation="none">
                     <name name="Lc07" language="en"/>
-                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.4064"/>
+                    <spotLocation id="lcr22_sloc01" netElementRef="ne2" applicationDirection="both" intrinsicCoord="0.3600"/>
                     <designator register="_Example" entry="LEVEL CROSSING Lc07"/>
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
                 <levelCrossingIS id="lcr23" activation="none">
                     <name name="Lc08" language="en"/>
-                    <spotLocation id="lcr23_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.3003"/>
+                    <spotLocation id="lcr23_sloc01" netElementRef="ne1" applicationDirection="both" intrinsicCoord="0.2110"/>
                     <designator register="_Example" entry="LEVEL CROSSING Lc08"/>
                     <protection barriers="none" lights="none" acoustic="none" hasActiveProtection="true"/>
                 </levelCrossingIS>
@@ -128,7 +128,7 @@
                     <designator register="_Example" entry="TRACK track1"/>
                     <trackBegin ref="bus1"/>
                     <trackEnd ref="bus2"/>
-                    <length value="2400" type="physical"/>
+                    <length value="1708.52" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk2" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -139,7 +139,7 @@
                     <designator register="_Example" entry="TRACK track2"/>
                     <trackBegin ref="bus11"/>
                     <trackEnd ref="bus31"/>
-                    <length value="2400" type="physical"/>
+                    <length value="1708.52" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
@@ -149,45 +149,45 @@
                 <name name="Example_7 microscopic screen visualization" language="en"/>
                 <spotElementProjection refersToElement="bus1" id="vis01_sep1">
                     <name name="Buf01" language="en"/>
-                    <coordinate x="-1050.000" y="150.000"/>
+                    <coordinate x="-704.261" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus2" id="vis01_sep2">
                     <name name="Buf02" language="en"/>
-                    <coordinate x="1350.000" y="150.000"/>
+                    <coordinate x="1004.261" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus11" id="vis01_sep3">
                     <name name="Buf01" language="en"/>
-                    <coordinate x="-1050.000" y="-150.000"/>
+                    <coordinate x="-704.261" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus31" id="vis01_sep4">
                     <name name="Buf03" language="en"/>
-                    <coordinate x="1350.000" y="-150.000"/>
+                    <coordinate x="1004.261" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr22" id="vis01_sep5">
                     <name name="Lc07" language="en"/>
-                    <coordinate x="-74.694" y="-150.000"/>
+                    <coordinate x="-89.251" y="-150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="lcr23" id="vis01_sep6">
                     <name name="Lc08" language="en"/>
-                    <coordinate x="-329.286" y="150.000"/>
+                    <coordinate x="-343.843" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="plf25" id="vis01_sep7">
                     <name name="Plat02" language="en"/>
-                    <coordinate x="687.273" y="150.000"/>
+                    <coordinate x="672.716" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="plf26" id="vis01_sep8">
                     <name name="Plat03" language="en"/>
-                    <coordinate x="247.335" y="-150.000"/>
+                    <coordinate x="232.778" y="-150.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
-                    <coordinate x="-1050.000" y="150.000"/>
-                    <coordinate x="1350.000" y="150.000"/>
+                    <coordinate x="-704.261" y="150.000"/>
+                    <coordinate x="1004.261" y="150.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne2" id="vis01_lep2">
                     <name name="netElement_ne2" language="en"/>
-                    <coordinate x="-1050.000" y="-150.000"/>
-                    <coordinate x="1350.000" y="-150.000"/>
+                    <coordinate x="-704.261" y="-150.000"/>
+                    <coordinate x="1004.261" y="-150.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>

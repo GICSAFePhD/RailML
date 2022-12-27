@@ -22,14 +22,14 @@
     <Rails>
         <Rail id="ne1" macro-area="">
             <Path>
-                <Point x="-1050" y="150"/>
-                <Point x="1350" y="150"/>
+                <Point x="-704.261" y="150"/>
+                <Point x="1004.26" y="150"/>
             </Path>
         </Rail>
         <Rail id="ne2" macro-area="">
             <Path>
-                <Point x="-1050" y="-150"/>
-                <Point x="1350" y="-150"/>
+                <Point x="-704.261" y="-150"/>
+                <Point x="1004.26" y="-150"/>
             </Path>
         </Rail>
     </Rails>
@@ -38,7 +38,7 @@
     </LinearLocationSystems>
     <Entities>
         <Entity id="bus1" type="T_BufferStop">
-            <Placement x="-1050" y="150"/>
+            <Placement x="-704.261" y="150"/>
             <Ports>
                 <Port rail="ne1" side="start"/>
             </Ports>
@@ -50,7 +50,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus2" type="T_BufferStop">
-            <Placement x="1350" y="150" flipAlong="true"/>
+            <Placement x="1004.26" y="150" flipAlong="true"/>
             <Ports>
                 <Port rail="ne1" side="end"/>
             </Ports>
@@ -62,7 +62,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus11" type="T_BufferStop">
-            <Placement x="-1050" y="-150"/>
+            <Placement x="-704.261" y="-150"/>
             <Ports>
                 <Port rail="ne2" side="start"/>
             </Ports>
@@ -74,7 +74,7 @@
             </Attributes>
         </Entity>
         <Entity id="bus31" type="T_BufferStop">
-            <Placement x="1350" y="-150" flipAlong="true"/>
+            <Placement x="1004.26" y="-150" flipAlong="true"/>
             <Ports>
                 <Port rail="ne2" side="end"/>
             </Ports>
@@ -86,9 +86,9 @@
             </Attributes>
         </Entity>
         <Entity id="lcr22" type="T_LevelCrossing_SingleLine_SB">
-            <Placement x="-74.694" y="-150" flipAlong="true"/>
+            <Placement x="-89.2514" y="-150" flipAlong="true"/>
             <Ports>
-                <Port rail="ne2" side="0.406378"/>
+                <Port rail="ne2" side="0.359966"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -101,14 +101,14 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
         <Entity id="lcr23" type="T_LevelCrossing_SingleLine_SB">
-            <Placement x="-329.286" y="150" flipAlong="true"/>
+            <Placement x="-343.843" y="150" flipAlong="true"/>
             <Ports>
-                <Port rail="ne1" side="0.300297"/>
+                <Port rail="ne1" side="0.210953"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -121,14 +121,14 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
         <Entity id="plf25" type="T_Platform">
-            <Placement x="687.273" y="150"/>
+            <Placement x="672.716" y="150"/>
             <Ports>
-                <Port rail="ne1" side="0.723864"/>
+                <Port rail="ne1" side="0.805946"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
@@ -142,9 +142,9 @@
             </Attributes>
         </Entity>
         <Entity id="plf26" type="T_Platform">
-            <Placement x="247.335" y="-150"/>
+            <Placement x="232.778" y="-150"/>
             <Ports>
-                <Port rail="ne2" side="0.540556"/>
+                <Port rail="ne2" side="0.54845"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
