@@ -101,7 +101,20 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x  | - | - | nexx-nexx |
+| R_01 |  S05  |  S06  | - | Plat11 | Lc06 | ne14 |
+| R_01 |  S06  |  S20  | - | - | - | ne14 |
+| R_01 |  S09  |  S18  | - | - | - | ne13 |
+| R_01 |  S13  |  S12  | Sw13_N | - | - | ne23-ne12 |
+| R_01 |  S16  |  S02  | Sw12_N | - | - | ne22-ne08 |
+| R_01 |  S07  |  S10  | Sw06_N | - | - | ne02-ne12 |
+| R_01 |  S07  |  S09  | Sw06_R | - | Lc08 | ne02-ne13 |
+| R_01 |  S10  |  S14  | Sw13_N | - | - | ne12-ne23 |
+| R_01 |  S10  |  S02  | Sw12_R + Sw13_R | - | - | ne12-ne24-ne08 |
+| R_01 |  S01  |  S17  | Sw04_N | - | - | ne01-ne08 |
+| R_01 |  S01  |  S19  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
+| R_01 |  S01  |  S05  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
+| R_01 |  S17  |  S15  | Sw12_N | - | - | ne08-ne22 |
+| R_01 |  S17  |  S12  | Sw12_R + Sw13_R | - | - | ne08-ne24-ne12 |
 
 ![alt text](10_B.png)
 
