@@ -95,6 +95,18 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 # Example_9
 
+![alt text](9_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
+
+![alt text](9_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
+
 # Example_10
 
 ![alt text](10_A.png)
