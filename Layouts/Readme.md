@@ -91,6 +91,39 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 # Example_7
 
+![alt text](7_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  S01  |  S02  | - | Plat03 | Lc07 | ne02 |
+| R_02 |  S04  |  S07  | - | Plat02 | Lc08 | ne01 |
+| R_03 |  S06  |  S05  | - | Plat02 | Lc08 | ne01 |
+
+![alt text](7_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  X09  |  P16  | - | Plat03 | Lc07 | ne02 |
+| R_02 |  T02  |  T03  | - | Plat02 | Lc08 | ne01 |
+| R_03 |  T08  |  X10  | - | Plat03 | - | ne02 |
+| R_04 |  X10  |  T05  | - | - | Lc07 | ne02 |
+| R_05 |  T04  |  P13  | - | Plat02 | - | ne01 |
+| R_06 |  X12  |  T01  | - | - | Lc08 | ne02 |
+| R_07 |  T06  |  X09  | - | - | - | ne02 |
+| R_08 |  P13  |  X12  | - | - | - | ne02 |
+| R_09 |  P16  |  T07  | - | - | - | ne01 |
+
+
+Routes 1 to 3 in the original layout are equivalent to routes 1 and 2 in the new signalling. 
+
+Routes 3 to 4 in the new signalling are equivalent to route 1 in the original signalling but with a stop between the platform and the level crossing and in the opposite direction.
+
+Routes 5 to 6 in the new signalling include a stop between the level crossing and the platform. They can be consider as equivalents to route 3 in the original signalling or to route 2 with an opposite direction.
+
+Route 7 is used to approach carefully the level crossing.
+Route 8 is used as a departure signal from the platform to move up to the level crossing
+Route 9 is added as a departure signal tot stop before the end of the line. The original layout had no stop signals prior buffer stops.
+
 # Example_8
 
 # Example_9
@@ -151,9 +184,9 @@ Routes 1 to 6 are equivalent in both interlocking tables. However, because the o
 
 Routes 7 to 12 are equivalent to routes 7 to 13 in the new signalling. The extra route corresponds to the signal protecting the buffer stop, which introduces a new route.
 
-Routes 13 and 14 are equivalente to routes 14 and 15.
+Routes 13 and 14 are equivalent to routes 14 and 15.
 
-Routes 16 to 28 are equivalente to routes 1 to 12 but in the opposit direction. If we consider only one-way tracks then these routes are ignored, obtaining the same interlocking table both in the original signalling and by RNA.
+Routes 16 to 28 are equivalente to routes 1 to 12 but in the opposite direction. If we consider only one-way tracks then these routes are ignored, obtaining the same interlocking table both in the original signalling and by RNA.
 
 # Example_10
 
