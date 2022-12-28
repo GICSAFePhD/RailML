@@ -99,53 +99,53 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
+| R_01 | S03 | S04 | - | - | - | ne26 |
+| R_01 | S04 | S05 | - | - | - | ne26 |
+| R_01 | S05 | S06 | - | - | - | ne26 |
+| R_01 | S06 | S07 | - | - | - | ne26 |
+| R_01 | S07 | S08 | - | - | - | ne26 |
+| R_01 | S08 | S09 | Sw12_N | - | - | ne26-ne03 |
+| R_01 | S52 | S53 | - | - | - | ne25 |
+| R_01 | S53 | S54 | Sw11_N | - | - | ne25-ne23 |
+| R_01 | S54 | S55 | - | - | - | ne23 |
+| R_01 | S55 | S56 | - | - | - | ne23 |
+| R_01 | S56 | S58 | - | - | - | ne23 |
+| R_01 | S58 | S57 | - | - | - | ne23 |
+| R_01 | S59 | S09 | Sw11_R + Sw12_R | - | - | ne23-ne27-ne03 |
+| R_01 | S36 | S54 | Sw11_R + Sw12_R | - | - | ne03-ne27-ne23 |
 
 ![alt text](9_B.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
-| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
+| R_01 | T02 | J23 | Sw0x_N | - | - | ne23 |
+| R_01 | T04 | J32 | Sw0x_N | - | - | ne25 |
+| R_01 | J07 | J09 | Sw0x_N | - | - | ne26 |
+| R_01 | J09 | J11 | Sw0x_N | - | - | ne26 |
+| R_01 | J10 | L06 | Sw0x_N | - | - | ne26 |
+| R_01 | J11 | J13 | Sw0x_N | - | - | ne26 |
+| R_01 | J12 | J10 | Sw0x_N | - | - | ne26 |
+| R_01 | J13 | J15 | Sw0x_N | - | - | ne26 |
+| R_01 | J14 | J12 | Sw0x_N | - | - | ne26 |
+| R_01 | J15 | J17 | Sw0x_N | - | - | ne26-ne03 |
+| R_01 | J16 | J14 | Sw0x_N | - | - | ne26 |
+| R_01 | J17 | L05 | Sw0x_N | - | - | ne03 |
+| R_01 | J20 | S39 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J22 | T01 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J23 | J25 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J24 | J22 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J25 | J27 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J26 | J24 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J27 | S36 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J28 | J26 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J30 | J28 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J31 | J33 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J32 | J30 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | J33 | T03 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | S36 | J31 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | S36 | J17 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | S39 | J16 | Sw0x_N | - | - | nexx-nexx |
+| R_01 | S39 | J30 | Sw0x_N | - | - | nexx-nexx |
 
 # Example_10
 
