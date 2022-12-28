@@ -89,6 +89,33 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 # Example_6
 
+![alt text](6_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  Sxx  |  Sxx  | Sw0x_N | - | - | nexx-nexx |
+
+![alt text](6_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  T02  |  S14  | - | - | - | ne01 |
+| R_01 |  T04  |  T01  | Sw14_R + Sw18_R | - | - | ne31-ne40-ne01 |
+| R_01 |  T06  |  C11  | - | - | - | ne32 |
+| R_01 |  T08  |  S19  | - | - | - | ne42 |
+| R_01 |  T10  |  T07  | Sw19_N | - | - | ne43-ne42 |
+| R_01 |  C11  |  T01  | Sw14_N + Sw18_R | - | - | ne32-ne40-ne01 |
+| R_01 |  B18  |  T07  | Sw19_R | - | - | ne41-ne42 |
+| R_01 |  S14  |  B18  | Sw18_N | - | - | ne01-ne41 |
+| R_01 |  S14  |  T05  | Sw14_N + Sw18_R | - | - | ne01-ne40-ne32 |
+| R_01 |  S14  |  T03  | Sw14_R + Sw18_R | - | - | ne01-ne40-ne31 |
+| R_01 |  S19  |  T09  | Sw19_N | - | - | ne42-ne43 |
+| R_01 |  S19  |  T01  | Sw18_N + Sw19_R | - | - | ne42-ne41-ne01 |
+
+
+ORDENAR!
+
+
 # Example_7
 
 ![alt text](7_A.png)
