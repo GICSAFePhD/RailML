@@ -105,14 +105,10 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  X09  |  P16  | - | Plat03 | Lc07 | ne02 |
 | R_02 |  T02  |  T03  | - | Plat02 | Lc08 | ne01 |
-
 | R_03 |  T08  |  X10  | - | Plat03 | - | ne02 |
 | R_04 |  X10  |  T05  | - | - | Lc07 | ne02 |
 | R_05 |  T04  |  P13  | - | Plat02 | - | ne01 |
 | R_06 |  X12  |  T01  | - | - | Lc08 | ne02 |
-
-
-
 | R_07 |  T06  |  X09  | - | - | - | ne02 |
 | R_08 |  P13  |  X12  | - | - | - | ne02 |
 | R_09 |  P16  |  T07  | - | - | - | ne01 |
