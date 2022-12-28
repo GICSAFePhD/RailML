@@ -86,9 +86,9 @@
             </Attributes>
         </Entity>
         <Entity id="lcr22" type="T_LevelCrossing_SingleLine_SB">
-            <Placement x="-89.2514" y="-150" flipAlong="true"/>
+            <Placement x="-38.3003" y="-150" flipAlong="true"/>
             <Ports>
-                <Port rail="ne2" side="0.359966"/>
+                <Port rail="ne2" side="0.389788"/>
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Default</Attribute>
