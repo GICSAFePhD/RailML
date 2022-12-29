@@ -1,36 +1,60 @@
-Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 0
+Nodes: 11 | Switches: 5 | Signals: 0 | Detectors: 3 | Ends: 7 | Barriers: 0
 Node ne1:
 	Track = track1
-	Type = BufferStop -> ['bus1']
-	Neighbours = 2 -> ['ne41', 'ne40']
-	Switches -> Sw18
-		ContinueCourse -> right -> ne41
-		BranchCourse -> left -> ne40
-Node ne31:
-	Track = track2
-	Type = BufferStop -> ['bus4']
-	Neighbours = 2 -> ['ne40', 'ne32']
-Node ne32:
-	Track = track4
-	Type = BufferStop -> ['bus35']
-	Neighbours = 2 -> ['ne31', 'ne40']
-Node ne40:
-	Track = track3
-	Neighbours = 4 -> ['ne1', 'ne31', 'ne32', 'ne41']
-	Switches -> Sw14
-		ContinueCourse -> left -> ne32
-		BranchCourse -> right -> ne31
-Node ne41:
-	Track = track5
-	Neighbours = 4 -> ['ne1', 'ne40', 'ne42', 'ne43']
-Node ne42:
-	Track = track6
-	Type = BufferStop -> ['bus48']
-	Neighbours = 2 -> ['ne41', 'ne43']
-	Switches -> Sw19
-		ContinueCourse -> left -> ne43
-		BranchCourse -> right -> ne41
-Node ne43:
+	TrainDetectionElements -> tde16
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne3', 'ne2']
+	Switches -> Sw01
+		ContinueCourse -> right -> ne3
+		BranchCourse -> left -> ne2
+Node ne2:
 	Track = track7
-	Type = BufferStop -> ['bus47']
-	Neighbours = 2 -> ['ne41', 'ne42']
+	Neighbours = 4 -> ['ne1', 'ne3', 'ne7', 'ne6']
+	Switches -> Sw03
+		ContinueCourse -> left -> ne7
+		BranchCourse -> right -> ne6
+Node ne3:
+	Track = track6
+	Neighbours = 4 -> ['ne1', 'ne2', 'ne5', 'ne4']
+	Switches -> Sw02
+		ContinueCourse -> right -> ne5
+		BranchCourse -> left -> ne4
+Node ne4:
+	Track = track5
+	Type = BufferStop -> ['bus15']
+	Neighbours = 2 -> ['ne3', 'ne5']
+Node ne5:
+	Track = track8
+	TrainDetectionElements -> tde25
+		Type -> insulatedRailJoint
+	Neighbours = 4 -> ['ne3', 'ne4', 'ne10', 'ne11']
+	Switches -> Sw05
+		ContinueCourse -> right -> ne11
+		BranchCourse -> left -> ne10
+Node ne6:
+	Track = track4
+	Type = BufferStop -> ['bus14']
+	Neighbours = 2 -> ['ne2', 'ne7']
+Node ne7:
+	Track = track9
+	Neighbours = 4 -> ['ne2', 'ne6', 'ne41', 'ne42']
+Node ne10:
+	Track = track3
+	Type = BufferStop -> ['bus7']
+	Neighbours = 2 -> ['ne5', 'ne11']
+Node ne11:
+	Track = track2
+	TrainDetectionElements -> tde21
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne5', 'ne10']
+Node ne41:
+	Track = track10
+	Type = BufferStop -> ['bus62']
+	Neighbours = 2 -> ['ne7', 'ne42']
+	Switches -> Sw08
+		ContinueCourse -> left -> ne7
+		BranchCourse -> right -> ne42
+Node ne42:
+	Track = track11
+	Type = BufferStop -> ['bus66']
+	Neighbours = 2 -> ['ne7', 'ne41']

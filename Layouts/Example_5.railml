@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_5.railml</dc:title>
-        <dc:date>2022-02-05T02:32:12Z</dc:date>
+        <dc:date>2022-12-29T03:55:09Z</dc:date>
         <dc:creator>f</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -494,11 +494,6 @@
                     <spotLocation id="tde21_sloc01" netElementRef="ne11" applicationDirection="both" intrinsicCoord="0.6050"/>
                     <designator register="_Example" entry="TRAIN DETECTION ELEMENT J02"/>
                 </trainDetectionElement>
-                <trainDetectionElement id="tde22" type="insulatedRailJoint">
-                    <name name="J03" language="en"/>
-                    <spotLocation id="tde22_sloc01" netElementRef="ne6" applicationDirection="both" intrinsicCoord="0.5550"/>
-                    <designator register="_Example" entry="TRAIN DETECTION ELEMENT J03"/>
-                </trainDetectionElement>
                 <trainDetectionElement id="tde25" type="insulatedRailJoint">
                     <name name="J06" language="en"/>
                     <spotLocation id="tde25_sloc01" netElementRef="ne5" applicationDirection="both" intrinsicCoord="0.5177"/>
@@ -566,15 +561,11 @@
                     <name name="J02" language="en"/>
                     <coordinate x="1653.780" y="-450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde22" id="vis01_sep14">
-                    <name name="J03" language="en"/>
-                    <coordinate x="132.909" y="-750.000"/>
-                </spotElementProjection>
-                <spotElementProjection refersToElement="tde25" id="vis01_sep15">
+                <spotElementProjection refersToElement="tde25" id="vis01_sep14">
                     <name name="J06" language="en"/>
                     <coordinate x="765.942" y="-450.000"/>
                 </spotElementProjection>
-                <spotElementProjection refersToElement="tde16" id="vis01_sep16">
+                <spotElementProjection refersToElement="tde16" id="vis01_sep15">
                     <name name="J01" language="en"/>
                     <coordinate x="-1060.660" y="-450.000"/>
                 </spotElementProjection>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RaILAiD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.rail-aid.com/schema/ SchematicPlan-1.8.xsd" version="1.8">
     <Globals>
-        <Attribute id="R_Main.A_Path">F:/PhD/RailML/Layouts/Example_5.railaid</Attribute>
+        <Attribute id="R_Main.A_Path">C:/PhD/RailML/Layouts/Example_5.railaid</Attribute>
         <Attribute id="R_Main.A_Created">sáb. dic. 18 18:41:52 2021</Attribute>
         <Attribute id="R_Main.A_Object_Library_Version">Italia 4.6</Attribute>
         <Attribute id="R_Main.A_Object_Library_FileName">ObjectLibrary_GA.xml</Attribute>
@@ -270,19 +270,6 @@
                 <Attribute id="A_Name">J02</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">TRAIN DETECTION ELEMENT J02</Attribute>
-                <Attribute id="A_railML_Type">insulatedRailJoint</Attribute>
-            </Attributes>
-        </Entity>
-        <Entity id="tde22" type="T_Connection">
-            <Placement x="132.909" y="-750" flipAlong="true"/>
-            <Ports>
-                <Port rail="ne6" side="0.555012"/>
-            </Ports>
-            <Attributes>
-                <Attribute id="A_Layer">L_Default</Attribute>
-                <Attribute id="A_Name">J03</Attribute>
-                <Attribute id="A_Operational">true</Attribute>
-                <Attribute id="A_railML_Designator_Entry">TRAIN DETECTION ELEMENT J03</Attribute>
                 <Attribute id="A_railML_Type">insulatedRailJoint</Attribute>
             </Attributes>
         </Entity>
