@@ -31,6 +31,50 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 # Example_2
 ## Name: 
 
+![alt text](2_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+
+![alt text](2_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+
 # Example_3
 ## Name:
 
