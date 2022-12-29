@@ -87,6 +87,40 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 
 # Example_5
 
+![alt text](5_A.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | Sxx | Sxx | Sw0x_N | - | - | nexx-nexx |
+
+![alt text](5_B.png)
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | T02 | B26 | - | - | - | ne04 |
+| R_01 | T04 | J18 | Sw01_R + Sw03_R | - | - | ne06-ne02-ne01 |
+| R_01 | T06 | J16 | Sw05_R | - | - | ne10-nex11-ne05 |
+| R_01 | T08 | S37 | - | - | - | ne41 |
+| R_01 | T10 | B36 | - | - | - | ne42 |
+| R_01 | J14 | J16 | Sw05_N | - | - | ne11-ne05 |
+| R_01 | J16 | C21 | Sw02_N | - | - | ne05-ne03 |
+| R_01 | J18 | L11 | - | - | - | ne01 |
+| R_01 | J19 | T07 | Sw08_N | - | - | ne07-ne41 |
+| R_01 | J20 | C29 | - | - | - | ne07 |
+| R_01 | C21 | J18 | Sw01_N | - | - | ne03-ne01 |
+| R_01 | B26 | C21 | Sw02_R | - | - | ne04-ne03 |
+| R_01 | C29 | J18 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
+| R_01 | B36 | T07 | Sw08_R | - | - | ne42-ne41 |
+| R_01 | S27 | S22 | Sw02_N | - | - | ne03-ne05 |
+| R_01 | S27 | T01 | Sw02_R | - | - | ne03-ne04 |
+| R_01 | S33 | J13 | Sw05_N | - | - | ne05-ne11 |
+| R_01 | S33 | T05 | Sw05_R | - | - | ne05-ne10 |
+| R_01 | S37 | J20 | Sw08_N | - | - | ne41-ne07 |
+| R_01 | S37 | T09 | Sw08_R | - | - | ne41-ne42 |
+| R_01 | S22 | S27 | Sw01_N | - | - | ne01-ne03 |
+| R_01 | S22 | J19 | Sw01_R + Sw03_N | - | - | ne01-ne02-ne07 |
+| R_01 | S22 | T03 | Sw01_R + Sw03_R | - | - | ne01-ne02-ne06 |
+
 # Example_6
 
 ![alt text](6_A.png)
