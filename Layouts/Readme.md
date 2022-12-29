@@ -128,7 +128,6 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 | R_14 | J20 | C29 | - | - | - | ne07 |
 | R_15 | C29 | J18 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
 | R_16 | S33 | T05 | Sw05_R | - | - | ne05-ne10 |
-
 | R_17 | S33 | J13 | Sw05_N | - | - | ne05-ne11 |
 | R_18 | T04 | J18 | Sw01_R + Sw03_R | - | - | ne06-ne02-ne01 |
 | R_19 | B26 | C21 | Sw02_R | - | - | ne04-ne03 |
