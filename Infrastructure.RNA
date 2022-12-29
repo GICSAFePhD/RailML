@@ -1,4 +1,4 @@
-Nodes: 11 | Switches: 5 | Signals: 0 | Detectors: 3 | Ends: 7 | Barriers: 0
+Nodes: 11 | Switches: 5 | Signals: 0 | Detectors: 4 | Ends: 7 | Barriers: 0
 Node ne1:
 	Track = track1
 	TrainDetectionElements -> tde16
@@ -37,6 +37,8 @@ Node ne6:
 	Neighbours = 2 -> ['ne2', 'ne7']
 Node ne7:
 	Track = track9
+	TrainDetectionElements -> tde67
+		Type -> insulatedRailJoint
 	Neighbours = 4 -> ['ne2', 'ne6', 'ne41', 'ne42']
 Node ne10:
 	Track = track3

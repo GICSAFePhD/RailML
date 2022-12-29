@@ -18,8 +18,9 @@
     </Globals>
     <MacroAreas/>
     <BackgroundImage/>
-    <IdGenerators nextRailId="43" nextEntityId="67">
+    <IdGenerators nextRailId="43" nextEntityId="68">
         <EntityName definitionId="BufferStopNameGen" nextId="7"/>
+        <EntityName definitionId="ConnectionNameGen" nextId="2"/>
         <EntityName definitionId="RailPointNameGen" nextId="9"/>
     </IdGenerators>
     <Rails>
@@ -343,6 +344,18 @@
                 <Attribute id="A_Name">Buf06</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Type">fixedBufferStop</Attribute>
+            </Attributes>
+        </Entity>
+        <Entity id="tde67" type="T_Connection">
+            <Placement x="705.729" y="-1020"/>
+            <Ports>
+                <Port rail="ne7" side="1.47162"/>
+            </Ports>
+            <Attributes>
+                <Attribute id="A_Layer">L_Default</Attribute>
+                <Attribute id="A_Name">J01</Attribute>
+                <Attribute id="A_Operational">true</Attribute>
+                <Attribute id="A_railML_Type">insulatedRailJoint</Attribute>
             </Attributes>
         </Entity>
     </Entities>
