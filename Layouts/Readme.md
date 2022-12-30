@@ -39,7 +39,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 | R_02 | 68N2 | 69Va | 68W02_N | - | Lc01 | 1-9-95 |
 | R_03 | 69Va | 69A | - | - | - | 95-59 |
 | R_04 | 69A | 69N2 | 69W03_N | Plat09 | - | 59-17 |
-| R_05 | 69A | 69N3 | Sw03_NN + 69W03_R + 69W04_R | Plat13 | - | 59-11-52-77 |
+| R_05 | 69A | 69N3 | Sw03_NN + 69W03_R + 69W04_R | Plat08 + Plat13 | - | 59-11-52-77 |
 | R_06 | 69P2 | 68F | 69W03_N | - | Lc01 | 17-59-95-9 |
 | R_07 | 69B2 | 69P2 | Sw06_N | Plat09 | - | 78-17 |
 | R_08 | 69B2 | 69P3 | Sw06_R + Sw07_RR | Plat13 | - | 78-79-77 |
@@ -73,7 +73,99 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | nexx-nexx |
+| R_01 |  T02  |  P53  | - | Plat01 | - | 1 |
+| R_01 |  T04  |  L42  | - | - | Ucr01 + Ocr01 | 4-106 |
+| R_01 |  T06  |  P55  | - | Plat02 | - | 7 |
+| R_01 |  T08  |  P75  | Sw03_NN + 69W04_N | Plat08 + Plat13 | - | 14-52-77 |
+| R_01 |  T10  |  P59  | - | Plat04 | - | 41 |
+| R_01 |  T12  |  L29  | 71W02 | - | - | 47-48 |
+| R_01 |  T14  |  S105  | Sw05_RN + Sw41_R | - | - | 84+85+100+101+44 |
+| R_01 |  T14  |  C100  | Sw04_R + Sw05_RR | - | - | 84+83+32 |
+| R_01 |  T18  |  T15  | Sw11_N | - | - | 88+86 |
+| R_01 |  T20  |  S97  | Sw12_N | - | - | 89+30 |
+| R_01 |  T22  |  S97  | Sw12_R + Sw13_R | - | - | 90+91+30 |
+| R_01 |  T24  |  P70  | - | Plat11 | Ucr01 + Ocr01 | 105+98+96 |
+| R_01 |  L27  |  L30  | - | - | - | 26+65 |
+| R_01 |  L28  |  L40  | - | - | - | 44+104 |
+| R_01 |  L30  |  C104  | - | - | - | 65+102 |
+| R_01 |  L31  |  P65  | - | Plat07 | - | 67 |
+| R_01 |  L32  |  P73  | Sw03_RR | Plat12 | - | 70+104+21 |
+| R_01 |  L33  |  L34  | - | - | - | 78+93 |
+| R_01 |  L34  |  L38  | - | Plat11 | - | 96+98 |
+| R_01 |  L35  |  J48  | - | - | - | 95 |
+| R_01 |  L37  |  P72  | Sw07_NN | Plat12 | - | 97+94+21 |
+| R_01 |  L37  |  P74  | Sw07_NR | Plat08 + Plat13 | - | 97+94+77 |
+| R_01 |  L38  |  T23  | - | - | Ucr01 + Ocr01 | 98+105 |
+| R_01 |  L40  |  S126  | - | - | - | 101+100 |
+| R_01 |  L41  |  S90  | - | - | - | 103+64 |
+| R_01 |  L42  |  L37  | - | Plat10 | - | 108+99+97 |
+| R_01 |  J43  |  L35  | 68W02_R | - | - | 7+9+95 |
+| R_01 |  J48  |  S83  | - | - | Lc01 | 95+59 |
+| R_01 |  J49  |  S80  | - | - | Lc01 | 95+9 |
+| R_01 |  P53  |  L35  | 68W02_N | - | - | 1+9+95 |
+| R_01 |  P55  |  J43  | - | - | - | 7 |
+| R_01 |  P56  |  S119  | Sw08_N | - | - | 83+30 |
+| R_01 |  P57  |  C100  | Sw04_N | - | - | 83+32 |
+| R_01 |  P59  |  S105  | Sw05_NN + Sw41_R | - | - | 41+85+100+101+44 |
+| R_01 |  P59  |  C100  | S04_R + Sw05_NR | - | - | 41+82+32 |
+| R_01 |  P60  |  L27  | 70W02_N | - | - | 23+26 |
+| R_01 |  P61  |  P64  | 70W01_N | Plat07 | - | 24+64+103+67 |
+| R_01 |  P62  |  L27  | 70W02_R | - | - | 24+26 |
+| R_01 |  P64  |  L32  | - | - | - | 67+70 |
+| R_01 |  P65  |  L41  | - | - | - | 67+103+64 |
+
+| R_01 |  P66  |  J49  | Sw0x_x | - | - | xx |
+| R_01 |  P67  |  L33  | Sw0x_x | - | - | xx |
+| R_01 |  P69  |  T03  | Sw0x_x | - | - | xx |
+| R_01 |  P70  |  S110  | Sw0x_x | - | - | xx |
+| R_01 |  P72  |  L31  | Sw0x_x | - | - | xx |
+| R_01 |  P73  |  P69  | Sw0x_x | - | - | xx |
+| R_01 |  P73  |  L33  | Sw0x_x | - | - | xx |
+| R_01 |  P74  |  S86  | Sw0x_x | - | - | xx |
+| R_01 |  P75  |  P69  | Sw0x_x | - | - | xx |
+| R_01 |  P75  |  L33  | Sw0x_x | - | - | xx |
+
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
 
 # Example_3
 ## Name:
