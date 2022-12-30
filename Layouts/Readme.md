@@ -377,6 +377,8 @@ Route 9 is added as a departure signal tot stop before the end of the line. The 
 
 # Example_8
 
+Example_8 is similar to Example_9 but with bigger dimensions. The layout is in the repository but the interlocking table is given for example_9 only.
+
 # Example_9
 
 ![alt text](9_A.png)
