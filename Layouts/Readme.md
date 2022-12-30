@@ -143,26 +143,24 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 | R_01 |  S110  |  P74  | Sw06_R + Sw07_RR | Plat08 + Plat13 | - | 78+79+77 |
 | R_01 |  S90 |  P62  | 70W01_N | Plat06 | - | 64+24 |
 | R_01 |  S90  |  P60  | 70W01_R | Plat05 | - | 64+23 |
-
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  S93  |  B89  | 70W02_N | - | - | 26+23 |
+| R_01 |  S93  |  B92  | 70W02_R | Plat06 | - | 26+24 |
+| R_01 |  S105  |  S93  | 71W01_N | - | - | 44+102+65+26 |
+| R_01 |  S105 |  L29  | 71W01_R + 71W02_N | - | - | 44+43+48 |
+| R_01 |  S126  |  S102  | Sw41_N | - | - | 100+110 |
+| R_01 |  S126  |  B125 | Sw41_R | - | - | 100+85 |
+| R_01 |  S102  |  S113  | Sw09_N | - | - | 110+32 |
+| R_01 |  S102  |  B101  | Sw09_R | - | - | 110+29 |
+| R_01 |  S113  |  P56  | Sw04_N | Plat03 | - | 32+83 |
+| R_01 |  S113  |  T09  | Sw04_R + Sw05_NR | Plat04 | - | 32+82+41 |
+| R_01 |  S113  |  T13  | Sw04_R + Sw05_RR | - | - | 32+82+84 |
+| R_01 |  S119  |  T19  | Sw012_N | - | - | 30+89 |
+| R_01 |  S119  |  T15  | Sw11_R + Sw12_R + Sw13_N | - | - | 30+91+87+86 |
+| R_01 |  S119  |  T21 | Sw12_R + Sw13_R | - | - | 30+91+90 |
+| R_01 |  S97  |  P57  | Sw08_N | Plat03 | - | 30+83 |
+| R_01 |  S97  |  C124  | Sw08_R + Sw09_R | - | - | 30+29+110 |
+| R_01 |  T16  |  T17  | Sw11_N | - | - | 86+88 |
+| R_01 |  T16  |  S97  | Sw11_R + Sw12_R + Sw13_N | - | - | 86+87+91+30 |
 
 # Example_3
 ## Name:
