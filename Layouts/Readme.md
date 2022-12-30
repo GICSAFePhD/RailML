@@ -69,7 +69,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 | R_32 | 69P3 | 68F | Sw0x_x | - | - | 77-52-11-59-95-9 |
 | R_33 | 69P1 | 70Va | Sw0x_x | - | - | 21-104-70-67-103 |
 
-![alt text](2_B.png)
+![alt text](2_B2.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
