@@ -113,39 +113,36 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 | R_01 |  P62  |  L27  | 70W02_R | - | - | 24+26 |
 | R_01 |  P64  |  L32  | - | - | - | 67+70 |
 | R_01 |  P65  |  L41  | - | - | - | 67+103+64 |
-
-| R_01 |  P66  |  J49  | Sw0x_x | - | - | xx |
-| R_01 |  P67  |  L33  | Sw0x_x | - | - | xx |
-| R_01 |  P69  |  T03  | Sw0x_x | - | - | xx |
-| R_01 |  P70  |  S110  | Sw0x_x | - | - | xx |
-| R_01 |  P72  |  L31  | Sw0x_x | - | - | xx |
-| R_01 |  P73  |  P69  | Sw0x_x | - | - | xx |
-| R_01 |  P73  |  L33  | Sw0x_x | - | - | xx |
-| R_01 |  P74  |  S86  | Sw0x_x | - | - | xx |
-| R_01 |  P75  |  P69  | Sw0x_x | - | - | xx |
-| R_01 |  P75  |  L33  | Sw0x_x | - | - | xx |
-
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
-| R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
+| R_01 |  P66  |  J49  | 69W03_N | - | - | 17+59+95 |
+| R_01 |  P67  |  L33  | Sw06_N | - | - | 17+78 |
+| R_01 |  P69  |  T03  | - | - | Ucr01 + Ocr01 | 90+106+4 |
+| R_01 |  P70  |  S110  | - | - | - | 96+93+78 |
+| R_01 |  P72  |  L31  | Sw03_RR | - | - | 21+104+70+67 |
+| R_01 |  P73  |  P69  | Sw07_NN | Plat10 | - | 21+94+97+99 |
+| R_01 |  P73  |  L33  | Sw07_NR | - | - | 21+79+78 |
+| R_01 |  P74  |  S86  | Sw03_NN | - | - | 77+52 |
+| R_01 |  P75  |  P69  | Sw07_RN | - | - | 77+94+97+99 |
+| R_01 |  P75  |  L33  | Sw06_R + Sw07_RR | - | - | 77+79+78 |
+| R_01 |  B89  |  P64  | 70W01_R | Plat05 | - | 23+64+103+67 |
+| R_01 |  B92  |  P61  | - | - | - | 24 |
+| R_01 |  B96  |  S119  | Sw08_R | - | - | 29+30 |
+| R_01 |  C100  |  C124  | Sw09_N | - | - | 32+110 |
+| R_01 |  B101  |  B96  | - | - | - | 29 |
+| R_01 |  C104  |  L28  | 71W01_N | - | - | 102+44 |
+| R_01 |  C124  |  S105  | Sw41_N | - | - | 110+100+101+44 |
+| R_01 |  B125  |  T09  | Sw05_NN | Plat04 | - | 85+41 |
+| R_01 |  B125  |  T13  | Sw05_RN | - | - | 85+84 |
+| R_01 |  S80  |  T01  | 68W02_n | Plat01 | - | 9+1 |
+| R_01 |  S80  |  T05  | 68W02_R | Plat02 | - | 9+7 |
+| R_01 |  S83  |  P67  | 69W03_N | Plat09 | - | 59+17 |
+| R_01 |  S83  |  P75  | Sw03_NN + 69W03_R + 69W04_R | Plat08 + Plat13 | - | 59+11+52+77 |
+| R_01 |  S86  |  T07  | 69W04_N | - | - | 52+14 |
+| R_01 |  S86  |  J49  | 69W03_R + 69W04_R | - | - | 52+11+59+95 |
+| R_01 |  S110  |  P66  | Sw06_N | Plat09 | - | 78+17 |
+| R_01 |  S110 |  P72  | Sw06_R + Sw07_NR | Plat12 | - | 78+79+21 |
+| R_01 |  S110  |  P74  | Sw06_R + Sw07_RR | Plat08 + Plat13 | - | 78+79+77 |
+| R_01 |  S90 |  P62  | 70W01_N | Plat06 | - | 64+24 |
+| R_01 |  S90  |  P60  | 70W01_R | Plat05 | - | 64+23 |
 
 | R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
 | R_01 |  Sxx  |  Sxx  | Sw0x_x | - | - | xx |
