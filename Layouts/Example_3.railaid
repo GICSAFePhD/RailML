@@ -9,7 +9,7 @@
         <Attribute id="R_Main.A_RailML_Version">3.1</Attribute>
         <Attribute id="R_Main.A_RailMLPlugin_Version">0.9.5</Attribute>
         <Attribute id="_R_Core.A_RouteTerminalCategory">signals</Attribute>
-        <Attribute id="_R_Core.A_RouteRailSetCategory">tvdSections</Attribute>
+        <Attribute id="_R_Core.A_RouteRailSetCategory">None</Attribute>
         <Attribute id="R_railML_Info.A_Description">Example_3</Attribute>
         <Attribute id="R_railML_Info.A_Author">Rail-AiD</Attribute>
         <Attribute id="R_railML_Info.A_Designator_registry">_Example</Attribute>
