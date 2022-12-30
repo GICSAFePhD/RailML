@@ -34,40 +34,40 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 ![alt text](2_A.png)
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
-|  :---:  |  :---:  si |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | 68N1 | 69Va | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 68N2 | 69Va | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69Va | 69A | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69A | 69N2 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69A | 69N3 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69P2 | 68F | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69B2 | 69P2 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69B2 | 69P3 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69B2 | 69P1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69C | 69N1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69Vc1 | 69C | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69Vc | 69Vc1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70Va | 70A | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70N2 | 69Vc | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70N1 | 69Vc | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70P1 | 72Va | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70P2 | 72Va | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70B | 70N2 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70B | 70N1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70A | 70P1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 70A | 70P2 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69W04Y | 69N3 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72Va | 72A | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72-1 | S01 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72-3b | S01 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72-3b | 72B | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72-2 | 72B | Sw0x_x | - | - | nexx-nexx |
-| R_01 | S01 | 72B | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69B1 | 69P3 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69B1 | 69P1 | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 72B | 70B | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69P3 | 68F | Sw0x_x | - | - | nexx-nexx |
-| R_01 | 69P1 | 70Va | Sw0x_x | - | - | nexx-nexx |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | 68N1 | 69Va | Sw0x_x | - | - | 7-9-95 |
+| R_01 | 68N2 | 69Va | Sw0x_x | - | - | 1-9-95 |
+| R_01 | 69Va | 69A | Sw0x_x | - | - | 95-59 |
+| R_01 | 69A | 69N2 | Sw0x_x | - | - | 59-17 |
+| R_01 | 69A | 69N3 | Sw0x_x | - | - | 59-11-52-77 |
+| R_01 | 69P2 | 68F | Sw0x_x | - | - | 17-59-95-9 |
+| R_01 | 69B2 | 69P2 | Sw0x_x | - | - | 78-17 |
+| R_01 | 69B2 | 69P3 | Sw0x_x | - | - | 78-79-77 |
+| R_01 | 69B2 | 69P1 | Sw0x_x | - | - | 78-79-21 |
+| R_01 | 69C | 69N1 | Sw0x_x | - | - | 70-104-21 |
+| R_01 | 69Vc1 | 69C | Sw0x_x | - | - | 70 |
+| R_01 | 69Vc | 69Vc1 | Sw0x_x | - | - | 67-70 |
+| R_01 | 70Va | 70A | Sw0x_x | - | - | 103-64 |
+| R_01 | 70N2 | 69Vc | Sw0x_x | - | - | 23-64-103-67 |
+| R_01 | 70N1 | 69Vc | Sw0x_x | - | - | 24-64-103-67 |
+| R_01 | 70P1 | 72Va | Sw0x_x | - | - | 24-26-65-102-44 |
+| R_01 | 70P2 | 72Va | Sw0x_x | - | - | 23-26-65-102-44 |
+| R_01 | 70B | 70N2 | Sw0x_x | - | - | 26-23 |
+| R_01 | 70B | 70N1 | Sw0x_x | - | - | 26-24 |
+| R_01 | 70A | 70P1 | Sw0x_x | - | - | 64-24 |
+| R_01 | 70A | 70P2 | Sw0x_x | - | - | 64-23 |
+| R_01 | 69W04Y | 69N3 | Sw0x_x | - | - | 14-52-77 |
+| R_01 | 72Va | 72A | Sw0x_x | - | - | 44-104-100 |
+| R_01 | 72-1 | S01 | Sw0x_x | - | - | 83-32 |
+| R_01 | 72-3b | S01 | Sw0x_x | - | - | 41-82-32 |
+| R_01 | 72-3b | 72B | Sw0x_x | - | - | 41-85-100 |
+| R_01 | 72-2 | 72B | Sw0x_x | - | - | 29-110-100 |
+| R_01 | S01 | 72B | Sw0x_x | - | - | 32-110-100 |
+| R_01 | 69B1 | 69P3 | Sw0x_x | - | - | 94-77 |
+| R_01 | 69B1 | 69P1 | Sw0x_x | - | - | 94-21 |
+| R_01 | 72B | 70B | Sw0x_x | - | - | 100-101-44-102-65-26 |
+| R_01 | 69P3 | 68F | Sw0x_x | - | - | 77-52-11-59-95-9 |
+| R_01 | 69P1 | 70Va | Sw0x_x | - | - | 21-104-70-67-103 |
 
 ![alt text](2_B.png)
 
