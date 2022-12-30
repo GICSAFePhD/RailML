@@ -20,6 +20,10 @@
 | R_03 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16 |
 | R_04 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19 |
 | R_05 |  S21  |  S15  | Sw03_R + Sw02_R | - | - | ne20-ne17-ne16 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_06 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14 |
 | R_07 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15 |
 | R_08 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18 |
@@ -108,6 +112,10 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 | R_33 |  P62  |  L27  | 70W02_R | - | - | ne24-ne26 |
 | R_34 |  L27  |  L30  | - | - | - | ne26-ne65 |
 | R_35 |  C104  |  L28  | 71W01_N | - | - | ne102-ne44 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_36 |  T02  |  P53  | - | Plat01 | - | ne1 |
 | R_37 |  T04  |  L42  | - | - | Ucr01 + Ocr01 | ne4-ne106 |
 | R_38 |  T06  |  P55  | - | Plat02 | - | ne7 |
@@ -219,6 +227,10 @@ Routes 34 to 88 are created considering all the signals generated to protect buf
 | R_14 |  C33  |  T07  | Sw04_N | - | - | ne06-ne08 |
 | R_15 |  S35  |  J18  | Sw04_R | - | - | ne08-ne07 |
 | R_16 |  J17  |  T07  | Sw04_R | - | - | ne07-ne08 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_17 |  T02  |  S23  | - | - | - | ne01 |
 | R_18 |  T04  |  S27  | - | - | - | ne04 |
 | R_19 |  T06  |  S31  | - | - | - | ne05 |
@@ -269,6 +281,10 @@ Routes 1 to 16 are the same in both interlocking tables, but RNA considers a dep
 | R_14 | J20 | C29 | - | - | - | ne07 |
 | R_15 | C29 | J18 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
 | R_16 | S33 | T05 | Sw05_R | - | - | ne05-ne10 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_17 | S33 | J13 | Sw05_N | - | - | ne05-ne11 |
 | R_18 | T04 | J18 | Sw01_R + Sw03_R | - | - | ne06-ne02-ne01 |
 | R_19 | B26 | C21 | Sw02_R | - | - | ne04-ne03 |
@@ -312,6 +328,10 @@ With these changes it is possible to cover all the layout in any direction witho
 | R_06 |  B18  |  T07  | Sw19_R | - | - | ne41-ne42 |
 | R_07 |  T04  |  T01  | Sw14_R + Sw18_R | - | - | ne31-ne40-ne01 |
 | R_08 |  C11  |  T01  | Sw14_N + Sw18_R | - | - | ne32-ne40-ne01 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_09 |  T02  |  S14  | - | - | - | ne01 |
 | R_10 |  T06  |  C11  | - | - | - | ne32 |
 | R_11 |  T08  |  S19  | - | - | - | ne42 |
@@ -344,7 +364,6 @@ The RNA adds departure signal T02, T06, T08 and T10 to protect buffer stops. Sig
 | R_07 |  T06  |  X09  | - | - | - | ne02 |
 | R_08 |  P13  |  X12  | - | - | - | ne02 |
 | R_09 |  P16  |  T07  | - | - | - | ne01 |
-
 
 Routes 1 to 3 in the original layout are equivalent to routes 1 and 2 in the new signalling. 
 
@@ -398,6 +417,10 @@ Route 9 is added as a departure signal tot stop before the end of the line. The 
 | R_13 | J22 | T01 | - | - | - | ne23 |
 | R_14 | S36 | J17 | Sw11_R + Sw12_R | - | - | ne23-ne27-ne03 |
 | R_15 | S39 | J30 | Sw11_R + Sw12_R | - | - | ne03-ne27-ne23 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_16 | J20 | S39 | - | - | - | ne03 |
 | R_17 | S39 | J16 | Sw12_N | - | - | ne03-ne26 |
 | R_18 | J16 | J14 | - | - | - | ne26 |
@@ -459,6 +482,10 @@ Routes 16 to 28 are equivalente to routes 1 to 12 but in the opposite direction.
 | R_12 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
 | R_13 |  T04  |  X16  | - | Plat11 | - | ne14 |
 | R_14 |  T02  |  P20  | - | Plat13 | Lc08 | ne13 |
+
+Extra routes considering bidirectional tracks:
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_15 |  T06  |  C29  | - | - | - | ne15 |
 | R_16 |  J11  |  L09  | - | - | - | ne22 |
 | R_17 |  J14  |  L10  | - | - | - | ne23 |
