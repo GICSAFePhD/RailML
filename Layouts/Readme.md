@@ -59,8 +59,8 @@ Route 14 was deleted because signal S09 was very close S18 and, therefore, unuse
 
 Routes 15 to 22 are created because RNA added signals T01,T02,T03,T04,T05 and T06 to protectt buffer stops and signals L07,L08,L09 and L10 to protect line borders. These new signals created new routes to stop prior the (relative or absolute) end of the network, increasing safety, and to add opposite routes than the originals, increasing mobility.
 
-# Example_1
-## Name: 
+# Example_2
+## Name: SimpleExample.railAID
 
 ![alt text](1_A.png)
 
@@ -93,8 +93,8 @@ Extra routes considering bidirectional tracks:
 
 Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. It does not affect safety, RNA always considers every possible route in the layout. What is more, departure signal are considered for line borders and buffer stops for extra protection.
 
-# Example_2
-## Name: 
+# Example_3
+## Name: AdvancedExample.RailAID
 
 ![alt text](2_A.png)
 
@@ -241,8 +241,8 @@ Route 33 in the orignal signallins is integrated in Routes 9, 10 and 22 by the R
 
 Routes 34 to 88 are created considering all the signals generated to protect buffer stops, line borders and curves, and to considering bidirectional tracks. Disabling these functionalities both interlocking tables are equivalent without any other difference between them.
 
-# Example_3
-## Name:
+# Example_4
+## Name: ERTMS_Test_Plant.RailAID
 
 ![alt text](3_A.png)
 
@@ -420,7 +420,7 @@ Routes 34 to 88 are created considering all the signals generated to protect buf
 | R_01 |  S109  |  S119  | Sw0X_X  | - | - | neXX-neXX |
 | R_01 |  S109  |  C87  | Sw0X_X  | - | - | neXX-neXX |
 
-# Example_4
+# Example_5
 ## Name:
 
 ![alt text](4_A.png)
@@ -475,7 +475,7 @@ Extra routes considering bidirectional tracks:
 
 Routes 1 to 16 are the same in both interlocking tables, but RNA considers a departure signal is necessary close to buffer stops to allow trains to start moving. This authority could be delegated on signals S23,S31,S27 and S35 but they are far away their respective buffer stops. This extra four signals add four more routes to move the train from each buffer stop prior to every switch. It does not affect safety but it adds an extra step before a critical action, increasing safety.
 
-# Example_5
+# Example_6
 
 ![alt text](5_A.png)
 
@@ -538,7 +538,7 @@ Routes 17, 18, 19 and 23 use new signals added by the RNA, necessary to improve 
 
 With these changes it is possible to cover all the layout in any direction without any restriction.
 
-# Example_6
+# Example_7
 
 ![alt text](6_A.png)
 
@@ -578,7 +578,7 @@ Routes 1 to 8 are equivalente in both interlocking tables.
 
 The RNA adds departure signal T02, T06, T08 and T10 to protect buffer stops. Signals T02, T06 and T08 are used to allow stopped trains to move close to the main signals S14, S19 and C11. signal T04 is used to insert trains back to the main line. These extra signals increase safety by protecting the buffer stops, mandatory in many countries. If the buffer stops are configured to not be protected then both interlocking tables are the same.
 
-# Example_7
+# Example_8
 
 ![alt text](7_A.png)
 
@@ -611,10 +611,6 @@ Routes 5 to 6 in the new signalling include a stop between the level crossing an
 Route 7 is used to approach carefully the level crossing.
 Route 8 is used as a departure signal from the platform to move up to the level crossing
 Route 9 is added as a departure signal tot stop before the end of the line. The original layout had no stop signals prior buffer stops.
-
-# Example_8
-
-Example_8 is similar to Example_9 but with bigger dimensions. The layout is in the repository but the interlocking table is given for example_9 only.
 
 # Example_9
 
