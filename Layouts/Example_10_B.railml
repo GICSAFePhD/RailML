@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_10.railml</dc:title>
-		<dc:date>2022-11-27T03:47:41Z</dc:date>
+		<dc:date>2022-12-27T02:30:57Z</dc:date>
 		<dc:creator>Martin</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -732,43 +732,43 @@
 					<coordinate x="1564.660" y="180.000"/>
 					<name name="Plat13" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi9" id="vis01_sep12">
+				<spotElementProjection refersToElement="swi9" id="vis01_sep31">
 					<coordinate x="1320.000" y="-150.000"/>
 					<name name="Sw04" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi55" id="vis01_sep13">
+				<spotElementProjection refersToElement="swi55" id="vis01_sep32">
 					<coordinate x="2460.000" y="0.000"/>
 					<name name="Sw06" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi58" id="vis01_sep14">
+				<spotElementProjection refersToElement="swi58" id="vis01_sep33">
 					<coordinate x="1530.000" y="-360.000"/>
 					<name name="Sw07" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi72" id="vis01_sep15">
+				<spotElementProjection refersToElement="swi72" id="vis01_sep34">
 					<coordinate x="1800.000" y="-150.000"/>
 					<name name="Sw12" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi73" id="vis01_sep16">
+				<spotElementProjection refersToElement="swi73" id="vis01_sep35">
 					<coordinate x="1950.000" y="0.000"/>
 					<name name="Sw13" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="tde78" id="vis01_sep17">
+				<spotElementProjection refersToElement="tde78" id="vis01_sep36">
 					<coordinate x="2452.520" y="-150.000"/>
 					<name name="J15" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="tde77" id="vis01_sep18">
+				<spotElementProjection refersToElement="tde77" id="vis01_sep37">
 					<coordinate x="1284.480" y="0.000"/>
 					<name name="J14" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="tvd80" id="vis01_sep19">
+				<spotElementProjection refersToElement="tvd80" id="vis01_sep38">
 					<coordinate x="2718.140" y="-150.000"/>
 					<name name="14" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="tvd87" id="vis01_sep20">
+				<spotElementProjection refersToElement="tvd87" id="vis01_sep39">
 					<coordinate x="1020.670" y="0.000"/>
 					<name name="18" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="tvd92" id="vis01_sep21">
+				<spotElementProjection refersToElement="tvd92" id="vis01_sep40">
 					<coordinate x="1020.670" y="180.000"/>
 					<name name="21" language="en"/>
 				</spotElementProjection>
@@ -963,11 +963,11 @@
 					<designator register="_Example" entry="18"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd92">
-					<hasDemarcatingBufferstop ref="bus59"/>
+					<hasDemarcatingBufferstop ref="oe42"/>
 					<hasDemarcatingBufferstop ref="bus56"/>
 					<hasDemarcatingBufferstop ref="oe40"/>
-					<hasDemarcatingBufferstop ref="oe42"/>
 					<hasDemarcatingBufferstop ref="bus10"/>
+					<hasDemarcatingBufferstop ref="bus59"/>
 					<hasDemarcatingTraindetector ref="tde78"/>
 					<hasDemarcatingTraindetector ref="tde77"/>
 					<designator register="_Example" entry="21"/>

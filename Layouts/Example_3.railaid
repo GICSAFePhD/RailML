@@ -1823,7 +1823,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T01</Attribute>
+                <Attribute id="A_Name">S01</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S01</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -1854,7 +1854,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T02</Attribute>
+                <Attribute id="A_Name">S02</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S02</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -1885,7 +1885,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T03</Attribute>
+                <Attribute id="A_Name">S03</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S03</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -1916,7 +1916,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T04</Attribute>
+                <Attribute id="A_Name">S04</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S04</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -1947,7 +1947,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T05</Attribute>
+                <Attribute id="A_Name">S05</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S05</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -1978,7 +1978,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T06</Attribute>
+                <Attribute id="A_Name">S06</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S06</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2009,7 +2009,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T07</Attribute>
+                <Attribute id="A_Name">S07</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S07</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2040,7 +2040,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T08</Attribute>
+                <Attribute id="A_Name">S08</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S08</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2071,7 +2071,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T09</Attribute>
+                <Attribute id="A_Name">S09</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S09</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2102,7 +2102,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T10</Attribute>
+                <Attribute id="A_Name">S10</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S10</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2133,7 +2133,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T11</Attribute>
+                <Attribute id="A_Name">S11</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S11</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2164,7 +2164,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T12</Attribute>
+                <Attribute id="A_Name">S12</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S12</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2195,7 +2195,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T13</Attribute>
+                <Attribute id="A_Name">S13</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S13</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2226,7 +2226,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">T14</Attribute>
+                <Attribute id="A_Name">S14</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S14</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2257,7 +2257,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">X15</Attribute>
+                <Attribute id="A_Name">S15</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S15</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2288,7 +2288,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">X16</Attribute>
+                <Attribute id="A_Name">S16</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S16</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2319,7 +2319,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">X19</Attribute>
+                <Attribute id="A_Name">S19</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S19</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2350,7 +2350,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">X20</Attribute>
+                <Attribute id="A_Name">S20</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S20</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2381,7 +2381,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C23</Attribute>
+                <Attribute id="A_Name">S23</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S23</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2443,7 +2443,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B27</Attribute>
+                <Attribute id="A_Name">S27</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S27</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2505,7 +2505,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C31</Attribute>
+                <Attribute id="A_Name">S31</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S31</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2567,7 +2567,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C35</Attribute>
+                <Attribute id="A_Name">S35</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S35</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2598,7 +2598,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B39</Attribute>
+                <Attribute id="A_Name">S39</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S39</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2629,7 +2629,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B44</Attribute>
+                <Attribute id="A_Name">S44</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S44</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2691,7 +2691,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C46</Attribute>
+                <Attribute id="A_Name">S46</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S46</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2722,7 +2722,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B47</Attribute>
+                <Attribute id="A_Name">S47</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S47</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2753,7 +2753,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B52</Attribute>
+                <Attribute id="A_Name">S52</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S52</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2784,7 +2784,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C56</Attribute>
+                <Attribute id="A_Name">S56</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S56</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2815,7 +2815,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B57</Attribute>
+                <Attribute id="A_Name">S57</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S57</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2877,7 +2877,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C59</Attribute>
+                <Attribute id="A_Name">S59</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S59</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2908,7 +2908,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B60</Attribute>
+                <Attribute id="A_Name">S60</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S60</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2939,7 +2939,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C62</Attribute>
+                <Attribute id="A_Name">S62</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S62</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -2970,7 +2970,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B63</Attribute>
+                <Attribute id="A_Name">S63</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S63</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3001,7 +3001,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B67</Attribute>
+                <Attribute id="A_Name">S67</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S67</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3063,7 +3063,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C74</Attribute>
+                <Attribute id="A_Name">S74</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S74</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3094,7 +3094,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B75</Attribute>
+                <Attribute id="A_Name">S75</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S75</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3187,7 +3187,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B83</Attribute>
+                <Attribute id="A_Name">S83</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S83</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3249,7 +3249,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">H85</Attribute>
+                <Attribute id="A_Name">S85</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S85</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3280,7 +3280,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B86</Attribute>
+                <Attribute id="A_Name">S86</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S86</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3342,7 +3342,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C89</Attribute>
+                <Attribute id="A_Name">S89</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S89</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3373,7 +3373,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B90</Attribute>
+                <Attribute id="A_Name">S90</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S90</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3435,7 +3435,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C93</Attribute>
+                <Attribute id="A_Name">S93</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S93</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3466,7 +3466,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B94</Attribute>
+                <Attribute id="A_Name">S94</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S94</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3528,7 +3528,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">H96</Attribute>
+                <Attribute id="A_Name">S96</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S96</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3559,7 +3559,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C97</Attribute>
+                <Attribute id="A_Name">S97</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S97</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -3590,7 +3590,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">B98</Attribute>
+                <Attribute id="A_Name">S98</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S98</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
@@ -4069,7 +4069,7 @@
             </Ports>
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">C43</Attribute>
+                <Attribute id="A_Name">S43</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_railML_Designator_Entry">SIGNAL S43</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>

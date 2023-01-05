@@ -1,301 +1,88 @@
-route_1 [sig29 << sig47]:
-	Path: ['ne114', 'ne132']
-	Switches: ['D23']
-route_2 [sig29 << sig119]:
-	Path: ['ne114', 'ne129', 'ne127']
-	Switches: ['D23', 'D24']
-route_3 [sig29 << sig87]:
-	Path: ['ne114', 'ne129', 'ne130']
-	Switches: ['D23']
-route_4 [sig30 >> sig63]:
-	Path: ['ne98', 'ne99']
-	Switches: ['D05']
-route_5 [sig31 >> sig67]:
-	Path: ['ne100', 'ne101']
-	Switches: ['D09']
-route_6 [sig32 >> sig31]:
-	Path: ['ne992', 'ne100']
-	Switches: ['Sw01']
-route_7 [sig35 << sig01]:
-	Path: ['ne290', 'ne991']
-	Switches: ['D01', 'D14']
-route_8 [sig36 << sig35]:
-	Path: ['ne292', 'ne290']
-	Switches: ['D14']
-route_9 [sig37 << sig35]:
-	Path: ['ne292', 'ne290']
-	Switches: ['D14']
-route_10 [sig43 << sig55]:
-	Path: ['ne101', 'ne100']
-	Switches: ['D09']
-route_11 [sig45 << sig43]:
-	Path: ['ne912', 'ne101']
-	Switches: ['D09', 'D20']
-route_12 [sig46 >> sig11]:
-	Path: ['ne132', 'ne114', 'ne102']
-	Switches: ['D23']
-route_13 [sig47 << sig45]:
-	Path: ['ne132', 'ne912']
-	Switches: ['D20']
-route_14 [sig48 << sig47]:
-	Path: ['ne114', 'ne132']
-	Switches: ['D23']
-route_15 [sig48 << sig119]:
-	Path: ['ne114', 'ne129', 'ne127']
-	Switches: ['D23', 'D24']
-route_16 [sig48 << sig87]:
-	Path: ['ne114', 'ne129', 'ne130']
-	Switches: ['D23']
-route_17 [sig50 >> sig63]:
-	Path: ['ne98', 'ne99']
-	Switches: ['D05']
-route_18 [sig51 << sig128]:
-	Path: ['ne98', 'ne996']
-	Switches: ['Sw04']
-route_19 [sig54 >> sig67]:
-	Path: ['ne100', 'ne101']
-	Switches: ['D09']
-route_20 [sig55 << sig122]:
-	Path: ['ne100', 'ne992']
-	Switches: ['Sw01']
-route_21 [sig56 >> sig67]:
-	Path: ['ne100', 'ne101']
-	Switches: ['D09']
-route_22 [sig57 << sig122]:
-	Path: ['ne100', 'ne992']
-	Switches: ['Sw01']
-route_23 [sig62 << sig51]:
-	Path: ['ne63', 'ne99', 'ne98']
-	Switches: ['D05', 'D18']
-route_24 [sig63 >> sig86]:
-	Path: ['ne99', 'ne61']
-	Switches: ['D05', 'D08']
-route_25 [sig63 >> sig103]:
-	Path: ['ne99', 'ne63']
-	Switches: ['D05', 'D18']
-route_26 [sig64 >> sig86]:
-	Path: ['ne99', 'ne61']
-	Switches: ['D05', 'D08']
-route_27 [sig64 >> sig103]:
-	Path: ['ne99', 'ne63']
-	Switches: ['D05', 'D18']
-route_28 [sig65 >> sig86]:
-	Path: ['ne99', 'ne61']
-	Switches: ['D05', 'D08']
-route_29 [sig65 >> sig103]:
-	Path: ['ne99', 'ne63']
-	Switches: ['D05', 'D18']
-route_30 [sig67 >> sig112]:
-	Path: ['ne101', 'ne912']
-	Switches: ['D09', 'D20']
-route_31 [sig67 >> sig89]:
-	Path: ['ne101', 'ne910']
-	Switches: ['D09', 'D10']
-route_32 [sig68 >> sig112]:
-	Path: ['ne101', 'ne912']
-	Switches: ['D09', 'D20']
-route_33 [sig68 >> sig89]:
-	Path: ['ne101', 'ne910']
-	Switches: ['D09', 'D10']
-route_34 [sig69 >> sig112]:
-	Path: ['ne101', 'ne912']
-	Switches: ['D09', 'D20']
-route_35 [sig69 >> sig89]:
-	Path: ['ne101', 'ne910']
-	Switches: ['D09', 'D10']
-route_36 [sig74 << sig01]:
-	Path: ['ne295', 'ne288', 'ne991']
-	Switches: ['D01', 'D03']
-route_37 [sig75 << sig01]:
-	Path: ['ne110', 'ne288', 'ne991']
-	Switches: ['D01', 'D03']
-route_38 [sig76 >> sig77]:
-	Path: ['ne288', 'ne295']
-	Switches: ['D03']
-route_39 [sig76 >> sig125]:
-	Path: ['ne288', 'ne295', 'ne297']
-	Switches: ['D03', 'D04', 'Sw03']
-route_40 [sig77 >> sig125]:
-	Path: ['ne295', 'ne297']
-	Switches: ['D04', 'Sw03']
-route_41 [sig78 << sig13]:
-	Path: ['ne384', 'ne104']
-route_42 [sig78 << sig75]:
-	Path: ['ne384', 'ne110']
-route_43 [sig79 << sig74]:
-	Path: ['ne297', 'ne295']
-	Switches: ['D04', 'Sw03']
-route_44 [sig79 << sig78]:
-	Path: ['ne297', 'ne384']
-	Switches: ['D04', 'Sw03']
-route_45 [sig80 << sig74]:
-	Path: ['ne297', 'ne295']
-	Switches: ['D04', 'Sw03']
-route_46 [sig80 << sig78]:
-	Path: ['ne297', 'ne384']
-	Switches: ['D04', 'Sw03']
-route_47 [sig81 >> sig91]:
-	Path: ['ne404', 'ne400']
-	Switches: ['D07', 'Sw02']
-route_48 [sig82 << sig84]:
-	Path: ['ne400', 'ne404']
-	Switches: ['D07', 'Sw02']
-route_49 [sig82 << sig101]:
-	Path: ['ne400', 'ne407']
-	Switches: ['D07', 'Sw02', 'D16']
-route_50 [sig83 << sig84]:
-	Path: ['ne400', 'ne404']
-	Switches: ['D07', 'Sw02']
-route_51 [sig83 << sig101]:
-	Path: ['ne400', 'ne407']
-	Switches: ['D07', 'Sw02', 'D16']
-route_52 [sig84 << sig51]:
-	Path: ['ne404', 'ne61', 'ne99', 'ne98']
-	Switches: ['D05', 'D08']
-route_53 [sig85 << sig51]:
-	Path: ['ne123', 'ne61', 'ne99', 'ne98']
-	Switches: ['D05', 'D08']
-route_54 [sig86 >> sig81]:
-	Path: ['ne61', 'ne404']
-	Switches: ['D08']
-route_55 [sig86 >> sig91]:
-	Path: ['ne61', 'ne404', 'ne400']
-	Switches: ['D07', 'D08', 'Sw02']
-route_56 [sig87 << sig43]:
-	Path: ['ne130', 'ne910', 'ne101']
-	Switches: ['D09', 'D10']
-route_57 [sig88 << sig43]:
-	Path: ['ne135', 'ne910', 'ne101']
-	Switches: ['D09', 'D10']
-route_58 [sig89 >> sig11]:
-	Path: ['ne910', 'ne130', 'ne129', 'ne114', 'ne102']
-	Switches: ['D10', 'D23']
-route_59 [sig89 >> sig11]:
-	Path: ['ne910', 'ne130', 'ne129', 'ne114', 'ne102']
-	Switches: ['D10', 'D23']
-route_60 [sig91 >> sig25]:
-	Path: ['ne400', 'ne993']
-	Switches: ['D07', 'Sw02']
-route_61 [sig91 >> sig32]:
-	Path: ['ne400', 'ne994', 'ne992']
-	Switches: ['D07', 'Sw02', 'Sw01']
-route_62 [sig92 >> sig25]:
-	Path: ['ne400', 'ne993']
-	Switches: ['D07', 'Sw02']
-route_63 [sig92 >> sig32]:
-	Path: ['ne400', 'ne994', 'ne992']
-	Switches: ['D07', 'Sw02', 'Sw01']
-route_64 [sig94 >> sig30]:
-	Path: ['ne290', 'ne292', 'ne996', 'ne98']
-	Switches: ['D14', 'Sw04']
-route_65 [sig95 >> sig30]:
-	Path: ['ne290', 'ne292', 'ne996', 'ne98']
-	Switches: ['D14', 'Sw04']
-route_66 [sig98 << sig35]:
-	Path: ['ne377', 'ne111', 'ne290']
-	Switches: ['D14', 'D15']
-route_67 [sig98 << sig15]:
-	Path: ['ne377', 'ne113']
-	Switches: ['D15']
-route_68 [sig101 << sig17]:
-	Path: ['ne407', 'ne122']
-	Switches: ['D16']
-route_69 [sig101 << sig85]:
-	Path: ['ne407', 'ne123']
-	Switches: ['D16']
-route_70 [sig102 << sig62]:
-	Path: ['ne65', 'ne63']
-	Switches: ['D18']
-route_71 [sig103 >> sig32]:
-	Path: ['ne63', 'ne65', 'ne992']
-	Switches: ['D18', 'Sw01']
-route_72 [sig104 >> sig32]:
-	Path: ['ne63', 'ne65', 'ne992']
-	Switches: ['D18', 'Sw01']
-route_73 [sig107 << sig62]:
-	Path: ['ne421', 'ne124', 'ne63']
-	Switches: ['D18', 'D19']
-route_74 [sig107 << sig19]:
-	Path: ['ne421', 'ne126']
-	Switches: ['D19']
-route_75 [sig109 << sig47]:
-	Path: ['ne114', 'ne132']
-	Switches: ['D23']
-route_76 [sig109 << sig119]:
-	Path: ['ne114', 'ne129', 'ne127']
-	Switches: ['D23', 'D24']
-route_77 [sig109 << sig87]:
-	Path: ['ne114', 'ne129', 'ne130']
-	Switches: ['D23']
-route_78 [sig110 << sig47]:
-	Path: ['ne114', 'ne132']
-	Switches: ['D23']
-route_79 [sig110 << sig119]:
-	Path: ['ne114', 'ne129', 'ne127']
-	Switches: ['D23', 'D24']
-route_80 [sig110 << sig87]:
-	Path: ['ne114', 'ne129', 'ne130']
-	Switches: ['D23']
-route_81 [sig112 >> sig46]:
-	Path: ['ne912', 'ne132']
-	Switches: ['D20']
-route_82 [sig113 >> sig46]:
-	Path: ['ne912', 'ne132']
-	Switches: ['D20']
-route_83 [sig116 << sig45]:
-	Path: ['ne465', 'ne131', 'ne912']
-	Switches: ['D20', 'D21']
-route_84 [sig116 << sig21]:
-	Path: ['ne465', 'ne133']
-	Switches: ['D21']
-route_85 [sig119 << sig88]:
-	Path: ['ne127', 'ne135']
-	Switches: ['D24']
-route_86 [sig119 << sig23]:
-	Path: ['ne127', 'ne134']
-	Switches: ['D24']
-route_87 [sig120 << sig88]:
-	Path: ['ne127', 'ne135']
-	Switches: ['D24']
-route_88 [sig120 << sig23]:
-	Path: ['ne127', 'ne134']
-	Switches: ['D24']
-route_89 [sig121 << sig62]:
-	Path: ['ne65', 'ne63']
-	Switches: ['D18']
-route_90 [sig122 << sig102]:
-	Path: ['ne992', 'ne65']
-	Switches: ['Sw01']
-route_91 [sig122 << sig82]:
-	Path: ['ne992', 'ne994', 'ne400']
-	Switches: ['D07', 'Sw02', 'Sw01']
-route_92 [sig123 << sig102]:
-	Path: ['ne992', 'ne65']
-	Switches: ['Sw01']
-route_93 [sig123 << sig82]:
-	Path: ['ne992', 'ne994', 'ne400']
-	Switches: ['D07', 'Sw02', 'Sw01']
-route_94 [sig125 >> sig27]:
-	Path: ['ne297', 'ne995']
-	Switches: ['D04', 'Sw03']
-route_95 [sig125 >> sig30]:
-	Path: ['ne297', 'ne997', 'ne996', 'ne98']
-	Switches: ['D04', 'Sw03', 'Sw04']
-route_96 [sig126 >> sig27]:
-	Path: ['ne297', 'ne995']
-	Switches: ['D04', 'Sw03']
-route_97 [sig126 >> sig30]:
-	Path: ['ne297', 'ne997', 'ne996', 'ne98']
-	Switches: ['D04', 'Sw03', 'Sw04']
-route_98 [sig128 << sig36]:
-	Path: ['ne996', 'ne292']
-	Switches: ['Sw04']
-route_99 [sig128 << sig79]:
-	Path: ['ne996', 'ne997', 'ne297']
-	Switches: ['D04', 'Sw03', 'Sw04']
-route_100 [sig129 << sig36]:
-	Path: ['ne996', 'ne292']
-	Switches: ['Sw04']
-route_101 [sig129 << sig79]:
-	Path: ['ne996', 'ne997', 'ne297']
-	Switches: ['D04', 'Sw03', 'Sw04']
+route_1 [sig08 << sig25]:
+	Path: ['ne2', 'ne12']
+	Switches: ['Sw06', 'Sw13']
+route_2 [sig08 << sig01]:
+	Path: ['ne2', 'ne13']
+	Switches: ['Sw06']
+	Platforms: ['plf75']
+route_3 [sig12 << sig21]:
+	Path: ['ne22', 'ne8']
+	Switches: ['Sw12']
+route_4 [sig16 << sig07]:
+	Path: ['ne14', 'ne9', 'ne1']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_5 [sig21 << sig07]:
+	Path: ['ne8', 'ne1']
+	Switches: ['Sw04', 'Sw12']
+route_6 [sig22 >> sig32]:
+	Path: ['ne1', 'ne8']
+	Switches: ['Sw04', 'Sw12']
+route_7 [sig22 >> sig03]:
+	Path: ['ne1', 'ne9', 'ne14']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_8 [sig22 >> sig05]:
+	Path: ['ne1', 'ne9', 'ne15']
+	Switches: ['Sw04', 'Sw07']
+route_9 [sig23 >> sig32]:
+	Path: ['ne1', 'ne8']
+	Switches: ['Sw04', 'Sw12']
+route_10 [sig23 >> sig03]:
+	Path: ['ne1', 'ne9', 'ne14']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_11 [sig23 >> sig05]:
+	Path: ['ne1', 'ne9', 'ne15']
+	Switches: ['Sw04', 'Sw07']
+route_12 [sig24 >> sig32]:
+	Path: ['ne1', 'ne8']
+	Switches: ['Sw04', 'Sw12']
+route_13 [sig24 >> sig03]:
+	Path: ['ne1', 'ne9', 'ne14']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_14 [sig24 >> sig05]:
+	Path: ['ne1', 'ne9', 'ne15']
+	Switches: ['Sw04', 'Sw07']
+route_15 [sig25 << sig10]:
+	Path: ['ne12', 'ne23']
+	Switches: ['Sw13']
+route_16 [sig25 << sig21]:
+	Path: ['ne12', 'ne24', 'ne8']
+	Switches: ['Sw12', 'Sw13']
+route_17 [sig27 << sig25]:
+	Path: ['ne2', 'ne12']
+	Switches: ['Sw06', 'Sw13']
+route_18 [sig27 << sig01]:
+	Path: ['ne2', 'ne13']
+	Switches: ['Sw06']
+	Platforms: ['plf75']
+route_19 [sig28 << sig25]:
+	Path: ['ne2', 'ne12']
+	Switches: ['Sw06', 'Sw13']
+route_20 [sig28 << sig01]:
+	Path: ['ne2', 'ne13']
+	Switches: ['Sw06']
+	Platforms: ['plf75']
+route_21 [sig29 << sig07]:
+	Path: ['ne15', 'ne9', 'ne1']
+	Switches: ['Sw04', 'Sw07']
+route_22 [sig32 >> sig09]:
+	Path: ['ne8', 'ne22']
+	Switches: ['Sw12']
+route_23 [sig33 >> sig09]:
+	Path: ['ne8', 'ne22']
+	Switches: ['Sw12']
+route_24 [sig35 << sig10]:
+	Path: ['ne12', 'ne23']
+	Switches: ['Sw13']
+route_25 [sig35 << sig21]:
+	Path: ['ne12', 'ne24', 'ne8']
+	Switches: ['Sw12', 'Sw13']
+route_26 [sig36 << sig10]:
+	Path: ['ne12', 'ne23']
+	Switches: ['Sw13']
+route_27 [sig36 << sig21]:
+	Path: ['ne12', 'ne24', 'ne8']
+	Switches: ['Sw12', 'Sw13']
