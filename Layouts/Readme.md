@@ -248,9 +248,9 @@ Routes 34 to 88 are created considering all the signals generated to protect buf
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  S15  |  S24  | -  | - | - | neXX-neXX |
-| R_01 |  S16  |  S67  | Sw0X_X  | - | - | neXX-neXX |
-| R_01 |  S16  |  S43  | Sw0X_X  | - | - | neXX-neXX |
+| R_01 |  S15  |  S24  | -  | - | - | ne98-ne99 |
+| R_01 |  S16  |  S67  | Sw04_N  | Lc02 | - | ne98-ne996-ne292 |
+| R_01 |  S16  |  S43  | Sw03_R + Sw04_R  | - | - | ne98-ne996-ne292-ne997-ne297 |
 | R_01 |  S19  |  S32  | -  | - | - | neXX-neXX |
 | R_01 |  S20  |  S11  | Sw0X_X  | - | - | neXX-neXX |
 | R_01 |  S20  |  S56  | Sw0X_X  | - | - | neXX-neXX |
