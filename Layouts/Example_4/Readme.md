@@ -1,5 +1,10 @@
 # Example_4
-## Name: ERTMS_Test_Plant.RailAID
+## Description
+Name: ERTMS_Test_Plant.RailAID
+
+## Step by step
+
+## Original table
 
 ![alt text](4_A.png)
 
@@ -81,6 +86,8 @@ R_73  |  H85  |  T05  |  -  |  -  |  -  |  ne421
 R_74  |  S95  |  H96  |  -  |  -  |  -  |  ne465
 R_75  |  H96  |  T07  |  -  |  -  |  -  |  ne465
 R_76  |  S80  |  S10  |  -  |  -  |  -  |  ne63
+
+## Generated table
 
 ![alt text](4_B.png)
 
