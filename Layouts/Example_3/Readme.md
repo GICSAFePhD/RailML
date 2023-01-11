@@ -1,5 +1,10 @@
 # Example_3
-## Name: AdvancedExample.RailAID
+## Description
+Name: AdvancedExample.RailAID
+
+## Step by step
+
+## Original table
 
 ![alt text](3_A.png)
 
@@ -38,6 +43,8 @@
 | R_31 | 70P1 | 72Va | 70W02_R + 71W01_N | - | - | ne24-ne26-ne65-ne102-ne44 |
 | R_32 | 70P2 | 72Va | 70W02_N + 71W01_N | - | - | ne23-ne26-ne65-ne102-ne44 |
 | R_33 | 69Vc1 | 69C | - | - | - | ne70 |
+
+## Generated table
 
 ![alt text](3_B2.png)
 
