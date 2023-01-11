@@ -1,4 +1,10 @@
 # Example_8
+## Description
+Name:  
+
+## Step by step
+
+## Original table
 
 ![alt text](8_A.png)
 
@@ -7,6 +13,8 @@
 | R_01 |  S01  |  S02  | - | Plat03 | Lc07 | ne02 |
 | R_02 |  S04  |  S07  | - | Plat02 | Lc08 | ne01 |
 | R_03 |  S06  |  S05  | - | Plat02 | Lc08 | ne01 |
+
+## Generated table
 
 ![alt text](8_B.png)
 
