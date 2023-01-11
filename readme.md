@@ -1,4 +1,4 @@
-# Directory
+# Examples directory
 
 <table bakground="FFF">
 <tr> <td><b>Example</b></td> <td><b>Section</b></td> <td><b>Repository URL</b></td> </tr>
