@@ -1,5 +1,10 @@
 # Example_2
-## Name: SimpleExample.railAID
+## Description
+Name: SimpleExample.railAID
+
+## Step by step
+
+## Original table
 
 ![alt text](2_A.png)
 
@@ -10,6 +15,8 @@
 | R_03 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16 |
 | R_04 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19 |
 | R_05 |  S10  |  S12  | Sw03_R + Sw02_R  | - | - | ne20-ne17-ne16  |
+
+## Generated table
 
 ![alt text](2_B.png)
 
