@@ -1,4 +1,10 @@
 # Example_6
+## Description
+Name: 
+
+## Step by step
+
+## Original table
 
 ![alt text](6_A.png)
 
@@ -20,6 +26,8 @@
 | R_14 | S19 | S20 | - | - | - | ne07 |
 | R_15 | S20 | S02 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
 | R_16 | S07 | S11 | Sw05_R | - | - | ne05-ne10 |
+
+## Generated table
 
 ![alt text](6_B.png)
 
