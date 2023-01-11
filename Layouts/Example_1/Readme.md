@@ -1,5 +1,10 @@
 # Example_1
-## Name: General example used in the paper
+## Description
+Name: General example used in the paper
+
+## Step by step
+
+## Original table
 
 ![alt text](1_A.png)
 
@@ -19,6 +24,8 @@
 | R_12 |  S05  |  S06  | - | Plat11 | Lc06 | ne14 |
 | R_13 |  S06  |  S20  | - | - | - | ne14 |
 | R_14 |  S09  |  S18  | - | - | - | ne13 |
+
+## Generated table
 
 ![alt text](1_B.png)
 
