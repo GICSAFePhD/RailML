@@ -62,6 +62,18 @@ sig16 [X16] <<:
 	From: ne14 | To: ne14_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [2145, 360] | Coordinate: 0.6575
+sig17 [X17] <<:
+	From: ne13 | To: ne13_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1072, -180] | Coordinate: 0.4395
+sig18 [P18] <<:
+	From: ne14 | To: ne14_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2370, 360] | Coordinate: 0.7682
+sig19 [P19] >>:
+	From: ne14 | To: ne14_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2610, 360] | Coordinate: 0.9013
 sig20 [P20] <<:
 	From: ne13 | To: ne13_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
@@ -86,6 +98,10 @@ sig25 [C25] <<:
 	From: ne12 | To: ne12_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [2205.0, 0] | Coordinate: 0.5
+sig26 [B26] <<:
+	From: ne13 | To: ne13_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1162, -180] | Coordinate: 0.4395
 sig27 [S27] <<:
 	From: ne2 | To: ne2_left
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -98,6 +114,14 @@ sig29 [C29] <<:
 	From: ne15 | To: ne15_left
 	Type: Manouver | Direction: reverse | AtTrack: right 
 	Position: [1840.0, -570] | Coordinate: 0.2599
+sig30 [B30] <<:
+	From: ne14 | To: ne14_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [2690, 360] | Coordinate: 0.9481
+sig31 [C31] <<:
+	From: ne22 | To: ne22_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2352.0, -150] | Coordinate: 0.4717
 sig32 [S32] >>:
 	From: ne8 | To: ne8_left
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -106,6 +130,10 @@ sig33 [H33] >>:
 	From: ne8 | To: ne8_left
 	Type: Manouver | Direction: normal | AtTrack: left 
 	Position: [1560.0, -150] | Coordinate: 0.5
+sig34 [C34] <<:
+	From: ne23 | To: ne23_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1384.0, 0] | Coordinate: 0.5035
 sig35 [S35] <<:
 	From: ne12 | To: ne12_left
 	Type: Circulation | Direction: normal | AtTrack: left 
