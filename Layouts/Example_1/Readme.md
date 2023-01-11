@@ -4,6 +4,16 @@ Name: General example used in the paper
 
 ## Step by step
 
+![alt text](Figure2.svg)
+![alt text](Figure3.svg)
+![alt text](Figure4.svg)
+![alt text](Figure5.svg)
+![alt text](Figure6.svg)
+![alt text](Figure7.svg)
+![alt text](Figure8.svg)
+![alt text](Figure9.svg)
+![alt text](Figure11.svg)
+
 ## Original table
 
 ![alt text](1_A.png)
