@@ -4,14 +4,17 @@ Name: General example used in the paper
 
 ## Step by step
 
+Layout without signalling:
 ![alt text](Figure2.svg)
+Signals generated due to line borders(L) and buffer stops(T):
 ![alt text](Figure3.svg)
+Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
 ![alt text](Figure4.svg)
+Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
 ![alt text](Figure5.svg)
+Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
 ![alt text](Figure6.svg)
-![alt text](Figure7.svg)
-![alt text](Figure8.svg)
-![alt text](Figure9.svg)
+Simplified signalling:
 ![alt text](Figure11.svg)
 
 ## Original table
