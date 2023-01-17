@@ -9,11 +9,11 @@ Layout without signalling:
 Signals generated due to line borders(L) and buffer stops(T):
 ![alt text](Figure1.svg)
 Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
-![alt text](Figure2.svg)
+![alt text](Figure2B.svg)
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
-![alt text](Figure3.svg)
+![alt text](Figure3B.svg)
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
-![alt text](Figure4.svg)
+![alt text](Figure4B.svg)
 Simplified signalling:
 ![alt text](9_B.png)
 
