@@ -13,7 +13,7 @@ Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
 ![alt text](Figure3.svg)
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
-
+![alt text](Figure4.svg)
 Simplified signalling:
 ![alt text](7_B.png)
 
