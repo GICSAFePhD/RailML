@@ -1,160 +1,508 @@
 sig01 [T01] <<:
-	From: ne23 | To: bus152
+	From: ne1 | To: bus2
 	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [-1466, 300] | Coordinate: 0.0393
+	Position: [-1910, -300] | Coordinate: 0.0584
 sig02 [T02] >>:
-	From: ne23 | To: ne23
+	From: ne1 | To: ne1
 	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [-1466, 300] | Coordinate: 0.0393
-sig03 [T03] >>:
-	From: ne25 | To: bus151
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [2396, 300] | Coordinate: 0.9342
-sig04 [T04] <<:
-	From: ne25 | To: ne25
+	Position: [-1910, -300] | Coordinate: 0.0584
+sig03 [T03] <<:
+	From: ne4 | To: bus5
 	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [2396, 300] | Coordinate: 0.9342
-sig05 [L05] <<:
-	From: ne3 | To: lb70
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [2396, -120] | Coordinate: 0.9090
-sig06 [L06] <<:
-	From: ne26 | To: lb69
+	Position: [6983, -150] | Coordinate: 0.7481
+sig04 [T04] <<:
+	From: ne4 | To: ne4
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [7073, -150] | Coordinate: 0.7481
+sig05 [T05] <<:
+	From: ne7 | To: bus8
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-1910, -150] | Coordinate: 0.1761
+sig06 [T06] >>:
+	From: ne7 | To: ne7
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-1910, -150] | Coordinate: 0.1761
+sig07 [T07] <<:
+	From: ne14 | To: bus6
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [2290, -150] | Coordinate: 0.1851
+sig08 [T08] <<:
+	From: ne14 | To: ne14
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [2290, -150] | Coordinate: 0.1851
+sig09 [T09] <<:
+	From: ne41 | To: bus37
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-866, 1200] | Coordinate: 0.1501
+sig10 [T10] >>:
+	From: ne41 | To: ne41
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-866, 1200] | Coordinate: 0.1501
+sig11 [T11] <<:
+	From: ne47 | To: bus50
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [1390, 1200] | Coordinate: 0.2380
+sig12 [T12] <<:
+	From: ne47 | To: ne47
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [1390, 1200] | Coordinate: 0.2380
+sig13 [T13] <<:
+	From: ne84 | To: bus327
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-866, 1350] | Coordinate: 0.4286
+sig14 [T14] <<:
+	From: ne84 | To: ne84
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-866, 1350] | Coordinate: 0.4286
+sig15 [T15] <<:
+	From: ne86 | To: bus331
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-1913, 750] | Coordinate: 0.2941
+sig16 [T16] >>:
+	From: ne86 | To: ne86
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-1913, 750] | Coordinate: 0.2941
+sig17 [T17] >>:
+	From: ne88 | To: bus332
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-1423, 750] | Coordinate: 0.7142
+sig18 [T18] <<:
+	From: ne88 | To: ne88
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-1423, 750] | Coordinate: 0.7142
+sig19 [T19] <<:
+	From: ne89 | To: bus330
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-1913, 1050] | Coordinate: 0.1562
+sig20 [T20] <<:
+	From: ne89 | To: ne89
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-1913, 1050] | Coordinate: 0.1562
+sig21 [T21] <<:
+	From: ne90 | To: bus335
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [-1913, 900] | Coordinate: 0.2040
+sig22 [T22] >>:
+	From: ne90 | To: ne90
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [-1913, 900] | Coordinate: 0.2040
+sig23 [T23] >>:
+	From: ne105 | To: bus3
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [6983, -300] | Coordinate: 0.7481
+sig24 [T24] <<:
+	From: ne105 | To: ne105
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [6983, -300] | Coordinate: 0.7481
+sig25 [L25] <<:
+	From: ne4 | To: sb450
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-1466, -120] | Coordinate: 0.0337
-sig07 [J07] <<:
-	From: ne26 | To: ne26_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-1253.0, -120] | Coordinate: 0.1056
-sig08 [J08] <<:
-	From: ne26 | To: ne26_left
+	Position: [6983, -150] | Coordinate: 0.7481
+sig26 [L26] >>:
+	From: ne9 | To: sb431
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-1053.0, -120] | Coordinate: 0.1731
-sig09 [J09] <<:
-	From: ne26 | To: ne26_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-733.0, -120] | Coordinate: 0.2812
-sig10 [J10] <<:
-	From: ne26 | To: ne26_left
+	Position: [-200, -300] | Coordinate: 0.2049
+sig27 [L27] <<:
+	From: ne26 | To: sb307
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-533.0, -120] | Coordinate: 0.3487
-sig11 [J11] <<:
-	From: ne26 | To: ne26_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-228.0, -120] | Coordinate: 0.4517
-sig12 [J12] <<:
-	From: ne26 | To: ne26_left
+	Position: [2238, 1050] | Coordinate: 0.2840
+sig28 [L28] <<:
+	From: ne44 | To: sb437
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-28.0, -120] | Coordinate: 0.5192
-sig13 [J13] <<:
-	From: ne26 | To: ne26_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [452.0, -120] | Coordinate: 0.6812
-sig14 [J14] <<:
-	From: ne26 | To: ne26_left
+	Position: [1265, 1050] | Coordinate: 0.2531
+sig29 [L29] >>:
+	From: ne48 | To: line441
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [652.0, -120] | Coordinate: 0.7488
-sig15 [J15] <<:
-	From: ne26 | To: ne26_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [888.0, -120] | Coordinate: 0.8588
-sig16 [J16] <<:
-	From: ne26 | To: ne26_left
+	Position: [1820, 1410] | Coordinate: 0.7982
+sig30 [L30] <<:
+	From: ne65 | To: sb438
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [1178.0, -120] | Coordinate: 0.9264
-sig17 [J17] <<:
-	From: ne3 | To: ne3_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1537.0, -120] | Coordinate: 0.1281
-sig18 [J18] <<:
-	From: ne3 | To: ne3_left
+	Position: [1966, 1050] | Coordinate: 0.3676
+sig31 [L31] >>:
+	From: ne67 | To: sb439
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [1737.0, -120] | Coordinate: 0.31
-sig19 [J19] <<:
-	From: ne3 | To: ne3_right
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [2015.0, -120] | Coordinate: 0.5627
-sig20 [J20] <<:
-	From: ne3 | To: ne3_left
+	Position: [3084, 480] | Coordinate: 0.1113
+sig32 [L32] <<:
+	From: ne70 | To: sb440
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [2215.0, -120] | Coordinate: 0.7445
-sig21 [J21] >>:
+	Position: [2770, 330] | Coordinate: 0.9020
+sig33 [L33] >>:
+	From: ne78 | To: sb398
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [4480, -300] | Coordinate: 0.2247
+sig34 [L34] >>:
+	From: ne93 | To: sb432
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [4925, -300] | Coordinate: 0.3086
+sig35 [L35] >>:
+	From: ne95 | To: sb301
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [288, -300] | Coordinate: 0.0549
+sig36 [L36] >>:
+	From: ne96 | To: sb434
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5249, -300] | Coordinate: 0.1443
+sig37 [L37] <<:
+	From: ne97 | To: sb399
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [4926, -150] | Coordinate: 0.3095
+sig38 [L38] >>:
+	From: ne98 | To: sb449
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5942, -300] | Coordinate: 0.1184
+sig39 [L39] <<:
+	From: ne99 | To: sb433
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5249, -150] | Coordinate: 0.1445
+sig40 [L40] <<:
+	From: ne101 | To: sb436
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [980, 1050] | Coordinate: 0.3508
+sig41 [L41] >>:
+	From: ne103 | To: sb306
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [4008, 782] | Coordinate: 0.9693
+sig42 [L42] <<:
+	From: ne106 | To: sb435
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5941, -150] | Coordinate: 0.1183
+sig43 [J43] >>:
+	From: ne7 | To: ne7_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-550.0, -150] | Coordinate: 0.9435
+sig44 [J44] >>:
+	From: ne9 | To: ne9_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-146.0, -300] | Coordinate: 0.5
+sig45 [J45] <<:
+	From: ne9 | To: ne9_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [214.0, -300] | Coordinate: 0.5
+sig46 [J46] >>:
+	From: ne9 | To: ne9_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-56.0, -300] | Coordinate: 0.5
+sig47 [J47] <<:
+	From: ne9 | To: ne9_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [124.0, -300] | Coordinate: 0.5
+sig48 [J48] >>:
+	From: ne95 | To: ne95_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [810, 300] | Coordinate: 0.5113
+sig49 [J49] <<:
+	From: ne95 | To: ne95_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1390, 300] | Coordinate: 0.6938
+sig50 [X50] >>:
+	From: ne95 | To: ne95_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [900, 300] | Coordinate: 0.5113
+sig51 [X51] <<:
+	From: ne95 | To: ne95_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1300, 300] | Coordinate: 0.6938
+sig52 [P52] <<:
+	From: ne1 | To: ne1_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-1659, 300] | Coordinate: 0.4065
+sig53 [P53] >>:
+	From: ne1 | To: ne1_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-1419, 300] | Coordinate: 0.4925
+sig54 [P54] <<:
+	From: ne7 | To: ne7_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-1658, 150] | Coordinate: 0.3806
+sig55 [P55] >>:
+	From: ne7 | To: ne7_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-1418, 150] | Coordinate: 0.4942
+sig56 [P56] <<:
+	From: ne83 | To: ne83_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-933, -1050] | Coordinate: 2.4833
+sig57 [P57] <<:
+	From: ne83 | To: ne83_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-373, -1050] | Coordinate: 2.5891
+sig58 [P58] <<:
+	From: ne41 | To: ne41_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-773, -1200] | Coordinate: 3.6152
+sig59 [P59] >>:
+	From: ne41 | To: ne41_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-533, -1200] | Coordinate: 3.6617
+sig60 [P60] <<:
 	From: ne23 | To: ne23_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-1293.0, 300] | Coordinate: 0.1073
-sig22 [J22] <<:
+	Position: [2871, -1050] | Coordinate: 1.6976
+sig61 [P61] <<:
 	From: ne23 | To: ne23_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-1093.0, 300] | Coordinate: 0.1860
-sig23 [J23] >>:
-	From: ne23 | To: ne23_right
+	Position: [3431, -1050] | Coordinate: 1.8184
+sig62 [P62] <<:
+	From: ne24 | To: ne24_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-752.0, 300] | Coordinate: 0.3202
-sig24 [J24] <<:
-	From: ne23 | To: ne23_left
+	Position: [2871, -900] | Coordinate: 1.4664
+sig63 [P63] <<:
+	From: ne24 | To: ne24_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-552.0, 300] | Coordinate: 0.3988
-sig25 [J25] >>:
-	From: ne23 | To: ne23_right
+	Position: [3431, -900] | Coordinate: 1.5760
+sig64 [P64] <<:
+	From: ne67 | To: ne67_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [3310, -480] | Coordinate: 1.1290
+sig65 [P65] >>:
+	From: ne67 | To: ne67_left
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [-308.0, 300] | Coordinate: 0.4948
-sig26 [J26] <<:
-	From: ne23 | To: ne23_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-108.0, 300] | Coordinate: 0.5735
-sig27 [J27] >>:
-	From: ne23 | To: ne23_right
+	Position: [3550, -480] | Coordinate: 1.2410
+sig66 [P66] <<:
+	From: ne17 | To: ne17_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [32.0, 300] | Coordinate: 0.6286
-sig28 [J28] <<:
-	From: ne23 | To: ne23_left
+	Position: [3343, 300] | Coordinate: 0.5392
+sig67 [P67] <<:
+	From: ne17 | To: ne17_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [232.0, 300] | Coordinate: 0.7073
-sig29 [J29] >>:
-	From: ne23 | To: ne23_right
+	Position: [3903, 300] | Coordinate: 0.8070
+sig68 [P68] <<:
+	From: ne99 | To: ne99_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [324.0, 300] | Coordinate: 0.8143
-sig30 [J30] <<:
-	From: ne23 | To: ne23_left
+	Position: [5179, 150] | Coordinate: 0.4356
+sig69 [P69] <<:
+	From: ne99 | To: ne99_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [704.0, 300] | Coordinate: 0.8929
-sig31 [J31] >>:
-	From: ne25 | To: ne25_right
+	Position: [5739, 150] | Coordinate: 0.9564
+sig70 [P70] <<:
+	From: ne96 | To: ne96_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [5339, 300] | Coordinate: 0.9081
+sig71 [P71] >>:
+	From: ne96 | To: ne96_left
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [1373.0, 300] | Coordinate: 0.2611
-sig32 [J32] <<:
-	From: ne25 | To: ne25_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1573.0, 300] | Coordinate: 0.3927
-sig33 [J33] >>:
-	From: ne25 | To: ne25_right
+	Position: [5579, 300] | Coordinate: 1.0651
+sig72 [P72] <<:
+	From: ne21 | To: ne21_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [2032.0, 300] | Coordinate: 0.6947
-sig34 [J34] <<:
-	From: ne25 | To: ne25_left
+	Position: [3341, 150] | Coordinate: 0.3936
+sig73 [P73] <<:
+	From: ne21 | To: ne21_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [2232.0, 300] | Coordinate: 0.8263
-sig35 [C35] <<:
-	From: ne25 | To: ne25_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [1373.0, 300] | Coordinate: 0.2611
-sig36 [S36] >>:
-	From: ne23 | To: ne23_left
+	Position: [3901, 150] | Coordinate: 0.7752
+sig74 [P74] <<:
+	From: ne77 | To: ne77_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [414.0, 300] | Coordinate: 0.8143
-sig37 [H37] >>:
-	From: ne23 | To: ne23_left
+	Position: [3429, 0] | Coordinate: 0.4202
+sig75 [P75] <<:
+	From: ne77 | To: ne77_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [3809, 0] | Coordinate: 0.8583
+sig76 [P76] <<:
+	From: ne77 | To: ne77_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [3339, 0] | Coordinate: 0.4202
+sig77 [P77] <<:
+	From: ne77 | To: ne77_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [3899, 0] | Coordinate: 0.8583
+sig78 [C78] >>:
+	From: ne1 | To: ne1_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-1339, 300] | Coordinate: 0.5263
+sig79 [B79] <<:
+	From: ne7 | To: ne7_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-1738, 150] | Coordinate: 0.3482
+sig80 [S80] <<:
+	From: ne9 | To: ne9_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [34.0, -300] | Coordinate: 0.5
+sig81 [H81] <<:
+	From: ne9 | To: ne9_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-56.0, -300] | Coordinate: 0.5
+sig82 [C82] <<:
+	From: ne17 | To: ne17_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [3423, 300] | Coordinate: 0.5748
+sig83 [S83] >>:
+	From: ne59 | To: ne59_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2204.5, -300] | Coordinate: 0.5
+sig84 [H84] >>:
+	From: ne59 | To: ne59_left
 	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [504.0, 300] | Coordinate: 0.8143
-sig38 [C38] <<:
+	Position: [2294.5, -300] | Coordinate: 0.5
+sig85 [C85] <<:
+	From: ne14 | To: ne14_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2460.0, -150] | Coordinate: 0.5
+sig86 [S86] <<:
+	From: ne52 | To: ne52_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2960.0, -150] | Coordinate: 0.7110
+sig87 [H87] <<:
+	From: ne52 | To: ne52_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [2870.0, -150] | Coordinate: 0.7110
+sig88 [C88] <<:
+	From: ne26 | To: ne26_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [2134.0, 1050] | Coordinate: 0.5
+sig89 [B89] <<:
+	From: ne23 | To: ne23_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [2951, -1050] | Coordinate: 1.7090
+sig90 [S90] <<:
+	From: ne64 | To: ne64_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [3980.0, 900] | Coordinate: 0.7117
+sig91 [H91] <<:
+	From: ne64 | To: ne64_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [3890.0, 900] | Coordinate: 0.7117
+sig92 [B92] <<:
+	From: ne24 | To: ne24_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [3351, -900] | Coordinate: 1.5537
+sig93 [S93] <<:
 	From: ne26 | To: ne26_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [978.0, -120] | Coordinate: 0.8588
-sig39 [S39] <<:
-	From: ne3 | To: ne3_left
+	Position: [2224.0, 1050] | Coordinate: 0.5
+sig94 [H94] <<:
+	From: ne26 | To: ne26_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [2314.0, 1050] | Coordinate: 0.5
+sig95 [C95] <<:
+	From: ne83 | To: ne83_left
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [1627.0, -120] | Coordinate: 0.1281
-sig40 [H40] <<:
-	From: ne3 | To: ne3_left
+	Position: [-853, -1050] | Coordinate: 2.4880
+sig96 [B96] <<:
+	From: ne29 | To: ne29_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-746.0, 900] | Coordinate: 0.3856
+sig97 [S97] <<:
+	From: ne30 | To: ne30_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-1364.5, 1050] | Coordinate: 0.5
+sig98 [H98] <<:
+	From: ne30 | To: ne30_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-1274.5, 1050] | Coordinate: 0.5
+sig99 [H99] <<:
+	From: ne30 | To: ne30_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-1184.5, 1050] | Coordinate: 0.5
+sig100 [C100] <<:
+	From: ne32 | To: ne32_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [44.5, 1050] | Coordinate: 0.5
+sig101 [B101] <<:
+	From: ne29 | To: ne29_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-11.0, 900] | Coordinate: 0.9264
+sig102 [S102] <<:
+	From: ne110 | To: ne110_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [498.5, 1050] | Coordinate: 0.5
+sig103 [H103] <<:
+	From: ne110 | To: ne110_left
 	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [1537.0, -120] | Coordinate: 0.1281
+	Position: [408.5, 1050] | Coordinate: 0.5
+sig104 [C104] <<:
+	From: ne102 | To: ne102_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1713.0, 1050] | Coordinate: 0.5
+sig105 [S105] <<:
+	From: ne44 | To: ne44_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1182.5, 1050] | Coordinate: 0.5
+sig106 [H106] <<:
+	From: ne44 | To: ne44_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1272.5, 1050] | Coordinate: 0.5
+sig107 [C107] <<:
+	From: ne44 | To: ne44_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1362.5, 1050] | Coordinate: 0.5
+sig108 [B108] <<:
+	From: ne47 | To: ne47_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1500.0, 1200] | Coordinate: 0.5
+sig109 [C109] <<:
+	From: ne17 | To: ne17_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [3823, 300] | Coordinate: 0.7667
+sig110 [S110] <<:
+	From: ne78 | To: ne78_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [4692.5, -300] | Coordinate: 0.5
+sig111 [H111] <<:
+	From: ne78 | To: ne78_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [4602.5, -300] | Coordinate: 0.5
+sig112 [C112] <<:
+	From: ne83 | To: ne83_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-453, -1050] | Coordinate: 2.5639
+sig113 [S113] <<:
+	From: ne32 | To: ne32_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [134.5, 1050] | Coordinate: 0.5
+sig114 [H114] <<:
+	From: ne32 | To: ne32_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [44.5, 1050] | Coordinate: 0.5
+sig115 [C115] <<:
+	From: ne88 | To: ne88_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-1498.0, 750] | Coordinate: 0.5
+sig116 [S116] >>:
+	From: ne86 | To: ne86_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-2023.0, 750] | Coordinate: 0.5
+sig117 [H117] >>:
+	From: ne86 | To: ne86_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [-1933.0, 750] | Coordinate: 0.5
+sig118 [C118] <<:
+	From: ne89 | To: ne89_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-1693.0, 1050] | Coordinate: 0.5
+sig119 [S119] <<:
+	From: ne30 | To: ne30_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-1004.5, 1050] | Coordinate: 0.5
+sig120 [H120] <<:
+	From: ne30 | To: ne30_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [-1094.5, 1050] | Coordinate: 0.5
+sig121 [H121] <<:
+	From: ne30 | To: ne30_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [-1184.5, 1050] | Coordinate: 0.5
+sig122 [C122] >>:
+	From: ne86 | To: ne86_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [-1843.0, 750] | Coordinate: 0.5
+sig123 [B123] <<:
+	From: ne90 | To: ne90_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [-1768.0, 900] | Coordinate: 0.5
+sig124 [C124] <<:
+	From: ne110 | To: ne110_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [408.5, 1050] | Coordinate: 0.5
+sig125 [B125] <<:
+	From: ne85 | To: ne85_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [328.0, 1200] | Coordinate: 0.8936
+sig126 [S126] <<:
+	From: ne100 | To: ne100_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [819.0, 1050] | Coordinate: 0.5
+sig127 [H127] <<:
+	From: ne100 | To: ne100_left
+	Type: Manouver | Direction: normal | AtTrack: left 
+	Position: [729.0, 1050] | Coordinate: 0.5
