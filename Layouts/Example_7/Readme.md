@@ -306,7 +306,9 @@ Extra routes considering bidirectional tracks:
 | R_11 |  T08  |  S19  | - | - | - | ne42 |
 | R_12 |  T10  |  T07  | Sw19_N | - | - | ne43-ne42 |
 
-Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional, while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. So it does not affect safety, RNA always considers every possible route in the layout. Moreover, departure signals are considered for line borders and buffer stops for extra protection.
+Routes 1 to 8 are equivalente in both interlocking tables.
+
+Routes 1 to 8 are the same in both interlocking tables, but RNA considers tracks as bidirectional, while the original layout has only one direction per track. Routes 9 to 11 are for used to allow stopped trains to move close to the main signals S14, S19 and C11. Route 12 is the opposite of route of route 4. So it does not affect safety, RNA always considers every possible route in the layout. Moreover, departure signals (T02, T06, T08 and T10) are considered for line borders and buffer stops for extra protection.
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
@@ -350,10 +352,6 @@ Simplified signalling:
 ## Generated table
 
 ![alt text](7_B.png)
-
-
-
-
 
 Routes 1 to 8 are equivalente in both interlocking tables.
 
