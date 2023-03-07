@@ -58,19 +58,19 @@ Reading .railML file
 Creating railML object
 Analysing railML object
  Analysing graph
-ne14 [-1521, 450] [-560, 450] >>
-ne15 [-1521, 300] [-560, 450] >>
-ne16 [-560, 450] [516, 450] >>
-ne17 [516, 450] [666, 300] >>
-ne18 [516, 450] [1521, 450] >>
-ne19 [666, 300] [28, 300] <<
-ne20 [666, 300] [1521, 300] >>
+ne1 [-770, -30] [260, -30] >>    
+ne31 [554, 480] [1190, 480] >>   
+ne32 [554, 480] [1460, 957] >>   
+ne40 [260, -30] [554, 480] >>    
+ne41 [260, -30] [1040, -420] >>  
+ne42 [1040, -420] [1730, -420] >>
+ne43 [1040, -420] [440, -420] << 
  The network is connected
 ~~~
 
 *Console Output 1. Step B railway elements.*
 
-In this example, the Console Output 1 shows that the program can identify the nodes and their directions. Consol Output 1 has, for example, this line: ne16 [-560, 450] [516, 450] >>, it indicates the name of the netElement (ne16), the position (origin [-560, 450] and end point [516, 450]) of the net element, and the direction (>>, at right in this case, but in other example it could have been at left: <<). If compare this Consol Output 1 with Figure 2, and analysing each "netElement", all elements are coincident. The same analysis for: ne14, ne15, ne17, ne18, ne19 and ne20.
+In this example, the Console Output 1 shows that the program can identify the nodes and their directions. Consol Output 1 has, for example, this line: ne43 [1040, -420] [440, -420] <<, it indicates the name of the netElement (ne43), the position (origin [1040, -420] and end point [440, -420]) of the net element, and the direction (<<, to the left in this case, but in other example it could have been to the right: >>). If compare this Console Output 1 with Figure 2, and analysing each "netElement", all elements are coincident. The same analysis for: ne1, ne31, ne32, ne40, ne41 and ne42.
 
 ### C and D. Infrastructure analysis and CDL zones detection
 
@@ -83,12 +83,12 @@ The result of this step is shown in Console Output 2 and Figure 3.
 ~~~
 Analysing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
-  ne14 has a Platform[plf116] @ [-1075, -450]
-  ne15 has a Curve(2 lines) @ [[-710, 300]]
-  ne16 has a LevelCrossing[lcr120] @ [-192, -450]
-  ne18 has a Platform[plf117] @ [1111, -450]
-  ne19 has a Middle point @ [347.0, 300]
-  ne20 has a Middle point @ [1093.5, 300]
+  ne1 has a Middle point @ [-255.0, -30]
+  ne31 has a Middle point @ [872.0, 480]
+  ne32 has a Curve(2 lines) @ [[830, 957]]
+  ne41 has a Curve(2 lines) @ [[650, -30]]
+  ne42 has a Middle point @ [1385.0, -420]
+  ne43 has a Middle point @ [740.0, -420]
 ~~~
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
