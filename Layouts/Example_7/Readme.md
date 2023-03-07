@@ -34,7 +34,7 @@ After having installed the RNA program according to the steps shown in the the s
 
 The necessary information to define the graph network is distributed across several sections of the railML file, specifically inside netElements (nodes) and netRelations (edges) items found in the class Infrastructure/Topology as described in [1].
 
-Figure 2 shows the railway network without signalling. The user will need the Design4Rail Horizon Software Suite Track Planner application and import the archive "Example_2.railml" to visualise the railway network for this example. 
+Figure 2 shows the railway network without signalling. The user will need the Design4Rail Horizon Software Suite Track Planner application and import the archive "Example_7.railml" to visualise the railway network for this example. 
 
 For further information about the Design4Rail Horizon Software Suite and the Track Planner application, please refer to [Official web page of Design4Rail](https://design4rail.com/service/d4rhorizon/#section-downloadHorizon).
 
@@ -133,7 +133,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L03, L04, L05 and L06* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.svg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -149,7 +149,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.png "Figure 9")
+![Figure 9](Figure2.svg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -171,7 +171,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 Figure 11 shows (in red letters) the signals Generated due level crossings and platforms.
 
-![Figure 11](Figure3.png "Figure 11")
+![Figure 11](Figure3.svg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -193,7 +193,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw02:*C17, S15 and H16*.
 - Sw03:*C20, S21 and H22*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.svg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -209,7 +209,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure5.png "Figure 15")
+![Figure 15](Figure4B.svg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
@@ -262,7 +262,7 @@ Then Design4Rail Track Planner will display the table of routes for this network
 
 Figure 20 shows the structure of the original example. The signalling and the routes were designed by experts following the RailMl standard.
 
-![Figure 20](2_A.png "Figure 20")
+![Figure 20](7_A.png "Figure 20")
 
 *Figure 20. Original example provided by RailMl*
 
@@ -281,7 +281,7 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 
 The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
 
-![Figure 21](2_B.png "Figure 21")
+![Figure 21](7_B.png "Figure 21")
 
 *Figure 21. Generate table through RNA railway generate signalling*
 
