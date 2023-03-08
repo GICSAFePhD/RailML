@@ -193,7 +193,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw14:*C11 and B12*.
 - Sw19:*S19, H20. C17*.
 
-![Figure 13](Figure4.svg "Figure 13")
+![Figure 13](Figure4B.svg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
