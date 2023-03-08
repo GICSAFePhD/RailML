@@ -5,15 +5,15 @@ Name:
 ## Step by step
 
 Layout without signalling:
-![alt text](Figure0.svg)
+![alt text](Figure0.png)
 Signals generated due to line borders(L) and buffer stops(T):
-![alt text](Figure1.svg)
+![alt text](Figure1.png)
 Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
-![alt text](Figure2.svg)
+![alt text](Figure2.png)
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
-![alt text](Figure3.svg)
+![alt text](Figure3.png)
 Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
-![alt text](Figure4.svg)
+![alt text](Figure4.png)
 Simplified signalling:
 ![alt text](6_B.png)
 
