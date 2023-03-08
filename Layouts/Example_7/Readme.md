@@ -209,7 +209,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure4B.svg "Figure 15")
+![Figure 15](7_B.png "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
