@@ -138,11 +138,11 @@ In red letters, automatically added signals are shown.
 
 The RNA allocates signals close to the buffer stops:
 
--- Stop: *T01*, *T05*, *T07*, *T09*
+-- Stop: *T01*, *T03*, *T05*, *T07*, *T09*
 
 -- Departure: *T02*, *T04*, *T06*, *T08*, *T10*
 
-The RNA does not allocate any signal close to the line borders because this layout has zero (0) line borders.
+The RNA allocate signals L11 and L12 close to the line borders because to protect them.
 
 ![Figure 7](Figure1.png "Figure 7")
 
@@ -158,7 +158,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 *Figure 8. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
-The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
+The algorithm assignes signals *J13 to J20* at the beginning and end of each track to indicate near rail joints as shown in Figure 9.
 
 ![Figure 9](Figure2.png "Figure 9")
 
@@ -200,9 +200,11 @@ The Algorithm 7, explained in [1] section "III. SIGNALLING GENERATION" in litera
 
 Signals generated for (in red letters, added signals are shown):
 
-- Sw18:*S14, C13, B18, H15, H16*.
-- Sw14:*C11 and B12*.
-- Sw19:*S19, H20. C17*.
+- Sw01:*S22, C21, H23, H24*.
+- Sw02:*S27, C25, B26 and H28*.
+- Sw03:*C29 and B3*.
+- Sw05:*S33, C31, B32 and H34*.
+- Sw08:*S37, C35, B36 and H38*.
 
 ![Figure 13](Figure4.png "Figure 13")
 
@@ -228,11 +230,11 @@ Followin, explains the simplification process.
 
 - **Simplification by vertical inheritance**
 
-    Vertical inheritance was applied when the B signals between Sw10 and Sw14 were moved to the signals H15 y H16, respectably. These signals B were not created, because the RNA applied Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A. It also moves signal C for Sw10 to H20. 
+    Vertical inheritance was applied when the B signals between Sw01 and Sw03 were moved to the signals H23 y H24, respectably. These signals B were not created, because the RNA applied Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A. It also moves signal B for Sw02 to H28, signal B for Sw05 to H34 and signal B for Sw08 to H38. 
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: C13, S19 amd B12. Signal L03 and S19 were deleted due this was nearby of signal H20, with the same direction and orientation. The same situation occurs between signals B12 and T04. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are follows: L12, J15, J17, C25, B30, C31, B32 and C35. Signal L12 was deleted due this was nearby of signal J13, with the same direction and orientation. The same situation occurs between signals J15 and S33, signals J17 and S22, signals C25 and J16, signals B30 and T04, signals C31 and J14, signals B32 and T06 and signals C35 and J19. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
     The priority of the surviving signals were higher than the replaced signals, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
 
@@ -243,7 +245,7 @@ Once the signalling is generated and simplified, it is necessary to establish th
 <a name="G.1"></a>
 #### G.1. Obtaining table in Design4Rail
 
-To obtain the table of routes is necessary to open the archive generated for this example: "Example_2_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
+To obtain the table of routes is necessary to open the archive generated for this example: "Example_6_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
 
 ![Figure 16](import_rail_aid_1.png "Figure 16")
 ![Figure 16](import_rail_aid_2.png "Figure 16")
