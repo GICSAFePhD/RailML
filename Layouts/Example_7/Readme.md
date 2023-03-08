@@ -232,7 +232,7 @@ Once the signalling is generated and simplified, it is necessary to establish th
 <a name="G.1"></a>
 #### G.1. Obtaining table in Design4Rail
 
-To obtain the table of routes is necessary to open the archive generated for this example: "Example_2_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
+To obtain the table of routes is necessary to open the archive generated for this example: "Example_7_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
 
 ![Figure 16](import_rail_aid_1.png "Figure 16")
 ![Figure 16](import_rail_aid_2.png "Figure 16")
