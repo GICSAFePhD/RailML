@@ -40,7 +40,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.svg "Figure 2")
+![Figure 2](Figure0.png "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
