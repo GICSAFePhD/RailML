@@ -169,7 +169,7 @@ It is necessary to introduce signals before the train reaches the level crossing
 
 A railway platform is where the passengers wait for trains to arrive and depart. Therefore, it is necessary to have a departure signal after the platform. This logic is implemented using Algorithm 6, explained in [1] section "III. SIGNALLING GENERATION".
 
-Figure 11 shows (in red letters) the signals Generated due level crossings and platforms.
+The algorithm does not assign signalling for level crossings and platforms because this network does not have any of them, as shown in Figure 11.
 
 ![Figure 11](Figure3.svg "Figure 11")
 
@@ -189,9 +189,9 @@ The Algorithm 7, explained in [1] section "III. SIGNALLING GENERATION" in litera
 
 Signals generated for (in red letters, added signals are shown):
 
-- Sw01:*C13, B14, S18 and H19*.
-- Sw02:*C17, S15 and H16*.
-- Sw03:*C20, S21 and H22*.
+- Sw18:*S14, C13, B18, H15, H16*.
+- Sw14:*C11 and B12*.
+- Sw19:*S19, H20. C17*.
 
 ![Figure 13](Figure4.svg "Figure 13")
 
@@ -217,14 +217,13 @@ Followin, explains the simplification process.
 
 - **Simplification by vertical inheritance**
 
-    Vertical inheritance was applied when the B signals of the Sw03 and Sw02 were moved to the signals H16 y H22, respectably. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A.  
-
+    Vertical inheritance was applied when the B signals between Sw10 and Sw14 were moved to the signals H15 y H16, respectably. These signals B were not created, because the RNA applied Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A. It also moves signal C for Sw10 to H20. 
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17 and C20. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; between signals C17 and P11; and between signals C20 and T02. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are follows: C13, S19 amd B12. Signal L03 and S19 were deleted due this was nearby of signal H20, with the same direction and orientation. The same situation occurs between signals B12 and T04. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
-    Finally, signals X08 and X09 were deleted due to horizontal inheritance between signals S18 and S15, respectably. In this case, the priority of S18 and S15 were superior, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
+    The priority of the surviving signals were higher than the replaced signals, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
 
 ### G. Export a resulting railway layout description
 
@@ -323,37 +322,3 @@ For obtaining an analysis which only includes a one direction of a railway opera
 ## References
 
 [1] M. N. Menendez, S. Germino, L. Díaz-Charris, and A. Lutenberg, Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML).
-
-
-
-<!---
-
-## Step by step
-
-Layout without signalling:
-![alt text](Figure0.svg)
-Signals generated due to line borders(L) and buffer stops(T):
-![alt text](Figure1.svg)
-Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
-![alt text](Figure2.svg)
-Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
-![alt text](Figure3.svg)
-Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
-![alt text](Figure4B.svg)
-Simplified signalling:
-![alt text](7_B.png)
-
-## Original table
-
-![alt text](7_A.png)
-
-
-
-## Generated table
-
-![alt text](7_B.png)
-
-Routes 1 to 8 are equivalente in both interlocking tables.
-
-The RNA adds departure signal T02, T06, T08 and T10 to protect buffer stops. Signals T02, T06 and T08 are used to allow stopped trains to move close to the main signals S14, S19 and C11. signal T04 is used to insert trains back to the main line. These extra signals increase safety by protecting the buffer stops, mandatory in many countries. If the buffer stops are configured to not be protected then both interlocking tables are the same.
--->
