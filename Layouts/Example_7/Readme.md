@@ -127,17 +127,17 @@ In red letters, automatically added signals are shown.
 
 The RNA allocates signals close to the buffer stops:
 
--- Stop: *T01*
+-- Stop: *T01*, *T05*, *T07*, *T09*
 
--- Departure: *T02*
+-- Departure: *T02*, *T04*, *T06*, *T08*, *T10*
 
-The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L03, L04, L05 and L06* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
+The RNA does not allocate any signal close to the line borders because this layout has zero (0) line borders.
 
 ![Figure 7](Figure1.svg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
-#### E.2. Signals generated due to line borders(L),buffer stops(T) and rail joints (J)
+#### E.2. Signals generated due to line borders(L), buffer stops(T) and rail joints (J)
 
 The signals for rail joints are named J and have a consecutive number of signals.
 
@@ -153,7 +153,7 @@ The algorithm does not assign signalling at the beginning and end of each track 
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
-#### E.3. Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X)
+#### E.3. Signals generated due to line borders(L), buffer stops(T),rail joints (J), platforms(P) and level crossings(X)
 
 The signals for platforms are named P, and signals for level crossings are named X. A consecutive number of signals is assigned for each type of signalling.
 
