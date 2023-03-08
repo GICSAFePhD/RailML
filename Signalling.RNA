@@ -42,6 +42,14 @@ sig11 [C11] <<:
 	From: ne32 | To: ne32_left
 	Type: Manouver | Direction: reverse | AtTrack: right 
 	Position: [930.0, -957] | Coordinate: 0.5512
+sig12 [B12] <<:
+	From: ne31 | To: ne31_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [872.0, -480] | Coordinate: 0.5
+sig13 [C13] <<:
+	From: ne42 | To: ne42_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1565.0, 420] | Coordinate: 0.5
 sig14 [S14] >>:
 	From: ne1 | To: ne1_right
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -54,10 +62,18 @@ sig16 [H16] >>:
 	From: ne1 | To: ne1_right
 	Type: Manouver | Direction: normal | AtTrack: left 
 	Position: [-255.0, 30] | Coordinate: 0.5
+sig17 [C17] <<:
+	From: ne43 | To: ne43_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [740.0, 420] | Coordinate: 0.5
 sig18 [B18] >>:
 	From: ne41 | To: ne41_right
 	Type: Manouver | Direction: normal | AtTrack: left 
 	Position: [550.0, 30] | Coordinate: 0.8937
+sig19 [S19] <<:
+	From: ne42 | To: ne42_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1475.0, 420] | Coordinate: 0.5
 sig20 [H20] <<:
 	From: ne42 | To: ne42_left
 	Type: Manouver | Direction: reverse | AtTrack: right 
