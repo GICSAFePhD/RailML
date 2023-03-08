@@ -93,7 +93,7 @@ Analysing infrastructure --> Infrastructure.RNA
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
 
-![Figure 3](step_C_and_D_2.png "Figure 3")
+![Figure 3](step_C_and_D_2.PNG "Figure 3")
 
 *Figure 3. Infrastructure analysis and CDL zones detection: GUI Output.*
 
@@ -193,7 +193,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw14:*C11 and B12*.
 - Sw19:*S19, H20. C17*.
 
-![Figure 13](Figure4.svg "Figure 13")
+![Figure 13](Figure4B.svg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -209,7 +209,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure4B.svg "Figure 15")
+![Figure 15](7_B.png "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
