@@ -149,7 +149,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.svg "Figure 9")
+![Figure 9](Figure1.svg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -171,7 +171,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 The algorithm does not assign signalling for level crossings and platforms because this network does not have any of them, as shown in Figure 11.
 
-![Figure 11](Figure3.svg "Figure 11")
+![Figure 11](Figure1.svg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -193,7 +193,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw14:*C11 and B12*.
 - Sw19:*S19, H20. C17*.
 
-![Figure 13](Figure4B.svg "Figure 13")
+![Figure 13](Figure4.png "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
