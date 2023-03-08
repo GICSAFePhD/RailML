@@ -40,7 +40,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.svg "Figure 2")
+![Figure 2](Figure0.png "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
@@ -133,7 +133,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA does not allocate any signal close to the line borders because this layout has zero (0) line borders.
 
-![Figure 7](Figure1.svg "Figure 7")
+![Figure 7](Figure1.png "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -149,7 +149,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure1.svg "Figure 9")
+![Figure 9](Figure1.png "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -171,7 +171,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 The algorithm does not assign signalling for level crossings and platforms because this network does not have any of them, as shown in Figure 11.
 
-![Figure 11](Figure1.svg "Figure 11")
+![Figure 11](Figure1.png "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
