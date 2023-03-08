@@ -104,7 +104,7 @@ Analysing infrastructure --> Infrastructure.RNA
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
 
-![Figure 3](step_C_and_D_2.PNG "Figure 3")
+![Figure 3](config_1.png "Figure 3")
 
 *Figure 3. Infrastructure analysis and CDL zones detection: GUI Output.*
 
