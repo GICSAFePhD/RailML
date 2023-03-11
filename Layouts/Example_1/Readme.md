@@ -345,11 +345,11 @@ Routes 15 to 22 are created because RNA added signals T01,T02,T03,T04,T05 and T0
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](config_6.jpg "Figure 21")
+![Figure 21](config_6.png "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
-![Figure 22](config_5.jpg "Figure 22")
+![Figure 22](config_5.png "Figure 22")
 
 *Figure 22. Produce routes considering bidirectional tracks*
 
