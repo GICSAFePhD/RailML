@@ -62,13 +62,17 @@ Reading .railML file
 Creating railML object
 Analysing railML object
  Analysing graph
-ne14 [-1521, 450] [-560, 450] >>
-ne15 [-1521, 300] [-560, 450] >>
-ne16 [-560, 450] [516, 450] >>
-ne17 [516, 450] [666, 300] >>
-ne18 [516, 450] [1521, 450] >>
-ne19 [666, 300] [28, 300] <<
-ne20 [666, 300] [1521, 300] >>
+ne1 [810, 150] [1320, 150] >>
+ne2 [2970, 0] [2460, 0] <<
+ne8 [1320, 150] [1800, 150] >>
+ne9 [1320, 150] [1530, 360] >>
+ne12 [2460, 0] [1950, 0] <<
+ne13 [2460, 0] [810, -180] <<
+ne14 [1530, 360] [2970, 360] >>
+ne15 [1530, 360] [2970, 570] >>
+ne22 [1800, 150] [2970, 150] >>
+ne23 [1950, 0] [810, 0] <<
+ne24 [1800, 150] [1950, 0] >>
  The network is connected
 ~~~
 
@@ -87,12 +91,18 @@ The result of this step is shown in Console Output 2 and Figure 3.
 ~~~
 Analysing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
-  ne14 has a Platform[plf116] @ [-1075, -450]
-  ne15 has a Curve(2 lines) @ [[-710, 300]]
-  ne16 has a LevelCrossing[lcr120] @ [-192, -450]
-  ne18 has a Platform[plf117] @ [1111, -450]
-  ne19 has a Middle point @ [347.0, 300]
-  ne20 has a Middle point @ [1093.5, 300]
+  ne1 has a Middle point @ [1065.0, 150]
+  ne2 has a Middle point @ [2715.0, 0]
+  ne8 has a Middle point @ [1560.0, 150]
+  ne12 has a Middle point @ [2205.0, 0]
+  ne13 has a Platform[plf75] @ [1564, 180]
+  ne13 has a LevelCrossing[lcr74] @ [1362, 180]
+  ne13 has a Curve(2 lines) @ [[2280, -180]]
+  ne14 has a Platform[plf68] @ [2490, -360]
+  ne14 has a LevelCrossing[lcr69] @ [1945, -360]
+  ne15 has a Curve(2 lines) @ [[1740, 570]]
+  ne22 has a RailJoint[J15] @ [2452, 150]
+  ne23 has a RailJoint[J14] @ [1284, 0]
 ~~~
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
@@ -137,7 +147,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L03, L04, L05 and L06* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.svg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -153,7 +163,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.png "Figure 9")
+![Figure 9](Figure2.svg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -175,7 +185,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 Figure 11 shows (in red letters) the signals Generated due level crossings and platforms.
 
-![Figure 11](Figure3.png "Figure 11")
+![Figure 11](Figure3.svg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -197,7 +207,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw02:*C17, S15 and H16*.
 - Sw03:*C20, S21 and H22*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.svg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -213,7 +223,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure5.png "Figure 15")
+![Figure 15](Figure5.svg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
@@ -266,7 +276,7 @@ Then Design4Rail Track Planner will display the table of routes for this network
 
 Figure 20 shows the structure of the original example. The signalling and the routes were designed by experts following the RailMl standard.
 
-![Figure 20](2_A.png "Figure 20")
+![Figure 20](1_A.png "Figure 20")
 
 *Figure 20. Original example provided by RailMl*
 
@@ -282,7 +292,7 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 
 The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
 
-![Figure 21](2_B.png "Figure 21")
+![Figure 21](1_B.png "Figure 21")
 
 *Figure 21. Generate table through RNA railway generate signalling*
 
