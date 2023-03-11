@@ -282,88 +282,6 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  S07  |  S11  | Sw01_N  | - | - | ne14-ne16 |
-| R_02 |  S08  |  S11  | Sw01_R  | - | - | ne15-ne16 |
-| R_03 |  S09  |  S12  | Sw02_N  | - | - | ne18-ne16 |
-| R_04 |  S10  |  S13  | Sw03_N  | - | - | ne20-ne19 |
-| R_05 |  S10  |  S12  | Sw03_R + Sw02_R  | - | - | ne20-ne17-ne16  |
-
-#### G.3. Generated table
-
-The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
-
-![Figure 21](1_B.png "Figure 21")
-
-*Figure 21. Generate table through RNA railway generate signalling*
-
-| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
-|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  P10  |  S18  | Sw01_N  | - | - | ne14-ne16 |
-| R_02 |  B14  |  S18  | Sw01_R  | - | - | ne15-ne16 |
-| R_03 |  P11  |  S15  | Sw02_N  | - | - | ne18-ne16 |
-| R_04 |  S21  |  T01  | Sw03_N  | - | - | ne20-ne19 |
-| R_05 |  S21  |  S15  | Sw03_R + Sw02_R | - | - | ne20-ne17-ne16 |
-
-Extra routes considering bidirectional tracks:
-
-| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
-|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_06 |  S15  |  P09  | Sw01_N  | - | Lc01 | ne16-ne14 |
-| R_07 |  S15  |  L04  | Sw01_R  | - | Lc01 | ne16-ne15 |
-| R_08 |  S18  |  P12  | Sw02_N  | - | Lc01 | ne16-ne18 |
-| R_09 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20 |
-| R_10 |  S18  |  L06  | Sw02_R + Sw03_R  | - | Lc01 | ne16-ne17-ne20 |
-
-Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks as bidirectional, while the original layout has only one direction per track. Routes 6 to 10 are the opposite of routes 1 to 5. So it does not affect safety, RNA always considers every possible route in the layout. Moreover, departure signals are considered for line borders and buffer stops for extra protection.
-
-For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
-
-![Figure 21](config_6.jpg "Figure 21")
-
-*Figure 21. Produce routes considering one directional tracks*
-
-![Figure 22](config_5.jpg "Figure 22")
-
-*Figure 22. Produce routes considering bidirectional tracks*
-
-## References
-
-[1] M. N. Menendez, S. Germino, L. Díaz-Charris, and A. Lutenberg, Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Step by step
-
-Layout without signalling:
-![alt text](Figure2.svg)
-Signals generated due to line borders(L) and buffer stops(T):
-![alt text](Figure3.svg)
-Signals generated due to line borders(L),buffer stops(T) and rail joints (J):
-![alt text](Figure4.svg)
-Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X):
-![alt text](Figure5.svg)
-Signals generated due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B):
-![alt text](Figure6.svg)
-Simplified signalling:
-![alt text](Figure11.svg)
-
-## Original table
-
-![alt text](1_A.png)
-
-| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
-|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  S01  |  S17  | Sw04_N | - | - | ne01-ne08 |
 | R_02 |  S01  |  S19  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
 | R_03 |  S01  |  S05  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
@@ -379,9 +297,13 @@ Simplified signalling:
 | R_13 |  S06  |  S20  | - | - | - | ne14 |
 | R_14 |  S09  |  S18  | - | - | - | ne13 |
 
-## Generated table
+#### G.3. Generated table
 
-![alt text](1_B.png)
+The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
+
+![Figure 21](1_B.png "Figure 21")
+
+*Figure 21. Generate table through RNA railway generate signalling*
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
@@ -401,6 +323,7 @@ Simplified signalling:
 | R_14 |  T02  |  P20  | - | Plat13 | Lc08 | ne13 |
 
 Extra routes considering bidirectional tracks:
+
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_15 |  T06  |  C29  | - | - | - | ne15 |
@@ -419,3 +342,17 @@ Routes 12 and 13 in the original interlocking table were combined in Route Route
 Route 14 was deleted because signal S09 was very close S18 and, therefore, unuseful as signal. Routes 11 and 14 in the original signalling were combined in Route 11 in the new signalling.
 
 Routes 15 to 22 are created because RNA added signals T01,T02,T03,T04,T05 and T06 to protectt buffer stops and signals L07,L08,L09 and L10 to protect line borders. These new signals created new routes to stop prior the (relative or absolute) end of the network, increasing safety, and to add opposite routes than the originals, increasing mobility.
+
+For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
+
+![Figure 21](config_6.jpg "Figure 21")
+
+*Figure 21. Produce routes considering one directional tracks*
+
+![Figure 22](config_5.jpg "Figure 22")
+
+*Figure 22. Produce routes considering bidirectional tracks*
+
+## References
+
+[1] M. N. Menendez, S. Germino, L. Díaz-Charris, and A. Lutenberg, Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML).
