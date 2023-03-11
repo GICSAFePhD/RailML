@@ -62,13 +62,17 @@ Reading .railML file
 Creating railML object
 Analysing railML object
  Analysing graph
-ne14 [-1521, 450] [-560, 450] >>
-ne15 [-1521, 300] [-560, 450] >>
-ne16 [-560, 450] [516, 450] >>
-ne17 [516, 450] [666, 300] >>
-ne18 [516, 450] [1521, 450] >>
-ne19 [666, 300] [28, 300] <<
-ne20 [666, 300] [1521, 300] >>
+ne1 [810, 150] [1320, 150] >>
+ne2 [2970, 0] [2460, 0] <<
+ne8 [1320, 150] [1800, 150] >>
+ne9 [1320, 150] [1530, 360] >>
+ne12 [2460, 0] [1950, 0] <<
+ne13 [2460, 0] [810, -180] <<
+ne14 [1530, 360] [2970, 360] >>
+ne15 [1530, 360] [2970, 570] >>
+ne22 [1800, 150] [2970, 150] >>
+ne23 [1950, 0] [810, 0] <<
+ne24 [1800, 150] [1950, 0] >>
  The network is connected
 ~~~
 
@@ -87,12 +91,18 @@ The result of this step is shown in Console Output 2 and Figure 3.
 ~~~
 Analysing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
-  ne14 has a Platform[plf116] @ [-1075, -450]
-  ne15 has a Curve(2 lines) @ [[-710, 300]]
-  ne16 has a LevelCrossing[lcr120] @ [-192, -450]
-  ne18 has a Platform[plf117] @ [1111, -450]
-  ne19 has a Middle point @ [347.0, 300]
-  ne20 has a Middle point @ [1093.5, 300]
+  ne1 has a Middle point @ [1065.0, 150]
+  ne2 has a Middle point @ [2715.0, 0]
+  ne8 has a Middle point @ [1560.0, 150]
+  ne12 has a Middle point @ [2205.0, 0]
+  ne13 has a Platform[plf75] @ [1564, 180]
+  ne13 has a LevelCrossing[lcr74] @ [1362, 180]
+  ne13 has a Curve(2 lines) @ [[2280, -180]]
+  ne14 has a Platform[plf68] @ [2490, -360]
+  ne14 has a LevelCrossing[lcr69] @ [1945, -360]
+  ne15 has a Curve(2 lines) @ [[1740, 570]]
+  ne22 has a RailJoint[J15] @ [2452, 150]
+  ne23 has a RailJoint[J14] @ [1284, 0]
 ~~~
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
