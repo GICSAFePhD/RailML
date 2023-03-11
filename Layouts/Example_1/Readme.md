@@ -250,13 +250,13 @@ Once the signalling is generated and simplified, it is necessary to establish th
 To obtain the table of routes is necessary to open the archive generated for this example: "Example_1_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
 
 ![Figure 16](import_rail_aid_1.png "Figure 16")
-![Figure 16](import_rail_aid_2.png "Figure 16")
+![Figure 16](import_rail_aid_2.PNG "Figure 16")
 
 *Figure 16. Import railml file.*
 
 Once the file is opened, it will be possible to view the network and its elements, as in Figure 17.
 
-![Figure 17](import_rail_aid_3.png "Figure 17")
+![Figure 17](import_rail_aid_3.PNG "Figure 17")
 
 *Figure 17. Example 2 network in Design4Rail Track Planner.*
 
@@ -268,7 +268,7 @@ In the menu "View" in Design4Rail Track Planner, select "Routes", as shown in Fi
 
 Then Design4Rail Track Planner will display the table of routes for this network. It is shown in Figure 19.
 
-![Figure 19](import_rail_aid_5.png "Figure 19")
+![Figure 19](import_rail_aid_5.PNG "Figure 19")
 
 *Figure 19. Routes in Design4Rail*
 
@@ -345,11 +345,11 @@ Routes 15 to 22 are created because RNA added signals T01,T02,T03,T04,T05 and T0
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](config_6.jpg "Figure 21")
+![Figure 21](config_6.PNG "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
-![Figure 22](config_5.jpg "Figure 22")
+![Figure 22](config_5.PNG "Figure 22")
 
 *Figure 22. Produce routes considering bidirectional tracks*
 
