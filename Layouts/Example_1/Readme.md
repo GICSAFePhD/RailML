@@ -131,7 +131,7 @@ Below you will find the sequence of configurations used to analyze, step by step
 
 Figure 6 shows the configuration of the RNA GUI application needed for this step of analysis.
 
-![Figure 6](config_1.png "Figure 6")
+![Figure 6](config_1.PNG "Figure 6")
 
 *Figure 6. Configuring RNA to obtain signals for line borders(L) and buffer stops(T).*
 
@@ -157,7 +157,7 @@ The signals for rail joints are named J and have a consecutive number of signals
 
 Figure 8 shows the configuration of the RNA GUI application needed for this step of analysis.
 
-![Figure 8](config_2.png "Figure 8")
+![Figure 8](config_2.PNG "Figure 8")
 
 *Figure 8. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -173,7 +173,7 @@ The signals for platforms are named P, and signals for level crossings are named
 
 Figure 10 shows the configuration of the RNA GUI application needed for this step of analysis.
 
-![Figure 10](config_3.png "Figure 10")
+![Figure 10](config_3.PNG "Figure 10")
 
 *Figure 10. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -193,7 +193,7 @@ Figure 11 shows (in red letters) the signals Generated due level crossings and p
 
 Figure 6 shows the configuration of the RNA GUI application needed for this step of analysis.
 
-![Figure 12](config_4.png "Figure 12")
+![Figure 12](config_4.PNG "Figure 12")
 
 *Figure 12. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -217,7 +217,7 @@ The signal simplification process used by RNA relies on two main principles: i) 
 
 To simplify signals is needed that, mark the configuration option "Simplify signals", as shown in Figure 14.
 
-![Figure 14](config_5.png "Figure 14")
+![Figure 14](config_5.PNG "Figure 14")
 
 *Figure 14. Configuring RNA to simplify signalling.*
 
@@ -318,11 +318,11 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](one_direction_marked.png "Figure 21")
+![Figure 21](config_6.PNG "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
-![Figure 22](one_direction_mismarked.png "Figure 22")
+![Figure 22](config_5.PNG "Figure 22")
 
 *Figure 22. Produce routes considering bidirectional tracks*
 
