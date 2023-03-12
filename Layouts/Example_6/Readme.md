@@ -42,7 +42,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.png "Figure 2")
+![Figure 2](Figure0.jpg "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
@@ -90,16 +90,19 @@ The result of this step is shown in Console Output 2 and Figure 3.
 Analysing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
  ne1 has a RailJoint[J01] @ [-1060, 450]
-  ne3 has a Middle point @ [-150.0, 450]
-  ne4 has a Curve(2 lines) @ [[600, 750]]
-  ne5 has a RailJoint[J06] @ [765, 450]
-  ne6 has a Middle point @ [90.0, 750]
-  ne7 has a RailJoint[J01] @ [705, 1020]
-  ne7 has a Curve(2 lines) @ [[-30, 1020]]
-  ne10 has a Curve(2 lines) @ [[1500, 750]]
-  ne11 has a RailJoint[J02] @ [1653, 450]
-  ne41 has a Curve(3 lines) @ [[1950, 1020], [2250, 1320]]
-  ne42 has a Curve(2 lines) @ [[1290, 1260]]
+ ne3 has a Middle point @ [-375.0, 450]
+ ne3 has a Middle point @ [-150.0, 450]
+ ne3 has a Middle point @ [75.0, 450]
+ ne4 has a Curve(2 lines) @ [[600, 750]]
+ ne5 has a RailJoint[J06] @ [765, 450]
+ ne6 has a Middle point @ [-40.0, 750]
+ ne6 has a Middle point @ [220.0, 750]
+ ne7 has a RailJoint[J01] @ [705, 1020]
+ ne7 has a Curve(2 lines) @ [[-30, 1020]]
+ ne10 has a Curve(2 lines) @ [[1500, 750]]
+ ne11 has a RailJoint[J02] @ [1653, 450]
+ ne41 has a Curve(3 lines) @ [[1950, 1020], [2250, 1320]]
+ ne42 has a Curve(2 lines) @ [[1290, 1260]]
 ~~~
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
@@ -144,7 +147,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA allocate signals L11 and L12 close to the line borders because to protect them.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.jpg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -160,7 +163,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm assignes signals *J13 to J20* at the beginning and end of each track to indicate near rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.png "Figure 9")
+![Figure 9](Figure2.jpg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -182,7 +185,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 The algorithm does not assign signalling for level crossings and platforms because this network does not have any of them, as shown in Figure 11.
 
-![Figure 11](Figure3.png "Figure 11")
+![Figure 11](Figure3.jpg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -206,7 +209,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw05:*S33, C31, B32 and H34*.
 - Sw08:*S37, C35, B36 and H38*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -222,7 +225,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure5.png "Figure 15")
+![Figure 15](Figure5.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
