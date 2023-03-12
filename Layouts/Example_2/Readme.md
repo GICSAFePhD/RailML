@@ -227,12 +227,13 @@ Followin, explains the simplification process.
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; and between signals C17 and P11. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; between signals C17 and P11; and between signals C20 and T02. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
     Finally, signals X08 and X09 were deleted due to horizontal inheritance between signals S18 and S15, respectably. In this case, the priority of S18 and S15 were superior, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
 
 ~~~
 Reducing redundant signals
+ removing sig20 for sig02
  removing sig03 for sig09
  removing sig05 for sig12
  removing sig13 for sig10
@@ -319,7 +320,7 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](config5_.png "Figure 21")
+![Figure 21](config_5.png "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
