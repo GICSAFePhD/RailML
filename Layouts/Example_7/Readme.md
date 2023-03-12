@@ -40,7 +40,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.png "Figure 2")
+![Figure 2](Figure0.jpg "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
@@ -133,7 +133,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA does not allocate any signal close to the line borders because this layout has zero (0) line borders.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.jpg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -149,7 +149,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure1.png "Figure 9")
+![Figure 9](Figure2.jpg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -171,7 +171,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 The algorithm does not assign signalling for level crossings and platforms because this network does not have any of them, as shown in Figure 11.
 
-![Figure 11](Figure1.png "Figure 11")
+![Figure 11](Figure3.jpg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -193,7 +193,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw14:*C11 and B12*.
 - Sw19:*S19, H20. C17*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -241,7 +241,7 @@ To obtain the table of routes is necessary to open the archive generated for thi
 
 Once the file is opened, it will be possible to view the network and its elements, as in Figure 17.
 
-![Figure 17](import_rail_aid_3.png "Figure 17")
+![Figure 17](import_rail_aid_3.PNG "Figure 17")
 
 *Figure 17. Example 2 network in Design4Rail Track Planner.*
 
@@ -311,11 +311,11 @@ Routes 1 to 8 are the same in both interlocking tables, but RNA considers tracks
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](one_direction_marked.png "Figure 21")
+![Figure 21](config_5.png "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
-![Figure 22](one_direction_mismarked.png "Figure 22")
+![Figure 22](config_6.png "Figure 22")
 
 *Figure 22. Produce routes considering bidirectional tracks*
 
