@@ -266,13 +266,13 @@ Once the signalling is generated and simplified, it is necessary to establish th
 To obtain the table of routes is necessary to open the archive generated for this example: "Example_2_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
 
 ![Figure 16](import_rail_aid_1.png "Figure 16")
-![Figure 16](import_rail_aid_2.png "Figure 16")
+![Figure 16](import_rail_aid_2.PNG "Figure 16")
 
 *Figure 16. Import railml file.*
 
 Once the file is opened, it will be possible to view the network and its elements, as in Figure 17.
 
-![Figure 17](import_rail_aid_3.png "Figure 17")
+![Figure 17](import_rail_aid_3.PNG "Figure 17")
 
 *Figure 17. Example 2 network in Design4Rail Track Planner.*
 
@@ -284,7 +284,7 @@ In the menu "View" in Design4Rail Track Planner, select "Routes", as shown in Fi
 
 Then Design4Rail Track Planner will display the table of routes for this network. It is shown in Figure 19.
 
-![Figure 19](import_rail_aid_5.png "Figure 19")
+![Figure 19](import_rail_aid_5.PNG "Figure 19")
 
 *Figure 19. Routes in Design4Rail*
 
@@ -292,7 +292,7 @@ Then Design4Rail Track Planner will display the table of routes for this network
 
 Figure 20 shows the structure of the original example. The signalling and the routes were designed by experts following the RailMl standard.
 
-![Figure 20](2_A.png "Figure 20")
+![Figure 20](5_A.png "Figure 20")
 
 *Figure 20. Original example provided by RailMl*
 
@@ -319,7 +319,7 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 
 The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
 
-![Figure 21](2_B.png "Figure 21")
+![Figure 21](5_B.png "Figure 21")
 
 *Figure 21. Generate table through RNA railway generate signalling*
 
