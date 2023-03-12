@@ -240,6 +240,17 @@ Followin, explains the simplification process.
 
     The signal priority used to decide which signal remains and which is deleted is explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
 
+~~~
+ Reducing redundant signals
+ removing sig17 for sig02
+ removing sig26 for sig02
+ removing sig19 for sig03
+ removing sig30 for sig04
+ removing sig31 for sig12
+ removing sig34 for sig13
+removing sig18 for sig30
+~~~
+
 ### G. Export a resulting railway layout description
 
 Once the signalling is generated and simplified, it is necessary to establish the railway routes to create the railway interlocking table. A railway route is the simplest path between two consecutive signals in the same direction, using the same tracks.
