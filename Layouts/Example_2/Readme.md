@@ -225,12 +225,22 @@ Followin, explains the simplification process.
 
     Vertical inheritance was applied when the B signals of the Sw03 and Sw02 were moved to the signals H16 y H22, respectably. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A.  
 
-
 - **Simplification by horizontal inheritance**
 
     The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17 and C20. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; between signals C17 and P11; and between signals C20 and T02. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
     Finally, signals X08 and X09 were deleted due to horizontal inheritance between signals S18 and S15, respectably. In this case, the priority of S18 and S15 were superior, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
+
+~~~
+Reducing redundant signals
+ removing sig03 for sig09
+ removing sig05 for sig12
+ removing sig13 for sig10
+ removing sig17 for sig11
+ removing sig08 for sig15
+ removing sig07 for sig18
+~~~
+
 
 ### G. Export a resulting railway layout description
 
