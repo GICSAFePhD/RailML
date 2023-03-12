@@ -46,7 +46,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.png "Figure 2")
+![Figure 2](Figure0.jpg "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
@@ -139,7 +139,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L03, L04, L05 and L06* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.jpg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -155,7 +155,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 The algorithm does not assign signalling at the beginning and end of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.png "Figure 9")
+![Figure 9](Figure2.jpg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -177,7 +177,7 @@ A railway platform is where the passengers wait for trains to arrive and depart.
 
 Figure 11 shows (in red letters) the signals Generated due level crossings and platforms.
 
-![Figure 11](Figure3.png "Figure 11")
+![Figure 11](Figure3.jpg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -195,11 +195,11 @@ The Algorithm 7, explained in [1] section "III. SIGNALLING GENERATION" in litera
 
 Signals generated for (in red letters, added signals are shown):
 
-- Sw01:*C13, B14, S18 and H19*.
-- Sw02:*C17, S15 and H16*.
-- Sw03:*C20, S21 and H22*.
+- Sw01: *S15*, *C13*, *B14*, and *H16*.
+- Sw02: *S18*, *C17* and *H19*.
+- Sw03: *S21*, *C20* and *H22*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -215,7 +215,7 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
 
-![Figure 15](Figure5.png "Figure 15")
+![Figure 15](Figure5.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
@@ -223,14 +223,24 @@ Followin, explains the simplification process.
 
 - **Simplification by vertical inheritance**
 
-    Vertical inheritance was applied when the B signals of the Sw03 and Sw02 were moved to the signals H16 y H22, respectably. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A.  
-
+    Vertical inheritance was applied when the B signals of the Sw03 and Sw02 were moved to the signals H16 y H22, respectably. These signals B were not created because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal A.  
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17 and C20. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; between signals C17 and P11; and between signals C20 and T02. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are follows: L03, L05, X07, X08, C13, C17. Signal L03 was deleted due this was nearby of signal P09, and have the same direction and orientation. The same situation occurs between signals L05 and P12; between signals C17 and P11; and between signals C20 and T02. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
     Finally, signals X08 and X09 were deleted due to horizontal inheritance between signals S18 and S15, respectably. In this case, the priority of S18 and S15 were superior, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
+
+~~~
+Reducing redundant signals
+ removing sig20 for sig02
+ removing sig03 for sig09
+ removing sig05 for sig12
+ removing sig13 for sig10
+ removing sig17 for sig11
+ removing sig08 for sig15
+ removing sig07 for sig18
+~~~
 
 ### G. Export a resulting railway layout description
 
@@ -310,11 +320,11 @@ Routes 1 to 5 are the same in both interlocking tables, but RNA considers tracks
 
 For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](one_direction_marked.png "Figure 21")
+![Figure 21](config_5.png "Figure 21")
 
 *Figure 21. Produce routes considering one directional tracks*
 
-![Figure 22](one_direction_mismarked.png "Figure 22")
+![Figure 22](config_6.png "Figure 22")
 
 *Figure 22. Produce routes considering bidirectional tracks*
 
