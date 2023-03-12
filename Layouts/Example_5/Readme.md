@@ -292,7 +292,7 @@ Then Design4Rail Track Planner will display the table of routes for this network
 
 Figure 20 shows the structure of the original example. The signalling and the routes were designed by experts following the RailMl standard.
 
-![Figure 20](2_A.png "Figure 20")
+![Figure 20](5_A.png "Figure 20")
 
 *Figure 20. Original example provided by RailMl*
 
@@ -319,7 +319,7 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 
 The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
 
-![Figure 21](2_B.png "Figure 21")
+![Figure 21](5_B.png "Figure 21")
 
 *Figure 21. Generate table through RNA railway generate signalling*
 
