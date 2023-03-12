@@ -205,7 +205,7 @@ Signals generated for (in red letters, added signals are shown):
 
 - Sw01:*S22, C21, H23, H24*.
 - Sw02:*S27, C25, B26 and H28*.
-- Sw03:*C29 and B3*.
+- Sw03:*C29 and B30*.
 - Sw05:*S33, C31, B32 and H34*.
 - Sw08:*S37, C35, B36 and H38*.
 
@@ -229,7 +229,7 @@ After generating all the signalling, a simplification should be made to keep onl
 
 *Figure 15. Signalling simplification.*
 
-Followin, explains the simplification process.
+Following, explains the simplification process.
 
 - **Simplification by vertical inheritance**
 
@@ -238,8 +238,20 @@ Followin, explains the simplification process.
 - **Simplification by horizontal inheritance**
 
     The simplified signals due to horizontal inheritance are follows: L12, J15, J17, C25, B30, C31, B32 and C35. Signal L12 was deleted due this was nearby of signal J13, with the same direction and orientation. The same situation occurs between signals J15 and S33, signals J17 and S22, signals C25 and J16, signals B30 and T04, signals C31 and J14, signals B32 and T06 and signals C35 and J19. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
-
+ 
     The priority of the surviving signals were higher than the replaced signals, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. 
+
+~~~
+Reducing redundant signals
+ removing sig30 for sig04
+ removing sig32 for sig06
+ removing sig12 for sig13
+ removing sig31 for sig14
+ removing sig15 for sig33
+ removing sig25 for sig16
+ removing sig17 for sig22
+ removing sig35 for sig19
+~~~
 
 ### G. Export a resulting railway layout description
 
@@ -257,7 +269,7 @@ To obtain the table of routes is necessary to open the archive generated for thi
 
 Once the file is opened, it will be possible to view the network and its elements, as in Figure 17.
 
-![Figure 17](import_rail_aid_3.png "Figure 17")
+![Figure 17](import_rail_aid_3.PNG "Figure 17")
 
 *Figure 17. Example 2 network in Design4Rail Track Planner.*
 
