@@ -210,7 +210,7 @@ Signals generated for (in red letters, added signals are shown):
 - Sw03: *S31*, *C29*, *B30* and *H32*.
 - Sw04: *S35*, *C33*, *B34* and *H36*.
 
-![Figure 13](Figure4.jpg "Figure 13")
+![Figure 13](Figure4B.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
