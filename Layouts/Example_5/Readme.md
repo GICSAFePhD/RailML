@@ -3,15 +3,15 @@
 
 Name: Bypass
 
-This example was mentioned in the manuscript titled: "Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML)". Henceforth, when we refer to the manuscript, we will do it as [1].
+This example is mentioned in the manuscript titled: "Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML)". Henceforth, when we refer to the manuscript, we will do it as [[1]](#references).
 
 ## Analysis principles
 
-The signalling generation process used in this work was designed following signalling principles detailed in [1] in the section "I. INTRODUCTION".
+The signalling generation process used in this work was designed following signalling principles detailed in [[1]](#references) in the section "I. INTRODUCTION".
 
 ## Step by step
 
-The following is the general methodology or "step by step" followed for analysing a railway network with the approach of this work [1].
+The following is the general methodology or "step by step" followed for analysing a railway network with the approach of this work [[1]](#references).
 
 A. Import the railway layout description.
 
@@ -37,13 +37,13 @@ After having installed the RNA program according to the steps shown in the the s
 
 *Figure 1. Select example.*
 
-The necessary information to define the graph network is distributed across several sections of the railML file, specifically inside netElements (nodes) and netRelations (edges) items found in the class Infrastructure/Topology as described in [1].
+The necessary information to define the graph network is distributed across several sections of the railML file, specifically inside netElements (nodes) and netRelations (edges) items found in the class Infrastructure/Topology as described in [[1]](#references).
 
-Figure 2 shows the railway network without signalling. The user will need the Design4Rail Horizon Software Suite Track Planner application and import the archive "Example_5.railml" to visualise the railway network for this example. 
+Figure 2 shows the railway network without signalling. The user will need the Design4Rail Horizon Software Suite Track Planner application and import the archive "Example_5.railml" to visualise the railway network used in this example. 
 
 For further information about the Design4Rail Horizon Software Suite and the Track Planner application, please refer to [Official web page of Design4Rail](https://design4rail.com/service/d4rhorizon/#section-downloadHorizon).
 
-For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-table-in-design4rail) of this document. 
+For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-the-interlocking-table-in-design4rail) of this document. 
 
 ![Figure 2](Figure0.jpg "Figure 2")
 
@@ -51,9 +51,9 @@ For a detailed explanation about importing railML files, go to section [G.1](#g1
 
 ### B. Define a graph network to associate the railway elements
 
-This step allows determining that the provided file's network connections are consistent. It also allows verifying the address, position, and interconnection of each node in the network.
+This step allows us to evaluate the consistency of the network connections provided in the RailML file, through the determination of the direction, position, and interconnection of each of the nodes of the given railway network.
 
-In [1], in the section "II. RAILWAY NETWORK ANALYZER DESIGN" in literal B, we see Algorithm 1, which explains the network analysis process.
+In [[1]](#references), in the section "II. RAILWAY NETWORK ANALYZER DESIGN" in literal B, we see Algorithm 1, which explains the network analysis process.
 
 The result of this RNA step is show in Console Output 1:
 
@@ -80,12 +80,11 @@ In this example, the Console Output 1 shows that the program can identify the no
 
 ### C and D. Infrastructure analysis and CDL zones detection
 
-The process of analysing the infrastructure and detecting CDL zones produces one result: identifying the existence and position of each infrastructure element in the network: platforms, curves, level crossings,  buffer stops, derailers, lines,  operational points, signals, switches, tracks and detection elements (axle counters, rail joints and track circuits).
+The process of analysing the infrastructure and detecting CDL zones allows identifying the position of each infrastructure element in the network: platforms, curves, level crossings, buffer stops, derailers, lines, operational points, signals, switches, tracks and detection elements (axle counters, rail joints and track circuits).
 
-In section "II. RAILWAY NETWORK ANALYSER DESIGN" literal C of [1], it is shown Algorithm 2, which explains the process of analysing the network; and in the same section but in literal D, it is explained the process used to detect CDL zones.
+In section "II. RAILWAY NETWORK ANALYSER DESIGN" literal C of [[1]](#references), it is shown Algorithm 2, which explains the process of analysing the network; and in the same section but in literal D, it is explained the process used to detect CDL zones.
 
 The result of this step is shown in Console Output 2 and Figure 3.
-
 ~~~
 Analysing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
@@ -131,17 +130,17 @@ To obtain an analysis for each network element in the program configurations (vi
 
 *Figure 5. Configuration options of RNA.*
 
-Below you will find the sequence of configurations used to analyze, step by step, the railway in this example.
+Below, in subsections E.1, E.2, E.3, and E.4, you will find the sequence of configurations used to analyze, step by step, the railway in this example.
 
 #### E.1. Signals generated due to line borders(L) and buffer stops(T)
 
-Figure 6 shows the configuration of the RNA GUI application needed for this step of analysis.
+The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 6.
 
 ![Figure 6](config_1.PNG "Figure 6")
 
 *Figure 6. Configuring RNA to obtain signals for line borders(L) and buffer stops(T).*
 
-Signals are enumerated since 00 with a prefix letter to indicate which element generates them. BufferStops and LineBorders signals start with T and L, respectively. In Figure 7, we can visualise the signals generated by applying algorithm 3, explained in [1] section "III. SIGNALLING GENERATION".
+Signals are enumerated since 00 with a prefix letter to indicate which element generates them. BufferStops and LineBorders signals start with T and L, respectively. In Figure 7, we can visualise the signals generated by applying algorithm 3, explained in [[1]](#references) section "III. SIGNALLING GENERATION".
 
 In red letters, automatically added signals are shown.
 
@@ -161,7 +160,7 @@ The RNA does not allocat any signals close to the line borders because there are
 
 The signals for rail joints are named J and have a consecutive number of signals.
 
-Figure 8 shows the configuration of the RNA GUI application needed for this step of analysis.
+The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 8.
 
 ![Figure 8](config_2.PNG "Figure 8")
 
@@ -177,7 +176,7 @@ The algorithm assignes signals J09 to J18 at the beginning and end of each track
 
 The signals for platforms are named P, and signals for level crossings are named X. A consecutive number of signals is assigned for each type of signalling.
 
-Figure 10 shows the configuration of the RNA GUI application needed for this step of analysis.
+The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 10.
 
 ![Figure 10](config_3.PNG "Figure 10")
 
@@ -185,7 +184,7 @@ Figure 10 shows the configuration of the RNA GUI application needed for this ste
 
 RNA does not assign any signals for level crossings or platforms due to lack of both in the network.
 
-Figure 11 shows (in red letters) the signals Generated due level crossings and platforms.
+In red letters, the signals Generated due level crossings and platforms are shown in Figure 11.
 
 ![Figure 11](Figure3.jpg "Figure 11")
 
@@ -199,11 +198,9 @@ Figure 6 shows the configuration of the RNA GUI application needed for this step
 
 *Figure 12. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
-The signals for switches are named based on the point they want to protect: S for Starting branch, C for the Continue branch and B for the Detour branch. However, other signals named with H are not explicitly protecting any of the three points switches have.
+The signals for switches are named based on the point they want to protect: S for Starting branch, C for the Continue branch and B for the Detour branch. There are also signals whose name starts with H that are not explicitly protecting the starting branch, the continue branch or the detour branch of a switch. These H signals are explained in [[1]](#references) section "III. SIGNALLING GENERATION" in literal E, where a manoeuvre signal numbered with H is always added plus the corresponding numbering sequence by Algorithm 7. This manoeuvre signal always accompanies the signal of the start branch (S) of the switch, and its function is to protect the railway elements that are after this signal (i.e. elements that are in the detour branch and in the continue branch).
 
-The Algorithm 7, explained in [1] section "III. SIGNALLING GENERATION" in literal E, a manoeuvre signal numbered with H is always added plus the corresponding numbering sequence. This manoeuvre signal that always accompanies the signal of the start branch (S) of the switch, and whose function is to protect the railway elements that are after this signal. That is, the elements that are in the detour branch and in the continue branch.
-
-Signals generated for (in red letters, added signals are shown):
+Signals generated for Example 5 are shown in red letters in Figure 13:
 
 - Sw01: *S23*, *C31*, *B22* and *H24*.
 - Sw02: *S27*, *C25*, *B26* and *H28*.
@@ -216,7 +213,7 @@ Signals generated for (in red letters, added signals are shown):
 
 ### F. Simplify signalling
 
-The signal simplification process used by RNA relies on two main principles: i) vertical inheritance and ii) horizontal inheritance. Both principles are explained in [1] in section "IV. SIGNALLING SIMPLIFICATION".
+The signal simplification process used by RNA relies on two main principles: i) vertical inheritance and ii) horizontal inheritance. Both principles are explained in [[1]](#references) in section "IV. SIGNALLING SIMPLIFICATION".
 
 To simplify signals is needed that, mark the configuration option "Simplify signals", as shown in Figure 14.
 
@@ -224,17 +221,17 @@ To simplify signals is needed that, mark the configuration option "Simplify sign
 
 *Figure 14. Configuring RNA to simplify signalling.*
 
-After generating all the signalling, a simplification should be made to keep only the appropriate signals, as shown in Figure 15.
+After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5B.jpg "Figure 15")
+![Figure 15](5_B.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
-Followin, explains the simplification process.
+The simplification process was carried out according to the process described in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), as follows:
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: S23, J09, S31, J15, S35, J20, S27, J14, B26, B22, B34 and B30. Signal S and H were redundat with J and T, they have the same direction and orientation but T has the highest priority and H is necessary for manouver. B had a lower priority than B and have the same direction and orientation, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. . In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are follows: S23, J09, S31, J15, S35, J20, S27, J14, B26, B22, B34 and B30. Signal S and H were redundat with J and T, they have the same direction and orientation but T has the highest priority and H is necessary for manouver. B had a lower priority than B and have the same direction and orientation, as explained in section IV. SIGNALLING SIMPLIFICATION of [1], literal B. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [1]). This algorithm was designed to avoid collisions by considering nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
 ~~~
 Reducing redundant signals
@@ -258,12 +255,12 @@ Reducing redundant signals
 
 ### G. Export a resulting railway layout description
 
-Once the signalling is generated and simplified, it is necessary to establish the railway routes to create the railway interlocking table. A railway route is the simplest path between two consecutive signals in the same direction, using the same tracks.
+Once the signalling is generated, it is necessary to establish the railway routes to create the railway interlocking table. A railway route is the simplest path between two consecutive signals in the same direction, using the same tracks (see [[1]](#references)).
 
 <a name="G.1"></a>
-#### G.1. Obtaining table in Design4Rail
+#### G.1. Obtaining the interlocking table in Design4Rail
 
-To obtain the table of routes is necessary to open the archive generated for this example: "Example_2_B.railml" (if the user keeps the names provided by this repository) using Design4Rail software, as shown in Figure 16.
+To obtain the interlocking table is necessary to use Design4Rail software to open the archive Example_2_B.railml" generated by RNA for this example, as shown in Figure 16.
 
 ![Figure 16](import_rail_aid_1.png "Figure 16")
 ![Figure 16](import_rail_aid_2.PNG "Figure 16")
@@ -282,19 +279,29 @@ In the menu "View" in Design4Rail Track Planner, select "Routes", as shown in Fi
 
 *Figure 18. View Routes*
 
-Then Design4Rail Track Planner will display the table of routes for this network. It is shown in Figure 19.
+Then Design4Rail Track Planner will display the table of routes for this network. It is shown in Table 1.
 
-![Figure 19](import_rail_aid_5.PNG "Figure 19")
+*Table 1. Routes in Design4Rail*
 
-*Figure 19. Routes in Design4Rail*
+![Table 1](import_rail_aid_5.png "Table 1")
 
-#### G.2. Original table
+### ***Note***
 
-Figure 20 shows the structure of the original example. The signalling and the routes were designed by experts following the RailMl standard.
+   To carry out this research work, we used the software Rail-AID developed by NEAT, and provided to us on July 2021. However, NEAT no longer supports this software. They upgrade to a new software named Desgin4Rail TrackPlanner application, whose functionalities are essentially the same as Rail-AID. Because of this reason, we recommended in the manuscript and the development of the examples available in this repository, the use of Design4Rail TrackPlanner. Users are notified, that Rail-AID and Design4Rail are not free software; therefore, appropriate licenses should be purchased for use. A trial version is sufficient to open and visualize the layouts of examples 2, 5, 6 y 7. However, to open and visualize examples 1, 3 y 4 a license should be purchased.
 
-![Figure 20](5_A2.png "Figure 20")
+   Moreover, it is important to mention that when the RNA exports the railML file the Rail-AID software considers all these signals as a single aspect. This issue was notified by us to NEAT in March 2022, they acknowledged the notification, agreed that there is an error on their software and committed to fix this problem. However, this problem was never solved, and NEAT discontinued Rail-AID software, as explained above. This problem is not solved yet on Design4Rail, either. To get around this issue, the RNA creates N semaphores of one aspect and displays them one after the other, instead of creating one semaphore of N aspects. As a consequence of having N semaphores of one aspect the interlocking table has more routes than the scenario where there is one semaphore of N aspects. Therefore, to get the appropriate interlocking table corresponding to one semaphore of N aspects, use the procedure shown in section [G.1.](#g1-obtaining-the-interlocking-table-in-design4rail)
 
-*Figure 20. Original example provided by RailMl*
+#### G.2. Original interlocking table
+
+Figure 19 shows the structure of the original example. 
+
+![Figure 19](5_A.png "Figure 19")
+
+*Figure 19. Original example provided by RailMl*
+
+The signalling and the original interlocking table were designed by experts following the RailMl standard, and are shown in Table 2.
+
+*Table 2. Original interlocking table for this example provided by RailMl*
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
@@ -315,13 +322,11 @@ Figure 20 shows the structure of the original example. The signalling and the ro
 | R_15 |  S12  |  S08  | Sw04_R  | - | - | ne08-ne07 |
 | R_16 |  S09  |  S16  | Sw04_R  | - | - | ne07-ne08 |
 
-#### G.3. Generated table
+#### G.3. Generated interlocking table
 
-The example analysed by RNA and the approach of this work has the following structure, signalling and routes, which are the result of an automatic process and also follow the RailMl standard.
+The result of the automatic process carried by the RNA is the intelocking table shown in Table 3. This result is consistent with Table 1 shown in subsection [G.2.](#g2-original-interlocking-table) Original interlocking table.
 
-![Figure 21](5_B2.png "Figure 21")
-
-*Figure 21. Generate table through RNA railway generate signalling*
+*Table 3. Interlocking table obtain through RNA when the option "One-direction only" is marked.*
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
@@ -342,7 +347,18 @@ The example analysed by RNA and the approach of this work has the following stru
 | R_15 |  S35  |  J18  | Sw04_R | - | - | ne08-ne07 |
 | R_16 |  J17  |  T07  | Sw04_R | - | - | ne07-ne08 |
 
-Extra routes considering bidirectional tracks:
+#### G.3.1. One-directional and bidirectional tracks
+
+RNA can consider tracks as bidirectional, while the original layout has only one-directional track. This feature is activated by mismarking the "One direction only" option, as shown in Figure 20.
+
+![Figure 20](one_direction_mismarked.png "Figure 20")
+
+*Figure 20. Produce routes considering bidirectional tracks*
+
+In this way the extra routes shown in Table 4 are obtained, where routes 6 to 10 are the opposite of routes 1 to 5. This extra routes does not affect safety. Moreover, departure signals are considered for line borders and buffer stops for extra protection.
+
+*Table 4. Interlocking table obtain through RNA when the option "One direction only" is mismarked.*
+
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_17 |  T02  |  S23  | - | - | - | ne01 |
@@ -350,18 +366,19 @@ Extra routes considering bidirectional tracks:
 | R_19 |  T06  |  S31  | - | - | - | ne05 |
 | R_20 |  T08  |  S35  | - | - | - | ne08 |
 
-Routes 1 to 16 are the same in both interlocking tables, but RNA considers a departure signal is necessary close to buffer stops to allow trains to start moving. This authority could be delegated on signals S23,S31,S27 and S35 but they are far away their respective buffer stops. This extra four signals add four more routes to move the train from each buffer stop prior to every switch. It does not affect safety but it adds an extra step before a critical action, increasing safety.
+Table 4 shows the additional routes, considering bidirectional tracks. Routes 1 to 16 are the same in both interlocking tables, but RNA considers a departure signal is necessary close to buffer stops to allow trains to start moving. This authority could be delegated on signals S23,S31,S27 and S35 but they are far away their respective buffer stops. This extra four signals add four more routes to move the train from each buffer stop prior to every switch. It does not affect safety but it adds an extra step before a critical action, increasing safety.
 
-For obtaining an analysis which only includes a one direction of a railway operation, should be mismark the option in the program. Like Figure 21 and Figure 22. To obtain the tables, you have to follow the steps explained in [G.1](#g1-obtaining-table-in-design4rail).
 
-![Figure 21](config_5.PNG "Figure 21")
 
-*Figure 21. Produce routes considering one directional tracks*
+#### G.3.2. Minimum distance parameter
 
-![Figure 22](config_6.PNG "Figure 22")
+As explained in literal B of section "IV. SIGNALING SIMPLIFICATION" in [[1]](#references), more than two railway elements can be combined if they are close enough. The threshold distance to determine if this combination must be done is a configuration parameter of RNA, named MIN_DISTANCE (minimum distance). As shown in Algorithms 8, 9, and 10 in [[1]](#references), this parameter is essential to locate, relocate and simplify signals. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 300. Figure 21 shows the parameter configuration in the GUI of RNA. 
 
-*Figure 22. Produce routes considering bidirectional tracks*
+![Figure 21](minimum_distance_parameter.png "Figure 21")
+
+*Figure 20. Minimum distance parameter configuration*
+
 
 ## References
 
-[1] M. N. Menendez, S. Germino, L. Díaz-Charris, and A. Lutenberg, Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML).
+[1] M. N. Menendez, S. Germino, L. Díaz-Charris, and A. Lutenberg, Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML). 
