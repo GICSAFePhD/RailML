@@ -349,7 +349,7 @@ Route 14 was deleted because signal S09 was very close S18 and, therefore, unuse
 
 RNA can consider tracks as bidirectional, while the original layout has only one-directional track. This feature is activated by mismarking the "One direction only" option, as shown in Figure 20.
 
-![Figure 20](config_5.png "Figure 20")
+![Figure 20](config_5.PNG "Figure 20")
 
 *Figure 20. Produce routes considering bidirectional tracks*
 
@@ -370,17 +370,17 @@ Extra routes considering bidirectional tracks:
 
 Routes 15 to 22 are created because RNA added signals T01,T02,T03,T04,T05 and T06 to protectt buffer stops and signals L07,L08,L09 and L10 to protect line borders. These new signals created new routes to stop prior the (relative or absolute) end of the network, increasing safety, and to add opposite routes than the originals, increasing mobility.
 
-![Figure 20](1_B.png "Figure 20")
+![Figure 21](1_B.png "Figure 21")
 
-*Figure 20. Generate table through RNA railway generate signalling*
+*Figure 21. Generate table through RNA railway generate signalling*
 
 #### G.3.2. Minimum distance parameter
 
 As explained in literal B of section "IV. SIGNALING SIMPLIFICATION" in [[1]](#references), more than two railway elements can be combined if they are close enough. The threshold distance to determine if this combination must be done is a configuration parameter of RNA, named MIN_DISTANCE (minimum distance). As shown in Algorithms 8, 9, and 10 in [[1]](#references), this parameter is essential to locate, relocate and simplify signals. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 300. Figure 21 shows the parameter configuration in the GUI of RNA. 
 
-![Figure 21](minimum_distance_parameter.png "Figure 21")
+![Figure 22](minimum_distance_parameter.png "Figure 22")
 
-*Figure 20. Minimum distance parameter configuration*
+*Figure 22. Minimum distance parameter configuration*
 
 ## References
 
