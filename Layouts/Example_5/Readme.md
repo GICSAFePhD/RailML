@@ -118,7 +118,7 @@ Analysing infrastructure --> Infrastructure.RNA
 
 Figure 4 shows these elements.
 
-![Figure 4](step_C_and_D_graphic.png "Figure 4")
+![Figure 4](step_C_and_D_graphic.jpg "Figure 4")
 
 *Figure 4. Infrastructure analysis and CDL zones detection: Layout.*
 
