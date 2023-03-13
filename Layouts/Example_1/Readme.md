@@ -278,6 +278,7 @@ In the menu "View" in Design4Rail Track Planner, select "Routes", as shown in Fi
 Then Design4Rail Track Planner will display the table of routes for this network. It is shown in Figure 19.
 
 *Table 1. Routes in Design4Rail*
+
 ![Figure 19](import_rail_aid_5.PNG "Figure 19")
 
 ### ***Note***
