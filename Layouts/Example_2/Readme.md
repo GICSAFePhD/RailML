@@ -34,7 +34,7 @@ Each step is explained below.
 
 After having installed the RNA program according to the steps shown in the the section ["Usage"](https://github.com/GICSAFePhD/Layouts#usage), run the Python archive "main_GUI.py". This action produces the program output shown in Figure 1.
 
-![Figure 1](select_example.png "Figure 1")
+![Figure 1](select_example.jpg "Figure 1")
 
 *Figure 1. Select example.*
 
