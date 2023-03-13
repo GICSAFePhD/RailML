@@ -139,7 +139,7 @@ The RNA allocates signals close to the buffer stops:
 
 The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L03, L04, L05 and L06* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
 
-![Figure 7](Figure1.png "Figure 7")
+![Figure 7](Figure1.jpg "Figure 7")
 
 *Figure 7. Signals due to line borders(L) and buffer stops(T).*
 
@@ -155,7 +155,7 @@ The configuration of the RNA GUI application needed for this step of the analysi
 
 The algorithm does not assign signalling at the beginning and the ending of each track because this network does not have rail joints as shown in Figure 9.
 
-![Figure 9](Figure2.png "Figure 9")
+![Figure 9](Figure2.jpg "Figure 9")
 
 *Figure 9. Signals due to line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -177,7 +177,7 @@ Also, it is necessary to have a departure signal after the platform. This logic 
 
 In red letters, the signals Generated due level crossings and platforms are shown in Figure 11.
 
-![Figure 11](Figure3.png "Figure 11")
+![Figure 11](Figure3.jpg "Figure 11")
 
 *Figure 11. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -197,7 +197,7 @@ Signals generated for Example 2 are shown in red letters in Figure 13:
 - Sw02:*C17, S15 and H16*.
 - Sw03:*C20, S21 and H22*.
 
-![Figure 13](Figure4.png "Figure 13")
+![Figure 13](Figure4.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -213,7 +213,7 @@ To simplify signals mark the configuration option "Simplify signals", as shown i
 
 After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5.png "Figure 15")
+![Figure 15](Figure5.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
