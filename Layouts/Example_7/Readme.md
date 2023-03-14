@@ -332,11 +332,19 @@ Table 4 shows the additional routes, considering bidirectional tracks. Routes 1 
 
 #### G.3.2. Minimum distance parameter
 
-As explained in literal B of section "IV. SIGNALING SIMPLIFICATION" in [[1]](#references), more than two railway elements can be combined if they are close enough. The threshold distance to determine if this combination must be done is a configuration parameter of RNA, named MIN_DISTANCE (minimum distance). As shown in Algorithms 8, 9, and 10 in [[1]](#references), this parameter is essential to locate, relocate and simplify signals. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 300. Figure 21 shows the parameter configuration in the GUI of RNA. 
+As explained in literal B of section "IV. SIGNALING SIMPLIFICATION" in [[1]](#references), more than two railway elements can be combined if they are close enough. The threshold distance to determine if this combination must be done is a configuration parameter of RNA, named MIN_DISTANCE (minimum distance). As shown in Algorithms 8, 9, and 10 in [[1]](#references), this parameter is essential to locate, relocate and simplify signals. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 300. Figure 22 shows the parameter configuration in the GUI of RNA. 
 
-![Figure 21](minimum_distance_parameter.png "Figure 21")
+![Figure 22](minimum_distance_parameter.png "Figure 22")
 
-*Figure 20. Minimum distance parameter configuration*
+*Figure 22. Minimum distance parameter configuration*
+
+#### G.3.3. Fixed length parameter
+
+The fixed length parameter is necessary to allocate the departure signals, which maintains the trains in the network until the next network approves the movement. These signals allow trains to move outside the network without restrictions only if the track is not long enough (fixed length). RNA could easily be adapted to different criteria and regulations, thanks to this parameter. As shown in Algorithms 3, and 4 in [[1]](#references). Configuration of the fixed length parameter in RNA as shown in Figure 23. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 200. Figure 23 shows the parameter configuration in the GUI of RNA.
+
+![Figure 23](fixed_length_parameter.jpeg "Figure 23")
+
+*Figure 23. Fixed length parameter configuration*
 
 ## References
 
