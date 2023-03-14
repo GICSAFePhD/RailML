@@ -227,10 +227,10 @@ In red letters, automatically added signals are shown.
 
 The RNA allocates signals close to the buffer stops:
 
--- Stop: *T01*, *T03*, *T05*
--- Departure: *T02*, *T04*, *T06*
+-- Stop: *T01*, *T03*, *T05*, *T07*, *T09*, *T11*, *T13*, *T15*, *T17*, *T19*, *T21*, *T23*
+-- Departure: *T02*, *T04*, *T06*, *T08*, *T10*, *T12*, *T14*, *T16*, *T18*, *T20*, *T22*, *T24*
 
-The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L07, L08, L09 and L10* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
+The RNA allocates signals close to the line borders. RNA allocates departure signals which are: *L25* to *L42* assigned close to every line border that belongs to a netElement whose track is longer than a configurable fixed length.
 
 ![Figure 7](Figure1.jpg "Figure 7")
 
@@ -246,7 +246,7 @@ Figure 8 shows the configuration of the RNA GUI application needed for this step
 
 *Figure 8. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
-The algorithm assigns signals *J11*, *J12*, *J13* and *J14* at the beginning and end of each track to indicate the rail joints as shown in Figure 9.
+The algorithm assigns signals *J43* to *J49* at the beginning and end of each track to indicate the rail joints as shown in Figure 9.
 
 ![Figure 9](Figure2.jpg "Figure 9")
 
@@ -286,11 +286,16 @@ The signals for switches are named based on the point they want to protect: S fo
 
 Signals generated for (in red letters, added signals are shown):
 
-- Sw04: *S22*, *C21*, *H23*, *H24*
-- Sw06: *S27*, *C25*, *B26*, *H28*
-- Sw07: *C29*, *B30*
-- Sw12: *S32*, *C31*, *H33*
-- Sw13: *S35*, *C34*, *H36*
+- Sw04: *S113*, *C112*, *H114*
+- Sw05: *B125 *
+- Sw08: *S97*, *C95*, *B96*, *H98*, *H99*
+- Sw09: *S102*, *C100*, *B101*, *H103*
+- Sw11: *S116*, *C115*, *H117*
+- Sw12: *S119*, *C118*, *H120*, *H121*
+- Sw13: *B123*
+- Sw41: *S126*, *C124*
+
+(Only switches in Figure 4 were analised in the previous list, all the others are shown in Figure 13)
 
 ![Figure 13](Figure4.jpg "Figure 13")
 
@@ -320,19 +325,47 @@ The simplification process was carried out according to the process described in
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are follows: X17, P18, P19, B26, B30, C31 and C34 . Signal X17 and B26 were deleted due this was nearby of signal T02, and have the same direction and orientation. The same situation occurs between signals P18/B30 and T04; between signals P19 and T03; between C31 and J12; and between signals C34 and J13. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references)). This algorithm was designed to group nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
-
-    The signal priority used to decide which signal remains and which is deleted is explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal B.
+    The simplified signals due to horizontal inheritance are follows: S116 anc C122 were deleted due these were nearby T16, and have the same direction and orientation, but T16 has a higher priority. The same situation occurs between signals B123 and T21; between C95 and P56 and between C112 and P57. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references)). This algorithm was designed to group nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    
+    The signal priority used to decide which signal remains and which is deleted is explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal B.  
 
 ~~~
 Reducing redundant signals
- removing sig17 for sig02
- removing sig26 for sig02
- removing sig19 for sig03
- removing sig30 for sig04
- removing sig31 for sig12
- removing sig34 for sig13
- removing sig18 for sig30
+ removing sig52 for sig01
+ removing sig53 for sig02
+ removing sig25 for sig04
+ removing sig54 for sig05
+ removing sig55 for sig06
+ removing sig79 for sig06
+ removing sig85 for sig08
+ removing sig58 for sig09
+ removing sig59 for sig10
+ removing sig108 for sig11
+ removing sig116 for sig16
+ removing sig122 for sig16
+ removing sig115 for sig18
+ removing sig118 for sig20
+ removing sig123 for sig22
+ removing sig26 for sig44
+ removing sig44 for sig26
+ removing sig46 for sig26
+ removing sig71 for sig36
+ removing sig36 for sig71
+ removing sig39 for sig68
+ removing sig68 for sig39
+ removing sig47 for sig45
+ removing sig45 for sig80
+ removing sig50 for sig48
+ removing sig51 for sig49
+ removing sig78 for sig53
+ removing sig95 for sig56
+ removing sig112 for sig57
+ removing sig82 for sig66
+ removing sig109 for sig67
+ removing sig76 for sig74
+ removing sig77 for sig75
+ removing sig88 for sig93
+ removing sig107 for sig105
 ~~~
 
 ### G. Export a resulting railway layout description
