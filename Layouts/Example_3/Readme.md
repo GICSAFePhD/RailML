@@ -197,7 +197,7 @@ Analysing infrastructure --> Infrastructure.RNA
 
 *Figure 3. Infrastructure analysis and CDL zones detection: GUI Output.*
 
-Figure 4 shows these elements.
+As an example, Figure 4 zoom in some of these elements.
 
 ![Figure 4](step_C_and_D_graphic.png "Figure 4")
 
