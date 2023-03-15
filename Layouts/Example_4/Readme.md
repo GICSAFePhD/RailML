@@ -249,7 +249,7 @@ Below, in subsections E.1, E.2, E.3, and E.4, you will find the sequence of conf
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 6.
 
-![Figure 6](config_1.png "Figure 6")
+![Figure 6](config_1.PNG "Figure 6")
 
 *Figure 6. Configuring RNA to obtain signals for line borders(L) and buffer stops(T).*
 
@@ -285,7 +285,7 @@ The signals for rail joints are named J and have a consecutive number of signals
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 10.
 
-![Figure 10](config_2.png "Figure 10")
+![Figure 10](config_2.PNG "Figure 10")
 
 *Figure 10. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -305,7 +305,7 @@ The signals for platforms are named P, and signals for level crossings are named
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 13.
 
-![Figure 13](config_3.png "Figure 13")
+![Figure 13](config_3.PNG "Figure 13")
 
 *Figure 13. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -329,7 +329,7 @@ In red colour, some signals generated due level crossings and platforms are show
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 16.
 
-![Figure 16](config_4.png "Figure 16")
+![Figure 16](config_4.PNG "Figure 16")
 
 *Figure 16. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -357,7 +357,7 @@ The signal simplification process used by RNA relies on two main principles: i) 
 
 To simplify signals mark the configuration option "Simplify signals", as shown in Figure 19.
 
-![Figure 19](config_5.png "Figure 19")
+![Figure 19](config_5.PNG "Figure 19")
 
 *Figure 19. Configuring RNA to simplify signalling.*
 
