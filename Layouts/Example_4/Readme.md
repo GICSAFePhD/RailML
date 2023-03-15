@@ -611,7 +611,7 @@ R_77  |  S109  |  S119  |  D23_R + D12_S  |  -  |  -  |  ne115-ne129-ne127
 
 RNA can consider tracks as bidirectional, while the original layout has only one-directional track. This feature is activated by mismarking the "One direction only" option, as shown in Figure 28.
 
-![Figure 28](config_5.png "Figure 28")
+![Figure 28](config_5.PNG "Figure 28")
 
 *Figure 28. Produce routes considering bidirectional tracks*
 
@@ -648,7 +648,7 @@ As explained in literal B of section "IV. SIGNALING SIMPLIFICATION" in [[1]](#re
 
 The fixed length parameter is necessary to allocate the departure signals, which maintains the trains in the network until the next network approves the movement. These signals allow trains to move outside the network without restrictions only if the track is not long enough (fixed length). RNA could easily be adapted to different criteria and regulations, thanks to this parameter. As shown in Algorithms 3, and 4 in [[1]](#references). Configuration of the fixed length parameter in RNA as shown in Figure 22. Because of integrity software reasons, this parameter should be between 300 and 500. For default, this value is 200. Figure 30 shows the parameter configuration in the GUI of RNA.
 
-![Figure 30](fixed_length_parameter.PNG "Figure 30")
+![Figure 30](fixed_length_parameter.jpeg "Figure 30")
 
 *Figure 30. Fixed length parameter configuration*
 
