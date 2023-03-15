@@ -371,8 +371,7 @@ The simplification process was carried out according to the process described in
 
 - **Simplification by vertical inheritance**
 
-    In Figure 21, vertical inheritance was applied when the B signals of the Sw03 and Sw04 were moved to the signals H126 y H129, respectively. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal A. 
-
+    In Figure 21, vertical inheritance was applied when the B signals of the Sw03 and Sw04 were moved to the signals H126 y H129, respectively. These signals B were not created because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal A. 
 
 - **Simplification by horizontal inheritance**
 
