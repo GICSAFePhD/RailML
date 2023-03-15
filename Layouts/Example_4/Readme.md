@@ -128,42 +128,24 @@ The result of this step is shown in Console Output 2 and Figure 3.
 ~~~
  Analyzing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
-0
   ne991 has a Middle point @ [-2112.3333333333335, 0]
-1
   ne991 has a Middle point @ [-1902.6666666666667, 0]
-2
   ne991 has a Middle point @ [-1693.0, 0]
-3
   ne991 has a Middle point @ [-1483.3333333333335, 0]
-4
   ne991 has a Middle point @ [-1273.6666666666667, 0]
   ne61 has a Curve(2 lines) @ [[4600, 250]]
-0
   ne63 has a Middle point @ [4551.857142857143, 0]
-1
   ne63 has a Middle point @ [4753.714285714285, 0]
-2
   ne63 has a Middle point @ [4955.571428571428, 0]
-3
   ne63 has a Middle point @ [5157.428571428572, 0]
-4
   ne63 has a Middle point @ [5359.285714285715, 0]
-5
   ne63 has a Middle point @ [5561.142857142857, 0]
-0
   ne65 has a Middle point @ [5973.125, 0]
-1
   ne65 has a Middle point @ [6183.25, 0]
-2
   ne65 has a Middle point @ [6393.375, 0]
-3
   ne65 has a Middle point @ [6603.5, 0]
-4
   ne65 has a Middle point @ [6813.625, 0]
-5
   ne65 has a Middle point @ [7023.75, 0]
-6
   ne65 has a Middle point @ [7233.875, 0]
   ne910 has a Curve(2 lines) @ [[11504, 250]]
   ne912 has a RailJoint[J24] @ [11867, 0]
@@ -171,112 +153,67 @@ The result of this step is shown in Console Output 2 and Figure 3.
   ne288 has a Curve(2 lines) @ [[-928, 250]]
   ne290 has a RailJoint[J07] @ [-633, 0]
   ne292 has a RailJoint[J05] @ [538, 0]
-0
   ne295 has a Middle point @ [-501.4, 250]
-1
   ne295 has a Middle point @ [-261.8, 250]
-2
   ne295 has a Middle point @ [-22.200000000000045, 250]
-3
   ne295 has a Middle point @ [217.39999999999998, 250]
   ne297 has a Middle point @ [588.5, 250]
-0
   ne377 has a Middle point @ [129.0, -200]
   ne384 has a Curve(2 lines) @ [[350, 450]]
   ne400 has a Middle point @ [7049.0, 250]
-0
   ne404 has a Middle point @ [5014.0, 250]
-1
   ne404 has a Middle point @ [5224.0, 250]
-2
   ne404 has a Middle point @ [5434.0, 250]
-3
   ne404 has a Middle point @ [5644.0, 250]
-4
   ne404 has a Middle point @ [5854.0, 250]
-5
   ne404 has a Middle point @ [6064.0, 250]
-6
   ne404 has a Middle point @ [6274.0, 250]
-7
   ne404 has a Middle point @ [6484.0, 250]
-8
   ne404 has a Middle point @ [6694.0, 250]
   ne407 has a Curve(2 lines) @ [[6654, 500]]
-0
   ne421 has a Middle point @ [6184.5, -259]
-0
   ne450 has a Middle point @ [14477.0, 250]
-0
   ne465 has a Middle point @ [13517.5, -259]
   ne98 has a LevelCrossing[lcr495] @ [2419, 0]
   ne98 has a LevelCrossing[lcr496] @ [2419, 0]
-0
   ne99 has a Middle point @ [3908.0, 0]
-1
   ne99 has a Middle point @ [4129.0, 0]
   ne100 has a LevelCrossing[lcr497] @ [9346, 0]
   ne100 has a LevelCrossing[lcr498] @ [10127, 0]
   ne100 has a LevelCrossing[lcr499] @ [9347, 0]
   ne100 has a LevelCrossing[lcr500] @ [10127, 0]
   ne101 has a RailJoint[J26] @ [10914, 0]
-0
   ne102 has a Middle point @ [15878.5, 0]
-1
   ne102 has a Middle point @ [16087.0, 0]
-2
   ne102 has a Middle point @ [16295.5, 0]
-3
   ne102 has a Middle point @ [16504.0, 0]
-4
   ne102 has a Middle point @ [16712.5, 0]
-5
   ne102 has a Middle point @ [16921.0, 0]
-6
   ne102 has a Middle point @ [17129.5, 0]
-7
   ne102 has a Middle point @ [17338.0, 0]
-8
   ne102 has a Middle point @ [17546.5, 0]
-9
   ne102 has a Middle point @ [17755.0, 0]
-10
   ne102 has a Middle point @ [17963.5, 0]
   ne104 has a Curve(2 lines) @ [[-209, 630]]
   ne110 has a Curve(2 lines) @ [[-633, 450]]
-0
   ne113 has a Middle point @ [-530.0, -200]
-1
   ne113 has a Middle point @ [-311.0, -200]
   ne122 has a Curve(2 lines) @ [[5704, 759]]
   ne123 has a Curve(2 lines) @ [[5054, 500]]
-0
   ne126 has a Middle point @ [5634.5, -259]
   ne127 has a Curve(2 lines) @ [[13982, 500]]
-0
   ne130 has a Middle point @ [12022.833333333334, 250]
-1
   ne130 has a Middle point @ [12223.666666666666, 250]
-2
   ne130 has a Middle point @ [12424.5, 250]
-3
   ne130 has a Middle point @ [12625.333333333334, 250]
-4
   ne130 has a Middle point @ [12826.166666666666, 250]
-5
   ne130 has a Middle point @ [13027.0, 250]
-6
   ne130 has a Middle point @ [13227.833333333334, 250]
-7
   ne130 has a Middle point @ [13428.666666666666, 250]
-8
   ne130 has a Middle point @ [13629.5, 250]
-9
   ne130 has a Middle point @ [13830.333333333334, 250]
-10
   ne130 has a Middle point @ [14031.166666666668, 250]
   ne132 has a RailJoint[J21] @ [14309, 0]
-0
   ne133 has a Middle point @ [12992.5, -259]
   ne134 has a Curve(2 lines) @ [[12842, 810]]
   ne135 has a Curve(2 lines) @ [[12072, 500]]
