@@ -251,7 +251,286 @@ Reducing redundant signals
 
 ### G. Export a resulting railway layout description
 
-Once the signalling is generated, it is necessary to establish the railway routes to create the railway interlocking table. A railway route is the simplest path between two consecutive signals in the same direction, using the same tracks (see [[1]](#references)).
+Once the signalling is generated, it is necessary to establish the railway routes to create the railway interlocking table. A railway route is the simplest path between two consecutive signals in the same direction, using the same tracks (see [[1]](#references)). RNA generates 4 logfiles as a summary of all the analysis, these files are: 
+
+- Infrastructure.RNA: summary of elements node per node. 
+- Safe_points.RNA: absolute coordinates of prev/next nodes, node per node.
+- Signalling: summary of all the signalling generated and their relevant information.
+- Routes.RNA: Interlocking table with the information of each route.
+
+#### G.1 Infrastructure.RNA: 
+
+~~~
+Nodes: 11 | Switches: 5 | Signals: 0 | Detectors: 2 | Ends: 7 | Barriers: 2
+Node ne1:
+	Track = track1
+	Neighbours = 2 -> ['ne8', 'ne9']
+	Switches -> Sw04
+		ContinueCourse -> right -> ne8
+		BranchCourse -> left -> ne9
+Node ne2:
+	Track = track7
+	Neighbours = 2 -> ['ne12', 'ne13']
+	Switches -> Sw06
+		ContinueCourse -> right -> ne12
+		BranchCourse -> left -> ne13
+Node ne8:
+	Track = track2
+	Neighbours = 4 -> ['ne1', 'ne9', 'ne22', 'ne24']
+	Switches -> Sw12
+		ContinueCourse -> left -> ne22
+		BranchCourse -> right -> ne24
+Node ne9:
+	Track = track3
+	Neighbours = 4 -> ['ne1', 'ne8', 'ne14', 'ne15']
+	Switches -> Sw07
+		ContinueCourse -> left -> ne15
+		BranchCourse -> right -> ne14
+Node ne12:
+	Track = track8
+	Neighbours = 4 -> ['ne2', 'ne13', 'ne23', 'ne24']
+	Switches -> Sw13
+		ContinueCourse -> left -> ne23
+		BranchCourse -> right -> ne24
+Node ne13:
+	Track = track9
+	Type = BufferStop -> ['bus56']
+	Neighbours = 2 -> ['ne2', 'ne12']
+	Level crossing -> lcr74
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [1317, 180] | Coordinate: 0.7059
+Node ne14:
+	Track = track4
+	Type = BufferStop -> ['bus10']
+	Neighbours = 2 -> ['ne9', 'ne15']
+	Level crossing -> lcr69
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [1990, -360] | Coordinate: 0.3197
+Node ne15:
+	Track = track10
+	Type = BufferStop -> ['bus59']
+	Neighbours = 2 -> ['ne9', 'ne14']
+Node ne22:
+	Track = track6
+	TrainDetectionElements -> tde78
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne8', 'ne24']
+Node ne23:
+	Track = track5
+	TrainDetectionElements -> tde77
+		Type -> insulatedRailJoint
+	Neighbours = 2 -> ['ne12', 'ne24']
+Node ne24:
+	Track = track11
+	Neighbours = 4 -> ['ne8', 'ne12', 'ne22', 'ne23']
+~~~
+
+#### G.2 Safe_points.RNA: 
+
+~~~
+ne1:
+  Next: [[1065.0, 150]]
+  Prev: [[1065.0, 150]]
+ne2:
+  Next: [[2715.0, 0]]
+  Prev: [[2715.0, 0]]
+ne8:
+  Next: [[1560.0, 150]]
+  Prev: [[1560.0, 150]]
+ne12:
+  Next: [[2205.0, 0]]
+  Prev: [[2205.0, 0]]
+ne13:
+  Next: [[1162, 180], [2180.0, -180]]
+  Prev: [[1764, 180]]
+ne14:
+  Next: [[2290, -360], [1745, -360]]
+  Prev: [[2690, -360], [2145, -360]]
+ne15:
+  Prev: [[1840.0, 570]]
+ne22:
+  Next: [[2352.0, 150]]
+  Prev: [[2552.0, 150]]
+ne23:
+  Next: [[1184.0, 0]]
+  Prev: [[1384.0, 0]]
+~~~
+
+#### G.3 Signalling.RNA: 
+
+~~~
+sig01 [T01] <<:
+	From: ne13 | To: bus56_left
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [910, 180] | Coordinate: 0.2055
+sig02 [T02] >>:
+	From: ne13 | To: ne13_right
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [910, 180] | Coordinate: 0.2055
+sig03 [T03] >>:
+	From: ne14 | To: bus10_right
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [2870, -360] | Coordinate: 0.9305
+sig04 [T04] <<:
+	From: ne14 | To: ne14_left
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [2870, -360] | Coordinate: 0.9305
+sig05 [T05] >>:
+	From: ne15 | To: bus59_right
+	Type: Stop | Direction: normal | AtTrack: left 
+	Position: [2870, -570] | Coordinate: 0.9345
+sig06 [T06] <<:
+	From: ne15 | To: ne15_left
+	Type: Stop | Direction: reverse | AtTrack: right 
+	Position: [2870, -570] | Coordinate: 0.9345
+sig07 [L07] <<:
+	From: ne1 | To: oe40_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [910, -150] | Coordinate: 0.1960
+sig08 [L08] >>:
+	From: ne2 | To: oe42_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2870, 0] | Coordinate: 0.8039
+sig09 [L09] >>:
+	From: ne22 | To: oe41_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2870, -150] | Coordinate: 0.9145
+sig10 [L10] <<:
+	From: ne23 | To: oe39_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [910, 0] | Coordinate: 0.0877
+sig11 [J11] >>:
+	From: ne22 | To: ne22_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2352.0, -150] | Coordinate: 0.4717
+sig12 [J12] <<:
+	From: ne22 | To: ne22_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2552.0, -150] | Coordinate: 0.6427
+sig13 [J13] >>:
+	From: ne23 | To: ne23_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1184.0, 0] | Coordinate: 0.3280
+sig14 [J14] <<:
+	From: ne23 | To: ne23_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1384.0, 0] | Coordinate: 0.5035
+sig15 [X15] >>:
+	From: ne14 | To: ne14_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1745, 360] | Coordinate: 0.5218
+sig16 [X16] <<:
+	From: ne14 | To: ne14_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2145, 360] | Coordinate: 0.6575
+sig20 [P20] >>:
+	From: ne13 | To: ne13_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1844, -180] | Coordinate: 0.7824
+sig21 [C21] <<:
+	From: ne8 | To: ne8_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1560.0, -150] | Coordinate: 0.5
+sig22 [S22] >>:
+	From: ne1 | To: ne1_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1065.0, -150] | Coordinate: 0.5
+sig25 [C25] >>:
+	From: ne12 | To: ne12_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [2205.0, 0] | Coordinate: 0.5
+sig27 [S27] <<:
+	From: ne2 | To: ne2_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2715.0, 0] | Coordinate: 0.5
+sig29 [C29] <<:
+	From: ne15 | To: ne15_left
+	Type: Manouver | Direction: reverse | AtTrack: right 
+	Position: [1840.0, -570] | Coordinate: 0.2599
+sig32 [S32] >>:
+	From: ne8 | To: ne8_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1560.0, -150] | Coordinate: 0.5
+sig35 [S35] <<:
+	From: ne12 | To: ne12_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [2205.0, 0] | Coordinate: 0.5
+~~~
+
+#### G.4 Routes.RNA: 
+
+Full interlocking table
+~~~
+route_1 [sig02 >> sig20]:
+	Path: ['ne13']
+	Platforms: ['plf75']
+route_2 [sig04 << sig16]:
+	Path: ['ne14']
+	Platforms: ['plf68']
+route_3 [sig06 << sig29]:
+	Path: ['ne15']
+route_4 [sig11 >> sig09]:
+	Path: ['ne22']
+route_5 [sig12 << sig21]:
+	Path: ['ne22', 'ne8']
+	Switches: ['Sw12']
+route_6 [sig13 >> sig25]:
+	Path: ['ne23', 'ne12']
+	Switches: ['Sw13']
+route_7 [sig14 << sig10]:
+	Path: ['ne23']
+route_8 [sig15 >> sig03]:
+	Path: ['ne14']
+	Platforms: ['plf68']
+route_9 [sig16 << sig07]:
+	Path: ['ne14', 'ne9', 'ne1']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_10 [sig20 >> sig08]:
+	Path: ['ne13', 'ne2']
+	Switches: ['Sw06']
+	Platforms: ['plf75']
+route_11 [sig21 << sig07]:
+	Path: ['ne8', 'ne1']
+	Switches: ['Sw04', 'Sw12']
+route_12 [sig22 >> sig32]:
+	Path: ['ne1', 'ne8']
+	Switches: ['Sw04', 'Sw12']
+route_13 [sig22 >> sig15]:
+	Path: ['ne1', 'ne9', 'ne14']
+	Switches: ['Sw04', 'Sw07']
+	Platforms: ['plf68']
+route_14 [sig22 >> sig05]:
+	Path: ['ne1', 'ne9', 'ne15']
+	Switches: ['Sw04', 'Sw07']
+route_15 [sig25 >> sig08]:
+	Path: ['ne12', 'ne2']
+	Switches: ['Sw06', 'Sw13']
+route_16 [sig27 << sig35]:
+	Path: ['ne2', 'ne12']
+	Switches: ['Sw06', 'Sw13']
+route_17 [sig27 << sig01]:
+	Path: ['ne2', 'ne13']
+	Switches: ['Sw06']
+	Platforms: ['plf75']
+route_18 [sig29 << sig07]:
+	Path: ['ne15', 'ne9', 'ne1']
+	Switches: ['Sw04', 'Sw07']
+route_19 [sig32 >> sig11]:
+	Path: ['ne8', 'ne22']
+	Switches: ['Sw12']
+route_20 [sig32 >> sig25]:
+	Path: ['ne8', 'ne24', 'ne12']
+	Switches: ['Sw12', 'Sw13']
+route_21 [sig35 << sig14]:
+	Path: ['ne12', 'ne23']
+	Switches: ['Sw13']
+route_22 [sig35 << sig21]:
+	Path: ['ne12', 'ne24', 'ne8']
+	Switches: ['Sw12', 'Sw13']
+
+~~~
+
 
 <a name="G.1"></a>
 #### G.1. Obtaining table in Design4Rail
