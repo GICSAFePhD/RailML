@@ -226,7 +226,7 @@ To simplify signals mark the configuration option "Simplify signals", as shown i
 
 After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5.jpg "Figure 15")
+![Figure 15](1_B.png "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
@@ -686,7 +686,7 @@ Extra routes considering bufferStop and lineBorders:
 
 #### E.1. One-directional and bidirectional tracks
 
-RNA can consider tracks as bidirectional, while the original layout has only one-directional track. This feature is activated by mismarking the "One direction only" option, as shown in Figure 17.
+RNA can consider tracks as one-directional as well as bidirectional. This feature is activated by mismarking the "One direction only" option, as shown in Figure 17.
 
 ![Figure 17](config_5.PNG "Figure 17")
 
