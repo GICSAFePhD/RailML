@@ -688,7 +688,7 @@ Extra routes considering bufferStop and lineBorders:
 
 RNA can consider tracks as one-directional as well as bidirectional. This feature is activated by mismarking the "One direction only" option, as shown in Figure 17.
 
-![Figure 17](config_5.PNG "Figure 17")
+![Figure 17](config_6.PNG "Figure 17")
 
 *Figure 17. Produce routes considering bidirectional tracks*
 
