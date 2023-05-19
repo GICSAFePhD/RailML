@@ -1809,6 +1809,66 @@ Routes defined in "Example_3.railML" (original layout)
 </routes>
 ~~~
 
+This routes were rearrenged and summarized in Table 1.
+
+*Table 1. Original interlocking table for this example provided by RailMl*
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 | 68N1 | 69Va | 68W02_R | - | Lc01 | ne7-ne9-ne95 |
+| R_02 | 68N2 | 69Va | 68W02_N | - | Lc01 | ne1-ne9-ne95 |
+| R_03 | 69Va | 69A | - | - | - | ne95-ne59 |
+| R_04 | 69A | 69N2 | 69W03_N | Plat09 | - | ne59-ne17 |
+| R_05 | 69A | 69N3 | Sw03_NN + 69W03_R + 69W04_R | Plat08 + Plat13 | - | ne59-ne11-ne52-ne77 |
+| R_06 | 69P2 | 68F | 69W03_N | - | Lc01 | ne17-ne59-ne95-ne9 |
+| R_07 | 69B2 | 69P2 | Sw06_N | Plat09 | - | ne78-ne17 |
+| R_08 | 69B2 | 69P3 | Sw06_R + Sw07_RR | Plat13 | - | ne78-ne79-ne77 |
+| R_09 | 69B2 | 69P1 | Sw06_R + Sw07_RN | Plat12 | - | ne78-ne79-ne21 |
+| R_10 | 69C | 69N1 | Sw04_RR | Plat12 | - | ne70-ne104-ne21 |
+| R_11 | 69Vc1 | 69C | - | - | - | ne70 |
+| R_12 | 69Vc | 69Vc1 | - | Plat7 | - | ne67-ne70 |
+| R_13 | 70Va | 70A | - | - | - | ne103-ne64 |
+| R_14 | 70N2 | 69Vc | 70W01_R | - | - | ne23-ne64-ne103-ne67 |
+| R_15 | 70N1 | 69Vc | 70W0_N | - | - | ne24-ne64-ne103-ne67 |
+| R_16 | 70P1 | 72Va | 70W02_R + 71W01_N | - | - | ne24-ne26-ne65-ne102-ne44 |
+| R_17 | 70P2 | 72Va | 70W02_N + 71W01_N | - | - | ne23-ne26-ne65-ne102-ne44 |
+| R_18 | 70B | 70N2 | 70W02_N | Plat05 | - | ne26-ne23 |
+| R_19 | 70B | 70N1 | 70W02_R | Plat06 | - | ne26-ne24 |
+| R_20 | 70A | 70P1 | 70W01_N | Plat06 | - | ne64-ne24 |
+| R_21 | 70A | 70P2 | 70W01_R | Plat05 | - | ne64-ne23 |
+| R_22 | 69W04Y | 69N3 | Sw03_NN + 69W04_N | Plat13 | - | ne14-ne52-ne77 |
+| R_23 | 72Va | 72A | - | - | - | ne44-ne104-ne100 |
+| R_24 | 72-1 | S01 | Sw04_N | - | - | ne83-ne32 |
+| R_25 | 72-3b | 72B | Sw05_NN + Sw41_R | - | - | ne41-ne85-ne100 |
+| R_26 | 72-3b | S01 | Sw04_R + Sw05_NR | - | - | ne41-ne82-ne32 |
+| R_27 | 72-2 | 72B | Sw09_R + Sw41_N | - | - | ne29-ne110-ne100 |
+| R_28 | S01 | 72B | Sw09_N + Sw41_N | - | - | ne32-ne110-ne100 |
+| R_29 | 69B1 | 69P1 | Sw07_NN | Plat12 | - | ne94-ne21 |
+| R_30 | 69B1 | 69P3 | Sw07_NR | Plat08 + Plat13 | - | ne97-ne94-ne77 |
+| R_31 | 72B | 70B | 71W01_N | - | - | ne100-ne101-ne44-ne102-ne65-ne26 |
+| R_32 | 69P3 | 68F | Sw03_NN + 69W03_R + 6904_R | - | Lc01 | ne77-ne52-ne11-ne59-ne95-ne9 |
+| R_33 | 69P1 | 70Va | Sw03_RR | Plat07 | - | ne21-ne104-ne70-ne67-ne103 |
+
+#### H.2. Generated interlocking table
+
+The result of the automatic process carried by the RNA (Obtained in G.4) is the intelocking table shown in Table 2.
+
+*Table 2. Interlocking table obtain through RNA when the option "One direction only" is dismismarked.*
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20 |
+
+
+
+
+
+
+
+
+
 ----------SEGUIR ACA
 
 
