@@ -1217,6 +1217,10 @@ sig24 [T24] <<:
 	From: ne105 | To: ne105_left
 	Type: Stop | Direction: reverse | AtTrack: right 
 	Position: [6983, -300] | Coordinate: 0.7481
+sig25 [L25] <<:
+	From: ne4 | To: sb450_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [6983, -150] | Coordinate: 0.7481
 sig27 [L27] <<:
 	From: ne26 | To: sb307_left
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -1253,6 +1257,10 @@ sig35 [L35] >>:
 	From: ne95 | To: sb301_left
 	Type: Circulation | Direction: normal | AtTrack: left 
 	Position: [288, -300] | Coordinate: 0.0549
+sig36 [L36] >>:
+	From: ne96 | To: sb434_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5249, -300] | Coordinate: 0.1443
 sig37 [L37] <<:
 	From: ne97 | To: sb399_left
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -1277,6 +1285,18 @@ sig43 [J43] >>:
 	From: ne7 | To: ne7_right
 	Type: Circulation | Direction: normal | AtTrack: left 
 	Position: [-550.0, -150] | Coordinate: 0.9435
+sig46 [J46] >>:
+	From: ne9 | To: ne9_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-56.0, -300] | Coordinate: 0.5
+sig50 [X50] >>:
+	From: ne95 | To: ne95_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [900, 300] | Coordinate: 0.5113
+sig51 [X51] <<:
+	From: ne95 | To: ne95_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1300, 300] | Coordinate: 0.6938
 sig56 [P56] <<:
 	From: ne83 | To: ne83_left
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -1317,6 +1337,10 @@ sig67 [P67] >>:
 	From: ne17 | To: ne17_right
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [3903, 300] | Coordinate: 0.8070
+sig68 [P68] <<:
+	From: ne99 | To: ne99_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [5179, 150] | Coordinate: 0.4356
 sig69 [P69] >>:
 	From: ne99 | To: ne99_right
 	Type: Circulation | Direction: reverse | AtTrack: right 
@@ -1333,6 +1357,18 @@ sig73 [P73] >>:
 	From: ne21 | To: ne21_right
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [3901, 150] | Coordinate: 0.7752
+sig76 [P76] <<:
+	From: ne77 | To: ne77_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [3339, 0] | Coordinate: 0.4202
+sig77 [P77] >>:
+	From: ne77 | To: ne77_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [3899, 0] | Coordinate: 0.8583
+sig78 [C78] >>:
+	From: ne1 | To: ne1_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-1339, 300] | Coordinate: 0.5263
 sig80 [S80] <<:
 	From: ne9 | To: ne9_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
@@ -1419,56 +1455,53 @@ sig126 [S126] <<:
 
 Full interlocking table
 ~~~
-route_1 [sig02 >> sig35]:
-	Path: ['ne1', 'ne9', 'ne95']
-	Switches: ['68W02']
+route_1 [sig02 >> sig78]:
+	Path: ['ne1']
 	Platforms: ['plf177']
 route_2 [sig06 >> sig43]:
 	Path: ['ne7']
 	Platforms: ['plf178']
-route_3 [sig08 >> sig33]:
-	Path: ['ne14', 'ne52', 'ne77', 'ne79', 'ne78']
-	Switches: ['69W04', 'Sw06']
-	Platforms: ['plf184', 'plf322']
-route_4 [sig08 >> sig69]:
-	Path: ['ne14', 'ne52', 'ne77', 'ne94', 'ne97', 'ne99']
+route_3 [sig08 >> sig77]:
+	Path: ['ne14', 'ne52', 'ne77']
 	Switches: ['69W04']
-	Platforms: ['plf186', 'plf184', 'plf322']
-route_5 [sig10 >> sig100]:
+	Platforms: ['plf184', 'plf322']
+route_4 [sig10 >> sig100]:
 	Path: ['ne41', 'ne82', 'ne32']
 	Switches: ['Sw04']
 	Platforms: ['plf180']
-route_6 [sig10 >> sig105]:
+route_5 [sig10 >> sig105]:
 	Path: ['ne41', 'ne85', 'ne100', 'ne101', 'ne44']
 	Switches: ['71W01', 'Sw41']
 	Platforms: ['plf180']
-route_7 [sig12 >> sig29]:
+route_6 [sig12 >> sig29]:
 	Path: ['ne47', 'ne48']
 	Switches: ['71W02']
-route_8 [sig14 >> sig100]:
+route_7 [sig14 >> sig100]:
 	Path: ['ne84', 'ne82', 'ne32']
 	Switches: ['Sw04']
-route_9 [sig14 >> sig105]:
+route_8 [sig14 >> sig105]:
 	Path: ['ne84', 'ne85', 'ne100', 'ne101', 'ne44']
 	Switches: ['71W01', 'Sw41']
-route_10 [sig16 >> sig17]:
+route_9 [sig16 >> sig17]:
 	Path: ['ne86', 'ne88']
 	Switches: ['Sw11']
-route_11 [sig16 >> sig97]:
+route_10 [sig16 >> sig97]:
 	Path: ['ne86', 'ne87', 'ne91', 'ne30']
 	Switches: ['Sw08', 'Sw11', 'Sw12', 'Sw13']
-route_12 [sig18 << sig15]:
+route_11 [sig18 << sig15]:
 	Path: ['ne88', 'ne86']
 	Switches: ['Sw11']
-route_13 [sig20 >> sig97]:
+route_12 [sig20 >> sig97]:
 	Path: ['ne89', 'ne30']
 	Switches: ['Sw08', 'Sw12']
-route_14 [sig22 >> sig97]:
+route_13 [sig22 >> sig97]:
 	Path: ['ne90', 'ne91', 'ne30']
 	Switches: ['Sw08', 'Sw12', 'Sw13']
-route_15 [sig24 << sig70]:
+route_14 [sig24 << sig70]:
 	Path: ['ne105', 'ne98', 'ne96']
 	Platforms: ['plf187']
+route_15 [sig25 << sig42]:
+	Path: ['ne4', 'ne106']
 route_16 [sig27 << sig30]:
 	Path: ['ne26', 'ne65']
 	Switches: ['70W02']
@@ -1486,212 +1519,236 @@ route_20 [sig32 >> sig73]:
 route_21 [sig33 >> sig34]:
 	Path: ['ne78', 'ne93']
 	Switches: ['Sw06']
-route_22 [sig34 >> sig38]:
-	Path: ['ne93', 'ne96', 'ne98']
+route_22 [sig34 >> sig36]:
+	Path: ['ne93', 'ne96']
 	Platforms: ['plf187']
-route_23 [sig35 >> sig83]:
-	Path: ['ne95', 'ne59']
-	Switches: ['69W03']
-route_24 [sig37 << sig86]:
-	Path: ['ne97', 'ne94', 'ne77', 'ne52']
-	Switches: ['69W04']
+route_23 [sig35 >> sig50]:
+	Path: ['ne95']
+route_24 [sig36 >> sig38]:
+	Path: ['ne96', 'ne98']
+	Platforms: ['plf187']
+route_25 [sig37 << sig76]:
+	Path: ['ne97', 'ne94', 'ne77']
 	Platforms: ['plf184', 'plf322']
-route_25 [sig37 << sig72]:
+route_26 [sig37 << sig72]:
 	Path: ['ne97', 'ne94', 'ne21']
 	Platforms: ['plf321']
-route_26 [sig38 >> sig23]:
+route_27 [sig38 >> sig23]:
 	Path: ['ne98', 'ne105']
-route_27 [sig40 << sig126]:
+route_28 [sig40 << sig126]:
 	Path: ['ne101', 'ne100']
 	Switches: ['Sw41']
-route_28 [sig41 << sig90]:
+route_29 [sig41 << sig90]:
 	Path: ['ne103','ne64']
-route_29 [sig42 << sig37]:
-	Path: ['ne106', 'ne99', 'ne97']
+route_30 [sig42 << sig68]:
+	Path: ['ne106', 'ne99']
 	Platforms: ['plf186']
-route_30 [sig43 >> sig35]:
-	Path: ['ne7', 'ne9', 'ne95']
+route_31 [sig43 >> sig46]:
+	Path: ['ne7', 'ne9']
 	Switches: ['68W02']
 	Platforms: ['plf178']
-route_31 [sig56 << sig119]:
+route_32 [sig46 >> sig35]:
+	Path: ['ne9', 'ne95']
+	Switches: ['68W02']
+route_33 [sig50 >> sig83]:
+	Path: ['ne95', 'ne59']
+	Switches: ['69W03']
+route_34 [sig51 << sig80]:
+	Path: ['ne95', 'ne9']
+	Switches: ['68W02']
+route_35 [sig56 << sig119]:
 	Path: ['ne83', 'ne30']
 	Switches: ['Sw08', 'Sw12']
 	Platforms: ['plf179']
-route_32 [sig57 >> sig100]:
+route_36 [sig57 >> sig100]:
 	Path: ['ne83', 'ne32']
 	Switches: ['Sw04']
 	Platforms: ['plf179']
-route_33 [sig60 << sig27]:
+route_37 [sig60 << sig27]:
 	Path: ['ne23', 'ne26']
 	Switches: ['70W02']
 	Platforms: ['plf181']
-route_34 [sig61 >> sig41]:
+route_38 [sig61 >> sig41]:
 	Path: ['ne23', 'ne64', 'ne103']
 	Switches: ['70W01']
 	Platforms: ['plf181']
-route_35 [sig62 << sig27]:
+route_39 [sig62 << sig27]:
 	Path: ['ne24', 'ne26']
 	Switches: ['70W02']
 	Platforms: ['plf182']
-route_36 [sig63 >> sig41]:
+route_40 [sig63 >> sig41]:
 	Path: ['ne24', 'ne64', 'ne103']
 	Switches: ['70W01']
 	Platforms: ['plf182']
-route_37 [sig64 << sig32]:
+route_41 [sig64 << sig32]:
 	Path: ['ne67', 'ne70']
 	Platforms: ['plf183']
-route_38 [sig65 >> sig41]:
+route_42 [sig65 >> sig41]:
 	Path: ['ne67', 'ne103']
 	Platforms: ['plf183']
-route_39 [sig66 << sig80]:
-	Path: ['ne17', 'ne59', 'ne95', 'ne9']
-	Switches: ['68W02', '69W03']
+route_43 [sig66 << sig51]:
+	Path: ['ne17', 'ne59', 'ne95']
+	Switches: ['69W03']
 	Platforms: ['plf185']
-route_40 [sig67 >> sig33]:
+route_44 [sig67 >> sig33]:
 	Path: ['ne17', 'ne78']
 	Switches: ['Sw06']
 	Platforms: ['plf185']
-route_41 [sig69 >> sig03]:
+route_45 [sig68 << sig37]:
+	Path: ['ne99', 'ne97']
+	Platforms: ['plf186']
+route_46 [sig69 >> sig03]:
 	Path: ['ne99', 'ne106', 'ne4']
 	Platforms: ['plf186']
-route_42 [sig70 << sig110]:
+route_47 [sig70 << sig110]:
 	Path: ['ne96', 'ne93', 'ne78']
 	Switches: ['Sw06']
 	Platforms: ['plf187']
-route_43 [sig72 << sig32]:
+route_48 [sig72 << sig32]:
 	Path: ['ne21', 'ne104', 'ne70']
 	Platforms: ['plf321']
-route_44 [sig73 >> sig33]:
+route_49 [sig73 >> sig33]:
 	Path: ['ne21', 'ne79', 'ne78']
 	Switches: ['Sw06']
 	Platforms: ['plf321']
-route_45 [sig73 >> sig69]:
+route_50 [sig73 >> sig69]:
 	Path: ['ne21', 'ne94', 'ne97', 'ne99']
 	Platforms: ['plf186', 'plf321']
-route_46 [sig80 << sig01]:
+route_51 [sig76 << sig86]:
+	Path: ['ne77', 'ne52']
+	Switches: ['69W04']
+	Platforms: ['plf184', 'plf322']
+route_52 [sig77 >> sig33]:
+	Path: ['ne77', 'ne79', 'ne78']
+	Switches: ['Sw06']
+	Platforms: ['plf184', 'plf322']
+route_53 [sig77 >> sig69]:
+	Path: ['ne77', 'ne94', 'ne97', 'ne99']
+	Platforms: ['plf186', 'plf184', 'plf322']
+route_54 [sig78 >> sig46]:
+	Path: ['ne1', 'ne9']
+	Switches: ['68W02']
+	Platforms: ['plf177']
+route_55 [sig80 << sig01]:
 	Path: ['ne9', 'ne1']
 	Switches: ['68W02']
 	Platforms: ['plf177']
-route_47 [sig80 << sig05]:
+route_56 [sig80 << sig05]:
 	Path: ['ne9', 'ne7']
 	Switches: ['68W02']
 	Platforms: ['plf178']
-route_48 [sig83 >> sig33]:
-	Path: ['ne59', 'ne17', 'ne78']
-	Switches: ['69W03', 'Sw06']
-	Platforms: ['plf185']
-route_49 [sig83 >> sig69]:
-	Path: ['ne59', 'ne11', 'ne52', 'ne77', 'ne94', 'ne97', 'ne99']
+route_57 [sig83 >> sig77]:
+	Path: ['ne59', 'ne11', 'ne52', 'ne77']
 	Switches: ['69W03', '69W04']
-	Platforms: ['plf186', 'plf184', 'plf322']
-route_50 [sig83 >> sig67]:
+	Platforms: ['plf184', 'plf322']
+route_58 [sig83 >> sig67]:
 	Path: ['ne59', 'ne17']
 	Switches: ['69W03']
 	Platforms: ['plf185']
-route_51 [sig86 << sig80]:
-	Path: ['ne52', 'ne11', 'ne59', 'ne95', 'ne9']
-	Switches: ['68W02', '69W03', '69W04']
-route_52 [sig86 << sig07]:
+route_59 [sig86 << sig51]:
+	Path: ['ne52', 'ne11', 'ne59', 'ne95']
+	Switches: ['69W03', '69W04']
+route_60 [sig86 << sig07]:
 	Path: ['ne52', 'ne14']
 	Switches: ['69W04']
-route_53 [sig89 >> sig61]:
+route_61 [sig89 >> sig61]:
 	Path: ['ne23']
 	Platforms: ['plf181']
-route_54 [sig90 << sig60]:
+route_62 [sig90 << sig60]:
 	Path: ['ne64', 'ne23']
 	Switches: ['70W01']
 	Platforms: ['plf181']
-route_55 [sig90 << sig62]:
+route_63 [sig90 << sig62]:
 	Path: ['ne64', 'ne24']
 	Switches: ['70W01']
 	Platforms: ['plf182']
-route_56 [sig92 >> sig63]:
+route_64 [sig92 >> sig63]:
 	Path: ['ne24']
 	Platforms: ['plf182']
-route_57 [sig93 >> sig89]:
+route_65 [sig93 >> sig89]:
 	Path: ['ne26', 'ne23']
 	Switches: ['70W02']
 	Platforms: ['plf181']
-route_58 [sig93 >> sig92]:
+route_66 [sig93 >> sig92]:
 	Path: ['ne26', 'ne24']
 	Switches: ['70W02']
 	Platforms: ['plf182']
-route_59 [sig96 << sig119]:
+route_67 [sig96 << sig119]:
 	Path: ['ne29', 'ne30']
 	Switches: ['Sw08', 'Sw12']
-route_60 [sig97 >> sig124]:
+route_68 [sig97 >> sig124]:
 	Path: ['ne30', 'ne29', 'ne110']
 	Switches: ['Sw08', 'Sw09', 'Sw12']
-route_61 [sig97 >> sig57]:
+route_69 [sig97 >> sig57]:
 	Path: ['ne30', 'ne83']
 	Switches: ['Sw08', 'Sw12']
 	Platforms: ['plf179']
-route_62 [sig100 >> sig124]:
+route_70 [sig100 >> sig124]:
 	Path: ['ne32', 'ne110']
 	Switches: ['Sw09', 'Sw04']
-route_63 [sig101 << sig96]:
+route_71 [sig101 << sig96]:
 	Path: ['ne29']
-route_64 [sig102 << sig113]:
+route_72 [sig102 << sig113]:
 	Path: ['ne110', 'ne32']
 	Switches: ['Sw09', 'Sw04']
-route_65 [sig102 << sig101]:
+route_73 [sig102 << sig101]:
 	Path: ['ne110', 'ne29']
 	Switches: ['Sw09']
-route_66 [sig104 << sig28]:
+route_74 [sig104 << sig28]:
 	Path: ['ne102', 'ne44']
 	Switches: ['71W01']
-route_67 [sig105 >> sig29]:
+route_75 [sig105 >> sig29]:
 	Path: ['ne44', 'ne43', 'ne48']
 	Switches: ['71W01', '71W02']
-route_68 [sig105 >> sig93]:
+route_76 [sig105 >> sig93]:
 	Path: ['ne44', 'ne102', 'ne65', 'ne26']
 	Switches: ['70W02', '71W01']
-route_69 [sig110 << sig66]:
+route_77 [sig110 << sig66]:
 	Path: ['ne78', 'ne17']
 	Switches: ['Sw06']
 	Platforms: ['plf185']
-route_70 [sig110 << sig86]:
-	Path: ['ne78', 'ne79', 'ne77', 'ne52']
-	Switches: ['69W04', 'Sw06']
+route_78 [sig110 << sig76]:
+	Path: ['ne78', 'ne79', 'ne77']
+	Switches: ['Sw06']
 	Platforms: ['plf184', 'plf322']
-route_71 [sig110 << sig72]:
+route_79 [sig110 << sig72]:
 	Path: ['ne78', 'ne79', 'ne21']
 	Switches: ['Sw06']
 	Platforms: ['plf321']
-route_72 [sig113 << sig56]:
+route_80 [sig113 << sig56]:
 	Path: ['ne32', 'ne83']
 	Switches: ['Sw04']
 	Platforms: ['plf179']
-route_73 [sig113 << sig09]:
+route_81 [sig113 << sig09]:
 	Path: ['ne32', 'ne82', 'ne41']
 	Switches: ['Sw04']
 	Platforms: ['plf180']
-route_74 [sig113 << sig13]:
+route_82 [sig113 << sig13]:
 	Path: ['ne32', 'ne82', 'ne84']
 	Switches: ['Sw04']
-route_75 [sig119 << sig19]:
+route_83 [sig119 << sig19]:
 	Path: ['ne30', 'ne89']
 	Switches: ['Sw08', 'Sw12']
-route_76 [sig119 << sig15]:
+route_84 [sig119 << sig15]:
 	Path: ['ne30', 'ne91', 'ne87', 'ne86']
 	Switches: ['Sw08', 'Sw11', 'Sw12', 'Sw13']
-route_77 [sig119 << sig21]:
+route_85 [sig119 << sig21]:
 	Path: ['ne30', 'ne91', 'ne90']
 	Switches: ['Sw08', 'Sw12', 'Sw13']
-route_78 [sig124 >> sig105]:
+route_86 [sig124 >> sig105]:
 	Path: ['ne110', 'ne100', 'ne101', 'ne44']
 	Switches: ['Sw09', '71W01', 'Sw41']
-route_79 [sig125 << sig09]:
+route_87 [sig125 << sig09]:
 	Path: ['ne85', 'ne41']
 	Platforms: ['plf180']
-route_80 [sig125 << sig13]:
+route_88 [sig125 << sig13]:
 	Path: ['ne85', 'ne84']
-route_81 [sig126 << sig102]:
+route_89 [sig126 << sig102]:
 	Path: ['ne100', 'ne110']
 	Switches: ['Sw09', 'Sw41']
-route_82 [sig126 << sig125]:
+route_90 [sig126 << sig125]:
 	Path: ['ne100', 'ne85']
-	Switches: ['Sw41']
+	Switches: ['Sw41']	
 ~~~
 
 ### H. Comparing interlocking tables.
@@ -1864,14 +1921,131 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  T02  |  C78  | 68W02_N | - | - | ne1 |
+| R_02 |  T06  |  J43  | - | Plat02 | - | ne7 |
+| R_03 |  T08  |  P77  | Sw03_NN + 69W04_N | Plat08 + Plat13 | - | ne14-ne52-ne77 |
+| R_04 |  T10  |  S105  | Sw05_NN + Sw41_R | - | - | ne41-ne85-ne100-ne101-ne44 |
+| R_05 |  T10  |  C100  | S04_R + Sw05_NR | - | - | ne41-ne82-ne32 |
+| R_06 |  T12  |  L29  | 71W02_R | - | - | ne47-ne48 |
+| R_07 |  T14  |  S105  | Sw05_RN + Sw41_R | - | - | ne84-ne85-ne100-ne101-ne44 |
+| R_08 |  T14  |  C100  | Sw05_RR + Sw04_R | - | - | ne84-ne62-ne32 |
+| R_09 |  T16  |  T17  | Sw11_N | - | - | ne86-ne88 |
+| R_10 |  T16  |  S97  | Sw11_R + Sw13_N + Sw12_R | - | - | ne86-ne87-ne91-ne30 |
+| R_11 |  T18  |  T15  | Sw11_N | - | - | ne86-ne88 |
+| R_12 |  T20  |  S97  | Sw12_N | - | - | ne89-ne30 |
+| R_13 |  T22  |  S97  | Sw13_R + Sw12_R | - | - | ne90-ne91-ne30 |
+| R_14 |  T24  |  P70  | - | Plat11 | Ucr01 + Orc01 | ne105-ne98-ne96 |
+| R_15 |  L25  |  L42  | - | - | Ucr01 + Orc01 | ne4-ne106 |
+| R_16 |  L27  |  L30  | - | - | - | ne26-ne65 |
+| R_17 |  L28  |  L40  | - | - | - | ne44-ne104 |
+| R_18 |  L30  |  C104  | - | - | - | ne65-ne102 |
+| R_19 |  L31  |  P65  | - | - | - | ne67 |
+| R_20 |  L32  |  P73  | Sw03_RR | - | - | ne70-ne21 |
+| R_21 |  L33  |  L34  | - | - | - | ne78-ne93 |
+| R_22 |  L34  |  L36  | - | - | - | ne93-ne96 |
+| R_23 |  L35  |  X50  | - | - | - | ne95 |
+| R_24 |  L36  |  L38  | - | Plat11 | - | ne96-ne98 |
+| R_25 |  L37  |  P72  | Sw07_NN | Plat12 | - | ne97-ne94-ne21 |
+| R_26 |  L37  |  P76  | Sw07_NR | Plat08 + Plat13 | - | ne97-ne94-ne77 |
+| R_27 |  L38  |  T23  | - | - | Ucr01 + Ocr01 | ne98-ne105 |
+| R_28 |  L40  |  S126  | - | - | - | ne101-ne100 |
+| R_29 |  L41  |  S90  | - | - | - | ne64 |
+| R_30 |  L42  |  P68  | - | Plat10 | - | ne108-ne99 |
+
+
+
+
+| R_01 |  T02  |  L35  | 68W02_N | - | - | ne1-ne9-ne95 |
 | R_01 |  T02  |  L06  | SW03_N  | -  | - | ne19-ne20 |
 
 
+| R_01 |  J43  |  L35  | 68W02_R | - | - | ne7-ne9-ne95 |
+
+| R_03 |  J48  |  S83  | - | - | Lc01 | ne95-ne59 |
+| R_04 |  S83  |  P67  | 69W03_N | Plat09 | - | ne59-ne17 |
+| R_05 |  S83  |  P75  | Sw03_NN + 69W03_R + 69W04_R | Plat08 + Plat13 | - | ne59-ne11-ne52-ne77 |
+| R_06 |  S110  |  P66  | Sw06_N | Plat09 | - | ne78-ne17 |
+| R_07 |  S110  |  P74  | Sw06_R + Sw07_RR | Plat08 + Plat13 | - | ne78-ne79-ne77 |
+| R_08 |  S110 |  P72  | Sw06_R + Sw07_NR | Plat12 | - | ne78-ne79-ne21 |
+| R_09 |  L32  |  P73  | Sw03_RR | Plat12 | - | ne70-ne104-ne21 |
+| R_10 |  P64  |  L32  | - | - | - | ne67-ne70 |
+| R_11 |  L41  |  S90  | - | - | - | ne103-ne64 |
+| R_12 |  B89  |  P64  | 70W01_R | Plat05 | - | ne23-ne64-ne103-ne67 |
+| R_13 |  P61  |  P64  | 70W01_N | Plat07 | - | ne24-ne64-ne103-ne67 |
+| R_14 |  S93  |  B89  | 70W02_N | - | - | ne26-ne23 |
+| R_15 |  S93  |  B92  | 70W02_R | Plat06 | - | ne26-ne24 |
+| R_16 |  S90 |  P62  | 70W01_N | Plat06 | - | ne64-ne24 |
+| R_17 |  S90  |  P60  | 70W01_R | Plat05 | - | ne64-ne23 |
+
+| R_19 |  P57  |  C100  | Sw04_N | - | - | ne83-ne32 |
 
 
+| R_22 |  P72  |  L31  | Sw03_RR | - | - | ne21-ne104-ne70-ne67 |
+
+| R_24 |  P66  |  J49  | 69W03_N | - | - | ne17-ne59-ne95 |
 
 
+| R_27 |  S97  |  C124  | Sw08_R + Sw09_R | - | - | ne30-ne29-ne110 |
+| R_28 |  C100  |  C124  | Sw09_N | - | - | ne32-ne110 |
+| R_29 |  S105  |  S93  | 71W01_N | - | - | ne44-ne102-ne65-ne26 |
+| R_30 |  S86  |  J49  | 69W03_R + 69W04_R | - | - | ne52-ne11-ne59-ne95 |
+| R_31 |  J49  |  S80  | - | - | Lc01 | ne95-ne9 |
+| R_32 |  P60  |  L27  | 70W02_N | - | - | ne23-ne26 |
+| R_33 |  P62  |  L27  | 70W02_R | - | - | ne24-ne26 |
 
+| R_35 |  C104  |  L28  | 71W01_N | - | - | ne102-ne44 |
+| R_36 |  T02  |  P53  | - | Plat01 | - | ne1 |
+| R_37 |  T04  |  L42  | - | - | Ucr01 + Ocr01 | ne4-ne106 |
+| R_39 |  T10  |  P59  | - | Plat04 | - | ne41 |
+| R_40 |  T12  |  L29  | 71W02 | - | - | ne47-ne48 |
+| R_41 |  T14  |  S105  | Sw05_RN + Sw41_R | - | - | ne84-ne85-ne100-ne101-ne44 |
+| R_42 |  T14  |  C100  | Sw04_R + Sw05_RR | - | - | ne84-ne83-ne32 |
+| R_43 |  T18  |  T15  | Sw11_N | - | - | ne88-ne86 |
+| R_44 |  T20  |  S97  | Sw12_N | - | - | ne89-ne30 |
+| R_45 |  T22  |  S97  | Sw12_R + Sw13_R | - | - | ne90-ne91-ne30 |
+| R_46 |  T24  |  P70  | - | Plat11 | Ucr01 + Ocr01 | ne105-ne98-ne96 |
+| R_47 |  L30  |  C104  | - | - | - | ne65-ne102 |
+| R_48 |  L31  |  P65  | - | Plat07 | - | ne67 |
+| R_49 |  L33  |  L34  | - | - | - | ne78-ne93 |
+| R_50 |  L34  |  L38  | - | Plat11 | - | ne96-ne98 |
+| R_51 |  L35  |  J48  | - | - | - | ne95 |
+| R_52 |  L38  |  T23  | - | - | Ucr01 + Ocr01 | ne98-ne105 |
+| R_53 |  L40  |  S126  | - | - | - | ne101-ne100 |
+
+| R_55 |  P55  |  J43  | - | - | - | ne7 |
+| R_56 |  P56  |  S119  | Sw08_N | - | - | ne83-ne30 |
+| R_57 |  P65  |  L41  | - | - | - | ne67-ne103-ne64 |
+| R_58 |  P67  |  L33  | Sw06_N | - | - | ne17-ne78 |
+| R_59 |  P69  |  T03  | - | - | Ucr01 + Ocr01 | ne90-ne106-ne4 |
+| R_60 |  P70  |  S110  | - | - | - | ne96-ne93-ne78 |
+| R_61 |  P73  |  P69  | Sw07_NN | Plat10 | - | ne21-ne94-ne97-ne99 |
+| R_62 |  P73  |  L33  | Sw07_NR | - | - | ne21-ne79-ne78 |
+| R_63 |  P74  |  S86  | Sw03_NN | - | - | ne77-ne52 |
+| R_64 |  P75  |  P69  | Sw07_RN | - | - | ne77-ne94-ne97-ne99 |
+| R_65 |  P75  |  L33  | Sw06_R + Sw07_RR | - | - | ne77-ne79-ne78 |
+| R_66 |  B92  |  P61  | - | - | - | ne24 |
+| R_67 |  B96  |  S119  | Sw08_R | - | - | ne29-ne30 |
+| R_68 |  B101  |  B96  | - | - | - | ne29 |
+| R_69 |  C124  |  S105  | Sw41_N | - | - | ne110-ne100-ne101-ne44 |
+| R_70 |  B125  |  T09  | Sw05_NN | Plat04 | - | ne85-ne41 |
+| R_71 |  B125  |  T13  | Sw05_RN | - | - | ne85-ne84 |
+| R_72 |  S80  |  T01  | 68W02_n | Plat01 | - | ne9-ne1 |
+| R_73 |  S80  |  T05  | 68W02_R | Plat02 | - | ne9-ne7 |
+| R_74 |  S86  |  T07  | 69W04_N | - | - | ne52-ne14 |
+| R_75 |  S105 |  L29  | 71W01_R + 71W02_N | - | - | ne44-ne43-ne48 |
+| R_76 |  S126  |  S102  | Sw41_N | - | - | ne100-ne110 |
+| R_77 |  S126  |  B125 | Sw41_R | - | - | ne100-ne85 |
+| R_78 |  S102  |  S113  | Sw09_N | - | - | ne110-ne32 |
+| R_79 |  S102  |  B101  | Sw09_R | - | - | ne110-ne29 |
+| R_80 |  S113  |  P56  | Sw04_N | Plat03 | - | ne32-ne83 |
+| R_81 |  S113  |  T09  | Sw04_R + Sw05_NR | Plat04 | - | ne32-ne82-ne41 |
+| R_82 |  S113  |  T13  | Sw04_R + Sw05_RR | - | - | ne32-ne82-ne84 |
+| R_83 |  S119  |  T19  | Sw012_N | - | - | ne30-ne89 |
+| R_84 |  S119  |  T15  | Sw11_R + Sw12_R + Sw13_N | - | - | ne30-ne91-ne87-ne86 |
+| R_85 |  S119  |  T21 | Sw12_R + Sw13_R | - | - | ne30-ne91-ne90 |
+| R_86 |  S97  |  P57  | Sw08_N | Plat03 | - | ne30-ne83 |
+| R_87 |  T16  |  T17  | Sw11_N | - | - | ne86-ne88 |
+| R_88 |  T16  |  S97  | Sw11_R + Sw12_R + Sw13_N | - | - | ne86-ne87-ne91-ne30 |
 
 
 ----------SEGUIR ACA
@@ -2034,7 +2208,7 @@ Extra routes considering bidirectional tracks:
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_36 |  T02  |  P53  | - | Plat01 | - | ne1 |
 | R_37 |  T04  |  L42  | - | - | Ucr01 + Ocr01 | ne4-ne106 |
-| R_38 |  T06  |  P55  | - | Plat02 | - | ne7 |
+
 | R_39 |  T10  |  P59  | - | Plat04 | - | ne41 |
 | R_40 |  T12  |  L29  | 71W02 | - | - | ne47-ne48 |
 | R_41 |  T14  |  S105  | Sw05_RN + Sw41_R | - | - | ne84-ne85-ne100-ne101-ne44 |
