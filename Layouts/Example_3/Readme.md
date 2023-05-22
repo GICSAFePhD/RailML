@@ -1921,6 +1921,50 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  J01  |  X08  | 68W02_R | - | - | ne1 |
+| R_02 |  X08  |  S41  | - | - | neX |
+| R_03 |  P11  |  X08  | 68W02_N | - | neX |
+| R_04 |  P15  |  C58  | Sw04_N | - | neX |
+| R_05 |  P17  |  S51  | Sw05_NN + Sw41_R + 71W01_N | - | neX |
+| R_06 |  P17  |  C58  | Sw05_NR + Sw04_R | - | neX |
+| R_07 |  P19  |  P22  | 70W01_R | - | neX |
+| R_08 |  P21  |  P22  | 70W01_N | - | neX |
+| R_09 |  P22  |  P31  | Sw03_R | - | neX |
+| R_10 |  P24  |  S38  | 69W03_N | - | neX |
+| R_11 |  P26  |  S48  | Sw07_NN + Sw03_R | - | neX |
+| R_12 |  P26  |  S38  | Sw07_NR + Sw03_N + 69W04_R + 69W03_R | - | neX |
+| R_13 |  P28  |  S68  | - | - | neX |
+| R_14 |  B37  |  J01  | - | - | neX |
+| R_15 |  S41  |  P35  | 69W03_R + 69W04_R + Sw03_N | - | neX |
+| R_16 |  C43  |  P35  | 69W04_N + Sw03_N | - | neX |
+| R_17 |  B47  |  P19  | - | - | neX |
+| R_18 |  S48  |  B59  | 70W01_N + 70W02_R + 71W01_N + Sw41_N + Sw09_R | - | neX |
+| R_19 |  S48  |  B83  | 70W01_N + 70W02_R + 71W01_N + Sw41_R | - | neX |
+| R_20 |  S48  |  B59  | 70W01_R + 70W02_N + 71W01_N + Sw41_N + Sw09_R | - | neX |
+| R_21 |  S48  |  B83  | 70W01_R + 70W02_R + 71W01_N + Sw41_R | - | neX |
+| R_22 |  S51  |  B47  | 70W02_N | - | neX |
+| R_23 |  S51  |  P21  | 70W02_R | - | neX |
+| R_24 |  S55  |  P15  | Sw08_N | - | neX |
+| R_25 |  S55  |  C82  | Sw08_R + Sw09_R | - | neX |
+| R_26 |  C58  |  C82  | Sw09_N | - | neX |
+| R_27 |  S68  |  P24  | Sw06_N | - | neX |
+| R_28 |  S68  |  S48  | Sw06_R + Sw07_NR + Sw03_R | - | neX |
+| R_29 |  S68  |  S38  | Sw06_R + Sw07_RR + Sw03_N +69W04_R +69W03_R | - | neX |
+| R_30 |  S74  |  S55  | Sw11_R + Sw13_N + Sw12_R | - | neX |
+| R_31 |  C76  |  S55  | Sw12_N | - | neX |
+| R_32 |  B81  |  S55  | Sw13_R + Sw12_R | - | neX |
+| R_33 |  C82  |  S51  | Sw41_N + 71W01_N | - | neX |
+
+
+----------SEGUIR ACA
+
+
+
+
+*Table 4. Full Interlocking table obtain through RNA when the option "One direction only" is dismismarked.*
+
+| Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
+|  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  T02  |  C78  | 68W02_N | - | - | ne1 |
 | R_02 |  T06  |  J43  | - | Plat02 | - | ne7 |
 | R_03 |  T08  |  P77  | Sw03_NN + 69W04_N | Plat08 + Plat13 | - | ne14-ne52-ne77 |
@@ -2013,6 +2057,13 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 | R_90 |  S126  |  B125 | Sw41_R | - | - | ne100-ne85 |
 
 ----------SEGUIR ACA
+
+
+
+
+
+
+
 
 
 
