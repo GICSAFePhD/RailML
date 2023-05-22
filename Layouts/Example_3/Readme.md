@@ -1921,12 +1921,17 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  J01  |  X08  | 68W02_R | - | - | ne1 |
-| R_02 |  X08  |  S41  | - | - | neX |
-| R_03 |  P11  |  X08  | 68W02_N | - | neX |
-| R_04 |  P15  |  C58  | Sw04_N | - | neX |
-| R_05 |  P17  |  S51  | Sw05_NN + Sw41_R + 71W01_N | - | neX |
-| R_06 |  P17  |  C58  | Sw05_NR + Sw04_R | - | neX |
+| R_01 |  J01  |  X08  | 68W02_R | - | - | ne7-ne9-ne95 |
+| R_02 |  X08  |  S41  | Lc01 | - | ne95-ne59 |
+| R_03 |  P11  |  X08  | 68W02_N | - | ne1-ne9-ne95 |
+| R_04 |  P15  |  C58  | Sw04_N | - | ne83-ne32 |
+| R_05 |  P17  |  S51  | Sw05_NN + Sw41_R + 71W01_N | - | ne41-ne85-ne100-ne101-ne44-ne102-ne65-ne26 |
+| R_06 |  P17  |  C58  | Sw05_NR + Sw04_R | - | ne41-ne82-ne32 |
+
+----------SEGUIR ACA
+
+
+
 | R_07 |  P19  |  P22  | 70W01_R | - | neX |
 | R_08 |  P21  |  P22  | 70W01_N | - | neX |
 | R_09 |  P22  |  P31  | Sw03_R | - | neX |
