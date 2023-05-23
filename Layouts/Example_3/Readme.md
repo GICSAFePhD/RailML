@@ -2033,20 +2033,35 @@ The 33 routes in the original interlocking table (Table 1) have en exact equival
 Some routes in the original table were splitted into new routes, some others were extended or their signals moved earlier. All these because of safety. For example:
 
 Old Route 1 was splitted into Route 02 (to stop before the switch 68W02), Route 29 (to stop before the intersectional change) and Route 30 (to complete the original route).
+
 Old Route 2 was splitted into Route 01 (to stop before the platform plat01), Route 51 (to stop before the intersectional change) and Route 30 (to complete the original route).
+
 Old Route 3 was splitted into Route 22 (to stop before the level crossing Lc01) and Route 31 (to complete the original route).
+
 Old Route 6 was splitted into Route 39 (to stop before the level crossing Lc01) and Route 32 (to complete the original route).
+
 Old Route 11 was combined with the old Route 10 into the new Route 19 due to the fact that stopping in the middle of a curve was considered dangerous
+
 Old Route 13 was modified in the new Route 38 with the start signal before the curve, to increase safety.
+
 Old Route 16 was splitted into Route 61 (to stop before the intersectional change), Route 16 (to stop before the intersectional change), Route 18 (to stop before switch 71W01) and Route 71 (to complete the original route).
+
 Old Route 17 was splitted into Route 35 (to stop before the intersectional change), Route 16 (to stop before the intersectional change), Route 18 (to stop before switch 71W01) and Route 71 (to complete the original route).
+
 Old Route 23 was splitted into Route 17 (to stop before the intersectional change) and Route 26 (to complete the original route).
+
 Old Route 25 was extended until half of old Route 31 in the new Route 04, to stop before the switch 71W01.
+
 Old Route 27 was splitted in the new Route 64 (to stop before switch Sw41) and Route 83 (to complete the original route).
+
 Old Route 28 was splitted in the new Route 67 (to stop before switch Sw41) and Route 83 (to complete the original route).
+
 Old Route 29 starts earlier in the new Route 23, to stop before the intersection changes.
+
 Old Route 31 was splitted into new Route 83 (to stop before switch 71W01) and Route 72 (to complete the original route).
+
 Old Route 32 was splitted into new Route 48 (to stop before switch 69W04), Route 57 (to stop before the level crossing Lc01) and Route 32 (to complete the original route).
+
 Old Route 33 was splitted into Route 45 (to stop before the dangerous curve) and Route 38 (to scomplete the original route).
 
 RNA incorporates signals to protect end of lines (lineBorders and bufferStop) and, therefoure, new routes were created with those signals as start or end signals. This increases both safety and mobility.
