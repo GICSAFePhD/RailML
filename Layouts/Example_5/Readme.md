@@ -140,7 +140,7 @@ Below, in subsections E.1, E.2, E.3, and E.4, you will find the sequence of conf
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 6.
 
-![Figure 6](config_1.png "Figure 6")
+![Figure 6](config_1.PNG "Figure 6")
 
 *Figure 6. Configuring RNA to obtain signals for line borders(L) and buffer stops(T).*
 
