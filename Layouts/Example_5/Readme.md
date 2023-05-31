@@ -166,7 +166,7 @@ The signals for rail joints are named J and have a consecutive number of signals
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 8.
 
-![Figure 8](config_2.png "Figure 8")
+![Figure 8](config_2.PNG "Figure 8")
 
 *Figure 8. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -182,7 +182,7 @@ The signals for platforms are named P, and signals for level crossings are named
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 10.
 
-![Figure 10](config_3.png "Figure 10")
+![Figure 10](config_3.PNG "Figure 10")
 
 *Figure 10. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -202,7 +202,7 @@ RNA does not allocate signals assigned close to every platforms or level crossin
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 12.
 
-![Figure 12](config_4.png "Figure 12")
+![Figure 12](config_4.PNG "Figure 12")
 
 *Figure 12. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
