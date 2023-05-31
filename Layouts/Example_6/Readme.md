@@ -348,7 +348,6 @@ Node ne42:
 	Track = track11
 	Type = BufferStop -> ['bus66']
 	Neighbours = 2 -> ['ne7', 'ne41']
-
 ~~~
 
 #### G.2 Safe_points.RNA: 
@@ -381,7 +380,6 @@ ne41:
   Prev: [[2350.0, 1320]]
 ne42:
   Next: [[1190.0, 1260]]
-
 ~~~
 
 #### G.3 Signalling.RNA: 
@@ -427,10 +425,6 @@ sig10 [T10] >>:
 	From: ne42 | To: ne42_right
 	Type: Stop | Direction: reverse | AtTrack: right 
 	Position: [490, -1260] | Coordinate: 0.3545
-sig11 [L11] <<:
-	From: ne1 | To: oe51_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [-1400, -450] | Coordinate: 0.1111
 sig13 [J13] >>:
 	From: ne11 | To: ne11_right
 	Type: Circulation | Direction: normal | AtTrack: left 
@@ -487,7 +481,6 @@ sig37 [S37] <<:
 	From: ne41 | To: ne41_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [1850.0, -1020] | Coordinate: 0.9277
-
 ~~~
 
 #### G.4 Routes.RNA: 
@@ -514,53 +507,49 @@ route_6 [sig14 << sig16]:
 route_7 [sig16 << sig21]:
 	Path: ['ne5', 'ne3']
 	Switches: ['Sw02', 'Sw05']
-route_8 [sig18 << sig11]:
-	Path: ['ne1']
-	Switches: ['Sw01']
-route_9 [sig19 >> sig07]:
+route_8 [sig19 >> sig07]:
 	Path: ['ne7', 'ne41']
 	Switches: ['Sw08']
-route_10 [sig20 << sig29]:
+route_9 [sig20 << sig29]:
 	Path: ['ne7']
-route_11 [sig21 << sig18]:
+route_10 [sig21 << sig18]:
 	Path: ['ne3', 'ne1']
 	Switches: ['Sw01', 'Sw02']
-route_12 [sig22 >> sig27]:
+route_11 [sig22 >> sig27]:
 	Path: ['ne1', 'ne3']
 	Switches: ['Sw01', 'Sw02']
-route_13 [sig22 >> sig19]:
+route_12 [sig22 >> sig19]:
 	Path: ['ne1', 'ne2', 'ne7']
 	Switches: ['Sw01', 'Sw03']
-route_14 [sig22 >> sig03]:
+route_13 [sig22 >> sig03]:
 	Path: ['ne1', 'ne2', 'ne6']
 	Switches: ['Sw01', 'Sw03']
-route_15 [sig26 << sig21]:
+route_14 [sig26 << sig21]:
 	Path: ['ne4', 'ne3']
 	Switches: ['Sw02']
-route_16 [sig27 >> sig33]:
+route_15 [sig27 >> sig33]:
 	Path: ['ne3', 'ne5']
 	Switches: ['Sw02', 'Sw05']
-route_17 [sig27 >> sig01]:
+route_16 [sig27 >> sig01]:
 	Path: ['ne3', 'ne4']
 	Switches: ['Sw02']
-route_18 [sig29 << sig18]:
+route_17 [sig29 << sig18]:
 	Path: ['ne7', 'ne2', 'ne1']
 	Switches: ['Sw01', 'Sw03']
-route_19 [sig33 >> sig05]:
+route_18 [sig33 >> sig05]:
 	Path: ['ne5', 'ne10']
 	Switches: ['Sw05']
-route_20 [sig33 >> sig13]:
+route_19 [sig33 >> sig13]:
 	Path: ['ne5', 'ne11']
 	Switches: ['Sw05']
-route_21 [sig36 << sig09]:
+route_20 [sig36 << sig09]:
 	Path: ['ne42']
-route_22 [sig37 << sig20]:
+route_21 [sig37 << sig20]:
 	Path: ['ne41', 'ne7']
 	Switches: ['Sw08']
-route_23 [sig37 << sig36]:
+route_22 [sig37 << sig36]:
 	Path: ['ne41', 'ne42']
 	Switches: ['Sw08']
-
 ~~~
 
 ### H. Comparing interlocking tables.
@@ -822,23 +811,21 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 | R_05 | T10 | T07 | Sw08_R | - | - |  ne42-ne41 |
 | R_06 | J14 | J16 | Sw05_N | - | - | ne11-ne05 |
 | R_07 | J16 | C21 | Sw02_N | - | - | ne05-ne03 |
-| R_08 | J18 | L11 | - | - | - | ne01 |
-| R_09 | J19 | T07 | Sw08_N | - | - | ne07-ne41 |
-| R_10 | J20 | C29 | - | - | - | ne07 |
-| R_11 | C21 | J18 | Sw01_N | - | - | ne03-ne01 |
-| R_12 | S22 | S27 | Sw01_N | - | - | ne01-ne03 |
-| R_13 | S22 | J19 | Sw01_R + Sw03_N | - | - | ne01-ne02-ne07 |
-| R_14 | S22 | T03 | Sw01_R + Sw03_R | - | - | ne01-ne02-ne06 |
-| R_15 | B26 | C21 | Sw02_R | - | - | ne04-ne03 |
-| R_16 | S27 | S33 | Sw02_N | - | - | ne03-ne05 |
-| R_17 | S27 | T01 | Sw02_R | - | - | ne03-ne04 |
-| R_18 | C29 | J18 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
-| R_19 | S33 | J13 | Sw05_N | - | - | ne05-ne11 |
-| R_20 | S33 | T05 | Sw05_R | - | - | ne05-ne10 |
-| R_21 | B36 | T09 | - | - | - | ne42 |
-| R_22 | S37 | J20 | Sw08_N | - | - | ne41-ne07 |
-| R_23 | S37 | B36 | Sw08_R | - | - | ne41-ne42 |
-
+| R_08 | J19 | T07 | Sw08_N | - | - | ne07-ne41 |
+| R_09 | J20 | C29 | - | - | - | ne07 |
+| R_10 | C21 | J18 | Sw01_N | - | - | ne03-ne01 |
+| R_11 | S22 | S27 | Sw01_N | - | - | ne01-ne03 |
+| R_12 | S22 | J19 | Sw01_R + Sw03_N | - | - | ne01-ne02-ne07 |
+| R_13 | S22 | T03 | Sw01_R + Sw03_R | - | - | ne01-ne02-ne06 |
+| R_14 | B26 | C21 | Sw02_R | - | - | ne04-ne03 |
+| R_15 | S27 | S33 | Sw02_N | - | - | ne03-ne05 |
+| R_16 | S27 | T01 | Sw02_R | - | - | ne03-ne04 |
+| R_17 | C29 | J18 | Sw01_R + Sw03_N | - | - | ne07-ne02-ne01 |
+| R_18 | S33 | J13 | Sw05_N | - | - | ne05-ne11 |
+| R_19 | S33 | T05 | Sw05_R | - | - | ne05-ne10 |
+| R_20 | B36 | T09 | - | - | - | ne42 |
+| R_21 | S37 | J20 | Sw08_N | - | - | ne41-ne07 |
+| R_22 | S37 | B36 | Sw08_R | - | - | ne41-ne42 |
 
 #### H.3. Interlocking table comparisson
 
@@ -846,22 +833,22 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Design4Rail  | Signals | netElements | RNA | Signals | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-|R_01|	S01-S06	|ne01-ne03|R_12|	S22-S27	|ne01-ne03|
-|R_02|	S01-S13	|ne01-ne02-ne06| R_14|	S22-T03	|ne01-ne02-ne06|
-|R_03|	S01-S18	|ne01-ne02-ne07| R_13|	S22-J19	|ne01-ne02-ne07|
-|R_04|	S06-S07	|ne03-ne05| R_16|	S27-S33	|ne03-ne05|
-|R_05|	S06-S12	|ne03-ne04| R_17|	S27-T01	|ne03-ne04|
-|R_06|	S21-S19	|ne41-ne07| R_22|	S37-J20	|ne41-ne07|
-|R_07|	S21-S14	|ne41-ne42| R_23|	S37-B36	|ne41-ne42|
-|R_08|	S05-S02	|ne03-ne01| R_11|	C21-J18	|ne03-ne01|
+|R_01|	S01-S06	|ne01-ne03|R_11|	S22-S27	|ne01-ne03|
+|R_02|	S01-S13	|ne01-ne02-ne06| R_13|	S22-T03	|ne01-ne02-ne06|
+|R_03|	S01-S18	|ne01-ne02-ne07| R_12|	S22-J19	|ne01-ne02-ne07|
+|R_04|	S06-S07	|ne03-ne05| R_15|	S27-S33	|ne03-ne05|
+|R_05|	S06-S12	|ne03-ne04| R_16|	S27-T01	|ne03-ne04|
+|R_06|	S21-S19	|ne41-ne07| R_21|	S37-J20	|ne41-ne07|
+|R_07|	S21-S14	|ne41-ne42| R_22|	S37-B36	|ne41-ne42|
+|R_08|	S05-S02	|ne03-ne01| R_10|	C21-J18	|ne03-ne01|
 |R_09|	S09-S08	|ne11-ne05| R_06|	J14-J16	|ne11-ne05|
 |R_10|	S08-S05	|ne05-ne03| R_07|	J16-C21	|ne05-ne03|
 |R_11|	S10-S08	|ne10-ne05| R_03|	T06-J16	|ne10-ne05|
 |R_12|	S15-S16	|ne42-ne41| R_05|	T10-T07	|ne42-ne41
-|R_13|	S18-S16	|ne07-ne41| R_09|	J19-T07	|ne07-ne41|
-|R_14|	S19-S20	|ne07| R_10|	J20-C29	|ne07|
-|R_15|	S20-S02	|ne07-ne02-ne01| R_18|	C29-J18	|ne07-ne02-ne01|
-|R_16|	S07-S11	|ne05-ne10| R_20|	S33-T05	|ne05-ne10|
+|R_13|	S18-S16	|ne07-ne41| R_08|	J19-T07	|ne07-ne41|
+|R_14|	S19-S20	|ne07| R_09|	J20-C29	|ne07|
+|R_15|	S20-S02	|ne07-ne02-ne01| R_17|	C29-J18	|ne07-ne02-ne01|
+|R_16|	S07-S11	|ne05-ne10| R_19|	S33-T05	|ne05-ne10|
 
 The 16 routes in the original interlocking table (Table 1) have en exact equivalent in the interlocking table generated by RNA (Table 2). It is clear that not safety functionality were ignored by RNA.
 
@@ -873,13 +860,11 @@ Route 2 was created because RNA added signal T04 to protect the end of the line 
 
 Route 4 was created because RNA added signal T08 to protect the end of the line in section ne41, and it's generating a route between T08 and S37.
 
-Route 8 was created because RNA added signal L11 to protect the end of the line in section ne01, and it's generating a route between J18 and L11.
+Route 14 was created because RNA added signal B26 to protect the branch of Sw02 and the curve in this zone (CDL zone) in section ne04, and it's generating a route between B26 and C21.
 
-Route 15 was created because RNA added signal B26 to protect the branch of Sw02 and the curve in this zone (CDL zone) in section ne04, and it's generating a route between B26 and C21.
+Route 18 was created because RNA added signal J13 to protect the the other side of the rail joint in section ne11 (CDL zone), and it's generating a route between S33 and J13.
 
-Route 19 was created because RNA added signal J13 to protect the the other side of the rail joint in section ne11 (CDL zone), and it's generating a route between S33 and J13.
-
-Route 21 was created because RNA added signal T09 the end of the line in section ne42, and it's generating a route between B36 and T09.
+Route 20 was created because RNA added signal T09 the end of the line in section ne42, and it's generating a route between B36 and T09.
 
 These elements (end of the lines, rail joints and CDL zones) were not full protected in the original interlocking table.
 
