@@ -122,7 +122,7 @@ The result of this step is shown in Console Output 2 and Figure 3.
 
 All these identified elements are shown in Figure 4.
 
-![Figure 4](step_C_and_D_graphic.png "Figure 4")
+![Figure 4](step_C_and_D_graphic.jpg "Figure 4")
 
 *Figure 4. Infrastructure analysis and CDL zones detection: Layout.*
 
