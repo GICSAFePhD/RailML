@@ -225,7 +225,7 @@ The signal simplification process used by RNA relies on two main principles: i) 
 
 To simplify signals mark the configuration option "Simplify signals", as shown in Figure 14.
 
-![Figure 14](config_5.PNG "Figure 14")
+![Figure 14](config_5B.PNG "Figure 14")
 
 *Figure 14. Configuring RNA to simplify signalling.*
 
