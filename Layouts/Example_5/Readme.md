@@ -48,7 +48,7 @@ For further information about the Design4Rail Horizon Software Suite and the Tra
 
 For a detailed explanation about importing railML files, go to section [G.1](#g1-obtaining-the-interlocking-table-in-design4rail) of this document. 
 
-![Figure 2](Figure0.png "Figure 2")
+![Figure 2](Figure0.jpg "Figure 2")
 
 *Figure 2. Railway network without signalling.*
 
@@ -122,7 +122,7 @@ The result of this step is shown in Console Output 2 and Figure 3.
 
 All these identified elements are shown in Figure 4.
 
-![Figure 4](step_C_and_D_graphic.png "Figure 4")
+![Figure 4](step_C_and_D_graphic.jpg "Figure 4")
 
 *Figure 4. Infrastructure analysis and CDL zones detection: Layout.*
 
@@ -140,7 +140,7 @@ Below, in subsections E.1, E.2, E.3, and E.4, you will find the sequence of conf
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 6.
 
-![Figure 6](config_1.png "Figure 6")
+![Figure 6](config_1.PNG "Figure 6")
 
 *Figure 6. Configuring RNA to obtain signals for line borders(L) and buffer stops(T).*
 
@@ -166,7 +166,7 @@ The signals for rail joints are named J and have a consecutive number of signals
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 8.
 
-![Figure 8](config_2.png "Figure 8")
+![Figure 8](config_2.PNG "Figure 8")
 
 *Figure 8. Configuring RNA to obtain signals for line borders(L), buffer stops(T) and rail joints (J).*
 
@@ -182,7 +182,7 @@ The signals for platforms are named P, and signals for level crossings are named
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 10.
 
-![Figure 10](config_3.png "Figure 10")
+![Figure 10](config_3.PNG "Figure 10")
 
 *Figure 10. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P) and level crossings(X).*
 
@@ -202,7 +202,7 @@ RNA does not allocate signals assigned close to every platforms or level crossin
 
 The configuration of the RNA GUI application needed for this step of the analysis is shown in Figure 12.
 
-![Figure 12](config_4.png "Figure 12")
+![Figure 12](config_4.PNG "Figure 12")
 
 *Figure 12. Configuring RNA to obtain signals for line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).*
 
@@ -215,7 +215,7 @@ Signals generated for Example 5 are shown in red letters in Figure 13:
 - Sw03: *C29, S31, B34 and H32*.
 - Sw04: *C33, S35, B30 and H36*.
 
-![Figure 13](Figure4.jpg "Figure 13")
+![Figure 13](Figure4B.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).* 
 
@@ -231,7 +231,7 @@ To simplify signals mark the configuration option "Simplify signals", as shown i
 
 After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5.jpg "Figure 15")
+![Figure 15](Figure5B.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
