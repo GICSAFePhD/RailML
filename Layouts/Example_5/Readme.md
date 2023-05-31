@@ -231,7 +231,7 @@ To simplify signals mark the configuration option "Simplify signals", as shown i
 
 After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5B.jpg "Figure 15")
+![Figure 15](Figure5B.JPG "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
