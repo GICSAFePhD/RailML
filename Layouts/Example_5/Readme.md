@@ -215,7 +215,7 @@ Signals generated for Example 5 are shown in red letters in Figure 13:
 - Sw03: *C29, S31, B34 and H32*.
 - Sw04: *C33, S35, B30 and H36*.
 
-![Figure 13](Figure4.jpg "Figure 13")
+![Figure 13](Figure4B.jpg "Figure 13")
 
 *Figure 13. Signals due to line borders(L),buffer stops(T),rail joints (J), platforms(P),level crossings(X) and switches(S,H,C,B).* 
 
@@ -231,7 +231,7 @@ To simplify signals mark the configuration option "Simplify signals", as shown i
 
 After the simplification only the appropriate signals are kept, as shown in Figure 15.
 
-![Figure 15](Figure5.jpg "Figure 15")
+![Figure 15](Figure5B.jpg "Figure 15")
 
 *Figure 15. Signalling simplification.*
 
