@@ -209,7 +209,7 @@
 <td>railML library</td><td><a href="https://github.com/GICSAFePhD/railML">Link</a></td></tr>
  
 <tr><td rowspan="1" align="center">Layouts</td>
-<td>Examples</td><td><a href="https://github.com/GICSAFePhD/Layouts">Link</a></td></tr>  
+<td>Examples</td><td><a href="https://github.com/GICSAFePhD/RailML/tree/main/Layouts">Link</a></td></tr>  
 
 <!-- Pegar tabla de excel fin -->
 </table>
