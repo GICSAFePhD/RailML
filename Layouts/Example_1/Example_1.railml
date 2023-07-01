@@ -1005,7 +1005,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig105_sig104">
-                    <designator register="_Example" entry="Route S13-S12 (Sw13_N)"/>
+                    <designator register="_Example" entry="Route S13-S12"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd87"/>
                     <hasTvdSection ref="tvd92"/>
@@ -1017,7 +1017,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig108_sig94">
-                    <designator register="_Example" entry="Route S16-S02 (Sw12_N)"/>
+                    <designator register="_Example" entry="Route S16-S02"/>
                     <handlesRouteType ref="rt_main"/>
                     <hasTvdSection ref="tvd80"/>
                     <hasTvdSection ref="tvd92"/>
@@ -1029,7 +1029,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig109_sig110_swi55N">
-                    <designator register="_Example" entry="Route S07-S10 (Sw06_N)"/>
+                    <designator register="_Example" entry="Route S07-S10 (Sw06N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi55_rt_sig109_sig110_swi55N" inPosition="right">
                         <designator register="_Example" entry="Sw06 in right"/>
@@ -1044,7 +1044,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig109_sig101_swi55R">
-                    <designator register="_Example" entry="Route S07-S09 (Sw06_R)"/>
+                    <designator register="_Example" entry="Route S07-S09 (Sw06R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi55_rt_sig109_sig101_swi55R" inPosition="left">
                         <designator register="_Example" entry="Sw06 in left"/>
@@ -1059,7 +1059,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig110_sig106_swi73N">
-                    <designator register="_Example" entry="Route S10-S14 (Sw13_N)"/>
+                    <designator register="_Example" entry="Route S10-S14 (Sw13N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi73_rt_sig110_sig106_swi73N" inPosition="left">
                         <designator register="_Example" entry="Sw13 in left"/>
@@ -1074,7 +1074,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig110_sig94_swi73R">
-                    <designator register="_Example" entry="Route S10-S02 (Sw12_N-Sw13_R)"/>
+                    <designator register="_Example" entry="Route S10-S02 (Sw13R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi73_rt_sig110_sig94_swi73R" inPosition="right">
                         <designator register="_Example" entry="Sw13 in right"/>
@@ -1089,7 +1089,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig111_sig113_swi9N">
-                    <designator register="_Example" entry="Route S01-S17 (Sw04_N)"/>
+                    <designator register="_Example" entry="Route S01-S17 (Sw04N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi9_rt_sig111_sig113_swi9N" inPosition="right">
                         <designator register="_Example" entry="Sw04 in right"/>
@@ -1104,7 +1104,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig111_sig115_swi9R_swi58N">
-                    <designator register="_Example" entry="Route S01-S19 (Sw04_R-Sw07_N)"/>
+                    <designator register="_Example" entry="Route S01-S19 (Sw04R-Sw07N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi9_rt_sig111_sig115_swi9R_swi58N" inPosition="left">
                         <designator register="_Example" entry="Sw04 in left"/>
@@ -1123,7 +1123,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig111_sig97_swi9R_swi58R">
-                    <designator register="_Example" entry="Route S01-S05 (Sw04_R-Sw07_R)"/>
+                    <designator register="_Example" entry="Route S01-S05 (Sw04R-Sw07R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi9_rt_sig111_sig97_swi9R_swi58R" inPosition="left">
                         <designator register="_Example" entry="Sw04 in left"/>
@@ -1142,7 +1142,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig113_sig107_swi72N">
-                    <designator register="_Example" entry="Route S17-S15 (Sw12_N)"/>
+                    <designator register="_Example" entry="Route S17-S15 (Sw12N)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi72_rt_sig113_sig107_swi72N" inPosition="left">
                         <designator register="_Example" entry="Sw12 in left"/>
@@ -1157,7 +1157,7 @@
                     </routeExit>
                 </route>
                 <route id="rt_sig113_sig104_swi72R">
-                    <designator register="_Example" entry="Route S17-S12 (Sw12_R-Sw13_R)"/>
+                    <designator register="_Example" entry="Route S17-S12 (Sw12R)"/>
                     <handlesRouteType ref="rt_main"/>
                     <facingSwitchInPosition id="rp_pt_swi72_rt_sig113_sig104_swi72R" inPosition="right">
                         <designator register="_Example" entry="Sw12 in right"/>
