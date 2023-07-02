@@ -1,70 +1,165 @@
-route_1 [S02 >> S20]:
-	Path: ['ne13']
-	Platforms: ['Plat13']
-	Crossings: ['Lc08']
-route_2 [S04 << S16]:
-	Path: ['ne14']
-	Platforms: ['Plat11']
-route_3 [S06 << S29]:
-	Path: ['ne15']
-route_4 [S11 >> S09]:
-	Path: ['ne22']
-route_5 [S12 << S21]:
-	Path: ['ne22', 'ne8']
-	Switches: ['Sw12_N']
-route_6 [S13 >> S25]:
-	Path: ['ne23', 'ne12']
-	Switches: ['Sw13_N']
-route_7 [S15 >> S03]:
-	Path: ['ne14']
-	Platforms: ['Plat11']
-	Crossings: ['Lc06']
-route_8 [S16 << S07]:
-	Path: ['ne14', 'ne9', 'ne1']
-	Switches: ['Sw04_R', 'Sw07_R']
-	Crossings: ['Lc06']
-route_9 [S18 << S07]:
-	Path: ['ne14', 'ne9', 'ne1']
-	Switches: ['Sw04_R', 'Sw07_R']
-	Crossings: ['Lc06']
-route_10 [S20 >> S08]:
-	Path: ['ne13', 'ne2']
-	Switches: ['Sw06_R']
-route_11 [S21 << S07]:
-	Path: ['ne8', 'ne1']
-	Switches: ['Sw04_N']
-route_12 [S22 >> S32]:
-	Path: ['ne1', 'ne8']
-	Switches: ['Sw04_N']
-route_13 [S22 >> S15]:
-	Path: ['ne1', 'ne9', 'ne14']
-	Switches: ['Sw04_R', 'Sw07_R']
-route_14 [S22 >> S05]:
-	Path: ['ne1', 'ne9', 'ne15']
-	Switches: ['Sw04_R', 'Sw07_N']
-route_15 [S25 >> S08]:
-	Path: ['ne12', 'ne2']
-	Switches: ['Sw06_N']
-route_16 [S27 << S35]:
-	Path: ['ne2', 'ne12']
-	Switches: ['Sw06_N']
-route_17 [S27 << S01]:
-	Path: ['ne2', 'ne13']
-	Switches: ['Sw06_R']
-	Platforms: ['Plat13']
-	Crossings: ['Lc08']
-route_18 [S29 << S07]:
-	Path: ['ne15', 'ne9', 'ne1']
-	Switches: ['Sw04_R', 'Sw07_N']
-route_19 [S32 >> S11]:
-	Path: ['ne8', 'ne22']
-	Switches: ['Sw12_N']
-route_20 [S32 >> S25]:
-	Path: ['ne8', 'ne24', 'ne12']
-	Switches: ['Sw12_R', 'Sw13_R']
-route_21 [S35 << S14]:
-	Path: ['ne12', 'ne23']
-	Switches: ['Sw13_N']
-route_22 [S35 << S21]:
-	Path: ['ne12', 'ne24', 'ne8']
-	Switches: ['Sw12_R', 'Sw13_R']
+route_1 [S02 >> S35]:
+	Path: ['ne1', 'ne9', 'ne95']
+route_2 [S06 >> S43]:
+	Path: ['ne7']
+route_3 [S08 >> S33]:
+	Path: ['ne14', 'ne52', 'ne77', 'ne79', 'ne78']
+route_4 [S08 >> S69]:
+	Path: ['ne14', 'ne52', 'ne77', 'ne94', 'ne97', 'ne99']
+route_5 [S10 >> S100]:
+	Path: ['ne41', 'ne82', 'ne32']
+route_6 [S10 >> S105]:
+	Path: ['ne41', 'ne85', 'ne100', 'ne101', 'ne44']
+route_7 [S12 >> S29]:
+	Path: ['ne47', 'ne48']
+route_8 [S14 >> S100]:
+	Path: ['ne84', 'ne82', 'ne32']
+route_9 [S14 >> S105]:
+	Path: ['ne84', 'ne85', 'ne100', 'ne101', 'ne44']
+route_10 [S16 >> S17]:
+	Path: ['ne86', 'ne88']
+route_11 [S16 >> S97]:
+	Path: ['ne86', 'ne87', 'ne91', 'ne30']
+route_12 [S18 << S15]:
+	Path: ['ne88', 'ne86']
+route_13 [S20 >> S97]:
+	Path: ['ne89', 'ne30']
+route_14 [S22 >> S97]:
+	Path: ['ne90', 'ne91', 'ne30']
+route_15 [S24 << S70]:
+	Path: ['ne105', 'ne98', 'ne96']
+route_16 [S27 << S30]:
+	Path: ['ne26', 'ne65']
+route_17 [S28 << S40]:
+	Path: ['ne44', 'ne101']
+route_18 [S30 << S104]:
+	Path: ['ne65', 'ne102']
+route_19 [S31 >> S65]:
+	Path: ['ne67']
+route_20 [S32 >> S73]:
+	Path: ['ne70','ne104','ne21']
+	Switches: ['sw03']
+route_21 [S33 >> S34]:
+	Path: ['ne78', 'ne93']
+route_22 [S34 >> S38]:
+	Path: ['ne93', 'ne96', 'ne98']
+route_23 [S35 >> S83]:
+	Path: ['ne95', 'ne59']
+route_24 [S37 << S86]:
+	Path: ['ne97', 'ne94', 'ne77', 'ne52']
+route_25 [S37 << S72]:
+	Path: ['ne97', 'ne94', 'ne21']
+route_26 [S38 >> S23]:
+	Path: ['ne98', 'ne105']
+route_27 [S40 << S126]:
+	Path: ['ne101', 'ne100']
+route_28 [S41 << S90]:
+	Path: ['ne103','ne64']
+route_29 [S42 << S37]:
+	Path: ['ne106', 'ne99', 'ne97']
+route_30 [S43 >> S35]:
+	Path: ['ne7', 'ne9', 'ne95']
+route_31 [S56 << S119]:
+	Path: ['ne83', 'ne30']
+route_32 [S57 >> S100]:
+	Path: ['ne83', 'ne32']
+route_33 [S60 << S27]:
+	Path: ['ne23', 'ne26']
+route_34 [S61 >> S41]:
+	Path: ['ne23', 'ne64', 'ne103']
+route_35 [S62 << S27]:
+	Path: ['ne24', 'ne26']
+route_36 [S63 >> S41]:
+	Path: ['ne24', 'ne64', 'ne103']
+route_37 [S64 << S32]:
+	Path: ['ne67', 'ne70']
+route_38 [S65 >> S41]:
+	Path: ['ne67', 'ne103']
+route_39 [S66 << S80]:
+	Path: ['ne17', 'ne59', 'ne95', 'ne9']
+route_40 [S67 >> S33]:
+	Path: ['ne17', 'ne78']
+route_41 [S69 >> S03]:
+	Path: ['ne99', 'ne106', 'ne4']
+route_42 [S70 << S110]:
+	Path: ['ne96', 'ne93', 'ne78']
+route_43 [S72 << S32]:
+	Path: ['ne21', 'ne104', 'ne70']
+route_44 [S73 >> S33]:
+	Path: ['ne21', 'ne79', 'ne78']
+route_45 [S73 >> S69]:
+	Path: ['ne21', 'ne94', 'ne97', 'ne99']
+route_46 [S80 << S01]:
+	Path: ['ne9', 'ne1']
+route_47 [S80 << S05]:
+	Path: ['ne9', 'ne7']
+route_48 [S83 >> S33]:
+	Path: ['ne59', 'ne17', 'ne78']
+route_49 [S83 >> S69]:
+	Path: ['ne59', 'ne11', 'ne52', 'ne77', 'ne94', 'ne97', 'ne99']
+route_50 [S83 >> S67]:
+	Path: ['ne59', 'ne17']
+route_51 [S86 << S80]:
+	Path: ['ne52', 'ne11', 'ne59', 'ne95', 'ne9']
+route_52 [S86 << S07]:
+	Path: ['ne52', 'ne14']
+route_53 [S89 >> S61]:
+	Path: ['ne23']
+route_54 [S90 << S60]:
+	Path: ['ne64', 'ne23']
+route_55 [S90 << S62]:
+	Path: ['ne64', 'ne24']
+route_56 [S92 >> S63]:
+	Path: ['ne24']
+route_57 [S93 >> S89]:
+	Path: ['ne26', 'ne23']
+route_58 [S93 >> S92]:
+	Path: ['ne26', 'ne24']
+route_59 [S96 << S119]:
+	Path: ['ne29', 'ne30']
+route_60 [S97 >> S124]:
+	Path: ['ne30', 'ne29', 'ne110']
+route_61 [S97 >> S57]:
+	Path: ['ne30', 'ne83']
+route_62 [S100 >> S124]:
+	Path: ['ne32', 'ne110']
+route_63 [S101 << S96]:
+	Path: ['ne29']
+route_64 [S102 << S113]:
+	Path: ['ne110', 'ne32']
+route_65 [S102 << S101]:
+	Path: ['ne110', 'ne29']
+route_66 [S104 << S28]:
+	Path: ['ne102', 'ne44']
+route_67 [S105 >> S29]:
+	Path: ['ne44', 'ne43', 'ne48']
+route_68 [S105 >> S93]:
+	Path: ['ne44', 'ne102', 'ne65', 'ne26']
+route_69 [S110 << S66]:
+	Path: ['ne78', 'ne17']
+route_70 [S110 << S86]:
+	Path: ['ne78', 'ne79', 'ne77', 'ne52']
+route_71 [S110 << S72]:
+	Path: ['ne78', 'ne79', 'ne21']
+route_72 [S113 << S56]:
+	Path: ['ne32', 'ne83']
+route_73 [S113 << S09]:
+	Path: ['ne32', 'ne82', 'ne41']
+route_74 [S113 << S13]:
+	Path: ['ne32', 'ne82', 'ne84']
+route_75 [S119 << S19]:
+	Path: ['ne30', 'ne89']
+route_76 [S119 << S15]:
+	Path: ['ne30', 'ne91', 'ne87', 'ne86']
+route_77 [S119 << S21]:
+	Path: ['ne30', 'ne91', 'ne90']
+route_78 [S124 >> S105]:
+	Path: ['ne110', 'ne100', 'ne101', 'ne44']
+route_79 [S125 << S09]:
+	Path: ['ne85', 'ne41']
+route_80 [S125 << S13]:
+	Path: ['ne85', 'ne84']
+route_81 [S126 << S102]:
+	Path: ['ne100', 'ne110']
+route_82 [S126 << S125]:
+	Path: ['ne100', 'ne85']

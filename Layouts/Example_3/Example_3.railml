@@ -2451,7 +2451,6 @@
                         <linearCoordinate positioningSystemRef="loc-1" lateralSide="right" measure="0.45"/>
                     </spotLocation>
                     <designator register="_AdvancedExample" entry="SIGNAL 68N1"/>
-                    <isEtcsSignal/>
                     <signalConstruction type="board" positionAtTrack="right"/>
                 </signalIS>
                 <signalIS id="sig149" isSwitchable="false">
@@ -2460,7 +2459,6 @@
                         <linearCoordinate positioningSystemRef="loc-1" lateralSide="right" measure="0.45"/>
                     </spotLocation>
                     <designator register="_AdvancedExample" entry="SIGNAL 68N2"/>
-                    <isEtcsSignal/>
                     <signalConstruction type="board" positionAtTrack="right"/>
                 </signalIS>
                 <signalIS id="sig150" isSwitchable="false">
@@ -2469,7 +2467,6 @@
                         <linearCoordinate positioningSystemRef="loc-1" lateralSide="left" measure="0.7"/>
                     </spotLocation>
                     <designator register="_AdvancedExample" entry="SIGNAL 68F"/>
-                    <isEtcsSignal/>
                     <signalConstruction type="board" positionAtTrack="right"/>
                 </signalIS>
                 <signalIS id="sig151" isSwitchable="false">
