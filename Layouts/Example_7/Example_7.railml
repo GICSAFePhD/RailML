@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
-        <dc:title>Example_6.railml</dc:title>
-        <dc:date>2022-12-28T10:29:10Z</dc:date>
+        <dc:title>Example_7.railml</dc:title>
+        <dc:date>2023-07-05T09:48:40Z</dc:date>
         <dc:creator>Menendez</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -18,7 +18,7 @@
         <positioning>
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
-                    <name name="Example_6.railml" language="en"/>
+                    <name name="Example_7.railml" language="en"/>
                     <isValid from="2021-12-22" to="2022-12-22"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
@@ -53,7 +53,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="554.743" y="-480.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne31_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1190.294" y="-480.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1190.290" y="-480.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -68,7 +68,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="830.294" y="-957.268"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne32_aps01_ic03" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1460.294" y="-957.268"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1460.290" y="-957.268"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -99,7 +99,7 @@
                             <geometricCoordinate positioningSystemRef="gps01" x="650.294" y="30.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne41_aps01_ic03" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1040.294" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1040.290" y="420.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -108,10 +108,10 @@
                     <relation ref="nr_ne42ne43_swi45"/>
                     <associatedPositioningSystem id="ne42_aps01">
                         <intrinsicCoordinate id="ne42_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1040.294" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1040.290" y="420.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne42_aps01_ic02" intrinsicCoord="1">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1730.294" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1730.290" y="420.000"/>
                         </intrinsicCoordinate>
                     </associatedPositioningSystem>
                 </netElement>
@@ -120,7 +120,7 @@
                     <relation ref="nr_ne42ne43_swi45"/>
                     <associatedPositioningSystem id="ne43_aps01">
                         <intrinsicCoordinate id="ne43_aps01_ic01" intrinsicCoord="0">
-                            <geometricCoordinate positioningSystemRef="gps01" x="1040.294" y="420.000"/>
+                            <geometricCoordinate positioningSystemRef="gps01" x="1040.290" y="420.000"/>
                         </intrinsicCoordinate>
                         <intrinsicCoordinate id="ne43_aps01_ic02" intrinsicCoord="1">
                             <geometricCoordinate positioningSystemRef="gps01" x="440.294" y="420.000"/>
@@ -323,7 +323,7 @@
                     <designator register="_Example" entry="TRACK track2"/>
                     <trackBegin ref="bus4"/>
                     <trackEnd ref="swi34"/>
-                    <length value="635.551" type="physical"/>
+                    <length value="635.547" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk3" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -356,7 +356,7 @@
                     <designator register="_Example" entry="TRACK track5"/>
                     <trackBegin ref="swi43"/>
                     <trackEnd ref="swi45"/>
-                    <length value="941.543" type="physical"/>
+                    <length value="941.54" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
                 <track id="trk6" mainDirection="both" type="mainTrack" infrastructureManagerRef="im_01">
@@ -378,25 +378,25 @@
                     <designator register="_Example" entry="TRACK track7"/>
                     <trackBegin ref="swi45"/>
                     <trackEnd ref="bus47"/>
-                    <length value="600" type="physical"/>
+                    <length value="599.996" type="physical"/>
                     <!--No mileage values found, the length was calculated from screen coordinates-->
                 </track>
             </tracks>
         </functionalInfrastructure>
         <infrastructureVisualizations>
             <visualization id="vis01" positioningSystemRef="gps01">
-                <name name="Example_6 microscopic screen visualization" language="en"/>
+                <name name="Example_7 microscopic screen visualization" language="en"/>
                 <spotElementProjection refersToElement="bus1" id="vis01_sep01">
                     <name name="Buf01" language="en"/>
                     <coordinate x="-770.294" y="30.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus4" id="vis01_sep02">
                     <name name="Buf03" language="en"/>
-                    <coordinate x="1190.294" y="-480.000"/>
+                    <coordinate x="1190.290" y="-480.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus35" id="vis01_sep03">
                     <name name="Buf21" language="en"/>
-                    <coordinate x="1460.294" y="-957.268"/>
+                    <coordinate x="1460.290" y="-957.268"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus47" id="vis01_sep04">
                     <name name="Buf28" language="en"/>
@@ -404,7 +404,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="bus48" id="vis01_sep05">
                     <name name="Buf29" language="en"/>
-                    <coordinate x="1730.294" y="420.000"/>
+                    <coordinate x="1730.290" y="420.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig50" id="vis01_sep06">
                     <name name="S01" language="en"/>
@@ -416,7 +416,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig53" id="vis01_sep08">
                     <name name="S03" language="en"/>
-                    <coordinate x="1426.974" y="420.000"/>
+                    <coordinate x="1426.970" y="420.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig54" id="vis01_sep09">
                     <name name="S04" language="en"/>
@@ -428,15 +428,15 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig56" id="vis01_sep11">
                     <name name="S06" language="en"/>
-                    <coordinate x="1358.824" y="-957.268"/>
+                    <coordinate x="1358.820" y="-957.268"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig57" id="vis01_sep12">
                     <name name="S07" language="en"/>
-                    <coordinate x="1091.668" y="-480.000"/>
+                    <coordinate x="1091.670" y="-480.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig58" id="vis01_sep13">
                     <name name="S08" language="en"/>
-                    <coordinate x="1636.874" y="420.000"/>
+                    <coordinate x="1636.870" y="420.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="sig59" id="vis01_sep14">
                     <name name="S09" language="en"/>
@@ -456,7 +456,7 @@
                 </spotElementProjection>
                 <spotElementProjection refersToElement="swi45" id="vis01_sep18">
                     <name name="Sw19" language="en"/>
-                    <coordinate x="1040.294" y="420.000"/>
+                    <coordinate x="1040.290" y="420.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne1" id="vis01_lep1">
                     <name name="netElement_ne1" language="en"/>
@@ -466,13 +466,13 @@
                 <linearElementProjection refersToElement="ne31" id="vis01_lep2">
                     <name name="netElement_ne31" language="en"/>
                     <coordinate x="554.743" y="-480.000"/>
-                    <coordinate x="1190.294" y="-480.000"/>
+                    <coordinate x="1190.290" y="-480.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne32" id="vis01_lep3">
                     <name name="netElement_ne32" language="en"/>
                     <coordinate x="554.743" y="-480.000"/>
                     <coordinate x="830.294" y="-957.268"/>
-                    <coordinate x="1460.294" y="-957.268"/>
+                    <coordinate x="1460.290" y="-957.268"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne40" id="vis01_lep4">
                     <name name="netElement_ne40" language="en"/>
@@ -483,23 +483,23 @@
                     <name name="netElement_ne41" language="en"/>
                     <coordinate x="260.294" y="30.000"/>
                     <coordinate x="650.294" y="30.000"/>
-                    <coordinate x="1040.294" y="420.000"/>
+                    <coordinate x="1040.290" y="420.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne42" id="vis01_lep6">
                     <name name="netElement_ne42" language="en"/>
-                    <coordinate x="1040.294" y="420.000"/>
-                    <coordinate x="1730.294" y="420.000"/>
+                    <coordinate x="1040.290" y="420.000"/>
+                    <coordinate x="1730.290" y="420.000"/>
                 </linearElementProjection>
                 <linearElementProjection refersToElement="ne43" id="vis01_lep7">
                     <name name="netElement_ne43" language="en"/>
-                    <coordinate x="1040.294" y="420.000"/>
+                    <coordinate x="1040.290" y="420.000"/>
                     <coordinate x="440.294" y="420.000"/>
                 </linearElementProjection>
             </visualization>
         </infrastructureVisualizations>
     </infrastructure>
     <interlocking>
-        <assetsForIL id="ass_Example_6">
+        <assetsForIL id="ass_Example_7">
             <switchesIL>
                 <switchIL id="il_swi34" maxThrowTime="PT10S" typicalThrowTime="PT6S" isKeyLocked="false" returnsToPreferredPosition="false">
                     <refersTo ref="swi34"/>

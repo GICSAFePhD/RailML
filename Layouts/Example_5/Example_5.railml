@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
     <metadata>
         <dc:title>Example_5.railml</dc:title>
-        <dc:date>2023-07-01T08:54:56Z</dc:date>
+        <dc:date>2023-07-05T09:43:33Z</dc:date>
         <dc:creator>Martin</dc:creator>
         <dc:source>RaIL-AiD</dc:source>
         <dc:identifier>1</dc:identifier>
@@ -19,13 +19,13 @@
             <geometricPositioningSystems>
                 <geometricPositioningSystem id="gps01">
                     <name name="Example_5.railml" language="en"/>
-                    <isValid from="2023-07-01" to="2024-07-01"/>
+                    <isValid from="2022-01-07" to="2023-01-07"/>
                 </geometricPositioningSystem>
             </geometricPositioningSystems>
             <linearPositioningSystems>
                 <linearPositioningSystem id="loc-1" units="Km" startMeasure="0" endMeasure="0" linearReferencingMethod="absolute">
                     <name name="Loc-1" language="en"/>
-                    <isValid from="2023-07-01" to="2024-07-01"/>
+                    <isValid from="2022-01-07" to="2023-01-07"/>
                 </linearPositioningSystem>
             </linearPositioningSystems>
         </positioning>
@@ -642,19 +642,19 @@
                     <coordinate x="1264.260" y="150.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd162" id="vis01_sep35">
-                    <name name="05" language="en"/>
+                    <name name="14" language="en"/>
                     <coordinate x="-1295.220" y="450.000"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd163" id="vis01_sep36">
-                    <name name="06" language="en"/>
+                    <name name="15" language="en"/>
                     <coordinate x="-606.829" y="606.760"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd172" id="vis01_sep37">
-                    <name name="07" language="en"/>
+                    <name name="17" language="en"/>
                     <coordinate x="582.926" y="603.485"/>
                 </spotElementProjection>
                 <spotElementProjection refersToElement="tvd173" id="vis01_sep38">
-                    <name name="08" language="en"/>
+                    <name name="18" language="en"/>
                     <coordinate x="1295.530" y="450.000"/>
                 </spotElementProjection>
                 <linearElementProjection refersToElement="ne01" id="vis01_lep1">
@@ -714,15 +714,15 @@
                 </tvdSection>
                 <tvdSection id="tvd98" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="02"/>
-                    <hasDemarcatingTraindetector ref="tde96"/>
                     <hasDemarcatingTraindetector ref="tde89"/>
                     <hasDemarcatingTraindetector ref="tde93"/>
+                    <hasDemarcatingTraindetector ref="tde96"/>
                 </tvdSection>
                 <tvdSection id="tvd103" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="07"/>
-                    <hasDemarcatingTraindetector ref="tde96"/>
                     <hasDemarcatingTraindetector ref="tde89"/>
                     <hasDemarcatingTraindetector ref="tde93"/>
+                    <hasDemarcatingTraindetector ref="tde96"/>
                 </tvdSection>
                 <tvdSection id="tvd104" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="08"/>
@@ -736,15 +736,15 @@
                 </tvdSection>
                 <tvdSection id="tvd163" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="26"/>
+                    <hasDemarcatingTraindetector ref="tde112"/>
                     <hasDemarcatingTraindetector ref="tde105"/>
                     <hasDemarcatingTraindetector ref="tde108"/>
-                    <hasDemarcatingTraindetector ref="tde112"/>
                 </tvdSection>
                 <tvdSection id="tvd172" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="35"/>
+                    <hasDemarcatingTraindetector ref="tde112"/>
                     <hasDemarcatingTraindetector ref="tde105"/>
                     <hasDemarcatingTraindetector ref="tde108"/>
-                    <hasDemarcatingTraindetector ref="tde112"/>
                 </tvdSection>
                 <tvdSection id="tvd173" partialRouteReleaseDelay="PT4S" residualRouteCancellationDelay="PT90S" technology="trackCircuit" isBerthingTrack="false">
                     <designator register="_Example" entry="36"/>
@@ -828,8 +828,8 @@
                 <route id="rt_sig186_sig202">
                     <designator register="_Example" entry="Route S03-S15"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd104"/>
                     <routeEntry id="rts_sig186_rt_sig186_sig202">
                         <refersTo ref="il_sig186"/>
@@ -841,8 +841,8 @@
                 <route id="rt_sig187_sig200">
                     <designator register="_Example" entry="Route S04-S13"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd97"/>
                     <routeEntry id="rts_sig187_rt_sig187_sig200">
                         <refersTo ref="il_sig187"/>
@@ -854,8 +854,8 @@
                 <route id="rt_sig188_sig200">
                     <designator register="_Example" entry="Route S05-S13"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd97"/>
                     <routeEntry id="rts_sig188_rt_sig188_sig200">
                         <refersTo ref="il_sig188"/>
@@ -867,8 +867,8 @@
                 <route id="rt_sig189_sig202">
                     <designator register="_Example" entry="Route S06-S15"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd104"/>
                     <routeEntry id="rts_sig189_rt_sig189_sig202">
                         <refersTo ref="il_sig189"/>
@@ -880,8 +880,8 @@
                 <route id="rt_sig191_sig201">
                     <designator register="_Example" entry="Route S08-S14"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd162"/>
                     <routeEntry id="rts_sig191_rt_sig191_sig201">
                         <refersTo ref="il_sig191"/>
@@ -893,8 +893,8 @@
                 <route id="rt_sig192_sig203">
                     <designator register="_Example" entry="Route S09-S16"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd173"/>
                     <routeEntry id="rts_sig192_rt_sig192_sig203">
                         <refersTo ref="il_sig192"/>
@@ -906,8 +906,8 @@
                 <route id="rt_sig193_sig201">
                     <designator register="_Example" entry="Route S10-S14"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd162"/>
                     <routeEntry id="rts_sig193_rt_sig193_sig201">
                         <refersTo ref="il_sig193"/>
@@ -919,8 +919,8 @@
                 <route id="rt_sig194_sig203">
                     <designator register="_Example" entry="Route S11-S16"/>
                     <handlesRouteType ref="rt_main"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd173"/>
                     <routeEntry id="rts_sig194_rt_sig194_sig203">
                         <refersTo ref="il_sig194"/>
@@ -937,8 +937,8 @@
                         <refersToSwitch ref="il_swi04"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd173"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <routeEntry id="rts_sig196_rt_sig196_sig193_swi04N">
                         <refersTo ref="il_sig196"/>
                     </routeEntry>
@@ -954,8 +954,8 @@
                         <refersToSwitch ref="il_swi04"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd173"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <routeEntry id="rts_sig196_rt_sig196_sig191_swi04R">
                         <refersTo ref="il_sig196"/>
                     </routeEntry>
@@ -971,8 +971,8 @@
                         <refersToSwitch ref="il_swi02"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd104"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <routeEntry id="rts_sig197_rt_sig197_sig188_swi02N">
                         <refersTo ref="il_sig197"/>
                     </routeEntry>
@@ -988,8 +988,8 @@
                         <refersToSwitch ref="il_swi02"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd104"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <routeEntry id="rts_sig197_rt_sig197_sig187_swi02R">
                         <refersTo ref="il_sig197"/>
                     </routeEntry>
@@ -1005,8 +1005,8 @@
                         <refersToSwitch ref="il_swi01"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd97"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <routeEntry id="rts_sig198_rt_sig198_sig189_swi01N">
                         <refersTo ref="il_sig198"/>
                     </routeEntry>
@@ -1022,8 +1022,8 @@
                         <refersToSwitch ref="il_swi01"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd97"/>
-                    <hasTvdSection ref="tvd98"/>
                     <hasTvdSection ref="tvd103"/>
+                    <hasTvdSection ref="tvd98"/>
                     <routeEntry id="rts_sig198_rt_sig198_sig186_swi01R">
                         <refersTo ref="il_sig198"/>
                     </routeEntry>
@@ -1039,8 +1039,8 @@
                         <refersToSwitch ref="il_swi03"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd162"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <routeEntry id="rts_sig199_rt_sig199_sig194_swi03N">
                         <refersTo ref="il_sig199"/>
                     </routeEntry>
@@ -1056,8 +1056,8 @@
                         <refersToSwitch ref="il_swi03"/>
                     </facingSwitchInPosition>
                     <hasTvdSection ref="tvd162"/>
-                    <hasTvdSection ref="tvd172"/>
                     <hasTvdSection ref="tvd163"/>
+                    <hasTvdSection ref="tvd172"/>
                     <routeEntry id="rts_sig199_rt_sig199_sig192_swi03R">
                         <refersTo ref="il_sig199"/>
                     </routeEntry>

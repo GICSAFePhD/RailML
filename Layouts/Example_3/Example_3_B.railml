@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
-		<dc:title>Example_2.railml</dc:title>
-		<dc:date>2022-12-29T23:01:56Z</dc:date>
+		<dc:title>Example_3.railml</dc:title>
+		<dc:date>2023-07-05T09:41:45Z</dc:date>
 		<dc:creator>Neat</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -19,7 +19,7 @@
 			<geometricPositioningSystems>
 				<geometricPositioningSystem id="gps01">
 					<isValid from="2020-01-01" to="2020-07-31"/>
-					<name name="Example_2.railml" language="en"/>
+					<name name="Example_3.railml" language="en"/>
 				</geometricPositioningSystem>
 			</geometricPositioningSystems>
 			<linearPositioningSystems>
@@ -1972,11 +1972,11 @@
 			<levelCrossingsIS>
 				<levelCrossingIS activation="trainAutomatic" id="lcr176">
 					<protection barriers="doubleHalfBarrier" lights="none" acoustic="bell" hasActiveProtection="true"/>
-					<designator register="_AdvancedExample" entry="LEVEL CROSSING LC01"/>
+					<designator register="_AdvancedExample" entry="LEVEL CROSSING Lc01"/>
 					<spotLocation netElementRef="ne95" intrinsicCoord="0.5254" applicationDirection="both" id="lcr176_loc-1">
 						<linearCoordinate measure="2.5" positioningSystemRef="loc-1"/>
 					</spotLocation>
-					<name name="LC01" language="en"/>
+					<name name="Lc01" language="en"/>
 				</levelCrossingIS>
 			</levelCrossingsIS>
 			<lines>
@@ -2583,6 +2583,12 @@
 					<spotLocation netElementRef="ne105" intrinsicCoord="0.7481" applicationDirection="reverse" id="sig24_sloc01"/>
 					<name name="T24" language="en"/>
 				</signalIS>
+				<signalIS isSwitchable="false" id="sig25">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S25"/>
+					<spotLocation netElementRef="ne4" intrinsicCoord="0.7481" applicationDirection="normal" id="sig25_sloc01"/>
+					<name name="L25" language="en"/>
+				</signalIS>
 				<signalIS isSwitchable="false" id="sig27">
 					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S27"/>
@@ -2606,12 +2612,6 @@
 					<designator register="_Example" entry="SIGNAL S30"/>
 					<spotLocation netElementRef="ne65" intrinsicCoord="0.3676" applicationDirection="normal" id="sig30_sloc01"/>
 					<name name="L30" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig31">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S31"/>
-					<spotLocation netElementRef="ne67" intrinsicCoord="0.1113" applicationDirection="normal" id="sig31_sloc01"/>
-					<name name="L31" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig32">
 					<signalConstruction positionAtTrack="left" type="light"/>
@@ -2673,6 +2673,24 @@
 					<spotLocation netElementRef="ne7" intrinsicCoord="0.9435" applicationDirection="normal" id="sig43_sloc01"/>
 					<name name="J43" language="en"/>
 				</signalIS>
+				<signalIS isSwitchable="false" id="sig46">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S46"/>
+					<spotLocation netElementRef="ne9" intrinsicCoord="0.5" applicationDirection="normal" id="sig46_sloc01"/>
+					<name name="J46" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig50">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S50"/>
+					<spotLocation netElementRef="ne95" intrinsicCoord="0.5113" applicationDirection="normal" id="sig50_sloc01"/>
+					<name name="X50" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig51">
+					<signalConstruction positionAtTrack="right" type="light"/>
+					<designator register="_Example" entry="SIGNAL S51"/>
+					<spotLocation netElementRef="ne95" intrinsicCoord="0.6938" applicationDirection="reverse" id="sig51_sloc01"/>
+					<name name="X51" language="en"/>
+				</signalIS>
 				<signalIS isSwitchable="false" id="sig56">
 					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S56"/>
@@ -2690,18 +2708,6 @@
 					<designator register="_Example" entry="SIGNAL S60"/>
 					<spotLocation netElementRef="ne23" intrinsicCoord="1.6976" applicationDirection="normal" id="sig60_sloc01"/>
 					<name name="P60" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig61">
-					<signalConstruction positionAtTrack="right" type="light"/>
-					<designator register="_Example" entry="SIGNAL S61"/>
-					<spotLocation netElementRef="ne23" intrinsicCoord="1.8184" applicationDirection="reverse" id="sig61_sloc01"/>
-					<name name="P61" language="en"/>
-				</signalIS>
-				<signalIS isSwitchable="false" id="sig62">
-					<signalConstruction positionAtTrack="left" type="light"/>
-					<designator register="_Example" entry="SIGNAL S62"/>
-					<spotLocation netElementRef="ne24" intrinsicCoord="1.4664" applicationDirection="normal" id="sig62_sloc01"/>
-					<name name="P62" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig63">
 					<signalConstruction positionAtTrack="right" type="light"/>
@@ -2733,6 +2739,12 @@
 					<spotLocation netElementRef="ne17" intrinsicCoord="0.8070" applicationDirection="reverse" id="sig67_sloc01"/>
 					<name name="P67" language="en"/>
 				</signalIS>
+				<signalIS isSwitchable="false" id="sig68">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S68"/>
+					<spotLocation netElementRef="ne99" intrinsicCoord="0.4356" applicationDirection="normal" id="sig68_sloc01"/>
+					<name name="P68" language="en"/>
+				</signalIS>
 				<signalIS isSwitchable="false" id="sig69">
 					<signalConstruction positionAtTrack="right" type="light"/>
 					<designator register="_Example" entry="SIGNAL S69"/>
@@ -2745,6 +2757,12 @@
 					<spotLocation netElementRef="ne96" intrinsicCoord="0.9081" applicationDirection="reverse" id="sig70_sloc01"/>
 					<name name="P70" language="en"/>
 				</signalIS>
+				<signalIS isSwitchable="false" id="sig71">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S71"/>
+					<spotLocation netElementRef="ne96" intrinsicCoord="1.0651" applicationDirection="normal" id="sig71_sloc01"/>
+					<name name="P71" language="en"/>
+				</signalIS>
 				<signalIS isSwitchable="false" id="sig72">
 					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S72"/>
@@ -2756,6 +2774,24 @@
 					<designator register="_Example" entry="SIGNAL S73"/>
 					<spotLocation netElementRef="ne21" intrinsicCoord="0.7752" applicationDirection="reverse" id="sig73_sloc01"/>
 					<name name="P73" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig76">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S76"/>
+					<spotLocation netElementRef="ne77" intrinsicCoord="0.4202" applicationDirection="normal" id="sig76_sloc01"/>
+					<name name="P76" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig77">
+					<signalConstruction positionAtTrack="right" type="light"/>
+					<designator register="_Example" entry="SIGNAL S77"/>
+					<spotLocation netElementRef="ne77" intrinsicCoord="0.8583" applicationDirection="reverse" id="sig77_sloc01"/>
+					<name name="P77" language="en"/>
+				</signalIS>
+				<signalIS isSwitchable="false" id="sig78">
+					<signalConstruction positionAtTrack="left" type="light"/>
+					<designator register="_Example" entry="SIGNAL S78"/>
+					<spotLocation netElementRef="ne1" intrinsicCoord="0.5263" applicationDirection="normal" id="sig78_sloc01"/>
+					<name name="C78" language="en"/>
 				</signalIS>
 				<signalIS isSwitchable="false" id="sig80">
 					<signalConstruction positionAtTrack="right" type="light"/>
@@ -3636,7 +3672,7 @@
 				</spotElementProjection>
 				<spotElementProjection refersToElement="lcr176" id="vis01_sep047">
 					<coordinate x="1145.020" y="-300.000"/>
-					<name name="LC01" language="en"/>
+					<name name="Lc01" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="plf177" id="vis01_sep048">
 					<coordinate x="-1539.630" y="-300.000"/>
@@ -4086,25 +4122,25 @@
 					<coordinate x="6983" y="-300"/>
 					<name name="S24" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig27" id="vis01_sep160">
+				<spotElementProjection refersToElement="sig25" id="vis01_sep160">
+					<coordinate x="6983" y="-150"/>
+					<name name="S25" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig27" id="vis01_sep161">
 					<coordinate x="2238" y="1050"/>
 					<name name="S27" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig28" id="vis01_sep161">
+				<spotElementProjection refersToElement="sig28" id="vis01_sep162">
 					<coordinate x="1265" y="1050"/>
 					<name name="S28" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig29" id="vis01_sep162">
+				<spotElementProjection refersToElement="sig29" id="vis01_sep163">
 					<coordinate x="1820" y="1410"/>
 					<name name="S29" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig30" id="vis01_sep163">
+				<spotElementProjection refersToElement="sig30" id="vis01_sep164">
 					<coordinate x="1966" y="1050"/>
 					<name name="S30" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig31" id="vis01_sep164">
-					<coordinate x="3084" y="480"/>
-					<name name="S31" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="sig32" id="vis01_sep165">
 					<coordinate x="2770" y="330"/>
@@ -4146,139 +4182,163 @@
 					<coordinate x="-550.0" y="-150"/>
 					<name name="S43" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig56" id="vis01_sep175">
+				<spotElementProjection refersToElement="sig46" id="vis01_sep175">
+					<coordinate x="-56.0" y="-300"/>
+					<name name="S46" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig50" id="vis01_sep176">
+					<coordinate x="900" y="300"/>
+					<name name="S50" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig51" id="vis01_sep177">
+					<coordinate x="1300" y="300"/>
+					<name name="S51" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig56" id="vis01_sep178">
 					<coordinate x="-933" y="-1050"/>
 					<name name="S56" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig57" id="vis01_sep176">
+				<spotElementProjection refersToElement="sig57" id="vis01_sep179">
 					<coordinate x="-373" y="-1050"/>
 					<name name="S57" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig60" id="vis01_sep177">
+				<spotElementProjection refersToElement="sig60" id="vis01_sep180">
 					<coordinate x="2871" y="-1050"/>
 					<name name="S60" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig61" id="vis01_sep178">
-					<coordinate x="3431" y="-1050"/>
-					<name name="S61" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig62" id="vis01_sep179">
-					<coordinate x="2871" y="-900"/>
-					<name name="S62" language="en"/>
-				</spotElementProjection>
-				<spotElementProjection refersToElement="sig63" id="vis01_sep180">
+				<spotElementProjection refersToElement="sig63" id="vis01_sep181">
 					<coordinate x="3431" y="-900"/>
 					<name name="S63" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig64" id="vis01_sep181">
+				<spotElementProjection refersToElement="sig64" id="vis01_sep182">
 					<coordinate x="3310" y="-480"/>
 					<name name="S64" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig65" id="vis01_sep182">
+				<spotElementProjection refersToElement="sig65" id="vis01_sep183">
 					<coordinate x="3550" y="-480"/>
 					<name name="S65" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig66" id="vis01_sep183">
+				<spotElementProjection refersToElement="sig66" id="vis01_sep184">
 					<coordinate x="3343" y="300"/>
 					<name name="S66" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig67" id="vis01_sep184">
+				<spotElementProjection refersToElement="sig67" id="vis01_sep185">
 					<coordinate x="3903" y="300"/>
 					<name name="S67" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig69" id="vis01_sep185">
+				<spotElementProjection refersToElement="sig68" id="vis01_sep186">
+					<coordinate x="5179" y="150"/>
+					<name name="S68" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig69" id="vis01_sep187">
 					<coordinate x="5739" y="150"/>
 					<name name="S69" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig70" id="vis01_sep186">
+				<spotElementProjection refersToElement="sig70" id="vis01_sep188">
 					<coordinate x="5339" y="300"/>
 					<name name="S70" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig72" id="vis01_sep187">
+				<spotElementProjection refersToElement="sig71" id="vis01_sep189">
+					<coordinate x="5579" y="300"/>
+					<name name="S71" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig72" id="vis01_sep190">
 					<coordinate x="3341" y="150"/>
 					<name name="S72" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig73" id="vis01_sep188">
+				<spotElementProjection refersToElement="sig73" id="vis01_sep191">
 					<coordinate x="3901" y="150"/>
 					<name name="S73" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig80" id="vis01_sep189">
+				<spotElementProjection refersToElement="sig76" id="vis01_sep192">
+					<coordinate x="3339" y="0"/>
+					<name name="S76" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig77" id="vis01_sep193">
+					<coordinate x="3899" y="0"/>
+					<name name="S77" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig78" id="vis01_sep194">
+					<coordinate x="-1339" y="300"/>
+					<name name="S78" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig80" id="vis01_sep195">
 					<coordinate x="-56.0" y="-300"/>
 					<name name="S80" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig83" id="vis01_sep190">
+				<spotElementProjection refersToElement="sig83" id="vis01_sep196">
 					<coordinate x="2294.5" y="-300"/>
 					<name name="S83" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig86" id="vis01_sep191">
+				<spotElementProjection refersToElement="sig86" id="vis01_sep197">
 					<coordinate x="2870.0" y="-150"/>
 					<name name="S86" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig89" id="vis01_sep192">
+				<spotElementProjection refersToElement="sig89" id="vis01_sep198">
 					<coordinate x="2951" y="-1050"/>
 					<name name="S89" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig90" id="vis01_sep193">
+				<spotElementProjection refersToElement="sig90" id="vis01_sep199">
 					<coordinate x="3890.0" y="900"/>
 					<name name="S90" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig92" id="vis01_sep194">
+				<spotElementProjection refersToElement="sig92" id="vis01_sep200">
 					<coordinate x="3351" y="-900"/>
 					<name name="S92" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig93" id="vis01_sep195">
+				<spotElementProjection refersToElement="sig93" id="vis01_sep201">
 					<coordinate x="2314.0" y="1050"/>
 					<name name="S93" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig96" id="vis01_sep196">
+				<spotElementProjection refersToElement="sig96" id="vis01_sep202">
 					<coordinate x="-746.0" y="900"/>
 					<name name="S96" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig97" id="vis01_sep197">
+				<spotElementProjection refersToElement="sig97" id="vis01_sep203">
 					<coordinate x="-1184.5" y="1050"/>
 					<name name="S97" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig100" id="vis01_sep198">
+				<spotElementProjection refersToElement="sig100" id="vis01_sep204">
 					<coordinate x="44.5" y="1050"/>
 					<name name="S00" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig101" id="vis01_sep199">
+				<spotElementProjection refersToElement="sig101" id="vis01_sep205">
 					<coordinate x="-11.0" y="900"/>
 					<name name="S01" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig102" id="vis01_sep200">
+				<spotElementProjection refersToElement="sig102" id="vis01_sep206">
 					<coordinate x="408.5" y="1050"/>
 					<name name="S02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig104" id="vis01_sep201">
+				<spotElementProjection refersToElement="sig104" id="vis01_sep207">
 					<coordinate x="1713.0" y="1050"/>
 					<name name="S04" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig105" id="vis01_sep202">
+				<spotElementProjection refersToElement="sig105" id="vis01_sep208">
 					<coordinate x="1362.5" y="1050"/>
 					<name name="S05" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig110" id="vis01_sep203">
+				<spotElementProjection refersToElement="sig110" id="vis01_sep209">
 					<coordinate x="4602.5" y="-300"/>
 					<name name="S10" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig113" id="vis01_sep204">
+				<spotElementProjection refersToElement="sig113" id="vis01_sep210">
 					<coordinate x="44.5" y="1050"/>
 					<name name="S13" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig119" id="vis01_sep205">
+				<spotElementProjection refersToElement="sig119" id="vis01_sep211">
 					<coordinate x="-1184.5" y="1050"/>
 					<name name="S19" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig124" id="vis01_sep206">
+				<spotElementProjection refersToElement="sig124" id="vis01_sep212">
 					<coordinate x="408.5" y="1050"/>
 					<name name="S24" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig125" id="vis01_sep207">
+				<spotElementProjection refersToElement="sig125" id="vis01_sep213">
 					<coordinate x="328.0" y="1200"/>
 					<name name="S25" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig126" id="vis01_sep208">
+				<spotElementProjection refersToElement="sig126" id="vis01_sep214">
 					<coordinate x="729.0" y="1050"/>
 					<name name="S26" language="en"/>
 				</spotElementProjection>
@@ -4567,442 +4627,442 @@
 					<coordinate x="239.871" y="1050.000"/>
 					<name name="netElement_ne110" language="en"/>
 				</linearElementProjection>
-				<name name="Example_2 microscopic screen visualization" language="en"/>
+				<name name="Example_3 microscopic screen visualization" language="en"/>
 			</visualization>
 		</infrastructureVisualizations>
 	</infrastructure>
 	<interlocking>
-		<assetsForIL id="ass_Example_2">
+		<assetsForIL id="ass_Example_3">
 			<tvdSections>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd230">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="40"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd344">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="08"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd345">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="09"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd346">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="10"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd347">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="11"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd348">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="12"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd349">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="13"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd351">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="14"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd352">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="15"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd354">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="17"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd355">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="18"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd356">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="19"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd359">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="22"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd361">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="24"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd362">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="25"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd364">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="27"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd365">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="28"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd366">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="29"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd367">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="30"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd368">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="31"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd370">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="33"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd371">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="34"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd373">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="36"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd375">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="38"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd376">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="39"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd377">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="41"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd378">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="42"/>
 				</tvdSection>
@@ -5017,8 +5077,8 @@
 					<designator register="_AdvancedExample" entry="44"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd460">
-					<hasDemarcatingTraindetector ref="ac236"/>
 					<hasDemarcatingTraindetector ref="ac237"/>
+					<hasDemarcatingTraindetector ref="ac236"/>
 					<hasDemarcatingTraindetector ref="ac235"/>
 					<designator register="_AdvancedExample" entry="45"/>
 				</tvdSection>
@@ -5028,71 +5088,71 @@
 					<designator register="_AdvancedExample" entry="46"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd462">
-					<hasDemarcatingTraindetector ref="ac239"/>
 					<hasDemarcatingTraindetector ref="ac240"/>
+					<hasDemarcatingTraindetector ref="ac239"/>
 					<designator register="_AdvancedExample" entry="47"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd374">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="37"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd360">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="23"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd357">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="20"/>
 				</tvdSection>
 				<tvdSection isBerthingTrack="false" residualRouteCancellationDelay="PT90S" partialRouteReleaseDelay="PT4S" technology="trackCircuit" id="tvd358">
 					<hasDemarcatingBufferstop ref="bus37"/>
-					<hasDemarcatingBufferstop ref="bus5"/>
-					<hasDemarcatingBufferstop ref="bus6"/>
-					<hasDemarcatingBufferstop ref="bus332"/>
-					<hasDemarcatingBufferstop ref="bus2"/>
-					<hasDemarcatingBufferstop ref="line441"/>
-					<hasDemarcatingBufferstop ref="bus331"/>
-					<hasDemarcatingBufferstop ref="bus8"/>
-					<hasDemarcatingBufferstop ref="bus3"/>
 					<hasDemarcatingBufferstop ref="bus330"/>
-					<hasDemarcatingBufferstop ref="bus335"/>
 					<hasDemarcatingBufferstop ref="bus50"/>
+					<hasDemarcatingBufferstop ref="bus6"/>
+					<hasDemarcatingBufferstop ref="bus335"/>
+					<hasDemarcatingBufferstop ref="bus331"/>
+					<hasDemarcatingBufferstop ref="bus5"/>
+					<hasDemarcatingBufferstop ref="bus332"/>
+					<hasDemarcatingBufferstop ref="bus8"/>
+					<hasDemarcatingBufferstop ref="bus2"/>
+					<hasDemarcatingBufferstop ref="bus3"/>
+					<hasDemarcatingBufferstop ref="line441"/>
 					<hasDemarcatingBufferstop ref="bus327"/>
 					<designator register="_AdvancedExample" entry="21"/>
 				</tvdSection>
@@ -5293,6 +5353,9 @@
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig24">
 					<refersTo ref="sig24"/>
 				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig25">
+					<refersTo ref="sig25"/>
+				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig27">
 					<refersTo ref="sig27"/>
 				</signalIL>
@@ -5304,9 +5367,6 @@
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig30">
 					<refersTo ref="sig30"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig31">
-					<refersTo ref="sig31"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig32">
 					<refersTo ref="sig32"/>
@@ -5338,6 +5398,15 @@
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig43">
 					<refersTo ref="sig43"/>
 				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig46">
+					<refersTo ref="sig46"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig50">
+					<refersTo ref="sig50"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig51">
+					<refersTo ref="sig51"/>
+				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig56">
 					<refersTo ref="sig56"/>
 				</signalIL>
@@ -5346,12 +5415,6 @@
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig60">
 					<refersTo ref="sig60"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig61">
-					<refersTo ref="sig61"/>
-				</signalIL>
-				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig62">
-					<refersTo ref="sig62"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig63">
 					<refersTo ref="sig63"/>
@@ -5368,17 +5431,32 @@
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig67">
 					<refersTo ref="sig67"/>
 				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig68">
+					<refersTo ref="sig68"/>
+				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig69">
 					<refersTo ref="sig69"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig70">
 					<refersTo ref="sig70"/>
 				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig71">
+					<refersTo ref="sig71"/>
+				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig72">
 					<refersTo ref="sig72"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig73">
 					<refersTo ref="sig73"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig76">
+					<refersTo ref="sig76"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig77">
+					<refersTo ref="sig77"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig78">
+					<refersTo ref="sig78"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig80">
 					<refersTo ref="sig80"/>
