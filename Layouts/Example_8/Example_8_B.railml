@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_8.railml</dc:title>
-		<dc:date>2023-06-05T11:16:37Z</dc:date>
+		<dc:date>2023-07-07T08:20:28Z</dc:date>
 		<dc:creator>Martin</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -18,13 +18,13 @@
 		<positioning>
 			<geometricPositioningSystems>
 				<geometricPositioningSystem id="gps01">
-					<isValid from="2023-06-05" to="2024-06-05"/>
+					<isValid from="2023-07-07" to="2024-07-07"/>
 					<name name="Example_8.railml" language="en"/>
 				</geometricPositioningSystem>
 			</geometricPositioningSystems>
 			<linearPositioningSystems>
 				<linearPositioningSystem linearReferencingMethod="absolute" startMeasure="0" endMeasure="0" units="m" id="loc-1">
-					<isValid from="2023-06-05" to="2024-06-05"/>
+					<isValid from="2023-07-07" to="2024-07-07"/>
 					<name name="Loc-1" language="en"/>
 				</linearPositioningSystem>
 			</linearPositioningSystems>
@@ -317,6 +317,12 @@
 					<spotLocation netElementRef="ne23" intrinsicCoord="0.7475" applicationDirection="normal" id="sig22_sloc01"/>
 					<name name="S22" language="en"/>
 				</signalIS>
+				<signalIS isSwitchable="false" id="sig24">
+					<signalConstruction positionAtTrack="right" type="light"/>
+					<designator register="_Example" entry="SIGNAL S24"/>
+					<spotLocation netElementRef="ne26" intrinsicCoord="0.6835" applicationDirection="reverse" id="sig24_sloc01"/>
+					<name name="C24" language="en"/>
+				</signalIS>
 				<signalIS isSwitchable="false" id="sig25">
 					<signalConstruction positionAtTrack="left" type="light"/>
 					<designator register="_Example" entry="SIGNAL S25"/>
@@ -362,22 +368,22 @@
 					<name name="track2" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk3">
-					<trackBegin ref="swi162"/>
-					<trackEnd ref="oe178"/>
+					<trackBegin ref="oe178"/>
+					<trackEnd ref="swi162"/>
 					<length value="1560" type="physical"/>
 					<designator register="_Example" entry="TRACK track3"/>
 					<linearLocation applicationDirection="both" id="trk3_lloc01">
-						<associatedNetElement netElementRef="ne23" keepsOrientation="false"/>
+						<associatedNetElement netElementRef="ne23" keepsOrientation="true"/>
 					</linearLocation>
 					<name name="track3" language="en"/>
 				</track>
 				<track type="mainTrack" infrastructureManagerRef="im_01" mainDirection="both" id="trk4">
-					<trackBegin ref="swi162"/>
-					<trackEnd ref="oe179"/>
+					<trackBegin ref="oe179"/>
+					<trackEnd ref="swi162"/>
 					<length value="1440" type="physical"/>
 					<designator register="_Example" entry="TRACK track4"/>
 					<linearLocation applicationDirection="both" id="trk4_lloc01">
-						<associatedNetElement netElementRef="ne25" keepsOrientation="true"/>
+						<associatedNetElement netElementRef="ne25" keepsOrientation="false"/>
 					</linearLocation>
 					<name name="track4" language="en"/>
 				</track>
@@ -443,11 +449,11 @@
 					<coordinate x="-160.109" y="300.000"/>
 					<name name="Plat02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi162" id="vis01_sep13">
+				<spotElementProjection refersToElement="swi162" id="vis01_sep29">
 					<coordinate x="600.000" y="300.000"/>
 					<name name="Sw11" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi163" id="vis01_sep14">
+				<spotElementProjection refersToElement="swi163" id="vis01_sep30">
 					<coordinate x="1020.000" y="-120.000"/>
 					<name name="Sw12" language="en"/>
 				</spotElementProjection>
@@ -515,7 +521,11 @@
 					<coordinate x="40" y="-300"/>
 					<name name="S22" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="sig25" id="vis01_sep31">
+				<spotElementProjection refersToElement="sig24" id="vis01_sep31">
+					<coordinate x="372" y="120"/>
+					<name name="S24" language="en"/>
+				</spotElementProjection>
+				<spotElementProjection refersToElement="sig25" id="vis01_sep32">
 					<coordinate x="1736" y="120"/>
 					<name name="S25" language="en"/>
 				</spotElementProjection>
@@ -610,6 +620,9 @@
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig22">
 					<refersTo ref="sig22"/>
+				</signalIL>
+				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig24">
+					<refersTo ref="sig24"/>
 				</signalIL>
 				<signalIL releaseSpeed="0" approachSpeed="0" passingSpeed="0" isVirtual="false" id="il_sig25">
 					<refersTo ref="sig25"/>
