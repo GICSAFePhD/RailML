@@ -237,14 +237,16 @@
 <!-- Pegar tabla de excel fin -->
 </table>
 
+## Sequence diagram for RNA
+
+![Figure 1](Diagram.jpg "Sequence Diagram for RNA")
+
 ## Usage
 
 1. Download all the folders (app, railML, RNA, ACG, Layouts)
 2. In APP/main.py edit INPUT_FILE and OUTPUT_FILE
 * OUTPUT_FILE can be any name with extension .railml
 * INPUT_FILE must exists in \Layouts as a .railml file
-
-![Figure 1](Diagram.jpg "Sequence Diagram for RNA")
 
 ```python
 i = 10
