@@ -171,7 +171,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -191,7 +191,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -211,7 +211,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -231,7 +231,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -251,7 +251,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -271,7 +271,7 @@
                 <Attribute id="A_railML_Acoustic">none</Attribute>
                 <Attribute id="A_railML_PreferredPosition">unknown</Attribute>
                 <Attribute id="A_railML_TypicalTimeToClose">PT10S</Attribute>
-                <Attribute id="A_railML_ControlType"></Attribute>
+                <Attribute id="A_railML_ControlType">autonomous</Attribute>
                 <Attribute id="A_railML_AllowsLocalOperation">false</Attribute>
             </Attributes>
         </Entity>
@@ -427,36 +427,6 @@
                 <Attribute id="A_railML_PassingSpeed">180</Attribute>
             </Attributes>
         </Entity>
-        <Entity id="sig189" type="T_Signal">
-            <Placement x="-225.455" y="-120" angle="180"/>
-            <Ports>
-                <Port rail="ne26" side="0.629017"/>
-            </Ports>
-            <Attributes>
-                <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">S05</Attribute>
-                <Attribute id="A_Operational">true</Attribute>
-                <Attribute id="A_SignalType">V_main</Attribute>
-                <Attribute id="A_railML_IsSwitchable">false</Attribute>
-                <Attribute id="A_railML_IsVirtual">false</Attribute>
-                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
-                <Attribute id="A_railML_IsCatenary">false</Attribute>
-                <Attribute id="A_railML_IsDanger">false</Attribute>
-                <Attribute id="A_railML_IsEtcs">false</Attribute>
-                <Attribute id="A_railML_IsInformation">false</Attribute>
-                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
-                <Attribute id="A_railML_IsMilePost">false</Attribute>
-                <Attribute id="A_railML_IsStopPost">false</Attribute>
-                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
-                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
-                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
-                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
-                <Attribute id="A_railML_ConstructionType">light</Attribute>
-                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
-                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
-                <Attribute id="A_railML_PassingSpeed">180</Attribute>
-            </Attributes>
-        </Entity>
         <Entity id="sig190" type="T_Signal">
             <Placement x="-596.364" y="-120" angle="180" flipAlong="true" flipAcross="true"/>
             <Ports>
@@ -525,36 +495,6 @@
             <Attributes>
                 <Attribute id="A_Layer">L_Signals</Attribute>
                 <Attribute id="A_Name">S08</Attribute>
-                <Attribute id="A_Operational">true</Attribute>
-                <Attribute id="A_SignalType">V_main</Attribute>
-                <Attribute id="A_railML_IsSwitchable">false</Attribute>
-                <Attribute id="A_railML_IsVirtual">false</Attribute>
-                <Attribute id="A_railML_IsAnnouncement">false</Attribute>
-                <Attribute id="A_railML_IsCatenary">false</Attribute>
-                <Attribute id="A_railML_IsDanger">false</Attribute>
-                <Attribute id="A_railML_IsEtcs">false</Attribute>
-                <Attribute id="A_railML_IsInformation">false</Attribute>
-                <Attribute id="A_railML_IsLevelCrossing">false</Attribute>
-                <Attribute id="A_railML_IsMilePost">false</Attribute>
-                <Attribute id="A_railML_IsStopPost">false</Attribute>
-                <Attribute id="A_railML_IsSpeedSignal">false</Attribute>
-                <Attribute id="A_railML_IsTrainMovement">false</Attribute>
-                <Attribute id="A_railML_IsTrainRadio">false</Attribute>
-                <Attribute id="A_railML_IsVehicleEquipment">false</Attribute>
-                <Attribute id="A_railML_ConstructionType">light</Attribute>
-                <Attribute id="A_railML_ReleaseSpeed">180</Attribute>
-                <Attribute id="A_railML_ApproachSpeed">180</Attribute>
-                <Attribute id="A_railML_PassingSpeed">180</Attribute>
-            </Attributes>
-        </Entity>
-        <Entity id="sig193" type="T_Signal">
-            <Placement x="-323.636" y="300" flipAlong="true" flipAcross="true"/>
-            <Ports>
-                <Port rail="ne23" side="0.407925"/>
-            </Ports>
-            <Attributes>
-                <Attribute id="A_Layer">L_Signals</Attribute>
-                <Attribute id="A_Name">S09</Attribute>
                 <Attribute id="A_Operational">true</Attribute>
                 <Attribute id="A_SignalType">V_main</Attribute>
                 <Attribute id="A_railML_IsSwitchable">false</Attribute>

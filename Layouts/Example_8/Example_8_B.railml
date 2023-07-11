@@ -2,7 +2,7 @@
 <railML xmlns="https://www.railml.org/schemas/3.1" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:gml="http://www.opengis.net/gml/3.2/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.railml.org/schemas/3.1 https://www.railml.org/schemas/3.1/railml3.xsd" version="3.1">
 	<metadata>
 		<dc:title>Example_8.railml</dc:title>
-		<dc:date>2023-07-07T08:20:28Z</dc:date>
+		<dc:date>2023-07-11T11:04:23Z</dc:date>
 		<dc:creator>Martin</dc:creator>
 		<dc:source>RaIL-AiD</dc:source>
 		<dc:identifier>1</dc:identifier>
@@ -422,11 +422,11 @@
 					<name name="Lc09" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="lcr176" id="vis01_sep09">
-					<coordinate x="1211.737" y="300.000"/>
+					<coordinate x="1211.740" y="300.000"/>
 					<name name="Lc05" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="lcr177" id="vis01_sep10">
-					<coordinate x="1491.925" y="-120.000"/>
+					<coordinate x="1491.930" y="-120.000"/>
 					<name name="Lc06" language="en"/>
 				</spotElementProjection>
 				<spotElementProjection refersToElement="plf183" id="vis01_sep11">
@@ -437,11 +437,11 @@
 					<coordinate x="-160.109" y="300.000"/>
 					<name name="Plat02" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi162" id="vis01_sep29">
+				<spotElementProjection refersToElement="swi162" id="vis01_sep27">
 					<coordinate x="600.000" y="300.000"/>
 					<name name="Sw11" language="en"/>
 				</spotElementProjection>
-				<spotElementProjection refersToElement="swi163" id="vis01_sep30">
+				<spotElementProjection refersToElement="swi163" id="vis01_sep28">
 					<coordinate x="1020.000" y="-120.000"/>
 					<name name="Sw12" language="en"/>
 				</spotElementProjection>

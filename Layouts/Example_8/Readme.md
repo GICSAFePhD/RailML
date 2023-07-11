@@ -2,7 +2,7 @@
 ## Description
 Name: Belgrano C Station
 
-This example is mentioned in the manuscript titled: "Automatic Railway Signalling Generation for Railways Systems Described on Railway Markup Language (railML)". Henceforth, when we refer to the manuscript, we will do it as [[1]](#references).
+This example is the layout of the real-life railway station Belgrano C, in Buenos Aires, Argentina.
 
 ## Analysis principles
 
@@ -66,19 +66,17 @@ Reading .railML file
 Creating railML object
 Analyzing railML object
  Analyzing graph
-ne1 [-770, -30] [260, -30] >>
-ne31 [554, 480] [1190, 480] >>
-ne32 [554, 480] [1460, 957] >>
-ne40 [260, -30] [554, 480] >>
-ne41 [260, -30] [1040, -420] >>
-ne42 [1040, -420] [1730, -420] >>
-ne43 [1040, -420] [440, -420] <<
+ne3 [2040, 120] [1020, 120] <<
+ne23 [-960, -300] [600, -300] >>
+ne25 [600, -300] [2040, -300] >>
+ne26 [1020, 120] [-960, 120] <<
+ne27 [600, -300] [1020, 120] >>
  The network is connected
 ~~~
 
 *Console Output 1. Step B railway elements.*
 
-In this example, the Console Output 1 shows that the program can identify the nodes and their directions. Consol Output 1 has, for example, this line: ne1 [-770, -30] [260, -30] >>, that indicates the name of the netElement (ne1), the position (origin [-770, -30] and end point [260, -30]) of the net element, and the direction (>>, at right in this case, but in other example it could have been at left: <<). The same analysis stands for: ne31, ne32, ne40, ne41, ne42 and ne43. It can be noticed that Console Output 1 is consistent with every "netElement" shown in Figure 2.
+In this example, the Console Output 1 shows that the program can identify the nodes and their directions. Consol Output 1 has, for example, this line: ne3 [2040, 120] [1020, 120] <<, that indicates the name of the netElement (ne3), the position (origin [2040, 120] and end point [1020, 120]) of the net element, and the direction (<<, at left in this case, but in other example it could have been at right: >>). The same analysis stands for: ne23, ne25, ne26 and ne27. It can be noticed that Console Output 1 is consistent with every "netElement" shown in Figure 2.
 
 ### C and D. Infrastructure analysis and CDL zones detection
 
@@ -91,18 +89,14 @@ The result of this step is shown in Console Output 2 and Figure 3.
 ~~~
 Analyzing infrastructure --> Infrastructure.RNA
  Detecting Danger --> Safe_points.RNA
-  ne1 has a Middle point @ [-564.0, -30]
-  ne1 has a Middle point @ [-358.0, -30]
-  ne1 has a Middle point @ [-152.0, -30]
-  ne1 has a Middle point @ [54.0, -30]
-  ne31 has a Middle point @ [766.0, 480]
-  ne31 has a Middle point @ [978.0, 480]
-  ne32 has a Curve(2 lines) @ [[830, 957]]
-  ne41 has a Curve(2 lines) @ [[650, -30]]
-  ne42 has a Middle point @ [1270.0, -420]
-  ne42 has a Middle point @ [1500.0, -420]
-  ne43 has a Middle point @ [640.0, -420]
-  ne43 has a Middle point @ [840.0, -420]
+  ne3 has a LevelCrossing[Lc06] @ [1536, -120]
+  ne23 has a Platform[Plat02] @ [-160, 300]
+  ne23 has a LevelCrossing[Lc07] @ [-494, 300]
+  ne23 has a LevelCrossing[Lc09] @ [266, 300]
+  ne25 has a LevelCrossing[Lc05] @ [1166, 300]
+  ne26 has a Platform[Plat01] @ [-41, -120]
+  ne26 has a LevelCrossing[Lc03] @ [-404, -120]
+  ne26 has a LevelCrossing[Lc04] @ [572, -120]
 ~~~
 
 *Console Output 2. Infraestructure analysis and CDL zone detection.*
@@ -139,13 +133,13 @@ Signals are enumerated since 00 with a prefix letter to indicate which element g
 
 In red letters, automatically added signals are shown.
 
-The RNA allocates signals close to the buffer stops:
+The RNA allocates signals close to the line boredrs:
 
--- Stop: *T01, T03, T05, T07 and T09*
+-- Stop: *L01, L02, L03 and L04*
 
--- Departure: *T02, T04, T06, T08 and T10*
+-- Departure: *Nothing*
 
-The RNA allocates signals close to the line borders. RNA does not allocate departure signals assigned close to every line border, because this network does not have line borders.
+The RNA allocates signals close to the line borders. RNA does not allocate departure signals assigned close to every buffer stop border, because this network does not have buffer stops.
 
 ![Figure 7](Figure1.jpg "Figure 7")
 
@@ -183,7 +177,13 @@ It is necessary to introduce signals before the train reaches the level crossing
 
 Also, it is necessary to have a departure signal after the platform. This logic is implemented using Algorithm 6, explained in [[1]](#references) section "III. SIGNALLING GENERATION".
 
-RNA does not allocate signals assigned close to every platforms or level crossings, because this network does not have platforms and level crossings shown in Figure 11.
+RNA allocates the next signals close to each platform and level crossing:
+
+-- Platforms: *P17, P18, P19 and P20*
+
+-- Level crossings: *X05, X06, X07, X08, X09, X10, X11, X12, X13, X14, X15 and X16*
+
+This signals are indicated in red in Figure 11.
 
 ![Figure 11](Figure3.jpg "Figure 11")
 
@@ -199,11 +199,10 @@ The configuration of the RNA GUI application needed for this step of the analysi
 
 The signals for switches are named based on the point they want to protect: S for Starting branch, C for the Continue branch and B for the Detour branch. There are also signals whose name starts with H that are not explicitly protecting the starting branch, the continue branch or the detour branch of a switch. These H signals are explained in [[1]](#references) section "III. SIGNALLING GENERATION" in literal E, where a manoeuvre signal numbered with H is always added plus the corresponding numbering sequence by Algorithm 7. This manoeuvre signal always accompanies the signal of the start branch (S) of the switch, and its function is to protect the railway elements that are after this signal (i.e. elements that are in the detour branch and in the continue branch).
 
-Signals generated for Example 7 are shown in red letters in Figure 13:
+Signals generated for Example 7 are shown in red in Figure 13:
 
-- Sw18: S14, C13 and H15.
-- Sw14: C11, B12 and H16.
-- Sw19: S19, H20, B18 and C17.
+- Sw11: S22, C21 and H23.
+- Sw12: S25, C24 and H26.
 
 ![Figure 13](Figure4.jpg "Figure 13")
 
@@ -229,24 +228,26 @@ The simplification process was carried out according to the process described in
 
 - **Simplification by vertical inheritance**
 
-    Vertical inheritance was applied when the B signals of the Sw15 and Sw19 were moved to the signals H16 y H22, respectively. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal A.  
+    Vertical inheritance was applied when the B signals of the Sw11 and Sw12 were moved to the signals H23 y H26, respectively. These signals B, apparently were not created, because of the RNA when analysing the switches, applying Algorithm 8 explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal A.  
 
 - **Simplification by horizontal inheritance**
 
-    The simplified signals due to horizontal inheritance are C11, B12, H15, H16, C17, C13, S19 and H20. Signals H15 and H16 was deleted by RNA due these were nearby of signal S14, and have the same direction and orientation. The same situation occurs between signals H20 and C13. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references)). This algorithm was designed to group nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
+    The simplified signals due to horizontal inheritance are X11, H23, P18, X08, H26, X15, S19, P17 and X10. Signals P20, X11 and H23 were deleted by RNA due these were nearby of signal S22, and have the same direction and orientation. The same situation occurs between signals H26 and X15. In all cases, is applied Algorithm 9 (described in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references)). This algorithm was designed to group nearby objects as one single object, and generating signals according to the leftmost and rightmost railway element in the new single object. 
 
-    Finally, signals deleted due to horizontal inheritance: C11, B12, C13, S19 and C17, the priority of T06, T04, T08 and T10 respectively, were superior as explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal B.
+    Finally, signals deleted due to horizontal inheritance: X08, P18, X10 and P17, the priority of C24, P19 and X05 respectively, were superior as explained in section IV. SIGNALLING SIMPLIFICATION of [[1]](#references), literal B.
 
 ~~~
 Reducing redundant signals
-T priority removing sig12 for sig04
-T priority removing sig11 for sig06
-T priority removing sig13 for sig08
-T priority removing sig19 for sig08
-T priority removing sig17 for sig10
-Same position removing sig15 for sig14
-Same position removing sig16 for sig14
-Same position removing sig20 for sig13
+removing sig17 for sig05
+removing sig18 for sig08
+removing sig08 for sig24
+removing sig10 for sig19
+removing sig11 for sig22
+removing sig21 for sig14
+removing sig15 for sig25
+removing sig20 for sig22
+removing sig23 for sig22
+removing sig26 for sig25
 ~~~
 
 ### G. Output generated by RNA
@@ -263,159 +264,187 @@ Aditionally, RNA generates the object that will be used by the ACG. The logfiles
 #### G.1 Infrastructure.RNA: 
 
 ~~~
-Nodes: 7 | Switches: 3 | Signals: 0 | Detectors: 0 | Ends: 5 | Barriers: 0
-Node ne1:
-	Track = track1
-	Type = BufferStop -> ['bus1']
-	Neighbours = 2 -> ['ne41', 'ne40']
-	Switches -> Sw18
-		ContinueCourse -> right -> ne41
-		BranchCourse -> left -> ne40
-Node ne31:
+Nodes: 5 | Switches: 2 | Signals: 0 | Detectors: 0 | Ends: 4 | Barriers: 6
+Node ne3:
 	Track = track2
-	Type = BufferStop -> ['bus4']
-	Neighbours = 2 -> ['ne40', 'ne32']
-Node ne32:
-	Track = track4
-	Type = BufferStop -> ['bus35']
-	Neighbours = 2 -> ['ne31', 'ne40']
-Node ne40:
+	Neighbours = 2 -> ['ne26', 'ne27']
+	Level crossing -> Lc06
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [1491, -120] | Coordinate: 0.5373
+	Switches -> Sw12
+		ContinueCourse -> right -> ne26
+		BranchCourse -> left -> ne27
+Node ne23:
 	Track = track3
-	Neighbours = 4 -> ['ne1', 'ne31', 'ne32', 'ne41']
-	Switches -> Sw14
-		ContinueCourse -> left -> ne32
-		BranchCourse -> right -> ne31
-Node ne41:
+	Neighbours = 2 -> ['ne25', 'ne27']
+	Level crossing -> Lc07
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [-449, 300] | Coordinate: 0.3273
+	Level crossing -> Lc09
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [311, 300] | Coordinate: 0.8148
+	Switches -> Sw11
+		ContinueCourse -> right -> ne25
+		BranchCourse -> left -> ne27
+Node ne25:
+	Track = track4
+	Neighbours = 2 -> ['ne23', 'ne27']
+	Level crossing -> Lc05
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [1211, 300] | Coordinate: 0.4248
+Node ne26:
+	Track = track1
+	Neighbours = 2 -> ['ne3', 'ne27']
+	Level crossing -> Lc03
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [-449, -120] | Coordinate: 0.7421
+	Level crossing -> Lc04
+		Protection -> true | Barriers -> none | Lights -> none Acoustic -> none
+		Position -> [527, -120] | Coordinate: 0.2487
+Node ne27:
 	Track = track5
-	Neighbours = 4 -> ['ne1', 'ne40', 'ne42', 'ne43']
-Node ne42:
-	Track = track6
-	Type = BufferStop -> ['bus48']
-	Neighbours = 2 -> ['ne41', 'ne43']
-	Switches -> Sw19
-		ContinueCourse -> left -> ne43
-		BranchCourse -> right -> ne41
-Node ne43:
-	Track = track7
-	Type = BufferStop -> ['bus47']
-	Neighbours = 2 -> ['ne41', 'ne42']
+	Neighbours = 4 -> ['ne3', 'ne23', 'ne25', 'ne26']
 ~~~
 
 #### G.2 Safe_points.RNA: 
 
 ~~~
-ne1:
-  Next: [[-564.0, -30], [-358.0, -30], [-152.0, -30], [54.0, -30]]
-  Prev: [[-564.0, -30], [-358.0, -30], [-152.0, -30], [54.0, -30]]
-ne31:
-  Next: [[766.0, 480], [978.0, 480]]
-  Prev: [[766.0, 480], [978.0, 480]]
-ne32:
-  Prev: [[930.0, 957]]
-ne41:
-  Next: [[550.0, -30]]
-ne42:
-  Next: [[1270.0, -420], [1500.0, -420]]
-  Prev: [[1270.0, -420], [1500.0, -420]]
-ne43:
-  Next: [[640.0, -420], [840.0, -420]]
-  Prev: [[640.0, -420], [840.0, -420]]
+ne3:
+  Next: [[1336, -120]]
+  Prev: [[1736, -120]]
+ne23:
+  Next: [[-360, 300], [-694, 300], [66, 300]]
+  Prev: [[40, 300], [-294, 300], [466, 300]]
+ne25:
+  Next: [[966, 300]]
+  Prev: [[1366, 300]]
+ne26:
+  Next: [[-241, -120], [-604, -120], [372, -120]]
+  Prev: [[159, -120], [-204, -120], [772, -120]]
 ~~~
 
 #### G.3 Signalling.RNA: 
 
 ~~~
-sig01 [T01] <<:
-	From: ne1 | To: bus1_left
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [-670, 30] | Coordinate: 0.0970
-sig02 [T02] >>:
-	From: ne1 | To: ne1_right
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [-670, 30] | Coordinate: 0.0970
-sig03 [T03] >>:
-	From: ne31 | To: bus4_right
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [1090, -480] | Coordinate: 0.8427
-sig04 [T04] <<:
-	From: ne31 | To: ne31_left
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [1090, -480] | Coordinate: 0.8427
-sig05 [T05] >>:
-	From: ne32 | To: bus35_right
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [1360, -957] | Coordinate: 0.9153
-sig06 [T06] <<:
-	From: ne32 | To: ne32_left
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [1360, -957] | Coordinate: 0.9153
-sig07 [T07] >>:
-	From: ne42 | To: bus48_right
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [1630, 420] | Coordinate: 0.8550
-sig08 [T08] <<:
-	From: ne42 | To: ne42_left
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [1630, 420] | Coordinate: 0.8550
-sig09 [T09] <<:
-	From: ne43 | To: bus47_left
-	Type: Stop | Direction: normal | AtTrack: left 
-	Position: [540, 420] | Coordinate: 0.1666
-sig10 [T10] >>:
-	From: ne43 | To: ne43_right
-	Type: Stop | Direction: reverse | AtTrack: right 
-	Position: [540, 420] | Coordinate: 0.1666
-sig14 [S14] >>:
-	From: ne1 | To: ne1_right
+sig01 [L01] >>:
+	From: ne3 | To: lb70_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1940, -120] | Coordinate: 0.9019
+sig02 [L02] <<:
+	From: ne23 | To: oe178_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-860, 300] | Coordinate: 0.0641
+sig03 [L03] >>:
+	From: ne25 | To: oe179_right
 	Type: Circulation | Direction: normal | AtTrack: left 
-	Position: [54.0, 30] | Coordinate: 0.8
-sig18 [B18] >>:
-	From: ne41 | To: ne41_right
-	Type: Manouver | Direction: normal | AtTrack: left 
-	Position: [550.0, 30] | Coordinate: 0.8937
-sig20 [H20] <<:
-	From: ne42 | To: ne42_left
-	Type: Manouver | Direction: reverse | AtTrack: right 
-	Position: [1270.0, 420] | Coordinate: 0.3333
+	Position: [1940, 300] | Coordinate: 0.9305
+sig04 [L04] <<:
+	From: ne26 | To: lb69_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-860, -120] | Coordinate: 0.0505
+sig05 [X05] <<:
+	From: ne26 | To: ne26_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-204, 120] | Coordinate: 0.4005
+sig06 [X06] >>:
+	From: ne26 | To: ne26_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-604, 120] | Coordinate: 0.2168
+sig07 [X07] <<:
+	From: ne26 | To: ne26_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [772, 120] | Coordinate: 0.8831
+sig09 [X09] >>:
+	From: ne23 | To: ne23_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [-694, -300] | Coordinate: 0.4207
+sig12 [X12] <<:
+	From: ne23 | To: ne23_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [466, -300] | Coordinate: 0.9917
+sig13 [X13] >>:
+	From: ne25 | To: ne25_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [966, -300] | Coordinate: 0.4880
+sig14 [X14] <<:
+	From: ne25 | To: ne25_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1366, -300] | Coordinate: 0.6757
+sig16 [X16] >>:
+	From: ne3 | To: ne3_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [1336, 120] | Coordinate: 0.3890
+sig19 [P19] <<:
+	From: ne23 | To: ne23_left
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [-280, -300] | Coordinate: 0.5813
+sig22 [S22] >>:
+	From: ne23 | To: ne23_right
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [40, -300] | Coordinate: 0.7475
+sig24 [C24] >>:
+	From: ne26 | To: ne26_right
+	Type: Circulation | Direction: reverse | AtTrack: right 
+	Position: [372, 120] | Coordinate: 0.6835
+sig25 [S25] <<:
+	From: ne3 | To: ne3_left
+	Type: Circulation | Direction: normal | AtTrack: left 
+	Position: [1736, 120] | Coordinate: 0.7403
+
 ~~~
 
 #### G.4 Routes.RNA: 
 
 Full interlocking table
 ~~~
-route_1 [sig02 >> sig14]:
-	Path: ['ne1']
-	Switches: ['Sw18']
-route_2 [sig04 << sig01]:
-	Path: ['ne31', 'ne40', 'ne1']
-	Switches: ['Sw14', 'Sw18']
-route_3 [sig06 << sig01]:
-	Path: ['ne32', 'ne40', 'ne1']
-	Switches: ['Sw14', 'Sw18']
-route_4 [sig08 << sig20]:
-	Path: ['ne42']
-	Switches: ['Sw19']
-route_5 [sig10 >> sig07]:
-	Path: ['ne43', 'ne42']
-	Switches: ['Sw19']
-route_6 [sig14 >> sig18]:
-	Path: ['ne1', 'ne41']
-	Switches: ['Sw18']
-route_7 [sig14 >> sig03]:
-	Path: ['ne1', 'ne40', 'ne31']
-	Switches: ['Sw14', 'Sw18']
-route_8 [sig14 >> sig05]:
-	Path: ['ne1', 'ne40', 'ne32']
-	Switches: ['Sw14', 'Sw18']
-route_9 [sig18 >> sig07]:
-	Path: ['ne41', 'ne42']
-	Switches: ['Sw19']
-route_10 [sig20 << sig01]:
-	Path: ['ne42', 'ne41', 'ne1']
-	Switches: ['Sw18', 'Sw19']
-route_11 [sig20 << sig09]:
-	Path: ['ne42', 'ne43']
-	Switches: ['Sw19']
+route_1 [S06 >> S24]:
+	Path: ['ne26']
+	Platforms: ['Plat01']
+	Crossings: ['Lc03']
+route_2 [S07 << S04]:
+	Path: ['ne26']
+	Platforms: ['Plat01']
+	Crossings: ['Lc03', 'Lc04']
+route_3 [S09 >> S22]:
+	Path: ['ne23']
+	Platforms: ['Plat02']
+	Crossings: ['Lc07']
+route_4 [S12 << S22]:
+	Path: ['ne23']
+	Crossings: ['Lc09']
+route_5 [S13 >> S03]:
+	Path: ['ne25']
+	Crossings: ['Lc05']
+route_6 [S14 << S12]:
+	Path: ['ne25', 'ne23']
+	Switches: ['Sw11_N']
+	Crossings: ['Lc05']
+route_7 [S16 >> S01]:
+	Path: ['ne3']
+	Crossings: ['Lc06']
+route_8 [S19 << S02]:
+	Path: ['ne23']
+	Crossings: ['Lc07']
+route_9 [S22 >> S13]:
+	Path: ['ne23', 'ne25']
+	Switches: ['Sw11_N']
+	Crossings: ['Lc09']
+route_10 [S22 >> S16]:
+	Path: ['ne23', 'ne27', 'ne3']
+	Switches: ['Sw11_R', 'Sw12_R']
+	Crossings: ['Lc09']
+route_11 [S24 >> S16]:
+	Path: ['ne26', 'ne3']
+	Switches: ['Sw12_N']
+	Crossings: ['Lc04']
+route_12 [S25 << S07]:
+	Path: ['ne3', 'ne26']
+	Switches: ['Sw12_N']
+	Crossings: ['Lc06']
+route_13 [S25 << S12]:
+	Path: ['ne3', 'ne27', 'ne23']
+	Switches: ['Sw11_R', 'Sw12_R']
+	Crossings: ['Lc06']
 ~~~
 
 ### H. Comparing interlocking tables.
@@ -436,114 +465,48 @@ Routes defined in "Example_8.railML" (original layout)
 
 ~~~
 <routes>
-                <route id="rt_sig50_sig51_swi43N">
-                    <designator register="_Example" entry="Route S01-S02 (Sw18N)"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <facingSwitchInPosition id="rp_pt_swi43_rt_sig50_sig51_swi43N" inPosition="right">
-                        <designator register="_Example" entry="Sw18 in right"/>
-                        <refersToSwitch ref="il_swi43"/>
-                    </facingSwitchInPosition>
-                    <routeEntry id="rts_sig50_rt_sig50_sig51_swi43N">
-                        <refersTo ref="il_sig50"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig51_rt_sig50_sig51_swi43N">
-                        <refersTo ref="il_sig51"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig50_sig56_swi43R_swi34N">
-                    <designator register="_Example" entry="Route S01-S06 (Sw18R-Sw14N)"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <facingSwitchInPosition id="rp_pt_swi43_rt_sig50_sig56_swi43R_swi34N" inPosition="left">
-                        <designator register="_Example" entry="Sw18 in left"/>
-                        <refersToSwitch ref="il_swi43"/>
-                    </facingSwitchInPosition>
-                    <facingSwitchInPosition id="rp_pt_swi34_rt_sig50_sig56_swi43R_swi34N" inPosition="left">
-                        <designator register="_Example" entry="Sw14 in left"/>
-                        <refersToSwitch ref="il_swi34"/>
-                    </facingSwitchInPosition>
-                    <routeEntry id="rts_sig50_rt_sig50_sig56_swi43R_swi34N">
-                        <refersTo ref="il_sig50"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig56_rt_sig50_sig56_swi43R_swi34N">
-                        <refersTo ref="il_sig56"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig50_sig57_swi43R_swi34R">
-                    <designator register="_Example" entry="Route S01-S07 (Sw18R-Sw14R)"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <facingSwitchInPosition id="rp_pt_swi43_rt_sig50_sig57_swi43R_swi34R" inPosition="left">
-                        <designator register="_Example" entry="Sw18 in left"/>
-                        <refersToSwitch ref="il_swi43"/>
-                    </facingSwitchInPosition>
-                    <facingSwitchInPosition id="rp_pt_swi34_rt_sig50_sig57_swi43R_swi34R" inPosition="right">
-                        <designator register="_Example" entry="Sw14 in right"/>
-                        <refersToSwitch ref="il_swi34"/>
-                    </facingSwitchInPosition>
-                    <routeEntry id="rts_sig50_rt_sig50_sig57_swi43R_swi34R">
-                        <refersTo ref="il_sig50"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig57_rt_sig50_sig57_swi43R_swi34R">
-                        <refersTo ref="il_sig57"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig51_sig58">
-                    <designator register="_Example" entry="Route S02-S08"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <routeEntry id="rts_sig51_rt_sig51_sig58">
-                        <refersTo ref="il_sig51"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig58_rt_sig51_sig58">
-                        <refersTo ref="il_sig58"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig53_sig59_swi45N">
-                    <designator register="_Example" entry="Route S03-S09 (Sw19N)"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <facingSwitchInPosition id="rp_pt_swi45_rt_sig53_sig59_swi45N" inPosition="left">
-                        <designator register="_Example" entry="Sw19 in left"/>
-                        <refersToSwitch ref="il_swi45"/>
-                    </facingSwitchInPosition>
-                    <routeEntry id="rts_sig53_rt_sig53_sig59_swi45N">
-                        <refersTo ref="il_sig53"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig59_rt_sig53_sig59_swi45N">
-                        <refersTo ref="il_sig59"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig53_sig60_swi45R">
-                    <designator register="_Example" entry="Route S03-S10 (Sw19R)"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <facingSwitchInPosition id="rp_pt_swi45_rt_sig53_sig60_swi45R" inPosition="right">
-                        <designator register="_Example" entry="Sw19 in right"/>
-                        <refersToSwitch ref="il_swi45"/>
-                    </facingSwitchInPosition>
-                    <routeEntry id="rts_sig53_rt_sig53_sig60_swi45R">
-                        <refersTo ref="il_sig53"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig60_rt_sig53_sig60_swi45R">
-                        <refersTo ref="il_sig60"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig54_sig60">
-                    <designator register="_Example" entry="Route S04-S10"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <routeEntry id="rts_sig54_rt_sig54_sig60">
-                        <refersTo ref="il_sig54"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig60_rt_sig54_sig60">
-                        <refersTo ref="il_sig60"/>
-                    </routeExit>
-                </route>
-                <route id="rt_sig55_sig60">
-                    <designator register="_Example" entry="Route S05-S10"/>
-                    <handlesRouteType ref="rt_main"/>
-                    <routeEntry id="rts_sig55_rt_sig55_sig60">
-                        <refersTo ref="il_sig55"/>
-                    </routeEntry>
-                    <routeExit id="rtd_sig60_rt_sig55_sig60">
-                        <refersTo ref="il_sig60"/>
-                    </routeExit>
-                </route>
+	<route id="rt_sig189_sig188">
+		<designator register="_Example" entry="Route S05-S04"/>
+	</route>
+	<route id="rt_sig190_sig200">
+		<designator register="_Example" entry="Route S06-S16"/>
+	</route>
+	<route id="rt_sig191_sig189">
+		<designator register="_Example" entry="Route S07-S05"/>
+	</route>
+	<route id="rt_sig192_sig194">
+		<designator register="_Example" entry="Route S08-S10"/>
+	</route>
+	<route id="rt_sig193_sig186">
+		<designator register="_Example" entry="Route S09-S02"/>
+	</route>
+	<route id="rt_sig194_sig196_swi162N">
+		<designator register="_Example" entry="Route S10-S12 (Sw11N)"/>
+	</route>
+	<route id="rt_sig194_sig198_swi162R">
+		<designator register="_Example" entry="Route S10-S14 (Sw11R)"/>
+	</route>
+	<route id="rt_sig195_sig193">
+		<designator register="_Example" entry="Route S11-S09"/>
+	</route>
+	<route id="rt_sig196_sig187">
+		<designator register="_Example" entry="Route S12-S03"/>
+	</route>
+	<route id="rt_sig197_sig195">
+		<designator register="_Example" entry="Route S13-S11"/>
+	</route>
+	<route id="rt_sig198_sig185">
+		<designator register="_Example" entry="Route S14-S01"/>
+	</route>
+	<route id="rt_sig199_sig191_swi163N">
+		<designator register="_Example" entry="Route S15-S07 (Sw12N)"/>
+	</route>
+	<route id="rt_sig199_sig195_swi163R">
+		<designator register="_Example" entry="Route S15-S11 (Sw12R)"/>
+	</route>
+	<route id="rt_sig200_sig198">
+		<designator register="_Example" entry="Route S16-S14"/>
+	</route>
 </routes>
 ~~~
 
@@ -553,14 +516,18 @@ This routes were rearrenged and summarized in Table 1.
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  S01  |  S02  | Sw18_N | - | - | ne1-ne41 |
-| R_02 |  S01  |  S06  | Sw14_N + Sw18_R | - | - | ne1-ne40-ne32 |
-| R_03 |  S01  |  S07  | Sw14_R + Sw18_R | - | - | ne1-ne40-ne31 |
-| R_04 |  S03  |  S09  | Sw19_N | - | - | ne42-ne43 |
-| R_05 |  S03  |  S10  | Sw18_N + Sw19_R | - | - | ne42-ne41-ne1 |
-| R_06 |  S02  |  S08  | Sw19_R | - | - | ne41-ne42 |
-| R_07 |  S04  |  S10  | Sw14_R + Sw18_R | - | - | ne31-ne40-ne1 |
-| R_08 |  S05  |  S10  | Sw14_N + Sw18_R | - | - | ne32-ne40-ne1 |
+| R_01 |  S06  |  S16  | - | Plat01 | Lc03 | ne26-ne26 |
+| R_02 |  S07  |  S05  | - | Plat01 | Lc04 | ne26-ne26 |
+| R_03 |  S08  |  S10  | - | Plat02 | Lc07 | ne23-ne23 |
+| R_04 |  S10  |  S12  | Sw11_N | - | Lc09 | ne23-ne25 |
+| R_05 |  S10  |  S14  | Sw11_R+Sw12_R | - | Lc09 | ne23-ne3 |
+| R_06 |  S11  |  S09  | - | Plat02 | Lc09 | ne23-ne23 |
+| R_07 |  S12  |  S03  | - | - | Lc05 | ne25-ne25 |
+| R_08 |  S13  |  S11  | - | - | Lc05 | ne25-ne23 |
+| R_09 |  S14  |  S01  | - | - | Lc06 | ne3-ne3 |
+| R_10 |  S15  |  S07  | Sw12_N | - | Lc06 | ne3-ne26 |
+| R_11 |  S15  |  S11  | Sw11_R+Sw12_R | - | Lc06 | ne3-ne23 |
+| R_12 |  S16  |  S14  | - | - | Lc04 | ne26-ne3 |
 
 #### H.2. Generated interlocking table
 
@@ -570,17 +537,20 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | T02 | S14 | -  | - | - | ne1 |
-| R_02 | T04 | T01 | sw14_R + sw18_R  | - | - | ne31-ne40-ne1 |
-| R_03 | T06 | T01 | sw14_N + sw18_R  | - | - | ne32-ne40-ne1 |
-| R_04 | T08 | H20 | -  | - | - | ne42 |
-| R_05 | T10 | T07 | sw19_N | -  | - | ne43-ne42 |
-| R_06 | S14 | B18 | sw18_N | -  | - | ne1-ne41 |
-| R_07 | S14 | T05 | sw18_R + sw14_N | -  | - | ne1-ne40-ne32 |
-| R_08 | S14 | T03 | sw18_R + sw14_R | -  | - | ne1-ne40-ne31 |
-| R_09 | B18 | T07 | sw19_R | -  | - | ne41-ne42 |
-| R_10 | H20 | T09 | sw19_N  | -  | - | ne42-ne43 |
-| R_11 | H20 | T01 | sw19_R + sw18_N | -  | - | ne42-ne41-ne1 |
+| R_00 |  X05  |  L04  | - | - | Lc03 | ne26-ne26 |
+| R_01 |  X06  |  C24  | - | Plat01 | Lc03 | ne26-ne26 |
+| R_02 |  X07  |  L04  | - | Plat01 | Lc03 | ne26-ne26 |
+| R_03 |  X09  |  S22  | - | Plat02 | Lc07 | ne23-ne23 |
+| R_04 |  X12  |  S22  | - | - | Lc09 | ne23-ne23 |
+| R_05 |  X13  |  L03  | - | - | Lc05 | ne25-ne25 |
+| R_06 |  X14  |  X12  | Sw11_N | - | Lc05 | ne25-ne23 |
+| R_07 |  X16  |  L01  | - | - | Lc06 | ne3-ne3 |
+| R_08 |  P19  |  L02  | - | - | Lc07 | ne23-ne23 |
+| R_09 |  S22  |  X13  | Sw11_N | - | Lc09 | ne23-ne25 |
+| R_10 |  S22  |  X16  | Sw11_R+Sw12_R | - | Lc09 | ne23-ne3 |
+| R_11 |  C24  |  X16  | Sw12_N | - | Lc04 | ne26-ne3 |
+| R_12 |  S25  |  X07  | Sw12_N | - | Lc06 | ne3-ne26 |
+| R_13 |  S25  |  X12  | Sw11_R-Sw12_R | - | Lc06 | ne3-ne23 |
 
 #### H.3. Interlocking table comparisson
 
@@ -588,24 +558,27 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Design4Rail  | Signals | netElements | RNA | Signals | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | S01 - S02	 | ne1-ne41 	        | R_06 	| S14 - B18	 | ne1-ne41 
-| R_02 | S01 - S06	 | ne1-ne40-ne32 	| R_07 	| S14 - T05	 | ne1-ne40-ne32 
-| R_03 | S01 - S07	 | ne1-ne40-ne31 	| R_08 	| S14 - T03	 | ne1-ne40-ne31 
-| R_04 | S03 - S09	 | ne42-ne43 	        | R_04 + R_10 | T08 - H20 - T09  | ne42-ne43 
-| R_05 | S03 - S10	 | ne42-ne41-ne1 	| R_04 + R_11 | T08 - H20 - T01	 | ne42-ne41-ne1 
-| R_06 | S02 - S08	 | ne41-ne42 	        | R_09 	| B18 - T07	 | ne41-ne42 
-| R_07 | S04 -  S10      | ne31-ne40-ne1 	| R_02 	| T04 - T01	 | ne31-ne40-ne1 
-| R_08 | S05 - S10	 | ne32-ne40-ne1 	| R_03 	| T06 - T01	 | ne32-ne40-ne1 
+| R_01 | S06 - S16 | ne26-ne26 | R_01 | X06 - C24 | ne26-ne26 
+| R_02 | S07 - S05 | ne26-ne26 | R_02 | X07 - L04 | ne26-ne26 
+| R_03 | S08 - S10 | ne23-ne23 | R_03 | X09 - S22 | ne23-ne23 
+| R_04 | S10 - S12 | ne23-ne25 | R_09 | S22 - X13 | ne23-ne25 
+| R_05 | S10 - S14 | ne23-ne3  | R_10 | S22 - X16 | ne23-ne3 
+| R_06 | S11 - S09 | ne23-ne23 | R_08 | P19 - L02 | ne23-ne23 
+| R_07 | S12 - S03 | ne25-ne25 | R_05 | X13 - L03 | ne25-ne25
+| R_08 | S13 - S11 | ne25-ne23 | R_06 | X14 - X12 | ne25-ne23 
+| R_09 | S14 - S01 | ne3-ne3   | R_07 | X16 - L01 | ne3-ne3 
+| R_10 | S15 - S07 | ne3-ne26  | R_12 | S25 - X07 | ne3-ne26 
+| R_11 | S15 - S11 | nne3-ne23 | R_13 | S25 - X12 | ne3-ne23 
+| R_12 | S16 - S14 | ne26-ne3 	 R_11 | C24 - X16 | ne26-ne3 
 
-The 8 routes in the original interlocking table (Table 1) have an exact equivalent in the interlocking table generated by RNA (Table 2). It is clear that not safety functionality were ignored by RNA.
+The 12 routes in the original interlocking table (Table 1) have an exact equivalent in the interlocking table generated by RNA (Table 2). It is clear that not safety functionality were ignored by RNA.
 
-New routes created by RNA to increase safety:
+Two new routes were added: 
 
-Route 1 was created because RNA added signal T02 to protect the end of the line in section ne1, creating a new route between them.
+Route 0 that uses signal X05 as an extra stop between the platform Plat01 and the level crossing Lc03.
 
-Route 4 was created because RNA added signal T08 to protect the end of the line in ne42, creating a new route between them. This new route adds a stop in the old routes 4 and 5, before switch Sw19.
+Route 8 that uses signal P19 as an extra stop between the platform Plat02 and the level crossing Lc07.
 
-Route 5 was created because RNA added signal T10 to protect the end of the line in ne43, creating a new route between them.
 
 ### E Extras
 
@@ -637,7 +610,7 @@ The fixed length parameter is necessary to allocate the departure signals, which
 
 Design4Rail has not only a sintax analyzer that is used to check that the .railML file generated by RNA is correct. It also can be used as a visualization tool for both the layout and the interlocking table if you import the correspondig railML file. Design4Rail generates its own interlocking table based on the railML file. This can be done following the next steps:
 
-In Design4Rail software open the archive Example_1_B.railml", generated by RNA for this example, as shown in Figure 20.
+In Design4Rail software open the archive Example_8_B.railml", generated by RNA for this example, as shown in Figure 20.
 
 ![Figure 20](import_rail_aid_1.png "Figure 20")
 ![Figure 20](import_rail_aid_2.png "Figure 20")
