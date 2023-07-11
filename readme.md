@@ -25,7 +25,7 @@
 			<td rowspan="4" align="center">5</td>
 			<td rowspan="4" align="center">2</td>
 			<td rowspan="4" align="center">2</td>
-			<td rowspan="4" align="center">29</td>
+			<td rowspan="4" align="center">24</td>
 			<td rowspan="4" align="center">14</td>
 		</tr>
 		<tr>
@@ -48,7 +48,7 @@
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">1</td>
 			<td rowspan="4" align="center">2</td>
-			<td rowspan="4" align="center">15</td>
+			<td rowspan="4" align="center">12</td>
 			<td rowspan="4" align="center">5</td>
 		</tr>
 		<tr>
@@ -71,8 +71,8 @@
 			<td rowspan="4" align="center">21</td>
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">13</td>
-			<td rowspan="4" align="center">94</td>
-			<td rowspan="4" align="center">35</td>
+			<td rowspan="4" align="center">72</td>
+			<td rowspan="4" align="center">33</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -94,8 +94,8 @@
 			<td rowspan="4" align="center">23</td>
 			<td rowspan="4" align="center">6</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">95</td>
-			<td rowspan="4" align="center">7</td>
+			<td rowspan="4" align="center">70</td>
+			<td rowspan="4" align="center">76</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -117,7 +117,7 @@
 			<td rowspan="4" align="center">4</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">24</td>
+			<td rowspan="4" align="center">16</td>
 			<td rowspan="4" align="center">16</td>
 		</tr>
 		<tr>
@@ -140,7 +140,7 @@
 			<td rowspan="4" align="center">5</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">30</td>
+			<td rowspan="4" align="center">24</td>
 			<td rowspan="4" align="center">16</td>
 		</tr>
 		<tr>
@@ -163,7 +163,7 @@
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">17</td>
+			<td rowspan="4" align="center">13</td>
 			<td rowspan="4" align="center">8</td>
 		</tr>
 		<tr>
