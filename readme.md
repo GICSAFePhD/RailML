@@ -355,7 +355,19 @@ ne20 [666, 300] [1521, 300] True >> False
  Signals structure found!
  Detecting Routes --> Routes.RNA
 RML object's size: 48 Bytes
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+r1 -> [ R3 ]
+r2 -> [ R6 ]
+r3 -> [ R2 ]
+r4 -> [ R10 ]
+r5 -> [ R9 ]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+New interlocking table covers 100% of Routes
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Railway elements fully protected -> Railway principles accepted
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Exporting .railML file
+railML file syntax validated: <Element '{https://www.railml.org/schemas/3.1}railML' at 0x0000020193FF5C20>
 ```
 
 
