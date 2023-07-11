@@ -1,31 +1,48 @@
-route_1 [S02 >> S14]:
-	Path: ['ne1']
-route_2 [S04 << S01]:
-	Path: ['ne31', 'ne40', 'ne1']
-	Switches: ['Sw14_R', 'Sw18_R']
-route_3 [S06 << S01]:
-	Path: ['ne32', 'ne40', 'ne1']
-	Switches: ['Sw14_N', 'Sw18_R']
-route_4 [S08 << S20]:
-	Path: ['ne42']
-route_5 [S10 >> S07]:
-	Path: ['ne43', 'ne42']
-	Switches: ['Sw19_N']
-route_6 [S14 >> S18]:
-	Path: ['ne1', 'ne41']
-	Switches: ['Sw18_N']
-route_7 [S14 >> S03]:
-	Path: ['ne1', 'ne40', 'ne31']
-	Switches: ['Sw14_R', 'Sw18_R']
-route_8 [S14 >> S05]:
-	Path: ['ne1', 'ne40', 'ne32']
-	Switches: ['Sw14_N', 'Sw18_R']
-route_9 [S18 >> S07]:
-	Path: ['ne41', 'ne42']
-	Switches: ['Sw19_R']
-route_10 [S20 << S01]:
-	Path: ['ne42', 'ne41', 'ne1']
-	Switches: ['Sw18_N', 'Sw19_R']
-route_11 [S20 << S09]:
-	Path: ['ne42', 'ne43']
-	Switches: ['Sw19_N']
+route_1 [S06 >> S24]:
+	Path: ['ne26']
+	Platforms: ['Plat01']
+	Crossings: ['Lc03']
+route_2 [S07 << S04]:
+	Path: ['ne26']
+	Platforms: ['Plat01']
+	Crossings: ['Lc03', 'Lc04']
+route_3 [S09 >> S22]:
+	Path: ['ne23']
+	Platforms: ['Plat02']
+	Crossings: ['Lc07']
+route_4 [S12 << S22]:
+	Path: ['ne23']
+	Crossings: ['Lc09']
+route_5 [S13 >> S03]:
+	Path: ['ne25']
+	Crossings: ['Lc05']
+route_6 [S14 << S12]:
+	Path: ['ne25', 'ne23']
+	Switches: ['Sw11_N']
+	Crossings: ['Lc05']
+route_7 [S16 >> S01]:
+	Path: ['ne3']
+	Crossings: ['Lc06']
+route_8 [S19 << S02]:
+	Path: ['ne23']
+	Crossings: ['Lc07']
+route_9 [S22 >> S13]:
+	Path: ['ne23', 'ne25']
+	Switches: ['Sw11_N']
+	Crossings: ['Lc09']
+route_10 [S22 >> S16]:
+	Path: ['ne23', 'ne27', 'ne3']
+	Switches: ['Sw11_R', 'Sw12_R']
+	Crossings: ['Lc09']
+route_11 [S24 >> S16]:
+	Path: ['ne26', 'ne3']
+	Switches: ['Sw12_N']
+	Crossings: ['Lc04']
+route_12 [S25 << S07]:
+	Path: ['ne3', 'ne26']
+	Switches: ['Sw12_N']
+	Crossings: ['Lc06']
+route_13 [S25 << S12]:
+	Path: ['ne3', 'ne27', 'ne23']
+	Switches: ['Sw11_R', 'Sw12_R']
+	Crossings: ['Lc06']
