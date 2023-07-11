@@ -244,6 +244,8 @@
 * OUTPUT_FILE can be any name with extension .railml
 * INPUT_FILE must exists in \Layouts as a .railml file
 
+![Figure 1](Diagram.jpg "Sequence Diagram for RNA")
+
 ```python
 i = 10
 INPUT_FILE  = "C:\PhD\RailML\Layouts\Example_"+str(i)+".railml"
