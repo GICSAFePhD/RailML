@@ -25,8 +25,8 @@
 			<td rowspan="4" align="center">5</td>
 			<td rowspan="4" align="center">2</td>
 			<td rowspan="4" align="center">2</td>
-			<td rowspan="4" align="center">29</td>
-			<td rowspan="4" align="center">14</td>
+			<td rowspan="4" align="center">24</td>
+			<td rowspan="4" align="center">22</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -48,8 +48,8 @@
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">1</td>
 			<td rowspan="4" align="center">2</td>
-			<td rowspan="4" align="center">15</td>
-			<td rowspan="4" align="center">5</td>
+			<td rowspan="4" align="center">12</td>
+			<td rowspan="4" align="center">10</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -71,8 +71,8 @@
 			<td rowspan="4" align="center">21</td>
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">13</td>
-			<td rowspan="4" align="center">94</td>
-			<td rowspan="4" align="center">35</td>
+			<td rowspan="4" align="center">78</td>
+			<td rowspan="4" align="center">87</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -94,8 +94,8 @@
 			<td rowspan="4" align="center">23</td>
 			<td rowspan="4" align="center">6</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">95</td>
-			<td rowspan="4" align="center">7</td>
+			<td rowspan="4" align="center">77</td>
+			<td rowspan="4" align="center">90</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -117,7 +117,7 @@
 			<td rowspan="4" align="center">4</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">24</td>
+			<td rowspan="4" align="center">16</td>
 			<td rowspan="4" align="center">16</td>
 		</tr>
 		<tr>
@@ -140,8 +140,8 @@
 			<td rowspan="4" align="center">5</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">30</td>
-			<td rowspan="4" align="center">16</td>
+			<td rowspan="4" align="center">24</td>
+			<td rowspan="4" align="center">22</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -163,8 +163,8 @@
 			<td rowspan="4" align="center">3</td>
 			<td rowspan="4" align="center">0</td>
 			<td rowspan="4" align="center">0</td>
-			<td rowspan="4" align="center">17</td>
-			<td rowspan="4" align="center">8</td>
+			<td rowspan="4" align="center">13</td>
+			<td rowspan="4" align="center">11</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -186,8 +186,8 @@
 			<td rowspan="4" align="center">2</td>
 			<td rowspan="4" align="center">4</td>
 			<td rowspan="4" align="center">2</td>
-			<td rowspan="4" align="center">10</td>
-			<td rowspan="4" align="center">8</td>
+			<td rowspan="4" align="center">16</td>
+			<td rowspan="4" align="center">13</td>
 		</tr>
 		<tr>
 			<td>Step by Step</td>
@@ -355,7 +355,19 @@ ne20 [666, 300] [1521, 300] True >> False
  Signals structure found!
  Detecting Routes --> Routes.RNA
 RML object's size: 48 Bytes
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+r1 -> [ R3 ]
+r2 -> [ R6 ]
+r3 -> [ R2 ]
+r4 -> [ R10 ]
+r5 -> [ R9 ]
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+New interlocking table covers 100% of Routes
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Railway elements fully protected -> Railway principles accepted
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Exporting .railML file
+railML file syntax validated: <Element '{https://www.railml.org/schemas/3.1}railML' at 0x0000020193FF5C20>
 ```
 
 
