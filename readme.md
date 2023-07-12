@@ -237,6 +237,10 @@
 <!-- Pegar tabla de excel fin -->
 </table>
 
+## Sequence diagram for RNA
+
+![Figure 1](Diagram.jpg "Sequence Diagram for RNA")
+
 ## Usage
 
 1. Download all the folders (app, railML, RNA, ACG, Layouts)
