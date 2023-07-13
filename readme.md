@@ -374,4 +374,19 @@ Exporting .railML file
 railML file syntax validated: <Element '{https://www.railml.org/schemas/3.1}railML' at 0x0000020193FF5C20>
 ```
 
+## Validation for bidirectional signallings
+
+| Design4Rail  | Interlocking table | Principles | Syntax |
+|  :---:  |  :---:  |  :---:  |  :---:  |
+| Example_1 | 100% | Ok | Ok |
+| Example_2 | 100% | Ok | Ok |
+| Example_3 | 100% | Ok | Ok |
+| Example_4 | 100% | Ok | Ok |
+| Example_5 | 100% | Ok | Ok |
+| Example_6 | 100% | Ok | Ok |
+| Example_7 | 100% | Ok | Ok |
+| Example_8 | 100% | Ok | Ok |
+
+In the case of using the 'One direction only' the coverage percentage of routes could be below 100% because RNA will compare the old signalling (bidirectional) with the new signalling (uni-directional only).
+Not analyzing some elements could also trigger a warning of leaving that element unprotected, failing the validation of signalling principles.
 
