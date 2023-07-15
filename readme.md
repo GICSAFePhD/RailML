@@ -257,15 +257,15 @@ index i was used to select examples, but any name can be used instead, if it exi
 
 3. Set up configuration
 
-* Function move_signals can be enabled (to avoid signal overlapping) or disabled (to allow signal overllaping).
+* Function move_signals can be enabled (to avoid signal overlapping) or disabled (to allow signal overlapping).
 ```python
 move_signals(signals,nodes,TRUE / FALSE)
 ```
-* The distance to avoid overllaping is set as 90
+* The distance to avoid overlapping is set as 90
 ```python
 move_step = 90
 ```
-* Function reduce_signals can be commented to enable / disable signalling simplification.(to avoid signal overlapping) or disabled (to allow signal overllaping)
+* Function reduce_signals can be commented to enable / disable signalling simplification (to avoid signal overlapping) or disabled (to allow signal overlapping)
 ```python
 reduce_signals(signals,signal_placement)
 ```
