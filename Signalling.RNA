@@ -58,10 +58,6 @@ sig16 [X16] <<:
 	From: ne14 | To: ne14_left
 	Type: Circulation | Direction: reverse | AtTrack: right 
 	Position: [2145, 360] | Coordinate: 0.6575
-sig18 [P18] <<:
-	From: ne14 | To: ne14_left
-	Type: Circulation | Direction: reverse | AtTrack: right 
-	Position: [2370, 360] | Coordinate: 0.7682
 sig20 [P20] >>:
 	From: ne13 | To: ne13_right
 	Type: Circulation | Direction: reverse | AtTrack: right 

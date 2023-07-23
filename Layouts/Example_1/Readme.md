@@ -604,18 +604,18 @@ This routes were rearrenged and summarized in Table 1.
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 |  S01  |  S05  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
-| R_02 |  S01  |  S17  | Sw04_N | - | - | ne01-ne08 |
-| R_03 |  S01  |  S19  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
-| R_04 |  S05  |  S06  | - | Plat11 | Lc06 | ne14 |
-| R_05 |  S06  |  S20  | - | - | - | ne14 |
-| R_06 |  S07  |  S09  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
-| R_07 |  S07  |  S10  | Sw06_N | - | - | ne02-ne12 |
-| R_08 |  S09  |  S18  | - | - | - | ne13 |
+| R_01 |  S05  |  S06  | - | Plat11 | Lc06 | ne14 |
+| R_02 |  S06  |  S20  | - | - | - | ne14 |
+| R_03 |  S09  |  S18  | - | - | - | ne13 |
+| R_04 |  S13  |  S12  | Sw13_N | - | - | ne23-ne12 |
+| R_05 |  S16  |  S02  | Sw12_N | - | - | ne22-ne08 |
+| R_06 |  S07  |  S10  | Sw06_N | - | - | ne02-ne12 |
+| R_07 |  S07  |  S09  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
+| R_08 |  S10  |  S14  | Sw13_N | - | - | ne12-ne23 |
 | R_09 |  S10  |  S02  | Sw12_R + Sw13_R | - | - | ne12-ne24-ne08 |
-| R_10 |  S10  |  S14  | Sw13_N | - | - | ne12-ne23 |
-| R_11 |  S13  |  S12  | Sw13_N | - | - | ne23-ne12 |
-| R_12 |  S16  |  S02  | Sw12_N | - | - | ne22-ne08 |
+| R_10 |  S01  |  S17  | Sw04_N | - | - | ne01-ne08 |
+| R_11 |  S01  |  S19  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
+| R_12 |  S01  |  S05  | Sw04_R + Sw07_R | - | - | ne01-ne14 |
 | R_13 |  S17  |  S15  | Sw12_N | - | - | ne08-ne22 |
 | R_14 |  S17  |  S12  | Sw12_R + Sw13_R | - | - | ne08-ne24-ne12 |
 
@@ -629,18 +629,25 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
 | R_01 |  T02  |  P20  | - | Plat13 | Lc08 | ne13 |
 | R_02 |  T04  |  X16  | - | Plat11 | - | ne14 |
+| R_03 |  T06  |  C29  | - | - | - | ne15 |
+| R_04 |  J11  |  L09  | - | - | - | ne22 |
 | R_05 |  J12  |  C21  | Sw12_N | - | - | ne22-ne08 |
 | R_06 |  J13  |  C25  | Sw13_N | - | - | ne23-ne12 |
-| R_08 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
-| R_12 |  S22  |  S32  | Sw04_N  | - | - | ne01-ne08 |
-| R_13 |  S22  |  X15  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
-| R_14 |  S22  |  T05  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
-| R_16 |  S27  |  S35  | Sw06_N | - | - | ne02-ne12 |
-| R_17 |  S27  |  T01  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
-| R_19 |  S32  |  J11  | Sw12_N | - | - | ne08-ne22 |
-| R_20 |  S32  |  C25  | Sw12_R + Sw13_R | - | - | ne08-ne24-ne12 |
-| R_21 |  S35  |  J14  | Sw13_N | - | - | ne12-ne23 |
-| R_22 |  S35  |  C21  | Sw12_R + Sw13_R | - | - | ne12-ne24-ne08 |
+| R_07 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
+| R_08 |  X16  |  L07  | Sw04_R + Sw07_R | - | - | ne14-ne01 |
+| R_09 |  P20  |  L08  | Sw06_R | - | - | ne13-ne02 |
+| R_10 |  C21  |  L07  | Sw04_N | - | - | ne08-ne01 |
+| R_11 |  S22  |  S32  | Sw04_N | - | - | ne01-ne08 |
+| R_12 |  S22  |  X15  | Sw04_R + Sw07_R | - | - | ne01-ne09-ne14 |
+| R_13 |  S22  |  T05  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
+| R_14 |  C25  |  L08  | Sw06_N | - | - | ne12-ne02 |
+| R_15 |  S27  |  S35  | Sw06_N | - | - | ne02-ne12 |
+| R_16 |  S27  |  T01  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
+| R_17 |  S29  |  S07  | Sw04_R + Sw07_N | - | - | ne02-ne13 |
+| R_18 |  S32  |  J11  | Sw12_N | - | - | ne08-ne22 |
+| R_19 |  S32  |  C25  | Sw12_R + Sw13_R | - | - | ne08-ne24-ne12 |
+| R_20 |  S35  |  J14  | Sw13_N | - | - | ne12-ne23 |
+| R_21 |  S35  |  C21  | Sw12_R + Sw13_R | - | - | ne12-ne24-ne08 |
 
 #### H.3. Interlocking table comparisson
 
@@ -648,24 +655,24 @@ The result of the automatic process carried by the RNA (Obtained in G.4) is the 
 
 | Design4Rail  | Signals | netElements | RNA | Signals | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
-| R_01 | S01-S05 |  ne01-ne09-ne14  | R_13 | S22-X15 | ne01-ne09-ne14 |
-| R_02 | S01-S17 |  ne01-ne08  | R_12 | S22-S32 | ne01-ne08 |
-| R_03 | S01-S19 |  ne01-ne09-ne15  | R_14 | S22-T05 | ne01-ne09-ne15 |
-| R_04 | S05-S06 |  ne14  | R_08 | X15-T03 | ne14 |
-| R_05 | S06-S20 |  ne14  | R_02 | T04-X16 | ne14 |
-| R_06 | S07-S09 |  ne02-ne13  | R_17 | S27-T01 | ne02-ne13 |
-| R_07 | S07-S10 |  ne02-ne12  | R_15 | S27-S35 | ne02-ne12 |
-| R_08 | S09-S18 |  ne13  | R_01 | T02-P20 | ne13 |
-| R_09 | S10-S02 |  ne12-ne24-ne08  | R_22 | S35-C21 | ne12-ne24-ne08 |
-| R_10 | S10-S14 |  ne12-ne23  | R_21 | S35-J14 | ne12-ne23 |
-| R_11 | S13-S12 |  ne23-ne12  | R_06 | J13-C25 | ne23-ne12 |
-| R_12 | S16-S02 |  ne22-ne08  | R_05 | J12-C21 | ne22-ne08 |
-| R_13 | S17-S15 |  ne08-ne22  | R_19 | S32-J11 | ne08-ne22 |
-| R_14 | S17-S12 |  ne08-ne24-ne12  | R_20 | S32-C25 | ne08-ne24-ne12 |
+| R_01 | S05-S06 |  ne14  | R_07 | X15-T03 | ne14 |
+| R_02 | S06-S20 |  ne14  | R_07 | X15-T03 | ne14 |
+| R_03 | S09-S18 |  ne13  | R_16 | S27-T01 | ne02-ne13 |
+| R_04 | S13-S12 |  ne23-ne12  | R_06 | J13-C25 | ne23-ne12 |
+| R_05 | S16-S02 |  ne22-ne08  | R_05 | J12-C21 | ne22-ne08 |
+| R_06 | S07-S10 |  ne02-ne12  | R_15 | S27-S35 | ne02-ne12 |
+| R_07 | S07-S09 |  ne02-ne13  | R_16 | S27-T01 | ne02-ne13 |
+| R_08 | S10-S14 |  ne12-ne23  | R_20 | S35-J14 | ne12-ne23 |
+| R_09 | S10-S02 |  ne12-ne24-ne08  | R_21 | S35-C21 | ne12-ne24-ne08 |
+| R_10 | S01-S17 |  ne01-ne08  | R_11 | S22-S32 | ne01-ne08 |
+| R_11 | S01-S19 |  ne01-ne09-ne15  | R_13 | S22-X15 | ne01-ne09-ne15 |
+| R_12 | S01-S05 |  ne01-ne09-ne14  | R_12 | S22-T05 | ne01-ne09-ne14 |
+| R_13 | S17-S15 |  ne08-ne22  | R_18 | S32-J11 | ne08-ne22 |
+| R_14 | S17-S12 |  ne08-ne24-ne12  | R_19 | S32-C25 | ne08-ne24-ne12 |
 
 The 14 routes in the original interlocking table (Table 1) have en exact equivalent with the 14 routes in the interlocking table generated by RNA (Table 2). It is clear that not safety functionality were ignored by RNA.
 
-Routes 3,4,7,9,10,11,15 and 18 (Table 4) were created because RNA added signals T01,T02,T03,T04,T05 and T06 to protectt buffer stops and signals L07,L08,L09 and L10 to protect line borders. These new signals created new routes to stop prior the (relative or absolute) end of the network, increasing safety, and to add opposite routes than the originals, increasing mobility. These elements were not protected in the original interlocking table.
+Routes 1,2,3,4,7,8,9,10,13,14,16 and 17 (Table 4) were created because RNA added signals T01,T02,T03,T04,T05 and T06 to protectt buffer stops and signals L07,L08,L09 and L10 to protect line borders. These new signals created new routes to stop prior the (relative or absolute) end of the network, increasing safety, and to add opposite routes than the originals, increasing mobility. These elements were not protected in the original interlocking table.
 
 *Table 4. Interlocking table obtain through RNA considering "Analyze bufferStop" and "Analyze lineBorders" are marked.*
 
@@ -673,14 +680,17 @@ Extra routes considering bufferStop and lineBorders:
 
 | Route  | Entry | Exit | Switches | Platforms | Crossings | netElements |
 |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |  :---:  |
+| R_01 |  T02  |  P20  | - | Plat13 | Lc08 | ne13 |
+| R_02 |  T04  |  X16  | - | Plat11 | - | ne14 |
 | R_03 |  T06  |  C29  | - | - | - | ne15 |
 | R_04 |  J11  |  L09  | - | - | - | ne22 |
-| R_07 |  J14  |  L10  | - | - | - | ne23 |
-| R_09 |  X16  |  L07  | Sw04_R + Sw07_R | - | Lc06 | ne14-ne09-ne01 |
-| R_10 |  P20  |  L08  | Sw06_R  | - | - | ne13-ne02 |
-| R_11 |  C21  |  L07  | Sw04_N  | - | - | ne08-ne01 |
-| R_15 |  C25  |  L08  | Sw06_N  | - | - | nex12-ne02 |
-| R_18 |  C29  |  L07  | Sw04_N + Sw07_R | - | - | ne15-ne09-ne01 |
+| R_07 |  X15  |  T03  | - | Plat11 | Lc06 | ne14 |
+| R_08 |  X16  |  L07  | Sw04_R + Sw07_R | - | - | ne14-ne01 |
+| R_09 |  P20  |  L08  | Sw06_R | - | - | ne13-ne02 |
+| R_10 |  C21  |  L07  | Sw04_N | - | - | ne08-ne01 |
+| R_13 |  S22  |  T05  | Sw04_R + Sw07_N | - | - | ne01-ne09-ne15 |
+| R_14 |  C25  |  L08  | Sw06_N | - | - | ne12-ne02 |
+| R_16 |  S27  |  T01  | Sw06_R | Plat13 | Lc08 | ne02-ne13 |
 
 ### E Extras
 
