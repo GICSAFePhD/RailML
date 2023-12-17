@@ -20,6 +20,8 @@ class RouteEntry(EntityIL.EntityIL):
 	def NonReplacement(self, aNonReplacement : EntityILref):
 		self.___nonReplacement = aNonReplacement
 
+	def create_RefersTo(self):
+		self.RefersTo = EntityILref.EntityILref()
 	def create_NonReplacement(self):
 		if self.NonReplacement == None:
 			self.NonReplacement = []
