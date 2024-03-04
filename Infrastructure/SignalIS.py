@@ -170,7 +170,7 @@ class SignalIS(FunctionalInfrastructureEntity.FunctionalInfrastructureEntity):
 		self.SignalConstruction.append(SignalConstruction.SignalConstruction())
 
 	def __str__(self):
-		return f'Id:{self.Id}|Net:{self.SpotLocation[0].NetElementRef}|Coordinate:{self.SpotLocation[0].IntrinsicCoord}'
+		return f'{self.Designator[0].Entry[7:]}({self.Id}) [{self.SpotLocation[0].NetElementRef}] {self.SpotLocation[0].ApplicationDirection}|{self.SignalConstruction[0].PositionAtTrack}'
 
 
 	def __init__(self):
